@@ -1,7 +1,7 @@
 {
   "name": "uxe-demo-generator",
   "description": "UXE's demo generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Christopher McCulloh <cmcculloh@salesforce.com",
   "contributors": [
     "TJ Holowaychuk <tj@vision-media.ca>",
