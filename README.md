@@ -1,26 +1,17 @@
-[![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
-
-[Express'](https://www.npmjs.com/package/express) application generator.
-
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
-[![Linux Build][travis-image]][travis-url]
-[![Windows Build][appveyor-image]][appveyor-url]
+UXE Prototype/Demo generator.
 
 ## Installation
 
 ```sh
-$ npm install -g express-generator
+$ npm install -g git+ssh://git@github.com:cormacmccarthy/generator.git
 ```
 
 ## Quick Start
 
-The quickest way to get started with express is to utilize the executable `express(1)` to generate an application as shown below:
-
 Create the app:
 
 ```bash
-$ express --view=hbs /tmp/foo && cd /tmp/foo
+$ express ~/prototypes/foo && cd ~/prototypes/foo
 ```
 
 Install dependencies:
@@ -44,7 +35,7 @@ This generator can also be further configured with the following command line fl
         --pug            add pug engine support
         --hbs            add handlebars engine support
     -H, --hogan          add hogan.js engine support
-    -v, --view <engine>  add view <engine> support (dust|ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+    -v, --view <engine>  add view <engine> support (dust|ejs|hbs|hjs|jade|pug|twig|vash) (defaults to pug)
         --no-view        use static html instead of view engine
     -c, --css <engine>   add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
         --git            add .gitignore
