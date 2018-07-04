@@ -3,7 +3,7 @@ UXE Prototype/Demo generator.
 ## Installation
 
 ```sh
-$ npm install -g git+ssh://git@github.com:cormacmccarthy/generator.git
+$ npm install -g git+ssh://git@github.com:cormacmccarthy/demuxe.git
 ```
 
 ## Quick Start
@@ -11,7 +11,7 @@ $ npm install -g git+ssh://git@github.com:cormacmccarthy/generator.git
 Create the app:
 
 ```bash
-$ express ~/prototypes/foo && cd ~/prototypes/foo
+$ demuxe ~/prototypes/foo && cd ~/prototypes/foo
 ```
 
 Install dependencies:
