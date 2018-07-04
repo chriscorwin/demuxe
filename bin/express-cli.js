@@ -49,12 +49,9 @@ program
   .version(VERSION, '    --version')
   .usage('[options] [dir]')
   .option('-e, --ejs', 'add ejs engine support', renamedOption('--ejs', '--view=ejs'))
-  .option('    --pug', 'add pug engine support', renamedOption('--pug', '--view=pug'))
-  .option('    --hbs', 'add handlebars engine support', renamedOption('--hbs', '--view=hbs'))
-  .option('-H, --hogan', 'add hogan.js engine support', renamedOption('--hogan', '--view=hogan'))
-  .option('-v, --view <engine>', 'add view <engine> support (dust|ejs|hbs|hjs|jade|pug|twig|vash) (defaults to pug)')
+  .option('-v, --view <engine>', 'add view <engine> support (ejs) (defaults to ejs)')
   .option('    --no-view', 'use static html instead of view engine')
-  .option('-c, --css <engine>', 'add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)')
+  .option('-c, --css <engine>', 'add stylesheet <engine> support (less) (defaults to plain css)')
   .option('    --git', 'add .gitignore')
   .option('-f, --force', 'force on non-empty directory')
   .parse(process.argv)
@@ -67,7 +64,7 @@ if (!exit.exited) {
  * Install an around function; AOP.
  */
 
-function around (obj, method, fn) {
+function around(obj, method, fn) {
   var old = obj[method]
 
   obj[method] = function () {
@@ -81,7 +78,7 @@ function around (obj, method, fn) {
  * Install a before function; AOP.
  */
 
-function before (obj, method, fn) {
+function before(obj, method, fn) {
   var old = obj[method]
 
   obj[method] = function () {
@@ -94,7 +91,7 @@ function before (obj, method, fn) {
  * Prompt for confirmation on STDOUT/STDIN
  */
 
-function confirm (msg, callback) {
+function confirm(msg, callback) {
   var rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -110,7 +107,7 @@ function confirm (msg, callback) {
  * Copy file from template directory.
  */
 
-function copyTemplate (from, to) {
+function copyTemplate(from, to) {
   write(to, fs.readFileSync(path.join(TEMPLATE_DIR, from), 'utf-8'))
 }
 
@@ -118,7 +115,7 @@ function copyTemplate (from, to) {
  * Copy multiple files from template directory.
  */
 
-function copyTemplateMulti (fromDir, toDir, nameGlob) {
+function copyTemplateMulti(fromDir, toDir, nameGlob) {
   fs.readdirSync(path.join(TEMPLATE_DIR, fromDir))
     .filter(minimatch.filter(nameGlob, { matchBase: true }))
     .forEach(function (name) {
@@ -133,7 +130,7 @@ function copyTemplateMulti (fromDir, toDir, nameGlob) {
  * @param {string} dir
  */
 
-function createApplication (name, dir) {
+function createApplication(name, dir) {
   console.log()
 
   // Package
@@ -214,29 +211,8 @@ function createApplication (name, dir) {
     mkdir(dir, 'views')
     pkg.dependencies['http-errors'] = '~1.6.2'
     switch (program.view) {
-      case 'dust':
-        copyTemplateMulti('views', dir + '/views', '*.dust')
-        break
       case 'ejs':
         copyTemplateMulti('views', dir + '/views', '*.ejs')
-        break
-      case 'hbs':
-        copyTemplateMulti('views', dir + '/views', '*.hbs')
-        break
-      case 'hjs':
-        copyTemplateMulti('views', dir + '/views', '*.hjs')
-        break
-      case 'jade':
-        copyTemplateMulti('views', dir + '/views', '*.jade')
-        break
-      case 'pug':
-        copyTemplateMulti('views', dir + '/views', '*.pug')
-        break
-      case 'twig':
-        copyTemplateMulti('views', dir + '/views', '*.twig')
-        break
-      case 'vash':
-        copyTemplateMulti('views', dir + '/views', '*.vash')
         break
     }
   } else {
@@ -246,25 +222,10 @@ function createApplication (name, dir) {
 
   // CSS Engine support
   switch (program.css) {
-    case 'compass':
-      app.locals.modules.compass = 'node-compass'
-      app.locals.uses.push("compass({ mode: 'expanded' })")
-      pkg.dependencies['node-compass'] = '0.2.3'
-      break
     case 'less':
       app.locals.modules.lessMiddleware = 'less-middleware'
       app.locals.uses.push("lessMiddleware(path.join(__dirname, 'public'))")
       pkg.dependencies['less-middleware'] = '~2.2.1'
-      break
-    case 'sass':
-      app.locals.modules.sassMiddleware = 'node-sass-middleware'
-      app.locals.uses.push("sassMiddleware({\n  src: path.join(__dirname, 'public'),\n  dest: path.join(__dirname, 'public'),\n  indentedSyntax: true, // true = .sass and false = .scss\n  sourceMap: true\n})")
-      pkg.dependencies['node-sass-middleware'] = '0.11.0'
-      break
-    case 'stylus':
-      app.locals.modules.stylus = 'stylus'
-      app.locals.uses.push("stylus.middleware(path.join(__dirname, 'public'))")
-      pkg.dependencies['stylus'] = '0.54.5'
       break
   }
 
@@ -278,41 +239,9 @@ function createApplication (name, dir) {
 
   // Template support
   switch (program.view) {
-    case 'dust':
-      app.locals.modules.adaro = 'adaro'
-      app.locals.view = {
-        engine: 'dust',
-        render: 'adaro.dust()'
-      }
-      pkg.dependencies.adaro = '~1.0.4'
-      break
     case 'ejs':
       app.locals.view = { engine: 'ejs' }
       pkg.dependencies.ejs = '~2.5.7'
-      break
-    case 'hbs':
-      app.locals.view = { engine: 'hbs' }
-      pkg.dependencies.hbs = '~4.0.1'
-      break
-    case 'hjs':
-      app.locals.view = { engine: 'hjs' }
-      pkg.dependencies.hjs = '~0.0.6'
-      break
-    case 'jade':
-      app.locals.view = { engine: 'jade' }
-      pkg.dependencies.jade = '~1.11.0'
-      break
-    case 'pug':
-      app.locals.view = { engine: 'pug' }
-      pkg.dependencies.pug = '2.0.0-beta11'
-      break
-    case 'twig':
-      app.locals.view = { engine: 'twig' }
-      pkg.dependencies.twig = '~0.10.3'
-      break
-    case 'vash':
-      app.locals.view = { engine: 'vash' }
-      pkg.dependencies.vash = '~0.12.4'
       break
     default:
       app.locals.view = false
@@ -364,7 +293,7 @@ function createApplication (name, dir) {
  * @param {String} pathName
  */
 
-function createAppName (pathName) {
+function createAppName(pathName) {
   return path.basename(pathName)
     .replace(/[^A-Za-z0-9.-]+/g, '-')
     .replace(/^[-_.]+|-+$/g, '')
@@ -378,7 +307,7 @@ function createAppName (pathName) {
  * @param {Function} fn
  */
 
-function emptyDirectory (dir, fn) {
+function emptyDirectory(dir, fn) {
   fs.readdir(dir, function (err, files) {
     if (err && err.code !== 'ENOENT') throw err
     fn(!files || !files.length)
@@ -389,11 +318,11 @@ function emptyDirectory (dir, fn) {
  * Graceful exit for async STDIO
  */
 
-function exit (code) {
+function exit(code) {
   // flush output for Node.js Windows pipe bug
   // https://github.com/joyent/node/issues/6247 is just one bug example
   // https://github.com/visionmedia/mocha/issues/333 has a good discussion
-  function done () {
+  function done() {
     if (!(draining--)) _exit(code)
   }
 
@@ -415,7 +344,7 @@ function exit (code) {
  * Determine if launched from cmd.exe
  */
 
-function launchedFromCmd () {
+function launchedFromCmd() {
   return process.platform === 'win32' &&
     process.env._ === undefined
 }
@@ -424,11 +353,11 @@ function launchedFromCmd () {
  * Load template file.
  */
 
-function loadTemplate (name) {
+function loadTemplate(name) {
   var contents = fs.readFileSync(path.join(__dirname, '..', 'templates', (name + '.ejs')), 'utf-8')
   var locals = Object.create(null)
 
-  function render () {
+  function render() {
     return ejs.render(contents, locals, {
       escape: util.inspect
     })
@@ -444,7 +373,7 @@ function loadTemplate (name) {
  * Main program.
  */
 
-function main () {
+function main() {
   // Path
   var destinationPath = program.args.shift() || '.'
 
@@ -454,14 +383,11 @@ function main () {
   // View engine
   if (program.view === true) {
     if (program.ejs) program.view = 'ejs'
-    if (program.hbs) program.view = 'hbs'
-    if (program.hogan) program.view = 'hjs'
-    if (program.pug) program.view = 'pug'
   }
 
   // Default view engine
   if (program.view === true) {
-    program.view = 'pug'
+    program.view = 'ejs'
   }
 
   // Generate application
@@ -489,7 +415,7 @@ function main () {
  * @param {string} dir
  */
 
-function mkdir (base, dir) {
+function mkdir(base, dir) {
   var loc = path.join(base, dir)
 
   console.log('   \x1b[36mcreate\x1b[0m : ' + loc + path.sep)
@@ -503,7 +429,7 @@ function mkdir (base, dir) {
  * @param {String} newName
  */
 
-function renamedOption (originalName, newName) {
+function renamedOption(originalName, newName) {
   return function (val) {
     warning(util.format("option `%s' has been renamed to `%s'", originalName, newName))
     return val
@@ -516,7 +442,7 @@ function renamedOption (originalName, newName) {
  * @param {String} message
  */
 
-function warning (message) {
+function warning(message) {
   console.error()
   message.split('\n').forEach(function (line) {
     console.error('  warning: %s', line)
@@ -531,7 +457,7 @@ function warning (message) {
  * @param {String} str
  */
 
-function write (file, str, mode) {
+function write(file, str, mode) {
   fs.writeFileSync(file, str, { mode: mode || MODE_0666 })
   console.log('   \x1b[36mcreate\x1b[0m : ' + file)
 }
