@@ -18,7 +18,7 @@ var BIN_PATH = path.resolve(path.dirname(PKG_PATH), require(PKG_PATH).bin.expres
 var NPM_INSTALL_TIMEOUT = 60000
 var TEMP_DIR = tmp.dirSync().name
 
-describe('express(1)', function () {
+describe('demuxe(1)', function () {
   after(function (done) {
     this.timeout(30000)
     rimraf(TEMP_DIR, done)
@@ -39,7 +39,7 @@ describe('express(1)', function () {
     })
 
     it('should provide debug instructions', function () {
-      assert.ok(/DEBUG=express-1-no-args:\* (?:& )?npm start/.test(ctx.stdout))
+      assert.ok(/DEBUG=demuxe-1-no-args:\* (?:& )?npm start/.test(ctx.stdout))
     })
 
     it('should have basic files', function () {
@@ -52,7 +52,7 @@ describe('express(1)', function () {
       var file = path.resolve(ctx.dir, 'package.json')
       var contents = fs.readFileSync(file, 'utf8')
       assert.equal(contents, '{\n' +
-        '  "name": "express-1-no-args",\n' +
+        '  "name": "demuxe-1-no-args",\n' +
         '  "version": "0.0.0",\n' +
         '  "private": true,\n' +
         '  "scripts": {\n' +
@@ -164,7 +164,7 @@ describe('express(1)', function () {
     it('should print usage', function (done) {
       runRaw(ctx.dir, ['--foo'], function (err, code, stdout, stderr) {
         if (err) return done(err)
-        assert.ok(/Usage: express /.test(stdout))
+        assert.ok(/Usage: demuxe /.test(stdout))
         assert.ok(/--help/.test(stdout))
         assert.ok(/--version/.test(stdout))
         assert.ok(/error: unknown option/.test(stderr))
@@ -234,7 +234,7 @@ describe('express(1)', function () {
       it('should print usage', function (done) {
         runRaw(ctx.dir, ['--css'], function (err, code, stdout) {
           if (err) return done(err)
-          assert.ok(/Usage: express /.test(stdout))
+          assert.ok(/Usage: demuxe /.test(stdout))
           assert.ok(/--help/.test(stdout))
           assert.ok(/--version/.test(stdout))
           done()
@@ -367,7 +367,7 @@ describe('express(1)', function () {
         if (err) return done(err)
         var files = utils.parseCreatedFiles(stdout, ctx.dir)
         assert.equal(files.length, 0)
-        assert.ok(/Usage: express /.test(stdout))
+        assert.ok(/Usage: demuxe /.test(stdout))
         assert.ok(/--help/.test(stdout))
         assert.ok(/--version/.test(stdout))
         done()
@@ -383,7 +383,7 @@ describe('express(1)', function () {
         if (err) return done(err)
         var files = utils.parseCreatedFiles(stdout, ctx.dir)
         assert.equal(files.length, 0)
-        assert.ok(/Usage: express /.test(stdout))
+        assert.ok(/Usage: demuxe /.test(stdout))
         assert.ok(/--help/.test(stdout))
         assert.ok(/--version/.test(stdout))
         done()
@@ -462,7 +462,7 @@ describe('express(1)', function () {
       it('should print usage', function (done) {
         runRaw(ctx.dir, ['--view'], function (err, code, stdout) {
           if (err) return done(err)
-          assert.ok(/Usage: express /.test(stdout))
+          assert.ok(/Usage: demuxe /.test(stdout))
           assert.ok(/--help/.test(stdout))
           assert.ok(/--version/.test(stdout))
           done()
