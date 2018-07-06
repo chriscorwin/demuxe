@@ -7,8 +7,8 @@ Demuxe is the starting point for new demos. I propose that "Demuxe" should be pr
 - Demos shall not use Angular/React/etc.
 - Where possible parts of demos may be "click-able screenshots".
 	- Every effort shall be made for elements of demos to be "real" (vs click-able screenshots). 
-	- Click-able screenshots are first priority and will be replaced as time permits.
-- Decision about architecture shall be made with a bias towards simplicity.
+	- Click-able screenshots are first priority and will be replaced piecemeal as time permits.
+- Decision about architecture shall be made with an aggressive bias towards simplicity.
 - Demos are expected to be served by Heroku. Utilizing a Heroku pipeline is strongly recommended.
 
 ## How to Use
@@ -16,13 +16,19 @@ Demuxe is the starting point for new demos. I propose that "Demuxe" should be pr
 - Create a discrete Heroku pipeline for each new demo.
 - Do not commit demos back to this repo. 
 - In the retrospective phase of a demo, update this repo based on lessons learned.
+	- Place new components into component gallary
+	- Review and update existing components
+	- Review and update existing templates
 
 ## Dependencies
 This demo utilizes:
-- HTML/EJS
+- HTML/[EJS](http://ejs.co/#docs)
 - JS
-- CSS/LESS
-- Express
+- CSS/[LESS](http://lesscss.org/#overview)
+- [Express](https://expressjs.com/en/4x/api.html)
+- SLDS
+- SVG (for screenshots & animations where possible)
+- [D3](https://github.com/d3/d3/wiki/Gallery) & [Highcharts](https://www.highcharts.com/demo) (for interactive graphs where SVGs will not suite our purposes)
 
 # Setup
 - Fork this repo
@@ -55,7 +61,7 @@ Test drives run through the whole demo flow using Mocha+Chai+Phantom to ensure t
 
 The test-drive should take screenshots of each step in the flow for reference and comparison.
 
-The boilerplate starts off with a baseline test-drive in place that can be expanded on.
+This boilerplate starts off with an example test-drive in place (./test/test-drive.test.js).
 
 Differencify's API matches [Puppeteer's](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md) exactly. Reference that when writing interactivity for tests.
 
@@ -64,6 +70,15 @@ Demuxe uses a fork of Differencify that allows us some more flixibility vs what 
 # Spec/Designs
 Shall live in `/dev-assets/`. Typically these will be sketch files.
 
+# Templates
+Templates are page shells that can be quickly used to re-create different products. (eg: DMP Header, Navigation, & Footer)
+- Product templates shall live in `/templates/{product-name}/`.
+- Product templates should be an MVP shell and component pages of a product built out as simply, but thoroughly, as possible.
+- The more complete our library of product templates the better.
+- Once per quarter existing templates should be audited with designers and updated. In this manner when we are asked to quickly complete a demo, we will have an even better jumping off point.
+
+# Component Gallaries
+Component gallaries should contain MVP examples of components used in past demos (eg: graphs on the DMP home page). These should be lightly documented and reviewed to ensure high confidence in quality, readability, and re-usability (in essence, you should be able to just open the file and know exactly what to copy/paste and how to use it within a few minutes).
 
 # Hall of Fame
 Past demos utilizing this boilerplate (add yours here!)
