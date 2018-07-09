@@ -2,24 +2,48 @@
 Demuxe is the starting point for new demos. I propose that "Demuxe" should be pronounced "dem-you", but we should definitely have years long raging religious debates about this.
 
 ## First Principles
-In order to promote general ease of use, minimize chaos and confusion, and increase likelihood of success when at a moment’s notice being asked jump back in and knock out a huge demo in a week; decisions about architecture shall be made with an aggressive bias towards simplicity.
+We very much desire to keep our demo creation process one that does not require learning _how to use tools_, so that we can focus on _simply creating the demo required_.
 
-- Demos shall be HTML/JS/CSS. 
-- Demos shall function in Chrome.
-- Demos shall not use Angular/React/etc.
-- Where possible parts of demos may be "click-able screenshots".
+
+In order to promote general ease of use, minimize chaos and confusion, and increase likelihood of success when, at a moment’s notice, one is asked jump in "real quick" and knock out a huge demo in a week... well, the decisions about architecture in this project shall be made with an _aggressive_ bias towards simplicity.
+
+It is tempting to believe that your particular favorite tool will enable creating a demo more quickly, or make it easier to make sweeping changes when they are requested, or... well, all of the reasons _frameworks_ have become a Thing. 
+
+Resist this urge, it is toxic.
+
+Modern website creation has gotten... complex. The more "tooling" a project has the less likely any given developer being tasked with working on that project will already "just know" the tools involved.
+
+
+### To maintain aggressive simplicity
+
+Demos _must_:
+
+- Consist of semantic HTML, vanilla JavaScript, and, plain old CSS.
+- Only be required to function in Chrome.
+- Not use Angular, React, Vue, or any other MVC model/framework/whathaveyou.- 
+
+
+Demos _shall_:
+
+- Be as "real" as practical, given the time restraints.
 	- Every effort shall be made for elements of demos to be "real" (vs click-able screenshots). 
 	- Click-able screenshots are first priority and will be replaced piecemeal as time permits.
-- Demos are expected to be served by Heroku. Utilizing a Heroku pipeline is strongly recommended.
+- Be served by Heroku. Utilizing a Heroku pipeline is strongly recommended.
+
+Demos _may_: 
+
+- Consist merely of "click-able screenshots", where appropriate.
+
 
 ## How to Use
-- Fork this repo for each new demo. 
+- Create a fork of this repository for each new demo.
 - Create a discrete Heroku pipeline for each new demo.
-- Do not commit demos back to this repo. 
-- In the retrospective phase of a demo, update this repo based on lessons learned.
-	- Place new components into component gallary
-	- Review and update existing components
-	- Review and update existing templates
+- Do **not** commit demos back to this repository. 
+- Often when creating a demo, fantastic new ideas for _how to create demos_ are arrived upon. The retrospective phase of a such demo is a very appropriate time to update _this_ repository based on lessons learned there.
+	- Place new components into component gallery.
+	- Review and update existing components.
+	- Review and update existing templates.
+
 
 ## Dependencies
 This demo utilizes:
@@ -32,7 +56,7 @@ This demo utilizes:
 - [D3](https://github.com/d3/d3/wiki/Gallery) & [Highcharts](https://www.highcharts.com/demo) (for interactive graphs where SVGs will not suite our purposes)
 
 # Setup
-- Fork this repo
+- Fork this repository
 `npm install`
 
 # Starting the Server
@@ -66,7 +90,7 @@ This boilerplate starts off with an example test-drive in place (./test/test-dri
 
 Differencify's API matches [Puppeteer's](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md) exactly. Reference that when writing interactivity for tests.
 
-Demuxe uses a fork of Differencify that allows us some more flixibility vs what currently exists in the base repo. If someone wants to go through the pain of figuring out Docker and guiding the open PRs through the process etc etc to get these changes merged into the base repo, go for it.
+Demuxe uses a fork of Differencify that allows us some more flixibility vs what currently exists in the base repository. If someone wants to go through the pain of figuring out Docker and guiding the open PRs through the process etc etc to get these changes merged into the base repository, go for it.
 
 # Spec/Designs
 Shall live in `/dev-assets/`. Typically these will be sketch files.
