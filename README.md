@@ -71,6 +71,16 @@ Demuxe uses a fork of Differencify that allows us some more flixibility vs what 
 # Spec/Designs
 Shall live in `/dev-assets/`. Typically these will be sketch files.
 
+## Sketch -> SVG Files
+- Designers MUST NOT SET A LINE-HEIGHT in Sketch 
+	- If a line-height is set, it can throw off vertical alignement of text in the final SVG exports
+	— Designers must NOT set a line-height on text
+	- Line height must not be set on text in Sketch
+- Use `/dev-assets/utilities/embed-font-in-svg.js` to embed the fonts in the Sketch SVG exports
+
+
+
+
 # Templates
 Templates are page shells that can be quickly used to re-create different products. (eg: DMP Header, Navigation, & Footer)
 - Product templates shall live in `/templates/{product-name}/`.
