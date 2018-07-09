@@ -2,13 +2,14 @@
 Demuxe is the starting point for new demos. I propose that "Demuxe" should be pronounced "dem-you", but we should definitely have years long raging religious debates about this.
 
 ## First Principles
+In order to promote general ease of use, minimize chaos and confusion, and increase likelihood of success when at a moment’s notice being asked jump back in and knock out a huge demo in a week; decisions about architecture shall be made with an aggressive bias towards simplicity.
+
 - Demos shall be HTML/JS/CSS. 
 - Demos shall function in Chrome.
 - Demos shall not use Angular/React/etc.
 - Where possible parts of demos may be "click-able screenshots".
 	- Every effort shall be made for elements of demos to be "real" (vs click-able screenshots). 
 	- Click-able screenshots are first priority and will be replaced piecemeal as time permits.
-- Decision about architecture shall be made with an aggressive bias towards simplicity.
 - Demos are expected to be served by Heroku. Utilizing a Heroku pipeline is strongly recommended.
 
 ## How to Use
