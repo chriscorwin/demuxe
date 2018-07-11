@@ -1,10 +1,10 @@
 # Demuxe - The Boilerplate UXE Demo App
 Demuxe is the starting point for new demos. I propose that "Demuxe" should be pronounced "dem-you", but we should definitely have years long raging religious debates about this.
 
-## Quickstart Guie
+# Quickstart Guie
 There _is_ no quickstart guide because it is important to read and understand all of this stuff before beginning.
 
-## First Principles
+# First Principles
 We very much desire to keep our demo creation process one that does not require learning _how to use tools_, so that we can focus on _simply creating the demo required_.
 
 In order to promote general ease of use, minimize chaos and confusion, and increase likelihood of success when, at a moment’s notice, one is asked jump in "real quick" and knock out a massive demo in a week, working 14 hour days on five hours of sleep... well, the decisions about architecture in this project shall be made with an **_aggressive_ bias towards simplicity**.
@@ -15,8 +15,14 @@ It is tempting to believe that your particular favorite bit of tooling will enab
 
 Modern website creation has gotten... complex. The more "tooling" a project has the less likely any given developer being tasked with working on that project will already "just know" the tools involved.
 
+More often than not in the demos we create the scope grows over the days the project exists and a second or third developer is thrown onto the pile to "help" get it done "faster" and any questions that developer has to ask about _how the thing is being created_ brings the entire project to a grinding halt for half a day or more -- which can be 20% of the total alloted time needed to create the thing.
 
-### To maintain aggressive simplicity
+Every. Hour. Counts.
+
+Do _not_ pollute demos with needless complexity.
+
+
+## To Maintain Aggressive Simplicity...
 
 Demos _must_:
 
@@ -35,52 +41,72 @@ Demos _shall_:
 Demos _may_: 
 
 - Consist merely of "click-able screenshots", where appropriate.
-- Use a LES
+- Use a a CSS pre or post processor, ideally SCSS, since that is the tool used by our very own [SLDS](https://www.lightningdesignsystem.com) team.
+- Make strategic use of JavaScript libraries as-needed to best fulfill the needs of a given demo. 
+	
+	Keep in mind, however, that such tools are a per-demo decision, however, and do not generally  belong in this boilerplate repository.
+
+	It is entirely apprpriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository. Examples [D3](https://github.com/d3/d3/wiki/Gallery) and [Highcharts](https://www.highcharts.com/demo), used in nearly every demo we've created thus far to generate interactive graphs where SVGs alone do not suite our purposes.
 
 
-## How to Use
+
+# How to Use
 - Create a fork of this repository for each new demo.
 - Create a discrete Heroku pipeline for each new demo.
 - Do **not** commit demos back to this repository. 
-- Often when creating a demo, fantastic new ideas for _how to create demos_ are arrived upon. The retrospective phase of a such demo is a very appropriate time to update _this_ repository based on lessons learned there.
+- Often when creating a demo, fantastic new ideas for _how to create demos_ are arrived upon.
+
+	The retrospective phase of a such demo is a very appropriate time to update _this_ repository based on lessons learned there.
+
+	When deemed appropriate, allocate time to enhance the Demuxe project:
+
 	- Place new components into component gallery.
 	- Review and update existing components.
 	- Review and update existing templates.
 
 
-## Dependencies
+# Dependencies
 This demo utilizes:
 - HTML/[EJS](http://ejs.co/#docs)
 - JavsScript
-- CSS/[LESS](http://lesscss.org/#overview)
+- CSS/[node-sass](https://github.com/sass/node-sass)
 - [Express](https://expressjs.com/en/4x/api.html)
-- SLDS
+- [SLDS](https://www.lightningdesignsystem.com)
 - SVG (for screenshots & animations where possible)
 - [D3](https://github.com/d3/d3/wiki/Gallery) & [Highcharts](https://www.highcharts.com/demo) (for interactive graphs where SVGs will not suite our purposes)
 
+
 # Setup
-- Fork this repository
-`npm install`
+- Fork this repository, check out your fork into a directory named something close to, perhaps, the demo you are creating, to avoid confusion with _this project_ and _this repository itself_.
+- `cd` into your new directory and run:
+
+	`npm install`
+
+- Get coding, you are under deadline, kiddo.
+
 
 # Starting the Server
-`npm start`
+`npm run start`
 
-# Using Live Reload
+
+# Using Livereload
 After starting the server (see Starting the Server), open a new Terminal tab and:
 
-`npm livereload`
+`npm run livereload`
 
 # Heroku
-It is assumed as a given that demos shall be served on heroku, utilizing a pipeline.
+It is assumed here, that is, taken as a _given_ that demos _will_ be served on Heroku, utilizing a pipeline.
+
+Getting started with Heroku, setting up a pipeline, etc., is currently _far_ beyond the scope of this document.
 
 1. Push your changes to the dev area of the pipeline.
 2. Promote changes to QA for wider testing.
-3. Promote changes to Prod for end-use (this is where they will be demo'd from)
+3. Promote changes to Prod for end-use (this is where they will be demo'd from).
 
-# Unit tests
-Demos shall not have unit tests.
+# Unit Tests
+Demos shall not have unit tests. There is no point in testing code that changes every fifteen minutes for a week straight only to be run exactly once and then thrown away never to be looked at again.
 
-# Visual & Behavioral testing
+# Visual & Behavioral Testing
 Testing is done through Mocha/Chai/Differencify
 
 The demo flow shall have a `.test-drive.test.js` file in `./test/` (if a demo has multiple flows, each flow will have its own test-drive file)
