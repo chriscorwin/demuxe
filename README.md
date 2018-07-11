@@ -1,15 +1,17 @@
 # Demuxe - The Boilerplate UXE Demo App
 Demuxe is the starting point for new demos. I propose that "Demuxe" should be pronounced "dem-you", but we should definitely have years long raging religious debates about this.
 
+## Quickstart Guie
+There _is_ no quickstart guide because it is important to read and understand all of this stuff before beginning.
+
 ## First Principles
 We very much desire to keep our demo creation process one that does not require learning _how to use tools_, so that we can focus on _simply creating the demo required_.
 
+In order to promote general ease of use, minimize chaos and confusion, and increase likelihood of success when, at a moment’s notice, one is asked jump in "real quick" and knock out a massive demo in a week, working 14 hour days on five hours of sleep... well, the decisions about architecture in this project shall be made with an **_aggressive_ bias towards simplicity**.
 
-In order to promote general ease of use, minimize chaos and confusion, and increase likelihood of success when, at a moment’s notice, one is asked jump in "real quick" and knock out a huge demo in a week... well, the decisions about architecture in this project shall be made with an _aggressive_ bias towards simplicity.
+It is tempting to believe that your particular favorite bit of tooling will enable creating a demo more quickly, or make it easier to make sweeping changes when they are requested, or... well, all of the reasons _frameworks_ have become A Thing™. 
 
-It is tempting to believe that your particular favorite tool will enable creating a demo more quickly, or make it easier to make sweeping changes when they are requested, or... well, all of the reasons _frameworks_ have become a Thing. 
-
-Resist this urge, it is toxic.
+**Resist this urge:** it is a toxic impulse in a fast-moving demo environment.
 
 Modern website creation has gotten... complex. The more "tooling" a project has the less likely any given developer being tasked with working on that project will already "just know" the tools involved.
 
@@ -18,9 +20,9 @@ Modern website creation has gotten... complex. The more "tooling" a project has 
 
 Demos _must_:
 
-- Consist of semantic HTML, vanilla JavaScript, and, plain old CSS.
+- Consist of semantic HTML, vanilla JavaScript, and CSS.
 - Only be required to function in Chrome.
-- Not use Angular, React, Vue, or any other MVC model/framework/whathaveyou.- 
+- Not use Angular, React, Vue, or any other MVC model/framework/whathaveyou.
 
 
 Demos _shall_:
@@ -33,6 +35,7 @@ Demos _shall_:
 Demos _may_: 
 
 - Consist merely of "click-able screenshots", where appropriate.
+- Use a LES
 
 
 ## How to Use
@@ -48,7 +51,7 @@ Demos _may_:
 ## Dependencies
 This demo utilizes:
 - HTML/[EJS](http://ejs.co/#docs)
-- JS
+- JavsScript
 - CSS/[LESS](http://lesscss.org/#overview)
 - [Express](https://expressjs.com/en/4x/api.html)
 - SLDS
