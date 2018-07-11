@@ -129,7 +129,7 @@ SVGs are an important tool in creating our demos.
 
 Much of the "fake" content on a page can be created simply by exporting a design from Sketch as an SVG and showing it in the proper container.
 
-The SVGs scale well, render beautifully at all sizes, just work, and, we can put them in place and never worry about it again.
+The SVGs scale well, render beautifully at all sizes, just works, and, we can put them in place and never worry about it again.
 
 Awesome.
 
@@ -139,7 +139,7 @@ However, there is a quirk with SVGs, due to how the "box" and alignments of chil
 > 
 > The misalignment _almost_ always **does** happen. Due to how the maths work, there are rare caess where the visual change is so slight as to be not readily noticeable, or the alignment, by accident, ends up putting the text element in the same place, but these cases are _exceedingly rare_.
 > 
-> The pedants in use require us to use "can" above, but, truly think of it as "does".
+> The pedants in us require that we use the word "can" above, but, truly think of it as "does".
 
 
 Happily, the misalignment problem is completely avoidable, simply by _not setting a line height on text elements_ in the Sketch source files.
@@ -148,7 +148,9 @@ To make things much easier on everyone involved the following guardrails should 
 
 1. Designers **MUST NOT** set a line height in Sketch on text elements.
 	
-	If a line-height is set, it can throw off vertical alignement of text in the final SVG exports. (See the "note below", which is above ☝️ )
+	If a line height is set, it can throw off vertical alignement of text in the final SVG exports. (See the "note below", which is above ☝️ )
+
+	The only acceptable setting for line height on a text element in a Sketch file is _not to set one_. The input value field will show a placeholder of "auto".
 	
 1. While working in Sketch, a human being — whether they are a designer or not — _must_ **NOT** set a line height on text elements.
 1. Line height _must not be set on text elements_ in Sketch.
