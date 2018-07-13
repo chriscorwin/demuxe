@@ -76,10 +76,10 @@ Shall live in `/dev-assets/`. Typically these will be sketch files.
 	- If a line-height is set, it can throw off vertical alignement of text in the final SVG exports
 	— Designers must NOT set a line-height on text
 	- Line height must not be set on text in Sketch
-- Use `/dev-assets/utilities/embed-font-in-svg.js` to embed the fonts in the Sketch SVG exports
-
-
-
+- Use svg-font-embedder to embed fonts inside the Sketch SVG exports
+    - From the root directory of this project, run `node ./dev-assets/utilities/embed-fonts-in-svgs`
+    - By default the script will scan the `public` folder for all SVG files using fonts, attempt to locate the required fonts on your machine, and create an embedded copy of the files with the `.embedded.svg` suffix.
+    - To convert other project directories, add a directory path when running the script (ex: `node ./dev-assets/utilities/embed-fonts-in-svgs ./some/project/path`
 
 # Templates
 Templates are page shells that can be quickly used to re-create different products. (eg: DMP Header, Navigation, & Footer)
