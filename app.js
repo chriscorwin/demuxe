@@ -1,10 +1,11 @@
-const fs = require('fs');
+const cookieParser = require('cookie-parser');
 const createError = require('http-errors');
 const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
+const expressSanitizer = require('express-sanitizer');
+const fs = require('fs');
 const lessMiddleware = require('less-middleware');
 const logger = require('morgan');
+const path = require('path');
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(expressSanitizer()); // this line follows bodyParser() instantiations
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -27,15 +29,23 @@ const router = express.Router();
  * This dynamically routes to any .ejs file that exists, otherwise it routes to 
  * the /index.ejs file.
  * 
- * So, if you want http://your.site.com/kidney/beans, you'd make a corresponding
- * ejs file /public/kidney/beans.ejs
+ * eg: http://your.site.com/kidney/beans, serves the ejs file /public/kidney/beans.ejs
+ * or serves /public/index.ejs if that file does not exist.
+ * 
+ * All user input will be sanitized. If you have a URL or Query param that is getting mutated unexpectedly, this is why.
  */
 router.get('/*', function(req, res, next) {
-  fs.stat(path.resolve(`public/${req.params[0]}.ejs`), function(err, data) {
+  // Pass any query params they put in the URL on into the EJS template for use
+  const sanitizedQueryParams = Object.keys(req.query).reduce(function(sanitizedQueryParams, param) {
+      sanitizedQueryParams[req.sanitize(param)] = req.sanitize(req.query[param]);
+      return sanitizedQueryParams;
+  }, {});
+  const sanitizedURL = req.sanitize(req.params[0]) || 'index';
+  fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), function(err, data) {
     if (err) {
-      res.render('index', { title: 'Default' });
+      res.render('404', { title: sanitizedURL, ...sanitizedQueryParams });
     } else {
-      res.render(req.params[0], { title: 'Explicit' });
+      res.render(sanitizedURL, { title: 'Explicit', ...sanitizedQueryParams });
     }
   });
 });

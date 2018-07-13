@@ -35,8 +35,19 @@ This demo utilizes:
 - Fork this repo
 `npm install`
 
-# Starting the Server
+# The Server
+## Starting the Server
 `npm start`
+
+## Understanding the Server
+- Express server.
+- Serves from port `:3000` (http://localhost:3000).
+- `.ejs` files are processed server-side and served.
+	- Routes all requests to corresponding files in `public/` (eg: `localhost:3000/bobs/books` routes to `public/bobs/books.ejs`).
+	- User input is magically sanitized using [express-sanitizer](https://www.npmjs.com/package/express-sanitizer).
+- All other files under `public/` are served as static files.
+- Any query params `?like=this` are passed along into the EJS template and available for use in the global js `locals` object `<%= locals.likeThis %>`.
+- EJS files can be included in other EJS files (server side) `<%- include('includes/like-this') %>`.
 
 # Using Live Reload
 After starting the server (see Starting the Server), open a new Terminal tab and:

@@ -12,10 +12,10 @@
   <h1>
     <%= title %>
   </h1>
-  <p>Welcome to
-    <%= title %>
-      <a href="#">Something to click</a>
-      <%- include('includes/test') %>
+  <p><%= title %> Page</p>
+  <p><%- include('includes/test') %></p>
+  <p>Value of query param ?param=<%= locals.param %></p>
+  
   </p>
 </body>
 
