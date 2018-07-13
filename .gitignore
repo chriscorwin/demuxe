@@ -1,3 +1,17 @@
-node_modules/
+# Filesystem
+.DS_Store
+
+# Node build artifacts
+node_modules
 npm-debug.log
+
+# Editors / IDEs
+.idea
+*.sublime-project
+*.sublime-workspace
+jsconfig.json
+.vscode
+*/xcuserdata/*
+
+# Other
 package-lock.json
