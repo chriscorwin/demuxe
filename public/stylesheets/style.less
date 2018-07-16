@@ -1,8 +1,14 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  &.has-debug {
+    .is-ssi-block { display: inline-block; outline: 1px solid red;}
+  }
 }
 
-a {
-  color: #00B7FF;
+code, var {
+	background-color: #eee;
+}
+
+#main-container {
+	margin: auto;
 }
