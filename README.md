@@ -30,7 +30,7 @@ Demos _shall_:
 	- Click-able screenshots are first priority and will be replaced piecemeal as time permits.
 - Be served by Heroku. 
 	
-	Utilizing a Heroku pipeline is strongly recommended.
+	- Utilizing a Heroku pipeline is strongly recommended.
 
 Demos _may_: 
 
