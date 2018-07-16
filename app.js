@@ -52,7 +52,7 @@ router.get('/*', function(req, res, next) {
   const sanitizedURL = req.sanitize(req.params[0]) || 'index';
   fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), function(err, data) {
     if (err) {
-      res.render('404', { page: sanitizedURL, ...sanitizedQueryParams });
+      res.render('404', { page: sanitizedURL, ...demoConfig, sanitizedQueryParams: sanitizedQueryParams });
     } else {
       res.render(sanitizedURL, { ...demoConfig, sanitizedQueryParams: sanitizedQueryParams });
     }
