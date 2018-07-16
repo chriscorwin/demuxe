@@ -12,13 +12,17 @@
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
+    "express-sanitizer": "^1.0.4",
     "http-errors": "~1.6.2",
     "less-middleware": "~2.2.1",
     "morgan": "~1.9.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "minimist": "^1.2.0",
     "mocha": "^5.2.0",
-    "sf-differencify": "git+ssh://git@github.com/cormacmccarthy/sf-differencify.git"
+    "path": "^0.12.7",
+    "sf-differencify": "git+ssh://git@github.com/cormacmccarthy/sf-differencify.git",
+    "svg-font-embedder": "git+ssh://git@github.exacttarget.com:uxarchitecture/svg-font-embedder.git"
   }
 }

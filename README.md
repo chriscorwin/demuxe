@@ -1,26 +1,18 @@
 # Demuxe - The Boilerplate UXE Demo App
 Demuxe is the starting point for new demos. I propose that "Demuxe" should be pronounced "dem-you", but we should definitely have years long raging religious debates about this.
 
-# Quickstart Guie
-There _is_ no quickstart guide because it is important to read and understand all of this stuff before beginning.
-
 # First Principles
+Decisions about architecture in this project shall be made with an **_aggressive_ bias towards simplicity**.
+
 We very much desire to keep our demo creation process one that does not require learning _how to use tools_, so that we can focus on _simply creating the demo required_.
 
-In order to promote general ease of use, minimize chaos and confusion, and increase likelihood of success when, at a moment’s notice, one is asked jump in "real quick" and knock out a massive demo in a week, working 14 hour days on five hours of sleep... well, the decisions about architecture in this project shall be made with an **_aggressive_ bias towards simplicity**.
+**Resist the urge** to "improve" this project with your particular favorite tooling.
 
-It is tempting to believe that your particular favorite bit of tooling will enable creating a demo more quickly, or make it easier to make sweeping changes when they are requested, or... well, all of the reasons _frameworks_ have become A Thing™. 
-
-**Resist this urge:** it is a toxic impulse in a fast-moving demo environment.
-
-Modern website creation has gotten... complex. The more "tooling" a project has the less likely any given developer being tasked with working on that project will already "just know" the tools involved.
-
-More often than not in the demos we create the scope grows over the days the project exists and a second or third developer is thrown onto the pile to "help" get it done "faster" and any questions that developer has to ask about _how the thing is being created_ brings the entire project to a grinding halt for half a day or more -- which can be 20% of the total alloted time needed to create the thing.
+Any questions that a second (or third) developer thrown at an already-in-progress demo has to ask about _how the thing is being created_ brings the entire project to a grinding halt for half a day or more -- which can be 20% of the total alloted time needed to create the thing.
 
 Every. Hour. Counts.
 
-Do _not_ pollute demos with needless complexity.
-
+Do _not_ pollute demos with needless complexity, you're under deadline.
 
 ## To Maintain Aggressive Simplicity...
 
@@ -36,17 +28,21 @@ Demos _shall_:
 - Be as "real" as practical, given the time restraints.
 	- Every effort shall be made for elements of demos to be "real" (vs click-able screenshots). 
 	- Click-able screenshots are first priority and will be replaced piecemeal as time permits.
-- Be served by Heroku. Utilizing a Heroku pipeline is strongly recommended.
+- Be served by Heroku. 
+	
+	Utilizing a Heroku pipeline is strongly recommended.
 
 Demos _may_: 
 
 - Consist merely of "click-able screenshots", where appropriate.
-- Use a a CSS pre or post processor, ideally SCSS, since that is the tool used by our very own [SLDS](https://www.lightningdesignsystem.com) team.
+- Use a CSS pre or post processor; ideally SCSS, since that is the tool used by our very own [SLDS](https://www.lightningdesignsystem.com) team.
 - Make strategic use of JavaScript libraries as-needed to best fulfill the needs of a given demo. 
 	
 	Keep in mind, however, that such tools are a per-demo decision, however, and do not generally  belong in this boilerplate repository.
 
-	It is entirely apprpriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository. Examples [D3](https://github.com/d3/d3/wiki/Gallery) and [Highcharts](https://www.highcharts.com/demo), used in nearly every demo we've created thus far to generate interactive graphs where SVGs alone do not suite our purposes.
+	It is entirely apprpriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository.
+	
+	Examples [D3](https://github.com/d3/d3/wiki/Gallery) and [Highcharts](https://www.highcharts.com/demo), which have been used in nearly every demo we've created thus far to generate interactive graphs where SVGs alone do not suite our purposes.
 
 
 
@@ -85,6 +81,20 @@ This demo utilizes:
 - Get coding, you are under deadline, kiddo.
 
 
+# The Server
+## Starting the Server
+`npm start`
+
+## Understanding the Server
+- [Express server](https://expressjs.com).
+- Serves from port `:3000` (http://localhost:3000).
+- `.ejs` files are processed server-side and served.
+	- Routes all requests to corresponding files in `public/` (eg: `localhost:3000/bobs/books` routes to `public/bobs/books.ejs`).
+	- User input is magically sanitized using [express-sanitizer](https://www.npmjs.com/package/express-sanitizer).
+- All other files under `public/` are served as static files.
+- Any query params `?like=this` are passed along into the EJS template and available for use in the global js `locals` object `<%= locals.likeThis %>`.
+- EJS files can be included in other EJS files (server side) `<%- include('includes/like-this') %>`.
+
 # Starting the Server
 `npm run start`
 
@@ -107,15 +117,17 @@ Getting started with Heroku, setting up a pipeline, etc., is currently _far_ bey
 Demos shall not have unit tests. There is no point in testing code that changes every fifteen minutes for a week straight only to be run exactly once and then thrown away never to be looked at again.
 
 # Visual & Behavioral Testing
-Testing is done through Mocha/Chai/Differencify
+Visual testing is done through Mocha/Chai/Differencify.
 
-The demo flow shall have a `.test-drive.test.js` file in `./test/` (if a demo has multiple flows, each flow will have its own test-drive file)
+The demo flow shall have a `.test-drive.test.js` file in `./test/` (if a demo has multiple flows, each flow will have its own test-drive file).
 
-Test drives run through the whole demo flow using Mocha+Chai+Phantom to ensure that the flow still works and that it has only changed in expected ways. This will also serve as a good form of documentation as to what the expected user behavior for each demo is.
+Test drives must through the _entire_ flow of your demo using Mocha+Chai+Phantom to ensure that the flow still works and that it has only changed in expected ways. 
 
-The test-drive should take screenshots of each step in the flow for reference and comparison.
+This will also serve as a good form of documentation as to what the expected user behavior for each demo is.
 
-This boilerplate starts off with an example test-drive in place (./test/test-drive.test.js).
+The test-drive shall take screenshots of each step in the flow for reference and comparison.
+
+This boilerplate starts off with an example test-drive in place (`./test/test-drive.test.js`).
 
 Differencify's API matches [Puppeteer's](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md) exactly. Reference that when writing interactivity for tests.
 
@@ -125,46 +137,33 @@ Demuxe uses a fork of Differencify that allows us some more flixibility vs what 
 Shall live in `/dev-assets/`. Typically these will be sketch files.
 
 ## Sketch -> SVG Files
-SVGs are an important tool in creating our demos.
 
-Much of the "fake" content on a page can be created simply by exporting a design from Sketch as an SVG and showing it in the proper container.
+There is a [deep dive on using SVGs in demos](svg-quirks-deep-dive.md) available.
 
-The SVGs scale well, render beautifully at all sizes, just works, and, we can put them in place and never worry about it again.
+## Summary
 
-Awesome.
+SVGs can be used to great effect in demos, but can exhibit layout quirks, where text elements appear misaligned.
 
-However, there is a quirk with SVGs, due to how the "box" and alignments of child elements is figured that setting a line-height on text elements in Sketch and exporting as SVG _can_ (see note below) result in misalignment of elements.
+This is avoidable by not having a line height set on such elements in the source Sketch files.
 
-> **Note Below:** We opted for the word "can" above, but in practice, the word "does" is truly more appropriate.
-> 
-> The misalignment _almost_ always **does** happen. Due to how the maths work, there are rare caess where the visual change is so slight as to be not readily noticeable, or the alignment, by accident, ends up putting the text element in the same place, but these cases are _exceedingly rare_.
-> 
-> The pedants in us require that we use the word "can" above, but, truly think of it as "does".
+Also, SVG files do not have access to fonts the same way HTML elements do, so we've developed a script that embeds the font files in the SVGs themselves.
 
-
-Happily, the misalignment problem is completely avoidable, simply by _not setting a line height on text elements_ in the Sketch source files.
-
-To make things much easier on everyone involved the following guardrails should be put into place:
-
-1. Designers **MUST NOT** set a line height in Sketch on text elements.
+- Use `svg-font-embedder` to embed fonts inside the Sketch SVG exports.
+    - From the root directory of this project, run
 	
-	If a line height is set, it can throw off vertical alignement of text in the final SVG exports. (See the "note below", which is above ☝️ )
+		`node ./dev-assets/utilities/embed-fonts-in-svgs`
 
-	The only acceptable setting for line height on a text element in a Sketch file is _not to set one_. The input value field will show a placeholder of "auto".
+    - By default the script will scan the `public/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
+
+    - To convert other project directories, add a directory path when running the script, thus: 
 	
-1. While working in Sketch, a human being — whether they are a designer or not — _must_ **NOT** set a line height on text elements.
-1. Line height _must not be set on text elements_ in Sketch.
-1. Use `/dev-assets/utilities/embed-font-in-svg.js` to embed the fonts in the Sketch SVG exports.
-
-	When embedding SVGs in a webpage, they do not have access to `font-family` and so they will not render exactly as intended. The `embed-font-in-svg` tool modifies the SVG in place so that the font is, get this, _embedded in the SVG_, making the typeface render correctly. 
-
-	Genius.
-
+		`node ./dev-assets/utilities/embed-fonts-in-svgs ./some/project/path`
 
 
 
 
 # Templates
+
 Templates are page shells that can be quickly used to re-create different products. (eg: DMP Header, Navigation, & Footer)
 - Product templates must live in `/templates/{product-name}/`.
 - Product templates shall be an MVP shell and component pages of a product built out as simply, but thoroughly, as possible.
