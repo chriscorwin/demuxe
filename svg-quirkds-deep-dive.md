@@ -10,7 +10,7 @@ However, there is a quirk with SVGs, due to how the "box" and alignments of chil
 
 > **Note Below:** We opted for the word "can" above, but in practice, the word "does" is truly more appropriate.
 > 
-> The misalignment _almost_ always **does** happen. Due to how the maths work, there are rare cases where the visual change is so slight as to be not readily noticeable, or the alignment, by accident, ends up putting the text element in the same place, but these cases are _exceedingly rare_.
+> The misalignment _almost_ always **does** happen. Due to how the math works, there are rare cases where the visual change is so slight as to be not readily noticeable, or the alignment, by accident, ends up putting the text element in the same place, but these cases are _exceedingly rare_.
 > 
 > The pedants in us require that we use the word "can" above, but, truly think of it as "does".
 
