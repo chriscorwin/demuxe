@@ -82,8 +82,11 @@ This demo utilizes:
 
 
 # The Server
+
+
 ## Starting the Server
-`npm start`
+`npm run start`
+
 
 ## Understanding the Server
 - [Express server](https://expressjs.com).
@@ -95,16 +98,19 @@ This demo utilizes:
 - Any query params `?like=this` are passed along into the EJS template and available for use in the global js `locals` object `<%= locals.likeThis %>`.
 - EJS files can be included in other EJS files (server side) `<%- include('includes/like-this') %>`.
 
-# Starting the Server
-`npm run start`
+
 
 
 # Using Livereload
+
 After starting the server (see Starting the Server), open a new Terminal tab and:
 
 `npm run livereload`
 
+
+
 # Heroku
+
 It is assumed here, that is, taken as a _given_ that demos _will_ be served on Heroku, utilizing a pipeline.
 
 Getting started with Heroku, setting up a pipeline, etc., is currently _far_ beyond the scope of this document.
@@ -113,10 +119,16 @@ Getting started with Heroku, setting up a pipeline, etc., is currently _far_ bey
 2. Promote changes to QA for wider testing.
 3. Promote changes to Prod for end-use (this is where they will be demo'd from).
 
+
+
 # Unit Tests
+
 Demos shall not have unit tests. There is no point in testing code that changes every fifteen minutes for a week straight only to be run exactly once and then thrown away never to be looked at again.
 
+
+
 # Visual & Behavioral Testing
+
 Visual testing is done through Mocha/Chai/Differencify.
 
 The demo flow shall have a `.test-drive.test.js` file in `./test/` (if a demo has multiple flows, each flow will have its own test-drive file).
@@ -133,14 +145,19 @@ Differencify's API matches [Puppeteer's](https://github.com/GoogleChrome/puppete
 
 Demuxe uses a fork of Differencify that allows us some more flixibility vs what currently exists in the base repository. If someone wants to go through the pain of figuring out Docker and guiding the open PRs through the process etc etc to get these changes merged into the base repository, go for it.
 
+
+
 # Spec/Designs
+
 Shall live in `/dev-assets/`. Typically these will be sketch files.
+
+
 
 ## Sketch -> SVG Files
 
 There is a [deep dive on using SVGs in demos](svg-quirks-deep-dive.md) available.
 
-## Summary
+### Using SVGs summary
 
 SVGs can be used to great effect in demos, but can exhibit layout quirks, where text elements appear misaligned.
 
@@ -165,15 +182,22 @@ Also, SVG files do not have access to fonts the same way HTML elements do, so we
 # Templates
 
 Templates are page shells that can be quickly used to re-create different products. (eg: DMP Header, Navigation, & Footer)
+
 - Product templates must live in `/templates/{product-name}/`.
 - Product templates shall be an MVP shell and component pages of a product built out as simply, but thoroughly, as possible.
 - The more complete our library of product templates the better.
 - Once per quarter existing templates shall be audited with designers and updated. In this manner when we are asked to quickly complete a demo, we will have an even better jumping off point.
 
+
+
 # Component Gallaries
+
 Component gallaries shall contain MVP examples of components used in past demos (eg: graphs on the DMP home page). These shall be lightly documented and reviewed to ensure high confidence in quality, readability, and re-usability (in essence, you shall be able to just open the file and know exactly what to copy/paste and how to use it within a few minutes).
 
+
+
 # Hall of Fame
+
 Past demos utilizing this boilerplate (add yours here!)
 
 [Connections 2018 DMP Demo](https://github.exacttarget.com/uxarchitecture/cnx-dmp-2018)
