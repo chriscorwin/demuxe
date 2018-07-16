@@ -38,9 +38,9 @@ Demos _may_:
 - Use a CSS pre or post processor; ideally SCSS, since that is the tool used by our very own [SLDS](https://www.lightningdesignsystem.com) team.
 - Make strategic use of JavaScript libraries as-needed to best fulfill the needs of a given demo. 
 	
-	Keep in mind, however, that such tools are a per-demo decision, however, and do not generally  belong in this boilerplate repository.
+	Keep in mind that such tools are a per-demo decision and do not generally  belong in this boilerplate repository.
 
-	It is entirely apprpriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository.
+	It _is_ entirely apprpriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository.
 	
 	Examples [D3](https://github.com/d3/d3/wiki/Gallery) and [Highcharts](https://www.highcharts.com/demo), which have been used in nearly every demo we've created thus far to generate interactive graphs where SVGs alone do not suite our purposes.
 
