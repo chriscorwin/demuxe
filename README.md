@@ -50,15 +50,11 @@ Demos _may_:
 - Create a fork of this repository for each new demo.
 - Create a discrete Heroku pipeline for each new demo.
 - Do **not** commit demos back to this repository. 
-- Often when creating a demo, fantastic new ideas for _how to create demos_ are arrived upon.
-
-	The retrospective phase of a such demo is a very appropriate time to update _this_ repository based on lessons learned there.
-
-	When deemed appropriate, allocate time to enhance the Demuxe project:
-
+- In the retrospective phase of a demo, update this repo:
 	- Place new components into component gallery.
 	- Review and update existing components.
 	- Review and update existing templates.
+	- Thoughtfully incorporate new ideas for creating demos based on lessons learned.
 
 
 # Dependencies
