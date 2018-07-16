@@ -2,7 +2,7 @@
 
 Much of the "fake" content on a page can be created simply by exporting a design from Sketch as an SVG and showing it in the proper container.
 
-The SVGs scale well, render beautifully at all sizes, just works, and, we can put them in place and never worry about it again.
+The SVGs scale well, render beautifully at all sizes, just work, and, we can put them in place and never worry about it again.
 
 Awesome.
 
