@@ -35,7 +35,7 @@ Demos _shall_:
 Demos _may_: 
 
 - Consist merely of "click-able screenshots", where appropriate.
-- Use a CSS pre or post processor; ideally SCSS, since that is the tool used by our very own [SLDS](https://www.lightningdesignsystem.com) team.
+- Use SCSS, since that is the tool used by our very own [SLDS](https://www.lightningdesignsystem.com) team.
 - Make strategic use of JavaScript libraries as-needed to best fulfill the needs of a given demo. 
 	
 	Keep in mind that such tools are a per-demo decision and do not generally  belong in this boilerplate repository.
