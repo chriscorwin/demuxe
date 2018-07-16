@@ -188,7 +188,7 @@ Templates are page shells that can be quickly used to re-create different produc
 
 # Component Gallaries
 
-Component gallaries shall contain MVP examples of components used in past demos (eg: graphs on the DMP home page). These shall be lightly documented and reviewed to ensure high confidence in quality, readability, and re-usability (in essence, you shall be able to just open the file and know exactly what to copy/paste and how to use it within a few minutes).
+Component gallaries should contain MVP examples of components used in past demos (eg: graphs on the DMP home page). These shall be lightly documented and reviewed to ensure high confidence in quality, readability, and re-usability (in essence, you shall be able to just open the file and know exactly what to copy/paste and how to use it within a few minutes).
 
 
 
