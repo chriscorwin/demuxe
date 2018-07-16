@@ -1,14 +1,13 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var lessMiddleware = require('less-middleware');
-var logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const createError = require('http-errors');
+const express = require('express');
+const expressSanitizer = require('express-sanitizer');
+const fs = require('fs');
+const lessMiddleware = require('less-middleware');
+const logger = require('morgan');
+const path = require('path');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public'));
@@ -17,12 +16,41 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(expressSanitizer()); // this line follows bodyParser() instantiations
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+const router = express.Router();
+
+/** 
+ * Serve up the .ejs files
+ * 
+ * This dynamically routes to any .ejs file that exists, otherwise it routes to 
+ * the /index.ejs file.
+ * 
+ * eg: http://your.site.com/kidney/beans, serves the ejs file /public/kidney/beans.ejs
+ * or serves /public/index.ejs if that file does not exist.
+ * 
+ * All user input will be sanitized. If you have a URL or Query param that is getting mutated unexpectedly, this is why.
+ */
+router.get('/*', function(req, res, next) {
+  // Pass any query params they put in the URL on into the EJS template for use
+  const sanitizedQueryParams = Object.keys(req.query).reduce(function(sanitizedQueryParams, param) {
+      sanitizedQueryParams[req.sanitize(param)] = req.sanitize(req.query[param]);
+      return sanitizedQueryParams;
+  }, {});
+  const sanitizedURL = req.sanitize(req.params[0]) || 'index';
+  fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), function(err, data) {
+    if (err) {
+      res.render('404', { page: sanitizedURL, ...sanitizedQueryParams });
+    } else {
+      res.render(sanitizedURL, { ...sanitizedQueryParams });
+    }
+  });
+});
+
+app.use('/', router);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
