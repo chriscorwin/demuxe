@@ -9,6 +9,15 @@ const path = require('path');
 
 const app = express();
 
+
+
+// Demo config
+const demoConfig = {
+  demoName: 'Demux Demo',
+  demoVersion: '1.0'
+}
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'public'));
 app.set('view engine', 'ejs');
@@ -43,9 +52,9 @@ router.get('/*', function(req, res, next) {
   const sanitizedURL = req.sanitize(req.params[0]) || 'index';
   fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), function(err, data) {
     if (err) {
-      res.render('404', { page: sanitizedURL, ...sanitizedQueryParams });
+      res.render('404', { page: sanitizedURL, ...demoConfig, sanitizedQueryParams: sanitizedQueryParams });
     } else {
-      res.render(sanitizedURL, { ...sanitizedQueryParams });
+      res.render(sanitizedURL, { ...demoConfig, sanitizedQueryParams: sanitizedQueryParams });
     }
   });
 });
