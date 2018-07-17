@@ -1,8 +1,10 @@
 <% 
-	locals.is201 = locals.sanitizedQueryParams.pageVersion === '201';
-	locals.accountParam = locals.sanitizedQueryParams.account || (is201 ? 'nto-electronics' : 'Ducati');
+	const { pageVersion, account } = locals.sanitizedQueryParams;
+	const is201 = pageVersion && pageVersion === '201';
+	const accountParam = account || (is201 ? 'nto-electronics' : 'Ducati');
 %>
 
 <script>
-	const accountParam = <%=locals.accountParam%>;
+	const is201 = <%= is201 %>
+	const accountParam = <%= accountParam %>;
 </script>
