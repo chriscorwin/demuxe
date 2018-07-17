@@ -13,7 +13,8 @@
     Index
   </h1>
   <p>Index Page</p>
-  <p><%- include('includes/test') %></p>
+  <p><%- include('includes/test-include.ejs') %></p>
+  <p><%- include('includes/test.include.ejs') %></p>
   <p>Query parameters are available in the global JS `locals` object, like this: &lt;%= locals.foo %&gt;. While EJS examples tell you you can access them like this: &lt;%= foo %&gt;, _don't_ do that; if the parameter is undefined the page will explode.</p>
   <p>Value of ?foo=<%= locals.foo %></p>
   <p><a href="?foo=bar">Set ?foo=bar</a></p>
