@@ -1,0 +1,117 @@
+<style>
+	#activated-segments-graph .slds-size_4-of-5 {
+		color: #70ABEA;
+	}
+</style>
+
+<div class="slds-panel-box">
+	<div class="slds-panel-box__header slds-p-around_small">Activated Segments
+		<img class="icon" src="/img/settings.svg" />
+	</div>
+	<div class="slds-panel-box__body">
+		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
+			<button class="slds-button slds-button_neutral">Top 5
+				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+			</button>
+			<button class="slds-button slds-button_neutral">By Impressions
+				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+			</button>
+			<button style="float: right;" class="slds-button slds-button_neutral">Last 30 days
+				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+			</button>
+		</div>
+		<div class="slds-grid slds-wrap">
+			<div class="slds-col slds-size_3-of-4 slds-p-left_medium">SEGMENTS</div>
+			<div class="slds-col slds-size_1-of-4 slds-p-right_medium" style="text-align: right;">IMPRESSIONS</div>
+			<div class="slds-col slds-size_1-of-1 slds-p-top_medium" id="activated-segments-graph"></div>
+		</div>
+		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
+			<a href="javascript:void(0);">View All Segments</a>
+		</div>
+	</div>
+</div>
+
+<script>
+const makeGraphLine = (data) => (`
+	<div class="slds-grid slds-wrap">
+		<div class="slds-col slds-size_4-of-5 slds-p-left_medium">${data.label}</div>
+		<div class="slds-col slds-size_1-of-5 slds-p-right_medium" style="text-align: right;">${data.number}</div>
+		<div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-m-bottom_large" style="height: 7px;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="550" height="10" viewBox="0 0 550 10">
+			<g transform="scale(1,-1) translate(0,-12)">
+				<rect x="0" y="5" fill="#70ABEA" height="7" stroke="#fff" rx="3" ry="3">
+					<animate attributeName="width" from="0" to="${data.width}" dur="1s" fill="freeze"/>
+				</rect>
+			</g>
+		</svg></div>
+	</div>`);
+
+const graphLines = [
+	{label: '<img src="/img/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
+	{label: 'In-Market_2017_potential target', number: '4.7M', width: 308},
+	{label: '<img src="/img/icons/dollar.svg" /> Ducati_loyalists', number: '4M', width: 290},
+	{label: 'Multistrada Interest List 2018', number: '3.7M', width: 270},
+	{label: 'Early_adopters', number: '2.3M', width: 186}
+];
+
+const graphLinesNtoGeneral = [
+	{label: '<img src="/img/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
+	{label: 'Loyal_Shoppers_2016-2017_potential target', number: '4.7M', width: 308},
+	{label: '<img src="/img/icons/dollar.svg" /> Heavy spenders', number: '4M', width: 290},
+	{label: 'Deals_clicks_converts_group_deal-shoppers_2018', number: '3.7M', width: 270},
+	{label: 'Early_adopters', number: '2.3M', width: 186}
+];
+const graphLinesNtoApparel = [
+	{label: '<img src="/img/icons/dollar.svg" /> Jacket Shoppers 2018', number: '7.1M', width: 432},
+	{label: 'Brand_loyals', number: '5.1M', width: 402},
+	{label: '<img src="/img/icons/dollar.svg" /> Group_Purchasers', number: '3.4M', width: 362},
+	{label: 'Deal Hunters 2018', number: '3.2M', width: 342},
+	{label: 'Outerwear High Value', number: '2.1M', width: 292}
+];
+const graphLinesNtoElectronics = [
+	{label: '<img src="/img/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
+	{label: 'In-Market_2017_potential target', number: '4.7M', width: 308},
+	{label: '<img src="/img/icons/dollar.svg" /> Heavy spenders', number: '4.7M', width: 308},
+	{label: 'Deals_clicks_converts_group_deal-shoppers_2018', number: '3.7M', width: 267},
+	{label: 'Early_adopters', number: '2.3M', width: 186}
+];
+
+const makeGraphLines = () => graphLines.reduce((lines, line) => lines + makeGraphLine(line), '');
+const makeGraphLinesNtoApparel = () => graphLinesNtoApparel.reduce((lines, line) => lines + makeGraphLine(line), '');
+const makeGraphLinesNtoElectronics = () => graphLinesNtoElectronics.reduce((lines, line) => lines + makeGraphLine(line), '');
+const makeGraphLinesNtoGeneral = () => graphLinesNtoGeneral.reduce((lines, line) => lines + makeGraphLine(line), '');
+
+if (navData.accountParam === 'nto-electronics') {
+	document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoElectronics();
+} else if (navData.accountParam === 'nto-apparel') {
+	document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoApparel();
+} else if (navData.accountParam === 'nto-general') {
+	document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoGeneral();
+} else {
+	document.querySelector('#activated-segments-graph').innerHTML = makeGraphLines();
+}
+
+
+let triggeredSegmentsGraphAnimation = false;
+const animateSegmentsGraph = () => {
+	if (window.scrollY > 1 && !triggeredSegmentsGraphAnimation) {
+		triggeredSegmentsGraphAnimation = true;
+
+		console.log('navData.pageVersion', navData.pageVersion);
+		console.log('navData.pageVersion === 201', navData.pageVersion === '201');
+		console.log('navData.accountParam', navData.accountParam);
+		console.log('navData.accountName', navData.accountName);
+
+		if (navData.accountParam === 'nto-electronics') {
+			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoElectronics();
+		} else if (navData.accountParam === 'nto-apparel') {
+			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoApparel();
+		} else if (navData.accountParam === 'nto-general') {
+			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoGeneral();
+		} else {
+			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLines();
+		}
+
+
+	}
+};
+</script>
