@@ -1,6 +1,6 @@
 Files in this folder should be entirely self-contained and include-able in any other file like this:
 
-<%- include('components/chart.activation-partners.ejs' %>
+<%- include('components/chart.activation-partners.ejs') %>
 
 You can pass params to an include, like this:
 
