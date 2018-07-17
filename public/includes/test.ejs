@@ -1,0 +1,15 @@
+<p>This paragraph was included from <code>`/public/includes/test.ejs`</code>.</p>
+
+<p>So was this one.</p>
+
+<p>If you inspect the page, you'll note that you can use HTML in your includes, kiddo. Enjoy that.</p>
+
+<p>They also have access to the query parameters:</p>
+
+<p>Value of <code>?debug=</code>
+    <var>
+        <%= locals.sanitizedQueryParams.debug %>
+    </var>.
+</p>
+
+<p>Note that while <code>debug</code> is set to <var>true</var>, a red border appears around the include. That's beacuse of the <code>.is-ssi-block</code> feature discussed above.</p>
