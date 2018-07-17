@@ -96,11 +96,6 @@ const animateSegmentsGraph = () => {
 	if (window.scrollY > 1 && !triggeredSegmentsGraphAnimation) {
 		triggeredSegmentsGraphAnimation = true;
 
-		console.log('navData.pageVersion', navData.pageVersion);
-		console.log('navData.pageVersion === 201', navData.pageVersion === '201');
-		console.log('navData.accountParam', navData.accountParam);
-		console.log('navData.accountName', navData.accountName);
-
 		if (navData.accountParam === 'nto-electronics') {
 			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoElectronics();
 		} else if (navData.accountParam === 'nto-apparel') {
