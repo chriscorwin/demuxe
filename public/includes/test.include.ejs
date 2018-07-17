@@ -1,1 +1,19 @@
-<p>This text was included from `/public/includes/test.include.ejs` like this: &lt;%- include('includes/test.include.ejs') %&gt;. <br>NOTICE: If your file name has a `.` in it, you must include the `.ejs` extension in the include statement.</p>
+<p>
+	And this paragraph was included from <code>`/public/includes/test.includes.ejs`</code> like this: 
+	<br><code>&lt;%- include('includes/test.include.ejs') %&gt;</code>.
+	<br><strong>NOTICE: If your file name has extra `.`s in it, you <em>must include</em> the `.ejs` extension in the include statement.</strong>
+</p>
+
+<p>This paragraph was included from <code>`/public/includes/test.includes.ejs`</code> too!</p>
+
+<p>If you inspect the page, you'll note that you can use HTML in your includes, kiddo. Enjoy that.</p>
+
+<p>They also have access to the query parameters:</p>
+
+<p>Value of <code>?debug=</code>
+	<var>
+		<%= locals.sanitizedQueryParams.debug %>
+	</var>.
+</p>
+
+<p>Note that while <code>debug</code> is set to <var>true</var>, a red border appears around the include. That's beacuse of the <code>.is-ssi-block</code> feature discussed above.</p>
