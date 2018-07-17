@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="/styles/salesforce-lightning-design-system.css"></link>
+		<link rel="stylesheet" href="/styles/global.css">
+		<link rel="stylesheet" href="/styles/index.css">
+		<link rel="stylesheet" href="/styles/highcharts.css">
+	</head>
+
+	<body onscroll="animateGraphs()" class="dashboard">
+		<%- include('includes/header', { title: "overview" }) %>
+		<div id="content-wrapper">
+			<div id="content" class="slds-p-vertical_medium slds-container_large">
+				<div id="top" class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch">
+					<div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
+						<div class="slds-panel-box">
+							<div class="slds-panel-box__header slds-p-around_small">Audience Population
+								<img class="icon" src="/img/settings.svg" />
+							</div>
+							<div class="slds-panel-box__body" style="background-color: white;">
+								<div class="slds-grid slds-panel-box__sub-header slds-m-bottom_medium">
+									<div class="slds-col slds-p-around_small slds-size_1-of-2" style="text-align: center; border-bottom: 2px solid #0070D2;">This Month (Jun 1 - Jun 13, 2018)</div>
+									<div class="slds-col slds-p-around_small slds-size_1-of-2" style="text-align: center">Last Month ( May 1 - May 31, 2018)</div>
+								</div>
+								<div class="slds-grid slds-wrap slds-p-around_medium" style="height: 273px;">
+									<img id="index-audience-segments-population" style="margin: 0px auto;" src="/img/slices/index.audience-segments-population.svg" />
+								</div>
+								<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;" class="slds-p-around_medium slds-grid">
+									<div class="slds-col slds-size_1-of-2" style="margin-top: -4px;">
+										Find 1st, 2nd and 3rd Party segments to add to your audience.
+									</div>
+									<div class="slds-col slds-size_1-of-2">
+										<button style="float: right; color: #0070D2;" class="slds-button slds-button_neutral"><img class="slds-button__icon slds-button__icon_left" src="/img/icons/plus-people.svg" style="width: 24px; height: 22px;" />Discover Audiences</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slds-col slds-p-right_medium slds-size_1-of-2">
+						<%- include('components/chart.activated-segmnets') %>
+					</div>
+				</div>
+				<div id="middle" class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch">
+					<div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
+						<%- include('components/highcharts.data-captuire-events') %>
+					</div>
+					<div class="slds-col slds-p-right_medium slds-size_1-of-2">
+						<%- include('components/highcharts.data-captuire-methods') %>
+					</div>
+				</div>
+				<div id="bottom" class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-top_medium">
+					<div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
+						<%- include('components/highcharts.marketer-campaigns') %>
+					</div>
+					<div class="slds-col slds-p-right_medium slds-size_1-of-2">
+						<%- include('components/chart.activation-partners.ejs' %>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<%- include('components/toast', {
+			contents: 'Will be available only under ‘Northern Trail Outfitters - Apparel&rsquo; account as &lsquo;Winter Jackets &ndash; New High Value&rsquo;',
+			title: '&lsquo;Winter Jackets Propensity Customers&rsquo; segment provisioned successfully.',
+			theme: 'success'			
+		}) %>
+
+
+		<script type="text/javascript">
+			const activePage = 'overview';
+		</script>
+		<%- include('includes/footer-scripts') %>
+		<script type="text/javascript" src="/javascripts/highcharts/index.marketer-campaigns-chart.js"></script>
+		<script type="text/javascript" src="/javascripts/index.js"></script>
+	</body>
+</html>

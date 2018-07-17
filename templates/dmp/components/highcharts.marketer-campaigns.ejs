@@ -1,0 +1,147 @@
+<div class="slds-panel-box">
+	<div class="slds-panel-box__header slds-p-around_small">Marketer Campaigns
+		<img class="icon" src="/img/settings.svg" />
+	</div>
+	<div class="slds-panel-box__body">
+		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
+			<button class="slds-button slds-button_neutral">Top 5
+				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+			</button>
+			<button class="slds-button slds-button_neutral">By Impressions
+				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+			</button>
+			<button style="float: right;" class="slds-button slds-button_neutral">Last 30 days
+				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+			</button>
+		</div>
+		<div id="marketer-campaigns-chart" style="width:100%; height:268px;"></div>
+		<div class="slds-grid slds-text-body_small slds-p-around_medium" id="marketer-campaigns-chart-legend"></div>
+		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
+			<a href="javascript:void(0);">View All Marketer Campaigns</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="/javascripts/highcharts/highcharts.min.js"></script>
+<script type="text/javascript">
+const spendData = [
+	{ x: 240, y: 2250, z: 77, name: 'Display', color: '#0857A6' },
+	{ x: 990, y: 2250, z: 56, name: 'Video', color: '#C398F5' },
+	{ x: 370, y: 1400, z: 48, name: 'Email', color: '#5208A6' }, // Email on left
+	{ x: 810, y: 870, z: 59, name: 'Mobile', color: '#197EE3' },
+	{ x: 560, y: 1900, z: 27, name: 'Email', color: '#7719E3' } // Email on right
+
+];
+
+// Gets options for the Cumulative 1st Party Overview chart
+const getSpendOptions = () => {
+	return {
+		legend: {
+			verticalAlign: 'top',
+			enabled: false
+		},
+		title: {
+			text: ''
+		},
+		chart: {
+			type: 'bubble',
+			height: 268,
+			style: {
+				fontFamily: 'Salesforce Sans'
+			},
+			zoomType: 'xy'
+		},
+		xAxis: {
+			gridLineWidth: 0,
+			labels: {
+				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+				formatter: function formatter () {
+					if (this.value < 1000) {
+						return this.value + 'K';
+					}
+					return (this.value / 1000) + 'M';
+				}
+			},
+			title: {
+				text: 'Impressions'
+			}
+		},
+		yAxis: {
+			tickInterval: 500,
+			softMin: 500,
+			softMax: 2500,
+			lineWidth: 1,
+			lineColor: '#E6EBF5',
+			gridLineColor: '#E6EBF5',
+			title: {
+				text: 'Spend ($)'
+			},
+			labels: {
+				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+				formatter: function formatter () {
+					if (this.value < 1000) {
+						return this.value + 'K';
+					}
+					return (this.value / 1000) + 'M';
+				}
+			}
+		},
+		plotOptions: {
+			bubble: {
+				marker: {
+					lineWidth: 0,
+					fillOpacity: 0.9
+				},
+				minSize: 30,
+				maxSize: 30
+			},
+			series: {
+				animation: {
+					duration: 2000
+				}
+			}
+		},
+		tooltip: {
+			shared: true,
+			useHTML: true,
+			headerFormat: '',
+			pointFormat: '<div style="width: 70px;"><div style="background-color: {point.color};height: 10px; width: 10px;border-radius: 5px;float: left;margin: 10px 10px 10px 4px;"></div> {point.name}<br />{point.y}K</div>',
+			footerFormat: '',
+			valueDecimals: 0
+		},
+		series: [{ data: spendData }]
+	};
+};
+
+Highcharts.setOptions({credits: { enabled: false }});
+let marketerCampaignsChart;
+
+let triggeredMarketerCampaignsAnimation = false;
+const animateMarketerCampaigns = () => {
+	if (window.scrollY > 500 && !triggeredMarketerCampaignsAnimation) {
+		triggeredMarketerCampaignsAnimation = true;
+		marketerCampaignsChart = Highcharts.chart('marketer-campaigns-chart', getSpendOptions());
+	}
+};
+
+
+const makeMarketerCampaignsLegendRow = (data) => (`
+	<div class="slds-col slds-size_1-of-4">
+		<div class="circle small" style="background-color: ${data.color};"></div> ${data.name} campaign
+	</div>
+`);
+
+let uniqueNames = [];
+const uniqueSpendData = spendData.filter((possibleDupe) => {
+	const isUnique = !uniqueNames.find(uniqueName => uniqueName === possibleDupe.name);
+
+	if (isUnique) {
+		uniqueNames.push(possibleDupe.name);
+	}
+
+	return isUnique;
+});
+const makeMarketerCampaignsLegend = () => uniqueSpendData.reduce((rows, row) => rows + makeMarketerCampaignsLegendRow(row), '');
+
+document.querySelector('#marketer-campaigns-chart-legend').innerHTML = makeMarketerCampaignsLegend();
+</script>
