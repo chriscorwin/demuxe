@@ -180,7 +180,7 @@ Also, SVG files do not have access to fonts the same way HTML elements do, so we
 Templates are page shells that can be quickly used to re-create different products. (eg: DMP Header, Navigation, & Footer)
 
 - Product templates must live in `/templates/{product-name}/`.
-	- The goal would be that if a demo requires that template, all someone would have to do is copy the entire contents of this sub-folder and paste it into the root of the project and they'd have a base-line browser-viewable demo of shell of that product ready to go to modify.
+	- The goal would be that if a demo requires that template, all someone would have to do is copy the entire contents of the product-specific sub-folder and paste it into `/public/` and they'd have a base-line browser-viewable demo of shell of that product ready to go to modify.
 - Product templates shall be an MVP shell and component pages of a product built out as simply, but thoroughly, as possible.
 - The more complete our library of product templates the better.
 - Once per quarter existing templates shall be audited with designers and updated. In this manner when we are asked to quickly complete a demo, we will have an even better jumping off point.

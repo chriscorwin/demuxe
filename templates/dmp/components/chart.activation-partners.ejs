@@ -17,18 +17,18 @@
 </style>
 <div class="slds-panel-box">
 	<div class="slds-panel-box__header slds-p-around_small">Activation Partners
-		<img class="icon" src="/img/settings.svg" />
+		<img class="icon" src="../img/settings.svg" />
 	</div>
 	<div class="slds-panel-box__body">
 		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
 			<button class="slds-button slds-button_neutral">Top 5
-				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+				<img class="slds-button__icon slds-button__icon_right" src="../img/icons/down.dark-blue.svg" />
 			</button>
 			<button class="slds-button slds-button_neutral">By Devices Sent
-				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+				<img class="slds-button__icon slds-button__icon_right" src="../img/icons/down.dark-blue.svg" />
 			</button>
 			<button style="float: right;" class="slds-button slds-button_neutral">June 13, 2018
-				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+				<img class="slds-button__icon slds-button__icon_right" src="../img/icons/down.dark-blue.svg" />
 			</button>
 		</div>
 		<div id="activation-partner-grid"></div>
@@ -49,11 +49,11 @@ const makeActivationPartnerRow = (data) => (`
 
 const activationPartnerRows = [
 	{partner: 'ACTIVATION PARTNERS', type: 'REFRESH TYPE', sent: 'DEVICES SENT'},
-	{partner: '<img src="/img/logos/logo-dblclick-bm.svg" />', type: 'Full', sent: '9M'},
-	{partner: '<img src="/img/logos/sf.svg" />', type: 'Full', sent: '8.75M'},
-	{partner: '<img src="/img/logos/appnexus.svg" />', type: 'Incremental', sent: '7M'},
-	{partner: '<img src="/img/logos/youtube.svg" />', type: 'Incremental', sent: '6.8M'},
-	{partner: '<img src="/img/logos/pinterest.svg" />', type: 'Full', sent: '6M'}
+	{partner: '<img src="../img/logos/logo-dblclick-bm.svg" />', type: 'Full', sent: '9M'},
+	{partner: '<img src="../img/logos/sf.svg" />', type: 'Full', sent: '8.75M'},
+	{partner: '<img src="../img/logos/appnexus.svg" />', type: 'Incremental', sent: '7M'},
+	{partner: '<img src="../img/logos/youtube.svg" />', type: 'Incremental', sent: '6.8M'},
+	{partner: '<img src="../img/logos/pinterest.svg" />', type: 'Full', sent: '6M'}
 ];
 
 const makeActivationPartnerRows = () => activationPartnerRows.reduce((rows, row) => rows + makeActivationPartnerRow(row), '');

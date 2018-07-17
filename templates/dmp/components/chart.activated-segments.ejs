@@ -6,18 +6,18 @@
 
 <div class="slds-panel-box">
 	<div class="slds-panel-box__header slds-p-around_small">Activated Segments
-		<img class="icon" src="/img/settings.svg" />
+		<img class="icon" src="../img/settings.svg" />
 	</div>
 	<div class="slds-panel-box__body">
 		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
 			<button class="slds-button slds-button_neutral">Top 5
-				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+				<img class="slds-button__icon slds-button__icon_right" src="../img/icons/down.dark-blue.svg" />
 			</button>
 			<button class="slds-button slds-button_neutral">By Impressions
-				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+				<img class="slds-button__icon slds-button__icon_right" src="../img/icons/down.dark-blue.svg" />
 			</button>
 			<button style="float: right;" class="slds-button slds-button_neutral">Last 30 days
-				<img class="slds-button__icon slds-button__icon_right" src="/img/icons/down.dark-blue.svg" />
+				<img class="slds-button__icon slds-button__icon_right" src="../img/icons/down.dark-blue.svg" />
 			</button>
 		</div>
 		<div class="slds-grid slds-wrap">
@@ -46,31 +46,31 @@ const makeGraphLine = (data) => (`
 	</div>`);
 
 const graphLines = [
-	{label: '<img src="/img/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
+	{label: '<img src="../img/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
 	{label: 'In-Market_2017_potential target', number: '4.7M', width: 308},
-	{label: '<img src="/img/icons/dollar.svg" /> Ducati_loyalists', number: '4M', width: 290},
+	{label: '<img src="../img/icons/dollar.svg" /> Ducati_loyalists', number: '4M', width: 290},
 	{label: 'Multistrada Interest List 2018', number: '3.7M', width: 270},
 	{label: 'Early_adopters', number: '2.3M', width: 186}
 ];
 
 const graphLinesNtoGeneral = [
-	{label: '<img src="/img/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
+	{label: '<img src="../img/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
 	{label: 'Loyal_Shoppers_2016-2017_potential target', number: '4.7M', width: 308},
-	{label: '<img src="/img/icons/dollar.svg" /> Heavy spenders', number: '4M', width: 290},
+	{label: '<img src="../img/icons/dollar.svg" /> Heavy spenders', number: '4M', width: 290},
 	{label: 'Deals_clicks_converts_group_deal-shoppers_2018', number: '3.7M', width: 270},
 	{label: 'Early_adopters', number: '2.3M', width: 186}
 ];
 const graphLinesNtoApparel = [
-	{label: '<img src="/img/icons/dollar.svg" /> Jacket Shoppers 2018', number: '7.1M', width: 432},
+	{label: '<img src="../img/icons/dollar.svg" /> Jacket Shoppers 2018', number: '7.1M', width: 432},
 	{label: 'Brand_loyals', number: '5.1M', width: 402},
-	{label: '<img src="/img/icons/dollar.svg" /> Group_Purchasers', number: '3.4M', width: 362},
+	{label: '<img src="../img/icons/dollar.svg" /> Group_Purchasers', number: '3.4M', width: 362},
 	{label: 'Deal Hunters 2018', number: '3.2M', width: 342},
 	{label: 'Outerwear High Value', number: '2.1M', width: 292}
 ];
 const graphLinesNtoElectronics = [
-	{label: '<img src="/img/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
+	{label: '<img src="../img/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
 	{label: 'In-Market_2017_potential target', number: '4.7M', width: 308},
-	{label: '<img src="/img/icons/dollar.svg" /> Heavy spenders', number: '4.7M', width: 308},
+	{label: '<img src="../img/icons/dollar.svg" /> Heavy spenders', number: '4.7M', width: 308},
 	{label: 'Deals_clicks_converts_group_deal-shoppers_2018', number: '3.7M', width: 267},
 	{label: 'Early_adopters', number: '2.3M', width: 186}
 ];
@@ -110,8 +110,6 @@ const animateSegmentsGraph = () => {
 		} else {
 			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLines();
 		}
-
-
 	}
 };
 </script>
