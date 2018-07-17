@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>chevrondown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Manage-Segments" transform="translate(-1228.000000, -688.000000)" fill="#54698D">
+            <g id="Group-14-Copy-2" transform="translate(24.000000, 622.000000)">
+                <g id="chevrondown" transform="translate(1204.000000, 66.000000)">
+                    <path d="M15.4258373,1.70334928 L8.15311005,9.05263158 C7.92344498,9.20574163 7.61722488,9.20574163 7.38755981,9.05263158 L0.114832536,1.70334928 C-0.038277512,1.47368421 -0.038277512,1.16746411 0.114832536,0.937799043 L0.880382775,0.172248804 C1.11004785,-0.0574162679 1.49282297,-0.0574162679 1.72248804,0.172248804 L7.38755981,5.9138756 C7.61722488,6.14354067 7.92344498,6.14354067 8.15311005,5.9138756 L13.8181818,0.172248804 C14.0478469,0.019138756 14.430622,0.019138756 14.6602871,0.172248804 L15.4258373,0.937799043 C15.5789474,1.16746411 15.5789474,1.47368421 15.4258373,1.70334928 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
