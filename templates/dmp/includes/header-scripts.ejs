@@ -1,0 +1,8 @@
+<% 
+	locals.is201 = locals.sanitizedQueryParams.pageVersion === '201' %>;
+	locals.accountParam = locals.sanitizedQueryParams.account || (is201 ? 'nto-electronics' : 'Ducati');
+%>
+
+<script>
+	const accountParam = <%=locals.accountParam%>;
+</script>
