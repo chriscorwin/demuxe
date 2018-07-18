@@ -10,14 +10,6 @@ const navigatePage = ( url ) => {
 }
 
 const makeCloudIconForJourneyBuilder = ( data ) => {
-
-	console.log('data.appName', data.appName);
-	console.log('data.pageVersion', data.pageVersion);
-	console.log('data.pageVersion === 201', data.pageVersion === '201');
-	console.log('data.accountParam', data.accountParam);
-	console.log('data.accountName', data.accountName);
-	console.log('data.accountName === Northern Trail Outfitters', data.accountName === 'Northern Trail Outfitters');
-
 	if ( data.pageVersion === '201' && data.appName === 'Journey Builder' ) {
 		return (`
 			<div class="slds-global-header__logo slds-p-around_x-small"><a href="/jb/"><img src="/img/sf-logo.svg"></a></div>
@@ -50,9 +42,7 @@ const makeDropdownLink = ( data ) => {
 const makeAccountDropdownLink = ( data ) => {
 
 	return ( `
-
 		<li class="slds-dropdown__item" role="presentation">
-
 			<a href="javascript:void(0);" onclick="switchAccount('${data.label}'); navigatePage('${data.href}');" id="${data.id}" role="menuitem" tabindex="-1">
 				<span class="slds-truncate" title="Northern Trail Outfitters - Electronics">
 					<svg style="opacity: ${accountName === data.label ? 1 : 0}" class="slds-icon slds-icon_x-small slds-m-right_small slds-icon-text-default" aria-hidden="true">
@@ -62,15 +52,12 @@ const makeAccountDropdownLink = ( data ) => {
 				</span>
 			</a>
 		</li>
-
 	` )
 };
 const makeUserDropdownLink = ( data ) => {
 
 	return ( `
-
 		<li class="slds-dropdown__item" role="presentation">
-
 			<a href="javascript:void(0);" onclick="switchAccount('${data.label}'); navigatePage('${data.href}');" id="${data.id}" role="menuitem" tabindex="-1">
 				<span class="slds-truncate" title="Northern Trail Outfitters - Electronics">
 					<svg style="opacity: ${userName === data.label ? 1 : 0}" class="slds-icon slds-icon_x-small slds-m-right_small slds-icon-text-default" aria-hidden="true">
@@ -80,30 +67,20 @@ const makeUserDropdownLink = ( data ) => {
 				</span>
 			</a>
 		</li>
-
 	` )
 };
 
 const makeNotificationsMenu = ( data ) => {
-
 	return ( `
-
-
-
 		<li class="slds-context-bar__item slds-context-bar__item_tab slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover" style="width: auto; max-width: 20rem;">
-
 			<div class="menu-item ${data.notificationsBadgeIsActive ? 'menu-item_has-badge' : ''} slds-m-right_x-small slds-m-left_xxx-small" title="Show Notifications">
 				<img class="icon" src="/img/bell.svg">
 				<span class="slds-assistive-text">Show Notifications</span>
 			</div>
-
 			<section style="right: -3px; width: 26rem; max-width: 40rem;" class=" slds-dropdown slds-dropdown_right slds-popover slds-nubbin_top-right slds-dynamic-menu" role="dialog" aria-label="My Favourites" aria-describedby="dialog-body-id-17">
 				<div class="slds-popover__body slds-p-horizontal_none" id="dialog-body-id-17">
 					<div id="listbox-unique-id" role="listbox">
-
 						<ul class="slds-listbox slds-listbox_vertical slds-dropdown_length-10" role="group" aria-label="Notifications">
-
-
 							<!-- header -->
 							<li role="presentation" class="slds-listbox__item">
 								<div class="slds-listbox__option slds-listbox__option_plain">
@@ -118,9 +95,6 @@ const makeNotificationsMenu = ( data ) => {
 									</div>
 								</div>
 							</li>
-
-
-
 							<!-- body -->
 							<li role="presentation" class="slds-listbox__item">
 								<div id="listbox-option-id-53" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option" tabindex="0">
@@ -168,8 +142,6 @@ const makeNotificationsMenu = ( data ) => {
 									</span>
 								</div>
 							</li>
-
-
 							<li role="presentation" class="slds-listbox__item">
 								<div id="listbox-option-id-53" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option" tabindex="0">
 									<span class="slds-media__figure">
@@ -179,7 +151,6 @@ const makeNotificationsMenu = ( data ) => {
 											</svg>
 										</span>
 									</span>
-
 									<span class="slds-media__body">
 										<div class="slds-grid  slds-grid_vertical-align-top">
 											<div class="slds-media__body slds-media__body slds-m-bottom_small">
@@ -189,7 +160,6 @@ const makeNotificationsMenu = ( data ) => {
 													</a>
 												</h2>
 											</div>
-
 											<div class="slds-no-flex">
 												<div class="slds-dropdown-trigger slds-dropdown-trigger_click ">
 													<button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
@@ -201,10 +171,8 @@ const makeNotificationsMenu = ( data ) => {
 												</div>
 											</div>
 										</div>
-
 										<div class="slds-grid  slds-grid_vertical-align-top">
 											<div class="slds-media__body slds-m-bottom_small slds-truncate slds-p-right_large" style=" white-space: normal;">
-
 												<p class="slds-truncate slds-listbox__option-text slds-listbox__option-text_entity">9 segments ready to activate.</p>
 												<p class="slds-listbox__option-meta slds-listbox__option-meta_entity">1h ago</p>
 											</div>
@@ -216,7 +184,6 @@ const makeNotificationsMenu = ( data ) => {
 									</span>
 								</div>
 							</li>
-
 						</ul>
 					</div>
 				</div>
@@ -224,12 +191,7 @@ const makeNotificationsMenu = ( data ) => {
 					<!-- hi -->
 				</footer>
 			</section>
-
 		</li>
-
-
-
-
 	` )
 };
 
@@ -295,20 +257,7 @@ const makePrimaryNav = ( data ) => {
 			<li class="slds-context-bar__item slds-context-bar__item_tab" style="width: auto;">
 				<div class="menu-item slds-m-right_small"><img class="icon" src="/img/cart.svg" /> 0</div>
 			</li>
-
-
-
-
-
-
 			${makeNotificationsMenu(data)}
-
-
-
-
-
-
-
 			<li class="slds-context-bar__item slds-context-bar__item_tab slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover" style="width: auto; max-width: 20rem;">
 				<a href="javascript:void(0);" class="slds-context-bar__label-action" title="${data.accountName}">
 					<span class="slds-truncate" title="${data.accountName}">${data.accountName}</span>
@@ -335,9 +284,7 @@ const makePrimaryNav = ( data ) => {
 							</div>
 
 						</li>
-
 						${accountName === 'Ducati' ? '' : makeAccountDropdownLinks(data.accountNavItems)}
-
 					</ul>
 				</div>
 			</li>
@@ -362,9 +309,6 @@ const makePrimaryNavJourneyBuilder = ( data ) => {
 			<li class="slds-context-bar__item " style="width: auto;">
 				<button class="slds-button slds-p-horizontal_medium">Feedback</button>
 			</li>
-
-
-
 			<li class="slds-context-bar__item  slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover" style="width: auto; max-width: 20rem;">
 				<a href="javascript:void(0);" class="slds-context-bar__label-action" title="${data.accountName}">
 					<span class="slds-truncate" title="${data.accountName}">${data.accountName}</span>
@@ -391,20 +335,11 @@ const makePrimaryNavJourneyBuilder = ( data ) => {
 							</div>
 
 						</li>
-
 						${accountName === 'Ducati' ? '' : makeAccountDropdownLinks(data.accountNavItems)}
-
 					</ul>
 				</div>
 			</li>
-
-
-
-
 			<li class="slds-context-bar__item slds-context-bar__item_tab slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover" style="width: auto; max-width: 20rem;">
-
-
-
 				<a href="javascript:void(0);" class="slds-context-bar__label-action" title="${data.userName}">
 					<span class="slds-avatar slds-avatar_circle slds-avatar_small slds-m-horizontal_x-small">
 						<img alt="Person name" src="/img/avatar1.jpg" title="User avatar" />
@@ -439,328 +374,9 @@ const makePrimaryNavJourneyBuilder = ( data ) => {
 					</ul>
 				</div>
 			</li>
-
-
-
-
 		</ul>
 	` )
 }
-
-
-const url = new URL( window.location.href );
-const versionParam = url.searchParams.get( 'version' );
-let pageVersion = url.searchParams.get( 'version' );
-const userParam = url.searchParams.get( 'user' ) || 'Dan';
-
-const triggerParam = url.searchParams.get( 'trigger' );
-
-let accountName = 'Ducati';
-let userName = '';
-let appName = 'Salesforce DMP';
-
-// Set some defaults in case they go straight to /jb-flow.html
-if (activePage === 'journeys') {
-	accountName = 'nto-general';
-	pageVersion = '201';
-	userName = 'Dan';
-	appName = 'Journey Builder';
-}
-
-if ( pageVersion === '201' ) {
-	accountName = 'Northern Trail Outfitters - Apparel';
-}
-
-if ( accountParam === 'nto-apparel' ) {
-	accountName = 'Northern Trail Outfitters - Apparel';
-}
-
-if ( accountParam === 'nto-electronics' ) {
-	accountName = 'Northern Trail Outfitters - Electronics';
-}
-
-if ( accountParam === 'nto-general' ) {
-	accountName = 'Northern Trail Outfitters';
-	userName = 'Dan';
-}
-
-let notificationsBadgeIsActive = triggerParam === 'notificationsBadge' || null;
-
-
-const navData = {
-	appName,
-	pageVersion,
-	accountName,
-	accountParam,
-	userName,
-	userParam,
-	notificationsBadgeIsActive,
-	clearNotificationsHref: '?version=201&account=nto-apparel',
-	accountNavItems: [
-		{
-			label: 'Northern Trail Outfitters - Apparel',
-			id: 'nto-apparel-account-switcher',
-			href: '?version=201&account=nto-apparel&trigger=notificationsBadge',
-			isActive: ( accountName === 'Northern Trail Outfitters - Apparel' )
-		},
-		{
-			label: 'Northern Trail Outfitters - Electronics',
-			id: 'nto-electronics-account-switcher',
-			href: '?version=201&account=nto-electronics',
-			isActive: ( accountName === 'Northern Trail Outfitters - Electronics' )
-		},
-		{
-			label: 'Northern Trail Outfitters',
-			id: 'nto-general-account-switcher',
-			href: '?version=201&account=nto-general',
-			isActive: ( accountName === 'Northern Trail Outfitters' )
-		}
-	],
-	navItems: [ {
-			label: 'Overview',
-			href: `/?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			isActive: ( activePage === 'overview' )
-		},
-		{
-			label: 'Segments',
-			id: 'segments-global-nav-link',
-			href: pageVersion === '201' ? `/segments.manage-segments.html?version=${pageVersion}&account=${accountParam}` : `/segment-builder.new-segment.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			isActive: ( activePage === 'segments' )
-		},
-		{
-			label: 'Insights',
-			href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			isActive: ( activePage === 'insights' ),
-			dropdownItems: [
-				[ {
-						separator: true,
-						label: 'Insights'
-					},
-					{
-						label: 'Einstein Segmentation',
-						href: `/insights.einstein-segmentation.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-						id: 'einstein-segmentation-link'
-					},
-					{
-						label: 'Top Overlapping Segments'
-					},
-					{
-						label: 'Data Providers'
-					},
-					{
-						label: 'Funnels'
-					},
-					{
-						label: 'Frequency Reports'
-					},
-					{
-						label: 'Campaign Attribution'
-					},
-					{
-						label: 'Attribution'
-					},
-					{
-						label: 'Custom Index Tool'
-					}
-				],
-				[ {
-						separator: true,
-						label: 'Reporting Center'
-					},
-					{
-						label: 'Manage Reports'
-					},
-					{
-						label: 'View Reports'
-					}
-				],
-				[ {
-						separator: true,
-						label: 'Content Engagement'
-					},
-					{
-						label: 'Audience Analytics'
-					},
-					{
-						label: 'Engagement'
-					},
-					{
-						label: 'Loyalty'
-					},
-					{
-						label: 'Social Activity'
-					},
-					{
-						label: 'Search Keywords'
-					},
-					{
-						label: 'First Party User Match'
-					}
-				]
-			]
-		},
-		{
-			label: 'Activation',
-			href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			lookLikeDropdown: true,
-			isActive: ( activePage === 'activation' )
-		},
-		{
-			label: 'Manage',
-			href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			lookLikeDropdown: true,
-			isActive: ( activePage === 'manage' )
-		},
-		{
-			label: 'Data Studio',
-			href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			lookLikeDropdown: true,
-			isActive: ( activePage === 'data-studio' )
-		}
-	]
-}
-
-
-const navDataJourneyBuilder = {
-	appName,
-	pageVersion,
-	accountName,
-	accountParam,
-	userName,
-	userParam,
-	notificationsBadgeIsActive,
-	clearNotificationsHref: '?version=201&account=nto-apparel',
-	userNavItems: [
-		{
-			label: userName,
-			id: 'nto-apparel-name-switcher-main',
-			href: `?version=201&account=nto-general&user=${userParam}`,
-			isActive: ( userName === userName )
-		}
-	],
-	accountNavItems: [
-		{
-			label: 'Northern Trail Outfitters - Apparel',
-			id: 'nto-apparel-account-switcher',
-			href: '?version=201&account=nto-apparel&trigger=notificationsBadge',
-			isActive: ( accountName === 'Northern Trail Outfitters - Apparel' )
-		},
-		{
-			label: 'Northern Trail Outfitters - Electronics',
-			id: 'nto-electronics-account-switcher',
-			href: '?version=201&account=nto-electronics',
-			isActive: ( accountName === 'Northern Trail Outfitters - Electronics' )
-		},
-		{
-			label: 'Northern Trail Outfitters',
-			id: 'nto-general-account-switcher',
-			href: '?version=201&account=nto-general',
-			isActive: ( accountName === 'Northern Trail Outfitters' )
-		}
-	],
-	navItems: [ {
-			label: 'Journeys',
-			href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			id: 'journeys-global-nav-link',
-			isActive: ( activePage === 'journeys' )
-		},
-		{
-			label: 'Entry Source',
-			id: 'entry-source-global-nav-link',
-			href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			isActive: ( activePage === 'entry-source' )
-		},
-		{
-			label: 'History',
-			id: 'history-global-nav-link',
-			href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			isActive: ( activePage === 'history' )
-		},
-		{
-			label: 'Templates',
-			id: 'entry-source-global-nav-link',
-			href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-			isActive: ( activePage === 'templatse' )
-		}
-	]
-}
-const accountData = {
-	appName,
-	accountName,
-	navItems: [ {
-		label: `$data`,
-		href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-		isActive: ( activePage === 'insights' ),
-		dropdownItems: [
-			[ {
-					separator: true,
-					label: 'Insights'
-				},
-				{
-					label: 'Einstein Segmentation',
-					href: `/insights.einstein-segmentation.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-					id: 'einstein-segmentation-link'
-				},
-				{
-					label: 'Top Overlapping Segments'
-				},
-				{
-					label: 'Data Providers'
-				},
-				{
-					label: 'Funnels'
-				},
-				{
-					label: 'Frequency Reports'
-				},
-				{
-					label: 'Campaign Attribution'
-				},
-				{
-					label: 'Attribution'
-				},
-				{
-					label: 'Custom Index Tool'
-				}
-			],
-			[ {
-					separator: true,
-					label: 'Reporting Center'
-				},
-				{
-					label: 'Manage Reports'
-				},
-				{
-					label: 'View Reports'
-				}
-			],
-			[ {
-					separator: true,
-					label: 'Content Engagement'
-				},
-				{
-					label: 'Audience Analytics'
-				},
-				{
-					label: 'Engagement'
-				},
-				{
-					label: 'Loyalty'
-				},
-				{
-					label: 'Social Activity'
-				},
-				{
-					label: 'Search Keywords'
-				},
-				{
-					label: 'First Party User Match'
-				}
-			]
-		]
-	} ]
-}
-
 
 let primaryNavElement =  document.getElementById('primaryNav');
 
@@ -775,4 +391,3 @@ if (typeof(primaryNavJourneyBuilderElement) != 'undefined' && primaryNavJourneyB
 	document.querySelector( '#primaryNavJourneyBuilder' )
 		.innerHTML = makePrimaryNavJourneyBuilder( navDataJourneyBuilder );
 }
-
