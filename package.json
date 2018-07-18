@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "start:dev": "NODE_ENV=dev node ./bin/www",
     "test": "mocha",
     "livereload": "livereload . -w 200 --extraExts 'scss,ejs' -d",
     "test:update": "update=true mocha"
