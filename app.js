@@ -36,10 +36,10 @@ const router = express.Router();
  * Serve up the .ejs files
  * 
  * This dynamically routes to any .ejs file that exists, otherwise it routes to 
- * the /index.ejs file.
+ * the /404.ejs file.
  * 
  * eg: http://your.site.com/kidney/beans, serves the ejs file /public/kidney/beans.ejs
- * or serves /public/index.ejs if that file does not exist.
+ * or serves /public/404.ejs if that file does not exist.
  * 
  * All user input will be sanitized. If you have a URL or Query param that is getting mutated unexpectedly, this is why.
  */
@@ -52,7 +52,12 @@ router.get('/*', function(req, res, next) {
   const sanitizedURL = req.sanitize(req.params[0]) || 'index';
   fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), function(err, data) {
     if (err) {
-      res.render('404', { page: sanitizedURL, ...demoConfig, sanitizedQueryParams: sanitizedQueryParams });
+      res.render('404', { page: sanitizedURL, ...demoConfig, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+        if (req.url.match(/.css$/)) {
+          res.set('Content-Type', 'text/css');
+        }
+        res.send(html);
+      });
     } else {
       res.render(sanitizedURL, { ...demoConfig, sanitizedQueryParams: sanitizedQueryParams });
     }
