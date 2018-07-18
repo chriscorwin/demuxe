@@ -11,12 +11,13 @@ const app = express();
 
 
 
-// Demo config
-const demoConfig = {
-  demoName: 'Demux Demo',
-  demoVersion: '1.0'
-}
+var config = require("./config/config.js")()
 
+console.log(config.port);
+
+
+
+console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public'));
