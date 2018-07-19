@@ -1,8 +1,47 @@
-body {
 
-  &.has-debug {
-    .is-ssi-block { display: inline-block; outline: 1px solid red;}
-  }
+@font-face {
+	font-family: 'Salesforce Sans Light';
+	src: url("/fonts/webfonts/SalesforceSans-Light.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Salesforce Sans Light Italic';
+	src: url("/fonts/webfonts/SalesforceSans-LightItalic.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-LightItalic.woff") format("woff");
+	font-style: italic;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Salesforce Sans';
+	src: url("/fonts/webfonts/SalesforceSans-Regular.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-Regular.woff") format("woff");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Salesforce Sans Italic';
+	src: url("/fonts/webfonts/SalesforceSans-Italic.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-Italic.woff") format("woff");
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Salesforce Sans Bold';
+	src: url("/fonts/webfonts/SalesforceSans-Bold.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-Bold.woff") format("woff");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Salesforce Sans Bold Italic';
+	src: url("/fonts/webfonts/SalesforceSans-BoldItalic.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-BoldItalic.woff") format("woff");
+	font-style: italic;
+	font-weight: 700;
+}
+
+body {
+	&.has-debug {
+		.is-ssi-block { display: inline-block; outline: 1px solid red;}
+	}
 }
 
 code, var {
@@ -11,4 +50,30 @@ code, var {
 
 #main-container {
 	margin: auto;
+}
+
+/**
+ * @summary Hides an element from the page by setting the opacity property set to `0`
+ *
+ * @selector .transition-hide
+ * @notes This works like the `.slds-hidden` class and reserves the space but allows you to add the `transition` property to transition the speed that it is shown or hidden.
+ * @modifier
+ */
+.slds-transition-hide {
+	transition: opacity 0.4s ease-in-out;
+	will-change: opacity;
+	opacity: 0; 
+}
+
+	/**
+ * @summary Shows the element using the opacity property set to `1`
+ *
+ * @selector .transition-show
+ * @notes This is toggled on the element. `.slds-transition-hide` class is removed and `.slds-transition-show` is added.
+ * @modifier
+ */
+.slds-transition-show {
+	transition: opacity 0.4s ease-in-out;
+	will-change: opacity;
+	opacity: 1; 
 }
