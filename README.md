@@ -152,9 +152,25 @@ Demuxe uses a fork of Differencify that allows us some more flixibility vs what 
 
 Shall live in `/dev-assets/`. Typically these will be sketch files.
 
-# Brand Assets
+# Brand Theming
+Enables brand re-use across demos, and brand-theming demos, quickly and easily.
 
-Every time a brand is used, all assets and verbiage associated with that brand shall live in `/brand-assets/`. The idea being that _*when*_ the directive comes down that we need to switch the entire demo from Brand A to Brand B and we only have 16 hours to do it, doing so will merely be a matter of editing some JSON and dropping new .png files in place. This will also allow us to re-use brands across demos quickly and easily.
+All brand assets and verbiage associated with that brand shall live in `/brand-assets/{brand-name}/`. 
+
+You must structure your brand assets as follows:
+
+```
+/brand-assets/{brand-name}/
+    +-- styles/
+    |    +-- brand.css
+    +-- javascripts/
+    |    +-- brand.js
+    +-- images/
+    |    +-- brand-logo.svg
+    +-- localization.json
+```
+
+See `/brand-assets/ducati/` for an example of how this looks.
 
 
 
