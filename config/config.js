@@ -1,3 +1,5 @@
+const path = require('path');
+
 // Satic data here, so that we do not have to generate the config data all for every environment unless we wanna
 let configData = null;
 module.exports = function() {
@@ -22,6 +24,8 @@ module.exports = function() {
 
 	// merge default with env config, overwriting defaults
 	configData = { ...defaultConfigData, ...envConfigData };
+
+	configData.localization = path.join(__dirname, 'brand-themes', configData.brand, 'localization.json');
 
 	// LOAD FROM ENV VARIABLES -- you can set an env variable and this will just catch it. NICE.
 	configData.SOME_STATIC_VAR = process.env.SOME_STATIC_VAR;

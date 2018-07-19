@@ -155,12 +155,12 @@ Shall live in `/dev-assets/`. Typically these will be sketch files.
 # Brand Theming
 Enables brand re-use across demos, and brand-theming demos, quickly and easily.
 
-All brand assets and verbiage associated with that brand shall live in `/brand-assets/{brand-name}/`. 
+All brand assets and verbiage associated with that brand shall live in `/brand-themes/{brand-name}/`. 
 
 You must structure your brand assets as follows:
 
 ```
-/brand-assets/{brand-name}/
+/brand-themes/{brand-name}/
     +-- styles/
     |    +-- brand.css
     +-- javascripts/
@@ -170,7 +170,9 @@ You must structure your brand assets as follows:
     +-- localization.json
 ```
 
-See `/brand-assets/ducati/` for an example of how this looks.
+NOTE: The folder name is named after the brand (eg, `/brand-themes/ducati/`) but the actual files themselves are named `brand` as the core brand theme files are standardized across all brands.
+
+See `/brand-themes/ducati/` for an example of how this looks.
 
 
 
