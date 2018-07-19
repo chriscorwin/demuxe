@@ -13,8 +13,16 @@ const app = express();
 
 var config = require("./config/config.js")()
 
-console.log(config.port);
-console.log('process.env.NODE_ENV', process.env.NODE_ENV);
+console.log('Express server started');
+console.log(`port: ${config.port}`);
+console.log(`process.env.NODE_ENV ${process.env.NODE_ENV}`);
+console.log(`brand: ${config.brand}`);
+
+if (process.env.DEBUG === "true") {
+  console.log('config data');
+  console.dir(config);
+}
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public'));
@@ -27,8 +35,8 @@ app.use(expressSanitizer()); // this line follows bodyParser() instantiations
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(lessMiddleware(path.join(__dirname, 'brand-assets', config.brand)));
-app.use(express.static(path.join(__dirname, 'brand-assets', config.brand)));
+app.use(lessMiddleware(path.join(__dirname, 'brand-themes', config.brand)));
+app.use(express.static(path.join(__dirname, 'brand-themes', config.brand)));
 
 const router = express.Router();
 
