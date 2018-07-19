@@ -14,9 +14,6 @@ const app = express();
 var config = require("./config/config.js")()
 
 console.log(config.port);
-
-
-
 console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 // view engine setup
@@ -55,14 +52,14 @@ router.get('/*', function(req, res, next) {
   const sanitizedURL = req.sanitize(req.params[0]) || 'index';
   fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), function(err, data) {
     if (err) {
-      res.render('404', { page: sanitizedURL, ...demoConfig, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+      res.render('404', { page: sanitizedURL, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
         if (req.url.match(/.css$/)) {
           res.set('Content-Type', 'text/css');
         }
         res.send(html);
       });
     } else {
-      res.render(sanitizedURL, { ...demoConfig, sanitizedQueryParams: sanitizedQueryParams });
+      res.render(sanitizedURL, { ...config, sanitizedQueryParams: sanitizedQueryParams });
     }
   });
 });
