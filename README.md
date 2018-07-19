@@ -1,6 +1,10 @@
 # Demuxe - The Boilerplate UXE Demo App
 Demuxe is the starting point for new demos. I propose that "Demuxe" should be pronounced "dem-you", but we should definitely have years long raging religious debates about this.
 
+Demuxe is the Class. Your demo is the Object.
+Demuxe is the Prototype. Your demo is the Instantiation.
+Demuxe is the Mold. Your demo is the Cast.
+
 # First Principles
 Decisions about architecture in this project shall be made with an **_aggressive_ bias towards simplicity**.
 
@@ -51,14 +55,14 @@ Demos _may_:
 - Create a discrete Heroku pipeline for each new demo.
 - Do **not** commit demos back to this repository. 
 - In the retrospective phase of a demo, update this repo:
-	- Place new components into component gallery.
-	- Review and update existing components.
-	- Review and update existing templates.
-	- Thoughtfully incorporate new ideas for creating demos based on lessons learned.
+	- Identify and separate out components within your template.
+	- Review and update existing components in your template.
+	- Review and update your template.
+	- Thoughtfully incorporate new ideas for Demuxe itself based on lessons learned.
 
 
 # Dependencies
-This demo utilizes:
+Demuxe utilizes:
 - HTML/[EJS](http://ejs.co/#docs)
 - JavsScript
 - CSS/[node-sass](https://github.com/sass/node-sass)
@@ -74,6 +78,7 @@ This demo utilizes:
 
 	`npm install`
 
+- If you are starting from a template, copy the contents of that template into `public/` (merge them)
 - Get coding, you are under deadline, kiddo.
 
 
@@ -147,6 +152,10 @@ Demuxe uses a fork of Differencify that allows us some more flixibility vs what 
 
 Shall live in `/dev-assets/`. Typically these will be sketch files.
 
+# Brand Assets
+
+Every time a brand is used, all assets and verbiage associated with that brand shall live in `/brand-assets/`. The idea being that _*when*_ the directive comes down that we need to switch the entire demo from Brand A to Brand B and we only have 16 hours to do it, doing so will merely be a matter of editing some JSON and dropping new .png files in place. This will also allow us to re-use brands across demos quickly and easily.
+
 
 
 ## Sketch -> SVG Files
@@ -181,15 +190,20 @@ Templates are page shells that can be quickly used to re-create different produc
 
 - Product templates must live in `/templates/{product-name}/`.
 	- The goal would be that if a demo requires that template, all someone would have to do is copy the entire contents of the product-specific sub-folder and paste it into `/public/` and they'd have a base-line browser-viewable demo of shell of that product ready to go to modify.
-- Product templates shall be an MVP shell and component pages of a product built out as simply, but thoroughly, as possible.
+- Product templates shall be an MVP shell and components of a product built out as simply, but thoroughly, as possible.
 - The more complete our library of product templates the better.
 - Once per quarter existing templates shall be audited with designers and updated. In this manner when we are asked to quickly complete a demo, we will have an even better jumping off point.
 
+## Components
+Components:
+- Are _single file_ modules containing all JS, CSS, and HTML required to display the component on the page.
 
+	If the component has a dependency which is not present within the component itself, that dependency shall be noted at the top of the component's file.
 
-# Component Gallaries
-
-Component gallaries should contain MVP examples of components used in past demos (eg: graphs on the DMP home page). These shall be lightly documented and reviewed to ensure high confidence in quality, readability, and re-usability (in essence, you shall be able to just open the file and know exactly what to copy/paste and how to use it within a few minutes).
+- Live within the template for which they were created.
+- Shall be lightly documented and reviewed to ensure high confidence in quality, readability, and re-usability.
+	
+	The intent is that you ought to be able to copy a component out of any template into whatever demo you are building regardless of the template the component was originally built for.
 
 
 
