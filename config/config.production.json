@@ -1,4 +1,5 @@
 {
   "demoName": "Demux Demo (production)",
-  "demoVersion": "0.0"
+  "demoVersion": "0.0",
+  "env": "production"
 }

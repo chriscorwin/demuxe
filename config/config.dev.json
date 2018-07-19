@@ -1,5 +1,5 @@
 {
   "demoName": "Demux Demo (dev)",
-  "demoVersion": "0.0",
+  "env": "dev",
   "brand": "nto"
 }
