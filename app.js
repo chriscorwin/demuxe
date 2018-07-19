@@ -7,7 +7,7 @@ const logger = require('morgan');
 const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
 
-let config = require('./config/config.js')();
+const config = require('./config/config.js')();
 
 console.log(config.port);
 console.log('process.env.NODE_ENV', process.env.NODE_ENV);
@@ -43,14 +43,14 @@ const router = express.Router();
  * 
  * All user input will be sanitized. If you have a URL or Query param that is getting mutated unexpectedly, this is why.
  */
-router.get('/*', function (req, res, next) {
+router.get('/*', (req, res) => {
 	// Pass any query params they put in the URL on into the EJS template for use
-	const sanitizedQueryParams = Object.keys(req.query).reduce(function (sanitizedQueryParams, param) {
+	const sanitizedQueryParams = Object.keys(req.query).reduce((sanitizedQueryParams, param) => {
 		sanitizedQueryParams[req.sanitize(param)] = req.sanitize(req.query[param]);
 		return sanitizedQueryParams;
 	}, {});
 	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
-	fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), function (err, data) {
+	fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), (err, data) => {
 		if (err) {
 			res.render('404', { page: sanitizedURL, ...config, sanitizedQueryParams: sanitizedQueryParams });
 		} else {
@@ -62,12 +62,12 @@ router.get('/*', function (req, res, next) {
 app.use('/', router);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
 	next(createError(404));
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use((err, req, res) => {
 	// set locals, only providing error in development
 	res.locals.message = err.message;
 	res.locals.error = req.app.get('env') === 'development' ? err : {};
