@@ -30,6 +30,8 @@ app.use(expressSanitizer()); // this line follows bodyParser() instantiations
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(lessMiddleware(path.join(__dirname, 'brand-assets', config.brand)));
+app.use(express.static(path.join(__dirname, 'brand-assets', config.brand)));
 
 const router = express.Router();
 
