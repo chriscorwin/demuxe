@@ -5,4 +5,4 @@
 		- passes it the name of the content files to use
 ```
 
-If someone wants to overwrite the contents, they do that in `your-code-here`. Vetted contents from last demo lives in templates. After crunch time they audit/vet the contents and move it to product-templates/{product}/.
+To override the contents of any of these files, do that in `your-code-here`. Vetted contents from last demo lives here in /product-templates/dmp/. After crunch time, audit/vet the new code in `your-code-here` and move it to product-templates/dmp/ so that the next demo will start with a pristine version of the last demo.
