@@ -195,7 +195,7 @@ Also, SVG files do not have access to fonts the same way HTML elements do, so we
 	
 		`node ./dev-assets/utilities/embed-fonts-in-svgs`
 
-    - By default the script will scan the `public/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
+    - By default the script will scan the `your-code-here/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
 
     - To convert other project directories, add a directory path when running the script, thus: 
 	
