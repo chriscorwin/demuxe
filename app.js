@@ -54,7 +54,7 @@ const appUse = [
 	express.static(path.join(__dirname, 'engine'))
 ];
 
-if (config.productTemplate) {
+if (config.brandTheme) {
 	appUse.push(  
 		sassMiddleware({
 			debug: true,
