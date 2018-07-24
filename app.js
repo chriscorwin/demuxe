@@ -3,18 +3,16 @@ const createError = require('http-errors');
 const express = require('express');
 const expressSanitizer = require('express-sanitizer');
 const fs = require('fs');
-const lessMiddleware = require('less-middleware');
 const logger = require('morgan');
 const path = require('path');
+const sassMiddleware = require('node-sass-middleware');
 
-const app = express();
-
-
-
-var config = require("./config/config.js")()
+const config = require('./config/config.js')();
 
 console.log(config.port);
 console.log('process.env.NODE_ENV', process.env.NODE_ENV);
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public'));
@@ -25,7 +23,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(expressSanitizer()); // this line follows bodyParser() instantiations
 app.use(cookieParser());
-app.use(lessMiddleware(path.join(__dirname, 'public')));
+app.use(sassMiddleware({
+	debug: true,
+	outputStyle: 'expanded',
+	src: path.join(__dirname, 'public')
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const router = express.Router();
@@ -41,38 +43,38 @@ const router = express.Router();
  * 
  * All user input will be sanitized. If you have a URL or Query param that is getting mutated unexpectedly, this is why.
  */
-router.get('/*', function(req, res, next) {
-  // Pass any query params they put in the URL on into the EJS template for use
-  const sanitizedQueryParams = Object.keys(req.query).reduce(function(sanitizedQueryParams, param) {
-      sanitizedQueryParams[req.sanitize(param)] = req.sanitize(req.query[param]);
-      return sanitizedQueryParams;
-  }, {});
-  const sanitizedURL = req.sanitize(req.params[0]) || 'index';
-  fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), function(err, data) {
-    if (err) {
-      res.render('404', { page: sanitizedURL, ...config, sanitizedQueryParams: sanitizedQueryParams });
-    } else {
-      res.render(sanitizedURL, { ...config, sanitizedQueryParams: sanitizedQueryParams });
-    }
-  });
+router.get('/*', (req, res) => {
+	// Pass any query params they put in the URL on into the EJS template for use
+	const sanitizedQueryParams = Object.keys(req.query).reduce((sanitizedQueryParams, param) => {
+		sanitizedQueryParams[req.sanitize(param)] = req.sanitize(req.query[param]);
+		return sanitizedQueryParams;
+	}, {});
+	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
+	fs.stat(path.resolve(`public/${sanitizedURL}.ejs`), (err, data) => {
+		if (err) {
+			res.render('404', { page: sanitizedURL, ...config, sanitizedQueryParams: sanitizedQueryParams });
+		} else {
+			res.render(sanitizedURL, { ...config, sanitizedQueryParams: sanitizedQueryParams });
+		}
+	});
 });
 
 app.use('/', router);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
+app.use((req, res, next) => {
+	next(createError(404));
 });
 
 // error handler
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use((err, req, res) => {
+	// set locals, only providing error in development
+	res.locals.message = err.message;
+	res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+	// render the error page
+	res.status(err.status || 500);
+	res.render('error');
 });
 
 module.exports = app;

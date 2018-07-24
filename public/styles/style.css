@@ -1,1 +1,12 @@
-body.has-debug .is-ssi-block{display:inline-block;outline:1px solid red}code,var{background-color:#eee}#main-container{margin:auto}
+body.has-debug .is-ssi-block {
+  display: inline-block;
+  outline: 1px solid red;
+}
+
+code, var {
+  background-color: #eee;
+}
+
+#main-container {
+  margin: auto;
+}
