@@ -19,8 +19,8 @@ console.log(`process.env.NODE_ENV ${process.env.NODE_ENV}`);
 console.log(`brand: ${config.brand}`);
 
 if (process.env.DEBUG === "true") {
-  console.log('config data');
-  console.dir(config);
+	console.log('config data');
+	console.dir(config);
 }
 
 
@@ -29,7 +29,7 @@ if (process.env.DEBUG === "true") {
 // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
 const appViews = [ path.join(__dirname, 'your-code-here') ];
 if (config.productTemplate) {
-  appViews.push(path.join(__dirname, 'product-templates', config.productTemplate));
+	appViews.push(path.join(__dirname, 'product-templates', config.productTemplate));
 } 
 appViews.push(path.join(__dirname, 'engine'));
 app.set('views', appViews);
@@ -39,50 +39,50 @@ app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/your-code-here
 
 // https://expressjs.com/en/4x/api.html#app.use
 const appUse = [
-  logger('dev'),
-  express.json(),
-  express.urlencoded({ extended: false }),
-  expressSanitizer(),
-  cookieParser(),
-  // files are looked up in reverse order they occur in the array (later takes precedence over earlier here --cascade flows like CSS)
-  sassMiddleware({
-    debug: true,
-    outputStyle: 'expanded',
-    src: path.join(__dirname, 'engine')
-  }),
-  express.static(path.join(__dirname, 'engine'))
+	logger('dev'),
+	express.json(),
+	express.urlencoded({ extended: false }),
+	expressSanitizer(),
+	cookieParser(),
+	// files are looked up in reverse order they occur in the array (later takes precedence over earlier here --cascade flows like CSS)
+	sassMiddleware({
+		debug: true,
+		outputStyle: 'expanded',
+		src: path.join(__dirname, 'engine')
+	}),
+	express.static(path.join(__dirname, 'engine'))
 ];
 
 if (config.productTemplate) {
-  appUse.push(  
-    sassMiddleware({
-      debug: true,
-      outputStyle: 'expanded',
-      src: path.join(__dirname, 'brand-themes', config.brandTheme)
-    }),
-    express.static(path.join(__dirname, 'brand-themes', config.brandTheme))
-  );
+	appUse.push(  
+		sassMiddleware({
+			debug: true,
+			outputStyle: 'expanded',
+			src: path.join(__dirname, 'brand-themes', config.brandTheme)
+		}),
+		express.static(path.join(__dirname, 'brand-themes', config.brandTheme))
+	);
 }
 
 
 if (config.productTemplate) {
-  appUse.push(
-    sassMiddleware({
-      debug: true,
-      outputStyle: 'expanded',
-      src: path.join(__dirname, 'product-templates', config.productTemplate)
-    }),
-    express.static(path.join(__dirname, 'product-templates', config.productTemplate))
-  );
+	appUse.push(
+		sassMiddleware({
+			debug: true,
+			outputStyle: 'expanded',
+			src: path.join(__dirname, 'product-templates', config.productTemplate)
+		}),
+		express.static(path.join(__dirname, 'product-templates', config.productTemplate))
+	);
 }
 
 appUse.push(
-  sassMiddleware({
-    debug: true,
-    outputStyle: 'expanded',
-    src: path.join(__dirname, 'your-code-here')
-  }),
-  express.static(path.join(__dirname, 'your-code-here'))
+	sassMiddleware({
+		debug: true,
+		outputStyle: 'expanded',
+		src: path.join(__dirname, 'your-code-here')
+	}),
+	express.static(path.join(__dirname, 'your-code-here'))
 );
 app.use(appUse);
 
@@ -110,27 +110,27 @@ router.get('/*', (req, res) => {
 	}, {});
 	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
 
-  let error = true;
-  // Check to see if the file exists in any of the three possible view directories. If not, error.
-  fs.access(path.join(__dirname, 'your-code-here', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
-    if (!err) error = false;
-    fs.access(path.join(__dirname, 'product-templates', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
-      if (!err) error = false;
-      fs.access(path.join(__dirname, 'engine', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
-        if (!err) error = false;
-        if (error) {
-          res.render('404', { page: sanitizedURL, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
-            if (req.url.match(/.css$/)) {
-              res.set('Content-Type', 'text/css');
-            }
-            res.send(html);
-          });
-        } else {
-          res.render(sanitizedURL, { ...config, sanitizedQueryParams: sanitizedQueryParams });
-        }
-      });
-    });
-  });
+	let error = true;
+	// Check to see if the file exists in any of the three possible view directories. If not, error.
+	fs.access(path.join(__dirname, 'your-code-here', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+		if (!err) error = false;
+		fs.access(path.join(__dirname, 'product-templates', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+			if (!err) error = false;
+			fs.access(path.join(__dirname, 'engine', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+				if (!err) error = false;
+				if (error) {
+					res.render('404', { page: sanitizedURL, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+						if (req.url.match(/.css$/)) {
+							res.set('Content-Type', 'text/css');
+						}
+						res.send(html);
+					});
+				} else {
+					res.render(sanitizedURL, { ...config, sanitizedQueryParams: sanitizedQueryParams });
+				}
+			});
+		});
+	});
 });
 app.use('/', router);
 
