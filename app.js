@@ -16,7 +16,8 @@ const app = express();
 console.log('Express server started');
 console.log(`port: ${config.port}`);
 console.log(`process.env.NODE_ENV ${process.env.NODE_ENV}`);
-console.log(`brand: ${config.brand}`);
+console.log(`brandTheme: ${config.brandTheme}`);
+console.log(`productTemplate: ${config.productTemplate}`);
 
 if (process.env.DEBUG === "true") {
 	console.log('config data');
@@ -114,7 +115,7 @@ router.get('/*', (req, res) => {
 	// Check to see if the file exists in any of the three possible view directories. If not, error.
 	fs.access(path.join(__dirname, 'your-code-here', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 		if (!err) error = false;
-		fs.access(path.join(__dirname, 'product-templates', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+		fs.access(path.join(__dirname, 'product-templates', (config.productTemplate) ? config.productTemplate : '', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 			if (!err) error = false;
 			fs.access(path.join(__dirname, 'engine', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 				if (!err) error = false;

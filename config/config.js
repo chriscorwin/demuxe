@@ -20,8 +20,6 @@ module.exports = function() {
 
 	// merge default with env config, overwriting defaults
 	configData = { ...defaultConfigData, ...envConfigData };
-console.log('configData');
-console.dir(configData);
 	configData.localization = path.join(__dirname, 'brand-themes', configData.brandTheme, 'localization.json');
 
 	// LOAD FROM ENV VARIABLES -- you can set an env variable and this will just catch it. NICE.
