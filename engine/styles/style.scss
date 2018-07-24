@@ -40,7 +40,7 @@
 
 body {
 	&.has-debug {
-		.is-ssi-block { display: inline-block; outline: 1px solid red;}
+	  .is-ssi-block { display: inline-block; outline: 1px solid red;}
 	}
 }
 
