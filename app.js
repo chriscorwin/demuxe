@@ -28,17 +28,18 @@ if (process.env.DEBUG === "true") {
 // view engine setup
 // https://expressjs.com/en/4x/api.html#app.set
 // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
-app.set('views', [
-  path.join(__dirname, 'your-code-here'),
-  path.join(__dirname, 'product-templates', config.productTemplate), 
-  path.join(__dirname, 'engine')
-]);
+const appViews = [ path.join(__dirname, 'your-code-here') ];
+if (config.productTemplate) {
+  appViews.push(path.join(__dirname, 'product-templates', config.productTemplate));
+} 
+appViews.push(path.join(__dirname, 'engine'));
+app.set('views', appViews);
 
 app.set('view engine', 'ejs');
 app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/your-code-here' });
 
 // https://expressjs.com/en/4x/api.html#app.use
-app.use([
+const appUse = [
   logger('dev'),
   express.json(),
   express.urlencoded({ extended: false }),
@@ -48,12 +49,21 @@ app.use([
   lessMiddleware(path.join(__dirname, 'engine')),
   express.static(path.join(__dirname, 'engine')),
   lessMiddleware(path.join(__dirname, 'brand-themes', config.brandTheme)),
-  express.static(path.join(__dirname, 'brand-themes', config.brandTheme)),
-  lessMiddleware(path.join(__dirname, 'product-templates', config.productTemplate)),
-  express.static(path.join(__dirname, 'product-templates', config.productTemplate)),
+  express.static(path.join(__dirname, 'brand-themes', config.brandTheme))
+];
+
+if (config.productTemplate) {
+  appUse.push(
+    lessMiddleware(path.join(__dirname, 'product-templates', config.productTemplate)),
+    express.static(path.join(__dirname, 'product-templates', config.productTemplate))
+  );
+}
+
+appUse.push(
   lessMiddleware(path.join(__dirname, 'your-code-here')),
   express.static(path.join(__dirname, 'your-code-here'))
-]);
+);
+app.use(appUse);
 
 const router = express.Router();
 
@@ -83,7 +93,7 @@ router.get('/*', function(req, res, next) {
   // Check to see if the file exists in any of the three possible view directories. If not, error.
   fs.access(path.join(__dirname, 'your-code-here', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
     if (!err) error = false;
-    fs.access(path.join(__dirname, 'templates', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+    fs.access(path.join(__dirname, 'product-templates', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
       if (!err) error = false;
       fs.access(path.join(__dirname, 'engine', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
         if (!err) error = false;

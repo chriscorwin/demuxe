@@ -35,13 +35,13 @@
       <h1 class="slds-text-heading_large">Index</h1>
       <p>
         If you are reading this, your demo app server is up and running, congratulations!
-        <br>Now go add your own `index.ejs` file to `/public/`, or specify a template (if you specified a template, it probably would have an `index.ejs` file, and you wouldn't be seeing this). 
+        <br>Now go add your own `index.ejs` file to `/your-code-here/`, or specify a productTemplate (if you specified a productTemplate, it probably would have an `index.ejs` file, and you wouldn't be seeing this). 
         <br><i>This</i> file lives in `/engine/` and is part of the Demuxe engine itself. It should not be edited.
       </p>
-      <p>Demo settings live in `/config/` and are currently set to:
+      <p>Demo settings live in `/config/`. Default settings go in `config.json` and should default to production values. Your config settings are currently set to:
         <ul>
-          <li>template: <%= locals.template %></li>
-          <li>brand: <%= locals.brand %></li>
+          <li>productTemplate: <%= locals.productTemplate %></li>
+          <li>brandTheme: <%= locals.brandTheme %></li>
           <li>demoName: <%= locals.demoName %></li>
           <li>demoVersion: <%= locals.demoVersion %></li>
           <li>env: <%= locals.env %></li>
