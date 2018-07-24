@@ -63,7 +63,7 @@ Demos _may_:
 
 # Dependencies
 Demuxe utilizes:
-- HTML/[EJS](http://ejs.co/#docs)
+- HTML/[Custom EJS 2.6.1](https://github.com/cmcculloh/ejs/)
 - JavsScript
 - CSS/[node-sass](https://github.com/sass/node-sass)
 - [Express](https://expressjs.com/en/4x/api.html)
@@ -78,7 +78,9 @@ Demuxe utilizes:
 
 	`npm install`
 
-- If you are starting from a template, copy the contents of that template into `public/` (merge them)
+- Edit `/config/config.json` (and other config files). 
+	- Specify your brand and product-template. 
+	- `config.json` should be _production settings_.
 - Get coding, you are under deadline, kiddo.
 
 
@@ -93,11 +95,11 @@ Demuxe utilizes:
 - [Express server](https://expressjs.com).
 - Serves from port `:3000` (http://localhost:3000).
 - `.ejs` files are processed server-side and served.
-	- Routes all requests to corresponding files in `public/` (eg: `localhost:3000/bobs/books` routes to `public/bobs/books.ejs`).
+	- Routes all requests to corresponding files in `/your-code-here/`, `/product-templates/{config.productTemplate}`, and `/engine/` _in that order_ (eg: `localhost:3000/bobs/books` routes to `your-code-here/bobs/books.ejs`, if that doesn't exist, it tries `/product-templates/{config.productTemplate}/bobs/books.ejs`, if that doesn't exist, it tries `/engine/bobs/books.ejs`, and if that doesn't exist it serves up `/engine/404.ejs` (unless you've overridden that in the product-template or `your-code-here`)).
 	- User input is magically sanitized using [express-sanitizer](https://www.npmjs.com/package/express-sanitizer).
-- All other files under `public/` are served as static files.
-- Any query params `?like=this` are passed along into the EJS template and available for use in the global js `locals` object `<%= locals.likeThis %>`.
-- EJS files can be included in other EJS files (server side) `<%- include('includes/like-this') %>`.
+- All other files under `/your-code-here/`, `/product-templates/{config.productTemplate}`, and `/engine/` are served as static files, _in that order of prioritization_.
+- Any query params `?like=this` are passed along into the EJS template and available for use in the global js `locals.sanitizedQueryParams` object `<%= locals.sanitizedQueryParams.likeThis %>`.
+- EJS files can be included in other EJS files (server side) `<%- include('includes/like-this') %>` and follow the same rules as outlined in `.ejs` bullet-point above.
 
 
 
@@ -150,7 +152,7 @@ Demuxe uses a fork of Differencify that allows us some more flixibility vs what 
 
 # Spec/Designs
 
-Shall live in `/dev-assets/`. Typically these will be sketch files.
+Shall live in `/dev-assets/`. Typically these will be sketch files. These should never be merged into Demuxe proper, and only ever belong in branches or in forks.
 
 # Brand Theming
 Enables brand re-use across demos, and brand-theming demos, quickly and easily.
@@ -202,13 +204,14 @@ Also, SVG files do not have access to fonts the same way HTML elements do, so we
 
 
 
-# Templates
+# Product Templates
 
-Templates are page shells that can be quickly used to re-create different products. (eg: DMP Header, Navigation, & Footer)
+Product Templates are page shells that can be quickly used to re-create different products.
 
-- Product templates must live in `/templates/{product-name}/`.
-	- The goal would be that if a demo requires that template, all someone would have to do is copy the entire contents of the product-specific sub-folder and paste it into `/public/` and they'd have a base-line browser-viewable demo of shell of that product ready to go to modify.
+- Product templates must live in `/product-templates/{product-name}/`.
+	- The goal would be that whatever product a demo requires is mostly already present in a relatively up-to-date form.
 - Product templates shall be an MVP shell and components of a product built out as simply, but thoroughly, as possible.
+- Each time a product template is used in a demo, once the demo is complete, the product template should be updated with the cleaned up version of the demo code.
 - The more complete our library of product templates the better.
 - Once per quarter existing templates shall be audited with designers and updated. In this manner when we are asked to quickly complete a demo, we will have an even better jumping off point.
 
