@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
-		<%- include('includes/head', { page: "index" }) %>
-	</head>
-
-	<body onscroll="animateGraphs()" class="dashboard">
-		<%- include('includes/global-header', { title: "overview" }) %>
-		<div id="content-wrapper">
-			<div id="content" class="slds-p-vertical_medium slds-container_large">
-				<div id="top" class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch">
+<div id="top" class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch">
 					<div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
 						<div class="slds-panel-box">
 							<div class="slds-panel-box__header slds-p-around_small">Audience Population
@@ -54,16 +43,3 @@
 						<%- include('components/chart.activation-partners.ejs') %>
 					</div>
 				</div>
-			</div>
-		</div>
-
-
-		<%- include('components/toast', {
-			contents: 'Will be available only under ‘Northern Trail Outfitters - Apparel&rsquo; account as &lsquo;Winter Jackets &ndash; New High Value&rsquo;',
-			title: '&lsquo;Winter Jackets Propensity Customers&rsquo; segment provisioned successfully.',
-			theme: 'success'			
-		}) %>
-
-		<%- include('includes/footer-scripts', { page: 'index' }) %>
-	</body>
-</html>

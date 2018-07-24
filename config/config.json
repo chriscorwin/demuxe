@@ -1,0 +1,7 @@
+{
+	"brandTheme": "ducati",
+	"demoName": "Demuxe Demo (production)",
+	"demoVersion": "0.0",
+	"env": "production",
+	"productTemplate": "dmp"
+}
