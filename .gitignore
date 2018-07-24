@@ -12,6 +12,7 @@ npm-debug.log
 jsconfig.json
 .vscode
 */xcuserdata/*
+.vs
 
 # Other
 package-lock.json
