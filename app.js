@@ -4,15 +4,14 @@ const ejs = require('ejs');
 const express = require('express');
 const expressSanitizer = require('express-sanitizer');
 const fs = require('fs');
-const lessMiddleware = require('less-middleware');
 const logger = require('morgan');
 const path = require('path');
+const sassMiddleware = require('node-sass-middleware');
+
+const config = require('./config/config.js')();
 
 const app = express();
 
-
-
-var config = require("./config/config.js")()
 
 console.log('Express server started');
 console.log(`port: ${config.port}`);
@@ -46,21 +45,43 @@ const appUse = [
   expressSanitizer(),
   cookieParser(),
   // files are looked up in reverse order they occur in the array (later takes precedence over earlier here --cascade flows like CSS)
-  lessMiddleware(path.join(__dirname, 'engine')),
-  express.static(path.join(__dirname, 'engine')),
-  lessMiddleware(path.join(__dirname, 'brand-themes', config.brandTheme)),
-  express.static(path.join(__dirname, 'brand-themes', config.brandTheme))
+  sassMiddleware({
+    debug: true,
+    outputStyle: 'expanded',
+    src: path.join(__dirname, 'engine')
+  }),
+  express.static(path.join(__dirname, 'engine'))
 ];
 
 if (config.productTemplate) {
+  appUse.push(  
+    sassMiddleware({
+      debug: true,
+      outputStyle: 'expanded',
+      src: path.join(__dirname, 'brand-themes', config.brandTheme)
+    }),
+    express.static(path.join(__dirname, 'brand-themes', config.brandTheme))
+  );
+}
+
+
+if (config.productTemplate) {
   appUse.push(
-    lessMiddleware(path.join(__dirname, 'product-templates', config.productTemplate)),
+    sassMiddleware({
+      debug: true,
+      outputStyle: 'expanded',
+      src: path.join(__dirname, 'product-templates', config.productTemplate)
+    }),
     express.static(path.join(__dirname, 'product-templates', config.productTemplate))
   );
 }
 
 appUse.push(
-  lessMiddleware(path.join(__dirname, 'your-code-here')),
+  sassMiddleware({
+    debug: true,
+    outputStyle: 'expanded',
+    src: path.join(__dirname, 'your-code-here')
+  }),
   express.static(path.join(__dirname, 'your-code-here'))
 );
 app.use(appUse);
@@ -81,13 +102,13 @@ const router = express.Router();
  * 
  * All user input will be sanitized. If you have a URL or Query param that is getting mutated unexpectedly, this is why.
  */
-router.get('/*', function(req, res, next) {
-  // Pass any query params they put in the URL on into the EJS template for use
-  const sanitizedQueryParams = Object.keys(req.query).reduce(function(sanitizedQueryParams, param) {
-      sanitizedQueryParams[req.sanitize(param)] = req.sanitize(req.query[param]);
-      return sanitizedQueryParams;
-  }, {});
-  const sanitizedURL = req.sanitize(req.params[0]) || 'index';
+router.get('/*', (req, res) => {
+	// Pass any query params they put in the URL on into the EJS template for use
+	const sanitizedQueryParams = Object.keys(req.query).reduce((sanitizedQueryParams, param) => {
+		sanitizedQueryParams[req.sanitize(param)] = req.sanitize(req.query[param]);
+		return sanitizedQueryParams;
+	}, {});
+	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
 
   let error = true;
   // Check to see if the file exists in any of the three possible view directories. If not, error.
@@ -111,23 +132,22 @@ router.get('/*', function(req, res, next) {
     });
   });
 });
-
 app.use('/', router);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
+app.use((req, res, next) => {
+	next(createError(404));
 });
 
 // error handler
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use((err, req, res) => {
+	// set locals, only providing error in development
+	res.locals.message = err.message;
+	res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+	// render the error page
+	res.status(err.status || 500);
+	res.render('error');
 });
 
 module.exports = app;
