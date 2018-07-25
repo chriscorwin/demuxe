@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="588px" height="358px" viewBox="0 0 588 358" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>index.data-capture-methods</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-650.000000, -623.000000)">
+            <path d="M653,582.5 C651.067003,582.5 649.5,584.067003 649.5,586 L649.5,978 C649.5,979.932997 651.067003,981.5 653,981.5 L1235,981.5 C1236.933,981.5 1238.5,979.932997 1238.5,978 L1238.5,586 C1238.5,584.067003 1236.933,582.5 1235,582.5 L653,582.5 Z" id="Rectangle-24-Copy-12" stroke="#D8DDE6" fill="#FFFFFF"></path>
+            <path d="M649.125438,948.5 L1238,948.5" id="Line-4-Copy-34" stroke="#D8DDE6" stroke-linecap="square"></path>
+            <text id="Displaying-data-coll" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#54698D">
+                <tspan x="51" y="694">Displaying data collection events across 1st party data sources only.</tspan>
+            </text>
+            <g id="Group-15-Copy" transform="translate(650.000000, 624.000000)" fill="#F7F9FB">
+                <rect id="Rectangle-4-Copy-3" x="0" y="0" width="588" height="49"></rect>
+            </g>
+            <g id="Group-11" transform="translate(776.000000, 958.000000)">
+                <text id="View-All-Data-Captur" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="17" fill="#0070D2">
+                    <tspan x="0" y="12">View All Data Capture Methods</tspan>
+                </text>
+                <text id="Manage-Consumer-Righ" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="17" fill="#0070D2">
+                    <tspan x="193" y="12">Manage Consumer Rights</tspan>
+                </text>
+                <path d="M183.5,0.472278553 L183.5,17.5" id="Line-11" stroke="#D8DDE6" stroke-linecap="square"></path>
+            </g>
+            <text id="100K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="1181.163" y="715">100K</tspan>
+            </text>
+            <text id="60K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="1189.093" y="812">60K</tspan>
+            </text>
+            <text id="78K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="1189.093" y="764">78K</tspan>
+            </text>
+            <text id="59K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="1189.093" y="863">59K</tspan>
+            </text>
+            <text id="28K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="1189.093" y="910">28K</tspan>
+            </text>
+            <path d="M895.271445,733.5 L1214,733.5" id="Line-4-Copy-10" stroke="#D8DDE6" stroke-linecap="square"></path>
+            <path d="M895,783.5 L1214,783.5" id="Line-4-Copy-32" stroke="#D8DDE6" stroke-linecap="square"></path>
+            <path d="M895,882.5 L1214,882.5" id="Line-4-Copy-33" stroke="#D8DDE6" stroke-linecap="square"></path>
+            <path d="M895,833.5 L1214,833.5" id="Line-4-Copy-35" stroke="#D8DDE6" stroke-linecap="square"></path>
+            <text id="Control-Tags---Websi" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="916" y="715">Control Tags - Website</tspan>
+            </text>
+            <text id="Click-Tracker" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="916" y="812">Click Tracker</tspan>
+            </text>
+            <text id="Media-Tracker" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="916" y="764">Media Tracker</tspan>
+            </text>
+            <text id="1st-Party-Consent" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="916" y="863">1st Party Consent</tspan>
+            </text>
+            <text id="Email-1X1" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="17" fill="#16325C">
+                <tspan x="916" y="910">Email 1X1</tspan>
+            </text>
+            <circle id="legendcircle4-copy-5" fill="#F69E5A" cx="901" cy="711" r="7"></circle>
+            <circle id="legendcircle4-copy-6" fill="#B896FA" cx="901" cy="758" r="7"></circle>
+            <circle id="legendcircle4-copy-7" fill="#EA78BB" cx="901" cy="806" r="7"></circle>
+            <circle id="legendcircle4-copy-8" fill="#70ABEA" cx="901" cy="858" r="7"></circle>
+            <circle id="legendcircle4-copy-9" fill="#63B6B0" cx="901" cy="905" r="7"></circle>
+            <g id="Group-32" transform="translate(664.000000, 633.000000)">
+                <g id="Group-21-Copy-8" transform="translate(428.000000, 0.000000)">
+                    <g id="Group-17" fill="#FFFFFF" stroke="#D8DDE6">
+                        <g id="Back-Copy">
+                            <rect id="Rectangle-153" x="0.5" y="0.5" width="130" height="31" rx="3"></rect>
+                        </g>
+                    </g>
+                    <path d="M112.329034,15 L121.284426,15 C121.537403,15 121.714487,15.325 121.512105,15.55 L117.1356,20.85 C116.983814,21.05 116.654943,21.05 116.503157,20.85 L112.076056,15.55 C111.898972,15.325 112.050759,15 112.329034,15" id="down" fill="#061C3F"></path>
+                    <text id="Last-30-days" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                        <tspan x="9" y="21">Last 30 days</tspan>
+                    </text>
+                </g>
+                <g id="Group-21-Copy-5">
+                    <g id="Group-17" fill="#FFFFFF" stroke="#D8DDE6">
+                        <g id="Back-Copy">
+                            <rect id="Rectangle-153" x="0.5" y="0.5" width="173" height="31" rx="3"></rect>
+                        </g>
+                    </g>
+                    <path d="M153.329034,15 L162.284426,15 C162.537403,15 162.714487,15.325 162.512105,15.55 L158.1356,20.85 C157.983814,21.05 157.654943,21.05 157.503157,20.85 L153.076056,15.55 C152.898972,15.325 153.050759,15 153.329034,15" id="down" fill="#061C3F"></path>
+                    <text id="By-Data-Capture-Even" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                        <tspan x="9" y="21">By Data Capture Events</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-21" transform="translate(696.000000, 722.000000)">
+                <g id="Variable-segments-circle">
+                    <path d="M77,0 C104.505775,0 129.932447,14.5809 143.685334,38.25 C157.438222,61.9191 157.438222,91.0809 143.685334,114.75 C129.932447,138.4191 104.505775,153 77,153 C49.4942247,153 24.0675534,138.4191 10.3146657,114.75 C-3.43822191,91.0809 -3.43822191,61.9191 10.3146657,38.25 C24.0675534,14.5809 49.4942247,0 77,0 L77,30.6 C60.4903745,30.6 45.2436122,39.3516 36.9887994,53.55 C28.7339867,67.7484 28.7339867,85.2516 36.9887994,99.45 C45.2436122,113.6484 60.4903745,122.4 77,122.4 C93.5096255,122.4 108.756388,113.6484 117.011201,99.45 C125.266013,85.2516 125.266013,67.7484 117.011201,53.55 C108.756388,39.3516 93.5096255,30.6 77,30.6 L77,0 Z" id="Base-plate" fill-opacity="0.002" fill="#455A64"></path>
+                    <path d="M77.125,0.125099778 L77.125,30.3654015 C87.9447729,30.3942352 98.4281847,34.1658998 106.741876,41.0174152 L126.428543,17.852301 C112.610629,6.42591254 95.1640107,0.15394441 77.125,0.125099937 Z" id="Segment-2" stroke="#FFFFFF" stroke-width="0.25" fill="#70ABEA"></path>
+                    <path d="M126.466903,17.829534 L106.791862,41.1379838 C110.900845,44.5873519 114.376248,48.7134697 117.058064,53.3310401 C125.327245,67.5682737 125.348227,85.1110109 117.12101,99.3650193 L143.619996,114.579646 C148.078653,106.882487 151.155262,98.4526659 152.70488,89.694866 C157.47133,62.7993987 147.469348,35.413885 126.466903,17.8295347 Z" id="Segment-4" stroke="#FFFFFF" stroke-width="0.25" fill="#B896FA"></path>
+                    <path d="M143.463557,114.690684 L117.026298,99.4733196 C108.760046,113.653275 93.573044,122.396679 77.125,122.440767 L77.125,152.8749 C104.477678,152.830709 129.750975,138.284421 143.463556,114.690684 Z" id="Segment-3" stroke="#FFFFFF" stroke-width="0.25" fill="#EA78BB"></path>
+                    <path d="M76.875,152.8749 L76.875,122.634599 C66.0552271,122.605765 55.5718153,118.8341 47.2581236,111.982585 L27.5714569,135.147699 C41.3893714,146.574087 58.8359893,152.846056 76.875,152.8749 Z" id="Segment-2" stroke="#FFFFFF" stroke-width="0.25" fill="#63B6B0"></path>
+                    <path d="M27.4889582,135.17039 L47.1323061,111.878945 C43.0299082,108.432058 39.5600762,104.308914 36.8825587,99.6946757 C28.6056189,85.4315043 28.6056189,67.8483981 36.8825587,53.5852267 C45.1404861,39.3548182 60.373594,30.5752745 76.875,30.5311476 L76.875,0.125102177 C67.9774924,0.139648797 59.1176445,1.70717896 50.7084859,4.74658119 C24.895221,14.0962575 6.05972491,36.4376743 1.29324557,63.3570498 C-3.46555308,90.2330476 6.52032408,117.598728 27.4889588,135.170389 Z" id="Segment-7" stroke="#FFFFFF" stroke-width="0.25" fill="#F69E5A"></path>
+                </g>
+                <circle id="Oval-2" fill="#FFFFFF" cx="77.5" cy="78.5" r="54.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
