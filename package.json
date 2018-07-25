@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "start:dev": "NODE_ENV=dev node ./bin/www",
+    "start:dev": "DEBUG=true NODE_ENV=dev node ./bin/www",
     "start:qa": "NODE_ENV=qa node ./bin/www",
     "test": "mocha",
     "livereload": "livereload . -w 200 --extraExts 'scss,ejs' -d",
@@ -13,7 +13,7 @@
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "ejs": "~2.5.7",
+    "ejs": "git+ssh://git@github.com/cmcculloh/ejs.git",
     "express": "~4.16.0",
     "express-sanitizer": "^1.0.4",
     "http-errors": "~1.6.2",

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>chevrondown-blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="DMP-201" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BU1---Provisioning-1" transform="translate(-186.000000, -754.000000)" fill="#0070D2" fill-rule="nonzero">
+            <g id="chevrondown-blue" transform="translate(186.000000, 754.000000)">
+                <path d="M9.69230769,1.47692308 L5.30769231,5.90769231 C5.16923077,6 4.98461538,6 4.84615385,5.90769231 L0.461538462,1.47692308 C0.369230769,1.33846154 0.369230769,1.15384615 0.461538462,1.01538462 L0.923076923,0.553846154 C1.06153846,0.415384615 1.29230769,0.415384615 1.43076923,0.553846154 L4.84615385,4.01538462 C4.98461538,4.15384615 5.16923077,4.15384615 5.30769231,4.01538462 L8.72307692,0.553846154 C8.86153846,0.461538462 9.09230769,0.461538462 9.23076923,0.553846154 L9.69230769,1.01538462 C9.78461538,1.15384615 9.78461538,1.33846154 9.69230769,1.47692308 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

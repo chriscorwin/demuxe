@@ -1,0 +1,169 @@
+<!-- 
+Highcharts must be included on page prior to this running
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
+-->
+
+<div class="slds-panel-box" style="margin-top: 1.5em;">
+	<div class="slds-panel-box__header slds-p-around_small">Data Capture Events (DCE)
+		<img class="icon" src="/images/settings.svg" />
+	</div>
+	<div class="slds-panel-box__body">
+		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
+			<button class="slds-button slds-button_neutral">Last 30 days
+				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
+			</button>
+		</div>
+		<p class="slds-m-around_medium">Displaying data collection events across 1st party data sources only.</p>
+		<div id="chart" style="width:100%; height:300px;"></div>
+		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
+			<a href="javascript:void(0);">View All Data Capture Events</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+const deviceData = [
+	450,
+	490,
+	490,
+	590,
+	590,
+	610,
+	660,
+	730,
+	660,
+	655,
+	650,
+	730,
+	740,
+	739,
+	780,
+	830,
+	890,
+	920,
+	910,
+	880,
+	890,
+	880,
+	860,
+	840,
+	820,
+	860,
+	880,
+	890,
+	920,
+	910
+];
+
+const getCumulativeData = () => {
+	return [
+		{
+			data: deviceData.map((data) => data * 1000),
+			color: '#9961B4',
+			lineWidth: 3,
+			linecap: 'square',
+			marker: {
+				enabled: false
+			}
+		}
+	];
+};
+
+const categories = deviceData.map((data, i) => {
+	const dateLabel = [
+		'5/13',
+		'5/25',
+		'6/13'
+	];
+	const label = Math.floor(i / 10);
+	return dateLabel[label];
+}, []);
+
+// Gets options for the Cumulative 1st Party Overview chart
+const getCumulativeOptions = () => {
+	return {
+		legend: {
+			verticalAlign: 'top',
+			enabled: false
+		},
+		title: {
+			text: ''
+		},
+		chart: {
+			height: 300,
+			style: {
+				fontFamily: 'Salesforce Sans'
+			}
+		},
+		xAxis: {
+			categories,
+			tickLength: 0,
+			gridLineWidth: 0,
+			lineColor: '#eee',
+			gridLineColor: '#eee',
+			labels: {
+				step: 14
+			}
+		},
+		yAxis: {
+			tickInterval: 100000,
+			breaks: [{
+				from: 0,
+				to: 400000,
+				breakSize: 1
+			}],
+			softMin: 400000,
+			softMax: 1000000,
+			lineWidth: 1,
+			lineColor: '#eee',
+			gridLineColor: '#eee',
+			title: {
+				text: 'Data Capture Events (DCE)'
+			},
+			labels: {
+				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+				formatter: function formatter () {
+					if (this.value === 400000) {
+						return '0K';
+					}
+					if (this.value < 1000000) {
+						return (this.value / 1000) + 'K';
+					}
+					return (this.value / 1000000) + 'M';
+				}
+			}
+		},
+		plotOptions: {
+			series: {
+				animation: {
+					duration: 2000
+				}
+			}
+		},
+		series: getCumulativeData()
+	};
+};
+
+const __range__ = (left, right, inclusive) => {
+	let range = [];
+	let ascending = left < right;
+	let nextToLast = ascending ? right + 1 : right - 1;
+	let end = !inclusive ? right : nextToLast;
+	for (let i = left; ascending ? i < end : i > end; ascending ? i++ : i--) {
+		range.push(i);
+	}
+	return range;
+};
+
+Highcharts.setOptions({credits: { enabled: false }});
+let dataCaptureEventsSourcesChart;
+
+let triggeredDataCaptureEventsAnimation = false;
+const animateDataCaptureEvents = () => {
+	if (window.scrollY > 100 && !triggeredDataCaptureEventsAnimation) {
+		triggeredDataCaptureEventsAnimation = true;
+		dataCaptureEventsSourcesChart = Highcharts.chart('chart', getCumulativeOptions());
+	}
+};
+</script>

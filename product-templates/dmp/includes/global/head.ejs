@@ -1,0 +1,331 @@
+<meta charset="utf-8">
+<link rel="stylesheet" href="/styles/salesforce-lightning-design-system.min.css" />
+<link rel="stylesheet" href="/styles/global.css">
+<!-- each page automatically tries to include a css file of the same name -->
+<% if (page) { %>
+<link rel="stylesheet" href="/styles/<%=page%>.css">
+<% } %>
+
+<% 
+	const { account, trigger, user, version } = locals.sanitizedQueryParams;
+	const is201 = version && version === '201';
+	const accountParam = account || (is201 ? 'nto-electronics' : 'Ducati');
+%>
+
+<script type="text/javascript">
+	const activePage = '<%=locals.page%>';
+	const accountParam = '<%=accountParam%>';
+	const versionParam = '<%=version%>';
+	let pageVersion = '<%=version%>';
+	const userParam = '<%=user%>' || 'Dan';
+	const triggerParam = '<%=trigger%>';
+
+	let accountName = 'Ducati';
+	let userName = '';
+	let appName = 'Salesforce DMP';
+
+	if (activePage === 'journeys') {
+		accountName = 'nto-general';
+		pageVersion = '201';
+		userName = 'Dan';
+		appName = 'Journey Builder';
+	}
+
+	if ( pageVersion === '201' ) {
+		accountName = 'Northern Trail Outfitters - Apparel';
+	}
+
+	if ( accountParam === 'nto-apparel' ) {
+		accountName = 'Northern Trail Outfitters - Apparel';
+	}
+
+	if ( accountParam === 'nto-electronics' ) {
+		accountName = 'Northern Trail Outfitters - Electronics';
+	}
+
+	if ( accountParam === 'nto-general' ) {
+		accountName = 'Northern Trail Outfitters';
+		userName = 'Dan';
+	}
+
+	let notificationsBadgeIsActive = triggerParam === 'notificationsBadge' || null;
+
+
+	const navData = {
+		appName,
+		pageVersion,
+		accountName,
+		accountParam,
+		userName,
+		userParam,
+		notificationsBadgeIsActive,
+		clearNotificationsHref: '?version=201&account=nto-apparel',
+		accountNavItems: [
+			{
+				label: 'Northern Trail Outfitters - Apparel',
+				id: 'nto-apparel-account-switcher',
+				href: '?version=201&account=nto-apparel&trigger=notificationsBadge',
+				isActive: ( accountName === 'Northern Trail Outfitters - Apparel' )
+			},
+			{
+				label: 'Northern Trail Outfitters - Electronics',
+				id: 'nto-electronics-account-switcher',
+				href: '?version=201&account=nto-electronics',
+				isActive: ( accountName === 'Northern Trail Outfitters - Electronics' )
+			},
+			{
+				label: 'Northern Trail Outfitters',
+				id: 'nto-general-account-switcher',
+				href: '?version=201&account=nto-general',
+				isActive: ( accountName === 'Northern Trail Outfitters' )
+			}
+		],
+		navItems: [ {
+				label: 'Overview',
+				href: `/?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'overview' )
+			},
+			{
+				label: 'Segments',
+				id: 'segments-global-nav-link',
+				href: pageVersion === '201' ? `/segments.manage-segments.html?version=${pageVersion}&account=${accountParam}` : `/segment-builder.new-segment.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'segments' )
+			},
+			{
+				label: 'Insights',
+				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'insights' ),
+				dropdownItems: [
+					[ {
+							separator: true,
+							label: 'Insights'
+						},
+						{
+							label: 'Einstein Segmentation',
+							href: `/insights.einstein-segmentation.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+							id: 'einstein-segmentation-link'
+						},
+						{
+							label: 'Top Overlapping Segments'
+						},
+						{
+							label: 'Data Providers'
+						},
+						{
+							label: 'Funnels'
+						},
+						{
+							label: 'Frequency Reports'
+						},
+						{
+							label: 'Campaign Attribution'
+						},
+						{
+							label: 'Attribution'
+						},
+						{
+							label: 'Custom Index Tool'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Reporting Center'
+						},
+						{
+							label: 'Manage Reports'
+						},
+						{
+							label: 'View Reports'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Content Engagement'
+						},
+						{
+							label: 'Audience Analytics'
+						},
+						{
+							label: 'Engagement'
+						},
+						{
+							label: 'Loyalty'
+						},
+						{
+							label: 'Social Activity'
+						},
+						{
+							label: 'Search Keywords'
+						},
+						{
+							label: 'First Party User Match'
+						}
+					]
+				]
+			},
+			{
+				label: 'Activation',
+				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				lookLikeDropdown: true,
+				isActive: ( activePage === 'activation' )
+			},
+			{
+				label: 'Manage',
+				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				lookLikeDropdown: true,
+				isActive: ( activePage === 'manage' )
+			},
+			{
+				label: 'Data Studio',
+				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				lookLikeDropdown: true,
+				isActive: ( activePage === 'data-studio' )
+			}
+		]
+	}
+
+
+	const navDataJourneyBuilder = {
+		appName,
+		pageVersion,
+		accountName,
+		accountParam,
+		userName,
+		userParam,
+		notificationsBadgeIsActive,
+		clearNotificationsHref: '?version=201&account=nto-apparel',
+		userNavItems: [
+			{
+				label: userName,
+				id: 'nto-apparel-name-switcher-main',
+				href: `?version=201&account=nto-general&user=${userParam}`,
+				isActive: ( userName === userName )
+			}
+		],
+		accountNavItems: [
+			{
+				label: 'Northern Trail Outfitters - Apparel',
+				id: 'nto-apparel-account-switcher',
+				href: '?version=201&account=nto-apparel&trigger=notificationsBadge',
+				isActive: ( accountName === 'Northern Trail Outfitters - Apparel' )
+			},
+			{
+				label: 'Northern Trail Outfitters - Electronics',
+				id: 'nto-electronics-account-switcher',
+				href: '?version=201&account=nto-electronics',
+				isActive: ( accountName === 'Northern Trail Outfitters - Electronics' )
+			},
+			{
+				label: 'Northern Trail Outfitters',
+				id: 'nto-general-account-switcher',
+				href: '?version=201&account=nto-general',
+				isActive: ( accountName === 'Northern Trail Outfitters' )
+			}
+		],
+		navItems: [ {
+				label: 'Journeys',
+				href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				id: 'journeys-global-nav-link',
+				isActive: ( activePage === 'journeys' )
+			},
+			{
+				label: 'Entry Source',
+				id: 'entry-source-global-nav-link',
+				href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'entry-source' )
+			},
+			{
+				label: 'History',
+				id: 'history-global-nav-link',
+				href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'history' )
+			},
+			{
+				label: 'Templates',
+				id: 'entry-source-global-nav-link',
+				href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'templatse' )
+			}
+		]
+	}
+	const accountData = {
+		appName,
+		accountName,
+		navItems: [ {
+			label: `$data`,
+			href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+			isActive: ( activePage === 'insights' ),
+			dropdownItems: [
+				[ {
+						separator: true,
+						label: 'Insights'
+					},
+					{
+						label: 'Einstein Segmentation',
+						href: `/insights.einstein-segmentation.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+						id: 'einstein-segmentation-link'
+					},
+					{
+						label: 'Top Overlapping Segments'
+					},
+					{
+						label: 'Data Providers'
+					},
+					{
+						label: 'Funnels'
+					},
+					{
+						label: 'Frequency Reports'
+					},
+					{
+						label: 'Campaign Attribution'
+					},
+					{
+						label: 'Attribution'
+					},
+					{
+						label: 'Custom Index Tool'
+					}
+				],
+				[ {
+						separator: true,
+						label: 'Reporting Center'
+					},
+					{
+						label: 'Manage Reports'
+					},
+					{
+						label: 'View Reports'
+					}
+				],
+				[ {
+						separator: true,
+						label: 'Content Engagement'
+					},
+					{
+						label: 'Audience Analytics'
+					},
+					{
+						label: 'Engagement'
+					},
+					{
+						label: 'Loyalty'
+					},
+					{
+						label: 'Social Activity'
+					},
+					{
+						label: 'Search Keywords'
+					},
+					{
+						label: 'First Party User Match'
+					}
+				]
+			]
+		} ]
+	}
+</script>
+
+
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
