@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="674px" height="232px" viewBox="0 0 674 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>consumer-rights-management.content.consent-distribution</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Consumer-Rights" transform="translate(-457.000000, -253.000000)">
+            <rect id="Rectangle" stroke="#D8DDE6" x="90.5" y="207.5" width="1100" height="278" rx="4"></rect>
+            <path d="M477,207.839008 L477,484.261208" id="Line-2" stroke="#D8DDE6" stroke-linecap="square"></path>
+            <g id="Group-16" transform="translate(540.000000, 273.000000)">
+                <rect id="Bar-Copy-3" fill="#C398F5" x="93" y="0" width="460" height="20"></rect>
+                <rect id="Bar-Copy-4" fill="#D8DDE6" x="555" y="0" width="32" height="20"></rect>
+                <g id="Group-13" transform="translate(0.000000, 3.000000)" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <g id="Group-4-Copy">
+                        <text id="Data-collection">
+                            <tspan x="0" y="12">Data collection</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-11" transform="translate(574.000000, 329.000000)">
+                <rect id="Bar-Copy-7" fill="#C398F5" x="59" y="0" width="106.188313" height="20"></rect>
+                <rect id="Bar-Copy-9" fill="#D8DDE6" x="168" y="0" width="385" height="20"></rect>
+                <g id="Group-13-Copy-2" transform="translate(0.000000, 3.000000)" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <g id="Group-4-Copy">
+                        <text id="Analytics">
+                            <tspan x="0.656" y="12">Analytics</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-8" transform="translate(557.000000, 385.000000)">
+                <rect id="Bar-Copy-11" fill="#C398F5" x="76" y="0" width="85.2551332" height="20"></rect>
+                <rect id="Bar-Copy-13" fill="#D8DDE6" x="164" y="0" width="406" height="20"></rect>
+                <g id="Group-13-Copy-4" transform="translate(0.000000, 3.000000)" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <g id="Group-4-Copy">
+                        <text id="Data-Selling">
+                            <tspan x="0" y="12">Data Selling</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-15" transform="translate(571.000000, 301.000000)">
+                <polygon id="Bar-Copy-5" fill="#C398F5" points="62 0 401.00326 0 401.00326 20 62 20"></polygon>
+                <rect id="Bar-Copy-6" fill="#D8DDE6" x="403" y="0" width="153" height="20"></rect>
+                <g id="Group-13-Copy" transform="translate(0.000000, 3.000000)" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <g id="Group-4-Copy">
+                        <text id="Targeting">
+                            <tspan x="0" y="12">Targeting</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-9" transform="translate(552.000000, 357.000000)">
+                <polygon id="Bar-Copy-8" fill="#C398F5" points="81 0 404.93987 0 404.93987 20 81 20"></polygon>
+                <rect id="Bar-Copy-10" fill="#D8DDE6" x="407" y="0" width="168" height="20"></rect>
+                <g id="Group-13-Copy-3" transform="translate(0.000000, 3.000000)" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <g id="Group-4-Copy">
+                        <text id="Data-Sharing">
+                            <tspan x="0" y="12">Data Sharing</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-7" transform="translate(530.000000, 413.000000)">
+                <polygon id="Bar-Copy-12" fill="#C398F5" points="103 0 195 0 195 20 103 20"></polygon>
+                <rect id="Bar-Copy-14" fill="#D8DDE6" x="197" y="0" width="401" height="20"></rect>
+                <g id="Group-13-Copy-5" transform="translate(0.000000, 3.000000)" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <g id="Group-4-Copy">
+                        <text id="Re-Identification">
+                            <tspan x="0" y="12">Re-Identification</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-5" transform="translate(690.000000, 452.000000)">
+                <circle id="legendcircle3-copy" fill="#C398F5" cx="5" cy="8" r="5"></circle>
+                <circle id="legendcircle3-copy-2" fill="#D8DDE6" cx="183" cy="8" r="5"></circle>
+                <text id="Consented-Population" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="18" y="12">Consented Population</tspan>
+                </text>
+                <text id="Non-consented-Popula" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="196" y="12">Non-consented Population</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
