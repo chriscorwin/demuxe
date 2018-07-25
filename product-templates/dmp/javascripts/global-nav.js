@@ -12,7 +12,7 @@ const navigatePage = ( url ) => {
 const makeCloudIconForJourneyBuilder = ( data ) => {
 	if ( data.pageVersion === '201' && data.appName === 'Journey Builder' ) {
 		return (`
-			<div class="slds-global-header__logo slds-p-around_x-small"><a href="/jb/"><img src="/img/sf-logo.svg"></a></div>
+			<div class="slds-global-header__logo slds-p-around_x-small"><a href="/jb/"><img src="/images/sf-logo.svg"></a></div>
 		`)
 	} else {
 		return ('')
@@ -46,7 +46,7 @@ const makeAccountDropdownLink = ( data ) => {
 			<a href="javascript:void(0);" onclick="switchAccount('${data.label}'); navigatePage('${data.href}');" id="${data.id}" role="menuitem" tabindex="-1">
 				<span class="slds-truncate" title="Northern Trail Outfitters - Electronics">
 					<svg style="opacity: ${accountName === data.label ? 1 : 0}" class="slds-icon slds-icon_x-small slds-m-right_small slds-icon-text-default" aria-hidden="true">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/slds-icons/utility-sprite/svg/symbols.svg#check" />
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#check" />
 					</svg>
 					${data.label}
 				</span>
@@ -61,7 +61,7 @@ const makeUserDropdownLink = ( data ) => {
 			<a href="javascript:void(0);" onclick="switchAccount('${data.label}'); navigatePage('${data.href}');" id="${data.id}" role="menuitem" tabindex="-1">
 				<span class="slds-truncate" title="Northern Trail Outfitters - Electronics">
 					<svg style="opacity: ${userName === data.label ? 1 : 0}" class="slds-icon slds-icon_x-small slds-m-right_small slds-icon-text-default" aria-hidden="true">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/slds-icons/utility-sprite/svg/symbols.svg#check" />
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#check" />
 					</svg>
 					${data.label}
 				</span>
@@ -74,7 +74,7 @@ const makeNotificationsMenu = ( data ) => {
 	return ( `
 		<li class="slds-context-bar__item slds-context-bar__item_tab slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover" style="width: auto; max-width: 20rem;">
 			<div class="menu-item ${data.notificationsBadgeIsActive ? 'menu-item_has-badge' : ''} slds-m-right_x-small slds-m-left_xxx-small" title="Show Notifications">
-				<img class="icon" src="/img/bell.svg">
+				<img class="icon" src="/images/bell.svg">
 				<span class="slds-assistive-text">Show Notifications</span>
 			</div>
 			<section style="right: -3px; width: 26rem; max-width: 40rem;" class=" slds-dropdown slds-dropdown_right slds-popover slds-nubbin_top-right slds-dynamic-menu" role="dialog" aria-label="My Favourites" aria-describedby="dialog-body-id-17">
@@ -101,7 +101,7 @@ const makeNotificationsMenu = ( data ) => {
 									<span class="slds-media__figure">
 										<span class="slds-icon_container slds-icon-standard-approval">
 											<svg class="slds-icon slds-icon_small slds-p-around_xx-small" aria-hidden="true">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/slds-icons/action-sprite/svg/symbols.svg#approval"></use>
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/action-sprite/svg/symbols.svg#approval"></use>
 											</svg>
 										</span>
 									</span>
@@ -120,7 +120,7 @@ const makeNotificationsMenu = ( data ) => {
 												<div class="slds-dropdown-trigger slds-dropdown-trigger_click ">
 													<button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
 														<svg class="slds-button__icon" aria-hidden="true">
-															<use xlink:href="/img/slds-icons/utility-sprite/svg/symbols.svg#down"></use>
+															<use xlink:href="/icons/utility-sprite/svg/symbols.svg#down"></use>
 														</svg>
 														<span class="slds-assistive-text">Show More</span>
 													</button>
@@ -147,7 +147,7 @@ const makeNotificationsMenu = ( data ) => {
 									<span class="slds-media__figure">
 										<span class="slds-icon_container slds-icon-standard-approval">
 											<svg class="slds-icon slds-icon_small slds-p-around_xx-small" aria-hidden="true">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/slds-icons/action-sprite/svg/symbols.svg#approval"></use>
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/action-sprite/svg/symbols.svg#approval"></use>
 											</svg>
 										</span>
 									</span>
@@ -164,7 +164,7 @@ const makeNotificationsMenu = ( data ) => {
 												<div class="slds-dropdown-trigger slds-dropdown-trigger_click ">
 													<button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
 														<svg class="slds-button__icon" aria-hidden="true">
-															<use xlink:href="/img/slds-icons/utility-sprite/svg/symbols.svg#down"></use>
+															<use xlink:href="/icons/utility-sprite/svg/symbols.svg#down"></use>
 														</svg>
 														<span class="slds-assistive-text">Show More</span>
 													</button>
@@ -252,10 +252,10 @@ const makePrimaryNav = ( data ) => {
 		</ul></nav>
 		<ul class="slds-grid slds-col--bump-left" role="tablist">
 			<li class="slds-context-bar__item slds-context-bar__item_tab" style="width: auto;">
-				<div class="menu-item slds-m-right_small" id="pins"><img class="icon" src="/img/slds-icons/utility/pin-dark-blue.svg" /> <span>0</span></div>
+				<div class="menu-item slds-m-right_small" id="pins"><img class="icon" src="/icons/utility/pin-dark-blue.svg" /> <span>0</span></div>
 			</li>
 			<li class="slds-context-bar__item slds-context-bar__item_tab" style="width: auto;">
-				<div class="menu-item slds-m-right_small"><img class="icon" src="/img/cart.svg" /> 0</div>
+				<div class="menu-item slds-m-right_small"><img class="icon" src="/images/cart.svg" /> 0</div>
 			</li>
 			${makeNotificationsMenu(data)}
 			<li class="slds-context-bar__item slds-context-bar__item_tab slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover" style="width: auto; max-width: 20rem;">
@@ -277,7 +277,7 @@ const makePrimaryNav = ( data ) => {
 							<div class="slds-form-element slds-m-around--small">
 								<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
 									<svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/slds-icons/utility-sprite/svg/symbols.svg#search" />
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#search" />
 									</svg>
 									<input type="text" id="text-input-id-1" class="slds-input" placeholder="Find Instance" />
 								</div>
@@ -328,7 +328,7 @@ const makePrimaryNavJourneyBuilder = ( data ) => {
 							<div class="slds-form-element slds-m-around--small">
 								<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
 									<svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/slds-icons/utility-sprite/svg/symbols.svg#search" />
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#search" />
 									</svg>
 									<input type="text" id="text-input-id-1" class="slds-input" placeholder="Find Instance" />
 								</div>
@@ -342,7 +342,7 @@ const makePrimaryNavJourneyBuilder = ( data ) => {
 			<li class="slds-context-bar__item slds-context-bar__item_tab slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover" style="width: auto; max-width: 20rem;">
 				<a href="javascript:void(0);" class="slds-context-bar__label-action" title="${data.userName}">
 					<span class="slds-avatar slds-avatar_circle slds-avatar_small slds-m-horizontal_x-small">
-						<img alt="Person name" src="/img/avatar1.jpg" title="User avatar" />
+						<img alt="Person name" src="/images/avatar1.jpg" title="User avatar" />
 					</span>
 					<span class="slds-truncate" title="${data.userName}">${data.userName}</span>
 				</a>
@@ -361,7 +361,7 @@ const makePrimaryNavJourneyBuilder = ( data ) => {
 							<div class="slds-form-element slds-m-around--small">
 								<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
 									<svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/slds-icons/utility-sprite/svg/symbols.svg#search" />
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#search" />
 									</svg>
 									<input type="text" id="text-input-id-1" class="slds-input" placeholder="Find Instance" />
 								</div>
