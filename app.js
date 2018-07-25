@@ -122,8 +122,12 @@ router.get('/*', (req, res) => {
 				if (!err) error = false;
 				if (error) {
 					res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
-						if (req.url.match(/.css$/)) {
+						if (req.url.match(/\.css$/)) {
 							res.set('Content-Type', 'text/css');
+						}
+						if (req.url.match(/\.js$/)) {
+							res.set('Content-Type', 'application/javascript');
+							res.set('X-Your-Mom', config);
 						}
 						res.send(html);
 					});
