@@ -110,24 +110,25 @@ router.get('/*', (req, res) => {
 		return sanitizedQueryParams;
 	}, {});
 	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
+	const fileName = (sanitizedURL.match(/\/$/)) ? `${sanitizedURL}index.ejs` : `${sanitizedURL}.ejs`;
 
 	let error = true;
 	// Check to see if the file exists in any of the three possible view directories. If not, error.
-	fs.access(path.join(__dirname, 'your-code-here', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+	fs.access(path.join(__dirname, 'your-code-here', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 		if (!err) error = false;
-		fs.access(path.join(__dirname, 'product-templates', (config.productTemplate) ? config.productTemplate : '', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+		fs.access(path.join(__dirname, 'product-templates', (config.productTemplate) ? config.productTemplate : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 			if (!err) error = false;
-			fs.access(path.join(__dirname, 'engine', `${sanitizedURL}.ejs`), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+			fs.access(path.join(__dirname, 'engine', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 				if (!err) error = false;
 				if (error) {
-					res.render('404', { page: sanitizedURL, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+					res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
 						if (req.url.match(/.css$/)) {
 							res.set('Content-Type', 'text/css');
 						}
 						res.send(html);
 					});
 				} else {
-					res.render(sanitizedURL, { ...config, sanitizedQueryParams: sanitizedQueryParams });
+					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams });
 				}
 			});
 		});
