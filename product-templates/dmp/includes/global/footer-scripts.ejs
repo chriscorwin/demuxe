@@ -1,7 +1,9 @@
 <script type="text/javascript" src="/javascripts/global-nav.js"></script>
 <!-- each page automatically tries to include a javascript file of the same name -->
 <% if (page) { %>
-<script type="text/javascript" src="/javascripts/<%=page%>.js"></script>
+<script>console.group(`Going to run: <%=page%>.js`)</script>
+<script src="/javascripts/<%=page%>.js"></script>
+<script>console.groupEnd()</script>
 <% } %>
 <script type="text/javascript">
 	if ( location.host === 'localhost:3000' ) {
