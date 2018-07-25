@@ -1,6 +1,10 @@
 # Demuxe - The Boilerplate UXE Demo App
 Demuxe is the starting point for new demos. I propose that "Demuxe" should be pronounced "dem-you", but we should definitely have years long raging religious debates about this.
 
+Demuxe is the Class. Your demo is the Object.
+Demuxe is the Prototype. Your demo is the Instantiation.
+Demuxe is the Mold. Your demo is the Cast.
+
 # First Principles
 Decisions about architecture in this project shall be made with an **_aggressive_ bias towards simplicity**.
 
@@ -51,15 +55,15 @@ Demos _may_:
 - Create a discrete Heroku pipeline for each new demo.
 - Do **not** commit demos back to this repository. 
 - In the retrospective phase of a demo, update this repo:
-	- Place new components into component gallery.
-	- Review and update existing components.
-	- Review and update existing templates.
-	- Thoughtfully incorporate new ideas for creating demos based on lessons learned.
+	- Identify and separate out components within your template.
+	- Review and update existing components in your template.
+	- Review and update your template.
+	- Thoughtfully incorporate new ideas for Demuxe itself based on lessons learned.
 
 
 # Dependencies
-This demo utilizes:
-- HTML/[EJS](http://ejs.co/#docs)
+Demuxe utilizes:
+- HTML/[Custom EJS 2.6.1](https://github.com/cmcculloh/ejs/)
 - JavsScript
 - CSS/[node-sass](https://github.com/sass/node-sass)
 - [Express](https://expressjs.com/en/4x/api.html)
@@ -74,6 +78,9 @@ This demo utilizes:
 
 	`npm install`
 
+- Edit `/config/config.json` (and other config files). 
+	- Specify your brand and product-template. 
+	- `config.json` should be _production settings_.
 - Get coding, you are under deadline, kiddo.
 
 
@@ -88,11 +95,11 @@ This demo utilizes:
 - [Express server](https://expressjs.com).
 - Serves from port `:3000` (http://localhost:3000).
 - `.ejs` files are processed server-side and served.
-	- Routes all requests to corresponding files in `public/` (eg: `localhost:3000/bobs/books` routes to `public/bobs/books.ejs`).
+	- Routes all requests to corresponding files in `/your-code-here/`, `/product-templates/{config.productTemplate}`, and `/engine/` _in that order_ (eg: `localhost:3000/bobs/books` routes to `your-code-here/bobs/books.ejs`, if that doesn't exist, it tries `/product-templates/{config.productTemplate}/bobs/books.ejs`, if that doesn't exist, it tries `/engine/bobs/books.ejs`, and if that doesn't exist it serves up `/engine/404.ejs` (unless you've overridden that in the product-template or `your-code-here`)).
 	- User input is magically sanitized using [express-sanitizer](https://www.npmjs.com/package/express-sanitizer).
-- All other files under `public/` are served as static files.
-- Any query params `?like=this` are passed along into the EJS template and available for use in the global js `locals` object `<%= locals.likeThis %>`.
-- EJS files can be included in other EJS files (server side) `<%- include('includes/like-this') %>`.
+- All other files under `/your-code-here/`, `/product-templates/{config.productTemplate}`, and `/engine/` are served as static files, _in that order of prioritization_.
+- Any query params `?like=this` are passed along into the EJS template and available for use in the global js `locals.sanitizedQueryParams` object `<%= locals.sanitizedQueryParams.likeThis %>`.
+- EJS files can be included in other EJS files (server side) `<%- include('includes/like-this') %>` and follow the same rules as outlined in `.ejs` bullet-point above.
 
 
 
@@ -145,7 +152,29 @@ Demuxe uses a fork of Differencify that allows us some more flixibility vs what 
 
 # Spec/Designs
 
-Shall live in `/dev-assets/`. Typically these will be sketch files.
+Shall live in `/dev-assets/`. Typically these will be sketch files. These should never be merged into Demuxe proper, and only ever belong in branches or in forks.
+
+# Brand Theming
+Enables brand re-use across demos, and brand-theming demos, quickly and easily.
+
+All brand assets and verbiage associated with that brand shall live in `/brand-themes/{brand-name}/`. 
+
+You must structure your brand assets as follows:
+
+```
+/brand-themes/{brand-name}/
+    +-- styles/
+    |    +-- brand.css
+    +-- javascripts/
+    |    +-- brand.js
+    +-- images/
+    |    +-- brand-logo.svg
+    +-- localization.json
+```
+
+NOTE: The folder name is named after the brand (eg, `/brand-themes/ducati/`) but the actual files themselves are named `brand` as the core brand theme files are standardized across all brands.
+
+See `/brand-themes/ducati/` for an example of how this looks.
 
 
 
@@ -166,7 +195,7 @@ Also, SVG files do not have access to fonts the same way HTML elements do, so we
 	
 		`node ./dev-assets/utilities/embed-fonts-in-svgs`
 
-    - By default the script will scan the `public/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
+    - By default the script will scan the `your-code-here/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
 
     - To convert other project directories, add a directory path when running the script, thus: 
 	
@@ -175,20 +204,27 @@ Also, SVG files do not have access to fonts the same way HTML elements do, so we
 
 
 
-# Templates
+# Product Templates
 
-Templates are page shells that can be quickly used to re-create different products. (eg: DMP Header, Navigation, & Footer)
+Product Templates are page shells that can be quickly used to re-create different products.
 
-- Product templates must live in `/templates/{product-name}/`.
-- Product templates shall be an MVP shell and component pages of a product built out as simply, but thoroughly, as possible.
+- Product templates must live in `/product-templates/{product-name}/`.
+	- The goal would be that whatever product a demo requires is mostly already present in a relatively up-to-date form.
+- Product templates shall be an MVP shell and components of a product built out as simply, but thoroughly, as possible.
+- Each time a product template is used in a demo, once the demo is complete, the product template should be updated with the cleaned up version of the demo code.
 - The more complete our library of product templates the better.
 - Once per quarter existing templates shall be audited with designers and updated. In this manner when we are asked to quickly complete a demo, we will have an even better jumping off point.
 
+## Components
+Components:
+- Are _single file_ modules containing all JS, CSS, and HTML required to display the component on the page.
 
+	If the component has a dependency which is not present within the component itself, that dependency shall be noted at the top of the component's file.
 
-# Component Gallaries
-
-Component gallaries should contain MVP examples of components used in past demos (eg: graphs on the DMP home page). These shall be lightly documented and reviewed to ensure high confidence in quality, readability, and re-usability (in essence, you shall be able to just open the file and know exactly what to copy/paste and how to use it within a few minutes).
+- Live within the template for which they were created.
+- Shall be lightly documented and reviewed to ensure high confidence in quality, readability, and re-usability.
+	
+	The intent is that you ought to be able to copy a component out of any template into whatever demo you are building regardless of the template the component was originally built for.
 
 
 

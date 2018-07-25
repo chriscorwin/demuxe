@@ -1,0 +1,146 @@
+<!-- 
+Highcharts must be included on page prior to this running
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
+-->
+<style>
+	.legend-row {
+		border-bottom: 1px solid #D8DDE6;
+	}
+
+	.legend-row:last-child {
+		border-bottom: 0 none;
+	}
+
+	.circle {
+		border-radius: 12px;
+		width: 14px;
+		height: 14px;
+		float: left;
+		margin: 2px 8px 0 0;
+	}
+
+	.circle.small {
+		width: 10px;
+		height: 10px;
+		margin-top: 3px;
+	}
+</style>
+<div class="slds-panel-box" style="margin-top: 1.5em;">
+	<div class="slds-panel-box__header slds-p-around_small">Data Capture Methods
+		<img class="icon" src="/images/settings.svg" />
+	</div>
+	<div class="slds-grid slds-wrap slds-panel-box__body">
+		<div class="slds-col slds-size_1-of-1 slds-panel-box__sub-header slds-p-around_small">
+			<button class="slds-button slds-button_neutral">By Data Capture Events
+				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
+			</button>
+			<button style="float: right;" class="slds-button slds-button_neutral">Last 30 days
+				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
+			</button>
+		</div>
+		<div class="slds-col slds-size_1-of-3" id="data-capture-methods-chart" style="height:351px;"></div>
+		<div class="slds-col slds-size_2-of-3 slds-p-horizontal_large slds-p-vertical_x-large" id="consent-distribution-graph-legend"></div>
+		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small slds-col slds-size_1-of-1">
+			<a href="javascript:void(0);">View All Data Capture Methods</a>
+			<span class="slds-m-horizontal_medium" style="height: 16px; width: 1px; border-left: 1px solid #D8DDE6;"></span>
+			<a id="consumer-rights-management-click-target" href="javascript:void(0);" onclick="navigatePage('/consumer-rights-management.html');">
+				Manage Consumer Rights
+			</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	const dataCaptureMethodsData = [
+	{
+		name: 'Control Tags - Website',
+		y: 100,
+		color: '#F69E5A'
+	},
+	{
+		name: 'Media Tracker',
+		y: 78,
+		color: '#B896FA'
+	},
+	{
+		name: 'Click Tracker',
+		y: 60,
+		color: '#EA78BB'
+	},
+	{
+		name: '1st Party Consent',
+		y: 59,
+		color: '#70ABEA'
+	},
+	{
+		name: 'Email 1X1',
+		y: 28,
+		color: '#63B6B0'
+	}
+];
+
+const getDataCaptureMethodsData = () => [
+	{
+		data: dataCaptureMethodsData,
+		size: '80%',
+		innerSize: '70%'
+	}
+];
+
+// Gets options for the Cumulative 1st Party Overview chart
+const getDataCaptureMethodsOptions = () => {
+	return {
+		legend: {
+			verticalAlign: 'bottom',
+			enabled: true
+		},
+		title: {
+			text: ''
+		},
+		chart: {
+			type: 'pie',
+			height: 351,
+			style: {
+				fontFamily: 'Salesforce Sans'
+			}
+		},
+		plotOptions: {
+			pie: {
+				shadow: false,
+				dataLabels: {
+					enabled: false
+				}
+			},
+			series: {
+				animation: {
+					duration: 2000
+				}
+			}
+		},
+		series: getDataCaptureMethodsData()
+	};
+};
+
+Highcharts.setOptions({credits: { enabled: false }});
+let dataCaptureMethodsSourcesChart;
+
+const makeDataCaptureMethodsLegendRow = (data) => (`
+	<div class="slds-grid legend-row slds-p-around_medium">
+		<div class="slds-col slds-size_2-of-3"><div class="circle" style="background-color: ${data.color};"></div> ${data.name}</div>
+		<div class="slds-col slds-size_1-of-3" style="text-align: right;">${data.y}K</div>
+	</div>
+`);
+
+const makeDataCaptureMethodsLegend = () => dataCaptureMethodsData.reduce((rows, row) => rows + makeDataCaptureMethodsLegendRow(row), '');
+
+document.querySelector('#consent-distribution-graph-legend').innerHTML = makeDataCaptureMethodsLegend();
+
+let triggeredDataCaptureMethodsAnimation = false;
+const animateDataCaptureMethods = () => {
+	if (window.scrollY > 100 && !triggeredDataCaptureMethodsAnimation) {
+		triggeredDataCaptureMethodsAnimation = true;
+		dataCaptureMethodsSourcesChart = Highcharts.chart('data-capture-methods-chart', getDataCaptureMethodsOptions());
+	}
+};
+</script>
