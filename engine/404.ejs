@@ -11,7 +11,12 @@ body:before {
 	text-align: center;
 }
 <% } else if (page.match(/.js$/)) { %>
+<h1>Error 404</h1>
+<p>The URL "<code><%= page %></code>" does not exist on this server.</p>
+<script>
 	console.warn('404. Page: "<%= page %>" Not Found.');
+</script>
+
 <% } else { %>
 	<h1>404. Page: "<%= page %>" Not Found.</h1>
 <% } %>
