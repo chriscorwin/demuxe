@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="590px" height="358px" viewBox="0 0 590 358" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>index.marketer-campaigns</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-40.000000, -1039.000000)">
+            <path d="M44,998.5 C42.0670034,998.5 40.5,1000.067 40.5,1002 L40.5,1394 C40.5,1395.933 42.0670034,1397.5 44,1397.5 L626,1397.5 C627.932997,1397.5 629.5,1395.933 629.5,1394 L629.5,1002 C629.5,1000.067 627.932997,998.5 626,998.5 L44,998.5 Z" id="Rectangle-24-Copy-10" stroke="#D8DDE6" fill="#FFFFFF"></path>
+            <path d="M41,1362.5 L628.98999,1362.5" id="Line-4-Copy-29" stroke="#D8DDE6" stroke-linecap="square"></path>
+            <text id="View-All-Marketer-Ca" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="17" fill="#0070D2">
+                <tspan x="253.412" y="1382">View All Marketer Campaigns</tspan>
+            </text>
+            <g id="Group-15-Copy" transform="translate(41.000000, 1040.000000)" fill="#F7F9FB">
+                <polygon id="Rectangle-4-Copy-3" points="0 0 588 0 588 49 0 49"></polygon>
+            </g>
+            <g id="Group-32" transform="translate(54.000000, 1048.000000)">
+                <g id="Group-21-Copy-8" transform="translate(429.000000, 0.000000)">
+                    <g id="Group-17" fill="#FFFFFF" stroke="#D8DDE6">
+                        <g id="Back-Copy">
+                            <rect id="Rectangle-153" x="0.5" y="0.5" width="130" height="31" rx="3"></rect>
+                        </g>
+                    </g>
+                    <path d="M112.329034,15 L121.284426,15 C121.537403,15 121.714487,15.325 121.512105,15.55 L117.1356,20.85 C116.983814,21.05 116.654943,21.05 116.503157,20.85 L112.076056,15.55 C111.898972,15.325 112.050759,15 112.329034,15" id="down" fill="#061C3F"></path>
+                    <text id="Last-30-days" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                        <tspan x="9" y="21">Last 30 days</tspan>
+                    </text>
+                </g>
+                <g id="Group-21-Copy-5" transform="translate(149.000000, 0.000000)">
+                    <g id="Group-17" fill="#FFFFFF" stroke="#D8DDE6">
+                        <g id="Back-Copy">
+                            <rect id="Rectangle-153" x="0.5" y="0.5" width="173" height="31" rx="3"></rect>
+                        </g>
+                    </g>
+                    <path d="M153.329034,15 L162.284426,15 C162.537403,15 162.714487,15.325 162.512105,15.55 L158.1356,20.85 C157.983814,21.05 157.654943,21.05 157.503157,20.85 L153.076056,15.55 C152.898972,15.325 153.050759,15 153.329034,15" id="down" fill="#061C3F"></path>
+                    <text id="By-Impressions" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                        <tspan x="9" y="21">By Impressions</tspan>
+                    </text>
+                </g>
+                <g id="Group-21-Copy-7">
+                    <g id="Group-17" fill="#FFFFFF" stroke="#D8DDE6">
+                        <g id="Back-Copy">
+                            <rect id="Rectangle-153" x="0.5" y="0.5" width="140" height="31" rx="3"></rect>
+                        </g>
+                    </g>
+                    <path d="M121.329034,15 L130.284426,15 C130.537403,15 130.714487,15.325 130.512105,15.55 L126.1356,20.85 C125.983814,21.05 125.654943,21.05 125.503157,20.85 L121.076056,15.55 C120.898972,15.325 121.050759,15 121.329034,15" id="down" fill="#061C3F"></path>
+                    <text id="Top-5" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                        <tspan x="12" y="21">Top 5</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Legend" transform="translate(150.000000, 1318.000000)">
+                <circle id="legendcircle7" stroke="#B0C3D4" fill="#E6ECF2" cx="13.5" cy="13.5" r="13"></circle>
+                <circle id="legendcircle6" stroke="#B0C3D4" fill="#E6ECF2" cx="14" cy="19" r="7.5"></circle>
+                <circle id="legendcircle5" stroke="#B0C3D4" fill="#E6ECF2" cx="13.5" cy="21.5" r="5"></circle>
+                <text id="Devices" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="35" y="26">Devices</tspan>
+                </text>
+                <path d="M96.5,11.5 L96.5,32.8775578" id="Line" stroke="#B0C3D4" stroke-linecap="square"></path>
+                <circle id="legendcircle4" fill="#0857A6" cx="118" cy="22" r="5"></circle>
+                <text id="Display" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="131" y="26">Display</tspan>
+                </text>
+                <circle id="legendcircle3" fill="#7719E3" cx="198" cy="22" r="5"></circle>
+                <text id="Email" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="211" y="26">Email</tspan>
+                </text>
+                <circle id="legendcircle2" fill="#197EE3" cx="281" cy="22" r="5"></circle>
+                <text id="Mobile" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="294" y="26">Mobile</tspan>
+                </text>
+                <circle id="legendcircle1" fill="#C398F5" cx="364" cy="22" r="5"></circle>
+                <text id="Video" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="377" y="26">Video</tspan>
+                </text>
+            </g>
+            <g id="Chart" transform="translate(55.000000, 1110.000000)">
+                <g id="GridLines" transform="translate(70.000000, 5.000000)" stroke="#E6EBF5" stroke-linecap="square">
+                    <g id="gridline6" transform="translate(5.214851, 0.000000)">
+                        <path d="M2.84217094e-14,1.65411374 L479.308487,1.65411374" id="ygridlin6"></path>
+                    </g>
+                    <g id="gridline5" transform="translate(5.214851, 30.614458)">
+                        <path d="M2.84217094e-14,1.65411374 L479.308487,1.65411374" id="ygridlin5"></path>
+                    </g>
+                    <g id="gridline4" transform="translate(5.214851, 59.373494)">
+                        <path d="M2.84217094e-14,1.98493648 L479.308487,1.32329099" id="ygridlin4"></path>
+                    </g>
+                    <g id="gridline3" transform="translate(5.214851, 89.987952)">
+                        <path d="M2.84217094e-14,1.65411374 L479.308487,1.65411374" id="ygridlin3"></path>
+                    </g>
+                    <g id="gridline2" transform="translate(5.214851, 121.530120)">
+                        <path d="M2.84217094e-14,1.65411374 L479.308487,1.65411374" id="ygridlin2"></path>
+                    </g>
+                    <g id="gridline1" transform="translate(0.000000, 150.289157)">
+                        <path d="M2.84217094e-14,1.65411374 L483.603862,1.65411374" id="ygridlin1"></path>
+                    </g>
+                </g>
+                <text id="1M" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="536.604" y="176">1M</tspan>
+                </text>
+                <text id="900K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="468.612" y="176">900K</tspan>
+                </text>
+                <text id="800K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="412.612" y="176">800K</tspan>
+                </text>
+                <text id="700K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="355.612" y="176">700K</tspan>
+                </text>
+                <text id="600K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="297.612" y="176">600K</tspan>
+                </text>
+                <text id="500K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="240.612" y="176">500K</tspan>
+                </text>
+                <text id="400K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="185.612" y="176">400K</tspan>
+                </text>
+                <text id="300K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="128.612" y="176">300K</tspan>
+                </text>
+                <text id="200K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="71.612" y="176">200K</tspan>
+                </text>
+                <text id="1M" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="50.604" y="102">1M</tspan>
+                </text>
+                <text id="2M" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="50.604" y="40">2M</tspan>
+                </text>
+                <text id="500K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="39.612" y="160">500K</tspan>
+                </text>
+                <text id="2.5M" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="43.08" y="12">2.5M</tspan>
+                </text>
+                <text id="Impressions" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="283.912" y="198">Impressions</tspan>
+                </text>
+                <text id="Spend-($)" transform="translate(8.000000, 122.500000) rotate(-90.000000) translate(-8.000000, -122.500000) " font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="-6.02" y="127">Spend ($)</tspan>
+                </text>
+            </g>
+            <circle id="bubble3" fill="#0857A6" opacity="0.65" cx="194.5" cy="1160.5" r="38.5"></circle>
+            <circle id="bubble3-copy" fill="#5208A6" opacity="0.65" cx="238" cy="1231" r="24"></circle>
+            <circle id="bubble3-copy-2" fill="#197EE3" opacity="0.65" cx="486.5" cy="1146.5" r="29.5"></circle>
+            <circle id="bubble3-copy-3" fill="#7719E3" opacity="0.65" cx="578.5" cy="1239.5" r="13.5"></circle>
+            <circle id="bubble3-copy-4" fill="#C398F5" opacity="0.65" cx="265" cy="1202" r="28"></circle>
+        </g>
+    </g>
+</svg>

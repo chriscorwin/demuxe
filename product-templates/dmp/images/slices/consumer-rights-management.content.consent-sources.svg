@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="364px" height="232px" viewBox="0 0 364 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>consumer-rights-management.content.consent-sources</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Consumer-Rights" transform="translate(-91.000000, -253.000000)">
+            <rect id="Rectangle" stroke="#D8DDE6" x="90.5" y="207.5" width="1100" height="278" rx="4"></rect>
+            <g id="Legend" transform="translate(112.000000, 427.000000)">
+                <circle id="legendcircle4" fill="#FFD33F" cx="5" cy="33" r="5"></circle>
+                <text id="Backfill-Consent" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="18" y="37">Backfill Consent</tspan>
+                </text>
+                <circle id="legendcircle3" fill="#F49E60" cx="5" cy="8" r="5"></circle>
+                <text id="1st-Party-Consent" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="18" y="12">1st Party Consent</tspan>
+                </text>
+            </g>
+            <g id="Legend-Copy" transform="translate(295.000000, 427.000000)">
+                <circle id="legendcircle4" fill="#73ACE8" cx="5" cy="33" r="5"></circle>
+                <text id="Policy-Regime-Consen" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="18" y="37">Policy Regime Consent</tspan>
+                </text>
+                <circle id="legendcircle3" fill="#EE7C8F" cx="5" cy="8" r="5"></circle>
+                <text id="2nd-Party-Consent" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="18" y="12">2nd Party Consent</tspan>
+                </text>
+            </g>
+            <g id="Group-23-Copy" transform="translate(214.000000, 264.000000)">
+                <g id="Variable-segments-circle">
+                    <g id="Group-21">
+                        <path d="M65.5,0 C88.90315,0 110.5247,12.4843 122.223,32.75 C133.9213,53.0157 133.9213,77.9843 122.223,98.25 C110.5247,118.5157 88.90315,131 65.5,131 C42.09685,131 20.4753,118.5157 8.777,98.25 C-2.9213,77.9843 -2.9213,53.0157 8.777,32.75 C20.4753,12.4843 42.09685,0 65.5,0 L65.5,32.75 C53.8017,32.75 42.98765,38.99215 37.1385,49.125 C31.28935,59.25785 31.28935,71.74215 37.1385,81.875 C42.98765,92.00785 53.8017,98.25 65.5,98.25 C77.1983,98.25 88.01235,92.00785 93.8615,81.875 C99.71065,71.74215 99.71065,59.25785 93.8615,49.125 C88.01235,38.99215 77.1983,32.75 65.5,32.75 L65.5,0 Z" id="Base-plate" fill-opacity="0.002" fill="#455A64"></path>
+                        <path d="M65.625,0.125117835 L65.625,32.6252373 C71.3547823,32.6469996 76.9767082,34.1647368 81.9374916,37.030242 C92.1081943,42.9012423 98.375,53.756083 98.375,65.5 C98.375,77.243917 92.1081943,88.0987577 81.9374916,93.969758 C71.7659707,99.8412307 59.2340293,99.8412307 49.0625084,93.969758 C38.9279005,88.1195933 32.6695296,77.3208996 32.6252367,65.625 L0.125119444,65.625 C0.146979211,77.0579037 3.1675209,88.2889202 8.88525805,98.1875084 C20.5614573,118.414922 42.141966,130.875 65.5,130.875 C88.858034,130.875 110.438543,118.414922 122.114742,98.1875084 C133.790719,77.9604793 133.790719,53.0395207 122.114742,32.8124916 C110.459374,12.6211651 88.9350047,0.169483996 65.625,0.125118951 Z" id="Segment-75" stroke="#FFFFFF" stroke-width="0.25" fill="#73ACE8"></path>
+                        <path d="M0.125119372,65.375 L32.625237,65.375 C32.6512799,58.5146565 34.8206836,51.8364422 38.8308028,46.2773118 L12.5382464,27.1737708 C4.49546215,38.2877477 0.15134994,51.655298 0.125119492,65.375 Z" id="Segment-10" stroke="#FFFFFF" stroke-width="0.25" fill="#FFD33F"></path>
+                        <path d="M12.6851978,26.9715203 L38.9778303,46.0751166 C43.0331096,40.5425109 48.7131981,36.4158088 55.2228139,34.2746956 L45.1802845,3.36060509 C32.1406957,7.62863748 20.7682176,15.891417 12.6851979,26.9715204 Z" id="Segment-10" stroke="#FFFFFF" stroke-width="0.25" fill="#F49E60"></path>
+                        <path d="M45.4180484,3.28335003 L55.4605944,34.1974917 C58.6710211,33.1686001 62.0127259,32.6380716 65.375,32.6252385 L65.375,0.125119452 C58.6001045,0.138068523 51.8658992,1.20368002 45.4180484,3.28335004 Z" id="Segment-5" stroke="#FFFFFF" stroke-width="0.25" fill="#EE7C8F"></path>
+                    </g>
+                </g>
+                <circle id="Oval-3" fill="#FFFFFF" cx="65.5" cy="65.5" r="47.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

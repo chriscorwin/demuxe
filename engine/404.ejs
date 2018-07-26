@@ -1,0 +1,21 @@
+<% if (page.match(/.css$/)) { %>
+body:before {
+	display: block;
+	font-size: 22px;
+	color: #fff;
+	background-color: #800;
+	padding: 10px;
+	height: 50px;
+	width: 100%;
+	content: "404. Page: <%= page %> Not Found.";
+	text-align: center;
+}
+<% } else if (page.match(/.js$/)) { %>
+	console.warn('404. Page: "<%= page %>" Not Found.');
+<% } else { %>
+	<h1>Error 404</h1>
+	<p>The URL "<code><%= page %></code>" does not exist on this server.</p>
+	<script>
+	</script>
+	<h1>404. Page: "<%= page %>" Not Found.</h1>
+<% } %>
