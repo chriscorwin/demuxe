@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="288px" height="275px" viewBox="0 0 288 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Segment Builder - 5 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="22"></rect>
+        <rect id="path-3" x="0" y="0" width="16" height="22"></rect>
+        <rect id="path-5" x="0" y="0" width="16" height="22"></rect>
+        <rect id="path-7" x="0" y="0" width="16" height="22"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Segment-Builder---5-Copy-2" transform="translate(-951.000000, -371.000000)">
+            <g id="Group-5" transform="translate(950.000000, 325.000000)">
+                <rect id="Rectangle-5" stroke="#E0E5EE" fill="#FFFFFF" x="0.5" y="0.5" width="289" height="994" rx="4"></rect>
+                <path d="M5,0.998995984 L285,0.998995984 C287.209139,0.998995984 289,2.78985698 289,4.99899598 L289,46.1735956 L1,46.1735956 L1,4.99899598 C1,2.78985698 2.790861,0.998995984 5,0.998995984 Z" id="Rectangle-6" fill="#F4F6F9"></path>
+            </g>
+            <g id="Group-18" transform="translate(982.000000, 412.000000)">
+                <g id="Group-13">
+                    <g id="Group-12">
+                        <path d="M25,47 L25,74" id="Line-2-Copy" stroke="#E0E5EE" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M25,74 L25,139.115282" id="Line-2-Copy-2" stroke="#E0E5EE" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M39,68 L39,95" id="Line-2-Copy" stroke="#E0E5EE" stroke-width="2" stroke-linecap="square" transform="translate(38.500000, 81.500000) rotate(90.000000) translate(-38.500000, -81.500000) "></path>
+                        <path d="M39,126 L39,153" id="Line-2-Copy-3" stroke="#E0E5EE" stroke-width="2" stroke-linecap="square" transform="translate(38.500000, 139.500000) rotate(90.000000) translate(-38.500000, -139.500000) "></path>
+                        <path d="M46,58 L102,58 L102,105.220001 L42,105.220001 L42,62 C42,59.790861 43.790861,58 46,58 Z" id="Rectangle-6" fill="#F4F6F9"></path>
+                        <text id="AND" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                            <tspan x="52" y="86">AND</tspan>
+                        </text>
+                        <rect id="Rectangle-27" stroke="#E0E5EE" fill="#FFFFFF" x="0.5" y="0.5" width="226" height="47" rx="4"></rect>
+                        <rect id="Rectangle-27-Copy" stroke="#E0E5EE" x="42.5" y="58.5" width="184" height="47" rx="4"></rect>
+                        <text id="Models" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                            <tspan x="128" y="86">Models</tspan>
+                        </text>
+                        <g id="Group-14" transform="translate(42.000000, 120.000000)">
+                            <path d="M4,0 L60,0 L60,47.2200012 L0,47.2200012 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="Rectangle-6-Copy-2" fill="#F4F6F9"></path>
+                            <text id="AND" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                                <tspan x="10" y="28">AND</tspan>
+                            </text>
+                            <rect id="Rectangle-27-Copy-4" stroke="#E0E5EE" x="0.5" y="0.5" width="184" height="47" rx="4"></rect>
+                            <text id="Color" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                                <tspan x="85" y="28">Color</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <text id="Campaign" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                        <tspan x="35" y="27">Campaign</tspan>
+                    </text>
+                    <g id="Screen-Shot-2017-08-03-at-4.05.21-PM" transform="translate(13.000000, 12.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <image mask="url(#mask-2)" x="-1.88235294" y="-1.91304348" width="19.7647059" height="25.826087" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA2CAYAAACx1wu7AAAABGdBTUEAALGOGCHvlwAAAtRJREFUaAXtms9PE0EUx7/b7U9aoC0mBCWKxWDCQaOpBxONF09c+h948L/y6l/gyasxejIevEgCMdFIICFahOK2rO227iud3XFnrdvhudK4L4HOzo/3Pv3O7MwuD+OwZQ0wBZaaAsYhYgLKPVPpMId9t7L9o4tOt4fBIJ4lbBgGCpk0ZrIZhE2zAkqQTasTG6AQigQR4iwUCwqsAkqdadBcIY8LczMwU2HfT7jn+3T6fXxttdHqnAyBS66ysikUNN1kcUJSPBKEYpIJhuHF6JcCKtZkXErKMCKmYJDbFFC58TyVE1Du2UgUTRTlVoDbX7JG/1tFlYeS6Ep8x/NXn/H+9NEgfFjKwCX3/K6vLGOtYob3iVh7BtAIEfoD7B5a2H23hYVqBY9uLkE3oO64XymNNO4sz6IIx6s/smxsHtiwRzXNg294upnD4/Wq12eSAg+omcXda0vIBSI/xDFevt3Bm+PThub+F2xfr2JNYxXwbE/uQ2/4Up3Fg/pF1LwoDrb32oGvE+3ScxGtu06vMm6U/TAnjt47mO9BhyHimB69iI2slDFEcaLPWEAtxyc9sv+xouFrFOjtf8KL0c0EGFis5CdSUnTmuevdFzM1vI2PH/bwbKcjYgH5Iu5pbvw8oL02nrzekjbzPqxucIrTaNy+LPXx+aOUeEDdSHbX8Tb3YOB0No9GvYZacKMNdhxzzQPq/jnmynwOpntkepYyMV/IYHWxjKuVoletW+ABNQto3FpRTiZdqLBxPNvTb0+msJB6dTygerEnGpWATiRXhM48ivJ4GYt7hru+hI3769gY656vMQYteGATUB4dfS+Jor4WPKVEUR4dfS+KopRBI6O8T9wmYgoGOb4CSmk+MkpOiYHygL9VFgkx8i8Y5FjKyUS5SEpIUQaNfuI2UpMYgqaAksSUixR5ybDkVNAJx/WfkrZG8h8QHDJLPpSbSWo7V8WpAf0J04m85GlK2tcAAAAASUVORK5CYII="></image>
+                        <rect id="Rectangle-9" fill="#FFFFFF" mask="url(#mask-2)" x="3" y="4" width="10" height="15"></rect>
+                        <text id="P" mask="url(#mask-2)" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="12" font-weight="bold" fill="#8ABED5">
+                            <tspan x="4" y="16">P</tspan>
+                        </text>
+                    </g>
+                    <g id="Screen-Shot-2017-08-03-at-4.05.21-PM-Copy" transform="translate(106.000000, 70.000000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <image id="Screen-Shot-2017-08-03-at-4.05.21-PM" mask="url(#mask-4)" x="-1.88235294" y="-1.91304348" width="19.7647059" height="25.826087" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA2CAYAAACx1wu7AAAABGdBTUEAALGOGCHvlwAAAtRJREFUaAXtms9PE0EUx7/b7U9aoC0mBCWKxWDCQaOpBxONF09c+h948L/y6l/gyasxejIevEgCMdFIICFahOK2rO227iud3XFnrdvhudK4L4HOzo/3Pv3O7MwuD+OwZQ0wBZaaAsYhYgLKPVPpMId9t7L9o4tOt4fBIJ4lbBgGCpk0ZrIZhE2zAkqQTasTG6AQigQR4iwUCwqsAkqdadBcIY8LczMwU2HfT7jn+3T6fXxttdHqnAyBS66ysikUNN1kcUJSPBKEYpIJhuHF6JcCKtZkXErKMCKmYJDbFFC58TyVE1Du2UgUTRTlVoDbX7JG/1tFlYeS6Ep8x/NXn/H+9NEgfFjKwCX3/K6vLGOtYob3iVh7BtAIEfoD7B5a2H23hYVqBY9uLkE3oO64XymNNO4sz6IIx6s/smxsHtiwRzXNg294upnD4/Wq12eSAg+omcXda0vIBSI/xDFevt3Bm+PThub+F2xfr2JNYxXwbE/uQ2/4Up3Fg/pF1LwoDrb32oGvE+3ScxGtu06vMm6U/TAnjt47mO9BhyHimB69iI2slDFEcaLPWEAtxyc9sv+xouFrFOjtf8KL0c0EGFis5CdSUnTmuevdFzM1vI2PH/bwbKcjYgH5Iu5pbvw8oL02nrzekjbzPqxucIrTaNy+LPXx+aOUeEDdSHbX8Tb3YOB0No9GvYZacKMNdhxzzQPq/jnmynwOpntkepYyMV/IYHWxjKuVoletW+ABNQto3FpRTiZdqLBxPNvTb0+msJB6dTygerEnGpWATiRXhM48ivJ4GYt7hru+hI3769gY656vMQYteGATUB4dfS+Jor4WPKVEUR4dfS+KopRBI6O8T9wmYgoGOb4CSmk+MkpOiYHygL9VFgkx8i8Y5FjKyUS5SEpIUQaNfuI2UpMYgqaAksSUixR5ybDkVNAJx/WfkrZG8h8QHDJLPpSbSWo7V8WpAf0J04m85GlK2tcAAAAASUVORK5CYII="></image>
+                        <rect id="Rectangle-9" fill="#FFFFFF" mask="url(#mask-4)" x="3" y="4" width="10" height="15"></rect>
+                        <text id="P" mask="url(#mask-4)" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="12" font-weight="bold" fill="#8ABED5">
+                            <tspan x="4" y="16">P</tspan>
+                        </text>
+                    </g>
+                    <g id="Screen-Shot-2017-08-03-at-4.05.21-PM-Copy-5" transform="translate(107.000000, 133.000000)">
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <image id="Screen-Shot-2017-08-03-at-4.05.21-PM" mask="url(#mask-6)" x="-1.88235294" y="-1.91304348" width="19.7647059" height="25.826087" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA2CAYAAACx1wu7AAAABGdBTUEAALGOGCHvlwAAAtRJREFUaAXtms9PE0EUx7/b7U9aoC0mBCWKxWDCQaOpBxONF09c+h948L/y6l/gyasxejIevEgCMdFIICFahOK2rO227iud3XFnrdvhudK4L4HOzo/3Pv3O7MwuD+OwZQ0wBZaaAsYhYgLKPVPpMId9t7L9o4tOt4fBIJ4lbBgGCpk0ZrIZhE2zAkqQTasTG6AQigQR4iwUCwqsAkqdadBcIY8LczMwU2HfT7jn+3T6fXxttdHqnAyBS66ysikUNN1kcUJSPBKEYpIJhuHF6JcCKtZkXErKMCKmYJDbFFC58TyVE1Du2UgUTRTlVoDbX7JG/1tFlYeS6Ep8x/NXn/H+9NEgfFjKwCX3/K6vLGOtYob3iVh7BtAIEfoD7B5a2H23hYVqBY9uLkE3oO64XymNNO4sz6IIx6s/smxsHtiwRzXNg294upnD4/Wq12eSAg+omcXda0vIBSI/xDFevt3Bm+PThub+F2xfr2JNYxXwbE/uQ2/4Up3Fg/pF1LwoDrb32oGvE+3ScxGtu06vMm6U/TAnjt47mO9BhyHimB69iI2slDFEcaLPWEAtxyc9sv+xouFrFOjtf8KL0c0EGFis5CdSUnTmuevdFzM1vI2PH/bwbKcjYgH5Iu5pbvw8oL02nrzekjbzPqxucIrTaNy+LPXx+aOUeEDdSHbX8Tb3YOB0No9GvYZacKMNdhxzzQPq/jnmynwOpntkepYyMV/IYHWxjKuVoletW+ABNQto3FpRTiZdqLBxPNvTb0+msJB6dTygerEnGpWATiRXhM48ivJ4GYt7hru+hI3769gY656vMQYteGATUB4dfS+Jor4WPKVEUR4dfS+KopRBI6O8T9wmYgoGOb4CSmk+MkpOiYHygL9VFgkx8i8Y5FjKyUS5SEpIUQaNfuI2UpMYgqaAksSUixR5ybDkVNAJx/WfkrZG8h8QHDJLPpSbSWo7V8WpAf0J04m85GlK2tcAAAAASUVORK5CYII="></image>
+                        <rect id="Rectangle-9" fill="#FFFFFF" mask="url(#mask-6)" x="3" y="4" width="10" height="15"></rect>
+                        <text id="P" mask="url(#mask-6)" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="12" font-weight="bold" fill="#8ABED5">
+                            <tspan x="4" y="16">P</tspan>
+                        </text>
+                    </g>
+                    <g id="Screen-Shot-2017-08-03-at-4.05.21-PM-Copy-2" transform="translate(106.000000, 133.000000)">
+                        <mask id="mask-8" fill="white">
+                            <use xlink:href="#path-7"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <image id="Screen-Shot-2017-08-03-at-4.05.21-PM" mask="url(#mask-8)" x="-1.88235294" y="-1.91304348" width="19.7647059" height="25.826087" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA2CAYAAACx1wu7AAAABGdBTUEAALGOGCHvlwAAAtRJREFUaAXtms9PE0EUx7/b7U9aoC0mBCWKxWDCQaOpBxONF09c+h948L/y6l/gyasxejIevEgCMdFIICFahOK2rO227iud3XFnrdvhudK4L4HOzo/3Pv3O7MwuD+OwZQ0wBZaaAsYhYgLKPVPpMId9t7L9o4tOt4fBIJ4lbBgGCpk0ZrIZhE2zAkqQTasTG6AQigQR4iwUCwqsAkqdadBcIY8LczMwU2HfT7jn+3T6fXxttdHqnAyBS66ysikUNN1kcUJSPBKEYpIJhuHF6JcCKtZkXErKMCKmYJDbFFC58TyVE1Du2UgUTRTlVoDbX7JG/1tFlYeS6Ep8x/NXn/H+9NEgfFjKwCX3/K6vLGOtYob3iVh7BtAIEfoD7B5a2H23hYVqBY9uLkE3oO64XymNNO4sz6IIx6s/smxsHtiwRzXNg294upnD4/Wq12eSAg+omcXda0vIBSI/xDFevt3Bm+PThub+F2xfr2JNYxXwbE/uQ2/4Up3Fg/pF1LwoDrb32oGvE+3ScxGtu06vMm6U/TAnjt47mO9BhyHimB69iI2slDFEcaLPWEAtxyc9sv+xouFrFOjtf8KL0c0EGFis5CdSUnTmuevdFzM1vI2PH/bwbKcjYgH5Iu5pbvw8oL02nrzekjbzPqxucIrTaNy+LPXx+aOUeEDdSHbX8Tb3YOB0No9GvYZacKMNdhxzzQPq/jnmynwOpntkepYyMV/IYHWxjKuVoletW+ABNQto3FpRTiZdqLBxPNvTb0+msJB6dTygerEnGpWATiRXhM48ivJ4GYt7hru+hI3769gY656vMQYteGATUB4dfS+Jor4WPKVEUR4dfS+KopRBI6O8T9wmYgoGOb4CSmk+MkpOiYHygL9VFgkx8i8Y5FjKyUS5SEpIUQaNfuI2UpMYgqaAksSUixR5ybDkVNAJx/WfkrZG8h8QHDJLPpSbSWo7V8WpAf0J04m85GlK2tcAAAAASUVORK5CYII="></image>
+                        <rect id="Rectangle-9" fill="#FFFFFF" mask="url(#mask-8)" x="3" y="4" width="10" height="15"></rect>
+                        <text id="P" mask="url(#mask-8)" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="12" font-weight="bold" fill="#8ABED5">
+                            <tspan x="4" y="16">P</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

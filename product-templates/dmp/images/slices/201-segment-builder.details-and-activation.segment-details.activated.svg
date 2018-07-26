@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="888px" height="949px" viewBox="0 0 888 949" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>201-segment-builder.details-and-activation.segment-details.activated</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BU1---Activation" transform="translate(-41.000000, -371.000000)">
+            <g id="Rules" transform="translate(40.000000, 325.000000)">
+                <rect id="Rectangle-5" stroke="#E0E5EE" fill="#FFFFFF" x="0.5" y="0.5" width="889" height="995" rx="4"></rect>
+                <g id="Picklist" transform="translate(20.000000, 295.000000)">
+                    <g id="picklist">
+                        <rect id="bkgd" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="239" height="31" rx="4"></rect>
+                        <path d="M212.329034,13 L221.284426,13 C221.537403,13 221.714487,13.325 221.512105,13.55 L217.1356,18.85 C216.983814,19.05 216.654943,19.05 216.503157,18.85 L212.076056,13.55 C211.898972,13.325 212.050759,13 212.329034,13" id="down" fill="#061C3F"></path>
+                        <text id="Select-an-Option" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                            <tspan x="17" y="20">Update Daily</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Button-New-Copy-2" transform="translate(20.000000, 62.000000)">
+                    <rect id="Rectangle-827" stroke="#0070D2" fill="#FFFFFF" x="0.5" y="0.5" width="260" height="54" rx="4"></rect>
+                    <text id="Segment-Name" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="20" fill="#54698D">
+                        <tspan x="10" y="12">Segment Name</tspan>
+                    </text>
+                    <text id="Winter-Jackets-Prope" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" line-spacing="20" fill="#16325C">
+                        <tspan x="10" y="39">Winter Jackets Propensity Customers</tspan>
+                    </text>
+                </g>
+                <g id="Button-New-Copy-5" transform="translate(20.000000, 127.000000)" fill="#FFFFFF" stroke="#D8DDE6">
+                    <rect id="Rectangle-827" x="0.5" y="0.5" width="260" height="54" rx="4"></rect>
+                </g>
+                <g id="Button-New-Copy-8" transform="translate(20.000000, 192.000000)">
+                    <rect id="Rectangle-827" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="551" height="92" rx="4"></rect>
+                    <text id="Description" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="20" fill="#54698D">
+                        <tspan x="10" y="12">Description</tspan>
+                    </text>
+                    <text id="Interested-in-snow-&amp;" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" line-spacing="20" fill="#16325C">
+                        <tspan x="10" y="39">Interested in snow &amp; winter activities</tspan>
+                    </text>
+                </g>
+                <g id="Button-New-Copy-4" transform="translate(311.000000, 62.000000)" fill="#FFFFFF" stroke="#D8DDE6">
+                    <rect id="Rectangle-827" x="0.5" y="0.5" width="260" height="54" rx="4"></rect>
+                </g>
+                <g id="Button-New-Copy-6" transform="translate(311.000000, 127.000000)" fill="#FFFFFF" stroke="#D8DDE6">
+                    <rect id="Rectangle-827" x="0.5" y="0.5" width="260" height="54" rx="4"></rect>
+                </g>
+                <g id="Button-New-Copy" transform="translate(89.000000, 432.000000)">
+                    <rect id="Rectangle-827" fill="#0070D2" x="0" y="0" width="177" height="32" rx="4"></rect>
+                    <text id="Save-&amp;-View-Confirma" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="20" fill="#FFFFFF">
+                        <tspan x="16" y="15">Save &amp; View Confirmation</tspan>
+                    </text>
+                </g>
+                <g id="Button-New-Copy-7" transform="translate(275.000000, 432.000000)">
+                    <rect id="Rectangle-827" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="69" height="31" rx="4"></rect>
+                    <text id="Cancel" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="20" fill="#0070D2">
+                        <tspan x="16" y="14.9427313">Cancel</tspan>
+                    </text>
+                </g>
+                <g id="Button-New-Copy-9" transform="translate(20.000000, 432.000000)">
+                    <rect id="Rectangle-827" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="58" height="31" rx="4"></rect>
+                    <text id="Back" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="20" fill="#0070D2">
+                        <tspan x="16" y="14.9427313">Back</tspan>
+                    </text>
+                </g>
+                <path d="M5,1.00498753 L885,1.00498753 C887.209139,1.00498753 889,2.79584853 889,5.00498753 L889,46.2249888 L1,46.2249888 L1,5.00498753 C1,2.79584853 2.790861,1.00498753 5,1.00498753 Z" id="Rectangle-6" fill="#F4F6F9"></path>
+            </g>
+            <g id="Group" transform="translate(60.000000, 663.000000)">
+                <rect id="Rectangle-1" fill="#A8B7C7" x="0" y="0" width="48" height="24" rx="12"></rect>
+                <circle id="Oval-1" fill="#FFFFFF" cx="12" cy="12" r="10"></circle>
+                <text id="Persistent" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#54698D">
+                    <tspan x="56.95" y="16">Persistent</tspan>
+                </text>
+                <text id="Activate" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#54698D">
+                    <tspan x="56.724" y="63">Activate</tspan>
+                </text>
+            </g>
+            <text id="Category-Name" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="20" fill="#54698D">
+                <tspan x="147" y="479">Category Name</tspan>
+            </text>
+            <text id="Segment-Type" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="20" fill="#54698D">
+                <tspan x="442" y="414">Segment Type</tspan>
+            </text>
+            <text id="Sub--Category-Name" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="20" fill="#54698D">
+                <tspan x="424" y="479">Sub- Category Name</tspan>
+            </text>
+            <rect id="Rectangle-1-Copy" fill="#A8B7C7" x="62" y="710" width="48" height="24" rx="12"></rect>
+            <circle id="Oval-1-Copy" fill="#FFFFFF" cx="74" cy="722" r="10"></circle>
+        </g>
+    </g>
+</svg>

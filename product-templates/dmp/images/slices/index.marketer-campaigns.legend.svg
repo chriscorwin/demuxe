@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="409px" height="34px" viewBox="0 0 409 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Legend</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-150.000000, -1318.000000)">
+            <g id="Legend" transform="translate(150.000000, 1318.000000)">
+                <circle id="legendcircle7" stroke="#B0C3D4" fill="#E6ECF2" cx="13.5" cy="13.5" r="13"></circle>
+                <circle id="legendcircle6" stroke="#B0C3D4" fill="#E6ECF2" cx="14" cy="19" r="7.5"></circle>
+                <circle id="legendcircle5" stroke="#B0C3D4" fill="#E6ECF2" cx="13.5" cy="21.5" r="5"></circle>
+                <text id="Devices" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="35" y="26">Devices</tspan>
+                </text>
+                <path d="M96.5,11.5 L96.5,32.8775578" id="Line" stroke="#B0C3D4" stroke-linecap="square"></path>
+                <circle id="legendcircle4" fill="#0857A6" cx="118" cy="22" r="5"></circle>
+                <text id="Display" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="131" y="26">Display</tspan>
+                </text>
+                <circle id="legendcircle3" fill="#7719E3" cx="198" cy="22" r="5"></circle>
+                <text id="Email" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="211" y="26">Email</tspan>
+                </text>
+                <circle id="legendcircle2" fill="#197EE3" cx="281" cy="22" r="5"></circle>
+                <text id="Mobile" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="294" y="26">Mobile</tspan>
+                </text>
+                <circle id="legendcircle1" fill="#C398F5" cx="364" cy="22" r="5"></circle>
+                <text id="Video" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#536FA6">
+                    <tspan x="377" y="26">Video</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
