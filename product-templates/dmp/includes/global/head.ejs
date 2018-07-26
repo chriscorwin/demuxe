@@ -15,9 +15,12 @@
 <script type="text/javascript">
 	const locals =<%- JSON.stringify(locals)%>;
 	console.dir(locals);
+
+	const url = new URL( window.location.href );
 	const activePage = '<%=locals.page%>';
 	const accountParam = '<%=accountParam%>';
 	const versionParam = '<%=version%>';
+	const demoMagickFlowDirectoryName = '<%=demoMagickFlowDirectoryName%>';
 	let pageVersion = '<%=version%>';
 	const userParam = '<%=user%>' || 'Dan';
 	const triggerParam = '<%=trigger%>';

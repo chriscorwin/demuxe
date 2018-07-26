@@ -2,6 +2,7 @@
 	"brandTheme": "ducati",
 	"demoName": "Demuxe Demo (production)",
 	"demoVersion": "0.0",
+	"demoMagickFlowDirectoryName": "laulima-2018-flow-dmp",
 	"env": "production",
 	"productTemplate": "dmp"
 }
