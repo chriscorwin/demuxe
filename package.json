@@ -29,7 +29,6 @@
     "minimist": "^1.2.0",
     "mocha": "^5.2.0",
     "path": "^0.12.7",
-    "sf-differencify": "https://github.com/cormacmccarthy/sf-differencify.git",
-    "svg-font-embedder": "git+ssh://git@github.exacttarget.com:uxarchitecture/svg-font-embedder.git"
+    "sf-differencify": "https://github.com/cormacmccarthy/sf-differencify.git"
   }
 }
