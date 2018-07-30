@@ -266,14 +266,6 @@ HEADER AREA
 	margin: 0 auto;
 }
 
-
-.dashboard #content-wrapper {
-	margin-top: 0;
-}
-
-#grid {
-}
-
 .slds-panel-box {
 	border: 1px solid #E0E5EE;
 	border-radius: 4px;

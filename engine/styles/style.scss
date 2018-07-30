@@ -38,6 +38,9 @@
 	font-weight: 700;
 }
 
+// Currenct versions of SLDS have the background color #fafaf9 by default. Override that.
+@import 'slds-background-override';
+
 body {
 	&.has-debug {
 	  .is-ssi-block { display: inline-block; outline: 1px solid red;}
