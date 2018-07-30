@@ -116,11 +116,21 @@ After starting the server (see Starting the Server), open a new Terminal tab and
 
 It is assumed here, that is, taken as a _given_ that demos _will_ be served on Heroku, utilizing a pipeline.
 
-Getting started with Heroku, setting up a pipeline, etc., is currently _far_ beyond the scope of this document.
+## Setting up your pipeline
+1. Create a new pipeline (you can connect to Github if you are using a fork of Demuxe, otherwise do not).
+2. Create a `{app-name}-dev`, `{app-name}-qa`, and `{app-name}` environment in the pipeline for the app.
+	- You may have to create the `-dev` version in the "staging" area of the pipeline and then click on the disclosure menu at the top right of the app tile and select "Move app to `development`". Heroku pipelines do not seem to have `development` channels by default that you can easily add apps to.
+3. Click into the dev instance of your app.
+4. Click on the deploy tab.
+5. Copy the command from the very bottom for "Existing Git repository".
+	It will look something like this: `heroku git:remote -a laulima-2018-dmp-dev`.
+6. Run the command in your terminal.
 
-1. Push your changes to the dev area of the pipeline.
-2. Promote changes to QA for wider testing.
-3. Promote changes to Prod for end-use (this is where they will be demo'd from).
+## Deploying
+1. `git push heroku {branch}:master` your changes to the dev area of the pipeline to test a branch in dev on Heroku.
+2. `git push heroku master` to push master to dev.
+3. Use the Heroku interface to promote dev to QA for wider testing.
+3. Use the Heroku interface to promote QA to Prod for end-use (this is where they will be demo'd from).
 
 
 

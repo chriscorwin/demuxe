@@ -14,7 +14,7 @@ module.exports = function() {
 
 	let envConfigData = {};
 	// obtain env specific config
-	if(process.env.NODE_ENV) {
+	if(process.env.NODE_ENV && process.env.NODE_ENV !== 'production') {
 		envConfigData = require(`./config.overrides.${process.env.NODE_ENV}.json`) || {};
 	}
 
