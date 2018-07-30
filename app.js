@@ -28,11 +28,11 @@ if (process.env.DEBUG === "true") {
 // view engine setup
 // https://expressjs.com/en/4x/api.html#app.set
 // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
-const appViews = [ path.join(__dirname, 'your-code-here') ];
-if (config.productTemplate) {
-	appViews.push(path.join(__dirname, 'product-templates', config.productTemplate));
-} 
-appViews.push(path.join(__dirname, 'engine'));
+const appViews = config.appViews;
+// if (config.productTemplate) {
+// 	appViews.push(path.join(__dirname, 'product-templates', config.productTemplate));
+// } 
+// appViews.push(path.join(__dirname, 'engine'));
 app.set('views', appViews);
 
 app.set('view engine', 'ejs');
@@ -47,7 +47,7 @@ const appUse = [
 	cookieParser(),
 	// files are looked up in reverse order they occur in the array (later takes precedence over earlier here --cascade flows like CSS)
 	sassMiddleware({
-		debug: true,
+		debug: false,
 		outputStyle: 'expanded',
 		src: path.join(__dirname, 'engine')
 	}),
@@ -57,7 +57,7 @@ const appUse = [
 if (config.brandTheme) {
 	appUse.push(  
 		sassMiddleware({
-			debug: true,
+			debug: false,
 			outputStyle: 'expanded',
 			src: path.join(__dirname, 'brand-themes', config.brandTheme)
 		}),
@@ -69,7 +69,7 @@ if (config.brandTheme) {
 if (config.productTemplate) {
 	appUse.push(
 		sassMiddleware({
-			debug: true,
+			debug: false,
 			outputStyle: 'expanded',
 			src: path.join(__dirname, 'product-templates', config.productTemplate)
 		}),
@@ -79,7 +79,7 @@ if (config.productTemplate) {
 
 appUse.push(
 	sassMiddleware({
-		debug: true,
+		debug: false,
 		outputStyle: 'expanded',
 		src: path.join(__dirname, 'your-code-here')
 	}),

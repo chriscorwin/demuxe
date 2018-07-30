@@ -25,37 +25,41 @@ $ss.onclick = ( ) => {
 	// nextPage();
 	clicks++;
 
+	if ( clicks >= 13 ) {
+		clicks = 0;
+	}
+
 	window.location.hash = `#${clicks}`;
 
-	$ss.src = `/images/${demoMagickFlowDirectoryName}/${clicks}.svg`;
+	$ss.src = `/images/magick-flows/${demoMagickFlowDirectoryName}/${clicks}.svg`;
 
 	console.log( `url.searchParams.get('account')`, url.searchParams.get( 'account' ) );
 
-	if ( clicks <= 12 ) {
-		accountName = `Northern Trail Outfitters - Elecronics`;
-	}
+	// if ( clicks <= 12 ) {
+	// 	accountName = `Northern Trail Outfitters - Elecronics`;
+	// }
 
-	if ( clicks == 12 ) {
-		console.log( 'hi, we are at 12, trying to auto-click' );
-		var twelveTimer = window.setTimeout( ( ) => {
-			// window.location = '/201.html?version=201&account=nto-apparel#13';
-			document.querySelector( '#screenshot' )
-				.src = `/images/${demoMagickFlowDirectoryName}/13.svg`;
-		}, 4000 );
-	}
-	if ( clicks >= 13 ) {
+	// if ( clicks == 12 ) {
+	// 	console.log( 'hi, we are at 12, trying to auto-click' );
+	// 	var twelveTimer = window.setTimeout( ( ) => {
+	// 		// window.location = '/201.html?version=201&account=nto-apparel#13';
+	// 		document.querySelector( '#screenshot' )
+	// 			.src = `/images/magick-flows/${demoMagickFlowDirectoryName}/13.svg`;
+	// 	}, 4000 );
+	// }
+	// if ( clicks >= 13 ) {
 
-		clearTimeout( twelveTimer );
-		accountName = `Northern Trail Outfitters - Apparel`;
-	}
-	navData.accountName = accountName
+	// 	clearTimeout( twelveTimer );
+	// 	accountName = `Northern Trail Outfitters - Apparel`;
+	// }
+	// navData.accountName = accountName
 
-	document.querySelector( '#primaryNav' )
-		.innerHTML = makePrimaryNav( navData );
+	// document.querySelector( '#primaryNav' )
+	// 	.innerHTML = makePrimaryNav( navData );
 
 };
 
-$ss.src = `/images/${demoMagickFlowDirectoryName}/${clicks}.svg`;
+// $ss.src = `/images/magick-flows/${demoMagickFlowDirectoryName}/${clicks}.svg`;
 
 function locationHashChanged( ) {
 	// console.group(`[locationHashChanged]: ${window.location.hash}`);
@@ -65,7 +69,7 @@ function locationHashChanged( ) {
 		window.location.hash = `#${clicks}`;
 	}
 	// console.log( 'clicks', clicks );
-	$ss.src = `/images/${demoMagickFlowDirectoryName}/${clicks}.svg`;
+	$ss.src = `/images/magick-flows/${demoMagickFlowDirectoryName}/${clicks}.svg`;
 	// console.groupEnd();
 
 	console.log('clicks >= 4', clicks >= 4);
