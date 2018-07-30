@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1280px" height="1186px" viewBox="0 0 1280 1186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1280px" height="1184px" viewBox="0 0 1280 1184" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
-    <title>5</title>
+    <title>4</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="95" width="1280" height="50"></rect>
@@ -36,16 +36,9 @@
             <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
-        <path d="M69.019288,48.9599991 L62.7082958,55.2709913 C62.3149573,55.6643298 61.6795385,55.6666387 61.2835228,55.2706231 L54.9728988,48.9599991 L2.1969294,48.9599991 C1.09362427,48.9599991 0.19921875,48.0705819 0.19921875,46.9543246 L0.19921875,2.12481513 C0.19921875,1.01711169 1.08494377,0.119140625 2.1969294,0.119140625 L126.201508,0.119140625 C127.304813,0.119140625 128.199219,1.00855783 128.199219,2.12481513 L128.199219,46.9543246 C128.199219,48.062028 127.313494,48.9599991 126.201508,48.9599991 L69.019288,48.9599991 Z" id="path-39"></path>
-        <filter x="-2.7%" y="-4.5%" width="105.5%" height="112.6%" filterUnits="objectBoundingBox" id="filter-40">
-            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
-        </filter>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Lookalike-2" transform="translate(0.000000, 1.000000)">
+        <g id="Lookalike-1" transform="translate(0.000000, -1.000000)">
             <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1185"></rect>
             <text id="SEGMENTS" font-family="SalesforceSans-Light, Salesforce Sans" font-size="12" font-weight="300" fill="#005FB2">
                 <tspan x="24" y="112">SEGMENTS </tspan>
@@ -1112,6 +1105,57 @@
                         </g>
                     </g>
                 </g>
+                <g id="Group-23" transform="translate(802.000000, 229.000000)">
+                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="33.5" width="257" height="36"></rect>
+                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#F4F6F9" x="0.5" y="0.5" width="257" height="33"></rect>
+                    <text id="600,789" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
+                        <tspan x="34" y="55">600,789</tspan>
+                    </text>
+                    <text id="REACH" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                        <tspan x="58" y="22">REACH</tspan>
+                    </text>
+                    <text id="100%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                        <tspan x="175.35" y="59">100%</tspan>
+                    </text>
+                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="69.5" width="257" height="36"></rect>
+                    <text id="780,897" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
+                        <tspan x="34" y="91">780,897</tspan>
+                    </text>
+                    <text id="98%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                        <tspan x="183.28" y="96">98%</tspan>
+                    </text>
+                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="105.5" width="257" height="36"></rect>
+                    <text id="810,008" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
+                        <tspan x="34" y="126">810,008</tspan>
+                    </text>
+                    <text id="96%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                        <tspan x="183.28" y="130">96%</tspan>
+                    </text>
+                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="141.5" width="257" height="36"></rect>
+                    <text id="905,178" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
+                        <tspan x="34" y="162">905,178</tspan>
+                    </text>
+                    <text id="94%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                        <tspan x="183.28" y="167">94%</tspan>
+                    </text>
+                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="177.5" width="257" height="36"></rect>
+                    <text id="906,110" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
+                        <tspan x="34" y="198">906,110</tspan>
+                    </text>
+                    <text id="92%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                        <tspan x="183.28" y="203">92%</tspan>
+                    </text>
+                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="213.5" width="257" height="36"></rect>
+                    <text id="910,087" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
+                        <tspan x="34" y="234">910,087</tspan>
+                    </text>
+                    <text id="90%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                        <tspan x="183.28" y="239">90%</tspan>
+                    </text>
+                    <text id="SIMILARITY" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                        <tspan x="156" y="22">SIMILARITY</tspan>
+                    </text>
+                </g>
                 <rect id="Rectangle-11" stroke="#D8DDE6" fill="#FFFFFF" x="1050.5" y="262.5" width="9" height="216"></rect>
                 <rect id="Rectangle-5" fill="#E0E5EE" x="1054" y="266" width="3" height="64" rx="1.5"></rect>
                 <text id="Potential-Lookalikes" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#16325C">
@@ -1317,81 +1361,7 @@
                     </text>
                 </g>
             </g>
-            <g id="Tooltip" transform="translate(318.000000, 249.000000)">
-                <g>
-                    <use fill="black" fill-opacity="1" filter="url(#filter-40)" xlink:href="#path-39"></use>
-                    <use fill-opacity="0.900000036" fill="#000000" fill-rule="evenodd" xlink:href="#path-39"></use>
-                </g>
-                <text id="Reach:" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#C0C0C0">
-                    <tspan x="10" y="21">Reach:</tspan>
-                </text>
-                <text id="Similarity:" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#C0C0C0">
-                    <tspan x="10" y="38">Similarity:</tspan>
-                </text>
-                <text id="2,125,900" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="54" y="21">2,125,900</tspan>
-                </text>
-                <text id="68%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="70" y="38">68%</tspan>
-                </text>
-            </g>
-            <rect id="Rectangle-5" fill="#E0E5EE" x="1054" y="267" width="3" height="64" rx="1.5"></rect>
-            <g id="Group-29" transform="translate(802.000000, 230.000000)">
-                <g id="Group-23">
-                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="33.5" width="257" height="36"></rect>
-                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#F4F6F9" x="0.5" y="0.5" width="257" height="33"></rect>
-                    <text id="600,789" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
-                        <tspan x="34" y="55">600,789</tspan>
-                    </text>
-                    <text id="REACH" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
-                        <tspan x="58" y="22">REACH</tspan>
-                    </text>
-                    <text id="100%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
-                        <tspan x="175.35" y="59">100%</tspan>
-                    </text>
-                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="69.5" width="257" height="36"></rect>
-                    <text id="780,897" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
-                        <tspan x="34" y="91">780,897</tspan>
-                    </text>
-                    <text id="98%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
-                        <tspan x="183.28" y="96">98%</tspan>
-                    </text>
-                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="105.5" width="257" height="36"></rect>
-                    <text id="810,008" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
-                        <tspan x="34" y="126">810,008</tspan>
-                    </text>
-                    <text id="96%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
-                        <tspan x="183.28" y="130">96%</tspan>
-                    </text>
-                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="141.5" width="257" height="36"></rect>
-                    <text id="905,178" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
-                        <tspan x="34" y="162">905,178</tspan>
-                    </text>
-                    <text id="94%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
-                        <tspan x="183.28" y="167">94%</tspan>
-                    </text>
-                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="177.5" width="257" height="36"></rect>
-                    <text id="906,110" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
-                        <tspan x="34" y="198">906,110</tspan>
-                    </text>
-                    <text id="92%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
-                        <tspan x="183.28" y="203">92%</tspan>
-                    </text>
-                    <rect id="Rectangle-16" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="213.5" width="257" height="36"></rect>
-                    <text id="910,087" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="21" fill="#16325C">
-                        <tspan x="34" y="234">910,087</tspan>
-                    </text>
-                    <text id="90%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
-                        <tspan x="183.28" y="239">90%</tspan>
-                    </text>
-                    <text id="SIMILARITY" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
-                        <tspan x="156" y="22">SIMILARITY</tspan>
-                    </text>
-                </g>
-                <rect id="Rectangle-11" stroke="#D8DDE6" fill="#FFFFFF" x="248.5" y="33.5" width="9" height="216"></rect>
-                <rect id="Rectangle-5" fill="#E0E5EE" x="252" y="37" width="3" height="64" rx="1.5"></rect>
-            </g>
         </g>
-        <g id="slices" transform="translate(-6621.000000, 0.000000)"></g>
+        <g id="slices" transform="translate(-5302.000000, 0.000000)"></g>
     </g>
 </svg>

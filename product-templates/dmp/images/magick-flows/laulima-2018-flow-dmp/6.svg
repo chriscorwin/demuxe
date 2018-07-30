@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1280px" height="1186px" viewBox="0 0 1280 1186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1280px" height="1184px" viewBox="0 0 1280 1184" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
     <title>6</title>
     <desc>Created with Sketch.</desc>
@@ -38,7 +38,7 @@
         </filter>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Lookalike-3" transform="translate(0.000000, 1.000000)">
+        <g id="Lookalike-3" transform="translate(0.000000, -1.000000)">
             <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1185"></rect>
             <text id="SEGMENTS" font-family="SalesforceSans-Light, Salesforce Sans" font-size="12" font-weight="300" fill="#005FB2">
                 <tspan x="24" y="112">SEGMENTS </tspan>
