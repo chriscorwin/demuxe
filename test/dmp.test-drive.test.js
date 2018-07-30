@@ -10,7 +10,7 @@ const differencify = new Differencify({
 });
 
 describe('DMP Demo Flow', function () {
-	this.timeout(3000);
+	this.timeout(settings.timeout);
 	const testhost = settings[env].host;
 
 	it('should be entirely navicable', async function () {
