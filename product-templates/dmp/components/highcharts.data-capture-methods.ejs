@@ -143,4 +143,6 @@ const animateDataCaptureMethods = () => {
 		dataCaptureMethodsSourcesChart = Highcharts.chart('data-capture-methods-chart', getDataCaptureMethodsOptions());
 	}
 };
+
+document.addEventListener("scroll", animateDataCaptureMethods);
 </script>

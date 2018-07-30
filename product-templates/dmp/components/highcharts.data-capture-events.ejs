@@ -166,4 +166,6 @@ const animateDataCaptureEvents = () => {
 		dataCaptureEventsSourcesChart = Highcharts.chart('chart', getCumulativeOptions());
 	}
 };
+
+document.addEventListener("scroll", animateDataCaptureEvents);
 </script>
