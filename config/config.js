@@ -1,7 +1,79 @@
 const path = require('path');
 const fs = require('fs');
+const util = require('util');
+
+
+
+
+// Satic data here, so that we do not have to generate the config data all for every environment unless we wanna
+let configData = null;
+
 
 const sortAlphaNum = (a, b) => a.localeCompare(b, 'en', { numeric: true });
+
+function readFirstLine(pathToFile) {
+    let toReturn = '';
+    fs.readFileSync(pathToFile).toString().split("\n").forEach(function(line, index, arr) {
+      if (index === arr.length - 1 && line === "") { return; }
+      if (index === 0) {
+        toReturn = line;
+      }
+    });
+    return toReturn;
+}
+
+
+function getMagickFlowDirectories(dir, directories_) {
+    directories_ = directories_ || [];
+    let toReturn = {}
+    const filesAndDirectories = fs.readdirSync(dir);
+    for (const i in filesAndDirectories) {
+
+        const aFileOrDirectoryFullPath = path.join(dir, filesAndDirectories[i]);
+        const aFileOrDirectoryName = filesAndDirectories[i];
+
+        if (fs.statSync(aFileOrDirectoryFullPath).isDirectory()) {
+
+            if (aFileOrDirectoryName === 'magick-flows') {
+
+                const subFilesAndDirectories = fs.readdirSync(aFileOrDirectoryFullPath);
+                for (const j in subFilesAndDirectories) {
+                    const thisMagickFlowFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]);
+                    const thisMagickFlowName = subFilesAndDirectories[j];
+
+                    let thisMagickFlowScreens = getFiles(thisMagickFlowFullPath).sort(sortAlphaNum);
+                    let firstElement = thisMagickFlowScreens.shift();
+
+                    const thisMagickFlowNumberOfScreens = thisMagickFlowScreens.length;
+
+                    // get it's url slug
+                    const thisMagickFlowUrlSlugPath = path.join(thisMagickFlowFullPath, '.url-slug');
+                    const thisMagickFlowUrlSlug = readFirstLine(thisMagickFlowUrlSlugPath);
+                    configData.demoMagickFlowUrlSlugs.push(thisMagickFlowUrlSlug);
+                    configData.demoMagickFlowUrlSlugsMapToFlowDirectories[thisMagickFlowUrlSlug] = thisMagickFlowName;
+
+
+                    configData.demoMagickFlows[subFilesAndDirectories[j]] = {
+                        "name": thisMagickFlowName,
+                        "path": thisMagickFlowFullPath,
+                        "screens": thisMagickFlowScreens,
+                        "numberOfScreens": thisMagickFlowNumberOfScreens,
+                        "urlSlug": thisMagickFlowUrlSlug,
+                    };
+
+                    directories_.push(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]));
+                }
+
+            } else {
+                getMagickFlowDirectories(aFileOrDirectoryFullPath, directories_);
+            }
+        } else {
+        }
+    }
+    return directories_;
+}
+
+
 
 function getFiles(dir, files_) {
     files_ = files_ || [];
@@ -20,8 +92,7 @@ function getFiles(dir, files_) {
 
 
 
-// Satic data here, so that we do not have to generate the config data all for every environment unless we wanna
-let configData = null;
+
 module.exports = function() {
     // if the static data was already set. return it
     if (configData != null && configData != undefined) {
@@ -56,22 +127,22 @@ module.exports = function() {
     configData.appViews = appViews;
 
 
-    // configData.demoMagickFlows
+    const startingPath = path.join(__dirname, '..');
 
-    for (var key in configData.demoMagickFlows) {
-        if (!configData.demoMagickFlows.hasOwnProperty(key)) continue;
+    const magickFlowDirectories = getMagickFlowDirectories(startingPath).sort(sortAlphaNum);
 
-        const demoMagickFlowObject = configData.demoMagickFlows[key];
-        demoMagickFlowObject.path = path.join(__dirname, '../', 'product-templates', configData.productTemplate, 'images', 'magick-flows', key);
-        demoMagickFlowObject.screens = [];
-	    demoMagickFlowObject.screens =  getFiles(demoMagickFlowObject.path).sort(sortAlphaNum);
-    }
+    configData.magickFlowDirectories = magickFlowDirectories;
+    console.log(`configData.magickFlowDirectories: `, configData.magickFlowDirectories);
+    console.log(`configData.demoMagickFlows: `, configData.demoMagickFlows);
+    console.log(`configData.demoMagickFlowUrlSlugs: `, configData.demoMagickFlowUrlSlugs);
+
 
 
     // LOAD FROM ENV VARIABLES -- you can set an env variable and this will just catch it. NICE.
     configData.SOME_STATIC_VAR = process.env.SOME_STATIC_VAR;
     configData.port = process.env.port || configData.port;
 
+    console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe/config/config.js:177 ] configData: `, util.inspect(configData, { showHidden: true, depth: null, colors: true }));
 
     return configData;
 }

@@ -4,6 +4,7 @@ const ejs = require('ejs');
 const express = require('express');
 const expressSanitizer = require('express-sanitizer');
 const fs = require('fs');
+const util = require('util');
 const logger = require('morgan');
 const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
@@ -121,16 +122,23 @@ router.get('/*', (req, res) => {
 			fs.access(path.join(__dirname, 'engine', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 				if (!err) error = false;
 				if (error) {
-					res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
-						if (req.url.match(/\.css$/)) {
-							res.set('Content-Type', 'text/css');
-						}
-						if (req.url.match(/\.js$/)) {
-							res.set('Content-Type', 'application/javascript');
-							res.set('X-Your-Mom', config);
-						}
-						res.send(html);
-					});
+					// find out if it's a slug in our magick-flows
+					let thisUrlSlug = fileName.replace('.ejs', '');
+					if (config.demoMagickFlowUrlSlugs.includes(thisUrlSlug) ) {
+						config.urlSlug = thisUrlSlug;
+						res.render('flow', { ...config, sanitizedQueryParams: sanitizedQueryParams });
+					} else {
+						res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+							if (req.url.match(/\.css$/)) {
+								res.set('Content-Type', 'text/css');
+							}
+							if (req.url.match(/\.js$/)) {
+								res.set('Content-Type', 'application/javascript');
+								res.set('X-Your-Mom', config);
+							}
+							res.send(html);
+						});
+					}
 				} else {
 					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams });
 				}
