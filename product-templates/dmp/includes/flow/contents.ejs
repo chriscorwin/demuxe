@@ -5,17 +5,7 @@
 
 
 <div id="preload" style="display: none;">
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/0.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/1.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/2.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/3.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/4.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/5.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/6.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/7.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/8.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/9.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/10.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/11.svg" width="1" height="1" />
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/12.svg" width="1" height="1" />
+  <% locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
+    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/<%=fileName%>" width="1" height="1" />
+  <% }); %>
 </div>
