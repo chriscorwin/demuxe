@@ -51,10 +51,10 @@ Demos _may_:
 
 
 # How to Use
-- Create a fork of this repository for each new demo.
+- Create a fork of this repository, or a new topic branch, for each new demo.
 - Create a discrete Heroku pipeline for each new demo.
-- Do **not** commit demos back to this repository. 
-- In the retrospective phase of a demo, update this repo:
+- Do **not** commit demos directly back to master in this repository. 
+- In the retrospective phase of a demo, update master in this repo:
 	- Identify and separate out components within your template.
 	- Review and update existing components in your template.
 	- Review and update your template.
