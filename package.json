@@ -2,6 +2,9 @@
   "name": "demuxe",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "8.9.4"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "DEBUG=true NODE_ENV=dev node ./bin/www",
@@ -13,7 +16,7 @@
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "ejs": "git+ssh://git@github.com/cmcculloh/ejs.git",
+    "ejs": "https://github.com/cmcculloh/ejs.git",
     "express": "~4.16.0",
     "express-sanitizer": "^1.0.4",
     "http-errors": "~1.6.2",
@@ -26,7 +29,6 @@
     "minimist": "^1.2.0",
     "mocha": "^5.2.0",
     "path": "^0.12.7",
-    "sf-differencify": "git+ssh://git@github.com/cormacmccarthy/sf-differencify.git",
-    "svg-font-embedder": "git+ssh://git@github.exacttarget.com:uxarchitecture/svg-font-embedder.git"
+    "sf-differencify": "https://github.com/cormacmccarthy/sf-differencify.git"
   }
 }
