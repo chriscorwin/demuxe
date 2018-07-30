@@ -13,6 +13,8 @@
 %>
 
 <script type="text/javascript">
+	const locals =<%- JSON.stringify(locals)%>;
+	console.dir(locals);
 	const activePage = '<%=locals.page%>';
 	const accountParam = '<%=accountParam%>';
 	const versionParam = '<%=version%>';
