@@ -1,1 +1,11 @@
-<%- include('wrapper.ejs', { title:'Manage Segments', headerVariant:'default', page:'includes/segments-contents'}) %>
+<%- 
+	include(
+		'wrapper.ejs', 
+		{ 
+			title: 'Manage Segments', 
+			headerVariant: 'default', 
+			siteSection: 'segments',
+			pageContents: 'includes/segments-contents'
+		}
+	) 
+%>
