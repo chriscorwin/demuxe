@@ -88,7 +88,7 @@ Demuxe utilizes:
 
 
 ## Starting the Server
-`npm run start`
+`npm start`
 
 
 ## Understanding the Server
