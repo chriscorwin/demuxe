@@ -2,8 +2,8 @@
 <link rel="stylesheet" href="/styles/salesforce-lightning-design-system.min.css" />
 <link rel="stylesheet" href="/styles/global.css">
 <!-- each page automatically tries to include a css file of the same name -->
-<% if (page) { %>
-<link rel="stylesheet" href="/styles/<%=page%>.css">
+<% if (locals.siteSection) { %>
+<link rel="stylesheet" href="/styles/<%=locals.siteSection%>.css">
 <% } %>
 
 <% 
@@ -15,7 +15,7 @@
 <script type="text/javascript">
 	const locals =<%- JSON.stringify(locals)%>;
 	console.dir(locals);
-	const activePage = '<%=locals.page%>';
+	const activePage = '<%=locals.siteSection%>';
 	const accountParam = '<%=accountParam%>';
 	const versionParam = '<%=version%>';
 	let pageVersion = '<%=version%>';
@@ -95,6 +95,7 @@
 			},
 			{
 				label: 'Insights',
+				ID: 'insights-global-nav-link',
 				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 				isActive: ( activePage === 'insights' ),
 				dropdownItems: [
@@ -179,6 +180,7 @@
 			},
 			{
 				label: 'Data Studio',
+				id: 'data-studio',
 				href: `/data-studio/audience-discovery?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 				lookLikeDropdown: true,
 				isActive: ( activePage === 'data-studio' )
