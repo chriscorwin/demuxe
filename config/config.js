@@ -4,13 +4,14 @@ const util = require('util');
 
 
 
-
 // Satic data here, so that we do not have to generate the config data all for every environment unless we wanna
 let configData = null;
 
 
+// Sorts an array alphanumerically, so that '10.svg' comes after '2.svg' in our lists of screens.
 const sortAlphaNum = (a, b) => a.localeCompare(b, 'en', { numeric: true });
 
+// Used in getting the url slug 
 function readFirstLine(pathToFile) {
     let toReturn = '';
     fs.readFileSync(pathToFile).toString().split("\n").forEach(function(line, index, arr) {
@@ -22,7 +23,7 @@ function readFirstLine(pathToFile) {
     return toReturn;
 }
 
-
+// Given, say, the root of our project, it creates the config data objects for the magick flows.
 function getMagickFlowDirectories(dir, directories_) {
     directories_ = directories_ || [];
     let toReturn = {}
@@ -74,7 +75,7 @@ function getMagickFlowDirectories(dir, directories_) {
 }
 
 
-
+// This gets files -- used to get the lists of screens for each magick flow.
 function getFiles(dir, files_) {
     files_ = files_ || [];
     const files = fs.readdirSync(dir);
@@ -128,21 +129,15 @@ module.exports = function() {
 
 
     const startingPath = path.join(__dirname, '..');
-
     const magickFlowDirectories = getMagickFlowDirectories(startingPath).sort(sortAlphaNum);
 
     configData.magickFlowDirectories = magickFlowDirectories;
-    console.log(`configData.magickFlowDirectories: `, configData.magickFlowDirectories);
-    console.log(`configData.demoMagickFlows: `, configData.demoMagickFlows);
-    console.log(`configData.demoMagickFlowUrlSlugs: `, configData.demoMagickFlowUrlSlugs);
 
 
 
     // LOAD FROM ENV VARIABLES -- you can set an env variable and this will just catch it. NICE.
     configData.SOME_STATIC_VAR = process.env.SOME_STATIC_VAR;
     configData.port = process.env.port || configData.port;
-
-    console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe/config/config.js:177 ] configData: `, util.inspect(configData, { showHidden: true, depth: null, colors: true }));
 
     return configData;
 }

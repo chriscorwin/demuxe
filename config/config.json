@@ -5,9 +5,6 @@
 	"demoMagickFlows": {},
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
-	"demoMagickFlowDirectoryName": "laulima-2018-flow-dmp",
-	"demoMagickFlowDirectoryPath": "images",
-	"demoMagickFlowDirectoryContentsList": [],
 	"env": "production",
 	"productTemplate": "dmp"
 }
