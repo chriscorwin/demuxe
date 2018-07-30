@@ -90,7 +90,7 @@
 			{
 				label: 'Segments',
 				id: 'segments-global-nav-link',
-				href: pageVersion === '201' ? `/segments.manage-segments.html?version=${pageVersion}&account=${accountParam}` : `/segment-builder.new-segment.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				href: '/segments',
 				isActive: ( activePage === 'segments' )
 			},
 			{
@@ -104,7 +104,7 @@
 						},
 						{
 							label: 'Einstein Segmentation',
-							href: `/insights/einstein-segmentation/?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+							href: `/insights/einstein-segmentation?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 							id: 'einstein-segmentation-link'
 						},
 						{
@@ -179,7 +179,7 @@
 			},
 			{
 				label: 'Data Studio',
-				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				href: `/data-studio/audience-discovery?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 				lookLikeDropdown: true,
 				isActive: ( activePage === 'data-studio' )
 			}
@@ -264,7 +264,7 @@
 					},
 					{
 						label: 'Einstein Segmentation',
-						href: `/insights/einstein-segmentation/?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+						href: `/insights/einstein-segmentation?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 						id: 'einstein-segmentation-link'
 					},
 					{
