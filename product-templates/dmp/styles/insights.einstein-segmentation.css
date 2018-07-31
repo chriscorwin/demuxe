@@ -1,0 +1,284 @@
+#key .green {
+  display: none;
+}
+
+.version-201 #key .green {
+  display: block;
+}
+
+.version-201 #key .blue {
+  display: none;
+}
+
+body {
+  font-family: Salesforce Sans;
+  height: 1400px;
+}
+
+#legend {
+  margin-left: 1rem;
+  margin-top: -1.7rem;
+}
+
+#legend img {
+  margin-right: 10px;
+  width: 2rem;
+}
+
+#legend span {
+  color: #54698D;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.links line {
+  stroke: #C4C9D3;
+  stroke-opacity: 1;
+}
+
+.links line:hover {
+  stroke: #556a8c;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 3px;
+}
+
+.nodes circle:hover {
+  stroke: #e9edf6;
+  stroke-width: 3px;
+}
+
+.titleBox {
+  position: absolute;
+}
+
+.titleBox > div {
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+  pointer-events: none;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 12px;
+  line-height: 17px;
+  width: 251px;
+}
+
+.titleBox .nodeLabelBackground {
+  background-color: #16325C;
+  color: #FFF;
+  opacity: 0.4;
+  border-radius: 4px;
+  position: absolute;
+  pointer-events: none;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.titleBox .nodeLabelText {
+  position: absolute;
+  opacity: 1;
+  color: #FFF;
+  background: transparent;
+  border-radius: 4px;
+  pointer-events: none;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.d3-tip {
+  font-size: 12px;
+}
+
+.d3-tip .title {
+  font-family: Salesforce Sans Bold;
+}
+
+.d3-tip .body {
+  font-family: Salesforce Sans;
+  margin-top: 4px;
+}
+
+.d3-tip .footer {
+  font-family: Salesforce Sans Italic;
+  margin-top: 8px;
+}
+
+#formLeft, #formRight {
+  border-radius: 100px;
+  border: 1px solid #E0E4ED;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#formLeft img, #formRight img {
+  position: relative;
+  top: 4px;
+  left: 9px;
+  height: 14px;
+}
+
+#formRight img {
+  left: 12px;
+}
+
+#formLeft:hover, #formRight:hover {
+  border-color: #54698D;
+}
+
+#formLeft.disable:hover, #formRight.disable:hover {
+  border-color: #E0E4ED;
+  cursor: default;
+}
+
+#form {
+  border: 2px solid #F2F2F2;
+  border-radius: 2px;
+  background-color: #F5F7F8;
+}
+
+#dots {
+  margin-left: auto;
+  margin-right: auto;
+  height: 24px;
+}
+
+#dots .dot:last-child {
+  margin-right: 0;
+}
+
+#formDots .dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #54698D;
+  border-radius: 100px;
+  margin-right: 12px;
+  float: left;
+  cursor: pointer;
+}
+
+#formDots .dot.active {
+  background-color: #54698D;
+}
+
+#topPersonas .slds-input, #topPersonas .slds-button {
+  font-size: 12px;
+  transition: all 0.1s;
+  width: 100%;
+  cursor: pointer;
+}
+
+#rank {
+  font-size: 10px;
+  color: #16325C;
+  text-transform: uppercase;
+  background-color: #E0E5EE;
+  border-radius: 100px;
+  padding: 5px 10px;
+}
+
+#personaName {
+  font-size: 20px;
+  color: #16325C;
+  background: transparent;
+  border: 0 none;
+  border-bottom: 1px solid #D8DDE6;
+}
+
+#personaName:focus, #personaName:active {
+  border: 0 none;
+  border-bottom: 1px solid #0070D2;
+  outline: none;
+}
+
+#editIcon {
+  width: 14px;
+  height: 14px;
+  fill: #54698d;
+}
+
+.contents {
+  color: #16325C;
+  font-family: Salesforce Sans Bold;
+  font-size: 20px;
+}
+
+.sub {
+  font-size: 10px;
+  color: #54698D;
+  text-transform: uppercase;
+}
+
+#formBody {
+  color: #16325C;
+  border-radius: 2px;
+  border: 0 none;
+  background-color: white;
+  margin: 0 -0.9rem;
+}
+
+#formBody > ul {
+  min-height: 110px;
+  width: 31.8rem;
+}
+
+#formBody > ul li {
+  padding-left: 24px;
+}
+
+.stats {
+  font-size: 12px;
+  color: #54698D;
+}
+
+#key {
+  color: #536FA6;
+}
+
+#key > ul li {
+  list-style: none;
+  padding-left: 18px;
+  float: left;
+  margin-right: 24px;
+}
+
+#key > ul li.purple {
+  background: url("/img/icons/purple.svg") no-repeat left center/10px;
+}
+
+#key > ul li.blue {
+  background: url("/img/icons/blue.svg") no-repeat left center/10px;
+}
+
+#key > ul li.green {
+  background: url("/img/icons/green.svg") no-repeat left center/10px;
+}
+
+#formBody > ul li.purple {
+  background: url("/img/icons/purple.svg") no-repeat left top/16px;
+  padding-right: 4px;
+}
+
+#formBody > ul li.blue {
+  background: url("/img/icons/blue.svg") no-repeat left top/16px;
+}
+
+#formBody > ul li.blue.dolla {
+  background: url("/img/icons/blue-dolla.svg") no-repeat left top/16px;
+  padding-right: 4px;
+}
+
+#formBody > ul li.green {
+  background: url("/img/icons/green.svg") no-repeat left top/16px;
+}
+
+#formBody > ul li.green.dolla {
+  background: url("/img/icons/green-dolla.svg") no-repeat left top/16px;
+}

@@ -1,1 +1,11 @@
-<%- include('wrapper.ejs', { title:'Overview', headerVariant:'default', page:'index'}) %>
+<%- 
+	include(
+		'wrapper.ejs', 
+		{ 
+			title: 'Overview', 
+			headerVariant: 'default', 
+			siteSection: 'index', 
+			pageContents: 'includes/index-contents'
+		}
+	) 
+%>

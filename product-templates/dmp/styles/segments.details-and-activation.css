@@ -1,0 +1,39 @@
+.activation-card {
+  font-weight: bold;
+}
+
+.activation-card {
+  border: 1px solid #D8DDE6;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 31%;
+}
+
+#activation-header .slds-size_2-of-3 {
+  text-align: right;
+  font-size: 12px;
+}
+
+#activation-header .slds-button {
+  color: #16325C;
+}
+
+#activation-header .slds-button.slds-button_brand {
+  color: #fff;
+}
+
+.activation-card.checked {
+  border: 1px solid #0074D3;
+  box-shadow: 0px 0px 5px #0074D3;
+}
+
+.activation-card img {
+  display: inline-block;
+  width: 160px;
+  margin: 14px 0;
+}
+
+.activation-card > span {
+  margin: 22px 0;
+  display: inline-block;
+}

@@ -1,10 +1,19 @@
 <script type="text/javascript" src="/javascripts/global-nav.js"></script>
 <!-- each page automatically tries to include a javascript file of the same name -->
-<% if (page) { %>
-<script>console.group(`Going to run: <%=page%>.js`)</script>
-<script src="/javascripts/<%=page%>.js"></script>
+<% if (locals.siteSection) { %>
+<script>console.group(`Going to run: <%=locals.siteSection%>.js`)</script>
+<script src="/javascripts/<%=locals.siteSection%>.js"></script>
 <script>console.groupEnd()</script>
 <% } %>
+<% 
+if (locals.pageScripts) { 
+	locals.pageScripts.forEach(function(script) { 
+%>
+		<script src="/javascripts/<%=script%>"></script>
+<% 
+	});
+} 
+%>
 <script type="text/javascript">
 	if ( location.host === 'localhost:3000' ) {
 		document.write( '<script src="http://' + ( location.host || 'localhost' )

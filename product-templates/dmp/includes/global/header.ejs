@@ -29,7 +29,15 @@
 	<div class="slds-context-bar slds-p-left_medium" id="primaryNav"></div>
 </header>
 <div id="subheader-wrapper" class="slds-m-bottom_small">
-	<div id="subheader">
+	<% if (locals.breadcrumbs) { console.log('bread crumb');%>
+	<nav role="navigation" aria-label="Breadcrumbs" class="slds-p-around_small">
+		<ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
+			<% locals.breadcrumbs.forEach(function(crumb) { console.log('there is a bread crumb'); %> <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);"><%=crumb%></a></li> <% }) %>
+		</ol>
+	</nav>
+	<% } else { console.log('no breadcrumb')} %>
+
+	<div id="subheader" class="slds-container_large">
 		<h1 class="slds-text-heading_medium slds-p-around_medium"><%= title %></h1>
 	</div>
 </div>
