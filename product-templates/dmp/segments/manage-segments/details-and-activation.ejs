@@ -2,10 +2,13 @@
 	include(
 		'wrapper.ejs', 
 		{ 
-			title:'Manage Segments', 
+			title:'Build Standard Segment', 
 			headerVariant:'default', 
 			siteSection: 'segments',
-			pageContents:'includes/segments/manage-segments.details-and-activation-contents.ejs'
+			breadcrumbs: ['SEGMENTS', 'MANAGE SEGMENTS', 'NEW SEGMENT'],
+			pageContents:'includes/segments/manage-segments.details-and-activation-contents.ejs',
+			pageScripts: ['segments.details-and-activation.js'],
+			pageStylesheets: ['segments.details-and-activation.css'],
 		}
 	) 
 %>
