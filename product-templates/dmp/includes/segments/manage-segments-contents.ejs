@@ -192,6 +192,34 @@ const makePanel = (data) => (`
 	</div>
 `);
 
+
+const makeModalContentsHeaderTagline = (data) => (`
+	<p>Pick a dot from the graph to create a lookalike segment.</p>
+`);
+
+const makeModalContentsMain = (data) => (`
+	<div class="slds-text-heading_medium">
+		Potential Lookalikes
+		<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+		  <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+		    <use xlink:href="/icons/utility-sprite/svg/symbols.svg#announcement"></use>
+		  </svg>
+		  <span class="slds-assistive-text">Description of icon when needed</span>
+		</span>
+	</div>
+	<p>Select the desired combination of reach and similarity for your objective.</p>
+
+	<div class="slds-grid">
+		<div class="slds-col slds-size_3-of-5">CHART HERE</div>
+		<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left">TABLE HERE</div>
+	</div>
+`);
+const makeModalContentsFooter = (data) => (`
+	<button class="slds-button slds-button_neutral">Cancel</button>
+	 
+	<button class="slds-button slds-button_brand">Save</button> 
+`);
+
 const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(panel), '');
 
 %>
@@ -202,8 +230,28 @@ const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(pan
 <img id="lookalike2" src="/images/lookalike2.png" class="slds-hide lookalike" onclick="showLookalike(3);" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
 <img id="lookalike3" src="/images/lookalike3.png" class="slds-hide lookalike" onclick="hideLookalikes();" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
 
+<% 
+	const modalId = `dmp-manage-segments-modal`;
+	const modalBackdropId = `${modalId}-backdrop`;
+%>
+
+
+
+<%- include('components/modal_large', {
+	modalId: modalId,
+	modalBackdropId: modalBackdropId,
+	contentsHeaderTagline: makeModalContentsHeaderTagline(),
+	contentsMain: makeModalContentsMain(),
+	contentsFooter: makeModalContentsFooter(),
+	title: '&lsquo;Winter Jackets Propensity Customers&rsquo; segment provisioned successfully.',
+	theme: 'success'			
+}) %>
 
 <script>
+const showLookalikeModal = (n) => {
+	document.querySelector(`#${locals.modalId}`).classList.add('slds-hide');
+	document.querySelector(`#lookalike${n}`).classList.remove('slds-hide');
+}
 const showLookalike = (n) => {
 	document.querySelector('.lookalike').classList.add('slds-hide');
 	document.querySelector(`#lookalike${n}`).classList.remove('slds-hide');
