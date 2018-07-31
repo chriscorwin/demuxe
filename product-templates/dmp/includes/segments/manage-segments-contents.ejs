@@ -269,9 +269,7 @@ const makeModalContentsHeaderTagline = (data) => (`
 `);
 
 
-const makeModalContentsChart = (data) => (`
-	<p>CHART GOES HERE.</p>
-`);
+const makeModalContentsChart = (data) => include('components/highcharts.lookalikes.ejs', { data });
 
 const makeModalContentsMain = (data) => (`
 	<div class="slds-text-heading_medium">
