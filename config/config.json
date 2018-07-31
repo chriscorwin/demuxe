@@ -1,7 +1,7 @@
 {
-	"brandTheme": "ducati",
-	"demoName": "Demuxe Demo (production)",
-	"demoVersion": "0.0",
+	"brandTheme": "crocks",
+	"demoName": "Laulima Crocks Demo (production)",
+	"demoVersion": "0.1",
 	"env": "production",
 	"productTemplate": "dmp"
 }
