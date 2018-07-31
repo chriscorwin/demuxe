@@ -108,7 +108,7 @@ const makePanel = (data) => (`
 						</a>
 					</li>
 					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+						<a href="javascript:void(0);" onclick="showLookalike(1);" role="menuitem" tabindex="-1">
 							<span class="slds-truncate" title="Menu Item Two">Lookalike</span>
 						</a>
 					</li>
@@ -198,7 +198,20 @@ const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(pan
 
 <%-makePanels();%>
 
+<img id="lookalike1" src="/images/lookalike1.png" class="slds-hide lookalike" onclick="showLookalike(2);" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
+<img id="lookalike2" src="/images/lookalike2.png" class="slds-hide lookalike" onclick="showLookalike(3);" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
+<img id="lookalike3" src="/images/lookalike3.png" class="slds-hide lookalike" onclick="hideLookalikes();" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
+
+
 <script>
+const showLookalike = (n) => {
+	document.querySelector('.lookalike').classList.add('slds-hide');
+	document.querySelector(`#lookalike${n}`).classList.remove('slds-hide');
+}
+const hideLookalikes = () => {
+	document.querySelectorAll('.lookalike').forEach((elm) => elm.classList.add('slds-hide'));
+}
+
 document.querySelectorAll('.slds-panel-box__header-settings').forEach((elm) => elm.addEventListener('click', function () {
 	const img = this.querySelector('img');
 
