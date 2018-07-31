@@ -8,6 +8,16 @@
 <% } %>
 
 <% 
+if (locals.extraStylesheets) { 
+	locals.extraStylesheets.forEach(function(stylesheet) { 
+%>
+		<link rel="stylesheet" href="/styles/<%=stylesheet%>">
+<% 
+	});
+} 
+%>
+
+<% 
 	const { account, trigger, user, version } = locals.sanitizedQueryParams;
 	const is201 = version && version === '201';
 	const accountParam = account || (is201 ? 'nto-electronics' : 'Ducati');
@@ -91,7 +101,7 @@
 			{
 				label: 'Segments',
 				id: 'segments-global-nav-link',
-				href: '/segments',
+				href: '/segments/manage-segments/',
 				isActive: ( activePage === 'segments' )
 			},
 			{
