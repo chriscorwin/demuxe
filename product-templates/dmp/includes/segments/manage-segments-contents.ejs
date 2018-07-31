@@ -314,15 +314,16 @@ const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(pan
 
 
 
-<%- include('components/modal_large', {
-	modalId: modalId,
-	modalBackdropId: modalBackdropId,
+<%- include('components/modal', {
+	modalId,
+	modalBackdropId,
 	contentsHeader: 'Create a lookalike segment for High Value Customers - Salesforce 360',
 	contentsHeaderTagline: makeModalContentsHeaderTagline(),
 	contentsMain: makeModalContentsMain(tableData),
 	contentsFooter: makeModalContentsFooter(),
 	handleClose: 'hideLookalikes',
-	theme: 'success'			
+	size: 'medium',
+	theme: 'success'
 }) %>
 
 
@@ -344,7 +345,6 @@ const showLookalike = (n) => {
 const hideLookalikes = () => {
 	document.querySelector(`.slds-modal`).classList.remove('slds-fade-in-open');
 	document.querySelector(`.slds-backdrop`).classList.remove('slds-backdrop_open');
-	console.log('closing lookalikes!');
 	document.querySelectorAll('.lookalike').forEach((elm) => elm.classList.add('slds-hide'));
 }
 
