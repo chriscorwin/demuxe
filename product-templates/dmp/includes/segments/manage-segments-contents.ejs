@@ -6,9 +6,16 @@
 <% 
 
 
+
+const makePanelTitleWithIcon = (data) => (`
+	
+`);
+
+
+
 const panels = [
 	{
-		title: 'High Value Customers',
+		title: '<img src="/images/logo-noname.svg" height=10 /> High Value Customers',
 		subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
 		devices: '6.3M',
 		audience: '1.7M',
@@ -144,7 +151,7 @@ const makeTableCell = (data) => (`
 
 const makePanel = (data) => (`
 	<div class="slds-panel-box slds-m-top_medium">
-		<div class="slds-panel-box__header slds-p-horizontal_small slds-grid">
+		<div class="slds-panel-box__header slds-p-horizontal_small slds-grid ">
 			<div class="slds-col slds-size_3-of-5">${data.title}</div>
 			<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left">${data.subTitle}</div>
 			<div class="slds-panel-box__header-settings"><img src="/images/icons/settings.svg" /></div>
