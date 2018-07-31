@@ -289,8 +289,7 @@ const makeModalContentsMain = (data) => (`
 `);
 const makeModalContentsFooter = (data) => (`
 	<button class="slds-button slds-button_neutral">Cancel</button>
-	 
-	<button class="slds-button slds-button_brand">Save</button> 
+	<button onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
 `);
 
 const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(panel), '');
