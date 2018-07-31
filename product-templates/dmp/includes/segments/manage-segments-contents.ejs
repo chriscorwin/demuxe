@@ -323,8 +323,14 @@ const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(pan
 	contentsHeaderTagline: makeModalContentsHeaderTagline(),
 	contentsMain: makeModalContentsMain(tableData),
 	contentsFooter: makeModalContentsFooter(),
-	title: '&lsquo;Winter Jackets Propensity Customers&rsquo; segment provisioned successfully.',
 	handleClose: 'hideLookalikes',
+	theme: 'success'			
+}) %>
+
+
+<%- include('components/toast', {
+	contents: '',
+	title: '‘High Value Customer Lookalike’ segment successfully creatred.',
 	theme: 'success'			
 }) %>
 
