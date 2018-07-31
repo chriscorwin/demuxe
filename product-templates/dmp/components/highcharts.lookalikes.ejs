@@ -123,7 +123,14 @@ const getLookalikesOptions = () => {
 				marker: {
 					lineWidth: 2,
 					lineColor: '#fff',
-					fillOpacity: 0.9
+					fillOpacity: 0.9,
+					states: {
+						select: {
+							lineColor: '#000',
+							fillColor: '#fff',
+							radius: 6
+						}
+					}
 				},
 				minSize: 8,
 				maxSize: 8,
