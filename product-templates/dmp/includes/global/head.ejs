@@ -20,7 +20,7 @@ if (locals.pageStylesheets) {
 <% 
 	const { account, trigger, user, version } = locals.sanitizedQueryParams;
 	const is201 = version && version === '201';
-	const accountParam = account || (is201 ? 'nto-electronics' : 'Ducati');
+	const accountParam = account || (is201 ? 'nto-electronics' : 'Crocs');
 %>
 
 <script type="text/javascript">
@@ -33,7 +33,7 @@ if (locals.pageStylesheets) {
 	const userParam = '<%=user%>' || 'Dan';
 	const triggerParam = '<%=trigger%>';
 
-	let accountName = 'Ducati';
+	let accountName = 'Crocs';
 	let userName = '';
 	let appName = 'Salesforce DMP';
 
@@ -96,7 +96,7 @@ if (locals.pageStylesheets) {
 		navItems: [ {
 				label: 'Overview',
 				href: `/?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-				isActive: ( activePage === 'overview' )
+				isActive: ( activePage === 'index' )
 			},
 			{
 				label: 'Segments',
