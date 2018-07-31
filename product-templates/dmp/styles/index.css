@@ -4,8 +4,8 @@
 }
 
 .slds-button.slds-button_neutral {
-	font-size: 12px;
-	color: #16325C;
+	/*font-size: 12px;*/
+	/*color: #16325C;*/
 }
 
 .slds-panel-box__sub-header {
@@ -14,5 +14,5 @@
 }
 
 .slds-text-body_x-small {
-	font-size: 0.7rem;
+	/*font-size: 0.7rem;*/
 }
