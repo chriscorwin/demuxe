@@ -280,7 +280,6 @@ HEADER AREA
 .slds-panel-box__header svg, .slds-panel-box__header img {
 	fill: #54698D;
 	width: 16px;
-	float: right;
 }
 
 
@@ -353,16 +352,16 @@ HEADER AREA
 	border-bottom: 3px solid #F28B00;
 
 	&__item {
-		.slds-is-active:before {
+		&.slds-is-active:before {
 			background: #B75D0D;
 		}
 	
-		:not(.slds-no-hover):hover,
-		.slds-is-active {
+		&:not(.slds-no-hover):hover,
+		&.slds-is-active {
 			background-color: rgba(183, 93, 13, 0.1);
 		}
 	
-		.slds-is-active {
+		&.slds-is-active {
 			animation: unset;
 		}
 	
