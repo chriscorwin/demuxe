@@ -38,11 +38,11 @@ const nextPage = () => {
 			window.location = '/jb/'
 			return;
 		}
-		window.location = `/segments.manage-segments.html?version=${pageVersion}&account=${accountParam}&trigger=successToast`;
+		window.location = `/segments/manage-segments?version=${pageVersion}&account=${accountParam}&trigger=successToast`;
 		return;
 		// window.location = `./index.html?version=${pageVersion}&account=${accountParam}`;
 	} else {
-		window.location = `/segments.manage-segments.html?trigger=successToast`;
+		window.location = `/segments/manage-segments?trigger=successToast`;
 	}
 };
 
@@ -73,7 +73,7 @@ const getSegmentName = (pageVersion, accountParam) => {
 		return '<span style="font-size: 12px;">Winter Jackets Propensity Customers</span>';
 	}
 
-	return 'XDaviel S - Explorers';
+	return 'Beach Travelers';
 }
 
 const getSegmentDescription = (pageVersion, accountParam) => {
@@ -84,7 +84,7 @@ const getSegmentDescription = (pageVersion, accountParam) => {
 		return 'Interested in snow & winter activities';
 	}
 
-	return 'Engaged with rich content on Facebook and explored XDaviel S';
+	return ' ';
 }
 
 const $newSegmentName = makeFilledSegmentDetail(getSegmentName(pageVersion, accountParam));
@@ -119,7 +119,6 @@ const deactivate = () => {
 
 const checkbox = document.getElementById('activate-toggle');
 // Activate by default -- toggle still works
-activate();
 checkbox.addEventListener('change', (event) => {
 	if (event.target.checked) {
 		activate();
@@ -129,6 +128,9 @@ checkbox.addEventListener('change', (event) => {
 })
 
 
+// activating by default
+document.getElementById('details-contents').replaceChild($newSegmentName, $segmentName);
+activate();
 
 document.querySelector('#activation-contents').innerHTML = activations.reduce((contents, activation, i) => {
 	return `
