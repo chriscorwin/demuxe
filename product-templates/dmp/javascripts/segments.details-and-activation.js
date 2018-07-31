@@ -118,6 +118,8 @@ const deactivate = () => {
 }
 
 const checkbox = document.getElementById('activate-toggle');
+// Activate by default -- toggle still works
+activate();
 checkbox.addEventListener('change', (event) => {
 	if (event.target.checked) {
 		activate();
