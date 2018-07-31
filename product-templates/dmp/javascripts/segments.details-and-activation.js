@@ -118,7 +118,6 @@ const deactivate = () => {
 }
 
 const checkbox = document.getElementById('activate-toggle');
-
 checkbox.addEventListener('change', (event) => {
 	if (event.target.checked) {
 		activate();
