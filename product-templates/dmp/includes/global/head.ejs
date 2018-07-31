@@ -8,8 +8,8 @@
 <% } %>
 
 <% 
-if (locals.extraStylesheets) { 
-	locals.extraStylesheets.forEach(function(stylesheet) { 
+if (locals.pageStylesheets) { 
+	locals.pageStylesheets.forEach(function(stylesheet) { 
 %>
 		<link rel="stylesheet" href="/styles/<%=stylesheet%>">
 <% 
