@@ -1,0 +1,166 @@
+<!-- 
+Highcharts must be included on page prior to this running
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
+-->
+<style>
+	.circle {
+		border-radius: 12px;
+		width: 4px;
+		height: 4px;
+		float: left;
+		margin: 2px 8px 0 0;
+		border: 2px solid #fff;
+	}
+
+	.circle.small {
+		width: 2px;
+		height: 2px;
+		margin-top: 3px;
+	}
+</style>
+
+<div id="lookalikes-chart" style="width:575px; height:268px;"></div>
+
+<script type="text/javascript">
+const lookalikesData = [
+	{ x: 90, y: 99, z: 77, color: '#7CB5EC' },
+	{ x: 110, y: 95, z: 77, color: '#7CB5EC' },
+	{ x: 130, y: 92, z: 77, color: '#7CB5EC' },
+	{ x: 144, y: 90, z: 77, color: '#7CB5EC' },
+	{ x: 157, y: 88, z: 77, color: '#7CB5EC' },
+	{ x: 170, y: 83, z: 77, color: '#7CB5EC' },
+	{ x: 178, y: 80, z: 77, color: '#7CB5EC' },
+	{ x: 186, y: 77, z: 77, color: '#7CB5EC' },
+	{ x: 194, y: 74, z: 77, color: '#7CB5EC' },
+	{ x: 202, y: 71, z: 77, color: '#7CB5EC' },
+	{ x: 210, y: 68, z: 77, color: '#7CB5EC' },
+	{ x: 218, y: 65, z: 77, color: '#7CB5EC' },
+	{ x: 226, y: 62, z: 77, color: '#7CB5EC' },
+	{ x: 229, y: 58, z: 77, color: '#7CB5EC' },
+	{ x: 229, y: 53, z: 77, color: '#7CB5EC' },
+	{ x: 229, y: 48, z: 77, color: '#7CB5EC' },
+	{ x: 238, y: 45, z: 77, color: '#7CB5EC' },
+	{ x: 248, y: 40, z: 77, color: '#7CB5EC' },
+	{ x: 256, y: 35, z: 77, color: '#7CB5EC' },
+	{ x: 265, y: 30, z: 77, color: '#7CB5EC' },
+	{ x: 273, y: 25, z: 77, color: '#7CB5EC' },
+	{ x: 279, y: 20, z: 77, color: '#7CB5EC' },
+	{ x: 284, y: 16, z: 77, color: '#7CB5EC' },
+	{ x: 294, y: 11, z: 77, color: '#7CB5EC' },
+	{ x: 304, y: 6, z: 77, color: '#7CB5EC' },
+	{ x: 314, y: 1, z: 77, color: '#7CB5EC' },
+
+
+];
+
+// Gets options for the Cumulative 1st Party Overview chart
+const getLookalikesOptions = () => {
+	return {
+		legend: {
+			verticalAlign: 'top',
+			enabled: false
+		},
+		title: {
+			text: ''
+		},
+		chart: {
+			type: 'bubble',
+			height: 268,
+			style: {
+				fontFamily: 'Salesforce Sans'
+			},
+			zoomType: 'xy',
+			plotBackgroundImage: '/images/lookalike-background.svg',
+			plotBackgroundColor: {
+				linearGradient: [100, 0, 100, 268],
+				stops: [
+					[0, '#5FAEFC'],
+					[0.14, '#5FAEFC'],
+					[0.14, '#78BAFA'],
+					[0.25, '#78BAFA'],
+					[0.25, '#91C8FD'],
+					[0.4, '#91C8FD'],
+					[0.4, '#ABD5FD'],
+					[0.6, '#ABD5FD'],
+					[0.6, '#C2DFFC'],
+					[1, '#C2DFFC']
+				]
+			}
+		},
+		xAxis: {
+			gridLineWidth: 0,
+			tickInterval: 100,
+			softMin: 80,
+			softMax: 790,
+			labels: {
+				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+				formatter: function formatter () {
+					return (this.value/100) + 'M';
+				}
+			},
+			title: {
+				text: 'Reach'
+			}
+		},
+		yAxis: {
+			tickInterval: 20,
+			min: 0,
+			max: 100,
+			gridLineWidth: 0,
+			title: {
+				text: 'Similarity'
+			},
+			labels: {
+				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+				formatter: function formatter () {
+					return this.value + '%';
+				}
+			}
+		},
+		plotOptions: {
+			bubble: {
+				marker: {
+					lineWidth: 2,
+					lineColor: '#fff',
+					fillOpacity: 0.9,
+					states: {
+						select: {
+							lineColor: '#000',
+							fillColor: '#fff',
+							radius: 6
+						}
+					}
+				},
+				minSize: 8,
+				maxSize: 8,
+				allowPointSelect: true
+			},
+			series: {
+				animation: {
+					duration: 1000
+				}
+			}
+		},
+		tooltip: {
+			shared: true,
+			useHTML: true,
+			headerFormat: '',
+			pointFormatter: function formatter () {
+					return `
+						<div style="width: 100px;">
+							Reach: ${(this.x/100)}M<br />
+							Similarity: ${this.y}%
+						</div>
+					`
+			},
+			footerFormat: '',
+			valueDecimals: 0
+		},
+		series: [{ data: lookalikesData }]
+	};
+};
+
+Highcharts.setOptions({credits: { enabled: false }});
+const LookalikesChart = Highcharts.chart('lookalikes-chart', getLookalikesOptions());
+</script>
