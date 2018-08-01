@@ -269,7 +269,7 @@ const makeModalContentsHeaderTagline = (data) => (`
 `);
 
 
-const makeModalContentsChart = (data) => include('components/highcharts.lookalikes.ejs', { data });
+const makeModalContentsChart = (data) => include('components/highcharts.lookalikes.ejs', { ...data, width: '510px', height: '268px' });
 
 const makeModalContentsMain = (data) => (`
 	<div class="slds-text-heading_medium">
@@ -293,7 +293,7 @@ const makeModalContentsMain = (data) => (`
 		<div class="slds-col slds-size_3-of-5">
 			${makeModalContentsChart(data)} 
 		</div>
-		<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left">
+		<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-p-top_small">
 			${makeTable(data)} 
 		</div>
 	</div>
