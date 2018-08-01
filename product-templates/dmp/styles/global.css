@@ -279,6 +279,11 @@ HEADER AREA
   border-bottom: 2px solid #FFF;
 }
 
+.slds-tabs_default__nav.audience-discovery-tab-nav,
+.slds-tabs--default__nav.audience-discovery-tab-nav {
+  border-bottom: 2px solid transparent;
+}
+
 .slds-tabs_default__item,
 .slds-tabs--default__item {
   border-bottom: 2px solid #FFF;
@@ -392,7 +397,6 @@ HEADER AREA
 }
 
 .audience-discovery-tab-nav:before {
-  background: #fff;
   content: "";
   display: block;
   height: 2px;
