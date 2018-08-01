@@ -2,6 +2,9 @@
 	"brandTheme": "ducati",
 	"demoName": "Demuxe Demo (production)",
 	"demoVersion": "0.0",
+	"demoMagickFlows": {},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"productTemplate": "dmp"
 }
