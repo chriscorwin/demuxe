@@ -236,7 +236,7 @@
                         <path d="M4,415 L609,415" id="Line" stroke="#E0E5EE" stroke-linecap="square"></path>
                     </g>
                 </g>
-                <text id="＊-required" mask="url(#mask-4)" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" letter-spacing="1">
+                <text id="＊-required" mask="url(#mask-4)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" letter-spacing="1">
                     <tspan x="20" y="615" fill="#C23934">＊</tspan>
                     <tspan x="33" y="615" font-family="SalesforceSans-Regular, Salesforce Sans" fill="#7E8C99"> </tspan>
                     <tspan x="37.096" y="615" font-family="SalesforceSans-Italic, Salesforce Sans" font-style="italic" fill="#7E8C99">required</tspan>

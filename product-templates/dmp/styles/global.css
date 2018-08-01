@@ -98,6 +98,7 @@ HEADER AREA
   width: 1rem;
 }
 
+
 .main-menu .menu-item.sflogo {
   padding: 10px;
   background-image: none;
@@ -149,7 +150,7 @@ HEADER AREA
 }
 
 .audience-discovery #subheader {
-  background-image: url("/img/slices/data-studio.audience-discovery.powered-by.svg");
+	background-image: url("/images/slices/data-studio.audience-discovery.powered-by.svg");
   background-repeat: no-repeat;
   background-size: auto 34px;
   background-position-y: 40%;
@@ -157,7 +158,7 @@ HEADER AREA
 }
 
 .einstein-segementation #subheader-wrapper {
-  background-image: url(/img/clouds-bg.svg);
+	background-image: url(/images/clouds-bg.svg);
   background-position-x: 0;
   background-repeat: repeat-x;
   background-size: 1990px;
@@ -170,7 +171,7 @@ HEADER AREA
   width: 51px;
   height: 61px;
   background-size: cover;
-  background-image: url(/img/einstein-leaning-left.svg);
+	background-image: url(/images/einstein-leaning-left.svg);
   position: absolute;
   margin-top: 10px;
   z-index: 1;
@@ -342,6 +343,11 @@ HEADER AREA
   background-color: #fff;
 }
 
+.align-right {
+	text-align: right;
+}
+
+
 .slds-context-bar {
   border-bottom: 3px solid #F28B00;
 }
@@ -372,6 +378,7 @@ HEADER AREA
   border: 1px solid #0070D2;
 }
 
+
 .card {
   height: 162px;
   border-radius: 2px;
@@ -399,6 +406,7 @@ HEADER AREA
   top: 136px;
   z-index: 3;
 }
+
 
 #canvas {
   width: 100%;
