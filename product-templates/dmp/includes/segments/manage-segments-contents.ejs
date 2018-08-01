@@ -269,7 +269,17 @@ const makeModalContentsHeaderTagline = (data) => (`
 `);
 
 
-const makeModalContentsChart = (data) => include('components/highcharts.lookalikes.ejs', { ...data, width: '510px', height: '268px' });
+const makeModalContentsChart = (data) => include(
+	'components/highcharts.lookalikes.ejs', 
+	{ 
+		...data, 
+		width: '510px', 
+		height: '268px',
+		selectCallback: (event) => {
+			document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+		}
+	}
+);
 
 const makeModalContentsMain = (data) => (`
 	<div class="slds-text-heading_medium">
@@ -299,8 +309,8 @@ const makeModalContentsMain = (data) => (`
 	</div>
 `);
 const makeModalContentsFooter = (data) => (`
-	<button class="slds-button slds-button_neutral">Cancel</button>
-	<button onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
+	<button disabled class="slds-button slds-button_neutral">Cancel</button>
+	<button disabled onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
 `);
 
 const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(panel), '');
