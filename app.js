@@ -40,14 +40,14 @@ app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/your-code-here
 
 // https://expressjs.com/en/4x/api.html#app.use
 const appUse = [
-	logger('dev'),
+	// logger('dev'),
 	express.json(),
 	express.urlencoded({ extended: false }),
 	expressSanitizer(),
 	cookieParser(),
 	// files are looked up in reverse order they occur in the array (later takes precedence over earlier here --cascade flows like CSS)
 	sassMiddleware({
-		debug: true,
+		debug: false,
 		outputStyle: 'expanded',
 		src: path.join(__dirname, 'engine')
 	}),
@@ -57,7 +57,7 @@ const appUse = [
 if (config.brandTheme) {
 	appUse.push(  
 		sassMiddleware({
-			debug: true,
+			debug: false,
 			outputStyle: 'expanded',
 			src: path.join(__dirname, 'brand-themes', config.brandTheme)
 		}),
@@ -69,7 +69,7 @@ if (config.brandTheme) {
 if (config.productTemplate) {
 	appUse.push(
 		sassMiddleware({
-			debug: true,
+			debug: false,
 			outputStyle: 'expanded',
 			src: path.join(__dirname, 'product-templates', config.productTemplate)
 		}),
@@ -79,7 +79,7 @@ if (config.productTemplate) {
 
 appUse.push(
 	sassMiddleware({
-		debug: true,
+		debug: false,
 		outputStyle: 'expanded',
 		src: path.join(__dirname, 'your-code-here')
 	}),
