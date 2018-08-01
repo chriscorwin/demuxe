@@ -26,9 +26,14 @@ if (locals.pageStylesheets) {
 <script type="text/javascript">
 	const locals =<%- JSON.stringify(locals)%>;
 	console.dir(locals);
+
+	const url = new URL( window.location.href );
 	const activePage = '<%=locals.siteSection%>';
 	const accountParam = '<%=accountParam%>';
 	const versionParam = '<%=version%>';
+	const demoMagickFlows = locals.demoMagickFlows;
+	const demoMagickFlowDirectoryName = '<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>';
+	const urlSlug = '<%=locals.urlSlug%>';
 	let pageVersion = '<%=version%>';
 	const userParam = '<%=user%>' || 'Dan';
 	const triggerParam = '<%=trigger%>';
