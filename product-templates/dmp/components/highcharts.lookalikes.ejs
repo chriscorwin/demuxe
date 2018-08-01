@@ -20,7 +20,7 @@ Highcharts must be included on page prior to this running
 	}
 </style>
 
-<div id="lookalikes-chart" style="width:575px; height:268px;"></div>
+<div id="lookalikes-chart" style="width: <%= locals.width || '510px' %>; height: <%= locals.height || '268px' %>;"></div>
 
 <script type="text/javascript">
 const lookalikesData = [
