@@ -70,11 +70,17 @@ describe('DMP Demo Flow', function () {
 			// CLICK LOOKALIKE IN DROPDOWN MENU
 			.click('.slds-panel-box__header:nth-of-type(1) .slds-panel-box__header-dropdown .slds-dropdown__item:nth-of-type(4)')
 			.waitFor(200)
-			.screenshot(getOptions('0210.segments'))
+			.screenshot(getOptions('0210.segments.lookalike'))
 			.toMatchSnapshot()
 			.result(handleResult)
 			// HOVER OVER MODERATELY SIMILAR
 			// CLICK MODERATELY SIMILAR
+			// .click('#lookalikes-chart .highcharts-root > .highcharts-series-group > .highcharts-series > path.highcharts-point:nth-of-type(7)')
+			.click('#lookalikes-chart') // HACK BECAUSE SVG UGH
+			.waitFor(200)
+			.screenshot(getOptions('0212.segments.lookalike'))
+			.toMatchSnapshot()
+			.result(handleResult)
 			// CLICK CREATE LOOKALIKE SEGMENT
 			.click('.slds-button.slds-button_brand')
 			.waitFor('body')
