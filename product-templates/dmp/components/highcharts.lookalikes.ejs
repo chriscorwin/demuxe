@@ -49,9 +49,7 @@ const lookalikesData = [
 	{ x: 284, y: 16, z: 77, color: '#7CB5EC' },
 	{ x: 294, y: 11, z: 77, color: '#7CB5EC' },
 	{ x: 304, y: 6, z: 77, color: '#7CB5EC' },
-	{ x: 314, y: 1, z: 77, color: '#7CB5EC' },
-
-
+	{ x: 314, y: 1, z: 77, color: '#7CB5EC' }
 ];
 
 // Gets options for the Cumulative 1st Party Overview chart
@@ -71,6 +69,7 @@ const getLookalikesOptions = () => {
 				fontFamily: 'Salesforce Sans'
 			},
 			zoomType: 'xy',
+			// https://api.highcharts.com/highcharts/chart.plotBackgroundColor
 			plotBackgroundImage: '/images/lookalike-background.svg',
 			plotBackgroundColor: {
 				linearGradient: [100, 0, 100, 268],
@@ -88,9 +87,11 @@ const getLookalikesOptions = () => {
 				]
 			}
 		},
+		// https://api.highcharts.com/highcharts/xAxis
 		xAxis: {
 			gridLineWidth: 0,
 			tickInterval: 100,
+			// https://api.highcharts.com/highcharts/xAxis.softMax
 			softMin: 80,
 			softMax: 790,
 			labels: {
@@ -103,6 +104,7 @@ const getLookalikesOptions = () => {
 				text: 'Reach'
 			}
 		},
+		// https://api.highcharts.com/highcharts/yAxis
 		yAxis: {
 			tickInterval: 20,
 			min: 0,
@@ -118,12 +120,15 @@ const getLookalikesOptions = () => {
 				}
 			}
 		},
+		// https://api.highcharts.com/highcharts/plotOptions
 		plotOptions: {
+			// https://api.highcharts.com/highcharts/plotOptions.bubble
 			bubble: {
 				marker: {
 					lineWidth: 2,
 					lineColor: '#fff',
 					fillOpacity: 0.9,
+					// https://api.highcharts.com/highcharts/plotOptions.bubble.marker.states.select
 					states: {
 						select: {
 							lineColor: '#000',
@@ -142,10 +147,12 @@ const getLookalikesOptions = () => {
 				}
 			}
 		},
+		// https://api.highcharts.com/highcharts/tooltip
 		tooltip: {
 			shared: true,
 			useHTML: true,
 			headerFormat: '',
+			// https://api.highcharts.com/highcharts/tooltip.pointFormatter
 			pointFormatter: function formatter () {
 					return `
 						<div style="width: 100px;">
@@ -157,6 +164,7 @@ const getLookalikesOptions = () => {
 			footerFormat: '',
 			valueDecimals: 0
 		},
+		// https://api.highcharts.com/highcharts/series
 		series: [{ data: lookalikesData }]
 	};
 };
