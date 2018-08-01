@@ -81,17 +81,34 @@ describe('DMP Demo Flow', function () {
 			.screenshot(getOptions('0300.segments.build-standard-segment'))
 			.toMatchSnapshot()
 			.result(handleResult)
+			// SELECT "MARKETING CLOUD" IN ACTIVATION
+			.click('#checkbox7wrapper')
+			.waitFor('body')
+			.screenshot(getOptions('0301.segments.build-standard-segment'))
+			.toMatchSnapshot()
+			.result(handleResult)
+			// SELECT "DOUBLE CLICK" IN ACTIVATION
+			.click('#checkbox6wrapper')
+			.waitFor('body')
+			.screenshot(getOptions('0302.segments.build-standard-segment'))
+			.toMatchSnapshot()
+			.result(handleResult)
+			// CLICK "SAVE" AND GET TAKEN BACK TO SEGMENTS
+			.click('#saveButton')
+			.waitFor('body')
+			.screenshot(getOptions('0400.segments.manage-segments'))
+			.toMatchSnapshot()
+			.result(handleResult)
+
+			// This is currently outside of our demo flow.
 			// HOVER INSIGHTS NAV LINK
 			// CLICK EINSTEIN SEGMENTATION LINK
 			.goto(`${testhost}insights/einstein-segmentation`)
 			.waitFor('body')
-			.screenshot(getOptions('0X00.einstein'))
+			.screenshot(getOptions('XXXX.einstein'))
 			.toMatchSnapshot()
 			.result(handleResult)
 			// CLICK CREATE A NEW SEGMENT USING THIS PERSONA
-			// SELECT "MARKETING CLOUD" IN ACTIVATION
-			// SELECT "DOUBLE CLICK" IN ACTIVATION
-			// CLICK "SAVE"
 			.close()
 			.end();
 		await differencify.cleanup();
