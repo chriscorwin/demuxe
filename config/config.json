@@ -2,6 +2,9 @@
 	"brandTheme": "crocks",
 	"demoName": "Laulima Crocks Demo (production)",
 	"demoVersion": "0.1",
+	"demoMagickFlows": {},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"productTemplate": "dmp",
 	"prod": {

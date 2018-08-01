@@ -252,7 +252,7 @@ const makePrimaryNav = ( data ) => {
 		</ul></nav>
 		<ul class="slds-grid slds-col--bump-left" role="tablist">
 			<li class="slds-context-bar__item slds-context-bar__item_tab" style="width: auto;">
-				<div class="menu-item slds-m-right_small" id="pins"><img class="icon" src="/icons/utility/pin-dark-blue.svg" /> <span>0</span></div>
+				<div class="menu-item slds-m-right_small" id="pins"><img class="icon" src="/icons/utility/pin-dark-blue.svg" /> <span>1</span></div>
 			</li>
 			<li class="slds-context-bar__item slds-context-bar__item_tab" style="width: auto;">
 				<div class="menu-item slds-m-right_small"><img class="icon" src="/images/cart.svg" /> 0</div>
