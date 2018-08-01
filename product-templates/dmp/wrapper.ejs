@@ -4,20 +4,14 @@
 		<%- include('includes/global/head') %>
 	</head>
 
-	<body onscroll="animateGraphs()" class="dashboard">
+	<body>
 		<%- include('includes/global/header') %>
 		<div id="content-wrapper">
 			<div id="content" class="slds-p-vertical_medium slds-container_large">
 				<script>console.log('<%= locals.root %>');</script>
-				<%- include(`includes/${locals.page}/contents`) %>
+				<%- include(`${locals.pageContents}`) %>
 			</div>
 		</div>
-
-		<%- include('components/toast', {
-			contents: 'Will be available only under ‘Northern Trail Outfitters - Apparel&rsquo; account as &lsquo;Winter Jackets &ndash; New High Value&rsquo;',
-			title: '&lsquo;Winter Jackets Propensity Customers&rsquo; segment provisioned successfully.',
-			theme: 'success'			
-		}) %>
 
 		<%- include('includes/global/footer-scripts') %>
 	</body>

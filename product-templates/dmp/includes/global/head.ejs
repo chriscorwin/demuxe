@@ -1,15 +1,26 @@
 <meta charset="utf-8">
-<link rel="stylesheet" href="/styles/salesforce-lightning-design-system.min.css" />
+<link rel="stylesheet" href="/styles/salesforce-lightning-design-system.css" />
+<link rel="stylesheet" href="/styles/style.css">
 <link rel="stylesheet" href="/styles/global.css">
 <!-- each page automatically tries to include a css file of the same name -->
-<% if (page) { %>
-<link rel="stylesheet" href="/styles/<%=page%>.css">
+<% if (locals.siteSection) { %>
+<link rel="stylesheet" href="/styles/<%=locals.siteSection%>.css">
 <% } %>
+
+<% 
+if (locals.pageStylesheets) { 
+	locals.pageStylesheets.forEach(function(stylesheet) { 
+%>
+		<link rel="stylesheet" href="/styles/<%=stylesheet%>">
+<% 
+	});
+} 
+%>
 
 <% 
 	const { account, trigger, user, version } = locals.sanitizedQueryParams;
 	const is201 = version && version === '201';
-	const accountParam = account || (is201 ? 'nto-electronics' : 'Ducati');
+	const accountParam = account || (is201 ? 'nto-electronics' : 'Crocs');
 %>
 
 <script type="text/javascript">
@@ -17,7 +28,7 @@
 	console.dir(locals);
 
 	const url = new URL( window.location.href );
-	const activePage = '<%=locals.page%>';
+	const activePage = '<%=locals.siteSection%>';
 	const accountParam = '<%=accountParam%>';
 	const versionParam = '<%=version%>';
 	const demoMagickFlows = locals.demoMagickFlows;
@@ -27,7 +38,7 @@
 	const userParam = '<%=user%>' || 'Dan';
 	const triggerParam = '<%=trigger%>';
 
-	let accountName = 'Ducati';
+	let accountName = 'Crocs';
 	let userName = '';
 	let appName = 'Salesforce DMP';
 
@@ -90,16 +101,17 @@
 		navItems: [ {
 				label: 'Overview',
 				href: `/?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-				isActive: ( activePage === 'overview' )
+				isActive: ( activePage === 'index' )
 			},
 			{
 				label: 'Segments',
 				id: 'segments-global-nav-link',
-				href: pageVersion === '201' ? `/segments.manage-segments.html?version=${pageVersion}&account=${accountParam}` : `/segment-builder.new-segment.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				href: '/segments/manage-segments/',
 				isActive: ( activePage === 'segments' )
 			},
 			{
 				label: 'Insights',
+				ID: 'insights-global-nav-link',
 				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 				isActive: ( activePage === 'insights' ),
 				dropdownItems: [
@@ -109,7 +121,7 @@
 						},
 						{
 							label: 'Einstein Segmentation',
-							href: `/insights/einstein-segmentation/?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+							href: `/insights/einstein-segmentation?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 							id: 'einstein-segmentation-link'
 						},
 						{
@@ -184,9 +196,10 @@
 			},
 			{
 				label: 'Data Studio',
-				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				id: 'data-studio',
+				href: `/data-studio/audience-discovery?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 				lookLikeDropdown: true,
-				isActive: ( activePage === 'data-studio' )
+				isActive: ( activePage === 'audience-discovery' || activePage === 'data-studio' )
 			}
 		]
 	}
@@ -269,7 +282,7 @@
 					},
 					{
 						label: 'Einstein Segmentation',
-						href: `/insights/einstein-segmentation/?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+						href: `/insights/einstein-segmentation?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 						id: 'einstein-segmentation-link'
 					},
 					{

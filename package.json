@@ -9,9 +9,9 @@
     "start": "node ./bin/www",
     "start:dev": "DEBUG=true NODE_ENV=dev node ./bin/www",
     "start:qa": "NODE_ENV=qa node ./bin/www",
-    "test": "mocha",
+    "test": "NODE_ENV=local mocha",
     "livereload": "livereload . -w 200 --extraExts 'scss,ejs' -d",
-    "test:update": "update=true mocha"
+    "test:update": "rm -rf test/screenshots/__different_snapshot__/ && NODE_ENV=local update=true mocha"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<% if ( locals.trigger && locals.trigger === `${theme}Toast`) { %>
+<% if ( locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === `${theme}Toast`) { %>
 <script>
 	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the 
 	// flow, which we need to do in order to keep global nav dropdowns working.
