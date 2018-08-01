@@ -41,7 +41,7 @@ app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/your-code-here
 
 // https://expressjs.com/en/4x/api.html#app.use
 const appUse = [
-	logger('dev'),
+	// logger('dev'),
 	express.json(),
 	express.urlencoded({ extended: false }),
 	expressSanitizer(),
