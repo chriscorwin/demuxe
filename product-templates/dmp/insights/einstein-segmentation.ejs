@@ -1,0 +1,13 @@
+<%- 
+	include(
+		'wrapper.ejs', 
+		{ 
+			title:'Einstein Segmentation', 
+			headerVariant: 'einstein', 
+			siteSection: 'insights',
+			pageContents:'includes/insights/einstein-segmentation-contents',
+			pageStylesheets: ['insights.einstein-segmentation.css'],
+			pageScripts: ['third-party-libraries/d3.js', 'third-party-libraries/d3-tip.js', 'insights.einstein-segmenetation.js']
+		}
+	) 
+%>
