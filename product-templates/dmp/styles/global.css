@@ -160,7 +160,7 @@ HEADER AREA
 
 
 .audience-discovery #subheader {
-	background-image: url("/img/slices/data-studio.audience-discovery.powered-by.svg");
+	background-image: url("/images/slices/data-studio.audience-discovery.powered-by.svg");
 	background-repeat: no-repeat;
 	background-size: auto 34px;
 	background-position-y: 40%;
@@ -168,7 +168,7 @@ HEADER AREA
 }
 
 .einstein-segementation #subheader-wrapper {
-	background-image: url(/img/clouds-bg.svg);
+	background-image: url(/images/clouds-bg.svg);
 	background-position-x: 0;
 	background-repeat: repeat-x;
 	background-size: 1990px;
@@ -180,7 +180,7 @@ HEADER AREA
 	width: 51px;
 	height: 61px;
 	background-size: cover;
-	background-image: url(/img/einstein-leaning-left.svg);
+	background-image: url(/images/einstein-leaning-left.svg);
 	position: absolute;
 	margin-top: 10px;
 	z-index: 1;

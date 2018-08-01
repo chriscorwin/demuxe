@@ -1,0 +1,11 @@
+.slds-flow-header_container + #content-wrapper {
+  margin-top: 90px;
+  z-index: initial;
+}
+
+.slds-flow-header_container + #content-wrapper.mask-the-global-header {
+  margin-top: 0px;
+  z-index: 1000;
+  position: absolute;
+  top: -18px;
+}
