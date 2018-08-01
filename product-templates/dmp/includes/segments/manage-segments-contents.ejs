@@ -275,13 +275,19 @@ const makeModalContentsMain = (data) => (`
 	<div class="slds-text-heading_medium">
 		Potential Lookalikes
 		<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-		  <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
-		    <use xlink:href="/icons/utility-sprite/svg/symbols.svg#info"></use>
-		  </svg>
-		  <span class="slds-assistive-text">Description of icon when needed</span>
+			<svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+				<use xlink:href="/icons/utility-sprite/svg/symbols.svg#info"></use>
+			</svg>
+			<span class="slds-assistive-text">Description of icon when needed</span>
 		</span>
 	</div>
-	<p>Select the desired combination of reach and similarity for your objective.</p>
+	<div class="slds-grid">
+		<div class="slds-col slds-size_3-of-5">Select the desired combination of reach and similarity for your objective.</div>
+		<div class="slds-col slds-size_2-of-5" style="text-align: right; font-size: 16px;">
+			<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>$1.75</strong>
+		</div>
+	</div>
+
 
 	<div class="slds-grid">
 		<div class="slds-col slds-size_3-of-5">
