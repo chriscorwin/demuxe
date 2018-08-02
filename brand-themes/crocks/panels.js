@@ -10,7 +10,7 @@ module.exports = [
 		subCategory: 'Loyalty'
 	},
 	{
-		title: 'Redline Magazine Subscribers',
+		title: 'Abandon Cart High Value',
 		subTitle: 'Transaction Segment / ID: <b>rsdqtbya</b>',
 		devices: '9.3M',
 		audience: '2.1M',
@@ -20,7 +20,7 @@ module.exports = [
 		subCategory: 'Gender'
 	},
 	{
-		title: 'WDW 2018 Ticket Holders',
+		title: 'Clicked on Ad did not convert',
 		subTitle: 'Standard Segment / ID: <b>rsdqtah9w</b>',
 		devices: '45.3M',
 		audience: '14.2M',
@@ -30,7 +30,7 @@ module.exports = [
 		subCategory: 'Attributes'
 	},
 	{
-		title: 'Ducati Loyalists',
+		title: 'Crocs Club customer and Purchase last 90 days',
 		subTitle: 'Composite Segment / ID: <b>rsdqtbasi</b>',
 		devices: '57.89M',
 		audience: '19.2M',
@@ -60,7 +60,7 @@ module.exports = [
 		subCategory: 'Loyalty'
 	},
 	{
-		title: 'Revzilla Customers',
+		title: 'Prospects that have seen media',
 		subTitle: 'Composite Segment / ID: <b>q825zbzj</b>',
 		devices: '588K',
 		audience: '212K',
