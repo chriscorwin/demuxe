@@ -228,7 +228,13 @@
 		<button disabled onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
 	`);
 
-	const makePanels = () => locals.localization.panels.reduce((panels, panel) => panels + makePanel(panel), '');
+	const panels = locals.localization.panels.default;
+
+	if (locals.localization.panels.additional && locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === 'successToast') {
+		locals.localization.panels.additional.forEach((panel) => panels.unshift(panel))	
+	}
+
+	const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(panel), '');
 %>
 
 <%-makePanels();%>
