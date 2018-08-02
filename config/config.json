@@ -6,5 +6,23 @@
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
-	"productTemplate": "dmp"
+	"productTemplate": "dmp",
+	"prod": {
+		"host": "https://your-demo.herokuapp.com/"
+	},
+	"qa": {
+		"host": "https://your-demo-qa.herokuapp.com/"
+	},
+	"dev": {
+		"host": "https://your-demo-dev.herokuapp.com/"
+	},
+	"local": {
+		"host": "http://localhost:3000/"
+	},
+	"tests": {
+		"headless": true,
+		"imageSnapshotPath": "./test/screenshots/",
+		"mismatchThreshold": 0.01,
+		"timeout": 30000
+	}
 }
