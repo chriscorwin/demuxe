@@ -231,7 +231,11 @@
 	const panels = locals.localization.panels.default;
 
 	if (locals.localization.panels.additional && locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === 'successToast') {
-		locals.localization.panels.additional.forEach((panel) => panels.unshift(panel))	
+		locals.localization.panels.additional.forEach((panel) => {
+			if (!panels.includes(panel)) {
+				panels.unshift(panel)
+			}			
+		});	
 	}
 
 	const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(panel), '');
