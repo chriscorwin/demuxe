@@ -112,7 +112,7 @@ module.exports = function() {
 
     // merge default with env config, overwriting defaults
     configData = { ...defaultConfigData, ...envConfigData };
-    configData.localization = path.join(__dirname, 'brand-themes', configData.brandTheme, 'localization.json');
+    configData.localization = require(`../brand-themes/${configData.brandTheme}/localization.js`);
 
 
 
