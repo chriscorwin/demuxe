@@ -4,317 +4,231 @@
 </div>
 
 <% 
-
-
-
-const makePanelTitleWithIcon = (data) => (`
-	
-`);
-
-
-
-const panels = [
-	{
-		title: '<img src="/images/logo-noname.svg" height=10 /> High Value Customers',
-		subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
-		devices: '6.3M',
-		audience: '1.7M',
-		modified: 'August 06, 2018',
-		type: 'Standard',
-		category: 'Behavioral',
-		subCategory: 'Loyalty'
-	},
-	{
-		title: 'Redline Magazine Subscribers',
-		subTitle: 'Transaction Segment / ID: <b>rsdqtbya</b>',
-		devices: '9.3M',
-		audience: '2.1M',
-		modified: 'Mar 13, 2018',
-		type: 'Demographic',
-		category: 'Demographic',
-		subCategory: 'Gender'
-	},
-	{
-		title: 'WDW 2018 Ticket Holders',
-		subTitle: 'Standard Segment / ID: <b>rsdqtah9w</b>',
-		devices: '45.3M',
-		audience: '14.2M',
-		modified: 'Mar 9, 2018',
-		type: 'Target',
-		category: 'Behavioral',
-		subCategory: 'Attributes'
-	},
-	{
-		title: 'Ducati Loyalists',
-		subTitle: 'Composite Segment / ID: <b>rsdqtbasi</b>',
-		devices: '57.89M',
-		audience: '19.2M',
-		modified: 'Feb 27, 2018',
-		type: 'Demographic',
-		category: 'Demographic',
-		subCategory: 'Age'
-	},
-	{
-		title: 'Existing Customers > 3 years',
-		subTitle: 'Composite Segment / ID: <b>q825z87v4</b>',
-		devices: '14.3M',
-		audience: '4.9M',
-		modified: 'Feb 16, 2018',
-		type: 'Clusters',
-		category: 'Behavioral',
-		subCategory: 'Age'
-	},
-	{
-		title: 'New Customers <1 Year',
-		subTitle: 'Composite Segment / ID: <b>q825z9cxy</b>',
-		devices: '7.8M',
-		audience: '2.3M',
-		modified: 'Jan 30, 2018',
-		type: 'Clusters',
-		category: 'Behavioral',
-		subCategory: 'Loyalty'
-	},
-	{
-		title: 'Revzilla Customers',
-		subTitle: 'Composite Segment / ID: <b>q825zbzj</b>',
-		devices: '588K',
-		audience: '212K',
-		modified: 'Dec 30, 2017',
-		type: 'Demographic',
-		category: 'Demographic',
-		subCategory: 'Loyalty'
+	const tableData = {
+		rows: [
+			{
+				reach: '600,000', similarity: '100%'
+			},
+			{
+				reach: '780,897', similarity: '98%'
+			},
+			{
+				reach: '810,008', similarity: '96%'
+			},
+			{
+				reach: '905,178', similarity: '94%'
+			},
+			{
+				reach: '906,110', similarity: '92%'
+			},
+			{
+				reach: '910,087', similarity: '90%'
+			}
+		],
+		labels: ['Reach', 'Similarity']
 	}
-];
+
+	const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
 
 
+	const makeTable = (data) => (`
+	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+		<thead>
+			<tr class="slds-text-title_caps">
+				<th scope="col">
+					<div class="slds-truncate" title="${data.labels[0]}">${data.labels[0]}</div>
+				</th>
+				<th scope="col">
+					<div class="slds-truncate " title="${data.labels[1]}">${data.labels[1]}</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			${makeTableRows(data.rows)}
+		</tbody>
+	</table>
 
-const tableData = {
-	rows: [
-		{
-			reach: '600,000', similarity: '100%'
-		},
-		{
-			reach: '780,897', similarity: '98%'
-		},
-		{
-			reach: '810,008', similarity: '96%'
-		},
-		{
-			reach: '905,178', similarity: '94%'
-		},
-		{
-			reach: '906,110', similarity: '92%'
-		},
-		{
-			reach: '910,087', similarity: '90%'
-		}
-	],
-	labels: ['Reach', 'Similarity']
-
-}
-
-const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
+	`);
 
 
-const makeTable = (data) => (`
-<table class="slds-table slds-table_bordered slds-table_cell-buffer">
-	<thead>
-		<tr class="slds-text-title_caps">
-			<th scope="col">
-				<div class="slds-truncate" title="${data.labels[0]}">${data.labels[0]}</div>
-			</th>
-			<th scope="col">
-				<div class="slds-truncate " title="${data.labels[1]}">${data.labels[1]}</div>
-			</th>
+	const makeTableRow = (data) => (`
+		<tr">
+			${makeTableCell(data.reach)}
+			${makeTableCell(data.similarity)}
 		</tr>
-	</thead>
-	<tbody>
-		${makeTableRows(data.rows)}
-	</tbody>
-</table>
+	`);
 
-`);
+	const makeTableCell = (data) => (`
+		<td>
+			<div class="slds-truncate " title="${data}">${data}</div>
+		</td>
+	`);
 
+	const makePanel = (data) => (`
+		<div class="slds-panel-box slds-m-top_medium">
+			<div class="slds-panel-box__header slds-p-horizontal_small slds-grid ">
+				<div class="slds-col slds-size_3-of-5">${data.title}</div>
+				<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left">${data.subTitle}</div>
+				<div class="slds-panel-box__header-settings"><img src="/images/icons/settings.svg" /></div>
+				<div class="slds-panel-box__header-dropdown slds-dropdown slds-dropdown_left slds-dropdown_small slds-hide">
+					<ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" role="menuitem" tabindex="0">
+								<span class="slds-truncate" title="Menu Item One">
+									<img class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" src="/images/icons/pin.svg" />
+									Pin Segment
+								</span>
+							</a>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item Two">
+									<img class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" src="/images/icons/star.svg" />
+									Add to Favorites
+								</span>
+							</a>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item One">CDIM</span>
+							</a>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" onclick="showLookalikeModal(1);" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item Two">Lookalike</span>
+							</a>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" onclick="navigatePage('/data-studio.audience-discovery.html" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Data Studio">Discover Audiences</span>
+							</a>
+						</li>
 
-const makeTableRow = (data) => (`
-	<tr">
-		${makeTableCell(data.reach)}
-		${makeTableCell(data.similarity)}
-	</tr>
-`);
+						<li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
+							<span class="slds-text-title_caps">Audience</span>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item Two">View Summary</span>
+							</a>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item Two">Edit Segment</span>
+							</a>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item Two">Copy Segment</span>
+							</a>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item Two">Delete Segment</span>
+							</a>
+						</li>
 
-const makeTableCell = (data) => (`
-	<td>
-		<div class="slds-truncate " title="${data}">${data}</div>
-	</td>
-`);
-
-const makePanel = (data) => (`
-	<div class="slds-panel-box slds-m-top_medium">
-		<div class="slds-panel-box__header slds-p-horizontal_small slds-grid ">
-			<div class="slds-col slds-size_3-of-5">${data.title}</div>
-			<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left">${data.subTitle}</div>
-			<div class="slds-panel-box__header-settings"><img src="/images/icons/settings.svg" /></div>
-			<div class="slds-panel-box__header-dropdown slds-dropdown slds-dropdown_left slds-dropdown_small slds-hide">
-				<ul class="slds-dropdown__list" role="menu" aria-label="Show More">
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" role="menuitem" tabindex="0">
-							<span class="slds-truncate" title="Menu Item One">
-								<img class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" src="/images/icons/pin.svg" />
-								Pin Segment
-							</span>
-						</a>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item Two">
-								<img class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" src="/images/icons/star.svg" />
-								Add to Favorites
-							</span>
-						</a>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item One">CDIM</span>
-						</a>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" onclick="showLookalikeModal(1);" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item Two">Lookalike</span>
-						</a>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" onclick="navigatePage('/data-studio.audience-discovery.html" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Data Studio">Discover Audiences</span>
-						</a>
-					</li>
-
-					<li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
-						<span class="slds-text-title_caps">Audience</span>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item Two">View Summary</span>
-						</a>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item Two">Edit Segment</span>
-						</a>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item Two">Copy Segment</span>
-						</a>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item Two">Delete Segment</span>
-						</a>
-					</li>
-
-					<li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
-						<span class="slds-text-title_caps">Activation</span>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item Two">Enable Test Mode</span>
-						</a>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" onclick="navigatePage('/segment-builder.details-and-activation.html" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item Two">Update Partners</span>
-						</a>
-					</li>
-					<li class="slds-dropdown__item" role="presentation">
-						<a href="javascript:void(0);" onclick="navigatePage('/data-studio.new-asset.define.html" role="menuitem" tabindex="-1">
-							<span class="slds-truncate" title="Menu Item Two">Provision Segment</span>
-						</a>
-					</li>
-				</ul>
+						<li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
+							<span class="slds-text-title_caps">Activation</span>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item Two">Enable Test Mode</span>
+							</a>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" onclick="navigatePage('/segment-builder.details-and-activation.html" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item Two">Update Partners</span>
+							</a>
+						</li>
+						<li class="slds-dropdown__item" role="presentation">
+							<a href="javascript:void(0);" onclick="navigatePage('/data-studio.new-asset.define.html" role="menuitem" tabindex="-1">
+								<span class="slds-truncate" title="Menu Item Two">Provision Segment</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="slds-panel-box__body slds-grid slds-p-horizontal_small slds-p-vertical_x-small">
+				<div class="slds-col slds-size_1-of-6 slds-text-heading_large slds-p-top_xx-small">
+					<img class='${data.delayLoad ? 'loading': ''} slds-hide' src="/images/icons/devices-loading.svg" />
+					<span class='${data.delayLoad ? 'loaded': ''}'><img src="/images/icons/devices.svg" />${data.devices}</span>
+				</div>
+				<div class="slds-col slds-size_1-of-6 slds-text-heading_large slds-p-top_xx-small">
+					<img class='${data.delayLoad ? 'loading': ''} slds-hide' src="/images/icons/audience-loading.svg" />
+					<span class='${data.delayLoad ? 'loaded': ''}'><img src="/images/icons/audience.svg" />${data.audience}</div></span>
+				<div class="slds-col slds-size_1-of-6">
+					<div class="slds-panel-box__body_label">Last Modified</div>
+					<div class="slds-panel-box__body_text">${data.modified}</div>
+				</div>
+				<div class="slds-col slds-size_1-of-6">
+					<div class="slds-panel-box__body_label">Type</div>
+					<div class="slds-panel-box__body_text">${data.type}</div>
+				</div>
+				<div class="slds-col slds-size_1-of-6">
+					<div class="slds-panel-box__body_label">Category</div>
+					<div class="slds-panel-box__body_text">${data.category}</div>
+				</div>
+				<div class="slds-col slds-size_1-of-6">
+					<div class="slds-panel-box__body_label">Sub Category</div>
+					<div class="slds-panel-box__body_text">${data.subCategory}</div>
+				</div>
+				<div class="slds-panel-box__body-settings"><img src="/images/icons/chevrondown.svg" /></div>
 			</div>
 		</div>
-		<div class="slds-panel-box__body slds-grid slds-p-horizontal_small slds-p-vertical_x-small">
-			<div class="slds-col slds-size_1-of-6 slds-text-heading_large slds-p-top_xx-small">
-				<img class='${data.delayLoad ? 'loading': ''} slds-hide' src="/images/icons/devices-loading.svg" />
-				<span class='${data.delayLoad ? 'loaded': ''}'><img src="/images/icons/devices.svg" />${data.devices}</span>
-			</div>
-			<div class="slds-col slds-size_1-of-6 slds-text-heading_large slds-p-top_xx-small">
-				<img class='${data.delayLoad ? 'loading': ''} slds-hide' src="/images/icons/audience-loading.svg" />
-				<span class='${data.delayLoad ? 'loaded': ''}'><img src="/images/icons/audience.svg" />${data.audience}</div></span>
-			<div class="slds-col slds-size_1-of-6">
-				<div class="slds-panel-box__body_label">Last Modified</div>
-				<div class="slds-panel-box__body_text">${data.modified}</div>
-			</div>
-			<div class="slds-col slds-size_1-of-6">
-				<div class="slds-panel-box__body_label">Type</div>
-				<div class="slds-panel-box__body_text">${data.type}</div>
-			</div>
-			<div class="slds-col slds-size_1-of-6">
-				<div class="slds-panel-box__body_label">Category</div>
-				<div class="slds-panel-box__body_text">${data.category}</div>
-			</div>
-			<div class="slds-col slds-size_1-of-6">
-				<div class="slds-panel-box__body_label">Sub Category</div>
-				<div class="slds-panel-box__body_text">${data.subCategory}</div>
-			</div>
-			<div class="slds-panel-box__body-settings"><img src="/images/icons/chevrondown.svg" /></div>
-		</div>
-	</div>
-`);
+	`);
 
 
-const makeModalContentsHeaderTagline = (data) => (`
-	<p>Pick a dot from the graph to create a lookalike segment.</p>
-`);
+	const makeModalContentsHeaderTagline = (data) => (`
+		<p>Pick a dot from the graph to create a lookalike segment.</p>
+	`);
 
 
-const makeModalContentsChart = (data) => include(
-	'components/highcharts.lookalikes.ejs', 
-	{ 
-		...data, 
-		width: '510px', 
-		height: '268px',
-		selectCallback: (event) => {
-			document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+	const makeModalContentsChart = (data) => include(
+		'components/highcharts.lookalikes.ejs', 
+		{ 
+			...data, 
+			width: '510px', 
+			height: '268px',
+			selectCallback: (event) => {
+				document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+			}
 		}
-	}
-);
+	);
 
-const makeModalContentsMain = (data) => (`
-	<div class="slds-text-heading_medium">
-		Potential Lookalikes
-		<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-			<svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
-				<use xlink:href="/icons/utility-sprite/svg/symbols.svg#info"></use>
-			</svg>
-			<span class="slds-assistive-text">Description of icon when needed</span>
-		</span>
-	</div>
-	<div class="slds-grid">
-		<div class="slds-col slds-size_3-of-5">Select the desired combination of reach and similarity for your objective.</div>
-		<div class="slds-col slds-size_2-of-5" style="text-align: right; font-size: 16px;">
-			<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>$1.75</strong>
+	const makeModalContentsMain = (data) => (`
+		<div class="slds-text-heading_medium">
+			Potential Lookalikes
+			<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+				<svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+					<use xlink:href="/icons/utility-sprite/svg/symbols.svg#info"></use>
+				</svg>
+				<span class="slds-assistive-text">Description of icon when needed</span>
+			</span>
 		</div>
-	</div>
-
-
-	<div class="slds-grid">
-		<div class="slds-col slds-size_3-of-5">
-			${makeModalContentsChart(data)} 
+		<div class="slds-grid">
+			<div class="slds-col slds-size_3-of-5">Select the desired combination of reach and similarity for your objective.</div>
+			<div class="slds-col slds-size_2-of-5" style="text-align: right; font-size: 16px;">
+				<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>$1.75</strong>
+			</div>
 		</div>
-		<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-p-top_small">
-			${makeTable(data)} 
+
+
+		<div class="slds-grid">
+			<div class="slds-col slds-size_3-of-5">
+				${makeModalContentsChart(data)} 
+			</div>
+			<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-p-top_small">
+				${makeTable(data)} 
+			</div>
 		</div>
-	</div>
-`);
-const makeModalContentsFooter = (data) => (`
-	<button disabled class="slds-button slds-button_neutral">Cancel</button>
-	<button disabled onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
-`);
+	`);
+	const makeModalContentsFooter = (data) => (`
+		<button disabled class="slds-button slds-button_neutral">Cancel</button>
+		<button disabled onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
+	`);
 
-const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(panel), '');
-
+	const makePanels = () => locals.localization.panels.reduce((panels, panel) => panels + makePanel(panel), '');
 %>
 
 <%-makePanels();%>
