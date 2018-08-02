@@ -73,7 +73,7 @@ const getSegmentName = (pageVersion, accountParam) => {
 		return '<span style="font-size: 12px;">Winter Jackets Propensity Customers</span>';
 	}
 
-	return 'Beach Travelers';
+	return 'High Value Customers Lookalikes';
 }
 
 const getSegmentDescription = (pageVersion, accountParam) => {
