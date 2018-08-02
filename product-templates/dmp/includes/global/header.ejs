@@ -42,12 +42,22 @@
 			<div>
 				<h1 class="slds-text-heading_medium slds-p-around_medium"><%= title %></h1>
 			</div>
-			<% if (locals.subHeaderVariant === 'hasButton') { console.log('customizable button in sub-header please');%>
 
-			<div class="slds-col_bump-left slds-p-right_medium">
-				<button class="slds-button slds-button_neutral"><%=locals.subHeaderButtonLabel%></button>
-			</div>
-			<% } else { console.log('no button in sub-header')} %>
+
+			<% if (locals.subHeaderVariant === 'hasButton') { 
+				console.log('customizable button in sub-header please');
+			%>
+				<div class="slds-col_bump-left slds-p-right_medium">
+					<button class="slds-button slds-button_neutral"><%=locals.subHeaderButtonLabel%></button>
+				</div>
+			<% } %>
+
+				
 		</div>
+		<% if (locals.subHeaderVariant === 'hasCustomSubheader')  {
+			console.log('customizable sub-header please');
+		%>
+			<%- include(`${locals.subHeaderContents}`) %>
+		<% } %>
 	</div>
 </div>

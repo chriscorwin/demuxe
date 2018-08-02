@@ -20,7 +20,11 @@ Highcharts must be included on page prior to this running
 	}
 </style>
 
-<div id="lookalikes-chart" style="width:575px; height:268px;"></div>
+<div 
+	id="lookalikes-chart" 
+	style="width: <%= locals.width || '510px' %>; height: <%= locals.height || '268px' %>;"
+	onclick="function test() {document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));}; test();"
+></div>
 
 <script type="text/javascript">
 const lookalikesData = [
@@ -144,6 +148,13 @@ const getLookalikesOptions = () => {
 			series: {
 				animation: {
 					duration: 1000
+				},
+				cursor: 'pointer',
+				events: {
+					<% if (!locals.selectCallback) {
+						locals.selectCallback = () => {};
+					} %>
+					click: <%- locals.selectCallback %>
 				}
 			}
 		},
