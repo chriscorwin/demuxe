@@ -208,13 +208,18 @@ This is avoidable by not having a line height set on such elements in the source
 Also, SVG files do not have access to fonts the same way HTML elements do, so we've developed a script that embeds the font files in the SVGs themselves.
 
 - Use `svg-font-embedder` to embed fonts inside the Sketch SVG exports.
-    - From the root directory of this project, run
+	- Install the font embedder manually
+
+		`npm install git+ssh://git@github.exacttarget.com:uxarchitecture/svg-font-embedder.git`
+
+		**DO NOT** put this in package.json because it will cause heroku deploys to fail. Eventually this repo needs moved to github.com/salesforce-ux (or somewhere else that Heroku can see it)
+	- From the root directory of this project, run
 	
 		`node ./dev-assets/utilities/embed-fonts-in-svgs`
 
-    - By default the script will scan the `your-code-here/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
+	- By default the script will scan the `your-code-here/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
 
-    - To convert other project directories, add a directory path when running the script, thus: 
+	- To convert other project directories, add a directory path when running the script, thus: 
 	
 		`node ./dev-assets/utilities/embed-fonts-in-svgs ./some/project/path`
 
