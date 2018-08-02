@@ -269,7 +269,17 @@ const makeModalContentsHeaderTagline = (data) => (`
 `);
 
 
-const makeModalContentsChart = (data) => include('components/highcharts.lookalikes.ejs', { data });
+const makeModalContentsChart = (data) => include(
+	'components/highcharts.lookalikes.ejs', 
+	{ 
+		...data, 
+		width: '510px', 
+		height: '268px',
+		selectCallback: (event) => {
+			document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+		}
+	}
+);
 
 const makeModalContentsMain = (data) => (`
 	<div class="slds-text-heading_medium">
@@ -293,14 +303,14 @@ const makeModalContentsMain = (data) => (`
 		<div class="slds-col slds-size_3-of-5">
 			${makeModalContentsChart(data)} 
 		</div>
-		<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left">
+		<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-p-top_small">
 			${makeTable(data)} 
 		</div>
 	</div>
 `);
 const makeModalContentsFooter = (data) => (`
-	<button class="slds-button slds-button_neutral">Cancel</button>
-	<button onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
+	<button disabled class="slds-button slds-button_neutral">Cancel</button>
+	<button disabled onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
 `);
 
 const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(panel), '');
@@ -335,7 +345,7 @@ const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(pan
 
 <%- include('components/toast', {
 	contents: '',
-	title: '‘High Value Customer Lookalike’ segment successfully creatred.',
+	title: '‘High Value Customer Lookalike’ segment successfully created.',
 	theme: 'success'			
 }) %>
 
