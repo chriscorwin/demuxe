@@ -23,7 +23,8 @@ function locationHashChanged( ) {
 		clicks = 0;
 		window.location.hash = `#${clicks}`;
 	}
-	$ss.src = `/magick-flows/${demoMagickFlowDirectoryName}/${clicks}.svg`;
+	console.log("`/magick-flows/${demoMagickFlowDirectoryName}/${magickFlowConfig.screens[clicks]}: ", `/magick-flows/${demoMagickFlowDirectoryName}/${magickFlowConfig.screens[clicks]}`);
+	$ss.src = `/magick-flows/${demoMagickFlowDirectoryName}/${magickFlowConfig.screens[clicks]}`;
 }
 
 window.onhashchange = locationHashChanged;
