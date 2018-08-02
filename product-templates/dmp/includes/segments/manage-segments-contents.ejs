@@ -230,13 +230,23 @@
 
 	const panels = locals.localization.panels.default;
 
-	if (locals.localization.panels.additional && locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === 'successToast') {
-		locals.localization.panels.additional.forEach((panel) => {
-			if (!panels.includes(panel)) {
-				panels.unshift(panel)
-			}			
-		});	
+	if (locals.localization.panels.additional) {
+		if (locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === 'successToast') {
+			locals.localization.panels.additional.forEach((panel) => {
+				if (!panels.includes(panel)) {
+					panels.unshift(panel)
+				}
+			});	
+		} else {
+			locals.localization.panels.additional.forEach((panel) => {
+				if (panels.includes(panel)) {
+					var panelIndex = panels.indexOf(panel);
+					panels.splice(panelIndex, 1);
+				}
+			});	
+		}
 	}
+
 
 	const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(panel), '');
 %>
