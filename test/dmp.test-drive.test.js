@@ -9,10 +9,13 @@ const differencify = new Differencify({
 	mismatchThreshold: settings.tests.mismatchThreshold || 0.001
 });
 
-const getOptions = (step) => ({
-	fullPage: true,
-	path: `${settings.tests.imageSnapshotPath}dmp.main-flow.${step}.png`
+const getMatchOptions = (step) => ({
+	imgName: `dmp.main-flow.${step}`
 });
+
+const getScreenshotOptions = () => ({
+	fullPage: true
+})
 
 describe('DMP Demo Flow', function () {
 	this.timeout(settings.tests.timeout);
@@ -38,72 +41,72 @@ describe('DMP Demo Flow', function () {
 			// START - OVERVIEW PAGE - SLIDE 28
 			.goto(testhost)
 			.waitFor('body')
-			.screenshot(getOptions('0001.overview'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0001.overview'))
 			.result(handleResult)
 			// SCROLL DOWN ON OVERVIEW PAGE - SLIDE 29
 			.evaluate(_ => {
 				window.scrollBy(0, window.innerHeight);
 			})
 			.waitFor(2000)
-			.screenshot(getOptions('0002.overview'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0002.overview'))
 			.result(handleResult)
 			// GOTO DATA STUDIO - SLIDE 30 & 31
 			.click('#data-studio')
 			.waitFor('body')
-			.screenshot(getOptions('0100.data-studio'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0100.data-studio'))
 			.result(handleResult)
 			// GOTO SEGMENTS - SLIDE 31 & 32
 			.click('#segments-global-nav-link')
 			.waitFor('body')
-			.screenshot(getOptions('0200.segments'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0200.segments'))
 			.result(handleResult)
 			// CLICK COG ON HIGH VALUE CUSTOMERS ITEM
 			.click('.slds-panel-box__header:nth-of-type(1) .slds-panel-box__header-settings')
 			.waitFor(200)
-			.screenshot(getOptions('0201.segments'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0201.segments'))
 			.result(handleResult)
 			// CLICK LOOKALIKE IN DROPDOWN MENU
 			.click('.slds-panel-box__header:nth-of-type(1) .slds-panel-box__header-dropdown .slds-dropdown__item:nth-of-type(4)')
 			.waitFor(200)
-			.screenshot(getOptions('0210.segments.lookalike'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0210.segments.lookalike'))
 			.result(handleResult)
 			// HOVER OVER MODERATELY SIMILAR
 			// CLICK MODERATELY SIMILAR
 			// .click('#lookalikes-chart .highcharts-root > .highcharts-series-group > .highcharts-series > path.highcharts-point:nth-of-type(7)')
 			.click('#lookalikes-chart') // HACK BECAUSE SVG UGH
 			.waitFor(200)
-			.screenshot(getOptions('0212.segments.lookalike'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0212.segments.lookalike'))
 			.result(handleResult)
 			// CLICK CREATE LOOKALIKE SEGMENT
 			.click('.slds-button.slds-button_brand')
 			.waitFor('body')
-			.screenshot(getOptions('0300.segments.build-standard-segment'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0300.segments.build-standard-segment'))
 			.result(handleResult)
 			// SELECT "MARKETING CLOUD" IN ACTIVATION
 			.click('#checkbox7wrapper')
 			.waitFor('body')
-			.screenshot(getOptions('0301.segments.build-standard-segment'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0301.segments.build-standard-segment'))
 			.result(handleResult)
 			// SELECT "DOUBLE CLICK" IN ACTIVATION
 			.click('#checkbox6wrapper')
 			.waitFor('body')
-			.screenshot(getOptions('0302.segments.build-standard-segment'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0302.segments.build-standard-segment'))
 			.result(handleResult)
 			// CLICK "SAVE" AND GET TAKEN BACK TO SEGMENTS
 			.click('#saveButton')
 			.waitFor('body')
-			.screenshot(getOptions('0400.segments.manage-segments'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0400.segments.manage-segments'))
 			.result(handleResult)
 
 			// This is currently outside of our demo flow.
@@ -111,8 +114,8 @@ describe('DMP Demo Flow', function () {
 			// CLICK EINSTEIN SEGMENTATION LINK
 			.goto(`${testhost}insights/einstein-segmentation`)
 			.waitFor('body')
-			.screenshot(getOptions('XXXX.einstein'))
-			.toMatchSnapshot()
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('XXXX.einstein'))
 			.result(handleResult)
 			// CLICK CREATE A NEW SEGMENT USING THIS PERSONA
 			.close()
