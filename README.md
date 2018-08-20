@@ -255,3 +255,4 @@ Components:
 Past demos utilizing this boilerplate (add yours here!)
 
 [Connections 2018 DMP Demo](https://github.exacttarget.com/uxarchitecture/cnx-dmp-2018)
+[Laulima 2018 DMP Demo - Crocks](https://laulima-2018-dmp.herokuapp.com/)
