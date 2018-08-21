@@ -1,6 +1,6 @@
-const panels = require('./panels.js');
+const segments = require('./segments');
 
 module.exports = {
 	"NAME": "BBVA",
-	panels
+	segments
 };
