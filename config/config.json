@@ -1,6 +1,6 @@
 {
-	"brandTheme": "crocks",
-	"demoName": "Laulima Crocks Demo (production)",
+	"brandTheme": "bbva",
+	"demoName": "Laulima BBVA Demo (production)",
 	"demoVersion": "0.1",
 	"demoMagickFlows": {},
 	"demoMagickFlowUrlSlugs": [],
@@ -8,13 +8,13 @@
 	"env": "production",
 	"productTemplate": "dmp",
 	"prod": {
-		"host": "https://your-demo.herokuapp.com/"
+		"host": "https://dmp-dreamforce-2018.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://your-demo-qa.herokuapp.com/"
+		"host": "https://dmp-dreamforce-2018-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://your-demo-dev.herokuapp.com/"
+		"host": "https://dmp-dreamforce-2018-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
