@@ -105,6 +105,7 @@ describe('DMP Demo Flow', function () {
 			// CLICK "SAVE" AND GET TAKEN BACK TO SEGMENTS
 			.click('#saveButton')
 			.waitFor('body')
+			.waitFor(2000)
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0400.segments.manage-segments'))
 			.result(handleResult)

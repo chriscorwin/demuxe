@@ -228,17 +228,17 @@
 		<button disabled onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
 	`);
 
-	const panels = locals.localization.panels.default;
+	const panels = locals.localization.segments.default;
 
-	if (locals.localization.panels.additional) {
+	if (locals.localization.segments.additional) {
 		if (locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === 'successToast') {
-			locals.localization.panels.additional.forEach((panel) => {
+			locals.localization.segments.additional.forEach((panel) => {
 				if (!panels.includes(panel)) {
 					panels.unshift(panel)
 				}
 			});	
 		} else {
-			locals.localization.panels.additional.forEach((panel) => {
+			locals.localization.segments.additional.forEach((panel) => {
 				if (panels.includes(panel)) {
 					var panelIndex = panels.indexOf(panel);
 					panels.splice(panelIndex, 1);
