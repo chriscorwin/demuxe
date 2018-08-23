@@ -1,0 +1,125 @@
+<%
+
+const randomId = `folderview-${Math.floor(Math.random() * 10000)}`;
+locals.id = locals.id || randomId;
+locals.comboboxId = locals.comboboxId || `combobox-${locals.id}` || randomId;
+locals.listboxId = locals.listboxId || `listbox-${locals.id}` || randomId;
+
+%>
+
+<style>
+.folder-view {
+    position: static;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    border: 1px solid #dddbda;
+    border-radius: 0.25rem;
+    width: 100%;
+    transition: border 0.1s linear, background-color 0.1s linear;
+    display: inline-block;
+    line-height: 1.875rem;
+    min-height: calc(1.875rem + (1px * 2));
+    border-color: #dddbda;
+    background-color: white;
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.folder-view .slds-input:focus, .folder-view .slds-input:active {
+    box-shadow: none;
+}
+
+.folder-view__form-element {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.folder-view .slds-input-has-icon .slds-input__icon {
+    top: 1rem;
+}
+
+.folder-view [role=listbox] {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.1s linear, visibility 0.1s linear;
+    transition: opacity 0.1s linear, visibility 0.1s linear;
+}
+
+.folder-view.slds-is-open [role=listbox] {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.folder-view .closed, .folder-view.slds-is-open .opened {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.folder-view.slds-is-open .closed, .folder-view .opened {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+</style>
+
+<div class="<%= locals.wrapperClasses ? locals.wrapperClasses: 'slds-m-vertical_small' %>">
+	<div id="<%= locals.comboboxId %>" class="folder-view">
+		<div class="folder-view__form-element slds-input-has-icon slds-input-has-icon_left-right" role="none">
+			<span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_left" title="Description of icon when needed">
+				<svg class="closed slds-icon slds-icon_x-small slds-icon-text-default">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#open_folder" />
+				</svg>
+				<svg class="opened slds-icon slds-icon_x-small slds-icon-text-default">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#opened_folder" />
+				</svg>
+			</span>	
+			<input type="text" class="slds-input folder-view__input" style="cursor: pointer;" id="<%= locals.comboboxId %>-input" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Select an Option" readonly="" />
+			<span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
+				<svg class="closed slds-icon slds-icon_x-small slds-icon-text-default">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#down" />
+				</svg>
+				<svg class="opened slds-icon slds-icon_x-small slds-icon-text-default">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#up" />
+				</svg>
+			</span>
+			<div id="<%= locals.listboxId  %>" role="listbox">
+				<ul class="slds-listbox slds-listbox_vertical" role="presentation">
+					<li role="presentation" class="slds-listbox__item">
+						<div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+							<span class="slds-media__figure">
+								<svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#check" />
+								</svg>
+							</span>
+							<span class="slds-media__body">
+							<span class="slds-truncate" title="Option A"> Option A</span>
+							</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	const combobox = document.querySelector(`#<%= locals.comboboxId %>`);	
+	const comboboxInput = document.querySelector(`#<%= locals.comboboxId %>-input`);
+
+	comboboxInput.addEventListener('click', () => {
+		if (combobox.classList.contains('slds-is-open')) {
+			combobox.classList.remove('slds-is-open');
+		} else {
+			combobox.classList.add('slds-is-open');
+		}
+	});
+
+</script>
