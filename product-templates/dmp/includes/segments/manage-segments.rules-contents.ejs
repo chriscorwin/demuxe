@@ -8,7 +8,25 @@
 				<%- include('includes/components/slds-ui/search', {
 					placeholder: 'Search Attributes'			
 				}) %>
-				<%- include('components/folder-view.ejs') %>
+				<%- include('components/folder-view.ejs', {
+					text: '1st Party',
+					isFolder: false,
+					customColor: {
+						color: '#fff',
+						background: 'purple'
+					}
+				}) %>
+				<%- include('components/folder-view.ejs', {
+					options: [
+						'Option A',
+						'Option B',
+						'Option C'
+					],
+					text: 'CRM'
+				}) %>
+				<%- include('components/folder-view.ejs', {
+					text: 'Salesforce Marketing Cloud'
+				}) %>
 			</div>
 		</div>
 	</div>
