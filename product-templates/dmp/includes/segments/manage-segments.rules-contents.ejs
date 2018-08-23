@@ -16,16 +16,21 @@
 						background: 'purple'
 					}
 				}) %>
+				<%- include('components/folder-view.ejs', { text: 'CRM' }) %>
+				<%- include('components/folder-view.ejs', { text: 'Salesforce Marketing Cloud' }) %>
+				<%- include('components/folder-view.ejs', { text: 'Media' }) %>
+				<%- include('components/folder-view.ejs', { text: 'Transaction' }) %>
 				<%- include('components/folder-view.ejs', {
 					options: [
-						'Option A',
-						'Option B',
-						'Option C'
+						'Models',
+						'Equipments',
+						'Racing',
+						'Experience',
+						'Deals & Services Viewed',
+						'Configurator Usage',
+						'Editorial'
 					],
-					text: 'CRM'
-				}) %>
-				<%- include('components/folder-view.ejs', {
-					text: 'Salesforce Marketing Cloud'
+					text: 'Site Behavior'
 				}) %>
 			</div>
 		</div>
