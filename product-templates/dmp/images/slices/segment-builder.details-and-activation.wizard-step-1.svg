@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200px" height="100px" viewBox="0 0 1200 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>segment-builder-details-and-activation.wizard-step-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Segment-Builder-1" transform="translate(-40.000000, -205.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1381"></rect>
+            <rect id="Rectangle-25" stroke="#E0E5EE" fill="#FFFFFF" x="40.5" y="205.5" width="1199" height="99" rx="4"></rect>
+            <text id="Rules" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#536D95">
+                <tspan x="84" y="296">Rules</tspan>
+            </text>
+            <text id="Details-&amp;-Activation" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#536D95">
+                <tspan x="568.952" y="296">Details &amp; Activation</tspan>
+            </text>
+            <text id="Confirmation" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#536D95">
+                <tspan x="1125.82" y="296">Confirmation</tspan>
+            </text>
+            <path d="M104.5,254 L1176.5042,254" id="Line-3" stroke="#E2E6ED" stroke-width="2" stroke-linecap="square"></path>
+            <circle id="Oval-4" stroke="#D8DDE6" fill="#0070D2" cx="105" cy="254" r="18.5"></circle>
+            <text id="1" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#FFFFFF">
+                <tspan x="99" y="263">1</tspan>
+            </text>
+            <circle id="Oval-4-Copy" stroke="#D8DDE6" fill="#FFFFFF" cx="640" cy="254" r="19"></circle>
+            <circle id="Oval-4-Copy-2" stroke="#D8DDE6" fill="#FFFFFF" cx="1175" cy="254" r="18.5"></circle>
+            <text id="2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#536D95">
+                <tspan x="634" y="264">2</tspan>
+            </text>
+            <text id="3" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#536D95">
+                <tspan x="1169" y="264">3</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
