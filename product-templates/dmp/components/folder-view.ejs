@@ -62,6 +62,23 @@ locals.listboxId = locals.listboxId || `listbox-${locals.id}` || randomId;
     opacity: 1;
 }
 
+.folder-view .letter-box-icon-thing {
+	color: #8ABED5;
+    border: 1px solid #DAE6EB;
+    padding: 13px 0px 0px 3px;
+    line-height: 0;
+    font-size: 12px;
+    height: 22px;
+    width: 16px;
+    display: block;
+    border-radius: 2px;
+}
+
+.folder-view .slds-listbox__item .slds-media {
+	border: 1px solid #E0E5EE;
+	border-radius: 4px;
+}
+
 .folder-view .closed, .folder-view.slds-is-open .opened {
     display: block;
     visibility: visible;
@@ -104,16 +121,14 @@ locals.listboxId = locals.listboxId || `listbox-${locals.id}` || randomId;
 			</span>
 			<div id="<%= locals.listboxId  %>" role="listbox">
 				<ul class="slds-listbox slds-listbox_vertical" role="presentation">
-					<%- locals.options && locals.options.reduce((options, option) => options + `
-						<li role="presentation" class="slds-listbox__item">
-							<div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+					<%- locals.options && locals.options.reduce((options, option, i) => options + `
+						<li role="presentation" class="slds-listbox__item slds-p-vertical_xx-small slds-p-horizontal_small">
+							<div id="listbox-option-${locals.listboxId}-${i}" class="slds-media slds-media_small slds-media_center slds-p-horizontal_x-small" role="option">
 								<span class="slds-media__figure">
-									<svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#check" />
-									</svg>
+									<span class="letter-box-icon-thing slds-m-right_xxx-small">${option.icon ? option.icon : 'P'}</span>
 								</span>
 								<span class="slds-media__body">
-								<span class="slds-truncate" title="${option}"> ${option}</span>
+									<span class="slds-truncate" title="${option.text}">${option.text}</span>
 								</span>
 							</div>
 						</li>
