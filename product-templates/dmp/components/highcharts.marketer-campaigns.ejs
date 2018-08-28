@@ -20,38 +20,31 @@ Highcharts must be included on page prior to this running
 </style>
 
 <div class="slds-panel-box">
-	<div class="slds-panel-box__header slds-p-around_small">Marketer Campaigns
+	<div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.marketer_campaigns.title %>
 		<img class="icon slds-float_right" src="/images/settings.svg" />
 	</div>
 	<div class="slds-panel-box__body">
 		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
-			<button class="slds-button slds-button_neutral">Top 5
+			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.marketer_campaigns.buttons[0].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
-			<button class="slds-button slds-button_neutral">By Impressions
+			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.marketer_campaigns.buttons[1].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
-			<button style="float: right;" class="slds-button slds-button_neutral">Last 30 days
+			<button style="float: right;" class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.marketer_campaigns.buttons[2].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
 		</div>
 		<div id="marketer-campaigns-chart" style="width:100%; height:268px;"></div>
 		<div class="slds-grid slds-text-body_small slds-p-around_medium" id="marketer-campaigns-chart-legend"></div>
 		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
-			<a href="javascript:void(0);">View All Marketer Campaigns</a>
+		<a href="<%- locals.localization.overview.panels.marketer_campaigns.view_all.href %>"><%- locals.localization.overview.panels.marketer_campaigns.view_all.text %></a>
 		</div>
 	</div>
 </div>
 
 <script type="text/javascript">
-const spendData = [
-	{ x: 240, y: 2250, z: 77, name: 'Display', color: '#0857A6' },
-	{ x: 990, y: 2250, z: 56, name: 'Video', color: '#C398F5' },
-	{ x: 370, y: 1400, z: 48, name: 'Email', color: '#5208A6' }, // Email on left
-	{ x: 810, y: 870, z: 59, name: 'Mobile', color: '#197EE3' },
-	{ x: 560, y: 1900, z: 27, name: 'Email', color: '#7719E3' } // Email on right
-
-];
+const spendData = <%- JSON.stringify(locals.localization.overview.panels.marketer_campaigns.graph.spend_data) %>;
 
 // Gets options for the Cumulative 1st Party Overview chart
 const getSpendOptions = () => {
@@ -74,36 +67,24 @@ const getSpendOptions = () => {
 		xAxis: {
 			gridLineWidth: 0,
 			labels: {
-				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
-				formatter: function formatter () {
-					if (this.value < 1000) {
-						return this.value + 'K';
-					}
-					return (this.value / 1000) + 'M';
-				}
+				formatter: <%- locals.localization.overview.panels.marketer_campaigns.graph.x_axis.formatter %>
 			},
 			title: {
-				text: 'Impressions'
+				text: '<%- locals.localization.overview.panels.marketer_campaigns.graph.x_axis.title %>'
 			}
 		},
 		yAxis: {
-			tickInterval: 500,
+			gridLineColor: '<%- locals.localization.overview.panels.marketer_campaigns.graph.y_axis.line_color %>',
+			labels: {
+				formatter: <%- locals.localization.overview.panels.marketer_campaigns.graph.y_axis.formatter %>
+			},
+			lineWidth: 1,
+			lineColor: '<%- locals.localization.overview.panels.marketer_campaigns.graph.y_axis.line_color %>',
 			softMin: 500,
 			softMax: 2500,
-			lineWidth: 1,
-			lineColor: '#E6EBF5',
-			gridLineColor: '#E6EBF5',
+			tickInterval: 500,
 			title: {
-				text: 'Spend ($)'
-			},
-			labels: {
-				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
-				formatter: function formatter () {
-					if (this.value < 1000) {
-						return this.value + 'K';
-					}
-					return (this.value / 1000) + 'M';
-				}
+				text: '<%- locals.localization.overview.panels.marketer_campaigns.graph.y_axis.title %>'
 			}
 		},
 		plotOptions: {
@@ -125,7 +106,7 @@ const getSpendOptions = () => {
 			shared: true,
 			useHTML: true,
 			headerFormat: '',
-			pointFormat: '<div style="width: 70px;"><div style="background-color: {point.color};height: 10px; width: 10px;border-radius: 5px;float: left;margin: 10px 10px 10px 4px;"></div> {point.name}<br />{point.y}K</div>',
+			pointFormat: '<%- locals.localization.overview.panels.marketer_campaigns.graph.tooltip %>',
 			footerFormat: '',
 			valueDecimals: 0
 		},
@@ -148,7 +129,7 @@ document.addEventListener("scroll", animateMarketerCampaigns);
 
 const makeMarketerCampaignsLegendRow = (data) => (`
 	<div class="slds-col slds-size_1-of-4">
-		<div class="circle small" style="background-color: ${data.color};"></div> ${data.name} campaign
+		<div class="circle small" style="background-color: ${data.color};"></div> ${data.name} <%- locals.localization.overview.panels.marketer_campaigns.graph.CAMPAIGN %>
 	</div>
 `);
 
