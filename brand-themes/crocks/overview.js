@@ -32,7 +32,66 @@ module.exports = {
 			}
 		},
 		dce : {
+			buttons: [
+				{ label: 'Last 30 days' }
+			],
+			explanation: 'Displaying data collection events across 1st party data sources only.',
+			graph: {
+				date_labels: [
+					'5/13',
+					'5/25',
+					'6/13'
+				],
+				device_data: [
+					450,
+					490,
+					490,
+					590,
+					590,
+					610,
+					660,
+					730,
+					660,
+					655,
+					650,
+					730,
+					740,
+					739,
+					780,
+					830,
+					890,
+					920,
+					910,
+					880,
+					890,
+					880,
+					860,
+					840,
+					820,
+					860,
+					880,
+					890,
+					920,
+					910
+				],
+				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+				label_formatter: function formatter () {
+					if (this.value === 400000) {
+						return '0K';
+					}
+					if (this.value < 1000000) {
+						return (this.value / 1000) + 'K';
+					}
+					return (this.value / 1000000) + 'M';
+				},
+				line_color: '#9961B4',
+				title: 'Data Capture Events (DCE)'
+			},
 			title: 'Data Capture Events (DCE)',
+			view_all: {
+				text: 'View All Data Capture Events',
+				href: 'javascript:void(0);'
+			}
 		},
 		dcm : {
 			title: 'Data Capture Methods',
