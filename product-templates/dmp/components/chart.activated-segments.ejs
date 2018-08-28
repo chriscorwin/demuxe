@@ -8,28 +8,28 @@
 </style>
 
 <div class="slds-panel-box">
-	<div class="slds-panel-box__header slds-p-around_small">Activated Segments
+	<div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.activated_segments.title %>
 		<img class="icon slds-float_right" src="/images/settings.svg" />
 	</div>
 	<div class="slds-panel-box__body">
 		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
-			<button class="slds-button slds-button_neutral">Top 5
+			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.activated_segments.buttons[0].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
-			<button class="slds-button slds-button_neutral">By Impressions
+			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.activated_segments.buttons[1].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
-			<button style="float: right;" class="slds-button slds-button_neutral">Last 30 days
+			<button style="float: right;" class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.activated_segments.buttons[2].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
 		</div>
 		<div class="slds-grid slds-wrap">
-			<div class="slds-col slds-size_3-of-4 slds-p-left_medium">SEGMENTS</div>
-			<div class="slds-col slds-size_1-of-4 slds-p-right_medium" style="text-align: right;">IMPRESSIONS</div>
+			<div class="slds-col slds-size_3-of-4 slds-p-left_medium"><%- locals.localization.overview.panels.activated_segments.column_headers[0] %></div>
+			<div class="slds-col slds-size_1-of-4 slds-p-right_medium" style="text-align: right;"><%- locals.localization.overview.panels.activated_segments.column_headers[1] %></div>
 			<div class="slds-col slds-size_1-of-1 slds-p-top_medium" id="activated-segments-graph"></div>
 		</div>
 		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
-			<a href="javascript:void(0);">View All Segments</a>
+			<a href="<%- locals.localization.overview.panels.activated_segments.view_all.href %>"><%- locals.localization.overview.panels.activated_segments.view_all.text %></a>
 		</div>
 	</div>
 </div>
@@ -48,66 +48,16 @@ const makeGraphLine = (data) => (`
 		</svg></div>
 	</div>`);
 
-const graphLines = [
-	{label: '<img src="/images/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
-	{label: 'Loyal_Shoppers_2016-2017_potential target', number: '4.7M', width: 308},
-	{label: '<img src="/images/icons/dollar.svg" /> Heavy spenders', number: '4M', width: 290},
-	{label: 'Deals_clicks_converts_group_deal-shoppers_2018', number: '3.7M', width: 270},
-	{label: 'Early_adopters', number: '2.3M', width: 186}
-];
-
-const graphLinesNtoGeneral = [
-	{label: '<img src="/images/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
-	{label: 'Loyal_Shoppers_2016-2017_potential target', number: '4.7M', width: 308},
-	{label: '<img src="/images/icons/dollar.svg" /> Heavy spenders', number: '4M', width: 290},
-	{label: 'Deals_clicks_converts_group_deal-shoppers_2018', number: '3.7M', width: 270},
-	{label: 'Early_adopters', number: '2.3M', width: 186}
-];
-const graphLinesNtoApparel = [
-	{label: '<img src="/images/icons/dollar.svg" /> Jacket Shoppers 2018', number: '7.1M', width: 432},
-	{label: 'Brand_loyals', number: '5.1M', width: 402},
-	{label: '<img src="/images/icons/dollar.svg" /> Group_Purchasers', number: '3.4M', width: 362},
-	{label: 'Deal Hunters 2018', number: '3.2M', width: 342},
-	{label: 'Outerwear High Value', number: '2.1M', width: 292}
-];
-const graphLinesNtoElectronics = [
-	{label: '<img src="/images/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
-	{label: 'In-Market_2017_potential target', number: '4.7M', width: 308},
-	{label: '<img src="/images/icons/dollar.svg" /> Heavy spenders', number: '4.7M', width: 308},
-	{label: 'Deals_clicks_converts_group_deal-shoppers_2018', number: '3.7M', width: 267},
-	{label: 'Early_adopters', number: '2.3M', width: 186}
-];
-
+const graphLines = <%- JSON.stringify(locals.localization.overview.panels.activated_segments.segments) %>;
 const makeGraphLines = () => graphLines.reduce((lines, line) => lines + makeGraphLine(line), '');
-const makeGraphLinesNtoApparel = () => graphLinesNtoApparel.reduce((lines, line) => lines + makeGraphLine(line), '');
-const makeGraphLinesNtoElectronics = () => graphLinesNtoElectronics.reduce((lines, line) => lines + makeGraphLine(line), '');
-const makeGraphLinesNtoGeneral = () => graphLinesNtoGeneral.reduce((lines, line) => lines + makeGraphLine(line), '');
-
-if (navData.accountParam === 'nto-electronics') {
-	document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoElectronics();
-} else if (navData.accountParam === 'nto-apparel') {
-	document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoApparel();
-} else if (navData.accountParam === 'nto-general') {
-	document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoGeneral();
-} else {
-	document.querySelector('#activated-segments-graph').innerHTML = makeGraphLines();
-}
-
+document.querySelector('#activated-segments-graph').innerHTML = makeGraphLines();
 
 let triggeredSegmentsGraphAnimation = false;
 const animateSegmentsGraph = () => {
 	if (window.scrollY > 1 && !triggeredSegmentsGraphAnimation) {
 		triggeredSegmentsGraphAnimation = true;
 
-		if (navData.accountParam === 'nto-electronics') {
-			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoElectronics();
-		} else if (navData.accountParam === 'nto-apparel') {
-			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoApparel();
-		} else if (navData.accountParam === 'nto-general') {
-			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLinesNtoGeneral();
-		} else {
-			document.querySelector('#activated-segments-graph').innerHTML = makeGraphLines();
-		}
+		document.querySelector('#activated-segments-graph').innerHTML = makeGraphLines();
 	}
 };
 
