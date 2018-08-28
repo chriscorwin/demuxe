@@ -5,62 +5,31 @@ Highcharts must be included on page prior to this running
 -->
 
 <div class="slds-panel-box" style="margin-top: 1.5em;">
-	<div class="slds-panel-box__header slds-p-around_small">Data Capture Events (DCE)
+	<div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.dce.title %>
 		<img class="icon slds-float_right" src="/images/settings.svg" />
 	</div>
 	<div class="slds-panel-box__body">
 		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
-			<button class="slds-button slds-button_neutral">Last 30 days
+			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.dce.buttons[0].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
 		</div>
-		<p class="slds-m-around_medium">Displaying data collection events across 1st party data sources only.</p>
+		<p class="slds-m-around_medium"><%- locals.localization.overview.panels.dce.explanation %></p>
 		<div id="chart" style="width:100%; height:300px;"></div>
 		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
-			<a href="javascript:void(0);">View All Data Capture Events</a>
+			<a href="<%- locals.localization.overview.panels.dce.view_all.href %>"><%- locals.localization.overview.panels.dce.view_all.text %></a>	
 		</div>
 	</div>
 </div>
 
 <script type="text/javascript">
-const deviceData = [
-	450,
-	490,
-	490,
-	590,
-	590,
-	610,
-	660,
-	730,
-	660,
-	655,
-	650,
-	730,
-	740,
-	739,
-	780,
-	830,
-	890,
-	920,
-	910,
-	880,
-	890,
-	880,
-	860,
-	840,
-	820,
-	860,
-	880,
-	890,
-	920,
-	910
-];
+	const deviceData = <%- JSON.stringify(locals.localization.overview.panels.dce.graph.device_data) %>;
 
 const getCumulativeData = () => {
 	return [
 		{
 			data: deviceData.map((data) => data * 1000),
-			color: '#9961B4',
+			color: '<%- locals.localization.overview.panels.dce.graph.line_color %>',
 			lineWidth: 3,
 			linecap: 'square',
 			marker: {
@@ -71,11 +40,7 @@ const getCumulativeData = () => {
 };
 
 const categories = deviceData.map((data, i) => {
-	const dateLabel = [
-		'5/13',
-		'5/25',
-		'6/13'
-	];
+	const dateLabel = <%- JSON.stringify(locals.localization.overview.panels.dce.graph.date_labels) %>;
 	const label = Math.floor(i / 10);
 	return dateLabel[label];
 }, []);
@@ -119,19 +84,10 @@ const getCumulativeOptions = () => {
 			lineColor: '#eee',
 			gridLineColor: '#eee',
 			title: {
-				text: 'Data Capture Events (DCE)'
+				text: '<%- locals.localization.overview.panels.dce.graph.title %>'
 			},
 			labels: {
-				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
-				formatter: function formatter () {
-					if (this.value === 400000) {
-						return '0K';
-					}
-					if (this.value < 1000000) {
-						return (this.value / 1000) + 'K';
-					}
-					return (this.value / 1000000) + 'M';
-				}
+				formatter: <%- locals.localization.overview.panels.dce.graph.label_formatter %>
 			}
 		},
 		plotOptions: {
