@@ -1,16 +1,16 @@
 <div id="top" class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch">
     <div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
         <div class="slds-panel-box">
-            <div class="slds-panel-box__header slds-p-around_small">Audience Population
+            <div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.audience_population.title %>
                 <img class="icon slds-float_right" src="/images/settings.svg" />
             </div>
             <div class="slds-panel-box__body" style="background-color: white;">
                 <div class="slds-grid slds-panel-box__sub-header slds-m-bottom_medium">
-                    <div class="slds-col slds-p-around_small slds-size_1-of-2" style="text-align: center; border-bottom: 2px solid #0070D2;">This Month (Aug 1 &mdash; Aug 7, 2018)</div>
-                    <div class="slds-col slds-p-around_small slds-size_1-of-2" style="text-align: center">Last Month (Jul 1 &mdash; Jul 31, 2018)</div>
+                    <div class="slds-col slds-p-around_small slds-size_1-of-2" style="text-align: center; border-bottom: 2px solid #0070D2;"><%- locals.localization.overview.panels.audience_population.tabs[0].label %></div>
+                    <div class="slds-col slds-p-around_small slds-size_1-of-2" style="text-align: center"><%- locals.localization.overview.panels.audience_population.tabs[1].label %></div>
                 </div>
                 <div class="slds-grid slds-wrap slds-p-around_medium" style="height: 273px;">
-                    <img id="index-audience-segments-population" style="margin: 0px auto;" src="/images/slices/index.audience-segments-population.svg" />
+                    <img id="index-audience-segments-population" style="margin: 0px auto;" src="<%- locals.localization.overview.panels.audience_population.img %>" />
                 </div>
                 <div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;" class="slds-p-around_medium slds-grid">
                     <div class="slds-col slds-size_1-of-2" style="margin-top: -4px;">

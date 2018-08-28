@@ -5,7 +5,7 @@ const navigate = () => {
 
 const $grid = document.querySelector('#grid');
 for (var i = 0; i < 20; i++) {
-	$grid.insertAdjacentHTML('beforeend', `<div class="slds-col slds-p-horizontal_small slds-m-bottom_small slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-3 slds-large-size_1-of-4"><img id="card${i}" class="card" src="/img/slices/cards/card.${i}.svg" /></div>`);
+	$grid.insertAdjacentHTML('beforeend', `<div class="slds-col slds-p-horizontal_small slds-m-bottom_small slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-3 slds-large-size_1-of-4"><img id="card${i}" class="card" src="/images/slices/cards/card.${i}.svg" /></div>`);
 	document.querySelector('#card' + i).onclick = (e) => {
 		// e.target.onclick = () => {
 		//  window.location = '';
