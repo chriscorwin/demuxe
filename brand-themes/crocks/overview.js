@@ -138,11 +138,52 @@ module.exports = {
 				href: 'javascript:void(0);'
 			}
 		},
-		marketer_campaigns : {
+		marketer_campaigns: {
+			buttons: [
+				{ label: 'Top 5' },
+				{ label: 'By Impressions' },
+				{ label: 'Last 30 days' }
+			],
+			graph: {
+				CAMPAIGN: 'campaign',
+				spend_data: [
+					{ x: 240, y: 2250, z: 77, name: 'Display', color: '#0857A6' },
+					{ x: 990, y: 2250, z: 56, name: 'Video', color: '#C398F5' },
+					{ x: 370, y: 1400, z: 48, name: 'Email', color: '#5208A6' }, // Email on left
+					{ x: 810, y: 870, z: 59, name: 'Mobile', color: '#197EE3' },
+					{ x: 560, y: 1900, z: 27, name: 'Email', color: '#7719E3' } // Email on right
+				],
+				tooltip: '<div style="width: 70px;"><div style="background-color: {point.color};height: 10px; width: 10px;border-radius: 5px;float: left;margin: 10px 10px 10px 4px;"></div> {point.name}<br />{point.y}K</div>',
+				x_axis: {
+					// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+					formatter: function formatter () {
+						if (this.value < 1000) {
+							return this.value + 'K';
+						}
+						return (this.value / 1000) + 'M';
+					},
+					title: 'Impressions'
+				},
+				y_axis: {
+					// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+					formatter: function formatter () {
+						if (this.value < 1000) {
+							return this.value + 'K';
+						}
+						return (this.value / 1000) + 'M';
+					},
+					line_color: '#E6EBF5',
+					title: 'Spend ($)'
+				}
+			},
 			title: 'Marketer Campaigns',
+			view_all: {
+				text: 'View All Marketer Campaigns',
+				href: 'javascript:void(0);'
+			}
 		},
 		activation_partners : {
-			title: 'Activation Partners',
+			title: 'Activation Partners'
 		}
 	}
-}
+};
