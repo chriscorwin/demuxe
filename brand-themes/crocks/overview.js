@@ -94,7 +94,49 @@ module.exports = {
 			}
 		},
 		dcm : {
+			buttons: [
+				{ label: 'By Data Capture Events' },
+				{ label: 'Last 30 days' }
+			],
+			manage_consumer_rights: {
+				text: 'Manage Consumer Rights',
+				href: 'javascript:void(0);',
+				on_click: "navigatePage('/consumer-rights-management.html');"
+			},
+			graph: {
+				methods: [
+					{
+						name: 'Control Tags - Website',
+						y: 100,
+						color: '#F69E5A'
+					},
+					{
+						name: 'Media Tracker',
+						y: 78,
+						color: '#B896FA'
+					},
+					{
+						name: 'Click Tracker',
+						y: 60,
+						color: '#EA78BB'
+					},
+					{
+						name: '1st Party Consent',
+						y: 59,
+						color: '#70ABEA'
+					},
+					{
+						name: 'Email 1X1',
+						y: 28,
+						color: '#63B6B0'
+					}
+				]
+			},
 			title: 'Data Capture Methods',
+			view_all: {
+				text: 'View All Data Capture Methods',
+				href: 'javascript:void(0);'
+			}
 		},
 		marketer_campaigns : {
 			title: 'Marketer Campaigns',
