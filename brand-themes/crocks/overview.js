@@ -183,7 +183,24 @@ module.exports = {
 			}
 		},
 		activation_partners : {
-			title: 'Activation Partners'
+			buttons: [
+				{ label: 'Top 5' },
+				{ label: 'By Devices Sent' },
+				{ label: 'June 13, 2018' }
+			],
+			table_rows: [
+				{partner: 'ACTIVATION PARTNERS', type: 'REFRESH TYPE', sent: 'DEVICES SENT'},
+				{partner: '<img src="/images/logos/logo-dblclick-bm.svg" />', type: 'Full', sent: '9M'},
+				{partner: '<img src="/images/logos/sf.svg" />', type: 'Full', sent: '8.75M'},
+				{partner: '<img src="/images/logos/appnexus.svg" />', type: 'Incremental', sent: '7M'},
+				{partner: '<img src="/images/logos/youtube.svg" />', type: 'Incremental', sent: '6.8M'},
+				{partner: '<img src="/images/logos/pinterest.svg" />', type: 'Full', sent: '6M'}
+			],
+			title: 'Activation Partners',
+			view_all: {
+				text: 'View All Activation Partners',
+				href: 'javascript:void(0);'
+			}
 		}
 	}
 };
