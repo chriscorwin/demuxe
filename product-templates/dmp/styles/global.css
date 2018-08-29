@@ -256,23 +256,6 @@ HEADER AREA
   margin: 0 auto;
 }
 
-.slds-panel-box {
-  border: 1px solid #E0E5EE;
-  border-radius: 4px;
-}
-
-.slds-panel-box__header {
-  border-radius: 4px 0 0 4px;
-  background-color: #F4F6F9;
-  font-size: 16px;
-  color: #16325C;
-}
-
-.slds-panel-box__header svg, .slds-panel-box__header img {
-  fill: #54698D;
-  width: 16px;
-}
-
 .slds-tabs_default__nav,
 .slds-tabs--default__nav {
   border-bottom: 2px solid #FFF;
@@ -452,4 +435,22 @@ body {
 .slds-global-header__logo {
   width: 3rem;
   height: unset;
+}
+
+.slds-panel-box {
+  border: 1px solid #E0E5EE;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.slds-panel-box__header {
+  border-radius: 4px 4px 0 0;
+  background-color: #F4F6F9;
+  font-size: 16px;
+  color: #16325C;
+}
+
+.slds-panel-box__header svg, .slds-panel-box__header img {
+  fill: #54698D;
+  width: 16px;
 }
