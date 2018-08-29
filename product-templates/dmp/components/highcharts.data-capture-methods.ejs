@@ -27,58 +27,32 @@ Highcharts must be included on page prior to this running
 	}
 </style>
 <div class="slds-panel-box" style="margin-top: 1.5em;">
-	<div class="slds-panel-box__header slds-p-around_small">Data Capture Methods
-		<img class="icon" src="/images/settings.svg" />
+	<div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.dcm.title %>
+		<img class="icon slds-float_right" src="/images/settings.svg" />
 	</div>
 	<div class="slds-grid slds-wrap slds-panel-box__body">
 		<div class="slds-col slds-size_1-of-1 slds-panel-box__sub-header slds-p-around_small">
-			<button class="slds-button slds-button_neutral">By Data Capture Events
+			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.dcm.buttons[0].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
-			<button style="float: right;" class="slds-button slds-button_neutral">Last 30 days
+			<button style="float: right;" class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.dcm.buttons[1].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
 		</div>
 		<div class="slds-col slds-size_1-of-3" id="data-capture-methods-chart" style="height:351px;"></div>
 		<div class="slds-col slds-size_2-of-3 slds-p-horizontal_large slds-p-vertical_x-large" id="consent-distribution-graph-legend"></div>
 		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small slds-col slds-size_1-of-1">
-			<a href="javascript:void(0);">View All Data Capture Methods</a>
+		<a href="<%- locals.localization.overview.panels.dcm.view_all.href %>"><%- locals.localization.overview.panels.dcm.view_all.text %></a>
 			<span class="slds-m-horizontal_medium" style="height: 16px; width: 1px; border-left: 1px solid #D8DDE6;"></span>
-			<a id="consumer-rights-management-click-target" href="javascript:void(0);" onclick="navigatePage('/consumer-rights-management.html');">
-				Manage Consumer Rights
+			<a id="consumer-rights-management-click-target" href="<%- locals.localization.overview.panels.dcm.manage_consumer_rights.href %>" onclick="<%- locals.localization.overview.panels.dcm.manage_consumer_rights.on_click %>">
+			<%- locals.localization.overview.panels.dcm.manage_consumer_rights.text %>
 			</a>
 		</div>
 	</div>
 </div>
 
 <script type="text/javascript">
-	const dataCaptureMethodsData = [
-	{
-		name: 'Control Tags - Website',
-		y: 100,
-		color: '#F69E5A'
-	},
-	{
-		name: 'Media Tracker',
-		y: 78,
-		color: '#B896FA'
-	},
-	{
-		name: 'Click Tracker',
-		y: 60,
-		color: '#EA78BB'
-	},
-	{
-		name: '1st Party Consent',
-		y: 59,
-		color: '#70ABEA'
-	},
-	{
-		name: 'Email 1X1',
-		y: 28,
-		color: '#63B6B0'
-	}
-];
+	const dataCaptureMethodsData = <%- JSON.stringify(locals.localization.overview.panels.dcm.graph.methods) %>;
 
 const getDataCaptureMethodsData = () => [
 	{

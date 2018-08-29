@@ -16,24 +16,24 @@
 	}
 </style>
 <div class="slds-panel-box">
-	<div class="slds-panel-box__header slds-p-around_small">Activation Partners
-		<img class="icon" src="/images/settings.svg" />
+	<div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.activation_partners.title %>
+		<img class="icon slds-float_right" src="/images/settings.svg" />
 	</div>
 	<div class="slds-panel-box__body">
 		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
-			<button class="slds-button slds-button_neutral">Top 5
+			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.activation_partners.buttons[0].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
-			<button class="slds-button slds-button_neutral">By Devices Sent
+			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.activation_partners.buttons[1].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
-			<button style="float: right;" class="slds-button slds-button_neutral">June 13, 2018
+			<button style="float: right;" class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.activation_partners.buttons[2].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
 		</div>
 		<div id="activation-partner-grid"></div>
 		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
-			<a href="javascript:void(0);">View All Activation Partners</a>
+		<a href="<%- locals.localization.overview.panels.activation_partners.view_all.href %>"><%- locals.localization.overview.panels.activation_partners.view_all.text %></a>
 		</div>
 	</div>
 </div>
@@ -47,14 +47,7 @@ const makeActivationPartnerRow = (data) => (`
 	</div>
 `);
 
-const activationPartnerRows = [
-	{partner: 'ACTIVATION PARTNERS', type: 'REFRESH TYPE', sent: 'DEVICES SENT'},
-	{partner: '<img src="/images/logos/logo-dblclick-bm.svg" />', type: 'Full', sent: '9M'},
-	{partner: '<img src="/images/logos/sf.svg" />', type: 'Full', sent: '8.75M'},
-	{partner: '<img src="/images/logos/appnexus.svg" />', type: 'Incremental', sent: '7M'},
-	{partner: '<img src="/images/logos/youtube.svg" />', type: 'Incremental', sent: '6.8M'},
-	{partner: '<img src="/images/logos/pinterest.svg" />', type: 'Full', sent: '6M'}
-];
+const activationPartnerRows = <%- JSON.stringify(locals.localization.overview.panels.activation_partners.table_rows) %>;
 
 const makeActivationPartnerRows = () => activationPartnerRows.reduce((rows, row) => rows + makeActivationPartnerRow(row), '');
 
