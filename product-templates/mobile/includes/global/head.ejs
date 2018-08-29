@@ -1,0 +1,351 @@
+<meta charset="utf-8">
+<link rel="stylesheet" href="/styles/salesforce-lightning-design-system.css" />
+<link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="/styles/global.css">
+<!-- each page automatically tries to include a css file of the same name -->
+<% if (locals.siteSection) { %>
+<link rel="stylesheet" href="/styles/<%=locals.siteSection%>.css">
+<% } %>
+
+<% 
+if (locals.pageStylesheets) { 
+	locals.pageStylesheets.forEach(function(stylesheet) { 
+%>
+		<link rel="stylesheet" href="/styles/<%=stylesheet%>">
+<% 
+	});
+} 
+%>
+
+<% 
+	const { account, trigger, user, version } = locals.sanitizedQueryParams;
+	const is201 = version && version === '201';
+	const accountParam = account || (is201 ? 'nto-electronics' : 'Crocs');
+%>
+
+<script type="text/javascript">
+	const locals =<%- JSON.stringify(locals)%>;
+	console.dir(locals);
+
+	const url = new URL( window.location.href );
+	const activePage = '<%=locals.siteSection%>';
+	const accountParam = '<%=accountParam%>';
+	const versionParam = '<%=version%>';
+	const demoMagickFlows = locals.demoMagickFlows;
+	const demoMagickFlowDirectoryName = '<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>';
+	const urlSlug = '<%=locals.urlSlug%>';
+	let pageVersion = '<%=version%>';
+	const userParam = '<%=user%>' || 'Dan';
+	const triggerParam = '<%=trigger%>';
+
+	let accountName = 'Crocs';
+	let userName = '';
+	let appName = 'Salesforce DMP';
+
+	if (activePage === 'journeys') {
+		accountName = 'nto-general';
+		pageVersion = '201';
+		userName = 'Dan';
+		appName = 'Journey Builder';
+	}
+
+	if ( pageVersion === '201' ) {
+		accountName = 'Northern Trail Outfitters - Apparel';
+	}
+
+	if ( accountParam === 'nto-apparel' ) {
+		accountName = 'Northern Trail Outfitters - Apparel';
+	}
+
+	if ( accountParam === 'nto-electronics' ) {
+		accountName = 'Northern Trail Outfitters - Electronics';
+	}
+
+	if ( accountParam === 'nto-general' ) {
+		accountName = 'Northern Trail Outfitters';
+		userName = 'Dan';
+	}
+
+	let notificationsBadgeIsActive = triggerParam === 'notificationsBadge' || null;
+
+
+	const navData = {
+		appName,
+		pageVersion,
+		accountName,
+		accountParam,
+		userName,
+		userParam,
+		notificationsBadgeIsActive,
+		clearNotificationsHref: '?version=201&account=nto-apparel',
+		accountNavItems: [
+			{
+				label: 'Northern Trail Outfitters - Apparel',
+				id: 'nto-apparel-account-switcher',
+				href: '?version=201&account=nto-apparel&trigger=notificationsBadge',
+				isActive: ( accountName === 'Northern Trail Outfitters - Apparel' )
+			},
+			{
+				label: 'Northern Trail Outfitters - Electronics',
+				id: 'nto-electronics-account-switcher',
+				href: '?version=201&account=nto-electronics',
+				isActive: ( accountName === 'Northern Trail Outfitters - Electronics' )
+			},
+			{
+				label: 'Northern Trail Outfitters',
+				id: 'nto-general-account-switcher',
+				href: '?version=201&account=nto-general',
+				isActive: ( accountName === 'Northern Trail Outfitters' )
+			}
+		],
+		navItems: [ {
+				label: 'Overview',
+				href: `/?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'index' )
+			},
+			{
+				label: 'Segments',
+				id: 'segments-global-nav-link',
+				href: '/segments/manage-segments/',
+				isActive: ( activePage === 'segments' )
+			},
+			{
+				label: 'Insights',
+				ID: 'insights-global-nav-link',
+				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'insights' ),
+				dropdownItems: [
+					[ {
+							separator: true,
+							label: 'Insights'
+						},
+						{
+							label: 'Einstein Segmentation',
+							href: `/insights/einstein-segmentation?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+							id: 'einstein-segmentation-link'
+						},
+						{
+							label: 'Top Overlapping Segments'
+						},
+						{
+							label: 'Data Providers'
+						},
+						{
+							label: 'Funnels'
+						},
+						{
+							label: 'Frequency Reports'
+						},
+						{
+							label: 'Campaign Attribution'
+						},
+						{
+							label: 'Attribution'
+						},
+						{
+							label: 'Custom Index Tool'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Reporting Center'
+						},
+						{
+							label: 'Manage Reports'
+						},
+						{
+							label: 'View Reports'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Content Engagement'
+						},
+						{
+							label: 'Audience Analytics'
+						},
+						{
+							label: 'Engagement'
+						},
+						{
+							label: 'Loyalty'
+						},
+						{
+							label: 'Social Activity'
+						},
+						{
+							label: 'Search Keywords'
+						},
+						{
+							label: 'First Party User Match'
+						}
+					]
+				]
+			},
+			{
+				label: 'Activation',
+				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				lookLikeDropdown: true,
+				isActive: ( activePage === 'activation' )
+			},
+			{
+				label: 'Manage',
+				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				lookLikeDropdown: true,
+				isActive: ( activePage === 'manage' )
+			},
+			{
+				label: 'Data Studio',
+				id: 'data-studio',
+				href: `/data-studio/audience-discovery?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				lookLikeDropdown: true,
+				isActive: ( activePage === 'audience-discovery' || activePage === 'data-studio' )
+			}
+		]
+	}
+
+
+	const navDataJourneyBuilder = {
+		appName,
+		pageVersion,
+		accountName,
+		accountParam,
+		userName,
+		userParam,
+		notificationsBadgeIsActive,
+		clearNotificationsHref: '?version=201&account=nto-apparel',
+		userNavItems: [
+			{
+				label: userName,
+				id: 'nto-apparel-name-switcher-main',
+				href: `?version=201&account=nto-general&user=${userParam}`,
+				isActive: ( userName === userName )
+			}
+		],
+		accountNavItems: [
+			{
+				label: 'Northern Trail Outfitters - Apparel',
+				id: 'nto-apparel-account-switcher',
+				href: '?version=201&account=nto-apparel&trigger=notificationsBadge',
+				isActive: ( accountName === 'Northern Trail Outfitters - Apparel' )
+			},
+			{
+				label: 'Northern Trail Outfitters - Electronics',
+				id: 'nto-electronics-account-switcher',
+				href: '?version=201&account=nto-electronics',
+				isActive: ( accountName === 'Northern Trail Outfitters - Electronics' )
+			},
+			{
+				label: 'Northern Trail Outfitters',
+				id: 'nto-general-account-switcher',
+				href: '?version=201&account=nto-general',
+				isActive: ( accountName === 'Northern Trail Outfitters' )
+			}
+		],
+		navItems: [ {
+				label: 'Journeys',
+				href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				id: 'journeys-global-nav-link',
+				isActive: ( activePage === 'journeys' )
+			},
+			{
+				label: 'Entry Source',
+				id: 'entry-source-global-nav-link',
+				href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'entry-source' )
+			},
+			{
+				label: 'History',
+				id: 'history-global-nav-link',
+				href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'history' )
+			},
+			{
+				label: 'Templates',
+				id: 'entry-source-global-nav-link',
+				href: `/journey-builder.html?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+				isActive: ( activePage === 'templatse' )
+			}
+		]
+	}
+	const accountData = {
+		appName,
+		accountName,
+		navItems: [ {
+			label: `$data`,
+			href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+			isActive: ( activePage === 'insights' ),
+			dropdownItems: [
+				[ {
+						separator: true,
+						label: 'Insights'
+					},
+					{
+						label: 'Einstein Segmentation',
+						href: `/insights/einstein-segmentation?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+						id: 'einstein-segmentation-link'
+					},
+					{
+						label: 'Top Overlapping Segments'
+					},
+					{
+						label: 'Data Providers'
+					},
+					{
+						label: 'Funnels'
+					},
+					{
+						label: 'Frequency Reports'
+					},
+					{
+						label: 'Campaign Attribution'
+					},
+					{
+						label: 'Attribution'
+					},
+					{
+						label: 'Custom Index Tool'
+					}
+				],
+				[ {
+						separator: true,
+						label: 'Reporting Center'
+					},
+					{
+						label: 'Manage Reports'
+					},
+					{
+						label: 'View Reports'
+					}
+				],
+				[ {
+						separator: true,
+						label: 'Content Engagement'
+					},
+					{
+						label: 'Audience Analytics'
+					},
+					{
+						label: 'Engagement'
+					},
+					{
+						label: 'Loyalty'
+					},
+					{
+						label: 'Social Activity'
+					},
+					{
+						label: 'Search Keywords'
+					},
+					{
+						label: 'First Party User Match'
+					}
+				]
+			]
+		} ]
+	}
+</script>
+
+
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
