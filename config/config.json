@@ -1,20 +1,20 @@
 {
-	"brandTheme": "bbva",
-	"demoName": "Laulima BBVA Demo (production)",
+	"brandTheme": "ticketmaster",
+	"demoName": "Dreamforce 2018 Ticketmaster Mobile Demo (production)",
 	"demoVersion": "0.1",
 	"demoMagickFlows": {},
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
-	"productTemplate": "dmp",
+	"productTemplate": "mobile",
 	"prod": {
-		"host": "https://dmp-dreamforce-2018.herokuapp.com/"
+		"host": "https://mobile-ticketmaster-dreamforce-2018.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://dmp-dreamforce-2018-qa.herokuapp.com/"
+		"host": "https://mobile-ticketmaster-dreamforce-2018-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://dmp-dreamforce-2018-dev.herokuapp.com/"
+		"host": "https://mobile-ticketmaster-dreamforce-2018-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
