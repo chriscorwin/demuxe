@@ -38,9 +38,9 @@ module.exports = {
 			explanation: 'Displaying data collection events across 1st party data sources only.',
 			graph: {
 				date_labels: [
-					'5/13',
-					'5/25',
-					'6/13'
+					'7/13',
+					'7/27',
+					'8/05'
 				],
 				device_data: [
 					450,
@@ -98,45 +98,37 @@ module.exports = {
 				{ label: 'By Data Capture Events' },
 				{ label: 'Last 30 days' }
 			],
-			manage_consumer_rights: {
-				text: 'Manage Consumer Rights',
-				href: 'javascript:void(0);',
-				on_click: "navigatePage('/consumer-rights-management.html');"
-			},
 			graph: {
 				methods: [
 					{
-						name: 'Control Tags - Website',
+						name: 'Web',
 						y: 100,
-						color: '#F69E5A'
-					},
-					{
-						name: 'Media Tracker',
-						y: 78,
-						color: '#B896FA'
-					},
-					{
-						name: 'Click Tracker',
-						y: 60,
-						color: '#EA78BB'
-					},
-					{
-						name: '1st Party Consent',
-						y: 59,
 						color: '#70ABEA'
 					},
 					{
-						name: 'Email 1X1',
-						y: 28,
-						color: '#63B6B0'
+						name: 'App',
+						y: 85,
+						color: '#EDBE32'
+					},
+					{
+						name: 'Offline Files',
+						y: 50,
+						color: '#F2536D'
+					},
+					{
+						name: 'Partners',
+						y: 45,
+						color: '#7DC37D'
 					}
 				]
 			},
-			title: 'Data Capture Methods',
-			view_all: {
-				text: 'View All Data Capture Methods',
-				href: 'javascript:void(0);'
-			}
+			title: 'Data Capture Sources',
+			view_all_buttons: [
+				{
+					text: 'View All Data Capture Sources',
+					href: 'javascript:void(0);'
+				}
+			]
 		},
 		marketer_campaigns: {
 			buttons: [
@@ -148,10 +140,10 @@ module.exports = {
 				CAMPAIGN: 'campaign',
 				spend_data: [
 					{ x: 240, y: 2250, z: 77, name: 'Display', color: '#0857A6' },
-					{ x: 990, y: 2250, z: 56, name: 'Video', color: '#C398F5' },
 					{ x: 370, y: 1400, z: 48, name: 'Email', color: '#5208A6' }, // Email on left
 					{ x: 810, y: 870, z: 59, name: 'Mobile', color: '#197EE3' },
-					{ x: 560, y: 1900, z: 27, name: 'Email', color: '#7719E3' } // Email on right
+					{ x: 560, y: 1900, z: 27, name: 'Email', color: '#7719E3' }, // Email on right
+					{ x: 990, y: 2250, z: 56, name: 'Video', color: '#C398F5' }
 				],
 				tooltip: '<div style="width: 70px;"><div style="background-color: {point.color};height: 10px; width: 10px;border-radius: 5px;float: left;margin: 10px 10px 10px 4px;"></div> {point.name}<br />{point.y}K</div>',
 				x_axis: {
@@ -186,7 +178,7 @@ module.exports = {
 			buttons: [
 				{ label: 'Top 5' },
 				{ label: 'By Devices Sent' },
-				{ label: 'June 13, 2018' }
+				{ label: 'Aug 5, 2018' }
 			],
 			table_rows: [
 				{partner: 'ACTIVATION PARTNERS', type: 'REFRESH TYPE', sent: 'DEVICES SENT'},
