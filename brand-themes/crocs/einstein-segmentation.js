@@ -125,5 +125,6 @@ module.exports = {
 			{ source: 'p4', target: 'p3', overlap: 15 },
 			{ source: 'p3', target: 'p2', overlap: 13 }
 		]
-	}
+	},
+	sub_header_text: 'Analysis Summary as of June 15, 2018 11:00 AM UTC'
 };
