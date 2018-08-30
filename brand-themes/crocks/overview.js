@@ -98,11 +98,6 @@ module.exports = {
 				{ label: 'By Data Capture Events' },
 				{ label: 'Last 30 days' }
 			],
-			manage_consumer_rights: {
-				text: 'Manage Consumer Rights',
-				href: 'javascript:void(0);',
-				on_click: "navigatePage('/consumer-rights-management.html');"
-			},
 			graph: {
 				methods: [
 					{
@@ -133,10 +128,17 @@ module.exports = {
 				]
 			},
 			title: 'Data Capture Methods',
-			view_all: {
-				text: 'View All Data Capture Methods',
-				href: 'javascript:void(0);'
-			}
+			view_all_buttons: [
+				{
+					text: 'View All Data Capture Methods',
+					href: 'javascript:void(0);'
+				},
+				{
+					text: 'Manage Consumer Rights',
+					href: 'javascript:void(0);',
+					on_click: "navigatePage('/consumer-rights-management.html');"
+				}
+			]
 		},
 		marketer_campaigns: {
 			buttons: [
