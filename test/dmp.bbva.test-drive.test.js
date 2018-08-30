@@ -11,7 +11,7 @@ const differencify = new Differencify({
 });
 
 const getMatchOptions = (step) => ({
-	imgName: `dmp.main-flow.${step}`
+	imgName: `dmp.bbva.${step}`
 });
 
 const getScreenshotOptions = () => ({
@@ -35,7 +35,7 @@ describe('DMP Demo Flow', function () {
 		});
 		const result = await differencify
 			.init({
-				testName: 'dmp.main-flow.test-drive',
+				testName: 'dmp.bbva.test-drive',
 			})
 			.newPage()
 			.setViewport({ width: 1240, height: 800 })
@@ -72,27 +72,7 @@ describe('DMP Demo Flow', function () {
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0300.einstein-segmentation'))
 			.result(handleResult)
-			// CLICK COG ON HIGH VALUE CUSTOMERS ITEM
-			.click('.slds-panel-box__header:nth-of-type(1) .slds-panel-box__header-settings')
-			.waitFor(200)
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0201.segments'))
-			.result(handleResult)
-			// CLICK LOOKALIKE IN DROPDOWN MENU
-			.click('.slds-panel-box__header:nth-of-type(1) .slds-panel-box__header-dropdown .slds-dropdown__item:nth-of-type(4)')
-			.waitFor(200)
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0210.segments.lookalike'))
-			.result(handleResult)
-			// HOVER OVER MODERATELY SIMILAR
-			// CLICK MODERATELY SIMILAR
-			// .click('#lookalikes-chart .highcharts-root > .highcharts-series-group > .highcharts-series > path.highcharts-point:nth-of-type(7)')
-			.click('#lookalikes-chart') // HACK BECAUSE SVG UGH
-			.waitFor(200)
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0212.segments.lookalike'))
-			.result(handleResult)
-			// CLICK CREATE LOOKALIKE SEGMENT
+			// CLICK CREATE NEW SEGMENT USING THIS PERSONA
 			.click('.slds-button.slds-button_brand')
 			.waitFor('body')
 			.screenshot(getScreenshotOptions())
@@ -110,13 +90,18 @@ describe('DMP Demo Flow', function () {
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0302.segments.build-standard-segment'))
 			.result(handleResult)
+
+
+			// CURRENTLY OUTSIDE OF DEMO FLOW
 			// CLICK "SAVE" AND GET TAKEN BACK TO SEGMENTS
 			.click('#saveButton')
 			.waitFor('body')
 			.waitFor(2000)
 			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0400.segments.manage-segments'))
+			.toMatchSnapshot(getMatchOptions('XXXX.segments.manage-segments'))
 			.result(handleResult)
+
+
 
 			.close()
 			.end();
