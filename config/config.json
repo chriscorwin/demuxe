@@ -1,6 +1,6 @@
 {
-	"brandTheme": "ticketmaster",
-	"demoName": "Dreamforce 2018 Ticketmaster Mobile Demo (production)",
+	"brandTheme": "bbva",
+	"demoName": "Dreamforce 2018 BBVA Mobile Demo (production)",
 	"demoVersion": "0.1",
 	"demoMagickFlows": {},
 	"demoMagickFlowUrlSlugs": [],
@@ -8,13 +8,13 @@
 	"env": "production",
 	"productTemplate": "mobile",
 	"prod": {
-		"host": "https://mobile-ticketmaster-dreamforce-2018.herokuapp.com/"
+		"host": "https://mobile-bbva-dreamforce-2018.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://mobile-ticketmaster-dreamforce-2018-qa.herokuapp.com/"
+		"host": "https://mobile-bbva-dreamforce-2018-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://mobile-ticketmaster-dreamforce-2018-dev.herokuapp.com/"
+		"host": "https://mobile-bbva-dreamforce-2018-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
