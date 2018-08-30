@@ -43,7 +43,7 @@ Highcharts must be included on page prior to this running
 		<div class="slds-col slds-size_2-of-3 slds-p-horizontal_large slds-p-vertical_x-large" id="consent-distribution-graph-legend"></div>
 		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small slds-col slds-size_1-of-1">
 			<% locals.localization.overview.panels.dcm.view_all_buttons.forEach((button, i, buttons) => { %>
-				<a href="<%- button.href %>"<%- button.on_click ? ` onclick="${button.on_click}"` : '' %>><%- button.text %></a>
+				<a<%- button.id ? ` id=${button.id}` : '' %> href="<%- button.href %>"<%- button.onclick ? ` onclick="${button.onclick}"` : '' %>><%- button.text %></a>
 				<% if (i + 1 !== buttons.length) { %>
 				<span class="slds-m-horizontal_medium" style="height: 16px; width: 1px; border-left: 1px solid #D8DDE6;"></span>
 				<% }
