@@ -11,3 +11,21 @@ body {
 	width: 3rem;
 	height: unset;
 }
+
+.slds-panel-box {
+	border: 1px solid #E0E5EE;
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+.slds-panel-box__header {
+	border-radius: 4px 4px 0 0;
+	background-color: #F4F6F9;
+	font-size: 16px;
+	color: #16325C;
+}
+
+.slds-panel-box__header svg, .slds-panel-box__header img {
+	fill: #54698D;
+	width: 16px;
+}
