@@ -20,15 +20,21 @@ $ss.onclick = ( ) => {
 
 
 function locationHashChanged( ) {
+	console.log(`clicks: `, clicks);
 	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+	console.log(`clicks >= magickFlowConfig.numberOfScreens: `, clicks >= magickFlowConfig.numberOfScreens);
 	if ( clicks >= magickFlowConfig.numberOfScreens ) {
 		clicks = 0;
 		window.location.hash = `#${clicks}`;
 	}
+	console.log(`clicks: `, clicks);
 	console.log("`/magick-flows/${demoMagickFlowDirectoryName}/${magickFlowConfig.screens[clicks]}: ", `/magick-flows/${demoMagickFlowDirectoryName}/${magickFlowConfig.screens[clicks]}`);
 	$ss.src = `/magick-flows/${demoMagickFlowDirectoryName}/${magickFlowConfig.screens[clicks]}`;
+	console.log(`clicks: `, clicks);
 }
 
+console.log(`clicks: `, clicks);
 window.onhashchange = locationHashChanged;
-
+console.log(`clicks: `, clicks);
 locationHashChanged();
+console.log(`clicks: `, clicks);

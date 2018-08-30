@@ -43,13 +43,29 @@ function getMagickFlowDirectories(dir, directories_) {
                     const thisMagickFlowName = subFilesAndDirectories[j];
 
                     let thisMagickFlowScreens = getFiles(thisMagickFlowFullPath).sort(sortAlphaNum);
-                    let firstElement = thisMagickFlowScreens.shift();
 
                     const thisMagickFlowNumberOfScreens = thisMagickFlowScreens.length;
 
+                    let thisMagickFlowUrlSlugPath;
+                    let thisMagickFlowUrlSlug;
                     // get it's url slug
-                    const thisMagickFlowUrlSlugPath = path.join(thisMagickFlowFullPath, '.url-slug');
-                    const thisMagickFlowUrlSlug = readFirstLine(thisMagickFlowUrlSlugPath);
+                    if (fs.existsSync(path.join(thisMagickFlowFullPath, '.url-slug'))) {
+                        try {
+                            let firstElement = thisMagickFlowScreens.shift();
+                            thisMagickFlowUrlSlugPath = path.join(thisMagickFlowFullPath, '.url-slug');
+                            thisMagickFlowUrlSlug = readFirstLine(thisMagickFlowUrlSlugPath);
+                        }
+                        catch(error) {
+                            console.error(error);
+                        }
+                        // Do something
+                    } else {
+                        thisMagickFlowUrlSlug = thisMagickFlowName;
+                    }
+
+
+
+                    
                     configData.demoMagickFlowUrlSlugs.push(thisMagickFlowUrlSlug);
                     configData.demoMagickFlowUrlSlugsMapToFlowDirectories[thisMagickFlowUrlSlug] = thisMagickFlowName;
 

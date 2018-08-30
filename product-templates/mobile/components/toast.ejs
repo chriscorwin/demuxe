@@ -1,0 +1,46 @@
+<div id="<%= theme %>Toast" class="slds-notify_container slds-is-relative slds-hide" style="position: absolute; top: 95px; width: 100%;">
+	<div class="slds-notify slds-notify_toast slds-theme_<%= theme %>" role="alert">
+		<span class="slds-assistive-text"><%= theme %></span>
+		<span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+			<svg class="slds-icon slds-icon_small" aria-hidden="true">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#<%= theme %>" />
+			</svg>
+		</span>
+		<div class="slds-notify__content">
+			<h2 class="slds-text-heading_small "><%= title %></h2>
+			<p><%= contents %></p>
+		</div>
+		<div class="slds-notify__close">
+			<button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close">
+				<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#close" />
+				</svg>
+				<span class="slds-assistive-text">Close</span>
+			</button>
+		</div>
+	</div>
+</div>
+
+<% if ( locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === `${theme}Toast`) { %>
+<script>
+	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the 
+	// flow, which we need to do in order to keep global nav dropdowns working.
+	let toastElement =  document.getElementById('<%= theme %>Toast');
+	if (typeof(toastElement) != 'undefined' && toastElement != null) {
+		window.setTimeout(() => {
+			document.querySelector('#<%= theme %>Toast').classList.add('slds-transition-hide');
+			document.querySelector('#<%= theme %>Toast').classList.remove('slds-hide');
+		}, 1);
+		window.setTimeout(() => {
+			document.querySelector('#<%= theme %>Toast').classList.add('slds-transition-show');
+		}, 100);
+		window.setTimeout(() => {
+			document.querySelector('#<%= theme %>Toast').classList.remove('slds-transition-show');
+		}, 4100);
+		window.setTimeout(() => {
+			document.querySelector('#<%= theme %>Toast').classList.remove('slds-transition-hide');
+			document.querySelector('#<%= theme %>Toast').classList.add('slds-hide');
+		}, 4200);
+	}
+</script>
+<% } %>
