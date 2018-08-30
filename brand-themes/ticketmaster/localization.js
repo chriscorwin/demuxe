@@ -1,6 +1,6 @@
 const segments = require('./segments');
 
 module.exports = {
-	"NAME": "Ticketmaster",
+	"NAME": "BBVA",
 	segments
 };
