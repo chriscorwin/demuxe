@@ -136,7 +136,7 @@ module.exports = {
 				{
 					text: 'Manage Consumer Rights',
 					href: 'javascript:void(0);',
-					onclick: "navigatePage('/consumer-rights-management.html');"
+					onclick: "navigatePage('/consumer-rights-management');"
 				}
 			]
 		},
