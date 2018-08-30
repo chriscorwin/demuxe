@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1242px" height="62px" viewBox="0 0 1242 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1230px" height="60px" viewBox="0 0 1230 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
     <title>insights.einstein-segmentation.top</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Summary" transform="translate(-19.000000, -229.000000)">
+        <g id="Summary" transform="translate(-27.000000, -230.000000)">
             <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1590"></rect>
-            <g id="Definition" transform="translate(18.000000, 181.000000)">
-                <path d="M0.5,47.5 L1223.55569,47.5" id="Line-2" stroke="#C3CBD1" stroke-linecap="square"></path>
-                <path d="M4,0.5 C2.06700338,0.5 0.5,2.06700338 0.5,4 L0.5,108.5 C0.5,110.432997 2.06700338,112 4,112 L1243.10424,112 C1245.03723,112 1246.60424,110.432997 1246.60424,108.5 L1246.60424,4 C1246.60424,2.06700338 1245.03723,0.5 1243.10424,0.5 L4,0.5 Z" id="Rectangle-16" stroke="#E0E5EE"></path>
-                <path d="M1,47.5 L1246,47.5" id="Line-Copy-5" stroke="#E0E5EE" stroke-linecap="square"></path>
+            <g id="Definition" transform="translate(18.000000, 181.000000)" stroke="#E0E5EE">
+                <path d="M4,0.5 C2.06700338,0.5 0.5,2.06700338 0.5,4 L0.5,108.5 C0.5,110.432997 2.06700338,112 4,112 L1243.10424,112 C1245.03723,112 1246.60424,110.432997 1246.60424,108.5 L1246.60424,4 C1246.60424,2.06700338 1245.03723,0.5 1243.10424,0.5 L4,0.5 Z" id="Rectangle-16"></path>
             </g>
             <g id="Group-5" transform="translate(40.000000, 239.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-weight="normal">
                 <g id="Group-15-Copy" fill="#54698D" font-size="12">
