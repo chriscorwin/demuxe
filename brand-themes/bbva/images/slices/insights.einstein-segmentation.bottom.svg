@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1245px" height="769px" viewBox="0 0 1245 769" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1242px" height="769px" viewBox="0 0 1242 769" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
     <title>insights.einstein-segmentation.bottom</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Summary" transform="translate(-20.000000, -887.000000)">
+        <g id="Summary" transform="translate(-23.000000, -887.000000)">
             <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1590"></rect>
             <path d="M22.5,890 L1245.21634,890" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
-            <path d="M20,887.934066 L1246.34681,887.934066" id="Line-Copy-5" stroke="#E0E5EE" stroke-linecap="square"></path>
+            <path d="M21,887.934066 L1265.34681,887.934066" id="Line-Copy-5" stroke="#E0E5EE" stroke-linecap="square"></path>
             <g id="Group-14" transform="translate(392.000000, 899.000000)">
                 <rect id="Rectangle-18" stroke="#CCD3D9" fill="#E1E7EC" x="0.5" y="0.5" width="41" height="31" rx="4"></rect>
                 <g id="filter" transform="translate(5.000000, 9.000000)" fill="#63859B">
