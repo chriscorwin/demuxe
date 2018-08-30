@@ -1,3 +1,4 @@
+// https://docs.google.com/presentation/d/1CaK4X_m1DUN8vbjbA8C6HJLrBXvQpkbPJcExSA5sMwQ/edit#slide=id.g3fd7597332_0_1096
 const settings = require('../config/config.js')();
 var env = process.env.ENV || 'local';
 const should = require('chai').should();
@@ -38,13 +39,13 @@ describe('DMP Demo Flow', function () {
 			})
 			.newPage()
 			.setViewport({ width: 1240, height: 800 })
-			// START - OVERVIEW PAGE - SLIDE 28
+			// START - OVERVIEW PAGE - SLIDE 42
 			.goto(testhost)
 			.waitFor('body')
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0001.overview'))
 			.result(handleResult)
-			// SCROLL DOWN ON OVERVIEW PAGE - SLIDE 29
+			// SCROLL DOWN ON OVERVIEW PAGE - SLIDE 43
 			.evaluate(_ => {
 				window.scrollBy(0, window.innerHeight);
 			})
@@ -52,17 +53,24 @@ describe('DMP Demo Flow', function () {
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0002.overview'))
 			.result(handleResult)
-			// GOTO DATA STUDIO - SLIDE 30 & 31
-			.click('#data-studio')
+			// GOTO DATA CAPTURE SOURCES PAGE - SLIDE 44
+			.click('#view-all-data-capture-sources')
 			.waitFor('body')
 			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0100.data-studio'))
+			.toMatchSnapshot(getMatchOptions('0100.data-capture-sources'))
 			.result(handleResult)
-			// GOTO SEGMENTS - SLIDE 31 & 32
-			.click('#segments-global-nav-link')
+			// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
+			.click('#consumer-rights-management-link')
 			.waitFor('body')
 			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0200.segments'))
+			.toMatchSnapshot(getMatchOptions('0200.consumer-rights-management-page'))
+			.result(handleResult)
+			// HOVER INSIGHTS NAV LINK
+			// CLICK EINSTEIN SEGMENTATION LINK
+			.click(`#einstein-segmentation-link`)
+			.waitFor('body')
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0300.einstein-segmentation'))
 			.result(handleResult)
 			// CLICK COG ON HIGH VALUE CUSTOMERS ITEM
 			.click('.slds-panel-box__header:nth-of-type(1) .slds-panel-box__header-settings')
@@ -110,15 +118,6 @@ describe('DMP Demo Flow', function () {
 			.toMatchSnapshot(getMatchOptions('0400.segments.manage-segments'))
 			.result(handleResult)
 
-			// This is currently outside of our demo flow.
-			// HOVER INSIGHTS NAV LINK
-			// CLICK EINSTEIN SEGMENTATION LINK
-			.goto(`${testhost}insights/einstein-segmentation`)
-			.waitFor('body')
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('XXXX.einstein'))
-			.result(handleResult)
-			// CLICK CREATE A NEW SEGMENT USING THIS PERSONA
 			.close()
 			.end();
 		await differencify.cleanup();
