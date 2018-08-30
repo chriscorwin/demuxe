@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1242px" height="62px" viewBox="0 0 1242 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>insights.einstein-segmentation.top</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Summary" transform="translate(-19.000000, -229.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1590"></rect>
+            <g id="Definition" transform="translate(18.000000, 181.000000)">
+                <path d="M0.5,47.5 L1223.55569,47.5" id="Line-2" stroke="#C3CBD1" stroke-linecap="square"></path>
+                <path d="M4,0.5 C2.06700338,0.5 0.5,2.06700338 0.5,4 L0.5,108.5 C0.5,110.432997 2.06700338,112 4,112 L1243.10424,112 C1245.03723,112 1246.60424,110.432997 1246.60424,108.5 L1246.60424,4 C1246.60424,2.06700338 1245.03723,0.5 1243.10424,0.5 L4,0.5 Z" id="Rectangle-16" stroke="#E0E5EE"></path>
+                <path d="M1,47.5 L1246,47.5" id="Line-Copy-5" stroke="#E0E5EE" stroke-linecap="square"></path>
+            </g>
+            <g id="Group-5" transform="translate(40.000000, 239.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-weight="normal">
+                <g id="Group-15-Copy" fill="#54698D" font-size="12">
+                    <text id="1st-Party-Data">
+                        <tspan x="0" y="14">1st Party Data</tspan>
+                    </text>
+                </g>
+                <text id="All-Attributes-•-All" font-size="14" fill="#16325C">
+                    <tspan x="1" y="35">All Attributes • All Segments</tspan>
+                </text>
+            </g>
+            <g id="Group-5-Copy-2" transform="translate(274.000000, 239.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-weight="normal">
+                <g id="Group-15-Copy" fill="#54698D" font-size="12">
+                    <text id="3rd-Party-Data">
+                        <tspan x="0" y="14">3rd Party Data</tspan>
+                    </text>
+                </g>
+                <text id="—" font-size="14" fill="#16325C">
+                    <tspan x="1" y="35">—</tspan>
+                </text>
+            </g>
+            <text id="Modify" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                <tspan x="1207.312" y="251">Modify</tspan>
+            </text>
+            <g id="Group-21-Copy" transform="translate(963.000000, 261.000000)" fill="#16325C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                <text id="Last-Modified-by-Dan">
+                    <tspan x="0" y="14">Last Modified by Dan • May 9, 2018 10:30 AM UTC</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
