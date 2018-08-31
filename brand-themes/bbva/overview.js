@@ -128,7 +128,7 @@ module.exports = {
 					id: 'view-all-data-capture-sources',
 					text: 'View All Data Capture Sources',
 					href: 'javascript:void(0);',
-					onclick: "navigatePage('/consumer-rights-management');"
+					onclick: "navigatePage('/manage/data-capture/sources');"
 				}
 			]
 		},
