@@ -17,13 +17,13 @@ module.exports = {
 				attributes: [
 					{
 						party: 1,
-						main: 'Category: Mens',
+						main: 'Category: Small Business',
 						stats: 'Frequency: 1  ・Recency < 7 days'
 					},
 					{
 						party: 1,
-						main: 'Housing/New Homeowners',
-						stats: 'Frequency: 1  ・Recency < 120 days'
+						main: 'bbvacompass.com…/fixed-rate-mortgages',
+						stats: 'Frequency: 20  ・Recency < 120 days'
 					},
 					{
 						party: 1,
