@@ -192,7 +192,74 @@ if (locals.pageStylesheets) {
 				label: 'Manage',
 				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 				lookLikeDropdown: true,
-				isActive: ( activePage === 'manage' )
+				isActive: ( activePage === 'manage' ),
+				dropdownItems: [
+					[ {
+							separator: true,
+							label: 'Insights'
+						},
+						{
+							label: 'Einstein Segmentation',
+							href: `/insights/einstein-segmentation?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+							id: 'einstein-segmentation-link'
+						},
+						{
+							label: 'Top Overlapping Segments'
+						},
+						{
+							label: 'Data Providers'
+						},
+						{
+							label: 'Funnels'
+						},
+						{
+							label: 'Frequency Reports'
+						},
+						{
+							label: 'Campaign Attribution'
+						},
+						{
+							label: 'Attribution'
+						},
+						{
+							label: 'Custom Index Tool'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Reporting Center'
+						},
+						{
+							label: 'Manage Reports'
+						},
+						{
+							label: 'View Reports'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Content Engagement'
+						},
+						{
+							label: 'Audience Analytics'
+						},
+						{
+							label: 'Engagement'
+						},
+						{
+							label: 'Loyalty'
+						},
+						{
+							label: 'Social Activity'
+						},
+						{
+							label: 'Search Keywords'
+						},
+						{
+							label: 'First Party User Match'
+						}
+					]
+				]
 			},
 			{
 				label: 'Data Studio',
