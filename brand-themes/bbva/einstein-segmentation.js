@@ -16,27 +16,26 @@ module.exports = {
 				r: 70,
 				attributes: [
 					{
-						party: 2,
-						main: 'www.coastalliving.com/travel',
-						stats: 'Frequency: 20  ・Recency < 90 days'
-					},
-					{
-						party: 2,
-						main: '...travelchannel.com/interests/beaches'
-					},
-					{
-						party: 2,
-						main: 'Beach Campers'
+						party: 1,
+						main: 'Category: Mens',
+						stats: 'Frequency: 1  ・Recency < 7 days'
 					},
 					{
 						party: 1,
-						main: 'Category: Travel Accessories',
-						stats: 'Frequency: 15  ・Recency < 180 days',
-						cpm: true // This forces CPM to show in panel header
+						main: 'Housing/New Homeowners',
+						stats: 'Frequency: 1  ・Recency < 120 days'
 					},
 					{
 						party: 1,
-						main: 'XDiavel S Explorers'
+						main: 'Membership: Netflix'
+					},
+					{
+						party: 1,
+						main: 'New Parents'
+					},
+					{
+						party: 1,
+						main: 'NTO Product Activity: Climbing'
 					}
 				]
 			},
