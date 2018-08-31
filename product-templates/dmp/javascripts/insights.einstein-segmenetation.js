@@ -15,9 +15,9 @@ var height = window
 var charge = d3.forceManyBody();
 charge.strength(-5000);
 
+const partyNumbers = ['','1st', '2nd', '3rd'];
+const partyColors = ['', 'purple', 'blue', 'green'];
 var buildAttribute = function buildAttribute(html, attr) {
-	var partyColors = ['', 'purple', 'blue', 'green'];
-
 	var stats = attr.stats ? `<div class="stats">${attr.stats}</div>` : '';
 
 	var className = attr.cmp ? ' dolla' : '';
@@ -92,6 +92,16 @@ var fillForm = function fillForm(d) {
 		</div>
 	`;
 
+	// get unique parties.
+	// Filter each of the attributes, searching the attributes array to find the index of the
+	// very first instance of an attribute with the party matching focusAttribute's party to see if 
+	// focusAttribute is the first attribute with that party. If so, it gets added to the filtered
+	// parties array, otherwise it is ignored. Reduce the results further to extract just the party number
+	// and then sort the final array so that it displays in an intelligent order
+	const usedParties = d.attributes.filter((focusAttribute, i, attributes) => attributes.indexOf(
+			attributes.find((potentialMatch) => focusAttribute.party === potentialMatch.party)
+	) === i).reduce((partyNumbers, party) => [ ...partyNumbers, party.party ], []).sort();
+
 	formContents += `
 		<div id="formBody" class="slds-p-horizontal_medium slds-p-bottom_small slds-p-top_xx-small">
 			<p id="formBodyHead" class="slds-m-vertical_small">Attributes that define this persona</p>
@@ -100,9 +110,7 @@ var fillForm = function fillForm(d) {
 			</ul>
 			<div id="key" class="slds-p-around_medium">
 				<ul class="slds-list_horizontal slds-align_absolute-center">
-					<li class="purple">1st Party</li>
-					<li class="blue">2nd Party</li>
-					<li class="green">3rd Party</li>
+					${usedParties.map((party) => `<li class="${partyColors[party]}">${partyNumbers[party]} Party</li>`)}
 				</ul>
 			</div>
 			<div id="actions">
