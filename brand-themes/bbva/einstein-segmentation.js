@@ -27,15 +27,15 @@ module.exports = {
 					},
 					{
 						party: 1,
-						main: 'Membership: Netflix'
+						main: 'BBVA Valora Active Users'
 					},
 					{
 						party: 1,
-						main: 'New Parents'
+						main: 'New Customers 2018'
 					},
 					{
 						party: 1,
-						main: 'NTO Product Activity: Climbing'
+						main: '1-888-8-LENDING Callers'
 					}
 				]
 			},
