@@ -1,21 +1,3 @@
-const activations = [
-	'<span class="text">Send to Site</span>',
-	'<span class="text">AdRoll</span>',
-	'<img src="/images/slices/activation-tiles/activation-tile.aol.svg" />',
-	'<span class="text">BlueKai</span>',
-	'<img src="/images/slices/activation-tiles/activation-tile.dataxu.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.youtube.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.double-click.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.sfmc.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.media-math.svg" />',
-	'<span class="text">MoPub</span>',
-	'<img src="/images/slices/activation-tiles/activation-tile.app-nexus.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.wordpress.svg" />',
-	'<span class="text">RocketFuel</span>',
-	'<span class="text">SAS Institute</span>',
-	'<img src="/images/slices/activation-tiles/activation-tile.commerce-cloud.svg" />'
-];
-
 const checkBox = (boxId) => {
 	const box = document.querySelector(boxId);
 	const boxWrapper = document.querySelector(boxId + 'wrapper');
@@ -31,21 +13,6 @@ const checkBox = (boxId) => {
 const goHome = () => {
 	window.location = `/index.html`;
 };
-
-const nextPage = () => {
-	if ( pageVersion === '201' ) {
-		if (accountParam === 'nto-apparel') {
-			window.location = '/jb/'
-			return;
-		}
-		window.location = `/segments/manage-segments?version=${pageVersion}&account=${accountParam}&trigger=successToast`;
-		return;
-		// window.location = `./index.html?version=${pageVersion}&account=${accountParam}`;
-	} else {
-		window.location = `/segments/manage-segments?trigger=successToast`;
-	}
-};
-
 
 const makeFilledSegmentDetail = (label) => {
 	return document.createRange().createContextualFragment(`
@@ -65,38 +32,11 @@ const makeFilledSegmentDescription = (description) => {
 	`)
 }
 
-const getSegmentName = (pageVersion, accountParam) => {
-	if (pageVersion === '201') {
-		if (accountParam === 'nto-apparel') {
-			return 'Winter Jackets - New High Value';
-		}
-		return '<span style="font-size: 12px;">Winter Jackets Propensity Customers</span>';
-	}
-
-	return 'High Value Customers Lookalikes';
-}
-
-const getSegmentDescription = (pageVersion, accountParam) => {
-	if (pageVersion === '201') {
-		if (accountParam === 'nto-apparel') {
-			return '';
-		}
-		return 'Interested in snow & winter activities';
-	}
-
-	return ' ';
-}
-
 const $newSegmentName = makeFilledSegmentDetail(getSegmentName(pageVersion, accountParam));
 const $newSegmentDescription = makeFilledSegmentDescription(getSegmentDescription(pageVersion, accountParam));
 
 const $segmentName = document.querySelector('#segment-name');
 const $segmentDescription = document.querySelector('#segment-description');
-
-if (pageVersion === '201' && accountParam === 'nto-apparel') {
-	document.getElementById('details-contents').replaceChild($newSegmentName, $segmentName);
-	document.getElementById('details-contents').replaceChild($newSegmentDescription, $segmentDescription);
-}
 
 $segmentName.addEventListener('click', () => {
 	document.getElementById('details-contents').replaceChild($newSegmentName, $segmentName);
@@ -117,6 +57,10 @@ const deactivate = () => {
 	$activationHeader.classList.add('slds-hide');
 }
 
+if (activateByDefault) {
+	activate();
+}
+
 const checkbox = document.getElementById('activate-toggle');
 // Activate by default -- toggle still works
 checkbox.addEventListener('change', (event) => {
@@ -125,12 +69,7 @@ checkbox.addEventListener('change', (event) => {
 	} else {
 		deactivate();
 	}
-})
-
-
-// activating by default
-document.getElementById('details-contents').replaceChild($newSegmentName, $segmentName);
-activate();
+});
 
 document.querySelector('#activation-contents').innerHTML = activations.reduce((contents, activation, i) => {
 	return `

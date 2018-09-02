@@ -96,3 +96,12 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	const activations = <%- JSON.stringify(locals.localization.manage_segments.details_and_activation.activations) %>;
+
+	const getSegmentName = () => '<%= locals.localization.manage_segments.details_and_activation.segment_name %>';
+	const getSegmentDescription = () => '<%= locals.localization.manage_segments.details_and_activation.segment_description %>';
+	const nextPage = <%- locals.localization.manage_segments.details_and_activation.save_action %>;
+	const activateByDefault = <%= locals.localization.manage_segments.details_and_activation.activate_by_default %>;
+</script>
