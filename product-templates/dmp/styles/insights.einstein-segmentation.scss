@@ -254,15 +254,15 @@ body {
 		margin-right: 24px;
 	
 		&.purple {
-			background: url('/img/icons/purple.svg') no-repeat left center / 10px;
+			background: url('/images/icons/purple.svg') no-repeat left center / 10px;
 		}
 	
 		&.blue {
-			background: url('/img/icons/blue.svg') no-repeat left center / 10px;
+			background: url('/images/icons/blue.svg') no-repeat left center / 10px;
 		}
 	
 		&.green {
-			background: url('/img/icons/green.svg') no-repeat left center / 10px;
+			background: url('/images/icons/green.svg') no-repeat left center / 10px;
 		}
 	}
 }
@@ -270,24 +270,24 @@ body {
 
 #formBody > ul li {
 	&.purple {
-		background: url('/img/icons/purple.svg') no-repeat left top / 16px;
+		background: url('/images/icons/purple.svg') no-repeat left top / 16px;
 		padding-right: 4px;
 	}
 
 	&.blue {
-		background: url('/img/icons/blue.svg') no-repeat left top / 16px;
+		background: url('/images/icons/blue.svg') no-repeat left top / 16px;
 
 		&.dolla {
-			background: url('/img/icons/blue-dolla.svg') no-repeat left top / 16px;
+			background: url('/images/icons/blue-dolla.svg') no-repeat left top / 16px;
 			padding-right: 4px;
 		}
 	}
 
 	&.green {
-		background: url('/img/icons/green.svg') no-repeat left top / 16px;
+		background: url('/images/icons/green.svg') no-repeat left top / 16px;
 
 		&.dolla {
-			background: url('/img/icons/green-dolla.svg') no-repeat left top / 16px;
+			background: url('/images/icons/green-dolla.svg') no-repeat left top / 16px;
 		}
 	}
 }

@@ -8,7 +8,7 @@
         <g id="Summary" transform="translate(-23.000000, -887.000000)">
             <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1590"></rect>
             <path d="M22.5,890 L1245.21634,890" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
-            <path d="M21,887.934066 L1265.34681,887.934066" id="Line-Copy-5" stroke="#E0E5EE" stroke-linecap="square"></path>
+            <path d="M20,887.934066 L1246.34681,887.934066" id="Line-Copy-5" stroke="#E0E5EE" stroke-linecap="square"></path>
             <g id="Group-14" transform="translate(392.000000, 899.000000)">
                 <rect id="Rectangle-18" stroke="#CCD3D9" fill="#E1E7EC" x="0.5" y="0.5" width="41" height="31" rx="4"></rect>
                 <g id="filter" transform="translate(5.000000, 9.000000)" fill="#63859B">
@@ -70,9 +70,9 @@
             <path d="M1269,1549.5 L23,1549.5" id="Line-Copy-5" stroke="#D8DDE6" stroke-linecap="square"></path>
             <path d="M1269,1277.5 L23,1277.5" id="Line" stroke="#D8DDE6" stroke-linecap="square"></path>
             <path d="M1269,1322.5 L23,1322.5" id="Line" stroke="#D8DDE6" stroke-linecap="square"></path>
-            <text id="Category---Mens-•-Ho" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="24" fill="#16325C">
-                <tspan x="442" y="1000">Category - Mens • Housing/New Homeowners • Memberships: Netflix •  NTO Product </tspan>
-                <tspan x="442" y="1024">Activity: Climbing •  New Parents</tspan>
+            <text id="Category---Small-Bus" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="24" fill="#16325C">
+                <tspan x="442" y="1000">Category - Small Business • bbvacompass.com…/fixed-rate-mortgages • BBVA Valora </tspan>
+                <tspan x="442" y="1024">Active Users •  New Customers 2018 •  1-888-8-LENDING Callers</tspan>
             </text>
             <text id="Category---Mens-•-Ne-Copy" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="24" fill="#16325C">
                 <tspan x="442" y="1149">Category - Mens • New Parent • Category: Acessories •  NTO Product Activity: Climbing </tspan>

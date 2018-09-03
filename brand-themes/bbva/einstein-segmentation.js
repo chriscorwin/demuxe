@@ -17,25 +17,25 @@ module.exports = {
 				attributes: [
 					{
 						party: 1,
-						main: 'Category: Mens',
+						main: 'Category: Small Business',
 						stats: 'Frequency: 1  ・Recency < 7 days'
 					},
 					{
 						party: 1,
-						main: 'Housing/New Homeowners',
-						stats: 'Frequency: 1  ・Recency < 120 days'
+						main: 'bbvacompass.com…/fixed-rate-mortgages',
+						stats: 'Frequency: 20  ・Recency < 120 days'
 					},
 					{
 						party: 1,
-						main: 'Membership: Netflix'
+						main: 'BBVA Valora Active Users'
 					},
 					{
 						party: 1,
-						main: 'New Parents'
+						main: 'New Customers 2018'
 					},
 					{
 						party: 1,
-						main: 'NTO Product Activity: Climbing'
+						main: '1-888-8-LENDING Callers'
 					}
 				]
 			},
