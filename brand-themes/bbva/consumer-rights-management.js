@@ -22,13 +22,8 @@ module.exports = {
 			name: '1st Party Consent',
 			y: 10,
 			color: '#F49E60'
-		},
-		{
-			name: '2nd Party Consent',
-			y: 5,
-			color: '#EE7C8F'
 		}
 	],
-	last_updated: 'Jun 12, 2018',
-	sub_header_text: 'As of Jun 13, 2018',
+	last_updated: 'Aug 12, 2018',
+	sub_header_text: 'As of Sept 23, 2018',
 };

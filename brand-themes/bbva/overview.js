@@ -4,8 +4,8 @@ module.exports = {
 			title: 'Audience Population',
 			img: '/images/slices/index.audience-segments-population.svg',
 			tabs: [
-				{ label: 'This Month (Aug 1 &mdash; Aug 7, 2018)' },
-				{ label: 'Last Month (Jul 1 &mdash; Jul 31, 2018)' }
+				{ label: 'This Month (Sep 1 &mdash; Sep 23, 2018)' },
+				{ label: 'Last Month (Aug 1 &mdash; Aug 31, 2018)' }
 			]
 		},
 		activated_segments : {
@@ -19,11 +19,11 @@ module.exports = {
 				'IMPRESSIONS'
 			],
 			segments: [
-				{label: '<img src="/images/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
-				{label: 'Loyal_Shoppers_2016-2017_potential target', number: '4.7M', width: 308},
-				{label: '<img src="/images/icons/dollar.svg" /> Heavy spenders', number: '4M', width: 290},
-				{label: 'Deals_clicks_converts_group_deal-shoppers_2018', number: '3.7M', width: 270},
-				{label: 'Early_adopters', number: '2.3M', width: 186}
+				{label: 'Mortgage Applicants 2018', number: '5.2M', width: 362},
+				{label: 'Corporate Customers - Risk Management', number: '4.7M', width: 308},
+				{label: 'Loan Expert Seekers', number: '4M', width: 290},
+				{label: 'Mortgage Aspirants', number: '3.7M', width: 270},
+				{label: 'Credit Card Members - Optimizer Card', number: '2.3M', width: 186}
 			],
 			title: 'Activated Segments',
 			view_all: {
