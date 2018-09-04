@@ -8,36 +8,12 @@
 	</head>
 
 	<body class="magick-flow">
-		<div id="stickey-header-wrapper">
-			<div id="stickey-header" class="">
-				<header class="slds-global-header_container">
-					<div class="slds-global-header slds-grid slds-grid_align-spread" style="box-shadow: none;">
-								<a href="/">
-								<img src="/images/magick-flows-images/bbva-mobile/bbva-mobile-safari-header.svg" />
-								<img src="/images/magick-flows-images/bbva-mobile/bbva-homepage-stickery-header.svg" />
-							</a>
-					</div>
-				</header>
-			</div>
-		</div>
 		<div id="content-wrapper">
 			<div id="content" class="">
 				<script>console.log('<%= locals.root %>');</script>
 				<%- include(`includes/${locals.siteSection}/contents`) %>
 			</div>
 		</div>
-		<div id="stickey-footer-wrapper">
-			<div id="stickey-footer" class="">
-				sticky footer
-			</div>
-		</div>
-
-		<%- include('components/toast', {
-			contents: 'Will be available only under ‘Northern Trail Outfitters - Apparel&rsquo; account as &lsquo;Winter Jackets &ndash; New High Value&rsquo;',
-			title: '&lsquo;Winter Jackets Propensity Customers&rsquo; segment provisioned successfully.',
-			theme: 'success'			
-		}) %>
-
 		<%- include('includes/global/footer-scripts') %>
 	</body>
 </html>

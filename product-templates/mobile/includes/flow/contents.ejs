@@ -1,25 +1,96 @@
 <%
 	const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( locals.sanitizedQueryParams.screen )]}`;
 	console.log(`thisMagickFlowScreenUrl: `, thisMagickFlowScreenUrl);
+	
+
+	const thisMagickFlowScreenHeaderUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( locals.sanitizedQueryParams.screen )}.header.png`;
+	console.log(`thisMagickFlowScreenHeaderUrl: `, thisMagickFlowScreenHeaderUrl);
+
+	const thisMagickFlowScreenFooterUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( locals.sanitizedQueryParams.screen )}.footer.png`;
+	console.log(`thisMagickFlowScreenFooterUrl: `, thisMagickFlowScreenFooterUrl);
+
+	let thisMagickFlowScreenCustomContentStylesMarginTop = '0px';
+	try {
+		thisMagickFlowScreenCustomContentStylesMarginTop = `${localization.magicFlowsMetaData[locals.urlSlug]['customContentStyles'][locals.sanitizedQueryParams.screen]['margin-top']}`;
+	}
+	catch(error) {
+		console.error(error);
+	}
+	console.log(`thisMagickFlowScreenCustomContentStylesMarginTop: `, thisMagickFlowScreenCustomContentStylesMarginTop);
+
+
+	let thisMagickFlowScreenCustomContentStylesMarginBottom = '0px';
+	try {
+		thisMagickFlowScreenCustomContentStylesMarginBottom = `${localization.magicFlowsMetaData[locals.urlSlug]['customContentStyles'][locals.sanitizedQueryParams.screen]['margin-bottom']}`;
+	}
+	catch(error) {
+		console.error(error);
+	}
+	console.log(`thisMagickFlowScreenCustomContentStylesMarginBottom: `, thisMagickFlowScreenCustomContentStylesMarginBottom);
+
+
 	const isPng = thisMagickFlowScreenUrl.endsWith('.png');
 	const isSvg = thisMagickFlowScreenUrl.endsWith('.svg');
 	const isMp4 = thisMagickFlowScreenUrl.endsWith('.mp4');
 	const isGif = thisMagickFlowScreenUrl.endsWith('.gif');
 	const isJpeg = thisMagickFlowScreenUrl.endsWith('.jpg');
+	
+	let showHeader = true;
+	showHeader = !(thisMagickFlowScreenUrl.includes('no-header'));
+	
+	let showFooter = true;
+	showFooter = !(thisMagickFlowScreenUrl.includes('no-footer'));
 
 	console.log(`isMp4: `, isMp4);
 	console.log(`isPng: `, isPng);
+	console.log(`showHeader: `, showHeader);
+	// showHeader = false;
+	// showFooter = false;
 %>
+
+<style type="text/css">
+.slds-global-footer_container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+</style>
+
+
+<% if (showHeader) { %>
+	<div id="stickey-header-wrapper">
+		<div id="stickey-header" class="">
+			<header class="slds-global-header_container">
+				<img src="<%=thisMagickFlowScreenHeaderUrl%>" />
+			</header>
+		</div>
+	</div>
+<% } %>
+
 
 
 <% if (isPng || isSvg || isGif || isJpeg) { %>
-	<img id="screenshot" class="auto-replace" style="width: 100%; margin: 0;" src="<%=thisMagickFlowScreenUrl%>">
+	<img id="screenshot" class="auto-replace is-image" style="width: 100%; margin: <%=thisMagickFlowScreenCustomContentStylesMarginTop%> 0 <%=thisMagickFlowScreenCustomContentStylesMarginBottom%> 0;" src="<%=thisMagickFlowScreenUrl%>">
 <% } else if (isMp4) {%>
-	<video  class="auto-replace" controls autoplay playsinline style="height: 100vh; width: auto;">
+	<video  class="auto-replace is-video" autoplay playsinline style="height: 100vh; width: auto;">
 		<source id="screenshot"  src="<%=thisMagickFlowScreenUrl%>" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
-<% }%>
+<% } %>
+
+
+<% if (showFooter) { %>
+	<div id="stickey-footer-wrapper">
+		<div id="stickey-footer" class="">
+			<footer class="slds-global-footer_container">
+				<img src="<%=thisMagickFlowScreenFooterUrl%>" />
+			</footer>
+		</div>
+	</div>
+<% } %>
 
 
 
