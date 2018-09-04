@@ -1,11 +1,31 @@
-<img id="screenshot" class="auto-replace" style="width: 100%; margin: 0;" src="/magick-flows/<%= demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug] %>/0.svg">
+<%
+	const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( locals.sanitizedQueryParams.screen )]}`;
+	console.log(`thisMagickFlowScreenUrl: `, thisMagickFlowScreenUrl);
+	const isPng = thisMagickFlowScreenUrl.endsWith('.png');
+	const isSvg = thisMagickFlowScreenUrl.endsWith('.svg');
+	const isMp4 = thisMagickFlowScreenUrl.endsWith('.mp4');
+	const isGif = thisMagickFlowScreenUrl.endsWith('.gif');
+	const isJpeg = thisMagickFlowScreenUrl.endsWith('.jpg');
+
+	console.log(`isMp4: `, isMp4);
+	console.log(`isPng: `, isPng);
+%>
 
 
+<% if (isPng || isSvg || isGif || isJpeg) { %>
+	<img id="screenshot" class="auto-replace" style="width: 100%; margin: 0;" src="<%=thisMagickFlowScreenUrl%>">
+<% } else if (isMp4) {%>
+	<video  class="auto-replace" controls autoplay playsinline style="height: 100vh; width: auto;">
+		<source id="screenshot"  src="<%=thisMagickFlowScreenUrl%>" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+<% }%>
 
 
 
 <div id="preload" style="display: none;">
   <% locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
+		<% console.log(`fileName: `, fileName); %>
     <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/<%=fileName%>" width="1" height="1" />
   <% }); %>
 </div>
