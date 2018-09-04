@@ -5,10 +5,11 @@ const overview = require('./overview');
 const segments = require('./segments');
 
 module.exports = {
+	account_name: 'Crocs',
 	consumer_rights_management,
 	einstein_segmentation,
 	manage_segments,
-	"NAME": "Crocks",
+	NAME: 'Crocs',
 	overview,
 	segments	
 };

@@ -20,7 +20,7 @@ if (locals.pageStylesheets) {
 <% 
 	const { account, trigger, user, version } = locals.sanitizedQueryParams;
 	const is201 = version && version === '201';
-	const accountParam = account || (is201 ? 'nto-electronics' : 'Crocs');
+	const accountParam = account || locals.localization.account_name || '';
 %>
 
 <script type="text/javascript">
@@ -38,7 +38,7 @@ if (locals.pageStylesheets) {
 	const userParam = '<%=user%>' || 'Dan';
 	const triggerParam = '<%=trigger%>';
 
-	let accountName = 'Crocs';
+	let accountName = '<%= locals.localization.account_name %>';
 	let userName = '';
 	let appName = 'Salesforce DMP';
 
