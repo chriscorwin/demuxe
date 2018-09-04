@@ -18,9 +18,7 @@ module.exports = {
 			'<span class="text">SAS Institute</span>',
 			'<img src="/images/slices/activation-tiles/activation-tile.commerce-cloud.svg" />'
 		],
-		save_action: () => {
-			window.location = `/segments/manage-segments?trigger=successToast`;
-		},
+		save_action: () => {},
 		segment_description: '',
 		segment_name: 'In-Market Mortgage Seekers'
 	}
