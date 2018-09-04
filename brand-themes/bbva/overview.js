@@ -184,11 +184,11 @@ module.exports = {
 			],
 			table_rows: [
 				{partner: 'ACTIVATION PARTNERS', type: 'REFRESH TYPE', sent: 'DEVICES SENT'},
-				{partner: '<img src="/images/logos/logo-dblclick-bm.svg" />', type: 'Full', sent: '9M'},
-				{partner: '<img src="/images/logos/sf.svg" />', type: 'Full', sent: '8.75M'},
-				{partner: '<img src="/images/logos/appnexus.svg" />', type: 'Incremental', sent: '7M'},
-				{partner: '<img src="/images/logos/youtube.svg" />', type: 'Incremental', sent: '6.8M'},
-				{partner: '<img src="/images/logos/pinterest.svg" />', type: 'Full', sent: '6M'}
+				{partner: '<img src="/images/logos/logo-google-ads.svg" />', type: 'Full', sent: '5M'},
+				{partner: '<img src="/images/logos/sf.svg" />', type: 'Full', sent: '3.1M'},
+				{partner: '<img src="/images/logos/appnexus.svg" />', type: 'Incremental', sent: '2.8M'},
+				{partner: '<img src="/images/logos/youtube.svg" />', type: 'Incremental', sent: '2.5M'},
+				{partner: '<img src="/images/logos/pinterest.svg" />', type: 'Full', sent: '1.8M'}
 			],
 			title: 'Activation Partners',
 			view_all: {
