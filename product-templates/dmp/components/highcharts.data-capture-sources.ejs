@@ -31,8 +31,8 @@ Highcharts must be included on page prior to this running
 		];
 	};
 
-	const categories = deviceData.map((data, i) => {
-		const dateLabel = <%- JSON.stringify(locals.localization.data_capture_sources.dce.graph.date_labels) %>;
+	const dateLabel = <%- JSON.stringify(locals.localization.data_capture_sources.dce.graph.date_labels) %>;
+	const categories = deviceData[0].map((data, i) => {
 		const label = Math.floor(i / 1);
 		return dateLabel[label];
 	}, []);
