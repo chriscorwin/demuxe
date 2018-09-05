@@ -173,7 +173,11 @@ HEADER AREA
 
 			.slds-grid {
 				padding-left: 50px;
-				font-weight: 400;
+
+				h1.slds-text-heading_medium {
+					font-weight: 400;
+				}
+				
 			}
 		}
 	}

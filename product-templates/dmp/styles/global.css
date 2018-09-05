@@ -167,6 +167,9 @@ HEADER AREA
 
 #subheader-wrapper.einstein #subheader .slds-grid {
   padding-left: 50px;
+}
+
+#subheader-wrapper.einstein #subheader .slds-grid h1.slds-text-heading_medium {
   font-weight: 400;
 }
 
