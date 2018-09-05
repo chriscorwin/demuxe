@@ -17,12 +17,12 @@ module.exports = {
 			name: 'Backfill Consent',
 			y: 10,
 			color: '#FFD33F'
-		},
+		}/*,
 		{
 			name: '1st Party Consent',
 			y: 10,
 			color: '#F49E60'
-		}
+		}*/
 	],
 	last_updated: 'Aug 12, 2018',
 	sub_header_text: 'As of Sept 23, 2018',
