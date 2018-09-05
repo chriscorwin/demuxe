@@ -59,15 +59,20 @@ describe('DMP Demo Flow', function () {
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0100.data-capture-sources'))
 			.result(handleResult)
+			// ALLOW ANIMATION TO FINISH
+			.waitFor(2000)
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0101.data-capture-sources'))
+			.result(handleResult)
 			// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
-			.click('#consumer-rights-management-link')
+			.click('#screenshot')
 			.waitFor('body')
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0200.consumer-rights-management-page'))
 			.result(handleResult)
 			// HOVER INSIGHTS NAV LINK
 			// CLICK EINSTEIN SEGMENTATION LINK
-			.click(`#einstein-segmentation-link`)
+			.goto(`${testhost}insights/einstein-segmentation`)
 			.waitFor('body')
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0300.einstein-segmentation'))
@@ -78,6 +83,11 @@ describe('DMP Demo Flow', function () {
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0300.segments.build-standard-segment'))
 			.result(handleResult)
+			// CLICK "SEGMENT NAME" TO FILL
+			.click('#segment-name')
+			.waitFor('body')
+			.screenshot(getScreenshotOptions())
+			.toMatchSnapshot(getMatchOptions('0301.0.segments.build-standard-segment'))
 			// SELECT "MARKETING CLOUD" IN ACTIVATION
 			.click('#checkbox7wrapper')
 			.waitFor('body')
@@ -93,12 +103,12 @@ describe('DMP Demo Flow', function () {
 
 
 			// CURRENTLY OUTSIDE OF DEMO FLOW
-			// CLICK "SAVE" AND GET TAKEN BACK TO SEGMENTS
+			// CLICK "SAVE" SHOULD DO NOTHING
 			.click('#saveButton')
 			.waitFor('body')
 			.waitFor(2000)
 			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('XXXX.segments.manage-segments'))
+			.toMatchSnapshot(getMatchOptions('030X.segments.build-standard-segment'))
 			.result(handleResult)
 
 
