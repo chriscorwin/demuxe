@@ -39,8 +39,9 @@ Highcharts must be included on page prior to this running
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
 		</div>
-		<div class="slds-col slds-size_1-of-3" id="data-capture-methods-chart" style="height:275px;"></div>
-		<div class="slds-col slds-size_2-of-3 slds-p-horizontal_large slds-p-vertical_x-large" id="consent-distribution-graph-legend"></div>
+		<div class="slds-col slds-size_1-of-1 slds-p-around_x-small">Displaying all 1st party data sources.</div>
+		<div class="slds-col slds-size_1-of-3" id="data-capture-methods-chart" style="height:240px;"></div>
+		<div class="slds-col slds-size_2-of-3 slds-p-horizontal_large slds-p-vertical_medium" id="consent-distribution-graph-legend"></div>
 		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_x-small slds-col slds-size_1-of-1">
 			<% locals.localization.overview.panels.dcm.view_all_buttons.forEach((button, i, buttons) => { %>
 				<a<%- button.id ? ` id=${button.id}` : '' %> href="<%- button.href %>"<%- button.onclick ? ` onclick="${button.onclick}"` : '' %>><%- button.text %></a>
@@ -75,7 +76,7 @@ const getDataCaptureMethodsOptions = () => {
 		},
 		chart: {
 			type: 'pie',
-			height: 275,
+			height: 240,
 			style: {
 				fontFamily: 'Salesforce Sans'
 			}
