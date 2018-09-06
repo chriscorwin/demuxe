@@ -4,19 +4,19 @@ Highcharts must be included on page prior to this running
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
 -->
 
-<div class="slds-panel-box" style="margin-top: 1.5em;">
-	<div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.dce.title %>
+<div class="slds-panel-box" style="margin-top: 1em;">
+	<div class="slds-panel-box__header slds-p-around_x-small"><%- locals.localization.overview.panels.dce.title %>
 		<img class="icon slds-float_right" src="/images/settings.svg" />
 	</div>
 	<div class="slds-panel-box__body">
-		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
+		<div class="slds-panel-box__sub-header slds-p-around_x-small">
 			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.dce.buttons[0].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
 		</div>
-		<p class="slds-m-around_medium"><%- locals.localization.overview.panels.dce.explanation %></p>
-		<div id="chart" style="width:100%; height:300px;"></div>
-		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
+		<div class="slds-m-around_x-small"><%- locals.localization.overview.panels.dce.explanation %></div>
+		<div id="chart" style="width:100%; height:240px;"></div>
+		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_x-small">
 			<a href="<%- locals.localization.overview.panels.dce.view_all.href %>"><%- locals.localization.overview.panels.dce.view_all.text %></a>
 		</div>
 	</div>
@@ -56,7 +56,7 @@ Highcharts must be included on page prior to this running
 				text: ''
 			},
 			chart: {
-				height: 300,
+				height: 235,
 				style: {
 					fontFamily: 'Salesforce Sans'
 				}

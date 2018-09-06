@@ -26,12 +26,12 @@ Highcharts must be included on page prior to this running
 		margin-top: 3px;
 	}
 </style>
-<div class="slds-panel-box" style="margin-top: 1.5em;">
-	<div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.dcm.title %>
+<div class="slds-panel-box" style="margin-top: 1em;">
+	<div class="slds-panel-box__header slds-p-around_x-small"><%- locals.localization.overview.panels.dcm.title %>
 		<img class="icon slds-float_right" src="/images/settings.svg" />
 	</div>
 	<div class="slds-grid slds-wrap slds-panel-box__body slds-grid_vertical-align-center">
-		<div class="slds-col slds-size_1-of-1 slds-panel-box__sub-header slds-p-around_small">
+		<div class="slds-col slds-size_1-of-1 slds-panel-box__sub-header slds-p-around_x-small">
 			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.dcm.buttons[0].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
@@ -39,9 +39,9 @@ Highcharts must be included on page prior to this running
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
 		</div>
-		<div class="slds-col slds-size_1-of-3" id="data-capture-methods-chart" style="height:351px;"></div>
+		<div class="slds-col slds-size_1-of-3" id="data-capture-methods-chart" style="height:275px;"></div>
 		<div class="slds-col slds-size_2-of-3 slds-p-horizontal_large slds-p-vertical_x-large" id="consent-distribution-graph-legend"></div>
-		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small slds-col slds-size_1-of-1">
+		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_x-small slds-col slds-size_1-of-1">
 			<% locals.localization.overview.panels.dcm.view_all_buttons.forEach((button, i, buttons) => { %>
 				<a<%- button.id ? ` id=${button.id}` : '' %> href="<%- button.href %>"<%- button.onclick ? ` onclick="${button.onclick}"` : '' %>><%- button.text %></a>
 				<% if (i + 1 !== buttons.length) { %>
@@ -75,7 +75,7 @@ const getDataCaptureMethodsOptions = () => {
 		},
 		chart: {
 			type: 'pie',
-			height: 351,
+			height: 275,
 			style: {
 				fontFamily: 'Salesforce Sans'
 			}
@@ -89,7 +89,7 @@ const getDataCaptureMethodsOptions = () => {
 			},
 			series: {
 				animation: {
-					duration: 2000
+					duration: 1000
 				}
 			}
 		},

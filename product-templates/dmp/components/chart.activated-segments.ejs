@@ -5,11 +5,11 @@
 </style>
 
 <div class="slds-panel-box">
-	<div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.activated_segments.title %>
+	<div class="slds-panel-box__header slds-p-around_x-small"><%- locals.localization.overview.panels.activated_segments.title %>
 		<img class="icon slds-float_right" src="/images/settings.svg" />
 	</div>
 	<div class="slds-panel-box__body">
-		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
+		<div class="slds-panel-box__sub-header slds-p-around_x-small slds-m-bottom_medium">
 			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.activated_segments.buttons[0].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
@@ -20,12 +20,12 @@
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
 		</div>
-		<div class="slds-grid slds-wrap">
+		<div class="slds-grid slds-wrap slds-p-bottom_x-small slds-p-top_xxx-small">
 			<div class="slds-col slds-size_3-of-4 slds-p-left_medium"><%- locals.localization.overview.panels.activated_segments.column_headers[0] %></div>
 			<div class="slds-col slds-size_1-of-4 slds-p-right_medium" style="text-align: right;"><%- locals.localization.overview.panels.activated_segments.column_headers[1] %></div>
 			<div class="slds-col slds-size_1-of-1 slds-p-top_medium" id="activated-segments-graph"></div>
 		</div>
-		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
+		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_x-small">
 			<a href="<%- locals.localization.overview.panels.activated_segments.view_all.href %>"><%- locals.localization.overview.panels.activated_segments.view_all.text %></a>
 		</div>
 	</div>
@@ -36,7 +36,7 @@
 		<div class="slds-grid slds-wrap">
 			<div class="slds-col slds-size_4-of-5 slds-p-left_medium">${data.label}</div>
 			<div class="slds-col slds-size_1-of-5 slds-p-right_medium" style="text-align: right;">${data.number}</div>
-			<div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-m-bottom_large" style="height: 7px;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="550" height="10" viewBox="0 0 550 10">
+			<div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-m-bottom_medium" style="height: 7px;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="550" height="10" viewBox="0 0 550 10">
 				<g transform="scale(1,-1) translate(0,-12)">
 					<rect x="0" y="5" fill="#70ABEA" height="7" stroke="#fff" rx="3" ry="3">
 						<animate attributeName="width" from="0" to="${data.width}" dur="1s" fill="freeze"/>
