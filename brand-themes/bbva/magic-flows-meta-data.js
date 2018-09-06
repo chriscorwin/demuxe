@@ -24,10 +24,7 @@ module.exports = {
 			"20": {"margin-top": "80px","margin-bottom": "0"},
 			"21": {"margin-top": "80px","margin-bottom": "0"},
 			"22": {"margin-top": "0","margin-bottom": "0"},
-			"23": {"margin-top": "0","margin-bottom": "0"},
-			"24": {"margin-top": "0","margin-bottom": "0"},
-			"25": {"margin-top": "0","margin-bottom": "0"},
-			"26": {"margin-top": "80px","margin-bottom": "0"},
+			"23": {"margin-top": "80px","margin-bottom": "0"},
 		}
 	}
 };
