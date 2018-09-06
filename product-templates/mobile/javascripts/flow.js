@@ -56,16 +56,19 @@ function locationHashChanged( ) {
 				window.setTimeout(() => {
 					// document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
 					document.querySelector(`#${itemId}`).classList.add('slds-hide');
-					document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
-				}, 30);
+				}, 2);
 			} else {
 				window.setTimeout(() => {
 					document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
 				}, 1);
 				window.setTimeout(() => {
 					document.querySelector(`#${itemId}`).classList.remove('slds-transition-hide');
+				}, 2);
+				window.setTimeout(() => {
 					document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				}, 20);
+					// document.querySelector(`#${itemId}`).classList.remove('slds-transition-hide');
+					// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
+				}, 250);
 				
 			}
 			// window.setTimeout(() => {
