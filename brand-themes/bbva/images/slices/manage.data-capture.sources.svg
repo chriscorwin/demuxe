@@ -245,27 +245,24 @@
                         </mask>
                         <use id="Mask" fill="#54698D" xlink:href="#path-5"></use>
                     </g>
-                    <g id="Group" transform="translate(24.000000, 43.000000)">
+                    <g id="Group" transform="translate(24.000000, 41.000000)">
                         <g id="Title" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal">
                             <text id="Name">
                                 <tspan x="0" y="20">Account Holders</tspan>
                             </text>
                         </g>
-                        <g id="Group-16-Copy-2" transform="translate(17.000000, 48.000000)" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                        <g id="Group-16-Copy-2" transform="translate(1.000000, 47.000000)" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
                             <g id="Group-8">
                                 <text id="Manage-Consumer-Righ">
                                     <tspan x="0" y="13">Manage Consumer Rights</tspan>
                                 </text>
                             </g>
                         </g>
-                        <g id="new_custom91-copy" transform="translate(1.000000, 49.000000)" fill="#0070D2">
-                            <path d="M11.583671,2.53986492 C10.9868045,2.37774588 10.4441986,1.94542845 10.118635,1.40503166 C9.84733207,0.972714225 9.84733207,0 9.19620499,0 L2.79345537,0 C2.14232829,2.9998048e-16 2.14232829,0.972714225 1.87102534,1.40503166 C1.43694062,2.05350781 0.948595307,2.21562685 0.297468227,2.5939046 C-0.353658854,2.97218235 0.243207637,4.53933305 0.405989407,5.13376952 C1.0028559,7.34939636 2.19658888,9.40290417 4.04144894,10.8619755 C4.58405484,11.2942929 5.12666074,11.618531 5.72352723,11.9427691 C6.26613313,12.2129675 7.18856316,11.456412 7.56838729,11.1321739 C8.5993385,10.3756184 9.46750794,9.45694385 10.1728956,8.37615027 C10.7155015,7.45747572 11.2038468,6.4847615 11.5294104,5.45800759 L11.8549739,4.16105529 C11.9092345,3.83681722 12.0720163,3.24238075 11.9634951,2.91814267 C11.9092345,2.75602364 11.7464527,2.5939046 11.583671,2.53986492 C10.6612409,2.26966652 11.8549739,2.5939046 11.583671,2.53986492 L11.583671,2.53986492 Z M10.7155015,3.94489658 C10.1728956,6.59284086 8.70785968,9.0786661 6.32039372,10.5377374 L5.99483018,10.7538962 L5.66926664,10.5377374 C2.79345537,8.8084677 1.70824357,5.99840439 1.27415885,3.8908569 L1.21989826,3.51257914 L1.59972239,3.29642043 C2.19658888,2.91814267 2.79345537,2.21562685 3.11901891,1.51311102 L3.28180068,1.18887294 L8.70785968,1.18887294 L8.81638086,1.45907134 C9.1419444,2.16158717 9.73881089,2.91814267 10.4984592,3.35046011 L10.7697621,3.45853947 L10.7697621,3.51257914 L10.7155015,3.94489658 Z M5.77778782,2.43178556 C5.3437031,2.43178556 4.20423071,2.43178556 3.98718835,2.5939046 C3.60736422,2.97218235 3.39032186,3.45853947 3.01049773,3.78277754 C2.57641301,4.10701562 2.73919478,4.48529337 2.90197655,4.97165048 C3.1732795,5.83628535 3.55310363,6.64688054 4.09570953,7.34939636 C4.36701248,7.72767412 4.63831543,8.10595187 5.01813956,8.43018995 C5.07240015,8.53826931 5.99483018,9.45694385 5.99483018,8.86250738 L5.99483018,2.81006332 C5.99483018,2.5939046 5.99483018,2.43178556 5.77778782,2.43178556 Z" id="Shape"></path>
-                        </g>
                         <text id="IMPORT-TYPE:" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#4F6A92">
-                            <tspan x="1" y="43">IMPORT TYPE:</tspan>
+                            <tspan x="1" y="44">IMPORT TYPE:</tspan>
                         </text>
                         <text id="Import-Type" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="12" font-weight="bold" fill="#16325C">
-                            <tspan x="87" y="43">Consent Data</tspan>
+                            <tspan x="87" y="44">Consent Data</tspan>
                         </text>
                     </g>
                     <g id="Group-2" transform="translate(50.000000, 125.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-weight="normal">
@@ -286,12 +283,14 @@
                             </text>
                         </g>
                     </g>
-                    <g id="Group-28" transform="translate(24.000000, 16.000000)">
-                        <rect id="bkgd" stroke="#C23934" fill="#FFFFFF" x="0" y="0" width="53" height="21" rx="10.5"></rect>
-                        <text id="FAILED" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="10" font-weight="normal" letter-spacing="0.600000024" fill="#C23934">
-                            <tspan x="8" y="15">FAILED</tspan>
-                        </text>
-                    </g>
+                </g>
+            </g>
+            <g id="Group-27-Copy" transform="translate(463.000000, 1012.000000)">
+                <g id="Group-23">
+                    <rect id="bkgd-copy" stroke="#04844B" fill="#FFFFFF" x="0" y="0" width="73" height="21" rx="10.5"></rect>
+                    <text id="COMPLETE-Copy" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="10" font-weight="normal" letter-spacing="0.600000024" fill="#04844B">
+                        <tspan x="8" y="15">COMPLETE</tspan>
+                    </text>
                 </g>
             </g>
             <g id="Card-Complete-With-Warning" transform="translate(440.000000, 794.000000)">
