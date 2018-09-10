@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include('includes/global/head') %>
+	</head>
+
+	<body>
+		<div id="content-wrapper">
+			<div id="content" class="">
+				<script>console.log('<%= locals.root %>');</script>
+				<%- include(`${locals.pageContents}`) %>
+			</div>
+		</div>
+
+		<%- include('includes/global/footer-scripts') %>
+	</body>
+</html>

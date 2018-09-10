@@ -12,10 +12,10 @@ module.exports = {
 			"8": {"margin-top": "0","margin-bottom": "0"},
 			"9": {"margin-top": "0","margin-bottom": "0"},
 			"10": {"margin-top": "0","margin-bottom": "0"},
-			"11": {"margin-top": "0","margin-bottom": "0"},
-			"12": {"margin-top": "0","margin-bottom": "0"},
-			"13": {"margin-top": "80px","margin-bottom": "77px"},
-			"14": {"margin-top": "80px","margin-bottom": "77px"},
+			"11": {"margin-top": "80px","margin-bottom": "55px"},
+			"12": {"margin-top": "80px","margin-bottom": "55px"},
+			"13": {"margin-top": "80px","margin-bottom": "0"},
+			"14": {"margin-top": "80px","margin-bottom": "0"},
 			"15": {"margin-top": "80px","margin-bottom": "0"},
 			"16": {"margin-top": "80px","margin-bottom": "0"},
 			"17": {"margin-top": "80px","margin-bottom": "0"},
@@ -24,10 +24,7 @@ module.exports = {
 			"20": {"margin-top": "80px","margin-bottom": "0"},
 			"21": {"margin-top": "80px","margin-bottom": "0"},
 			"22": {"margin-top": "0","margin-bottom": "0"},
-			"23": {"margin-top": "0","margin-bottom": "0"},
-			"24": {"margin-top": "0","margin-bottom": "0"},
-			"25": {"margin-top": "0","margin-bottom": "0"},
-			"26": {"margin-top": "80px","margin-bottom": "0"},
+			"23": {"margin-top": "80px","margin-bottom": "0"},
 		}
 	}
 };
