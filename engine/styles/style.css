@@ -37,21 +37,48 @@
   font-weight: 700;
 }
 
-html {
-  background-color: #fdfdfd;
+.do {
+  animation: do 0.8s ease-out;
+  opacity: 1;
+  transition-delay: 0.5s;
+  transform-origin: 1.1875rem 0;
 }
 
-body.has-debug .is-ssi-block {
-  display: inline-block;
-  outline: 1px solid red;
+@keyframes do {
+  75% {
+    transform: scale(0.5, 0.5);
+  }
+  85% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.magick-flows-slide {
+  box-shadow: 1px 4px 8px 12px #00000a4f;
+  background-color: red;
+  position: absolute;
+}
+
+/**
+
+// Currenct versions of SLDS have the background color #fafaf9 by default. Override that.
+@import 'slds-background-override';
+
+body {
+	&.has-debug {
+	  .is-ssi-block { display: inline-block; outline: 1px solid red;}
+	}
 }
 
 code, var {
-  background-color: #eee;
+	background-color: #eee;
 }
 
 #main-container {
-  margin: auto;
+	margin: auto;
 }
 
 /**
@@ -62,7 +89,7 @@ code, var {
  * @modifier
  */
 .slds-transition-hide {
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.125s ease-in-out;
   will-change: opacity;
   opacity: 0;
 }
@@ -75,7 +102,7 @@ code, var {
  * @modifier
  */
 .slds-transition-show {
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.125s ease-in-out;
   will-change: opacity;
   opacity: 1;
 }

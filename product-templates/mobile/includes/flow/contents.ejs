@@ -108,20 +108,11 @@
 %>
 
 
-		<article 
+		<div 
 			id="magick-flows--slide-<%=fileIndex%>"
-			data-slide="<%=fileIndex%>" 
+			data-slide="<%=fileIndex%>"
+			class="magick-flows-slide"
 		>
-
-
-			<script>
-				console.log(`thisMagickFlowScreenUrl: <%=thisMagickFlowScreenUrl%>`);
-				console.log(`fileIndex: <%=fileIndex%>`);
-				console.log(`clicks == fileIndex: `, clicks == <%=fileIndex%>);
-				console.log('thisMagickFlowScreenHeaderUrl:  <%= thisMagickFlowScreenHeaderUrl %>');
-				console.log(`thisMagickFlowScreenFooterUrl:  <%=thisMagickFlowScreenFooterUrl%>`);
-			</script>
-
 		<% if (showHeader) { %>
 			<header class="slds-global-header_container">
 				<img
@@ -137,7 +128,7 @@
 			<img
 				class="screenshot auto-replace is-image "
 				id="screenshot--slide-<%=fileIndex%>"
-				style="position: absolute; width: 100%; top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%> ; left: 0; bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>; right: 0;"
+				style="position: relative; width: 100%; top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%> ; left: 0; bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>; right: 0;"
 				src="<%=thisMagickFlowScreenUrl%>"
 			>
 		<% } else if (isMp4) {%>
@@ -168,7 +159,7 @@
 			</footer>
 		<% } %>
 
-		</article>
+		</div>
 
 
 
