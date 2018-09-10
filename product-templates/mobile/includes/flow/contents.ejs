@@ -108,66 +108,69 @@
 %>
 
 
-		<script>
-			console.log(`thisMagickFlowScreenUrl: <%=thisMagickFlowScreenUrl%>`);
-			console.log(`fileIndex: <%=fileIndex%>`);
-			console.log(`clicks == fileIndex: `, clicks == <%=fileIndex%>);
-			console.log('thisMagickFlowScreenHeaderUrl:  <%= thisMagickFlowScreenHeaderUrl %>');
-			console.log(`thisMagickFlowScreenFooterUrl:  <%=thisMagickFlowScreenFooterUrl%>`);
-		</script>
-
-
-<% if (showHeader) { %>
-	<header class="slds-global-header_container">
-		<img
-			id="sticky-header--slide-<%=fileIndex%>"
-			data-slide="<%=fileIndex%>"
-			class="sticky-footer slds-hide"
-			src="<%=thisMagickFlowScreenHeaderUrl%>"
-		/>
-	</header>
-<% } %>
-
-
-<% if (isPng || isSvg || isGif || isJpeg) { %>
-	<img
-		class="screenshot auto-replace is-image slds-hide"
-		data-slide="<%=fileIndex%>"
-		id="screenshot--slide-<%=fileIndex%>"
-		style="width: 100%; margin: <%=thisMagickFlowScreenCustomContentStylesMarginTop%> 0 <%=thisMagickFlowScreenCustomContentStylesMarginBottom%> 0;"
-		src="<%=thisMagickFlowScreenUrl%>"
-	>
-<% } else if (isMp4) {%>
-	<video
-		autoplay
-		class="auto-replace is-video slds-hide"
-		data-slide="<%=fileIndex%>"
-		id="screenshot-wrapper--slide-<%=fileIndex%>"
-		playsinline
-		style="height: 100vh; width: auto;"
-	>
-		<source
-			class="screenshot auto-replace slds-hide"
-			data-slide="<%=fileIndex%>"
-			id="screenshot--slide-<%=fileIndex%>"
-			src="<%=thisMagickFlowScreenUrl%>"
-			type="video/mp4"
+		<article 
+			id="magick-flows--slide-<%=fileIndex%>"
+			data-slide="<%=fileIndex%>" 
 		>
-		Your browser does not support the video tag.
-	</video>
-<% } %>
 
 
-<% if (showFooter) { %>
-	<footer class="slds-global-footer_container">
-		<img
-			id="sticky-footer--slide-<%=fileIndex%>"
-			data-slide="<%=fileIndex%>"
-			class="sticky-footer slds-hide"
-			src="<%=thisMagickFlowScreenFooterUrl%>"
-		/>
-	</footer>
-<% } %>
+			<script>
+				console.log(`thisMagickFlowScreenUrl: <%=thisMagickFlowScreenUrl%>`);
+				console.log(`fileIndex: <%=fileIndex%>`);
+				console.log(`clicks == fileIndex: `, clicks == <%=fileIndex%>);
+				console.log('thisMagickFlowScreenHeaderUrl:  <%= thisMagickFlowScreenHeaderUrl %>');
+				console.log(`thisMagickFlowScreenFooterUrl:  <%=thisMagickFlowScreenFooterUrl%>`);
+			</script>
+
+		<% if (showHeader) { %>
+			<header class="slds-global-header_container">
+				<img
+					id="sticky-header--slide-<%=fileIndex%>"
+					class="sticky-footer "
+					src="<%=thisMagickFlowScreenHeaderUrl%>"
+				/>
+			</header>
+		<% } %>
+
+
+		<% if (isPng || isSvg || isGif || isJpeg) { %>
+			<img
+				class="screenshot auto-replace is-image "
+				id="screenshot--slide-<%=fileIndex%>"
+				style="position: absolute; width: 100%; top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%> ; left: 0; bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>; right: 0;"
+				src="<%=thisMagickFlowScreenUrl%>"
+			>
+		<% } else if (isMp4) {%>
+			<video
+				autoplay
+				class="auto-replace is-video "
+				id="screenshot-wrapper--slide-<%=fileIndex%>"
+				playsinline
+				style="height: 100vh; width: auto;"
+			>
+				<source
+					class="screenshot auto-replace "
+					id="screenshot--slide-<%=fileIndex%>"
+					src="<%=thisMagickFlowScreenUrl%>"
+					type="video/mp4"
+				>
+				Your browser does not support the video tag.
+			</video>
+		<% } %>
+			
+		<% if (showFooter) { %>
+			<footer class="slds-global-footer_container">
+				<img
+					id="sticky-footer--slide-<%=fileIndex%>"
+					class="sticky-footer "
+					src="<%=thisMagickFlowScreenFooterUrl%>"
+				/>
+			</footer>
+		<% } %>
+
+		</article>
+
+
 
 <% }); %>
 

@@ -50,25 +50,30 @@ function locationHashChanged( ) {
 			if (parseInt(item.dataset.slide) !== clicks) {
 				window.setTimeout(() => {
 					document.querySelector(`#${itemId}`).classList.add('slds-transition-hide');
-					document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
 					// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
 				}, 1);
 				window.setTimeout(() => {
+					document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
+					// document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
+					// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
+				}, 250);
+				window.setTimeout(() => {
+					// document.querySelector(`#${itemId}`).classList.add('slds-transition-hide');
 					// document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
-					document.querySelector(`#${itemId}`).classList.add('slds-hide');
-				}, 2);
+					// document.querySelector(`#${itemId}`).classList.add('slds-hide');
+				}, 251);
 			} else {
 				window.setTimeout(() => {
+					document.querySelector(`#${itemId}`).classList.remove('slds-transition-hide');
 					document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
 				}, 1);
 				window.setTimeout(() => {
-					document.querySelector(`#${itemId}`).classList.remove('slds-transition-hide');
+					// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
 				}, 2);
 				window.setTimeout(() => {
-					document.querySelector(`#${itemId}`).classList.remove('slds-hide');
 					// document.querySelector(`#${itemId}`).classList.remove('slds-transition-hide');
 					// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				}, 250);
+				}, 3);
 				
 			}
 			// window.setTimeout(() => {
