@@ -1,15 +1,4 @@
 <%_
-
-var i = 0;
-do {
-  i += 1;
-_%>
-<%= `hi: ${i}` _%>
-<%_
-} while (i < 5);
-_%>
-<script>let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;</script>
-<%_
 	locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName, fileIndex) {
 
 		const thisMagifFlowPath = demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].path;
@@ -66,34 +55,8 @@ _%>
 
 
 _%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-	========================================================
-
-	<%=thisMagickFlowScreenHeaderUrl%> 																																																																	
--->
-<script>
-	console.group(`thisMagickFlowScreenHeaderUrl: <%=thisMagickFlowScreenHeaderUrl%>`);
-	console.log(`fileIndex: <%=fileIndex%>`);
-	console.log(`showHeader: <%=showHeader%>`);
-	console.log(`showFooter: <%=showFooter%>`);
-	console.log(`thisMagifFlowPath: <%=thisMagifFlowPath%>`);
-</script>
-
 <div
-	class="slds-grid slds-grid_vertical <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	class="slds-transition-hide slds-grid slds-grid_vertical  <%= classnames(thisMagickFlowsSlideClassnames);%>"
 	data-slide="<%=fileIndex%>"
 	id="magick-flows--slide-<%=fileIndex%>"
 >
@@ -122,6 +85,7 @@ _%>
 				class="screenshot auto-replace is-image "
 				id="screenshot--slide-<%=fileIndex%>"
 				src="<%=thisMagickFlowScreenUrl%>"
+				style="width: 100vw; max-width: 100vw;"
 			>
 		</div>
 <%_ } else if (isMp4) { _%>
@@ -154,9 +118,9 @@ _%>
 <%_ } _%>
 </div>
 
-<script>console.groupEnd();</script>
 
 <%_ }); _%>
+<script>let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;</script>
 
 
 

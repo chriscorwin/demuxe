@@ -1,12 +1,5 @@
-console.log(`/product-templates/dmp/javascripts/flow.js running`);
 
 const magickFlowConfig = locals.demoMagickFlows[demoMagickFlowDirectoryName];
-
-// let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
-// let clicks = parseInt( locals.sanitizedQueryParams.screen ) || 0;
-
-console.log(`locals.sanitizedQueryParams.screen: `, locals.sanitizedQueryParams.screen);
-
 
 window.location.hash = `#${clicks}`;
 
@@ -19,79 +12,48 @@ $contentWrapper.onclick = ( ) => {
 		clicks = 0;
 	}
 	window.location.hash = `#${clicks}`;
-	// window.location.search = `screen=${clicks}`;
 };
 
 
 function locationHashChanged( ) {
-	console.log(`clicks: `, clicks);
 	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
-	console.log(`clicks >= magickFlowConfig.numberOfScreens: `, clicks >= magickFlowConfig.numberOfScreens);
-	// window.location.search = `screen=${clicks}`;
 	if ( clicks >= magickFlowConfig.numberOfScreens ) {
 		clicks = 0;
 		window.location.hash = `#${clicks}`;
 	}
-	console.log(`clicks: `, clicks);
-	console.log("`/magick-flows/${demoMagickFlowDirectoryName}/${magickFlowConfig.screens[clicks]}: ", `/magick-flows/${demoMagickFlowDirectoryName}/${magickFlowConfig.screens[clicks]}`);
-	// $ss.src = `/magick-flows/${demoMagickFlowDirectoryName}/${magickFlowConfig.screens[clicks]}`;
-
-
 
 
 	for (var item of document.querySelectorAll(`[data-slide]`)) {
 		if (typeof(item) != 'undefined' && item != null) {
 			const itemId = item.id;
 
-
-			console.log(`item.dataset.slide: `, item.dataset.slide);
-			console.log(`parseInt(item.dataset.slide) === clicks: `, parseInt(item.dataset.slide) === clicks);
-
 			if (parseInt(item.dataset.slide) !== clicks) {
 				window.setTimeout(() => {
-					document.querySelector(`#${itemId}`).classList.add('slds-transition-hide');
-					// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				}, 1);
-				window.setTimeout(() => {
 					document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
-					// document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
-					// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				}, 250);
-				window.setTimeout(() => {
-					// document.querySelector(`#${itemId}`).classList.add('slds-transition-hide');
-					// document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
-					// document.querySelector(`#${itemId}`).classList.add('slds-hide');
-				}, 251);
+					document.querySelector(`#${itemId}`).classList.add('slds-hide');
+				}, 10);
 			} else {
+
+				document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
 				window.setTimeout(() => {
-					document.querySelector(`#${itemId}`).classList.remove('slds-transition-hide');
-					document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
+					scrollIt(
+						document.querySelector(`#screenshot--slide-${clicks}`),
+						0,
+						'easeOutQuad',
+						() => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+					);
+					document.querySelector(`#${itemId}`).classList.remove('slds-hide');
 				}, 1);
-				window.setTimeout(() => {
-					// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				}, 2);
-				window.setTimeout(() => {
-					// document.querySelector(`#${itemId}`).classList.remove('slds-transition-hide');
-					// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				}, 3);
 				
 			}
-			// window.setTimeout(() => {
-			// 	document.querySelector(`#${itemId}`).classList.remove('slds-transition-hide');
-			// }, 4200);
 		}
-		// item.classList.add('slds-hide');
 	}
 	
 
-	console.log(`clicks: `, clicks);
 }
 
-console.log(`clicks: `, clicks);
 window.onhashchange = locationHashChanged;
-console.log(`clicks: `, clicks);
 locationHashChanged();
-console.log(`clicks: `, clicks);
 
 
 
@@ -102,9 +64,83 @@ function offset(el) {
 	return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
 
-console.log(`
-// example use
-let slideImaged = document.getElementById('screenshot--slide-0');
-let elementOffset = offset(slideImaged);
-console.log(elementOffset.left, elementOffset.top);	
-`);
+
+function scrollIt(destination, duration = 200, easing = 'linear', callback) {
+
+  const easings = {
+    linear(t) {
+      return t;
+    },
+    easeInQuad(t) {
+      return t * t;
+    },
+    easeOutQuad(t) {
+      return t * (2 - t);
+    },
+    easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    },
+    easeInCubic(t) {
+      return t * t * t;
+    },
+    easeOutCubic(t) {
+      return (--t) * t * t + 1;
+    },
+    easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+    },
+    easeInQuart(t) {
+      return t * t * t * t;
+    },
+    easeOutQuart(t) {
+      return 1 - (--t) * t * t * t;
+    },
+    easeInOutQuart(t) {
+      return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
+    },
+    easeInQuint(t) {
+      return t * t * t * t * t;
+    },
+    easeOutQuint(t) {
+      return 1 + (--t) * t * t * t * t;
+    },
+    easeInOutQuint(t) {
+      return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
+    }
+  };
+
+  const start = window.pageYOffset;
+  const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+
+  const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+  const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
+  let destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
+  destinationOffsetToScroll = destinationOffsetToScroll - destinationOffsetToScroll;
+  if ('requestAnimationFrame' in window === false) {
+    window.scroll(0, destinationOffsetToScroll);
+    if (callback) {
+      callback();
+    }
+    return;
+  }
+
+  function scroll() {
+    const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+    const time = Math.min(1, ((now - startTime) / duration));
+    const timeFunction = easings[easing](time);
+    window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
+
+    if (window.pageYOffset === destinationOffsetToScroll) {
+      if (callback) {
+        callback();
+      }
+      return;
+    }
+
+    requestAnimationFrame(scroll);
+  }
+
+  scroll();
+}
+

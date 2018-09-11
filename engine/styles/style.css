@@ -111,7 +111,7 @@ code, var {
  * @modifier
  */
 .slds-transition-hide {
-  transition: opacity 2.125s ease-in-out;
+  transition: opacity 1.125s ease-in-out;
   will-change: opacity;
   opacity: 0;
 }
@@ -124,7 +124,7 @@ code, var {
  * @modifier
  */
 .slds-transition-show {
-  transition: opacity 2.125s ease-in-out;
+  transition: opacity 1.125s ease-in-out;
   will-change: opacity;
   opacity: 1;
 }
