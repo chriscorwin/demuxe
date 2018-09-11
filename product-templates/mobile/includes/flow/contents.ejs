@@ -12,6 +12,7 @@ _%>
 <%_
 	locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName, fileIndex) {
 
+		const thisMagifFlowPath = demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].path;
 		let thisMagickFlowsSlideClassnames = {
 			'magick-flows-slide': true
 		};
@@ -59,6 +60,11 @@ _%>
 		thisMagickFlowsSlideClassnames['has-footer'] = showFooter;
 
 
+		
+		// let dimensions = sizeOf(thisMagifFlowPath + thisMagickFlowScreenUrl);
+		// console.log(dimensions.width, dimensions.height);
+
+
 _%>
 
 
@@ -83,6 +89,7 @@ _%>
 	console.log(`fileIndex: <%=fileIndex%>`);
 	console.log(`showHeader: <%=showHeader%>`);
 	console.log(`showFooter: <%=showFooter%>`);
+	console.log(`thisMagifFlowPath: <%=thisMagifFlowPath%>`);
 </script>
 
 <div
