@@ -92,3 +92,19 @@ window.onhashchange = locationHashChanged;
 console.log(`clicks: `, clicks);
 locationHashChanged();
 console.log(`clicks: `, clicks);
+
+
+
+function offset(el) {
+	let rect = el.getBoundingClientRect(),
+	scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+	scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
+
+console.log(`
+// example use
+let slideImaged = document.getElementById('screenshot--slide-0');
+let elementOffset = offset(slideImaged);
+console.log(elementOffset.left, elementOffset.top);	
+`);

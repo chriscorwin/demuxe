@@ -2,11 +2,79 @@
 	let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 </script>
 <%
-	locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName, fileIndex) {
+	const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( locals.sanitizedQueryParams.screen )]}`;
+	console.log(`thisMagickFlowScreenUrl: `, thisMagickFlowScreenUrl);
+	
 
+	const thisMagickFlowScreenHeaderUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( locals.sanitizedQueryParams.screen )}.header.png`;
+	console.log(`thisMagickFlowScreenHeaderUrl: `, thisMagickFlowScreenHeaderUrl);
+
+	const thisMagickFlowScreenFooterUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( locals.sanitizedQueryParams.screen )}.footer.png`;
+	console.log(`thisMagickFlowScreenFooterUrl: `, thisMagickFlowScreenFooterUrl);
+
+	let thisMagickFlowScreenCustomContentStylesMarginTop = '0px';
+	try {
+		thisMagickFlowScreenCustomContentStylesMarginTop = `${localization.magicFlowsMetaData[locals.urlSlug]['customContentStyles'][locals.sanitizedQueryParams.screen]['margin-top']}`;
+	}
+	catch(error) {
+		console.error(error);
+	}
+	console.log(`thisMagickFlowScreenCustomContentStylesMarginTop: `, thisMagickFlowScreenCustomContentStylesMarginTop);
+
+
+	let thisMagickFlowScreenCustomContentStylesMarginBottom = '0px';
+	try {
+		thisMagickFlowScreenCustomContentStylesMarginBottom = `${localization.magicFlowsMetaData[locals.urlSlug]['customContentStyles'][locals.sanitizedQueryParams.screen]['margin-bottom']}`;
+	}
+	catch(error) {
+		console.error(error);
+	}
+	console.log(`thisMagickFlowScreenCustomContentStylesMarginBottom: `, thisMagickFlowScreenCustomContentStylesMarginBottom);
+
+
+	const isPng = thisMagickFlowScreenUrl.endsWith('.png');
+	const isSvg = thisMagickFlowScreenUrl.endsWith('.svg');
+	const isMp4 = thisMagickFlowScreenUrl.endsWith('.mp4');
+	const isGif = thisMagickFlowScreenUrl.endsWith('.gif');
+	const isJpeg = thisMagickFlowScreenUrl.endsWith('.jpg');
+	
+	let showHeader = true;
+	showHeader = !(thisMagickFlowScreenUrl.includes('no-header'));
+	
+	let showFooter = true;
+	showFooter = !(thisMagickFlowScreenUrl.includes('no-footer'));
+
+	console.log(`isMp4: `, isMp4);
+	console.log(`isPng: `, isPng);
+	console.log(`showHeader: `, showHeader);
+	// showHeader = false;
+	// showFooter = false;
+%>
+
+<style type="text/css">
+.slds-global-footer_container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+</style>
+
+
+
+<%
+	locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName, fileIndex) {
+%>
+<%
 		const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( fileIndex )]}`;
+
+
 		const thisMagickFlowScreenHeaderUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( fileIndex )}.header.png`;
+
 		const thisMagickFlowScreenFooterUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( fileIndex )}.footer.png`;
+
 
 		let thisMagickFlowScreenCustomContentStylesMarginTop = '0px';
 		try {
@@ -47,20 +115,11 @@
 %>
 
 
-		<script>
-			console.group(`thisMagickFlowScreenHeaderUrl: <%=thisMagickFlowScreenHeaderUrl%>`);
-		</script>
 		<div 
 			id="magick-flows--slide-<%=fileIndex%>"
 			data-slide="<%=fileIndex%>"
-			class="magick-flows-slide <%= if (showHeader) { 'has-header' } %>"
+			class="magick-flows-slide"
 		>
-			
-		<script>
-			console.log(`fileIndex: <%=fileIndex%>`);
-			console.log(`showHeader: <%=showHeader%>`);
-			console.log(`showFooter: <%=showFooter%>`);
-		</script>
 		<% if (showHeader) { %>
 			<header class="slds-global-header_container">
 				<img
@@ -72,15 +131,11 @@
 		<% } %>
 
 
-		<div
-			class="slds-scrollable"
-			style="margin-top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%>; margin-bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>;"
-		>
-
 		<% if (isPng || isSvg || isGif || isJpeg) { %>
 			<img
 				class="screenshot auto-replace is-image "
 				id="screenshot--slide-<%=fileIndex%>"
+				style="position: relative; width: 100vw; top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%> ; left: 0; bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>; right: 0;"
 				src="<%=thisMagickFlowScreenUrl%>"
 			>
 		<% } else if (isMp4) {%>
@@ -100,8 +155,6 @@
 				Your browser does not support the video tag.
 			</video>
 		<% } %>
-
-		</div>
 			
 		<% if (showFooter) { %>
 			<footer class="slds-global-footer_container">
@@ -116,10 +169,6 @@
 		</div>
 
 
-		<script>
-			console.groupEnd();
-		</script>
-
 
 <% }); %>
 
@@ -129,6 +178,7 @@
 
 <div id="preload" style="display: none;">
 	<% locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
+		<% console.log(`fileName: `, fileName); %>
 		<img src="/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/<%=fileName%>" width="1" height="1" />
 	<% }); %>
 </div>
