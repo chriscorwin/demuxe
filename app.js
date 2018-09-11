@@ -8,6 +8,7 @@ const util = require('util');
 const logger = require('morgan');
 const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
+const classnames = require('classnames');
 
 const config = require('./config/config.js')();
 
@@ -126,7 +127,8 @@ router.get('/*', (req, res) => {
 					let thisUrlSlug = fileName.replace('.ejs', '');
 					if (config.demoMagickFlowUrlSlugs.includes(thisUrlSlug) ) {
 						config.urlSlug = thisUrlSlug;
-						res.render('flow', { ...config, sanitizedQueryParams: sanitizedQueryParams });
+
+						res.render('flow', { ...config, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames });
 					} else {
 						res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
 							if (req.url.match(/\.css$/)) {
@@ -147,6 +149,7 @@ router.get('/*', (req, res) => {
 	});
 });
 app.use('/', router);
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

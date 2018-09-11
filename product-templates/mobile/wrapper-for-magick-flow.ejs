@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<%- include('includes/global/head') %>
+		<%- include('includes/global/head') _%>
 		<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -9,10 +9,7 @@
 
 	<body class="magick-flow">
 		<div id="content-wrapper">
-			<div id="content" class="">
-				<script>console.log('<%= locals.root %>');</script>
-				<%- include(`includes/${locals.siteSection}/contents`) %>
-			</div>
+			<div id="content" class=""><%- include(`includes/${locals.siteSection}/contents`) _%></div>
 		</div>
 		<%- include('includes/global/footer-scripts') %>
 	</body>

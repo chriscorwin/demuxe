@@ -1,8 +1,20 @@
-<script>
-	let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
-</script>
-<%
+<%_
+
+var i = 0;
+do {
+  i += 1;
+_%>
+<%= `hi: ${i}` _%>
+<%_
+} while (i < 5);
+_%>
+<script>let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;</script>
+<%_
 	locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName, fileIndex) {
+
+		let thisMagickFlowsSlideClassnames = {
+			'magick-flows-slide': true
+		};
 
 		const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( fileIndex )]}`;
 		const thisMagickFlowScreenHeaderUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( fileIndex )}.header.png`;
@@ -34,101 +46,110 @@
 		
 		let showHeader = true;
 		showHeader = !(thisMagickFlowScreenUrl.includes('no-header'));
-		
-		let showFooter = true;
-		showFooter = !(thisMagickFlowScreenUrl.includes('no-footer'));
-
 		if(!showHeader) {
 			thisMagickFlowScreenCustomContentStylesMarginTop = 0;
 		}
+		thisMagickFlowsSlideClassnames['has-header'] = showHeader;
+
+		let showFooter = true;
+		showFooter = !(thisMagickFlowScreenUrl.includes('no-footer'));
 		if(!showFooter) {
 			thisMagickFlowScreenCustomContentStylesMarginBottom = 0;
 		}
-%>
+		thisMagickFlowsSlideClassnames['has-footer'] = showFooter;
 
 
-		<script>
-			console.group(`thisMagickFlowScreenHeaderUrl: <%=thisMagickFlowScreenHeaderUrl%>`);
-		</script>
-		<div 
-			id="magick-flows--slide-<%=fileIndex%>"
-			data-slide="<%=fileIndex%>"
-			class="magick-flows-slide <%= if (showHeader) { 'has-header' } %>"
-		>
-			
-		<script>
-			console.log(`fileIndex: <%=fileIndex%>`);
-			console.log(`showHeader: <%=showHeader%>`);
-			console.log(`showFooter: <%=showFooter%>`);
-		</script>
-		<% if (showHeader) { %>
-			<header class="slds-global-header_container">
-				<img
-					id="sticky-header--slide-<%=fileIndex%>"
-					class="sticky-footer "
-					src="<%=thisMagickFlowScreenHeaderUrl%>"
-				/>
-			</header>
-		<% } %>
+_%>
 
 
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+	========================================================
+
+	<%=thisMagickFlowScreenHeaderUrl%> 																																																																	
+-->
+<script>
+	console.group(`thisMagickFlowScreenHeaderUrl: <%=thisMagickFlowScreenHeaderUrl%>`);
+	console.log(`fileIndex: <%=fileIndex%>`);
+	console.log(`showHeader: <%=showHeader%>`);
+	console.log(`showFooter: <%=showFooter%>`);
+</script>
+
+<div
+	class="slds-grid slds-grid_vertical <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	data-slide="<%=fileIndex%>"
+	id="magick-flows--slide-<%=fileIndex%>"
+>
+<%_ if (showHeader) { _%>
+	<header class="slds-col">
+		<div class="slds-global-header_container">
+			<img
+				id="sticky-header--slide-<%=fileIndex%>"
+				class="sticky-footer "
+				src="<%=thisMagickFlowScreenHeaderUrl%>"
+			/>
+		</div>
+	</header>
+<%_ } _%>
+
+
+	<div
+		class="slds-col"
+		style="margin-top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%>; margin-bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>;"
+	>
+<%_ if (isPng || isSvg || isGif || isJpeg) { _%>
 		<div
 			class="slds-scrollable"
-			style="margin-top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%>; margin-bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>;"
 		>
-
-		<% if (isPng || isSvg || isGif || isJpeg) { %>
 			<img
 				class="screenshot auto-replace is-image "
 				id="screenshot--slide-<%=fileIndex%>"
 				src="<%=thisMagickFlowScreenUrl%>"
 			>
-		<% } else if (isMp4) {%>
-			<video
-				autoplay
-				class="auto-replace is-video "
-				id="screenshot-wrapper--slide-<%=fileIndex%>"
-				playsinline
-				style="height: 100vh; width: auto;"
+		</div>
+<%_ } else if (isMp4) { _%>
+		<video
+			autoplay
+			class="auto-replace is-video "
+			id="screenshot-wrapper--slide-<%=fileIndex%>"
+			playsinline
+			style="height: 100vh; width: auto;"
+		>
+			<source
+				class="screenshot auto-replace "
+				id="screenshot--slide-<%=fileIndex%>"
+				src="<%=thisMagickFlowScreenUrl%>"
+				type="video/mp4"
 			>
-				<source
-					class="screenshot auto-replace "
-					id="screenshot--slide-<%=fileIndex%>"
-					src="<%=thisMagickFlowScreenUrl%>"
-					type="video/mp4"
-				>
-				Your browser does not support the video tag.
-			</video>
-		<% } %>
+			Your browser does not support the video tag.
+		</video>
+<%_ } _%>
+	</div>
 
-		</div>
-			
-		<% if (showFooter) { %>
-			<footer class="slds-global-footer_container">
-				<img
-					id="sticky-footer--slide-<%=fileIndex%>"
-					class="sticky-footer "
-					src="<%=thisMagickFlowScreenFooterUrl%>"
-				/>
-			</footer>
-		<% } %>
-
-		</div>
-
-
-		<script>
-			console.groupEnd();
-		</script>
-
-
-<% }); %>
-
-
-
-
-
-<div id="preload" style="display: none;">
-	<% locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
-		<img src="/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/<%=fileName%>" width="1" height="1" />
-	<% }); %>
+<%_ if (showFooter) { _%>
+	<footer class="slds-global-footer_container slds-col">
+		<img
+			id="sticky-footer--slide-<%=fileIndex%>"
+			class="sticky-footer "
+			src="<%=thisMagickFlowScreenFooterUrl%>"
+		/>
+	</footer>
+<%_ } _%>
 </div>
+
+<script>console.groupEnd();</script>
+
+<%_ }); _%>
+
+
+

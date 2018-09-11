@@ -15,6 +15,7 @@
     "test:update": "rm -rf test/screenshots/__different_snapshot__/ && NODE_ENV=local update=true mocha"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "https://github.com/cmcculloh/ejs.git",
