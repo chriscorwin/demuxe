@@ -68,6 +68,10 @@ function locationHashChanged( ) {
 		if (typeof(item) != 'undefined' && item != null) {
 			const itemId = item.id;
 			console.log(`item.dataset.slide: `, item.dataset.slide);
+
+
+
+
 			if (parseInt(item.dataset.slide) == clicks) {
 				
 				// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
@@ -87,7 +91,21 @@ function locationHashChanged( ) {
 
 				// document.querySelector('html').style.backgroundImage = `url("${thisMagickFlowScreenshotUrl}")`;
 				// document.querySelector('html').style.backgroundSize = `cover`;
+				const isPng = thisMagickFlowScreenshotUrl.endsWith('.png');
+				const isSvg = thisMagickFlowScreenshotUrl.endsWith('.svg');
+				const isMp4 = thisMagickFlowScreenshotUrl.endsWith('.mp4');
+				const isGif = thisMagickFlowScreenshotUrl.endsWith('.gif');
+				const isJpeg = thisMagickFlowScreenshotUrl.endsWith('.jpg');
 
+				console.log(`isGif: `, isGif);
+				if(isGif) {
+					// alert('isGif', isGif);
+					const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
+					console.log(`item img: `, theScreenshot.src);
+					theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
+
+					
+				}
 
 				window.setTimeout(() => {
 					document.querySelector(`#magick-flows--slide-${nextClick}`).classList.remove('slds-hide');
