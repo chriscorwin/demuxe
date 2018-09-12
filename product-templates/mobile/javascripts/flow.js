@@ -1,6 +1,23 @@
 
 const magickFlowConfig = locals.demoMagickFlows[demoMagickFlowDirectoryName];
 
+let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+
+if ( clicks >= magickFlowConfig.numberOfScreens ) {
+	clicks = 0;
+	window.location.hash = `#${clicks}`;
+}
+
+let nextClick = clicks + 1;
+if ( nextClick >= magickFlowConfig.numberOfScreens ) {
+	nextClick = 0
+}
+
+let previousClick = clicks - 1;
+if ( previousClick <= 0 ) {
+	previousClick = magickFlowConfig.numberOfScreens
+}
+
 window.location.hash = `#${clicks}`;
 
 const $ss = document.querySelector(`.screenshot.auto-replace[data-slide="${clicks}"]`);
@@ -16,6 +33,8 @@ $contentWrapper.onclick = ( ) => {
 
 
 function locationHashChanged( ) {
+	window.scroll(0,0);
+
 	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 	if ( clicks >= magickFlowConfig.numberOfScreens ) {
 		clicks = 0;
@@ -27,33 +46,58 @@ function locationHashChanged( ) {
 		nextClick = 0
 	}
 
+	previousClick = clicks - 1;
+	console.log(`previousClick: `, previousClick);
+	if ( previousClick < 0 ) {
+		previousClick = magickFlowConfig.numberOfScreens - 1
+	}
+	if ( previousClick > magickFlowConfig.numberOfScreens ) {
+		previousClick = 0
+	}
+
+	console.log(`clicks: `, clicks);
+	console.log(`previousClick: `, previousClick);
 	console.log(`nextClick: `, nextClick);
 
-	console.log((`#magick-flows--slide-${nextClick}`));
+	// console.log((`#magick-flows--slide-${nextClick}`));
 
-	document.querySelector(`#magick-flows--slide-${nextClick}`).classList.add('slds-transition-show');
-	// document.querySelector(`#magick-flows--slide-${nextClick}`).classList.remove('slds-hide');
+	window.setTimeout(() => {
+	}, 30);
 
 	for (var item of document.querySelectorAll(`[data-slide]`)) {
 		if (typeof(item) != 'undefined' && item != null) {
 			const itemId = item.id;
-
-			if (parseInt(item.dataset.slide) !== clicks) {
-					document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
-					document.querySelector(`#${itemId}`).classList.add('slds-hide');
-				window.setTimeout(() => {
-				}, 30);
-			} else {
-
-				window.scroll(0,0);
-				document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
-				window.setTimeout(() => {
-					// document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
-				}, 10);
+			console.log(`item.dataset.slide: `, item.dataset.slide);
+			if (parseInt(item.dataset.slide) == clicks) {
 				
+				// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
+				document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
+
 				window.setTimeout(() => {
-				}, 2);
+					document.querySelector(`#magick-flows--slide-${nextClick}`).classList.remove('slds-hide');
+					document.querySelector(`#magick-flows--slide-${nextClick}`).classList.remove('slds-transition-show');
+					document.querySelector(`#magick-flows--slide-${previousClick}`).classList.remove('slds-hide');
+					document.querySelector(`#magick-flows--slide-${previousClick}`).classList.remove('slds-transition-show');
+				}, 1);
+
+				// document.querySelector(`#magick-flows--slide-${nextClick}`).classList.add('slds-transition-show');
+
+
+
+				// window.setTimeout(() => {
+				// }, 2);
+
+			} else if ( parseInt(item.dataset.slide) == nextClick) {
+				// document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
+				document.querySelector(`#${itemId}`).classList.remove('slds-hide');
+			} else if ( parseInt(item.dataset.slide) == previousClick) {
+				// document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
+				document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
+			} else {
+				// document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
+				window.setTimeout(() => {
+				document.querySelector(`#${itemId}`).classList.add('slds-hide');
+				}, magickFlowConfig.numberOfScreens);
 				
 			}
 		}
@@ -63,8 +107,12 @@ function locationHashChanged( ) {
 }
 
 window.onhashchange = locationHashChanged;
+
+
 locationHashChanged();
 
+document.querySelector(`#magick-flows--slide-${clicks}`).classList.remove('slds-hide');
+document.querySelector(`#magick-flows--slide-${clicks}`).classList.add('slds-transition-show');
 
 
 function offset(el) {

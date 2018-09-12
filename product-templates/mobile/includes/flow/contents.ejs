@@ -56,7 +56,7 @@
 
 _%>
 <div
-	class="slds-transition-hide slds-grid slds-grid_vertical  <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	class="slds-hide slds-transition-hide slds-grid slds-grid_vertical  <%= classnames(thisMagickFlowsSlideClassnames);%>"
 	data-slide="<%=fileIndex%>"
 	id="magick-flows--slide-<%=fileIndex%>"
 >
@@ -120,7 +120,3 @@ _%>
 
 
 <%_ }); _%>
-<script>let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;</script>
-
-
-
