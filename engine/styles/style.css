@@ -110,7 +110,7 @@ code, var {
  * @modifier
  */
 .slds-transition-hide {
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 0s ease-in-out;
   will-change: opacity;
   opacity: 0;
 }
@@ -123,13 +123,75 @@ code, var {
  * @modifier
  */
 .slds-transition-show {
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 0s ease-in-out;
   will-change: opacity;
   opacity: 1;
 }
 
-.slds-global-footer_container {
+.magick-flows-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.magick-flows-slide .magick-flows-stickey-header_container {
   position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.magick-flows-slide .magick-flows-stickey-footer_container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.magick-flows-slide.slds-is-next, .magick-flows-slide.slds-is-previous {
+  transform: scale(0.5);
+}
+
+.magick-flows-slide.slds-is-previous {
+  left: -110%;
+  opacity: 0.25;
+}
+
+.magick-flows-slide.slds-is-previous .magick-flows-stickey-header_container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.magick-flows-slide.slds-is-previous .magick-flows-stickey-footer_container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.magick-flows-slide.slds-is-next {
+  right: -110%;
+  opacity: 0.25;
+}
+
+.magick-flows-slide.slds-is-next .magick-flows-stickey-header_container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.magick-flows-slide.slds-is-next .magick-flows-stickey-footer_container {
+  position: absolute;
   width: 100%;
   bottom: 0;
   left: 0;
