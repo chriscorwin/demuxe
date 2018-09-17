@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const util = require('util');
+const sizeOf = require('image-size');
 
 
 
@@ -106,8 +107,6 @@ function getFiles(dir, files_) {
     }
     return files_;
 }
-
-
 
 
 module.exports = function() {

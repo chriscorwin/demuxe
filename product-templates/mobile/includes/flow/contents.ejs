@@ -1,4 +1,7 @@
 <%_
+
+	let showMetaDataMissingError = true;
+
 	locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName, fileIndex) {
 
 		const thisMagifFlowPath = demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].path;
@@ -15,7 +18,20 @@
 			thisMagickFlowScreenCustomContentStylesMarginTop = `${localization.magicFlowsMetaData[locals.urlSlug]['customContentStyles'][fileIndex]['margin-top']}`;
 		}
 		catch(error) {
-			console.error(error);
+			// The error shown here is unhelpful, and we've trapped it nicely, so we'll just warn a friendly thing.
+			if (showMetaDataMissingError === true) {
+				console.warn(`
+WARNING
+
+The Magick Flow in being loaded does not appear to have an entry in the config file in \`localization.magicFlowsMetaData[locals.urlSlug]\`.
+
+Which is fine, that file is optional, and so is inclusion in the file itself.
+
+This is just an FYI.
+				`);
+				showMetaDataMissingError = false;
+			}
+			// console.error(error);
 		}
 
 
@@ -24,8 +40,9 @@
 			thisMagickFlowScreenCustomContentStylesMarginBottom = `${localization.magicFlowsMetaData[locals.urlSlug]['customContentStyles'][fileIndex]['margin-bottom']}`;
 		}
 		catch(error) {
-			console.error(error);
+			// console.warn(error);
 		}
+
 
 
 		const isPng = thisMagickFlowScreenUrl.endsWith('.png');

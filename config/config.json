@@ -2,13 +2,7 @@
 	"brandTheme": "bbva",
 	"demoName": "Dreamforce 2018 BBVA Mobile Demo (production)",
 	"demoVersion": "0.1",
-	"demoMagickFlows": {
-		"bbva-mobile": {
-			"customContentStyles": {
-				"0": {"margin-top": "93px"}
-			}
-		}
-	},
+	"demoMagickFlows": {},
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
