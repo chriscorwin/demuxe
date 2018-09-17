@@ -1,21 +1,35 @@
 <%_
-
+	let thisMagickFlowConfig = locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]];
+_%>
+<script type="text/javascript">
+	const thisMagickFlowConfig =<%- JSON.stringify(thisMagickFlowConfig)%>;
+	console.log('thisMagickFlowConfig', thisMagickFlowConfig);
+</script>
+<%_
 	let showMetaDataMissingError = true;
+	let thisMagickFlowMetaData = thisMagickFlowConfig.metaData;
 
-	locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName, fileIndex) {
+
+	// marry the metaData to the screens
+
+	
+	thisMagickFlowConfig.screens.forEach(function(fileName, fileIndex) {
+
+		// get the "stub" of the filename for each screen, if there is one, and look it up in the metaData
+
 
 		const thisMagifFlowPath = demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].path;
 		let thisMagickFlowsSlideClassnames = {
 			'magick-flows-slide': true
 		};
 
-		const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( fileIndex )]}`;
+		const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${thisMagickFlowConfig.screens[parseInt( fileIndex )]}`;
 		const thisMagickFlowScreenHeaderUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( fileIndex )}.header.png`;
 		const thisMagickFlowScreenFooterUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( fileIndex )}.footer.png`;
 
 		let thisMagickFlowScreenCustomContentStylesMarginTop = '0px';
 		try {
-			thisMagickFlowScreenCustomContentStylesMarginTop = `${localization.magicFlowsMetaData[locals.urlSlug]['customContentStyles'][fileIndex]['margin-top']}`;
+			thisMagickFlowScreenCustomContentStylesMarginTop = `${thisMagickFlowMetaData[fileIndex]['margin-top']}`;
 		}
 		catch(error) {
 			// The error shown here is unhelpful, and we've trapped it nicely, so we'll just warn a friendly thing.
@@ -37,7 +51,7 @@ This is just an FYI.
 
 		let thisMagickFlowScreenCustomContentStylesMarginBottom = '0px';
 		try {
-			thisMagickFlowScreenCustomContentStylesMarginBottom = `${localization.magicFlowsMetaData[locals.urlSlug]['customContentStyles'][fileIndex]['margin-bottom']}`;
+			thisMagickFlowScreenCustomContentStylesMarginBottom = `${thisMagickFlowMetaData[fileIndex]['margin-bottom']}`;
 		}
 		catch(error) {
 			// console.warn(error);

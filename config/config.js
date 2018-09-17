@@ -40,46 +40,61 @@ function getMagickFlowDirectories(dir, directories_) {
 
                 const subFilesAndDirectories = fs.readdirSync(aFileOrDirectoryFullPath);
                 for (const j in subFilesAndDirectories) {
-                    const thisMagickFlowFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]);
-                    const thisMagickFlowName = subFilesAndDirectories[j];
 
-                    let thisMagickFlowScreens = getFiles(thisMagickFlowFullPath).sort(sortAlphaNum);
 
-                    const thisMagickFlowNumberOfScreens = thisMagickFlowScreens.length;
+                    if (fs.statSync(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j])).isDirectory()) {
+                        const thisMagickFlowFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]);
+                        const thisMagickFlowName = subFilesAndDirectories[j];
 
-                    let thisMagickFlowUrlSlugPath;
-                    let thisMagickFlowUrlSlug;
-                    // get it's url slug
-                    if (fs.existsSync(path.join(thisMagickFlowFullPath, '.url-slug'))) {
-                        try {
-                            let firstElement = thisMagickFlowScreens.shift();
-                            thisMagickFlowUrlSlugPath = path.join(thisMagickFlowFullPath, '.url-slug');
-                            thisMagickFlowUrlSlug = readFirstLine(thisMagickFlowUrlSlugPath);
+                        let thisMagickFlowScreens = getFiles(thisMagickFlowFullPath).sort(sortAlphaNum);
+                        let thisMagickFlowConfigData = {};
+
+                        const thisMagickFlowNumberOfScreens = thisMagickFlowScreens.length;
+
+                        let thisMagickFlowUrlSlugPath;
+                        let thisMagickFlowUrlSlug;
+
+                        
+                        // get it's url slug
+                        if (fs.existsSync(path.join(thisMagickFlowFullPath, '.url-slug'))) {
+                            try {
+                                let firstElement = thisMagickFlowScreens.shift();
+                                thisMagickFlowUrlSlugPath = path.join(thisMagickFlowFullPath, '.url-slug');
+                                thisMagickFlowUrlSlug = readFirstLine(thisMagickFlowUrlSlugPath);
+                            }
+                            catch(error) {
+                                console.error(error);
+                            }
+                            // Do something
+                        } else {
+                            thisMagickFlowUrlSlug = thisMagickFlowName;
                         }
-                        catch(error) {
-                            console.error(error);
+
+
+                        // get it's url slug
+                        if (fs.existsSync(path.join(thisMagickFlowFullPath, '../', thisMagickFlowName + '.json'))) {
+                            console.log('we have a config file for ' + thisMagickFlowName);
+                            thisMagickFlowConfigData = require(path.join(thisMagickFlowFullPath, '../', thisMagickFlowName + '.json'));
                         }
-                        // Do something
-                    } else {
-                        thisMagickFlowUrlSlug = thisMagickFlowName;
+
+
+
+                        
+                        configData.demoMagickFlowUrlSlugs.push(thisMagickFlowUrlSlug);
+                        configData.demoMagickFlowUrlSlugsMapToFlowDirectories[thisMagickFlowUrlSlug] = thisMagickFlowName;
+
+
+                        configData.demoMagickFlows[subFilesAndDirectories[j]] = {
+                            "name": thisMagickFlowName,
+                            "path": thisMagickFlowFullPath,
+                            "screens": thisMagickFlowScreens,
+                            "numberOfScreens": thisMagickFlowNumberOfScreens,
+                            "urlSlug": thisMagickFlowUrlSlug,
+                            "metaData": thisMagickFlowConfigData,
+                        };
+
+                        directories_.push(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]));
                     }
-
-
-
-                    
-                    configData.demoMagickFlowUrlSlugs.push(thisMagickFlowUrlSlug);
-                    configData.demoMagickFlowUrlSlugsMapToFlowDirectories[thisMagickFlowUrlSlug] = thisMagickFlowName;
-
-
-                    configData.demoMagickFlows[subFilesAndDirectories[j]] = {
-                        "name": thisMagickFlowName,
-                        "path": thisMagickFlowFullPath,
-                        "screens": thisMagickFlowScreens,
-                        "numberOfScreens": thisMagickFlowNumberOfScreens,
-                        "urlSlug": thisMagickFlowUrlSlug,
-                    };
-
-                    directories_.push(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]));
                 }
 
             } else {
