@@ -1,6 +1,6 @@
 {
-	"brandTheme": "bbva",
-	"demoName": "Laulima BBVA Demo (production)",
+	"brandTheme": "nto",
+	"demoName": "DF 18 NTO",
 	"demoVersion": "0.1",
 	"demoMagickFlows": {},
 	"demoMagickFlowUrlSlugs": [],
@@ -8,13 +8,13 @@
 	"env": "production",
 	"productTemplate": "dmp",
 	"prod": {
-		"host": "https://dmp-dreamforce-2018.herokuapp.com/"
+		"host": "https://nto-dreamforce-2018.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://dmp-dreamforce-2018-qa.herokuapp.com/"
+		"host": "https://nto-dreamforce-2018-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://dmp-dreamforce-2018-dev.herokuapp.com/"
+		"host": "https://nto-dreamforce-2018-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
