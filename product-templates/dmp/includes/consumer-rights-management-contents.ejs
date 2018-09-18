@@ -1,35 +1,39 @@
 <div class="slds-p-left_medium">Define your consent collection settings, as well as manage consent changes, raise data deletion and portability requests.</div>
-<div id="content" class="slds-p-vertical_medium slds-container_large">
-	<div class="slds-grid slds-wrap slds-gutters slds-grid_pull-padded-medium slds-grid_vertical-stretch">
-		<div class="slds-col slds-size_1-of-3 slds-p-around_medium slds-m-bottom_large" style="border: 1px solid #E0E5EE; border-radius: 4px 0 0 4px;">
-			<h3>Consent Sources <img class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h3>
-			<div id="consent-sources-chart" style="width:100%; height:200px;"></div>
-			<div class="slds-grid slds-wrap" id="consent-sources-chart-legend">
-				<% locals.localization.consumer_rights_management.consent_sources.forEach((source) => { %>
-				<div class="slds-col slds-size_1-of-2"><div class="circle" style="background-color: <%= source.color %>;"></div> <%= source.name %></div>
-				<% }) %>
-				
+<div id="content" class="slds-p-around_medium slds-container_large">
+	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch">
+		<div class="slds-col slds-size_1-of-3 slds-p-left_medium slds-m-bottom_medium">
+			<div class="slds-p-around_medium" style="background-color: #fff; border: 1px solid #E0E5EE; border-radius: 4px 0 0 4px;">
+				<h3>Consent Sources <img class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h3>
+				<div id="consent-sources-chart" style="width:100%; height:200px;"></div>
+				<div class="slds-grid slds-wrap" id="consent-sources-chart-legend">
+					<% locals.localization.consumer_rights_management.consent_sources.forEach((source) => { %>
+					<div class="slds-col slds-size_1-of-2"><div class="circle" style="background-color: <%= source.color %>;"></div> <%= source.name %></div>
+					<% }) %>
+					
+				</div>
 			</div>
 		</div>
-		<div class="slds-col slds-size_2-of-3 slds-p-around_medium slds-m-bottom_large" style="border: 1px solid #E0E5EE; border-style: solid solid solid none; border-radius: 0 4px 4px 0;">
-			<h3>Consent Distribution <img class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h3>
-			<div class="slds-grid slds-wrap slds-m-top_large" id="consent-distribution-graph"></div>
-			<div class="slds-grid slds-wrap slds-m-top_small" id="consent-distribution-graph-legend">
-				<div class="slds-col slds-size_1-of-3"></div>
-				<div class="slds-col slds-size_1-of-3"><div class="circle" style="background-color: #C398F5;"></div> Consented Population</div>
-				<div class="slds-col slds-size_1-of-3"><div class="circle" style="background-color: #D8DDE6;"></div> Non-consented Population</div>
+		<div class="slds-col slds-size_2-of-3 slds-p-right_medium slds-m-bottom_medium">
+			<div class="slds-p-around_medium" style="background-color: #fff; height: 100%; border: 1px solid #E0E5EE; border-style: solid solid solid none; border-radius: 0 4px 4px 0;">
+				<h3>Consent Distribution <img class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h3>
+				<div class="slds-grid slds-wrap slds-m-top_large" id="consent-distribution-graph"></div>
+				<div class="slds-grid slds-wrap slds-m-top_small" id="consent-distribution-graph-legend">
+					<div class="slds-col slds-size_1-of-3"></div>
+					<div class="slds-col slds-size_1-of-3"><div class="circle" style="background-color: #C398F5;"></div> Consented Population</div>
+					<div class="slds-col slds-size_1-of-3"><div class="circle" style="background-color: #D8DDE6;"></div> Non-consented Population</div>
+				</div>
 			</div>
 		</div>
-		<div class="slds-col slds-p-right_medium slds-size_2-of-4">
-			<div class="slds-p-around_medium" style="border: 1px solid #E0E5EE; border-radius: 4px; height: 200px;">
+		<div class="slds-col slds-p-horizontal_medium slds-size_2-of-4">
+			<div class="slds-p-around_medium" style="background-color: #fff; border: 1px solid #E0E5EE; border-radius: 4px; height: 200px;">
 				<h2 class="slds-m-bottom_medium"><img class="slds-m-right_small" src="/images/icons/calibration.svg" height="32px" width="32px" />Configuration <img width="14px" height="14px" class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h2>
 				<p class="slds-m-bottom_medium">Define default settings for how consent is managed in your organization.</p>
 				<p>LAST UPDATED: <%= locals.localization.consumer_rights_management.last_updated %></p>
 				<button style="margin-top: 33px;float: right;" class="slds-button slds-button_neutral">Edit Configuration</button>
 			</div>
 		</div>
-		<div class="slds-col slds-size_2-of-4">
-			<div class="slds-p-around_medium" style="border: 1px solid #E0E5EE; border-radius: 4px; height: 200px;">
+		<div class="slds-col slds-p-right_medium slds-size_2-of-4">
+			<div class="slds-p-around_medium" style="background-color: #fff; border: 1px solid #E0E5EE; border-radius: 4px; height: 200px;">
 				<h2 class="slds-m-bottom_medium"><img class="slds-m-right_small" src="/images/icons/shield.svg" height="32px" width="32px" />Consumer Rights Requests <img width="14px" height="14px" class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h2>
 				<p>Update consent settings, request data deletion or portability feeds for data subjects.</p>
 				<button style="margin-top: 68px;float: right;" class="slds-button slds-button_neutral">Raise a new request
