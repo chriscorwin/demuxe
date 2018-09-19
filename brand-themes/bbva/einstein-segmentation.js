@@ -11,7 +11,7 @@ module.exports = {
 				id: 'p1',
 				rank: 1,
 				value: 'Persona 01',
-				devices: 345427,
+				devices: 821334,
 				cpm: 1.75,
 				r: 70,
 				attributes: [
