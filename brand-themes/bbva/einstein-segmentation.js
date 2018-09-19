@@ -35,7 +35,7 @@ module.exports = {
 					},
 					{
 						party: 1,
-						main: '1-888-8-LENDING Callers'
+						main: 'Moms - HHI > $150K'
 					}
 				]
 			},
