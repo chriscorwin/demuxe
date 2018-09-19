@@ -24,7 +24,7 @@ console.log(`productTemplate: ${config.productTemplate}`);
 
 if (process.env.DEBUG === "true") {
 	console.log('config data');
-	console.dir(config);
+	console.log(`[ app.js:28 ] config: `, util.inspect(config, { showHidden: false, depth: null, colors: true }));
 }
 
 
@@ -40,6 +40,8 @@ app.set('views', appViews);
 
 app.set('view engine', 'ejs');
 app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/your-code-here' });
+app.set('view options', {compileDebug: true});
+
 
 // https://expressjs.com/en/4x/api.html#app.use
 const appUse = [
@@ -143,7 +145,7 @@ router.get('/*', (req, res) => {
 						});
 					}
 				} else {
-					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams });
+					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
 				}
 			});
 		});

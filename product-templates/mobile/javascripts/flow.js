@@ -1,4 +1,3 @@
-
 const magickFlowConfig = locals.demoMagickFlows[demoMagickFlowDirectoryName];
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
@@ -23,10 +22,11 @@ window.location.hash = `#${clicks}`;
 const $ss = document.querySelector(`.screenshot.auto-replace[data-slide="${clicks}"]`);
 const $contentWrapper = document.querySelector( '#content-wrapper' );
 
+
 $contentWrapper.onclick = ( ) => {
 	clicks++;
 	if ( clicks >= magickFlowConfig.numberOfScreens ) {
-		clicks = 0;
+		clicks = magickFlowConfig.numberOfScreens - 1;
 	}
 	window.location.hash = `#${clicks}`;
 };
@@ -73,14 +73,6 @@ function locationHashChanged( ) {
 
 
 			if (parseInt(item.dataset.slide) == clicks) {
-				
-				// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				document.querySelector(`#${itemId}`).classList.remove('slds-is-next');
-				document.querySelector(`#${itemId}`).classList.remove('slds-is-previous');
-				document.querySelector(`#${itemId}`).classList.add('slds-is-active');
-				document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
-
 
 				const thisMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.screens[clicks]}`;
 				console.log(`thisMagickFlowScreenshotUrl: `, thisMagickFlowScreenshotUrl);
@@ -89,29 +81,30 @@ function locationHashChanged( ) {
 				const previousMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.screens[previousClick]}`;
 				console.log(`previousMagickFlowScreenshotUrl: `, previousMagickFlowScreenshotUrl);
 
-				// document.querySelector('html').style.backgroundImage = `url("${thisMagickFlowScreenshotUrl}")`;
-				// document.querySelector('html').style.backgroundSize = `cover`;
+
 				const isPng = thisMagickFlowScreenshotUrl.endsWith('.png');
 				const isSvg = thisMagickFlowScreenshotUrl.endsWith('.svg');
 				const isMp4 = thisMagickFlowScreenshotUrl.endsWith('.mp4');
 				const isGif = thisMagickFlowScreenshotUrl.endsWith('.gif');
 				const isJpeg = thisMagickFlowScreenshotUrl.endsWith('.jpg');
-
-				console.log(`isGif: `, isGif);
 				if(isGif) {
-					// alert('isGif', isGif);
 					const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
 					console.log(`item img: `, theScreenshot.src);
 					theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
-
-					
 				}
+				document.querySelector(`#${itemId}`).classList.remove('slds-is-next');
+				document.querySelector(`#${itemId}`).classList.remove('slds-is-previous');
+				document.querySelector(`#${itemId}`).classList.add('slds-is-active');
+				document.querySelector(`#${itemId}`).classList.remove('slds-hide');
+				document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
+
 
 				window.setTimeout(() => {
 					document.querySelector(`#magick-flows--slide-${nextClick}`).classList.remove('slds-hide');
 					document.querySelector(`#magick-flows--slide-${nextClick}`).classList.remove('slds-transition-show');
 					document.querySelector(`#magick-flows--slide-${previousClick}`).classList.remove('slds-hide');
 					document.querySelector(`#magick-flows--slide-${previousClick}`).classList.remove('slds-transition-show');
+					console.log(`isGif: `, isGif);
 				}, 50);
 
 				// document.querySelector(`#magick-flows--slide-${nextClick}`).classList.add('slds-transition-show');
@@ -244,3 +237,27 @@ function scrollIt(destination, duration = 200, easing = 'linear', callback) {
   scroll();
 }
 
+
+document.onkeyup = function(e) {
+  if (e.which == 72) {
+    console.log("H key was pressed, going home.");
+    window.location.hash = `#0`;
+
+  } else if (e.which == 39) {
+    console.log("Right arrow key was pressed, go to next...");
+    window.location.hash = `#${nextClick}`;
+  } else if (e.which == 37) {
+    console.log("Left arrow key was pressed, go to previous...");
+    window.location.hash = `#${previousClick}`;
+  } else if (e.which == 71) {
+    console.log("GIF...");
+	const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
+	console.log(`item img: `, theScreenshot.src);
+	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
+
+  } else if (e.ctrlKey && e.altKey && e.which == 89) {
+    alert("Ctrl + Alt + Y shortcut combination was pressed");
+  } else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
+    alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
+  }
+};

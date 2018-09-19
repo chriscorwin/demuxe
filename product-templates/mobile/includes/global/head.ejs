@@ -1,3 +1,24 @@
+<% console.group('[ product-templates/mobile/includes/global/head.ejs ]'); %>
+<% if (locals.title) { %>
+	<title><%= locals.title %></title>
+<%
+	} else {
+		console.warn(`
+============================================================
+[WARNING]
+	${locals.local.host}${locals.urlSlug} does not have a title set.
+
+	product-templates/mobile/includes/global/head.ejs:6
+------------------------------------------------------------
+`);
+
+%>
+	<script>
+		console.warn(`[WARNING: ] <%=locals.local.host%><%=locals.urlSlug%> does not have a title set!`);
+	</script>
+	<title> </title>
+<% } %>
+
 <meta charset="utf-8">
 <link rel="stylesheet" href="/styles/salesforce-lightning-design-system.css" />
 <link rel="stylesheet" href="/styles/style.css">
@@ -17,6 +38,7 @@ if (locals.pageStylesheets) {
 } 
 %>
 
+
 <% 
 	const { account, trigger, user, version } = locals.sanitizedQueryParams;
 	const is201 = version && version === '201';
@@ -24,15 +46,44 @@ if (locals.pageStylesheets) {
 %>
 
 <script type="text/javascript">
-	const locals =<%- JSON.stringify(locals)%>;
-	// console.dir(locals);
+	const demoMagickFlowDirectoryName = '<%=locals.urlSlug%>';
+	console.log('[ product-templates/mobile/includes/global/head.ejs:54 ] locals.urlSlug', '<%-locals.urlSlug%>');
+
+	const locals = {};
+<%
+	Object.keys(locals).forEach(function(key, fileIndex) {
+		console.group(`[setting global javascript variables from Demuxe locals] key: `, key);
+		console.log(`typeof locals[key]: `, typeof locals[key]);
+		console.log(`typeof locals[key] === 'object': `, typeof locals[key] === 'object');
+		if (key != '_locals' && key != 'path' && key != 'util' && key != 'classnames' && key != 'sizeOf') {
+			if(typeof locals[key] === 'object') {
+%>
+				locals['<%- key %>'] = <%- JSON.stringify(locals[key]) %>;
+<%
+			} else {
+%>
+				locals['<%- key %>']  = '<%- locals[key] %>';
+<%
+			}
+%>
+<%
+		} else {
+			console.log('NOT GONNA SAVE: key: ', key);
+
+		}
+		console.groupEnd();
+	});
+
+%>
+	console.group(`locals:`);
+	console.dir(locals);
+	console.groupEnd();
 
 	const url = new URL( window.location.href );
 	const activePage = '<%=locals.siteSection%>';
 	const accountParam = '<%=accountParam%>';
 	const versionParam = '<%=version%>';
-	const demoMagickFlows = locals.demoMagickFlows;
-	const demoMagickFlowDirectoryName = '<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>';
+	const demoMagickFlows = '<%=locals.demoMagickFlows%>';
 	const urlSlug = '<%=locals.urlSlug%>';
 	let pageVersion = '<%=version%>';
 	const userParam = '<%=user%>' || 'Dan';
@@ -345,7 +396,6 @@ if (locals.pageStylesheets) {
 		} ]
 	}
 </script>
-
-
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
+<% console.groupEnd(); %>

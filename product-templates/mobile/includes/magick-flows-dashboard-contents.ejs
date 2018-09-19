@@ -1,0 +1,268 @@
+<div class="slds-m-horizontal_medium">
+<%
+	let urlSlugToManage = locals.sanitizedQueryParams.urlSlug || Object.keys(locals.demoMagickFlowUrlSlugsMapToFlowDirectories)[0];
+	let thisMagickFlowConfig = locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[urlSlugToManage]];
+%>
+<script type="text/javascript">
+	const thisMagickFlowConfig =<%- JSON.stringify(thisMagickFlowConfig)%>;
+	console.log('thisMagickFlowConfig', thisMagickFlowConfig);
+</script>
+
+<h1 class="slds-m-top_xx-large slds-text-heading_large">
+	Magick Flow Dashboard: <a href="/<%= locals.sanitizedQueryParams.urlSlug %>"><%= locals.sanitizedQueryParams.urlSlug %></a>
+</h1>
+
+	<div class="slds-grid slds-gutters">
+<%
+	locals.demoMagickFlowUrlSlugs.forEach(function(urlSlug, slugIndex) {
+%>
+	<div class="slds-col slds-box slds-p-around_small">
+		<a href="/<%= locals.siteSection %>?urlSlug=<%= urlSlug %>"><%= urlSlug %></a>
+	</div>
+<%
+	});
+%>
+	</div>
+
+<%
+
+	let showMetaDataMissingError = true;
+	let thisMagickFlowMetaData = thisMagickFlowConfig.metaData;
+
+
+	// marry the metaData to the screens
+
+
+	// console.log(`[ /Users/ccorwin/Documents/Workspaces/mobile-bbva-df-2018/product-templates/mobile/includes/magick-flows-dashboard-contents.ejs:36 ] urlSlugToManage: `, util.inspect(urlSlugToManage, { showHidden: true, depth: null, colors: true }));
+	// console.log(`[ /Users/ccorwin/Documents/Workspaces/mobile-bbva-df-2018/product-templates/mobile/includes/magick-flows-dashboard-contents.ejs:36 ] sanitizedQueryParams.urlSlug: `, util.inspect(sanitizedQueryParams.urlSlug, { showHidden: true, depth: null, colors: true }));
+	// console.log(`[ /Users/ccorwin/Documents/Workspaces/mobile-bbva-df-2018/product-templates/mobile/includes/magick-flows-dashboard-contents.ejs:37 ] demoMagickFlowUrlSlugsMapToFlowDirectories: `, util.inspect(demoMagickFlowUrlSlugsMapToFlowDirectories, { showHidden: true, depth: null, colors: true }));
+	// console.log(`[ /Users/ccorwin/Documents/Workspaces/mobile-bbva-df-2018/product-templates/mobile/includes/magick-flows-dashboard-contents.ejs:38 ] demoMagickFlows: `, util.inspect(demoMagickFlows, { showHidden: true, depth: null, colors: true }));
+
+	
+	thisMagickFlowConfig.screens.forEach(function(fileName, fileIndex) {
+
+		// get the "stub" of the filename for each screen, if there is one, and look it up in the metaData
+
+
+		const thisMagifFlowPath = demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[urlSlugToManage]].path;
+
+
+		console.log(`
+
+
+
+[ product-templates/mobile/includes/magick-flows-dashboard-contents.ejs:50 ] demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[urlSlugToManage]].path: `, util.inspect(demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[urlSlugToManage]].path, { showHidden: true, depth: null, colors: true }));
+		console.log(`[ product-templates/mobile/includes/magick-flows-dashboard-contents.ejs:51 ] thisMagifFlowPath: `, util.inspect(thisMagifFlowPath, { showHidden: true, depth: null, colors: true }));
+		console.log(`[ product-templates/mobile/includes/magick-flows-dashboard-contents.ejs:52 ] fileName: `, util.inspect(fileName, { showHidden: true, depth: null, colors: true }));
+
+		let thisMagickFlowsSlideClassnames = {
+			'magick-flows-slide-showoff': true
+		};
+
+
+
+		const partOfPathToGetRidOf = locals.appViews[0];
+		const finalPathToFile = thisMagifFlowPath.replace(partOfPathToGetRidOf, '');
+
+		console.log(`[ /Users/ccorwin/Documents/Workspaces/mobile-bbva-df-2018/product-templates/mobile/includes/magick-flows-dashboard-contents.ejs:67 ] finalPathToFile: `, util.inspect(finalPathToFile, { showHidden: true, depth: null, colors: true }));
+
+
+		const thisMagickFlowScreenUrl = `${finalPathToFile}/${fileName}`;
+		const thisMagickFlowScreenHeaderUrl = `includes/flow/${demoMagickFlowUrlSlugsMapToFlowDirectories[urlSlugToManage]}/${parseInt( fileIndex )}.header.png`;
+		const thisMagickFlowScreenFooterUrl = `includes/flow/${demoMagickFlowUrlSlugsMapToFlowDirectories[urlSlugToManage]}/${parseInt( fileIndex )}.footer.png`;
+
+		let thisMagickFlowScreenCustomContentStylesMarginTop = '0px';
+		try {
+			thisMagickFlowScreenCustomContentStylesMarginTop = `${thisMagickFlowMetaData[fileIndex]['margin-top']}`;
+		}
+		catch(error) {
+			// The error shown here is unhelpful, and we've trapped it nicely, so we'll just warn a friendly thing.
+			if (showMetaDataMissingError === true) {
+				console.warn(`
+WARNING
+
+The Magick Flow in being loaded does not appear to have an entry in the config file in \`localization.magicFlowsMetaData[locals.sanitizedQueryParams.urlSlug]\`.
+
+Which is fine, that file is optional, and so is inclusion in the file itself.
+
+This is just an FYI.
+				`);
+				showMetaDataMissingError = false;
+			}
+			// console.error(error);
+		}
+
+
+		let thisMagickFlowScreenCustomContentStylesMarginBottom = '0px';
+		try {
+			thisMagickFlowScreenCustomContentStylesMarginBottom = `${thisMagickFlowMetaData[fileIndex]['margin-bottom']}`;
+		}
+		catch(error) {
+			// console.warn(error);
+		}
+
+
+
+		const isPng = thisMagickFlowScreenUrl.endsWith('.png');
+		const isSvg = thisMagickFlowScreenUrl.endsWith('.svg');
+		const isMp4 = thisMagickFlowScreenUrl.endsWith('.mp4');
+		const isGif = thisMagickFlowScreenUrl.endsWith('.gif');
+		const isJpeg = thisMagickFlowScreenUrl.endsWith('.jpg');
+		
+		let showHeader = true;
+		showHeader = (thisMagickFlowScreenUrl.includes('has-sticky-header'));
+		if(!showHeader) {
+			thisMagickFlowScreenCustomContentStylesMarginTop = 0;
+		}
+		thisMagickFlowsSlideClassnames['has-sticky-header'] = showHeader;
+
+		let showFooter = true;
+		showFooter = (thisMagickFlowScreenUrl.includes('has-sticky-footer'));
+		if(!showFooter) {
+			thisMagickFlowScreenCustomContentStylesMarginBottom = 0;
+		}
+		thisMagickFlowsSlideClassnames['has-sticky-footer'] = showFooter;
+
+
+		
+		// let dimensions = sizeOf(thisMagifFlowPath + thisMagickFlowScreenUrl);
+		// console.log(dimensions.width, dimensions.height);
+
+		let fileNameSplit = fileName.split('___');
+		let thisNodeKeyValues;
+		let thisMagickFlowScreenDataAttributes = {};
+
+		fileNameSplit.forEach(function(node, nodeIndex) {
+			// first one is the sorter, ignore it
+
+			// other nodes have a KEY= at the beginning, with arbitrary data provided
+			if ( node.includes('=') === true ) {
+				// we have some data, split on the equals sign to get keys and values
+				const thisNodeKey = node.split('=')[0];
+				let thisNodeKeyValues = node.split('=')[1];
+
+				let thisNodeKeyValuesFinal = [];
+				let thisNodeKeyValuesSplit = [];
+				if ( thisNodeKeyValues.includes('__') === true ) {
+					thisNodeKeyValuesSplit = thisNodeKeyValues.split('__');
+					thisNodeKeyValuesSplit.split('__').forEach(function(node, index) { 
+						console.log(node);
+					});
+				}
+				thisMagickFlowScreenDataAttributes[thisNodeKey] = thisNodeKeyValues;
+			}
+		});
+
+
+%>
+
+<div
+	class="slds-m-horizontal_medium slds-m-top_xx-large"
+>
+	<p class="slds-m-vertical_medium">
+		<%=fileIndex%>: <%=thisMagickFlowScreenUrl%>
+	</p>
+	<p class="slds-m-vertical_medium">
+		Filename split: <%=fileNameSplit%>
+	</p>
+	<p class="slds-m-vertical_medium">
+		thisMagickFlowScreenDataAttributes: <%= JSON.stringify(thisMagickFlowScreenDataAttributes) %>
+	</p>
+<div
+	class=" slds-grid slds-gutters  <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	data-slide="<%=fileIndex%>"
+	id="magick-flows--slide-<%=fileIndex%>"
+>
+<% if (showHeader) { %>
+	<header class="slds-col slds-box slds-theme_shade slds-theme_alert-texture">
+		<img
+			id="sticky-header--slide-<%=fileIndex%>"
+			class="sticky-footer "
+			src="<%=thisMagickFlowScreenHeaderUrl%>"
+			style="width: 25vw; max-width: 25vw;"
+		/>
+	</header>
+<% } else { %>
+	<header class="slds-col slds-box slds-theme_shade slds-theme_alert-texture">
+		<p>NO HEADER IMAGE</p>
+	</header>
+<% } %>
+
+
+	<div
+		class="slds-col slds-box slds-theme_shade slds-theme_alert-texture"
+
+	>
+<% if (isPng || isSvg || isGif || isJpeg) { %>
+		<img
+			class="screenshot auto-replace is-image "
+			id="screenshot--slide-<%=fileIndex%>"
+			src="<%=thisMagickFlowScreenUrl%>"
+			style="width: 25vw; max-width: 25vw;"
+		>
+<% } else if (isMp4) { %>
+		<video
+			autoplay
+			class="auto-replace is-video "
+			id="screenshot-wrapper--slide-<%=fileIndex%>"
+			playsinline
+			style="width: 25vw; max-width: 25vw;"
+		>
+			<source
+				class="screenshot auto-replace "
+				id="screenshot--slide-<%=fileIndex%>"
+				src="<%=thisMagickFlowScreenUrl%>"
+				type="video/mp4"
+			>
+			Your browser does not support the video tag.
+		</video>
+<% } %>
+	</div>
+
+<% if (showFooter) { %>
+	<footer class=" slds-col slds-box slds-theme_shade slds-theme_alert-texture">
+		<img
+			id="sticky-footer--slide-<%=fileIndex%>"
+			class="sticky-footer "
+			src="<%=thisMagickFlowScreenFooterUrl%>"
+			style="width: 25vw; max-width: 25vw;"
+		/>
+	</footer>
+<% } else { %>
+	<footer class="slds-col slds-box slds-theme_shade slds-theme_alert-texture">
+		<p>NO FOOTER IMAGE</p>
+	</footer>
+<% } %>
+</div>
+
+</div>
+
+
+<% }); %>
+
+
+
+<%
+
+// Fake temp data
+const screens = [
+	"0000___google___has-header__has-footer___INDEX=0.png",
+	"0100___homepage-1___has-header__has-footer___INDEX=1.png",
+	"0200___homepage-2___has-header__has-footer___INDEX=2.png",
+	"0300___mortgages-1___has-header__has-footer___INDEX=3.png",
+	"0400___homepage-3___has-header__has-footer___INDEX=4.png",
+	"0500___valora-home___INDEX=5.png",
+	"0600___valora-email-field-blank___INDEX=6.png",
+	"0700___valora-email-field-filled___INDEX=7.png",
+	"0800___valora-use-camera___INDEX=8.png",
+	"0900___valora-fake-video-gif___INDEX=9.gif",
+	"1000___valora-fake-video-found-home___INDEX=10.png",
+	"1100___valora-results___INDEX=11.png",
+	"1200___valora-details___INDEX=12.png",
+	"1300___mortgage-app-step-0___has-header___INDEX=13.png",
+	"1400___mortgage-app-step-2___has-header__has-footer___STYLES=margin-top--20px__outline--outline-1px-limegreen___INDEX=14.png"
+];
+
+
+%>
+</div>

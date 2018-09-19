@@ -8,8 +8,25 @@
 		<%- include('includes/global/header') %>
 		<div id="content-wrapper">
 			<div id="content" class="slds-p-vertical_medium slds-container_large">
-				<script>console.log('<%= locals.root %>');</script>
-				<%- include(`${locals.pageContents}`) %>
+<%_
+		try {
+_%>
+				<%- include(`${locals.pageContents}`, {'path': locals.path}) %>
+<%_
+		}
+		catch(error) {
+_%>
+				<div class="slds-p-horizontal_medium ">
+					<h1 class="slds-text-heading_large slds-m-top_large">Error</h1>
+
+					<div class="slds-box slds-theme_error slds-theme_alert-texture slds-m-top_medium">
+						<p><%- error %></p>
+					</div>
+				</div>
+<%_
+			console.error(error);
+		}
+_%>
 			</div>
 		</div>
 

@@ -66,18 +66,18 @@ This is just an FYI.
 		const isJpeg = thisMagickFlowScreenUrl.endsWith('.jpg');
 		
 		let showHeader = true;
-		showHeader = !(thisMagickFlowScreenUrl.includes('no-header'));
+		showHeader = (thisMagickFlowScreenUrl.includes('has-sticky-header'));
 		if(!showHeader) {
 			thisMagickFlowScreenCustomContentStylesMarginTop = 0;
 		}
-		thisMagickFlowsSlideClassnames['has-header'] = showHeader;
+		thisMagickFlowsSlideClassnames['has-sticky-header'] = showHeader;
 
 		let showFooter = true;
-		showFooter = !(thisMagickFlowScreenUrl.includes('no-footer'));
+		showFooter = (thisMagickFlowScreenUrl.includes('has-sticky-footer'));
 		if(!showFooter) {
 			thisMagickFlowScreenCustomContentStylesMarginBottom = 0;
 		}
-		thisMagickFlowsSlideClassnames['has-footer'] = showFooter;
+		thisMagickFlowsSlideClassnames['has-sticky-footer'] = showFooter;
 
 
 		
@@ -148,6 +148,13 @@ _%>
 	</footer>
 <%_ } _%>
 </div>
+
+			<img
+				class="screenshot-preload"
+				id="screenshot--slide-prelaod-<%=fileIndex%>"
+				src="<%=thisMagickFlowScreenUrl%>"
+				style="width: 1px; max-width: 1px; height: 1px; max-height: 1px; opacity: 0.2; position: absolute; bottom: 0; right: 0; outline: 1px solid red;"
+			>
 
 
 <%_ }); _%>
