@@ -41,15 +41,12 @@
   animation: do 0.8s ease-out;
   opacity: 1;
   transition-delay: 0s;
-  box-shadow: 0 2px 20px black;
-  border-radius: 1.5rem;
-  opacity: 1;
-  transition-delay: 0s;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.33);
   border-radius: 1.5rem;
   overflow: hidden;
   margin-top: -1.5vh;
   height: 100vh;
+  opacity: 1;
 }
 
 .fake-do {
@@ -69,6 +66,9 @@
   }
   94% {
     transform: scale(0.95, 0.95) translateX(-100vw);
+  }
+  98% {
+    transform: scale(0.95, 0.95) translateX(-110vw);
   }
   100% {
     transform: scale(0.95, 0.95) translateX(-110vw);
@@ -161,6 +161,10 @@ code, var {
   opacity: 0.25;
 }
 
+.magick-flows-slide.slds-is-previous.do {
+  opacity: 1;
+}
+
 .magick-flows-slide.slds-is-previous .magick-flows-stickey-header_container {
   position: absolute;
   width: 100%;
@@ -180,6 +184,10 @@ code, var {
 .magick-flows-slide.slds-is-next {
   right: -110%;
   opacity: 0.25;
+}
+
+.magick-flows-slide.slds-is-next.do {
+  opacity: 1;
 }
 
 .magick-flows-slide.slds-is-next .magick-flows-stickey-header_container {
