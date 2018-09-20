@@ -5,14 +5,6 @@ Highcharts must be included on page prior to this running
 -->
 
 <div id="chart" style="width:100%; height:300px;"></div>
-<!-- dirty hack to achieve RTL animation -->
-<svg id="chartCover" style="position: absolute; top: 357px; left: 70px" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1500" height="500px" viewBox="0 0 1500 10">
-	<g transform="scale(1,-1) translate(0,-12)">
-		<rect x="0" y="5" fill="#fff" height="500" rx="3" ry="3">
-			<animate attributeName="width" from="1500" to="0" dur="2s" fill="freeze"/>
-		</rect>
-	</g>
-</svg>
 
 <script type="text/javascript">
 	const graph = <%- JSON.stringify(locals.localization.data_capture_sources.dce.graph) %>;
@@ -84,7 +76,7 @@ Highcharts must be included on page prior to this running
 			plotOptions: {
 				series: {
 					animation: {
-						duration: 1
+						duration: 2000
 					}
 				}
 			},
@@ -112,14 +104,6 @@ Highcharts must be included on page prior to this running
 			triggeredDataCaptureEventsAnimation = true;
 			dataCaptureEventsSourcesChart = Highcharts.chart('chart', getCumulativeOptions());
 		// }
-
-		const chart = document.getElementById('chart');
-		const chartCover = document.getElementById('chartCover');
-		console.log(chart.getBoundingClientRect().top, chart.getBoundingClientRect().left)
-		chartCover.style.top = chart.getBoundingClientRect().top + 10;
-		chartCover.style.left = chart.getBoundingClientRect().left + 78;
-	
-	
 	};
 
 	// document.addEventListener("scroll", animateDataCaptureEvents);
