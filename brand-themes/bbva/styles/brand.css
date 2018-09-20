@@ -19,3 +19,8 @@
   margin-top: 104px;
   border-radius: 4px;
 }
+
+.slds-grid_pull-padded-small, .slds-grid--pull-padded-small {
+  margin-right: unset;
+  margin-left: unset;
+}
