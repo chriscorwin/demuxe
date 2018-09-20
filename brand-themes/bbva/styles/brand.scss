@@ -24,7 +24,10 @@
 	border-radius: 4px;
 	
 	&.einstein #subheader {
-		padding-left: 1rem;
+		h1 {
+			padding-left: 1rem;
+			padding-top: 1rem;
+		}
 	}
 }
 

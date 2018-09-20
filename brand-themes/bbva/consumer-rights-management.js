@@ -25,5 +25,8 @@ module.exports = {
 		}
 	],
 	last_updated: 'Aug 12, 2018',
-	sub_header_text: 'As of Sep 26, 2018',
+	subHeaderContents: `<div class="slds-grid">
+						<div>Define your consent collection settings, as well as manage consent changes, raise data deletion and portability requests.</div>
+						<div class="slds-col_bump-left">As of Sep 26, 2018</div>
+					</div>`
 };

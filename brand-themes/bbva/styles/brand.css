@@ -24,8 +24,9 @@
   border-radius: 4px;
 }
 
-#subheader-wrapper.einstein #subheader {
+#subheader-wrapper.einstein #subheader h1 {
   padding-left: 1rem;
+  padding-top: 1rem;
 }
 
 .slds-grid_pull-padded-small, .slds-grid--pull-padded-small {
