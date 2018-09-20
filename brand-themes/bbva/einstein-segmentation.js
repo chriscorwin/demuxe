@@ -125,5 +125,5 @@ module.exports = {
 			{ source: 'p3', target: 'p2', overlap: 13 }
 		]
 	},
-	sub_header_text: 'Analysis Summary as of September 26, 2018 11:00 AM UTC'
+	sub_header_text: 'Analysis Summary as of Sep 26, 2018 11:00 AM UTC'
 };

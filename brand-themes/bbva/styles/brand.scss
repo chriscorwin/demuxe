@@ -17,7 +17,11 @@
     background-color: #F7F9FB;
 	margin: 1rem;
 	margin-top: 104px;
-    border-radius: 4px;
+	border-radius: 4px;
+	
+	&.einstein #subheader {
+		padding-left: 1rem;
+	}
 }
 
 .slds-grid_pull-padded-small, .slds-grid--pull-padded-small {

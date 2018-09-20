@@ -20,6 +20,10 @@
   border-radius: 4px;
 }
 
+#subheader-wrapper.einstein #subheader {
+  padding-left: 1rem;
+}
+
 .slds-grid_pull-padded-small, .slds-grid--pull-padded-small {
   margin-right: unset;
   margin-left: unset;
