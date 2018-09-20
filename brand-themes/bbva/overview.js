@@ -4,7 +4,7 @@ module.exports = {
 			title: 'Audience Population',
 			img: '/images/slices/index.audience-segments-population.svg',
 			tabs: [
-				{ label: 'This Month (Sep 1 &mdash; Sep 26, 2018)' },
+				{ label: 'This Month (Sep 1 &mdash; Sep 27, 2018)' },
 				{ label: 'Last Month (Aug 1 &mdash; Aug 31, 2018)' }
 			]
 		},
@@ -38,9 +38,9 @@ module.exports = {
 			explanation: 'Displaying data collection events across 1st party data sources only.',
 			graph: {
 				date_labels: [
-					'8/26',
+					'8/27',
 					'9/12',
-					'9/26'
+					'9/27'
 				],
 				device_data: [
 					450,
@@ -180,7 +180,7 @@ module.exports = {
 			buttons: [
 				{ label: 'Top 5' },
 				{ label: 'By Devices Sent' },
-				{ label: 'Sep 25, 2018' }
+				{ label: 'Sep 26, 2018' }
 			],
 			table_rows: [
 				{partner: 'ACTIVATION PARTNERS', type: 'REFRESH TYPE', sent: 'DEVICES SENT'},
