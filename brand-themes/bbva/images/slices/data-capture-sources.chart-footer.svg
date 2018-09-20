@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1244px" height="31px" viewBox="0 0 1244 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>data-capture-sources.chart-footer</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="55.1212579%" id="linearGradient-1">
+            <stop stop-color="#205C9F" offset="0%"></stop>
+            <stop stop-color="#AFC5DE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Updated-with-blue-banner-bg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Data-Capture-Overview" transform="translate(-18.000000, -636.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1271"></rect>
+            <rect id="Rectangle-14" fill="url(#linearGradient-1)" x="0" y="90" width="1280" height="1181"></rect>
+            <rect id="Rectangle-2" stroke="#D8DDE6" fill="#FFFFFF" x="12.5" y="299.5" width="1255" height="374" rx="4"></rect>
+            <g id="Group-18" transform="translate(32.000000, 318.000000)">
+                <g id="Group-9" transform="translate(427.000000, 321.000000)">
+                    <path d="M0.5,8.16666667 L14.5,8.16666667" id="Line" stroke="#73ACE8" stroke-width="2"></path>
+                    <circle id="Oval-2" fill="#73ACE8" cx="8" cy="8" r="3"></circle>
+                    <text id="Website" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#3E3E3C">
+                        <tspan x="20" y="14">Website</tspan>
+                    </text>
+                    <g id="Group-4" transform="translate(106.000000, 0.000000)">
+                        <path d="M0.5,8.16666667 L14.5,8.16666667" id="Line" stroke="#EDBE32" stroke-width="2"></path>
+                        <circle id="Oval-2" fill="#EDBE32" cx="8" cy="8" r="3"></circle>
+                        <text id="App" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#3E3E3C">
+                            <tspan x="19" y="14">App</tspan>
+                        </text>
+                    </g>
+                    <g id="Group-4" transform="translate(188.000000, 0.000000)">
+                        <path d="M0.5,8.16666667 L14.5,8.16666667" id="Line" stroke="#EA78BB" stroke-width="2"></path>
+                        <circle id="Oval-2" fill="#EA78BB" cx="8" cy="8" r="3"></circle>
+                        <text id="Offline-Files" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#3E3E3C">
+                            <tspan x="19" y="14">Offline Files</tspan>
+                        </text>
+                    </g>
+                    <g id="Group-4-Copy" transform="translate(313.000000, 0.000000)">
+                        <path d="M0.5,8.16666667 L14.5,8.16666667" id="Line" stroke="#B896FA" stroke-width="2"></path>
+                        <circle id="Oval-2" fill="#B896FA" cx="8" cy="8" r="3"></circle>
+                        <text id="Partners" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#3E3E3C">
+                            <tspan x="19" y="14">Partners</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

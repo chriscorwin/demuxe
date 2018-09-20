@@ -13,6 +13,10 @@
   max-width: unset;
 }
 
+#content-wrapper {
+  width: 100%;
+}
+
 #subheader-wrapper {
   background-color: #F7F9FB;
   margin: 1rem;

@@ -1,5 +1,15 @@
-<a href="javascript:void(0);" onclick="navigatePage('/consumer-rights-management')">
-<img id="screenshot" class="auto-replace" style="width: 100%; margin: 0;" src="/images/slices/manage.data-capture.sources-top.svg">
-<%- include('components/highcharts.data-capture-sources.ejs') %>
-	<img id="screenshot" class="auto-replace" style="width: 100%; margin: 0;" src="/images/slices/manage.data-capture.sources.svg">
-</a>
+<div style="margin: 0 1rem">
+	<a href="javascript:void(0);" onclick="navigatePage('/consumer-rights-management')">
+		<div class="slds-panel-box slds-m-bottom_medium">
+			<img class="auto-replace" style="width: 100%; margin: 0;" src="/images/slices/data-capture-sources.top.svg">
+		</div>
+		<div class="slds-panel-box slds-m-bottom_medium">
+			<img class="auto-replace" style="width: 100%; margin: 0;" src="/images/slices/data-capture-sources.chart-header.svg">
+			<%- include('components/highcharts.data-capture-sources.ejs') %>
+			<img class="auto-replace" style="width: 100%; margin: 0;" src="/images/slices/data-capture-sources.chart-footer.svg">
+		</div>
+		<div>
+			<img class="auto-replace" style="width: 100%; margin: 0;" src="/images/slices/data-capture-sources.footer.svg">
+		</div>
+	</a>
+</div>
