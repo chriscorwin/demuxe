@@ -29,7 +29,7 @@
   padding-top: 1rem;
 }
 
-.slds-grid_pull-padded-small, .slds-grid--pull-padded-small {
+.slds-grid_pull-padded-small, .slds-grid--pull-padded-small, .slds-grid_pull-padded-medium, .slds-grid--pull-padded-medium {
   margin-right: unset;
   margin-left: unset;
 }
