@@ -3,7 +3,6 @@ module.exports = {
 	dce: {
 		graph: {
 			date_labels: [
-				'Sep 12',
 				'Sep 13',
 				'Sep 14',
 				'Sep 15',
@@ -17,6 +16,7 @@ module.exports = {
 				'Sep 23',
 				'Sep 24',
 				'Sep 25',
+				'Sep 26',
 				'Today'
 			],
 			device_data: [
