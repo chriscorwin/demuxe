@@ -4,7 +4,7 @@ module.exports = {
 		{label: 'Targeting', width: 430},
 		{label: 'Analytics', width: 400},
 		{label: 'Data Sharing', width: 415},
-		{label: 'Data Selling', width: 240},
+		{label: 'Data Provisioning', width: 240},
 		{label: 'Re-Identification', width: 200}
 	],
 	consent_sources: [
