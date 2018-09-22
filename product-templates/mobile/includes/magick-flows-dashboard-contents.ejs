@@ -145,11 +145,17 @@ This is just an FYI.
 				let thisNodeKeyValuesSplit = [];
 				if ( thisNodeKeyValues.includes('__') === true ) {
 					thisNodeKeyValuesSplit = thisNodeKeyValues.split('__');
-					thisNodeKeyValuesSplit.split('__').forEach(function(node, index) { 
-						console.log(node);
+					// each of these is an attribute, but may need cleaned up
+					thisNodeKeyValuesSplit.forEach(function(nodeValue, idx) { 
+						console.log(`[${idx}] ${nodeValue}`);
+						thisNodeKeyValuesFinal.push(nodeValue.split('.')[0])
+						if ( nodeValue.split('.').length > 1) {
+						}
 					});
+					thisMagickFlowScreenDataAttributes[thisNodeKey] = thisNodeKeyValuesFinal;
+				} else {
+					thisMagickFlowScreenDataAttributes[thisNodeKey] = thisNodeKeyValues.split('.')[0];
 				}
-				thisMagickFlowScreenDataAttributes[thisNodeKey] = thisNodeKeyValues;
 			}
 		});
 
@@ -169,7 +175,7 @@ This is just an FYI.
 		thisMagickFlowScreenDataAttributes: <%= JSON.stringify(thisMagickFlowScreenDataAttributes) %>
 	</p>
 <div
-	class=" slds-grid slds-gutters  <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	class=" slds-grid slds-gutters  <%= classnames(thisMagickFlowsSlideClassnames, thisMagickFlowScreenDataAttributes.DATA);%>"
 	data-slide="<%=fileIndex%>"
 	id="magick-flows--slide-<%=fileIndex%>"
 >
@@ -177,7 +183,7 @@ This is just an FYI.
 	<header class="slds-col slds-box slds-theme_shade slds-theme_alert-texture">
 		<img
 			id="sticky-header--slide-<%=fileIndex%>"
-			class="sticky-footer "
+			class="sticky-header "
 			src="<%=thisMagickFlowScreenHeaderUrl%>"
 			style="width: 25vw; max-width: 25vw;"
 		/>
@@ -195,7 +201,6 @@ This is just an FYI.
 	>
 <% if (isPng || isSvg || isGif || isJpeg) { %>
 		<img
-			class="screenshot auto-replace is-image "
 			id="screenshot--slide-<%=fileIndex%>"
 			src="<%=thisMagickFlowScreenUrl%>"
 			style="width: 25vw; max-width: 25vw;"

@@ -1,4 +1,24 @@
 
+
+/* This should be done to preload images and reduce load flicker */
+// body::after {
+//   backface-visibility: visible;
+//   content: url('./assets/snake-pit-popup.png') url('./assets/stadium.png') url('./assets/section.png')
+//     url('./assets/payment.png') url('./assets/confirmation.png') url('./assets/qr-screen.png')
+//     url('./assets/notification.png') url('./assets/drawer-header.png') url('./assets/drawer-header-2.png')
+//     url('./assets/drawer-header-3.png') url('./assets/email-screen.png') url('./assets/home-background.png')
+//     url('./assets/instagram-screen.png') url('./assets/search-screen.png') url('./assets/youtube-ad.png')
+//     url('./assets/youtube-screen.png');
+//   height: 0;
+//   overflow: hidden;
+//   position: absolute;
+//   width: 0;
+//   z-index: -1;
+// }
+
+
+
+
 @font-face {
 	font-family: 'Salesforce Sans Light';
 	src: url("/fonts/webfonts/SalesforceSans-Light.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
@@ -38,6 +58,9 @@
 	font-weight: 700;
 }
 
+.slds-shrink {
+  transform: scale(0.85);
+}
 
 .do {
   animation: do 0.8s ease-out;
@@ -80,14 +103,6 @@
   }
 }
 
-.magick-flows-slide {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 100vw;
-  // overflow: hidden;
-}
 
 /**
 
@@ -116,7 +131,7 @@ code, var {
  * @modifier
  */
 .slds-transition-hide {
-  transition: opacity 0s ease-in-out;
+  transition: opacity 300ms ease-in-out;
   will-change: opacity;
   // transition-delay: 0s;
   opacity: 0; 
@@ -136,10 +151,11 @@ code, var {
  * @modifier
  */
 .slds-transition-show {
-	transition: opacity 0s ease-in-out;
+	transition: opacity 300ms ease-in-out;
 	will-change: opacity;
 	opacity: 1; 
 }
+
 
 
 
@@ -150,6 +166,11 @@ code, var {
   bottom: 0;
   height: 100vh;
   width: 100vw;
+  border: 1px solid silver;
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.16);
+  border-radius: 2rem;
+  background-clip: border-box;
+  transition: .3s transform, .6s left;
 
   .magick-flows-stickey-header_container {
     position: fixed;
@@ -170,16 +191,22 @@ code, var {
 
 
   &.slds-is-next, &.slds-is-previous {
-    transform: scale(0.5)
+  // transform: scale(0.95);
+  border: 1px solid silver;
+  border-radius: 1rem;
+  background-clip: border-box;
+  overflow: hidden;
+  box-shadow: 0px 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
+
   }
 
   &.slds-is-previous {
-    left: -110%;
-    opacity: 0.25;
+    // left: -110%;
+    // opacity: 0;
 
-    &.do {
-      opacity: 1;
-    }
+    // &.do {
+    //   opacity: 1;
+    // }
 
 
     .magick-flows-stickey-header_container {
@@ -202,12 +229,12 @@ code, var {
   }
 
   &.slds-is-next {
-    right: -110%;
-    opacity: 0.25;
+    // right: -110%;
+    // opacity: 0;
 
-    &.do {
-      opacity: 1;
-    }
+    // &.do {
+    //   opacity: 1;
+    // }
 
     .magick-flows-stickey-header_container {
       position: absolute;
@@ -227,4 +254,9 @@ code, var {
       z-index: 100;
     }
   }
+}
+
+
+.slds-shrink .magick-flows-slide {
+    overflow: hidden;
 }

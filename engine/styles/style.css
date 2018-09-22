@@ -1,3 +1,4 @@
+/* This should be done to preload images and reduce load flicker */
 @font-face {
   font-family: 'Salesforce Sans Light';
   src: url("/fonts/webfonts/SalesforceSans-Light.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
@@ -35,6 +36,10 @@
   src: url("/fonts/webfonts/SalesforceSans-BoldItalic.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-BoldItalic.woff") format("woff");
   font-style: italic;
   font-weight: 700;
+}
+
+.slds-shrink {
+  transform: scale(0.85);
 }
 
 .do {
@@ -75,14 +80,6 @@
   }
 }
 
-.magick-flows-slide {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 100vw;
-}
-
 /**
 
 // Currenct versions of SLDS have the background color #fafaf9 by default. Override that.
@@ -110,7 +107,7 @@ code, var {
  * @modifier
  */
 .slds-transition-hide {
-  transition: opacity 0s ease-in-out;
+  transition: opacity 300ms ease-in-out;
   will-change: opacity;
   opacity: 0;
 }
@@ -123,7 +120,7 @@ code, var {
  * @modifier
  */
 .slds-transition-show {
-  transition: opacity 0s ease-in-out;
+  transition: opacity 300ms ease-in-out;
   will-change: opacity;
   opacity: 1;
 }
@@ -134,6 +131,11 @@ code, var {
   bottom: 0;
   height: 100vh;
   width: 100vw;
+  border: 1px solid silver;
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.16);
+  border-radius: 2rem;
+  background-clip: border-box;
+  transition: .3s transform, .6s left;
 }
 
 .magick-flows-slide .magick-flows-stickey-header_container {
@@ -153,16 +155,11 @@ code, var {
 }
 
 .magick-flows-slide.slds-is-next, .magick-flows-slide.slds-is-previous {
-  transform: scale(0.5);
-}
-
-.magick-flows-slide.slds-is-previous {
-  left: -110%;
-  opacity: 0.25;
-}
-
-.magick-flows-slide.slds-is-previous.do {
-  opacity: 1;
+  border: 1px solid silver;
+  border-radius: 1rem;
+  background-clip: border-box;
+  overflow: hidden;
+  box-shadow: 0px 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.16);
 }
 
 .magick-flows-slide.slds-is-previous .magick-flows-stickey-header_container {
@@ -181,15 +178,6 @@ code, var {
   z-index: 100;
 }
 
-.magick-flows-slide.slds-is-next {
-  right: -110%;
-  opacity: 0.25;
-}
-
-.magick-flows-slide.slds-is-next.do {
-  opacity: 1;
-}
-
 .magick-flows-slide.slds-is-next .magick-flows-stickey-header_container {
   position: absolute;
   width: 100%;
@@ -204,4 +192,8 @@ code, var {
   bottom: 0;
   left: 0;
   z-index: 100;
+}
+
+.slds-shrink .magick-flows-slide {
+  overflow: hidden;
 }

@@ -59,6 +59,13 @@ function locationHashChanged( ) {
 	console.log(`previousClick: `, previousClick);
 	console.log(`nextClick: `, nextClick);
 
+	// if(isGif) {
+		const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
+		console.log(`item img: `, theScreenshot.src);
+		theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
+	// }
+
+
 	// console.log((`#magick-flows--slide-${nextClick}`));
 
 	window.setTimeout(() => {
@@ -89,11 +96,6 @@ function locationHashChanged( ) {
 				const isMp4 = thisMagickFlowScreenshotUrl.endsWith('.mp4');
 				const isGif = thisMagickFlowScreenshotUrl.endsWith('.gif');
 				const isJpeg = thisMagickFlowScreenshotUrl.endsWith('.jpg');
-				if(isGif) {
-					const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
-					console.log(`item img: `, theScreenshot.src);
-					theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
-				}
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-next');
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-previous');
 				document.querySelector(`#${itemId}`).classList.add('slds-is-active');
@@ -106,13 +108,17 @@ function locationHashChanged( ) {
 					document.querySelector(`#magick-flows--slide-${nextClick}`).classList.remove('slds-transition-show');
 					document.querySelector(`#magick-flows--slide-${previousClick}`).classList.remove('slds-hide');
 					document.querySelector(`#magick-flows--slide-${previousClick}`).classList.remove('slds-transition-show');
-					// if(isGif) {
-					// 	console.log(`isGif: `, isGif);
-					// 	const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
-					// 	console.log(`item img: `, theScreenshot.src);
-					// 	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
-					// }
 				}, 50);
+
+
+				// if(isGif) {
+				// 	window.setTimeout(() => {
+				// 			console.log(`isGif: `, isGif);
+				// 			const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
+				// 			console.log(`item img: `, theScreenshot.src);
+				// 			theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
+				// 	}, 4000);
+				// }
 
 				// document.querySelector(`#magick-flows--slide-${nextClick}`).classList.add('slds-transition-show');
 

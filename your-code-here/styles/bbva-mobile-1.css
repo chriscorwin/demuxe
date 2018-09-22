@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* prevent tap highlight color / shadow */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+}
+
+body {
+  background: white;
+  font-family: "Helvetica Neue", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  transform: translate3d(0px, 0px, 0px);
+  width: 100vw;
+}
+
+/* This is done to preload images and reduce load flicker */
+body::after {
+  backface-visibility: visible;
+  content: url("/images/snake-pit-popup.png") url("/images/stadium.png") url("/images/section.png") url("/images/payment.png") url("/images/confirmation.png") url("/images/qr-screen.png") url("/images/notification.png") url("/images/drawer-header.png") url("/images/drawer-header-2.png") url("/images/drawer-header-3.png") url("/images/email-screen.png") url("/images/home-background.png") url("/images/instagram-screen.png") url("/images/search-screen.png") url("/images/youtube-ad.png") url("/images/youtube-ad.png") url("/images/0000___google-search-results.png") url("/images/youtube-screen.png");
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+.container {
+  background: url("/images/home-background.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.hide {
+  display: none;
+}
+
+/* App Switcher One styles */
+.app-switcher-one {
+  height: 812px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: .3s transform, .6s left;
+  width: 770px;
+}
+
+.app-switcher-one.hide {
+  display: none;
+}
+
+.app-switcher-one.rounded-corners .search-screen,
+.app-switcher-one.rounded-corners .youtube-screen {
+  border-radius: 40px;
+}
+
+.app-switcher-one.shrink {
+  transform: scale(0.85);
+}
+
+.app-switcher-one.slide-left {
+  left: -395px;
+}
+
+.search-screen {
+  background: #fff url("/images/search-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 375px;
+}
+
+.youtube-ad {
+  background: url("/images/youtube-ad.png") no-repeat top left;
+  background-size: 100% 100%;
+  display: none;
+  height: 49px;
+  left: 10px;
+  position: absolute;
+  top: 194px;
+  width: 355px;
+}
+
+.youtube-ad.show {
+  display: block;
+}
+
+.youtube-screen {
+  background: #fff url("/images/youtube-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.google-search-results-screen {
+  background-size: 100% 100%;
+  height: 812px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.homepage-1-screen {
+  background-size: 100% 100%;
+  height: 812px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+#youtube-player {
+  left: 0;
+  position: absolute;
+  top: 44px;
+}
+
+/* Drawer styles */
+.drawer {
+  background: #fff;
+  height: 812px;
+  left: 375px;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  transition: .4s left;
+  width: 375px;
+}
+
+.drawer.slide-in {
+  left: 0;
+}
+
+.drawer .content {
+  background: #fff url("/images/stadium.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 966px;
+  width: 375px;
+}
+
+.drawer.confirmation .content {
+  background-color: #f7f7f9;
+  background-image: url("/images/confirmation.png");
+  height: 701px;
+}
+
+.drawer.confirmation .header {
+  background-image: url("/images/drawer-header-3.png");
+  height: 111px;
+}
+
+.drawer.confirmation .scroll-wrapper {
+  top: 111px;
+}
+
+.drawer.payment .content {
+  background-image: url("/images/payment.png");
+  height: 724px;
+}
+
+.drawer.payment .header {
+  background-image: url("/images/drawer-header-2.png");
+}
+
+.drawer.section .content {
+  background-image: url("/images/section.png");
+  height: 724px;
+}
+
+.drawer .header {
+  background: #019cdf url("/images/drawer-header.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 88px;
+  width: 100%;
+}
+
+.drawer .scroll-wrapper {
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 88px;
+}
+
+/* Snake-Pit Popup Styles */
+.snake-pit-popup {
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: relative;
+  transition: .5s opacity;
+  width: 100%;
+}
+
+.snake-pit-popup:after {
+  background: url("/images/snake-pit-popup.png") no-repeat top left;
+  background-size: 100% 100%;
+  content: "";
+  display: block;
+  height: 915px;
+  left: 13px;
+  position: absolute;
+  top: 14px;
+  width: 348px;
+}
+
+.snake-pit-popup.fade-in {
+  opacity: 1;
+}
+
+.snake-pit-popup.show {
+  display: block;
+}
+
+/* App Switcher Two Styles */
+.app-switcher-two {
+  display: none;
+  height: 812px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: .3s transform, .6s left;
+  width: 1165px;
+}
+
+.app-switcher-two.rounded-corners .qr-screen,
+.app-switcher-two.rounded-corners .instagram-screen,
+.app-switcher-two.rounded-corners .email-screen {
+  border-radius: 40px;
+}
+
+.app-switcher-two.show {
+  display: block;
+}
+
+.app-switcher-two.shrink {
+  transform: scale(0.85);
+}
+
+.app-switcher-two.slide-left-one {
+  left: -395px;
+}
+
+.app-switcher-two.slide-left-two {
+  left: -790px;
+}
+
+.notification {
+  background: url("/images/notification.png") no-repeat top left;
+  background-size: 364px 172px;
+  height: 172px;
+  margin: 0 auto;
+  position: relative;
+  top: -173px;
+  transition: .35s top;
+  width: 364px;
+}
+
+.notification.slide-in {
+  top: 40px;
+}
+
+.qr-screen {
+  background: #fff url("/images/qr-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.qr-screen.show {
+  display: block;
+}
+
+.instagram-screen {
+  background: #fff url("/images/instagram-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 395px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.email-screen {
+  background: #fff url("/images/email-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 790px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+footer.magick-flows-stickey-footer_container {
+  position: absolute;
+  bottom: 0;
+}
