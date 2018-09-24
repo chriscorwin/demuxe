@@ -5,6 +5,64 @@
 	let youtubePlayer;
 	let youtubeVideoPlaying = false;
 
+
+
+
+
+
+	function transitionToGoogleSearchResultsScreen () {
+		$('.container').attr('data-next', 'homepage-1-screen');
+		pauseYoutubeVideo();
+		if (youtubePlayer) {
+			youtubePlayer.seekTo(81);
+		}
+		$('.youtube-ad').removeClass('show');
+		hasShownYoutubeAd = false;
+
+		$('.drawer').removeClass(drawerContentChangingClasses + ' slide-in');
+		$('.app-switcher-two').removeClass('show');
+		$('.app-switcher-one').removeClass('hide shrink slide-left be-left-1  be-left-2 rounded-corners');
+	}
+
+	function transitionToHomepage1Screen () {
+		const appSwitcherOne = $('.app-switcher-one');
+
+		$('.container').attr('data-next', 'homepage-2-screen');
+		pauseYoutubeVideo();
+		$('.app-switcher-two').removeClass('show');
+		$('.drawer').removeClass(drawerContentChangingClasses + ' slide-in');
+		$('.snake-pit-popup').removeClass('fade-in show');
+		// appSwitcherOne.removeClass('hide').addClass('shrink slide-left rounded-corners');
+		appSwitcherOne.removeClass('hide').addClass('be-left-1').removeClass('be-left-2');
+		setTimeout(() => {
+			appSwitcherOne.removeClass('shrink');
+			setTimeout(() => {
+				appSwitcherOne.removeClass('rounded-corners');
+			}, 300);
+		}, 300);
+	}
+	function transitionToHomepage2Screen () {
+		const appSwitcherOne = $('.app-switcher-one');
+
+		$('.container').attr('data-next', 'stadium-one');
+		pauseYoutubeVideo();
+		$('.app-switcher-two').removeClass('show');
+		$('.drawer').removeClass(drawerContentChangingClasses + ' slide-in');
+		$('.snake-pit-popup').removeClass('fade-in show');
+		// appSwitcherOne.removeClass('hide').addClass('shrink slide-left rounded-corners');
+		appSwitcherOne.removeClass('hide').addClass('be-left-2').removeClass('be-left-1');
+		setTimeout(() => {
+			appSwitcherOne.removeClass('shrink');
+			setTimeout(() => {
+				appSwitcherOne.removeClass('rounded-corners');
+			}, 300);
+		}, 300);
+	}
+
+
+
+
+
 	function commonTransition (currentStep, nextStep) {
 		$('.container').attr('data-next', nextStep);
 		pauseYoutubeVideo();
@@ -53,22 +111,6 @@
 		}, 300);
 	}
 
-	function transitionToHomepage1Screen () {
-		const appSwitcherOne = $('.app-switcher-one');
-
-		$('.container').attr('data-next', 'stadium-one');
-		pauseYoutubeVideo();
-		$('.app-switcher-two').removeClass('show');
-		$('.drawer').removeClass(drawerContentChangingClasses + ' slide-in');
-		$('.snake-pit-popup').removeClass('fade-in show');
-		appSwitcherOne.removeClass('hide').addClass('shrink slide-left rounded-corners');
-		setTimeout(() => {
-			appSwitcherOne.removeClass('shrink');
-			setTimeout(() => {
-				appSwitcherOne.removeClass('rounded-corners');
-			}, 300);
-		}, 300);
-	}
 	function transitionToSearchScreen () {
 		const appSwitcherOne = $('.app-switcher-one');
 
@@ -131,19 +173,12 @@
 		}
 	}
 
-	function transitionToGoogleSearchResultsScreen () {
-		$('.container').attr('data-next', 'homepage-1-screen');
-		pauseYoutubeVideo();
-		if (youtubePlayer) {
-			youtubePlayer.seekTo(81);
-		}
-		$('.youtube-ad').removeClass('show');
-		hasShownYoutubeAd = false;
 
-		$('.drawer').removeClass(drawerContentChangingClasses + ' slide-in');
-		$('.app-switcher-two').removeClass('show');
-		$('.app-switcher-one').removeClass('hide shrink slide-left rounded-corners');
-	}
+
+
+
+
+
 
 	function transitionToYoutubeScreen () {
 		$('.container').attr('data-next', 'search-screen');
@@ -173,6 +208,10 @@
 			}
 			case 'homepage-1-screen': {
 				transitionToHomepage1Screen();
+				break;
+			}
+			case 'homepage-2-screen': {
+				transitionToHomepage2Screen();
 				break;
 			}
 			case 'search-screen': {

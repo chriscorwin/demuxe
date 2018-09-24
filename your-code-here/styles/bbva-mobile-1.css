@@ -72,6 +72,447 @@ body::after {
   left: -395px;
 }
 
+.app-switcher-one.be-left-1 {
+  left: -395px;
+  transition: 0s transform, 0s left !important;
+}
+
+.app-switcher-one.be-left-2 {
+  left: -790px;
+  transition: 0s transform, 0s left !important;
+}
+
+#app-switcher-one--slide-0 {
+  right: -0px;
+}
+
+#app-switcher-one--slide-1 {
+  right: -395px;
+}
+
+#app-switcher-one--slide-2 {
+  right: -790px;
+}
+
+#app-switcher-one--slide-3 {
+  right: -1185px;
+}
+
+#app-switcher-one--slide-4 {
+  right: -1580px;
+}
+
+#app-switcher-one--slide-5 {
+  right: -1975px;
+}
+
+#app-switcher-one--slide-6 {
+  right: -2370px;
+}
+
+#app-switcher-one--slide-7 {
+  right: -2765px;
+}
+
+#app-switcher-one--slide-8 {
+  right: -3160px;
+}
+
+#app-switcher-one--slide-9 {
+  right: -3555px;
+}
+
+#app-switcher-one--slide-10 {
+  right: -3950px;
+}
+
+#app-switcher-one--slide-11 {
+  right: -4345px;
+}
+
+#app-switcher-one--slide-12 {
+  right: -4740px;
+}
+
+#app-switcher-one--slide-13 {
+  right: -5135px;
+}
+
+#app-switcher-one--slide-14 {
+  right: -5530px;
+}
+
+#app-switcher-one--slide-15 {
+  right: -5925px;
+}
+
+#app-switcher-one--slide-16 {
+  right: -6320px;
+}
+
+#app-switcher-one--slide-17 {
+  right: -6715px;
+}
+
+#app-switcher-one--slide-18 {
+  right: -7110px;
+}
+
+#app-switcher-one--slide-19 {
+  right: -7505px;
+}
+
+#app-switcher-one--slide-20 {
+  right: -7900px;
+}
+
+#app-switcher-one--slide-21 {
+  right: -8295px;
+}
+
+#app-switcher-one--slide-22 {
+  right: -8690px;
+}
+
+#app-switcher-one--slide-23 {
+  right: -9085px;
+}
+
+#app-switcher-one--slide-24 {
+  right: -9480px;
+}
+
+#app-switcher-one--slide-25 {
+  right: -9875px;
+}
+
+#app-switcher-one--slide-26 {
+  right: -10270px;
+}
+
+#app-switcher-one--slide-27 {
+  right: -10665px;
+}
+
+#app-switcher-one--slide-28 {
+  right: -11060px;
+}
+
+#app-switcher-one--slide-29 {
+  right: -11455px;
+}
+
+#app-switcher-one--slide-30 {
+  right: -11850px;
+}
+
+#app-switcher-one--slide-31 {
+  right: -12245px;
+}
+
+#app-switcher-one--slide-32 {
+  right: -12640px;
+}
+
+#app-switcher-one--slide-33 {
+  right: -13035px;
+}
+
+#app-switcher-one--slide-34 {
+  right: -13430px;
+}
+
+#app-switcher-one--slide-35 {
+  right: -13825px;
+}
+
+#app-switcher-one--slide-36 {
+  right: -14220px;
+}
+
+#app-switcher-one--slide-37 {
+  right: -14615px;
+}
+
+#app-switcher-one--slide-38 {
+  right: -15010px;
+}
+
+#app-switcher-one--slide-39 {
+  right: -15405px;
+}
+
+#app-switcher-one--slide-40 {
+  right: -15800px;
+}
+
+#app-switcher-one--slide-41 {
+  right: -16195px;
+}
+
+#app-switcher-one--slide-42 {
+  right: -16590px;
+}
+
+#app-switcher-one--slide-43 {
+  right: -16985px;
+}
+
+#app-switcher-one--slide-44 {
+  right: -17380px;
+}
+
+#app-switcher-one--slide-45 {
+  right: -17775px;
+}
+
+#app-switcher-one--slide-46 {
+  right: -18170px;
+}
+
+#app-switcher-one--slide-47 {
+  right: -18565px;
+}
+
+#app-switcher-one--slide-48 {
+  right: -18960px;
+}
+
+#app-switcher-one--slide-49 {
+  right: -19355px;
+}
+
+#app-switcher-one--slide-50 {
+  right: -19750px;
+}
+
+#app-switcher-one--slide-51 {
+  right: -20145px;
+}
+
+#app-switcher-one--slide-52 {
+  right: -20540px;
+}
+
+#app-switcher-one--slide-53 {
+  right: -20935px;
+}
+
+#app-switcher-one--slide-54 {
+  right: -21330px;
+}
+
+#app-switcher-one--slide-55 {
+  right: -21725px;
+}
+
+#app-switcher-one--slide-56 {
+  right: -22120px;
+}
+
+#app-switcher-one--slide-57 {
+  right: -22515px;
+}
+
+#app-switcher-one--slide-58 {
+  right: -22910px;
+}
+
+#app-switcher-one--slide-59 {
+  right: -23305px;
+}
+
+#app-switcher-one--slide-60 {
+  right: -23700px;
+}
+
+#app-switcher-one--slide-61 {
+  right: -24095px;
+}
+
+#app-switcher-one--slide-62 {
+  right: -24490px;
+}
+
+#app-switcher-one--slide-63 {
+  right: -24885px;
+}
+
+#app-switcher-one--slide-64 {
+  right: -25280px;
+}
+
+#app-switcher-one--slide-65 {
+  right: -25675px;
+}
+
+#app-switcher-one--slide-66 {
+  right: -26070px;
+}
+
+#app-switcher-one--slide-67 {
+  right: -26465px;
+}
+
+#app-switcher-one--slide-68 {
+  right: -26860px;
+}
+
+#app-switcher-one--slide-69 {
+  right: -27255px;
+}
+
+#app-switcher-one--slide-70 {
+  right: -27650px;
+}
+
+#app-switcher-one--slide-71 {
+  right: -28045px;
+}
+
+#app-switcher-one--slide-72 {
+  right: -28440px;
+}
+
+#app-switcher-one--slide-73 {
+  right: -28835px;
+}
+
+#app-switcher-one--slide-74 {
+  right: -29230px;
+}
+
+#app-switcher-one--slide-75 {
+  right: -29625px;
+}
+
+#app-switcher-one--slide-76 {
+  right: -30020px;
+}
+
+#app-switcher-one--slide-77 {
+  right: -30415px;
+}
+
+#app-switcher-one--slide-78 {
+  right: -30810px;
+}
+
+#app-switcher-one--slide-79 {
+  right: -31205px;
+}
+
+#app-switcher-one--slide-80 {
+  right: -31600px;
+}
+
+#app-switcher-one--slide-81 {
+  right: -31995px;
+}
+
+#app-switcher-one--slide-82 {
+  right: -32390px;
+}
+
+#app-switcher-one--slide-83 {
+  right: -32785px;
+}
+
+#app-switcher-one--slide-84 {
+  right: -33180px;
+}
+
+#app-switcher-one--slide-85 {
+  right: -33575px;
+}
+
+#app-switcher-one--slide-86 {
+  right: -33970px;
+}
+
+#app-switcher-one--slide-87 {
+  right: -34365px;
+}
+
+#app-switcher-one--slide-88 {
+  right: -34760px;
+}
+
+#app-switcher-one--slide-89 {
+  right: -35155px;
+}
+
+#app-switcher-one--slide-90 {
+  right: -35550px;
+}
+
+#app-switcher-one--slide-91 {
+  right: -35945px;
+}
+
+#app-switcher-one--slide-92 {
+  right: -36340px;
+}
+
+#app-switcher-one--slide-93 {
+  right: -36735px;
+}
+
+#app-switcher-one--slide-94 {
+  right: -37130px;
+}
+
+#app-switcher-one--slide-95 {
+  right: -37525px;
+}
+
+#app-switcher-one--slide-96 {
+  right: -37920px;
+}
+
+#app-switcher-one--slide-97 {
+  right: -38315px;
+}
+
+#app-switcher-one--slide-98 {
+  right: -38710px;
+}
+
+#app-switcher-one--slide-99 {
+  right: -39105px;
+}
+
+#app-switcher-one--slide-100 {
+  right: -39500px;
+}
+
+.google-search-results-screen {
+  background-size: 100% 100%;
+  height: 812px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.homepage-1-screen {
+  background-size: 100% 100%;
+  height: 812px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.homepage-2-screen {
+  background-size: 100% 100%;
+  height: 812px;
+  right: -395px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
 .search-screen {
   background: #fff url("/images/search-screen.png") no-repeat top left;
   background-size: 100% 100%;
@@ -102,24 +543,6 @@ body::after {
   background-size: 100% 100%;
   height: 812px;
   left: 0;
-  position: absolute;
-  top: 0;
-  width: 375px;
-}
-
-.google-search-results-screen {
-  background-size: 100% 100%;
-  height: 812px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 375px;
-}
-
-.homepage-1-screen {
-  background-size: 100% 100%;
-  height: 812px;
-  right: 0;
   position: absolute;
   top: 0;
   width: 375px;
