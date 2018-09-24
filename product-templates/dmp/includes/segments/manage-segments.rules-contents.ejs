@@ -1,0 +1,47 @@
+<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-container_large">
+	<div class="slds-col slds-p-horizontal_medium slds-m-bottom_medium slds-size_1-of-1">
+		<img src="/images/slices/segment-builder.details-and-activation.wizard-step-1.svg" />
+	</div>
+	<div class="slds-col slds-p-horizontal_medium slds-size_1-of-3">
+		<div class="slds-panel-box slds-p-around_medium">
+			<div class="slds-panel-box__body">
+				<%- include('includes/components/slds-ui/search', {
+					placeholder: 'Search Attributes'			
+				}) %>
+				<%- include('components/folder-view.ejs', {
+					text: '1st Party',
+					isFolder: false,
+					customColor: {
+						color: '#fff',
+						background: 'purple'
+					}
+				}) %>
+				<%- include('components/folder-view.ejs', { text: 'CRM' }) %>
+				<%- include('components/folder-view.ejs', { text: 'Salesforce Marketing Cloud' }) %>
+				<%- include('components/folder-view.ejs', { text: 'Media' }) %>
+				<%- include('components/folder-view.ejs', { text: 'Transaction' }) %>
+				<%- include('components/folder-view.ejs', {
+					options: [
+						{ text: 'Models', icon: 'P' },
+						{ text: 'Equipments', icon: 'U' },
+						{ text: 'Racing', icon: 'P' },
+						{ text: 'Experience', icon: 'L' },
+						{ text: 'Deals & Services Viewed', icon: 'L' },
+						{ text: 'Configurator Usage', icon: 'P' },
+						{ text: 'Editorial', icon: 'P' }
+					],
+					text: 'Site Behavior'
+				}) %>
+			</div>
+		</div>
+	</div>
+	<div class="slds-col slds-p-horizontal_medium slds-size_2-of-3">
+		<div class="slds-panel-box">
+			<div class="slds-panel-box__header slds-p-around_small">Rules</div>
+			<div class="slds-panel-box__body">
+
+			</div>
+		</div>
+	</div>
+
+</div>
