@@ -13,7 +13,7 @@
 					isFolder: false,
 					customColor: {
 						color: '#fff',
-						background: 'purple'
+						background: '#7E8BE4'
 					}
 				}) %>
 				<%- include('components/folder-view.ejs', { text: 'CRM' }) %>
@@ -22,15 +22,33 @@
 				<%- include('components/folder-view.ejs', { text: 'Transaction' }) %>
 				<%- include('components/folder-view.ejs', {
 					options: [
-						{ text: 'Models', icon: 'P' },
-						{ text: 'Equipments', icon: 'U' },
-						{ text: 'Racing', icon: 'P' },
-						{ text: 'Experience', icon: 'L' },
-						{ text: 'Deals & Services Viewed', icon: 'L' },
-						{ text: 'Configurator Usage', icon: 'P' },
-						{ text: 'Editorial', icon: 'P' }
+						{ text: 'Category', icon: 'P' },
+						{ text: 'NTO Product Activity', icon: 'P' }
 					],
+					isOpen: true,
 					text: 'Site Behavior'
+				}) %>
+				<%- include('components/folder-view.ejs', { text: 'Social Studio' }) %>
+				<%- include('components/folder-view.ejs', { 
+					text: 'Segments',
+					customIconClosed: '<img class="closed" src="/images/vines.png" />',
+					customIconOpened: '<img class="opened" src="/images/vines.png" />'
+				}) %>
+				<%- include('components/folder-view.ejs', {
+					text: '2nd Party',
+					isFolder: false,
+					customColor: {
+						color: '#fff',
+						background: '#14A9DA'
+					}
+				}) %>
+				<%- include('components/folder-view.ejs', {
+					text: '3rd Party',
+					isFolder: false,
+					customColor: {
+						color: '#fff',
+						background: '#7DC37D'
+					}
 				}) %>
 			</div>
 		</div>
@@ -39,7 +57,7 @@
 		<div class="slds-panel-box">
 			<div class="slds-panel-box__header slds-p-around_small">Rules</div>
 			<div class="slds-panel-box__body">
-
+				<img src="/images/slices/segments.new-segment.rules.svg" />
 			</div>
 		</div>
 	</div>
