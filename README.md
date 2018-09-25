@@ -254,5 +254,13 @@ Components:
 
 Past demos utilizing this boilerplate (add yours here!)
 
-[Connections 2018 DMP Demo](https://github.exacttarget.com/uxarchitecture/cnx-dmp-2018)
-[Laulima 2018 DMP Demo - Crocks](https://laulima-2018-dmp.herokuapp.com/)
+[Connections 2018 DMP Demo](https://cnx-dmp-2018.herokuapp.com/)*
+[Connections 2018 DMP 201 Demo](https://cnx-dmp-2018.herokuapp.com/201/)**
+[Laulima 2018 DMP Demo - Crocks](https://laulima-2018-dmp.herokuapp.com/) (This demo never saw the light of day)
+[Dreamforce 2018 DMP Demo](https://dmp-dreamforce-2018.herokuapp.com/)
+[Dreamforce 2018 201 DMP Demo](https://df-dmp-2018.herokuapp.com/)**
+[Dreamforce 2018 ROI DMP Demo](https://roi-einstein-df18.herokuapp.com/) (This demo was huge and was created in two days, perfectly illustrating the extreme power of Demuxe)
+
+
+* This demo used the predicessor to Demuxe, and is what Demuxe was loosely based on. It is listed here in honor of the vast swaths of code that were taken from it in order to create Demuxe.
+** This demo is in need of being moved over to this boilerplate, and continues to utilize the precursor to Demuxe. It is included on this list as a reminder to upgrade Demuxe to accomodate the featureset this demo requires (namely, account switching)
