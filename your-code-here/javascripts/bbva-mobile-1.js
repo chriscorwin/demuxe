@@ -10,6 +10,58 @@
 
 
 
+	function getAppSwitcherClassNames () {
+
+		let step;
+		let out = '';
+		for (step = 0; step < 100; step++) {
+			out += ' slide-left-' + step;
+			out += ' be-left-' + step;
+		}
+		return out;
+	}
+
+
+	function normalTransition (nextStepNumber = 0, doAppTransition) {
+		$('.container').attr('data-next', `magick-flows--slide-${nextStepNumber + 1}`);
+
+		console.log(`nextStepNumber: `, nextStepNumber);
+		
+		pauseYoutubeVideo();
+		if (youtubePlayer) {
+			youtubePlayer.seekTo(81);
+		}
+		$('.youtube-ad').removeClass('show');
+		hasShownYoutubeAd = false;
+
+		$('.drawer').removeClass(drawerContentChangingClasses + ' slide-in');
+
+		$('.app-switcher-two').removeClass('show');
+		$('.app-switcher-one').removeClass(getAppSwitcherClassNames());
+
+
+		const appSwitcherOne = $('.app-switcher-one');
+		// appSwitcherOne.removeClass('hide').addClass('shrink slide-left rounded-corners');
+
+		if (doAppTransition === true) {
+
+			$('.app-switcher-one').removeClass('hide').addClass(`slide-left-${nextStepNumber} shrink rounded-corners`);
+			setTimeout(() => {
+				$('.app-switcher-one').removeClass('shrink');
+				setTimeout(() => {
+					$('.app-switcher-one').removeClass('rounded-corners');
+				}, 300);
+			}, 600);
+
+		} else {
+			$('.app-switcher-one').removeClass('hide shrink rounded-corners');
+			$('.app-switcher-one').removeClass('hide').addClass(`be-left-${nextStepNumber}`);
+		}
+
+	}
+
+
+
 	function transitionToGoogleSearchResultsScreen () {
 		$('.container').attr('data-next', 'homepage-1-screen');
 		pauseYoutubeVideo();
@@ -21,7 +73,8 @@
 
 		$('.drawer').removeClass(drawerContentChangingClasses + ' slide-in');
 		$('.app-switcher-two').removeClass('show');
-		$('.app-switcher-one').removeClass('hide shrink slide-left be-left-1  be-left-2 rounded-corners');
+		$('.app-switcher-one').removeClass('hide shrink rounded-corners');
+		$('.app-switcher-one').removeClass(getAppSwitcherClassNames());
 	}
 
 	function transitionToHomepage1Screen () {
@@ -198,80 +251,30 @@
 		const hash = window.location.hash.replace('#', '');
 
 		switch (hash) {
-			case 'google-search-results': {
-				transitionToGoogleSearchResultsScreen();
+			case 'magick-flows--slide-0': {
+				// transitionToGoogleSearchResultsScreen();
+				normalTransition(0, false);
 				break;
 			}
-			case 'youtube-screen': {
-				transitionToYoutubeScreen();
+			case 'magick-flows--slide-4': {
+				// transitionToGoogleSearchResultsScreen();
+				normalTransition(4, true);
 				break;
 			}
-			case 'homepage-1-screen': {
-				transitionToHomepage1Screen();
-				break;
-			}
-			case 'homepage-2-screen': {
-				transitionToHomepage2Screen();
-				break;
-			}
-			case 'search-screen': {
-				transitionToSearchScreen();
-				break;
-			}
-			case 'stadium-one': {
-				transitionToStadiumOneScreen();
-				break;
-			}
-			case 'snake-pit-popup': {
-				transitionToSnakePitPopup();
-				break;
-			}
-			case 'stadium-two': {
-				transitionToStadiumTwoScreen();
-				break;
-			}
-			case 'section': {
-				commonTransition('section', 'payment');
-				break;
-			}
-			case 'payment': {
-				commonTransition('payment', 'confirmation');
-				break;
-			}
-			case 'confirmation': {
-				commonTransition('confirmation', 'break');
-				break;
-			}
-			case 'break': {
-				$('.container').attr('data-next', 'qr-screen-one');
-				break;
-			}
-			case 'qr-screen-one': {
-				transitionToQRScreens('qr-notification', false);
-				break;
-			}
-			case 'qr-notification': {
-				transitionToQRScreens('qr-screen-two', true);
-				break;
-			}
-			case 'qr-screen-two': {
-				transitionToQRScreens('instagram-screen', false);
-				break;
-			}
-			case 'instagram-screen': {
-				transitionToInstagramScreen();
-				break;
-			}
-			case 'email-screen': {
-				transitionToEmailScreen();
-				break;
-			}
+
 			case 'end': {
 				// done
+				normalTransition(0, false);
 				break;
 			}
 			default: {
-				window.location.hash = 'google-search-results';
+				let clicks = parseInt( window.location.hash.replace( '#magick-flows--slide-', '' ) ) || 0;
+				console.log(`clicks: `, clicks);
+				window.location.hash = `magick-flows--slide-${clicks}`;
+				let doAppTransition = false
+
+				normalTransition(clicks, doAppTransition);
+
 			}
 		}
 	}
