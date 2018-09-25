@@ -6,7 +6,7 @@ const overview = require('./overview');
 const segments = require('./segments');
 
 module.exports = {
-	account_name: 'NTO',
+	account_name: 'Northern Trail Outfitters',
 	consumer_rights_management,
 	data_capture_sources,
 	einstein_segmentation,

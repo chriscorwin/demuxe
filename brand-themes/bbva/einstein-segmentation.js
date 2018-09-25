@@ -1,7 +1,7 @@
 module.exports = {
 	actions: [
 		{ 
-			onclick: '/segments/manage-segments/rules',
+			onclick: '/segments/manage-segments/details-and-activation',
 			text: 'Create a new segment using this persona'
 		}
 	],

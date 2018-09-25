@@ -35,7 +35,7 @@ module.exports = {
 			subTitle: 'Standard Segment / ID: <b>rsdqtbasi</b>',
 			devices: '45.3M',
 			audience: '14.2M',
-			modified: 'Feb 27, 2018',
+			modified: 'Jul 27, 2018',
 			type: 'Clusters',
 			category: 'Behavioural',
 			subCategory: 'Attributes'
@@ -45,24 +45,34 @@ module.exports = {
 			subTitle: 'Standard Segment / ID: <b>rsdqtbasi</b>',
 			devices: '45.3M',
 			audience: '14.2M',
-			modified: 'Feb 27, 2018',
+			modified: 'Jul 27, 2018',
 			type: 'Clusters',
 			category: 'Behavioural',
 			subCategory: 'Attributes'
 		}
 	],
-	// These will be added in reverse order listed here
+	// These will be added one at a time in the order they are listed here, which by the end of the demo will make them appear in "reverse" order once they all are added
 	additional: [
 		{
-			title: '<span class="slds-badge slds-m-right_small">LOOKALIKE</span><img src="/images/logo-noname.svg" height=10 /> High Value Customers Lookalikes',
+			title: '<img src="/images/logo-noname.svg" height=10 /> Outdoor Enthusiasts',
 			subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
-			devices: '13.8M',
-			audience: '2.8M',
-			modified: 'August 06, 2018',
-			type: 'Standard',
+			devices: '1.5M',
+			audience: '694K',
+			modified: 'Sep 20, 2018',
+			type: 'Clusters',
 			category: 'Behavioral',
-			subCategory: 'Loyalty'
-		}
+			subCategory: '--'
+		},
+		{
+			title: '<span class="slds-badge slds-m-right_small">LOOKALIKE</span><img src="/images/logo-noname.svg" height=10 /> Outdoor Enthusiasts 98% Similar',
+			subTitle: 'Standard Segment / ID: <b>rsdqtbher</b> <img src="/images/icons/sort.svg" />',
+			devices: '10.8M',
+			audience: '392K',
+			modified: 'Sep 25, 2018',
+			type: 'Clusters',
+			category: 'Behavioral',
+			subCategory: '--'
+		}		
 	],
 	success_toast_segment_name: 'Outdoor Enthusiasts'
 };
