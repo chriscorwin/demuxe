@@ -63,5 +63,6 @@ module.exports = {
 			category: 'Behavioral',
 			subCategory: 'Loyalty'
 		}
-	]
+	],
+	success_toast_segment_name: 'Outdoor Enthusiasts'
 };

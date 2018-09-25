@@ -1,6 +1,6 @@
 {
 	"brandTheme": "nto",
-	"demoName": "DF 18 NTO",
+	"demoName": "ROI DF 18",
 	"demoVersion": "0.1",
 	"demoMagickFlows": {},
 	"demoMagickFlowUrlSlugs": [],
@@ -8,13 +8,13 @@
 	"env": "production",
 	"productTemplate": "dmp",
 	"prod": {
-		"host": "https://nto-dreamforce-2018.herokuapp.com/"
+		"host": "https://roi-einstein-df18.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://nto-dreamforce-2018-qa.herokuapp.com/"
+		"host": "https://roi-einstein-df18-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://nto-dreamforce-2018-dev.herokuapp.com/"
+		"host": "https://roi-einstein-df18-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
