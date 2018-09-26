@@ -214,7 +214,7 @@ locationHashChanged();
 window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.add('slds-transition-show');
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-hide');
-}, (1000));
+}, (1900));
 
 window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
