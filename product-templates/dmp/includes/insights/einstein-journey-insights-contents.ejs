@@ -12,24 +12,32 @@
 
 <script>
 const img = document.getElementById('einstein-journey-insights-img');
+let pathsImageSelected = false;
 
 document.getElementById('touchpoints-click-target').onclick = () => {
+	pathsImageSelected = false;	
 	img.src = '/images/slices/insights.einstein-journey-insights.touchpoints.svg';
 }
 
 document.getElementById('paths-click-target').onclick = () => {
+	pathsImageSelected = true;
 	img.src = '/images/slices/insights.einstein-journey-insights.paths.svg';
 }
 
 document.getElementById('paths-hover-target').onmouseover = () => {
-	img.src = '/images/slices/insights.einstein-journey-insights.paths.hovered.svg';
+	if (pathsImageSelected) {
+		img.src = '/images/slices/insights.einstein-journey-insights.paths.hovered.svg';
+	}
 }
 
 document.getElementById('paths-hover-target').onmouseout = () => {
-	img.src = '/images/slices/insights.einstein-journey-insights.paths.svg';
+	if (pathsImageSelected) {
+		img.src = '/images/slices/insights.einstein-journey-insights.paths.svg';
+	}
 }
 
 document.getElementById('combinations-click-target').onclick = () => {
+	pathsImageSelected = false;	
 	img.src = '/images/slices/insights.einstein-journey-insights.combinations.svg';
 }
 </script>
