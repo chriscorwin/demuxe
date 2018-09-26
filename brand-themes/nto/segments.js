@@ -64,11 +64,11 @@ module.exports = {
 			subCategory: '--'
 		},
 		{
-			title: 'Outdoor Enthusiasts 98% Similar',
+			title: 'Outdoor Enthusiasts 92% Similar',
 			subTitle: 'Standard Segment / ID: <b>rsdqtbher</b> <img src="/images/icons/sort.svg" />',
 			devices: '10.8M',
-			audience: '392K',
-			modified: 'Sep 25, 2018',
+			audience: '5.2M',
+			modified: 'Sep 24, 2018',
 			type: 'Clusters',
 			category: 'Behavioral',
 			subCategory: '--'
