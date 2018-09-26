@@ -147,8 +147,8 @@ body  {
 	.app-switcher-one.be-left-#{$i} {
 		// left: -#{$theValue}px;
 		left: $theValue * -1px;
-		transition: 300ms transform, 0s left !important;
-		will-change: transform, left;
+		transition: 10s opacity, .3s transform, 0ms left;
+		will-change: opacity, transform, left;
 
 	}
 
@@ -395,8 +395,7 @@ footer.magick-flows-stickey-footer_container {
 
 
 .preload-images {
-	position: fixed;
-	will-change: opacity;
+	position: absolute;
 	top: 1px;
 	left: 1px;
 }
