@@ -6,11 +6,13 @@
 
 #content {
 	width: 1280px;
+	max-width: unset;
 	position: relative;
 	left: -50%;
 
 	> img {
 		width: 1280px;
+		max-width: unset;
 	}
 }
 
@@ -27,38 +29,36 @@
 .rpd-object {
 	background-color: transparent;
 	// background-color: red;
-	width: 100px;
-	height: 40px;
+	width: 198px;
+	height: 59px;
 	position: absolute;
-	top: 100px;
+	top: 211px;
 	left: 100px;
 	font-size: 0px;
 }
 
 #touchpoints-click-target {
-	width: 177px;
-	height: 52px;
-	top: 189px;
-	left: 15px;
+	left: 17px;
 }
 
 #paths-click-target {
-	width: 177px;
-	height: 52px;
-	top: 189px;
-	left: 192px;
+	left: 216px;
 }
 
 #paths-hover-target {
-	top: 484px;
-	left: 667px;
-	width: 24px;
-	height: 24px;
+	top: 543px;
+    left: 749px;
+    width: 26px;
+    height: 26px;
 }
 
 #combinations-click-target {
-	width: 177px;
-	height: 52px;
-	top: 189px;
-	left: 369px;
+	left: 415px;
+}
+
+body {
+	background-size: 1px 1190px;
+	background-position: top 108px left 0;
+	height: 5000px;
+	background-image: url(/images/slices/insights.einstein-journey-insights.touchpoints.background.svg)
 }
