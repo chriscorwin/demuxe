@@ -219,6 +219,7 @@ window.setTimeout(() => {
 
 window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
+	document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
 }, (2000));
 
 
