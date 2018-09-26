@@ -77,6 +77,7 @@ body {
 
 .app-switcher-one.shrink {
   transform: scale(0.85);
+  will-change: transform;
 }
 
 .app-switcher-one.rounded-corners .slds-scrollable {
@@ -85,7 +86,6 @@ body {
 }
 
 .app-switcher-one.rounded-corners .magick-flows-slide {
-  overflow: hidden;
   border-radius: 2rem;
   background-clip: border-box;
   overflow: hidden;
@@ -99,7 +99,8 @@ body {
 
 .app-switcher-one.be-left-0 {
   left: 0px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-0 {
@@ -116,7 +117,8 @@ body {
 
 .app-switcher-one.be-left-1 {
   left: -395px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-1 {
@@ -133,7 +135,8 @@ body {
 
 .app-switcher-one.be-left-2 {
   left: -790px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-2 {
@@ -150,7 +153,8 @@ body {
 
 .app-switcher-one.be-left-3 {
   left: -1185px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-3 {
@@ -167,7 +171,8 @@ body {
 
 .app-switcher-one.be-left-4 {
   left: -1580px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-4 {
@@ -184,7 +189,8 @@ body {
 
 .app-switcher-one.be-left-5 {
   left: -1975px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-5 {
@@ -201,7 +207,8 @@ body {
 
 .app-switcher-one.be-left-6 {
   left: -2370px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-6 {
@@ -218,7 +225,8 @@ body {
 
 .app-switcher-one.be-left-7 {
   left: -2765px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-7 {
@@ -235,7 +243,8 @@ body {
 
 .app-switcher-one.be-left-8 {
   left: -3160px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-8 {
@@ -252,7 +261,8 @@ body {
 
 .app-switcher-one.be-left-9 {
   left: -3555px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-9 {
@@ -269,7 +279,8 @@ body {
 
 .app-switcher-one.be-left-10 {
   left: -3950px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-10 {
@@ -286,7 +297,8 @@ body {
 
 .app-switcher-one.be-left-11 {
   left: -4345px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-11 {
@@ -303,7 +315,8 @@ body {
 
 .app-switcher-one.be-left-12 {
   left: -4740px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-12 {
@@ -320,7 +333,8 @@ body {
 
 .app-switcher-one.be-left-13 {
   left: -5135px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-13 {
@@ -337,7 +351,8 @@ body {
 
 .app-switcher-one.be-left-14 {
   left: -5530px;
-  transition: 0s transform, 0s left !important;
+  transition: 300ms transform, 0s left !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-14 {
@@ -565,6 +580,7 @@ footer.magick-flows-stickey-footer_container {
 
 .preload-images {
   position: fixed;
+  will-change: opacity;
   top: 1px;
   left: 1px;
 }

@@ -75,7 +75,7 @@ function getAppSwitcherClassNames () {
 
 	let step;
 	let out = '';
-	for (step = 0; step < 100; step++) {
+	for (step = 0; step < magickFlowConfig.numberOfScreens; step++) {
 		out += ' slide-left-' + step;
 		out += ' be-left-' + step;
 	}
@@ -154,14 +154,6 @@ function locationHashChanged( ) {
 				// document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
 
 
-				window.setTimeout(() => {
-					// document.querySelector(`#magick-flows--slide-${nextClick}`).classList.remove('slds-hide');
-					// document.querySelector(`#magick-flows--slide-${nextClick}`).classList.remove('slds-transition-show');
-					// document.querySelector(`#magick-flows--slide-${previousClick}`).classList.remove('slds-hide');
-					// document.querySelector(`#magick-flows--slide-${previousClick}`).classList.remove('slds-transition-show');
-				}, 50);
-
-
 				// if(isGif) {
 				// 	window.setTimeout(() => {
 				// 			console.log(`isGif: `, isGif);
@@ -193,17 +185,9 @@ function locationHashChanged( ) {
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-next');
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-previous');
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-active');
-				// document.querySelector(`#${itemId}`).classList.add('slds-hide');
-				window.setTimeout(() => {
-					// document.querySelector(`#${itemId}`).classList.add('slds-hide');
-				}, magickFlowConfig.numberOfScreens);
-				
 			}
 		}
 	}
-	// document.querySelector( '.slds-is-previous' ).classList.remove('slds-hide');
-	// document.querySelector( '.slds-is-active' ).classList.remove('slds-hide');
-	// document.querySelector( '.slds-is-next' ).classList.remove('slds-hide');
 
 }
 
