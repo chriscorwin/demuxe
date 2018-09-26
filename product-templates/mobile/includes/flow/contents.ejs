@@ -1,5 +1,6 @@
 <%_
 	let thisMagickFlowConfig = locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]];
+	let preLoadImages = '';
 _%>
 <script type="text/javascript">
 	const thisMagickFlowConfig =<%- JSON.stringify(thisMagickFlowConfig)%>;
@@ -16,7 +17,6 @@ _%>
 	thisMagickFlowConfig.screens.forEach(function(fileName, fileIndex) {
 
 		// get the "stub" of the filename for each screen, if there is one, and look it up in the metaData
-
 
 		const thisMagifFlowPath = demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].path;
 
@@ -114,9 +114,18 @@ _%>
 		const isJpeg = thisMagickFlowScreenUrl.endsWith('.jpg');
 
 
+		preLoadImages += `<img
+			class=""
+			src="${thisMagickFlowScreenUrl}"
+			height="1"
+			width="1"
+			>
+		`;
+
 
 
 _%>
+
 <div
 	class="slds-grid slds-grid_vertical magick-flows--slide-<%=fileIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
 	data-slide="<%=fileIndex%>"
@@ -179,5 +188,8 @@ _%>
 </div>
 
 
-
 <%_ }); _%>
+
+<div class="preload-images">
+<%- preLoadImages %>
+</div>

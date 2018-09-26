@@ -27,28 +27,38 @@ body {
 body::after {
 	backface-visibility: visible;
 	content: url('/images/snake-pit-popup.png')
-		url('/images/stadium.png')
-		url('/images/section.png')
-		url('/images/payment.png')
-		url('/images/confirmation.png')
-		url('/images/qr-screen.png')
-		url('/images/notification.png')
-		url('/images/drawer-header.png')
-		url('/images/drawer-header-2.png')
-		url('/images/drawer-header-3.png')
-		url('/images/email-screen.png')
-		url('/images/home-background.png')
-		url('/images/instagram-screen.png')
-		url('/images/search-screen.png')
-		url('/images/youtube-ad.png')
-		url('/images/youtube-ad.png')
-		url('/images/0000___google-search-results.png')
-		url('/images/youtube-screen.png');
+		url('/magick-flows/bbva-mobile/0000___ID=google-search-results___DATA=has-sticky-header__has-sticky-footer.png')
+		url('/magick-flows/bbva-mobile/0100___ID=homepage-1___DATA=has-sticky-header__has-sticky-footer.png')
+		url('/magick-flows/bbva-mobile/0200___ID=homepage-2___DATA=has-sticky-header__has-sticky-footer.png')
+		url('/magick-flows/bbva-mobile/0300___ID=mortgages-1___DATA=has-sticky-header__has-sticky-footer.png')
+		url('/magick-flows/bbva-mobile/0400___ID=homepage-3___DATA=has-sticky-header__has-sticky-footer.png')
+		url('/magick-flows/bbva-mobile/0500___ID=valora-home.png')
+		url('/magick-flows/bbva-mobile/0600___ID=valora-email-field-blank.png')
+		url('/magick-flows/bbva-mobile/0700___ID=valora-email-field-filled.png')
+		url('/magick-flows/bbva-mobile/0800___ID=valora-use-camera.png')
+		url('/magick-flows/bbva-mobile/0900___ID=valora-fake-video-gif.gif')
+		url('/magick-flows/bbva-mobile/1000___ID=valora-fake-video-found-home.png')
+		url('/magick-flows/bbva-mobile/1100___ID=valora-results___DATA=has-sticky-header__has-sticky-footer.png')
+		url('/magick-flows/bbva-mobile/1200___ID=valora-details___DATA=has-sticky-header__has-sticky-footer.png')
+		url('/magick-flows/bbva-mobile/1300___ID=mortgage-app-step-0___DATA=has-sticky-header.png')
+		url('/magick-flows/bbva-mobile/1400___ID=mortgage-app-step-2___DATA=has-sticky-header__has-sticky-footer.png')
+	;
 	height: 0;
 	overflow: hidden;
 	position: absolute;
 	width: 0;
 	z-index: -1;
+}
+
+body  {
+	background: url('/images/home-background.png') no-repeat top left;
+	background-size: 100% 100%;
+	height: 812px;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 375px;
 }
 
 .container {
@@ -344,4 +354,46 @@ body::after {
 footer.magick-flows-stickey-footer_container {
   position: absolute;
   bottom: 0;
+}
+
+
+/**
+ * @summary Hides an element from the page by setting the opacity property set to `0`
+ *
+ * @selector .transition-hide
+ * @notes This works like the `.slds-hidden` class and reserves the space but allows you to add the `transition` property to transition the speed that it is shown or hidden.
+ * @modifier
+ */
+.slds-transition-hide {
+  transition: opacity 300ms ease-in-out;
+  will-change: opacity;
+  // transition-delay: 0s;
+  opacity: 0; 
+}
+
+// .slds-hide {
+// 	transition: opacity 0.25s ease-in-out;
+// 	will-change: opacity;
+// 	opacity: 0; 
+//   display: initial !important;
+// }
+	/**
+ * @summary Shows the element using the opacity property set to `1`
+ *
+ * @selector .transition-show
+ * @notes This is toggled on the element. `.slds-transition-hide` class is removed and `.slds-transition-show` is added.
+ * @modifier
+ */
+.slds-transition-show {
+	transition: opacity 300ms ease-in-out;
+	will-change: opacity;
+	opacity: 1; 
+}
+
+
+
+.preload-images {
+	position: fixed;
+	top: -100px;
+	left: -100px;
 }

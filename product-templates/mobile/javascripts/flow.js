@@ -118,6 +118,7 @@ function locationHashChanged( ) {
 	// }
 
 	let doAppTransition = false;
+
 	if (clicks === 5 ) {
 		doAppTransition = true;
 	}
@@ -210,6 +211,17 @@ window.onhashchange = locationHashChanged;
 
 
 locationHashChanged();
+
+window.setTimeout(() => {
+	document.querySelector(`#content-wrapper`).classList.add('slds-transition-show');
+	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-hide');
+}, (1000));
+
+window.setTimeout(() => {
+	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
+}, (2000));
+
+
 
 // document.querySelector(`#magick-flows--slide-${clicks}`).classList.remove('slds-hide');
 // document.querySelector(`#magick-flows--slide-${clicks}`).classList.add('slds-transition-show');
