@@ -93,6 +93,8 @@ function locationHashChanged( ) {
 		window.location.hash = `#${clicks}`;
 	}
 
+	// theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x=OH HI THERE";
+
 	nextClick = clicks + 1;
 	if ( nextClick >= magickFlowConfig.numberOfScreens ) {
 		nextClick = 0
@@ -116,11 +118,6 @@ function locationHashChanged( ) {
 	document.querySelectorAll( '.slds-scrollable')[previousClick].scroll(0,0);
 
 
-	// if(isGif) {
-	// 	const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
-	// 	console.log(`item img: `, theScreenshot.src);
-	// 	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
-	// }
 
 	let doAppTransition = false;
 
@@ -157,6 +154,13 @@ function locationHashChanged( ) {
 				document.querySelector(`#${itemId}`).classList.add('slds-is-active');
 				// document.querySelector(`#${itemId}`).classList.remove('slds-hide');
 				// document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
+
+
+				// if(isGif) {
+				// 	const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
+				// 	console.log(`item img: `, theScreenshot.src);
+				// 	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
+				// }
 
 
 				// if(isGif) {
@@ -197,6 +201,12 @@ function locationHashChanged( ) {
 }
 
 window.onhashchange = locationHashChanged;
+document.ontouchstart = function() {
+	const theScreenshot = document.querySelector(`#magick-flows--slide-${nextClick} .auto-replace`);
+	console.log(`item img: `, theScreenshot.src);
+	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
+
+}
 
 
 locationHashChanged();
