@@ -186,13 +186,12 @@ You must structure your brand assets as follows:
     |    +-- brand.js
     +-- images/
     |    +-- brand-logo.svg
-    +-- localization.json
+    +-- localization.js
 ```
 
 NOTE: The folder name is named after the brand (eg, `/brand-themes/ducati/`) but the actual files themselves are named `brand` as the core brand theme files are standardized across all brands.
 
-See `/brand-themes/ducati/` for an example of how this looks.
-
+`/brand-themes/{brand-name}/localization.js` typically imports all sorts of other localization/data from other files so that it isn't just one huge massive JS Object in a single file.
 
 
 ## Sketch -> SVG Files
@@ -256,7 +255,7 @@ Past demos utilizing this boilerplate (add yours here!)
 
 [Connections 2018 DMP Demo](https://cnx-dmp-2018.herokuapp.com/)*
 [Connections 2018 DMP 201 Demo](https://cnx-dmp-2018.herokuapp.com/201/)**
-[Laulima 2018 DMP Demo - Crocks](https://laulima-2018-dmp.herokuapp.com/) (This demo never saw the light of day)
+[Laulima 2018 DMP Demo - Crocs](https://laulima-2018-dmp.herokuapp.com/) (This demo never saw the light of day)
 [Dreamforce 2018 DMP Demo](https://dmp-dreamforce-2018.herokuapp.com/)
 [Dreamforce 2018 201 DMP Demo](https://df-dmp-2018.herokuapp.com/)**
 [Dreamforce 2018 ROI DMP Demo](https://roi-einstein-df18.herokuapp.com/) (This demo was huge and was created in two days, perfectly illustrating the extreme power of Demuxe)
