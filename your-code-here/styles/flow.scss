@@ -103,6 +103,9 @@ body  {
 .app-switcher-one.shrink {
 	transform: scale(0.85);
 	will-change: transform;
+	.magick-flows--slide {
+		background-color: white;
+	}
 }
 
 
@@ -118,7 +121,7 @@ body  {
 		border-radius: 2rem;
 		background-clip: border-box;
 		overflow: hidden;
-		background-color: black;
+		background-color: white;
 		box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
 	}
 }

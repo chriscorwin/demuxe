@@ -80,6 +80,10 @@ body {
   will-change: transform;
 }
 
+.app-switcher-one.shrink .magick-flows--slide {
+  background-color: white;
+}
+
 .app-switcher-one.rounded-corners .slds-scrollable {
   max-height: 812px;
   height: 812px;
@@ -89,7 +93,7 @@ body {
   border-radius: 2rem;
   background-clip: border-box;
   overflow: hidden;
-  background-color: black;
+  background-color: white;
   box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
 }
 
