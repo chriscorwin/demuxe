@@ -57,6 +57,7 @@
 body {
   background-size: 1px 1190px;
   background-position: top 108px left 0;
-  height: 5000px;
+  background-repeat: repeat-x;
+  height: 1575px;
   background-image: url(/images/slices/insights.einstein-journey-insights.touchpoints.background.svg);
 }
