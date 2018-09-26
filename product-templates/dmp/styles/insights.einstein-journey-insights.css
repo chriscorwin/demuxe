@@ -11,6 +11,15 @@
   width: 1280px;
 }
 
+.preload {
+  position: absolute;
+  overflow: hidden;
+  left: -9999px;
+  top: -9999px;
+  height: 1px;
+  width: 1px;
+}
+
 .rpd-object {
   background-color: transparent;
   width: 100px;
