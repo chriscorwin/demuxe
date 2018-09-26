@@ -111,6 +111,11 @@ function locationHashChanged( ) {
 	console.log(`previousClick: `, previousClick);
 	console.log(`nextClick: `, nextClick);
 
+	document.querySelectorAll( '.slds-scrollable')[nextClick].scroll(0,0);
+	document.querySelectorAll( '.slds-scrollable')[clicks].scroll(0,0);
+	document.querySelectorAll( '.slds-scrollable')[previousClick].scroll(0,0);
+
+
 	// if(isGif) {
 	// 	const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
 	// 	console.log(`item img: `, theScreenshot.src);
