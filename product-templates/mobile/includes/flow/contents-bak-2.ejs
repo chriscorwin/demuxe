@@ -27,7 +27,6 @@ _%>
 		const thisMagickFlowScreenHeaderUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( fileIndex )}.header.png`;
 		const thisMagickFlowScreenFooterUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( fileIndex )}.footer.png`;
 
-
 		let thisMagickFlowScreenCustomContentStylesMarginTop = '0px';
 		try {
 			thisMagickFlowScreenCustomContentStylesMarginTop = `${thisMagickFlowMetaData[fileIndex]['margin-top']}`;
@@ -36,13 +35,13 @@ _%>
 			// The error shown here is unhelpful, and we've trapped it nicely, so we'll just warn a friendly thing.
 			if (showMetaDataMissingError === true) {
 				console.warn(`
-					WARNING
+WARNING
 
-					The Magick Flow in being loaded does not appear to have an entry in the config file in \`localization.magicFlowsMetaData[locals.urlSlug]\`.
+The Magick Flow in being loaded does not appear to have an entry in the config file in \`localization.magicFlowsMetaData[locals.urlSlug]\`.
 
-					Which is fine, that file is optional, and so is inclusion in the file itself.
+Which is fine, that file is optional, and so is inclusion in the file itself.
 
-					This is just an FYI.
+This is just an FYI.
 				`);
 				showMetaDataMissingError = false;
 			}
@@ -53,15 +52,6 @@ _%>
 		let thisMagickFlowScreenCustomContentStylesMarginBottom = '0px';
 		try {
 			thisMagickFlowScreenCustomContentStylesMarginBottom = `${thisMagickFlowMetaData[fileIndex]['margin-bottom']}`;
-		}
-		catch(error) {
-			// console.warn(error);
-		}
-
-
-		let thisMagickFlowScreenCustomContentStylesHeight = 'auto';
-		try {
-			thisMagickFlowScreenCustomContentStylesHeight = `${thisMagickFlowMetaData[fileIndex]['height']}`;
 		}
 		catch(error) {
 			// console.warn(error);
@@ -97,7 +87,7 @@ _%>
 
 _%>
 <div
-	class="slds-grid slds-grid_vertical magick-flows--slide-<%=fileIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	class="slds-hide slds-transition-hide slds-grid slds-grid_vertical magick-flows--slide-<%=fileIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
 	data-slide="<%=fileIndex%>"
 	id="magick-flows--slide-<%=fileIndex%>"
 >
@@ -116,11 +106,11 @@ _%>
 
 	<div
 		class="slds-col"
+		style="margin-top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%>; margin-bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>;"
 	>
 <%_ if (isPng || isSvg || isGif || isJpeg) { _%>
 		<div
 			class="slds-scrollable"
-			style="height: <%=thisMagickFlowScreenCustomContentStylesHeight%>; margin-top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%>; margin-bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>;"
 		>
 			<img
 				class="screenshot auto-replace is-image "

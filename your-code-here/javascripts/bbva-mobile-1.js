@@ -45,13 +45,14 @@
 
 		if (doAppTransition === true) {
 
-			$('.app-switcher-one').removeClass('hide').addClass(`slide-left-${nextStepNumber} shrink rounded-corners`);
+			$('.app-switcher-one').removeClass('hide').addClass(`shrink rounded-corners`).addClass(`slide-left-${nextStepNumber}`);
 			setTimeout(() => {
 				$('.app-switcher-one').removeClass('shrink');
+				
 				setTimeout(() => {
 					$('.app-switcher-one').removeClass('rounded-corners');
-				}, 300);
-			}, 600);
+				}, 250);
+			}, 525);
 
 		} else {
 			$('.app-switcher-one').removeClass('hide shrink rounded-corners');
