@@ -54,7 +54,7 @@ module.exports = {
 	// These will be added one at a time in the order they are listed here, which by the end of the demo will make them appear in "reverse" order once they all are added
 	additional: [
 		{
-			title: '<img src="/images/logo-noname.svg" height=10 /> Outdoor Enthusiasts',
+			title: 'Outdoor Enthusiasts',
 			subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
 			devices: '1.5M',
 			audience: '694K',
@@ -64,7 +64,7 @@ module.exports = {
 			subCategory: '--'
 		},
 		{
-			title: '<span class="slds-badge slds-m-right_small">LOOKALIKE</span><img src="/images/logo-noname.svg" height=10 /> Outdoor Enthusiasts 98% Similar',
+			title: 'Outdoor Enthusiasts 98% Similar',
 			subTitle: 'Standard Segment / ID: <b>rsdqtbher</b> <img src="/images/icons/sort.svg" />',
 			devices: '10.8M',
 			audience: '392K',
@@ -74,5 +74,33 @@ module.exports = {
 			subCategory: '--'
 		}		
 	],
-	success_toast_segment_name: 'Outdoor Enthusiasts'
+	lookalikes: {
+		cpm: '$1.20',
+		tableData: {
+			rows: [
+				{
+					reach: '500,234', similarity: '100%'
+				},
+				{
+					reach: '4,944,629', similarity: '98%'
+				},
+				{
+					reach: '7,265,488', similarity: '96%'
+				},
+				{
+					reach: '9,172,952', similarity: '94%'
+				},
+				{
+					reach: '10,890,862', similarity: '92%'
+				},
+				{
+					reach: '30,323,212', similarity: '90%'
+				},
+				{
+					reach: '70,223,384', similarity: '88%'
+				}
+			],
+			labels: ['Reach', 'Similarity']
+		}
+	}
 };

@@ -4,29 +4,7 @@
 </div>
 
 <% 
-	const tableData = {
-		rows: [
-			{
-				reach: '600,000', similarity: '100%'
-			},
-			{
-				reach: '780,897', similarity: '98%'
-			},
-			{
-				reach: '810,008', similarity: '96%'
-			},
-			{
-				reach: '905,178', similarity: '94%'
-			},
-			{
-				reach: '906,110', similarity: '92%'
-			},
-			{
-				reach: '910,087', similarity: '90%'
-			}
-		],
-		labels: ['Reach', 'Similarity']
-	}
+	const tableData = locals.localization.segments.lookalikes.tableData;
 
 	const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
 
@@ -209,7 +187,7 @@
 		<div class="slds-grid">
 			<div class="slds-col slds-size_3-of-5">Select the desired combination of reach and similarity for your objective.</div>
 			<div class="slds-col slds-size_2-of-5" style="text-align: right; font-size: 16px;">
-				<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>$1.75</strong>
+				<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>${locals.localization.segments.lookalikes.cpm}</strong>
 			</div>
 		</div>
 
@@ -225,19 +203,21 @@
 	`);
 	const makeModalContentsFooter = (data) => (`
 		<button disabled class="slds-button slds-button_neutral">Cancel</button>
-		<button disabled onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
+		<button disabled onclick="navigatePage('/segments/manage-segments/?trigger=successToast');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
 	`);
 
 	const panels = locals.localization.segments.default;
 
 	if (locals.localization.segments.additional) {
+		locals.localization.segments.cachedAdditional = locals.localization.segments.cachedAdditional || [...locals.localization.segments.additional];
+
+		// add additional elements one by one
 		if (locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === 'successToast') {
-			locals.localization.segments.additional.forEach((panel) => {
-				if (!panels.includes(panel)) {
-					panels.unshift(panel)
-				}
-			});	
+			locals.localization.segments.cachedAdditional.length > 0 && panels.unshift(locals.localization.segments.cachedAdditional.shift());	
 		} else {
+			// remove all additional elements and start over
+			locals.localization.segments.cachedAdditional = [...locals.localization.segments.additional];
+
 			locals.localization.segments.additional.forEach((panel) => {
 				if (panels.includes(panel)) {
 					var panelIndex = panels.indexOf(panel);
@@ -279,7 +259,7 @@
 
 <%- include('components/toast', {
 	contents: 'The segment will be available once processing completes.',
-	title: `‘${locals.localization.segments.success_toast_segment_name}’ segment created successfully.`,
+	title: `‘${locals.localization.segments.default[0].title}’ segment created successfully.`,
 	theme: 'success'			
 }) %>
 

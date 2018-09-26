@@ -27,34 +27,68 @@ Highcharts must be included on page prior to this running
 ></div>
 
 <script type="text/javascript">
-const lookalikesData = [
-	{ x: 90, y: 99, z: 77, color: '#7CB5EC' },
-	{ x: 110, y: 95, z: 77, color: '#7CB5EC' },
-	{ x: 130, y: 92, z: 77, color: '#7CB5EC' },
-	{ x: 144, y: 90, z: 77, color: '#7CB5EC' },
-	{ x: 157, y: 88, z: 77, color: '#7CB5EC' },
-	{ x: 170, y: 83, z: 77, color: '#7CB5EC' },
-	{ x: 178, y: 80, z: 77, color: '#7CB5EC' },
-	{ x: 186, y: 77, z: 77, color: '#7CB5EC' },
-	{ x: 194, y: 74, z: 77, color: '#7CB5EC' },
-	{ x: 202, y: 71, z: 77, color: '#7CB5EC' },
-	{ x: 210, y: 68, z: 77, color: '#7CB5EC' },
-	{ x: 218, y: 65, z: 77, color: '#7CB5EC' },
-	{ x: 226, y: 62, z: 77, color: '#7CB5EC' },
-	{ x: 229, y: 58, z: 77, color: '#7CB5EC' },
-	{ x: 229, y: 53, z: 77, color: '#7CB5EC' },
-	{ x: 229, y: 48, z: 77, color: '#7CB5EC' },
-	{ x: 238, y: 45, z: 77, color: '#7CB5EC' },
-	{ x: 248, y: 40, z: 77, color: '#7CB5EC' },
-	{ x: 256, y: 35, z: 77, color: '#7CB5EC' },
-	{ x: 265, y: 30, z: 77, color: '#7CB5EC' },
-	{ x: 273, y: 25, z: 77, color: '#7CB5EC' },
-	{ x: 279, y: 20, z: 77, color: '#7CB5EC' },
-	{ x: 284, y: 16, z: 77, color: '#7CB5EC' },
-	{ x: 294, y: 11, z: 77, color: '#7CB5EC' },
-	{ x: 304, y: 6, z: 77, color: '#7CB5EC' },
-	{ x: 314, y: 1, z: 77, color: '#7CB5EC' }
+let lookalikesData = [
+	// x <->, y ^-v, z: radius
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' },
+	{ z: 77, color: '#7CB5EC' }
+	// 10001
 ];
+
+const xStart = 99;
+const yStart = 99;
+const xEnd = 10001;
+const yEnd = 1;
+let P = -.4;
+let F = 60;
+let G = 0;
+let x = xStart;
+let y = yStart;
+
+let switched = false;
+lookalikesData = lookalikesData.map((step, i, steps) => {
+	if (!switched && y < 45) {
+		P = -P;
+		switched = true;
+	}
+
+	F = F + P;
+	G = G - P;
+console.log(x.toFixed(2) * 1, y.toFixed(2) * 1, F.toFixed(2), G.toFixed(2), P);
+
+	x = x + (F * 50);
+	y = y - G;
+
+	step.x = Math.round(x.toFixed(2) * 1);
+	step.y = Math.round(y.toFixed(2) * 1);
+	return step;
+});
+
+console.log('lookalikesData', lookalikesData);
+
 
 // Gets options for the Cumulative 1st Party Overview chart
 const getLookalikesOptions = () => {
@@ -94,10 +128,10 @@ const getLookalikesOptions = () => {
 		// https://api.highcharts.com/highcharts/xAxis
 		xAxis: {
 			gridLineWidth: 0,
-			tickInterval: 100,
+			tickInterval: 10000,
 			// https://api.highcharts.com/highcharts/xAxis.softMax
-			softMin: 80,
-			softMax: 790,
+			softMin: 0,
+			softMax: 10001,
 			labels: {
 				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
 				formatter: function formatter () {
