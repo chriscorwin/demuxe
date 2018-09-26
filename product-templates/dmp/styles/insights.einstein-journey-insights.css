@@ -1,10 +1,13 @@
-#subheader {
-  max-width: 100%;
-  margin-left: 1rem;
+#content-wrapper {
+  width: 1280px;
+  position: absolute;
+  left: 50%;
 }
 
 #content {
-  max-width: 100%;
+  width: 1280px;
+  position: relative;
+  left: -50%;
 }
 
 #content > img {
@@ -31,29 +34,29 @@
 }
 
 #touchpoints-click-target {
-  width: 198px;
-  height: 58px;
-  top: 410px;
-  left: 17px;
+  width: 177px;
+  height: 52px;
+  top: 189px;
+  left: 15px;
 }
 
 #paths-click-target {
-  width: 198px;
-  height: 58px;
-  top: 410px;
-  left: 216px;
+  width: 177px;
+  height: 52px;
+  top: 189px;
+  left: 192px;
 }
 
 #paths-hover-target {
-  top: 741px;
-  left: 749px;
-  width: 28px;
-  height: 28px;
+  top: 484px;
+  left: 667px;
+  width: 24px;
+  height: 24px;
 }
 
 #combinations-click-target {
-  width: 198px;
-  height: 58px;
-  top: 410px;
-  left: 415px;
+  width: 177px;
+  height: 52px;
+  top: 189px;
+  left: 369px;
 }
