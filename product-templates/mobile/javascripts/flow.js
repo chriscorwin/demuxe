@@ -60,7 +60,7 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 			setTimeout(() => {
 				$('.app-switcher-one').removeClass('rounded-corners');
 			}, 250);
-		}, 525);
+		}, 500);
 
 	} else {
 		$('.app-switcher-one').removeClass('hide shrink rounded-corners');

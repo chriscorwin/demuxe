@@ -62,7 +62,7 @@ body {
   left: 0;
   position: absolute;
   top: 0;
-  transition: .5s transform, .75s left;
+  transition: 250ms transform, 500ms left;
   width: 5510px;
 }
 
@@ -107,8 +107,8 @@ body {
 
 .app-switcher-one.be-left-0 {
   left: 0px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-0 {
@@ -125,8 +125,8 @@ body {
 
 .app-switcher-one.be-left-1 {
   left: -395px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-1 {
@@ -143,8 +143,8 @@ body {
 
 .app-switcher-one.be-left-2 {
   left: -790px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-2 {
@@ -161,8 +161,8 @@ body {
 
 .app-switcher-one.be-left-3 {
   left: -1185px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-3 {
@@ -179,8 +179,8 @@ body {
 
 .app-switcher-one.be-left-4 {
   left: -1580px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-4 {
@@ -197,8 +197,8 @@ body {
 
 .app-switcher-one.be-left-5 {
   left: -1975px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-5 {
@@ -215,8 +215,8 @@ body {
 
 .app-switcher-one.be-left-6 {
   left: -2370px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-6 {
@@ -233,8 +233,8 @@ body {
 
 .app-switcher-one.be-left-7 {
   left: -2765px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-7 {
@@ -251,8 +251,8 @@ body {
 
 .app-switcher-one.be-left-8 {
   left: -3160px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-8 {
@@ -269,8 +269,8 @@ body {
 
 .app-switcher-one.be-left-9 {
   left: -3555px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-9 {
@@ -287,8 +287,8 @@ body {
 
 .app-switcher-one.be-left-10 {
   left: -3950px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-10 {
@@ -305,8 +305,8 @@ body {
 
 .app-switcher-one.be-left-11 {
   left: -4345px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-11 {
@@ -323,8 +323,8 @@ body {
 
 .app-switcher-one.be-left-12 {
   left: -4740px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-12 {
@@ -341,8 +341,8 @@ body {
 
 .app-switcher-one.be-left-13 {
   left: -5135px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-13 {
@@ -359,8 +359,8 @@ body {
 
 .app-switcher-one.be-left-14 {
   left: -5530px;
-  transition: 10s opacity, .3s transform, 0ms left;
-  will-change: opacity, transform, left;
+  transition: none !important;
+  will-change: transform, left;
 }
 
 .magick-flows--slide-14 {

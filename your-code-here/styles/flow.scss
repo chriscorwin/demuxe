@@ -83,7 +83,8 @@ body  {
 	left: 0;
 	position: absolute;
 	top: 0;
-	transition: .5s transform, .75s left;
+	transition: 250ms transform, 500ms left;
+
 	// numberOfSlides * width of slide and gutters 
 	width: $widthOfAppSwitcher;
 }
@@ -111,6 +112,7 @@ body  {
 		background-color: white;
 	}
 }
+
 
 
 .app-switcher-one.rounded-corners {
@@ -154,8 +156,8 @@ body  {
 	.app-switcher-one.be-left-#{$i} {
 		// left: -#{$theValue}px;
 		left: $theValue * -1px;
-		transition: 10s opacity, .3s transform, 0ms left;
-		will-change: opacity, transform, left;
+		transition: none !important;
+		will-change: transform, left;
 
 	}
 
