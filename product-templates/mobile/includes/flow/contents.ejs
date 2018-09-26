@@ -19,6 +19,7 @@ _%>
 
 
 		const thisMagifFlowPath = demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].path;
+
 		let thisMagickFlowsSlideClassnames = {
 			'magick-flows-slide': true
 		};
@@ -28,12 +29,13 @@ _%>
 		const thisMagickFlowScreenFooterUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( fileIndex )}.footer.png`;
 
 
-		let thisMagickFlowScreenCustomContentStylesMarginTop = '0px';
+		let thisMagickFlowScreenCustomContentStylesMarginTop = 0;
 		try {
-			thisMagickFlowScreenCustomContentStylesMarginTop = `${thisMagickFlowMetaData[fileIndex]['margin-top']}`;
+			thisMagickFlowScreenCustomContentStylesMarginTop = parseInt(thisMagickFlowMetaData[fileIndex]['margin-top']);
 		}
 		catch(error) {
 			// The error shown here is unhelpful, and we've trapped it nicely, so we'll just warn a friendly thing.
+			thisMagickFlowScreenCustomContentStylesMarginTop = 0;
 			if (showMetaDataMissingError === true) {
 				console.warn(`
 					WARNING
@@ -48,33 +50,28 @@ _%>
 			}
 			// console.error(error);
 		}
+		if (Number.isNaN(parseInt(thisMagickFlowMetaData[fileIndex]['margin-top']))) {
+			thisMagickFlowScreenCustomContentStylesMarginTop = 0;
+		}
 
 
-		let thisMagickFlowScreenCustomContentStylesMarginBottom = '0px';
+
+
+
+		let thisMagickFlowScreenCustomContentStylesMarginBottom = 0;
 		try {
-			thisMagickFlowScreenCustomContentStylesMarginBottom = `${thisMagickFlowMetaData[fileIndex]['margin-bottom']}`;
+			thisMagickFlowScreenCustomContentStylesMarginBottom = parseInt(thisMagickFlowMetaData[fileIndex]['margin-bottom']);
 		}
 		catch(error) {
+			thisMagickFlowScreenCustomContentStylesMarginBottom = 0;
 			// console.warn(error);
 		}
-
-
-		let thisMagickFlowScreenCustomContentStylesHeight = 'auto';
-		try {
-			thisMagickFlowScreenCustomContentStylesHeight = `${thisMagickFlowMetaData[fileIndex]['height']}`;
-		}
-		catch(error) {
-			// console.warn(error);
+		if (Number.isNaN(parseInt(thisMagickFlowMetaData[fileIndex]['margin-bottom']))) {
+			thisMagickFlowScreenCustomContentStylesMarginBottom = 0;
 		}
 
 
 
-		const isPng = thisMagickFlowScreenUrl.endsWith('.png');
-		const isSvg = thisMagickFlowScreenUrl.endsWith('.svg');
-		const isMp4 = thisMagickFlowScreenUrl.endsWith('.mp4');
-		const isGif = thisMagickFlowScreenUrl.endsWith('.gif');
-		const isJpeg = thisMagickFlowScreenUrl.endsWith('.jpg');
-		
 		let showHeader = true;
 		showHeader = (thisMagickFlowScreenUrl.includes('has-sticky-header'));
 		if(!showHeader) {
@@ -90,9 +87,33 @@ _%>
 		thisMagickFlowsSlideClassnames['has-sticky-footer'] = showFooter;
 
 
-		
-		// let dimensions = sizeOf(thisMagifFlowPath + thisMagickFlowScreenUrl);
-		// console.log(dimensions.width, dimensions.height);
+
+
+
+		// let thisMagickFlowScreenCustomContentStylesHeight = 812;
+		// try {
+		// 	thisMagickFlowScreenCustomContentStylesHeight = parseInt(thisMagickFlowMetaData[fileIndex]['height']);
+		// }
+		// catch(error) {
+		// 	// thisMagickFlowScreenCustomContentStylesHeight = `height: 812px;`;
+		// 	// console.warn(error);
+		// }
+		// // if (thisMagickFlowScreenCustomContentStylesHeight === 'height: undefinedpx;' || showHeader === false) {
+		// // 	thisMagickFlowScreenCustomContentStylesHeight = 812;
+		// // }
+
+		// console.log(`thisMagickFlowScreenCustomContentStylesHeight: `, thisMagickFlowScreenCustomContentStylesHeight);
+
+		thisMagickFlowScreenCustomContentStylesHeight = (812 - (thisMagickFlowScreenCustomContentStylesMarginTop + thisMagickFlowScreenCustomContentStylesMarginBottom))
+
+
+		const isPng = thisMagickFlowScreenUrl.endsWith('.png');
+		const isSvg = thisMagickFlowScreenUrl.endsWith('.svg');
+		const isMp4 = thisMagickFlowScreenUrl.endsWith('.mp4');
+		const isGif = thisMagickFlowScreenUrl.endsWith('.gif');
+		const isJpeg = thisMagickFlowScreenUrl.endsWith('.jpg');
+
+
 
 
 _%>
@@ -120,7 +141,7 @@ _%>
 <%_ if (isPng || isSvg || isGif || isJpeg) { _%>
 		<div
 			class="slds-scrollable"
-			style="height: <%=thisMagickFlowScreenCustomContentStylesHeight%>; margin-top: <%=thisMagickFlowScreenCustomContentStylesMarginTop%>; margin-bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>;"
+			style="height: <%=thisMagickFlowScreenCustomContentStylesHeight%>px; margin-bottom: <%=thisMagickFlowScreenCustomContentStylesMarginBottom%>px;"
 		>
 			<img
 				class="screenshot auto-replace is-image "

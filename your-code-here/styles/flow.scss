@@ -88,22 +88,26 @@ body::after {
 }
 
 .app-switcher-one.rounded-corners .magick-flows-slide {
-	border-radius: 2rem;
-	background-clip: border-box;
-	overflow: hidden;
 }
 
 .app-switcher-one.shrink {
 	transform: scale(0.85);
 }
+
+
+.app-switcher-one.rounded-corners {
+	.slds-scrollable {
+		max-height: 812px;
+		height: 812px;
+	}
+}
 .app-switcher-one.rounded-corners {
 
 	.magick-flows-slide {
-		// transform: scale(0.85);
-		// transform: translateX(30px);
 		overflow: hidden;
-		// background-color: white;
-		border: 2px outset silver;
+		border-radius: 2rem;
+		background-clip: border-box;
+		overflow: hidden;
 		background-color: black;
 		box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
 	}
@@ -138,7 +142,6 @@ body::after {
 
 
 	.magick-flows--slide-#{$i} {
-		// background-size: 100% 100%;
 		height: $heightOfSlideValue * 1px;
 		position: absolute;
 		top: 0;
@@ -148,96 +151,8 @@ body::after {
 }
 
 
-	// .app-switcher-one.slide-left-0 {
-	// 	left: 0;
-	// }
-
-	// .app-switcher-one.be-left-0 {
-	// 	left: 0;
-	// 	transition: 0s transform, 0s left !important;
-	// }
 
 
-
-// .magick-flows--slide-0 {
-// 	background-size: 100% 100%;
-// 	height: 812px;
-// 	position: absolute;
-// 	top: 0;
-// 	width: 375px;
-// 	left: 0;
-// }
-
-.google-search-results-screen {
-	// background: #fff url('/images/0000___google-search-results.png') no-repeat top left;
-	background-size: 100% 100%;
-	height: 812px;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 375px;
-}
-.homepage-1-screen {
-	// background: #fff url('/images/0100___homepage-1.png') no-repeat top left;
-	background-size: 100% 100%;
-	height: 812px;
-	right: 0;
-	position: absolute;
-	top: 0;
-	width: 375px;
-}
-.homepage-2-screen {
-	// background: #fff url('/images/0100___homepage-1.png') no-repeat top left;
-	background-size: 100% 100%;
-	height: 812px;
-	right: -395px;
-	position: absolute;
-	top: 0;
-	width: 375px;
-}
-
-
-
-.search-screen {
-	background: #fff url('/images/search-screen.png') no-repeat top left;
-	background-size: 100% 100%;
-	height: 812px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 375px;
-}
-
-.youtube-ad {
-	background: url('/images/youtube-ad.png') no-repeat top left;
-	background-size: 100% 100%;
-	display: none;
-	height: 49px;
-	left: 10px;
-	position: absolute;
-	top: 194px;
-	width: 355px;
-}
-
-.youtube-ad.show {
-	display: block;
-}
-
-.youtube-screen {
-	background: #fff url('/images/youtube-screen.png') no-repeat top left;
-	background-size: 100% 100%;
-	height: 812px;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 375px;
-}
-
-#youtube-player {
-	left: 0;
-	position: absolute;
-	top: 44px;
-}
 
 /* Drawer styles */
 
