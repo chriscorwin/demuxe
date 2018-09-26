@@ -1,3 +1,30 @@
-<a href="javascript:void(0);" onclick="navigatePage('/insights/conversion/einstein-journey-insights-configuration');">
-	<img src="/images/slices/insights.einstein-journey-insights.svg" />
-</a>
+<img id="einstein-journey-insights-img" src="/images/slices/insights.einstein-journey-insights.touchpoints.svg" />
+
+<div class="rpd-object" id="touchpoints-click-target">touchpoints-click-targe</div>
+<div class="rpd-object" id="paths-click-target">paths-click-target</div>
+<div class="rpd-object" id="combinations-click-target">combinations-click-target</div>
+<div class="rpd-object" id="paths-hover-target">paths-hover-target</div>
+
+<script>
+const img = document.getElementById('einstein-journey-insights-img');
+
+document.getElementById('touchpoints-click-target').onclick = () => {
+	img.src = '/images/slices/insights.einstein-journey-insights.touchpoints.svg';
+}
+
+document.getElementById('paths-click-target').onclick = () => {
+	img.src = '/images/slices/insights.einstein-journey-insights.paths.svg';
+}
+
+document.getElementById('paths-hover-target').onmouseover = () => {
+	img.src = '/images/slices/insights.einstein-journey-insights.paths.hovered.svg';
+}
+
+document.getElementById('paths-hover-target').onmouseout = () => {
+	img.src = '/images/slices/insights.einstein-journey-insights.paths.svg';
+}
+
+document.getElementById('combinations-click-target').onclick = () => {
+	img.src = '/images/slices/insights.einstein-journey-insights.combinations.svg';
+}
+</script>
