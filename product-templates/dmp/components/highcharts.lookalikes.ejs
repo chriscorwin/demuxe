@@ -30,6 +30,7 @@ Highcharts must be included on page prior to this running
 
 const xStart = 99;
 const yStart = 99;
+const xMultiplier = 7; // Change this number to cause an adjustment to numbers at bottom of graph
 const xEnd = 10001;
 const yEnd = 1;
 let P = -.4;
@@ -51,7 +52,7 @@ for (let i = 0; i < numPoints; i++) {
 	F = F + P;
 	G = G - P;
 
-	x = x + (F * 7);
+	x = x + (F * xMultiplier);
 	y = y - G;
 
 	// x <->, y ^-v, z: radius
