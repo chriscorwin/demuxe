@@ -51,7 +51,7 @@ for (let i = 0; i < numPoints; i++) {
 	F = F + P;
 	G = G - P;
 
-	x = x + (F * 50);
+	x = x + (F * 7);
 	y = y - G;
 
 	// x <->, y ^-v, z: radius
@@ -101,10 +101,10 @@ const getLookalikesOptions = () => {
 		// https://api.highcharts.com/highcharts/xAxis
 		xAxis: {
 			gridLineWidth: 0,
-			tickInterval: 10000,
+			tickInterval: 1000,
 			// https://api.highcharts.com/highcharts/xAxis.softMax
 			softMin: 0,
-			softMax: 10001,
+			softMax: 100,
 			labels: {
 				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
 				formatter: function formatter () {
