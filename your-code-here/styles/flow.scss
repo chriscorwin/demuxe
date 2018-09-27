@@ -27,6 +27,7 @@ body {
 body::after {
 	backface-visibility: visible;
 	content: url('/images/snake-pit-popup.png')
+
 		url('/magick-flows/bbva-mobile/0000___ID=google-search-results___DATA=has-sticky-header__has-sticky-footer.png')
 		url('/magick-flows/bbva-mobile/0100___ID=homepage-1___DATA=has-sticky-header__has-sticky-footer.png')
 		url('/magick-flows/bbva-mobile/0200___ID=homepage-2___DATA=has-sticky-header__has-sticky-footer.png')
@@ -42,6 +43,8 @@ body::after {
 		url('/magick-flows/bbva-mobile/1200___ID=valora-details___DATA=has-sticky-header__has-sticky-footer.png')
 		url('/magick-flows/bbva-mobile/1300___ID=mortgage-app-step-0___DATA=has-sticky-header.png')
 		url('/magick-flows/bbva-mobile/1400___ID=mortgage-app-step-2___DATA=has-sticky-header__has-sticky-footer.png')
+
+
 	;
 	height: 0;
 	overflow: hidden;
@@ -51,7 +54,7 @@ body::after {
 }
 
 body  {
-	background: url('/images/home-background.jpg') no-repeat top left;
+	background: url('/images/home-background.png') no-repeat top left;
 	background-size: 100% 100%;
 	height: 812px;
 	left: 0;
@@ -62,7 +65,7 @@ body  {
 }
 
 .container {
-	background: url('/images/home-background.jpg') no-repeat top left;
+	background: url('/images/home-background.png') no-repeat top left;
 	background-size: 100% 100%;
 	height: 812px;
 	left: 0;
@@ -83,7 +86,7 @@ body  {
 	left: 0;
 	position: absolute;
 	top: 0;
-	transition: 250ms transform, 500ms left;
+	transition: 300ms transform, 600ms left;
 
 	// numberOfSlides * width of slide and gutters 
 	width: $widthOfAppSwitcher;
@@ -106,7 +109,7 @@ body  {
 }
 
 .app-switcher-one.shrink {
-	transform: scale(0.85);
+	transform: scale(0.95);
 	will-change: transform;
 	.magick-flows--slide {
 		background-color: white;
@@ -129,12 +132,16 @@ body  {
 		overflow: hidden;
 		background-color: white;
 		box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
+
+		&.notification {
+			background-color: transparent;
+		}
 	}
 }
 
-// .app-switcher-one.slide-left {
-// 	left: -395px;
-// }
+.app-switcher-one.slide-left-0 {
+	left: -395px !important;
+}
 
 // .app-switcher-one.be-left-1 {
 // 	left: -395px;
@@ -171,6 +178,27 @@ body  {
 	}
 }
 
+
+.notification {
+	background: url(/includes/flow/tm-mobile/6.png) no-repeat top left;
+	margin: 0 auto;
+	position: absolute;
+	transition: 125ms top ease-in-out;
+	width: 375px;
+	background-color: transparent;
+	height: 812px;
+	top: -210px;
+	transition: 125ms top ease-in-out;
+	will-change: top;
+
+}
+
+.notification.slide-in {
+	top: 0px;
+	transition: 125ms top ease-in-out;
+	will-change: top;
+	// transition-delay: 1000ms;
+}
 
 
 
@@ -299,7 +327,7 @@ body  {
 }
 
 .app-switcher-two.shrink {
-	transform: scale(0.85);
+	transform: scale(0.95);
 }
 
 .app-switcher-two.slide-left-one {
@@ -310,20 +338,7 @@ body  {
 	left: -790px;
 }
 
-.notification {
-	background: url('/images/notification.png') no-repeat top left;
-	background-size: 364px 172px;
-	height: 172px;
-	margin: 0 auto;
-	position: relative;
-	top: -173px;
-	transition: .35s top;
-	width: 364px;
-}
 
-.notification.slide-in {
-	top: 40px;
-}
 
 .qr-screen {
 	background: #fff url('/images/qr-screen.png') no-repeat top left;

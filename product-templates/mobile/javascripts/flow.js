@@ -45,22 +45,23 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 	$('.drawer').removeClass(drawerContentChangingClasses + ' slide-in');
 
 	$('.app-switcher-two').removeClass('show');
-	$('.app-switcher-one').removeClass(getAppSwitcherClassNames());
 
 
 	const appSwitcherOne = $('.app-switcher-one');
 	// appSwitcherOne.removeClass('hide').addClass('shrink slide-left rounded-corners');
 	// doAppTransition = true;
+	$('.app-switcher-one').removeClass(getAppSwitcherClassNames());
 	if (doAppTransition === true) {
 
-		$('.app-switcher-one').removeClass('hide').addClass(`shrink rounded-corners`).addClass(`slide-left-${thisStepNumber}`);
+		$('.app-switcher-one').removeClass('hide').addClass(`shrink rounded-corners slide-left-${thisStepNumber}`);
+		$('.app-switcher-one').removeClass(`be-left-${thisStepNumber}`);
 		setTimeout(() => {
 			$('.app-switcher-one').removeClass('shrink');
 			
 			setTimeout(() => {
 				$('.app-switcher-one').removeClass('rounded-corners');
-			}, 250);
-		}, 500);
+			}, 301);
+		}, 301);
 
 	} else {
 		$('.app-switcher-one').removeClass('hide shrink rounded-corners');
@@ -120,10 +121,13 @@ function locationHashChanged( ) {
 
 
 	let doAppTransition = false;
+	let doNotifcation = false;
 
 	if (clicks === 5 ) {
 		doAppTransition = true;
 	}
+
+
 	normalTransition(clicks, doAppTransition);
 
 	for (var item of document.querySelectorAll(`[data-slide]`)) {
