@@ -1,0 +1,609 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* prevent tap highlight color / shadow */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+}
+
+body {
+  background: white;
+  font-family: "Helvetica Neue", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  transform: translate3d(0px, 0px, 0px);
+  width: 100vw;
+}
+
+/* This is done to preload images and reduce load flicker */
+body::after {
+  backface-visibility: visible;
+  content: url("/images/snake-pit-popup.png") url("/magick-flows/bbva-mobile/0000___ID=google-search-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0100___ID=homepage-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0200___ID=homepage-2___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0300___ID=mortgages-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0400___ID=homepage-3___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0500___ID=valora-home.png") url("/magick-flows/bbva-mobile/0600___ID=valora-email-field-blank.png") url("/magick-flows/bbva-mobile/0700___ID=valora-email-field-filled.png") url("/magick-flows/bbva-mobile/0800___ID=valora-use-camera.png") url("/magick-flows/bbva-mobile/0900___ID=valora-fake-video-gif.gif") url("/magick-flows/bbva-mobile/1000___ID=valora-fake-video-found-home.png") url("/magick-flows/bbva-mobile/1100___ID=valora-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/1200___ID=valora-details___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/1300___ID=mortgage-app-step-0___DATA=has-sticky-header.png") url("/magick-flows/bbva-mobile/1400___ID=mortgage-app-step-2___DATA=has-sticky-header__has-sticky-footer.png");
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+body {
+  background: url("/images/home-background.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.container {
+  background: url("/images/home-background.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.hide {
+  display: none;
+}
+
+/* App Switcher One styles */
+.app-switcher-one {
+  height: 812px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 300ms transform, 600ms left;
+  width: 5510px;
+}
+
+.app-switcher-one.hide {
+  display: none;
+}
+
+.app-switcher-one.rounded-corners .search-screen,
+.app-switcher-one.rounded-corners .youtube-screen {
+  border-radius: 40px;
+}
+
+.magick-flows-slide {
+  background-color: white;
+}
+
+.app-switcher-one.shrink {
+  transform: scale(0.95);
+  will-change: transform;
+}
+
+.app-switcher-one.shrink .magick-flows--slide {
+  background-color: white;
+}
+
+.app-switcher-one.rounded-corners .slds-scrollable {
+  max-height: 812px;
+  height: 812px;
+}
+
+.app-switcher-one.rounded-corners .magick-flows-slide {
+  border-radius: 2rem;
+  background-clip: border-box;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
+}
+
+.app-switcher-one.rounded-corners .magick-flows-slide.notification {
+  background-color: transparent;
+}
+
+.app-switcher-one.slide-left-0 {
+  left: -395px !important;
+}
+
+.app-switcher-one.slide-left-0 {
+  left: 0px;
+}
+
+.app-switcher-one.be-left-0 {
+  left: 0px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-0 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 0px;
+}
+
+.app-switcher-one.slide-left-1 {
+  left: -395px;
+}
+
+.app-switcher-one.be-left-1 {
+  left: -395px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-1 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 395px;
+}
+
+.app-switcher-one.slide-left-2 {
+  left: -790px;
+}
+
+.app-switcher-one.be-left-2 {
+  left: -790px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-2 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 790px;
+}
+
+.app-switcher-one.slide-left-3 {
+  left: -1185px;
+}
+
+.app-switcher-one.be-left-3 {
+  left: -1185px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-3 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 1185px;
+}
+
+.app-switcher-one.slide-left-4 {
+  left: -1580px;
+}
+
+.app-switcher-one.be-left-4 {
+  left: -1580px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-4 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 1580px;
+}
+
+.app-switcher-one.slide-left-5 {
+  left: -1975px;
+}
+
+.app-switcher-one.be-left-5 {
+  left: -1975px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-5 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 1975px;
+}
+
+.app-switcher-one.slide-left-6 {
+  left: -2370px;
+}
+
+.app-switcher-one.be-left-6 {
+  left: -2370px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-6 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 2370px;
+}
+
+.app-switcher-one.slide-left-7 {
+  left: -2765px;
+}
+
+.app-switcher-one.be-left-7 {
+  left: -2765px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-7 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 2765px;
+}
+
+.app-switcher-one.slide-left-8 {
+  left: -3160px;
+}
+
+.app-switcher-one.be-left-8 {
+  left: -3160px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-8 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 3160px;
+}
+
+.app-switcher-one.slide-left-9 {
+  left: -3555px;
+}
+
+.app-switcher-one.be-left-9 {
+  left: -3555px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-9 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 3555px;
+}
+
+.app-switcher-one.slide-left-10 {
+  left: -3950px;
+}
+
+.app-switcher-one.be-left-10 {
+  left: -3950px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-10 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 3950px;
+}
+
+.app-switcher-one.slide-left-11 {
+  left: -4345px;
+}
+
+.app-switcher-one.be-left-11 {
+  left: -4345px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-11 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 4345px;
+}
+
+.app-switcher-one.slide-left-12 {
+  left: -4740px;
+}
+
+.app-switcher-one.be-left-12 {
+  left: -4740px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-12 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 4740px;
+}
+
+.app-switcher-one.slide-left-13 {
+  left: -5135px;
+}
+
+.app-switcher-one.be-left-13 {
+  left: -5135px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-13 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 5135px;
+}
+
+.app-switcher-one.slide-left-14 {
+  left: -5530px;
+}
+
+.app-switcher-one.be-left-14 {
+  left: -5530px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.magick-flows--slide-14 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 5530px;
+}
+
+.notification {
+  background: url(/includes/flow/tm-mobile/6.png) no-repeat top left;
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms top ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  top: -210px;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
+.notification.slide-in {
+  top: 0px;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
+/* Drawer styles */
+.drawer {
+  background: #fff;
+  height: 812px;
+  left: 375px;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  transition: .4s left;
+  width: 375px;
+}
+
+.drawer.slide-in {
+  left: 0;
+}
+
+.drawer .content {
+  background: #fff url("/images/stadium.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 966px;
+  width: 375px;
+}
+
+.drawer.confirmation .content {
+  background-color: #f7f7f9;
+  background-image: url("/images/confirmation.png");
+  height: 701px;
+}
+
+.drawer.confirmation .header {
+  background-image: url("/images/drawer-header-3.png");
+  height: 111px;
+}
+
+.drawer.confirmation .scroll-wrapper {
+  top: 111px;
+}
+
+.drawer.payment .content {
+  background-image: url("/images/payment.png");
+  height: 724px;
+}
+
+.drawer.payment .header {
+  background-image: url("/images/drawer-header-2.png");
+}
+
+.drawer.section .content {
+  background-image: url("/images/section.png");
+  height: 724px;
+}
+
+.drawer .header {
+  background: #019cdf url("/images/drawer-header.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 88px;
+  width: 100%;
+}
+
+.drawer .scroll-wrapper {
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 88px;
+}
+
+/* Snake-Pit Popup Styles */
+.snake-pit-popup {
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: relative;
+  transition: .5s opacity;
+  width: 100%;
+}
+
+.snake-pit-popup:after {
+  background: url("/images/snake-pit-popup.png") no-repeat top left;
+  background-size: 100% 100%;
+  content: "";
+  display: block;
+  height: 915px;
+  left: 13px;
+  position: absolute;
+  top: 14px;
+  width: 348px;
+}
+
+.snake-pit-popup.fade-in {
+  opacity: 1;
+}
+
+.snake-pit-popup.show {
+  display: block;
+}
+
+/* App Switcher Two Styles */
+.app-switcher-two {
+  display: none;
+  height: 812px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: .3s transform, .6s left;
+  width: 1165px;
+}
+
+.app-switcher-two.rounded-corners .qr-screen,
+.app-switcher-two.rounded-corners .instagram-screen,
+.app-switcher-two.rounded-corners .email-screen {
+  border-radius: 40px;
+}
+
+.app-switcher-two.show {
+  display: block;
+}
+
+.app-switcher-two.shrink {
+  transform: scale(0.95);
+}
+
+.app-switcher-two.slide-left-one {
+  left: -395px;
+}
+
+.app-switcher-two.slide-left-two {
+  left: -790px;
+}
+
+.qr-screen {
+  background: #fff url("/images/qr-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.qr-screen.show {
+  display: block;
+}
+
+.instagram-screen {
+  background: #fff url("/images/instagram-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 395px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.email-screen {
+  background: #fff url("/images/email-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 790px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+footer.magick-flows-stickey-footer_container {
+  position: absolute;
+  bottom: 0;
+}
+
+/**
+ * @summary Hides an element from the page by setting the opacity property set to `0`
+ *
+ * @selector .transition-hide
+ * @notes This works like the `.slds-hidden` class and reserves the space but allows you to add the `transition` property to transition the speed that it is shown or hidden.
+ * @modifier
+ */
+.slds-transition-hide {
+  transition: opacity 300ms ease-in-out;
+  will-change: opacity;
+  opacity: 0;
+}
+
+/**
+ * @summary Shows the element using the opacity property set to `1`
+ *
+ * @selector .transition-show
+ * @notes This is toggled on the element. `.slds-transition-hide` class is removed and `.slds-transition-show` is added.
+ * @modifier
+ */
+.slds-transition-show {
+  transition: opacity 300ms ease-in-out;
+  will-change: opacity;
+  opacity: 1;
+}
+
+.preload-images {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+.magick-flows--slide-5 {
+  background-color: #00366f;
+}
