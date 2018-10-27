@@ -34,6 +34,8 @@ $contentWrapper.onclick = ( ) => {
 
 
 function normalTransition (thisStepNumber = 0, doAppTransition = false) {
+	console.log(`[ product-templates/mobile/javascripts/magick-flows.js:37 ] : normalTransition() running...`);
+
 	let nextStepNumber = thisStepNumber + 1;
 	$('.container').attr('data-next', `magick-flows--slide-${nextStepNumber}`);
 	$('.container').attr('data-previous', `magick-flows--slide-${thisStepNumber - 1}`);
@@ -60,14 +62,14 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 			
 			setTimeout(() => {
 				$('.app-switcher-one').removeClass('rounded-corners');
-			}, 301);
-		}, 301);
+			}, 401);
+		}, 401);
 
 	} else {
 		$('.app-switcher-one').removeClass('hide shrink rounded-corners');
 		$('.app-switcher-one').removeClass('hide').addClass(`be-left-${thisStepNumber}`);
 	}
-
+	console.groupEnd();
 }
 
 
@@ -86,6 +88,9 @@ function getAppSwitcherClassNames () {
 
 
 function locationHashChanged( ) {
+	console.group(`[ /product-templates/mobile/javascripts/magick-flows.js:89 ] : locationHashChanged() running...`);
+
+	// Scroll the window up, because the user could have scrolled down and then hit "back" and normally a demo runner will want to load every screen in its fresh, unscrolled, state.
 	window.scroll(0,0);
 
 	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
@@ -110,9 +115,14 @@ function locationHashChanged( ) {
 		previousClick = 0
 	}
 
+
+
 	console.log(`clicks: `, clicks);
 	console.log(`previousClick: `, previousClick);
 	console.log(`nextClick: `, nextClick);
+
+
+
 
 	document.querySelectorAll( '.slds-scrollable')[nextClick].scroll(0,0);
 	document.querySelectorAll( '.slds-scrollable')[clicks].scroll(0,0);
@@ -133,7 +143,7 @@ function locationHashChanged( ) {
 	for (var item of document.querySelectorAll(`[data-slide]`)) {
 		if (typeof(item) != 'undefined' && item != null) {
 			const itemId = item.id;
-			console.log(`item.dataset.slide: `, item.dataset.slide);
+			// console.log(`item.dataset.slide: `, item.dataset.slide);
 
 
 
@@ -141,11 +151,11 @@ function locationHashChanged( ) {
 			if (parseInt(item.dataset.slide) == clicks) {
 
 				const thisMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.screens[clicks]}`;
-				console.log(`thisMagickFlowScreenshotUrl: `, thisMagickFlowScreenshotUrl);
+				// console.log(`thisMagickFlowScreenshotUrl: `, thisMagickFlowScreenshotUrl);
 				const nextMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.screens[nextClick]}`;
-				console.log(`nextMagickFlowScreenshotUrl: `, nextMagickFlowScreenshotUrl);
+				// console.log(`nextMagickFlowScreenshotUrl: `, nextMagickFlowScreenshotUrl);
 				const previousMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.screens[previousClick]}`;
-				console.log(`previousMagickFlowScreenshotUrl: `, previousMagickFlowScreenshotUrl);
+				// console.log(`previousMagickFlowScreenshotUrl: `, previousMagickFlowScreenshotUrl);
 
 
 				const isPng = thisMagickFlowScreenshotUrl.endsWith('.png');
@@ -202,28 +212,31 @@ function locationHashChanged( ) {
 		}
 	}
 
+	console.groupEnd();
 }
 
 window.onhashchange = locationHashChanged;
 document.ontouchstart = function() {
 	const theScreenshot = document.querySelector(`#magick-flows--slide-${nextClick} .auto-replace`);
-	console.log(`item img: `, theScreenshot.src);
+	// console.log(`item img: `, theScreenshot.src);
 	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
 
 }
 
-
+console.group(`[ /product-templates/mobile/javascripts/magick-flows.js:217 ] : locationHashChanged() will run`);
 locationHashChanged();
+console.groupEnd();
 
 window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.add('slds-transition-show');
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-hide');
-}, (1900));
+}, (500));
 
 window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
+	document.querySelector(`#content`).classList.remove('fake-the-dock');
 	// document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
-}, (2000));
+}, (1000));
 
 
 

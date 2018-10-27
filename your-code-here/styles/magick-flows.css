@@ -31,7 +31,7 @@ body::after {
 }
 
 body {
-  background: url("/images/home-background.png") no-repeat top left;
+  background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
   height: 812px;
   left: 0;
@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-  background: url("/images/home-background.png") no-repeat top left;
+  background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
   height: 812px;
   left: 0;
@@ -62,7 +62,7 @@ body {
   left: 0;
   position: absolute;
   top: 0;
-  transition: 300ms transform, 600ms left;
+  transition: 400ms transform, 800ms left;
   width: 5510px;
 }
 
@@ -76,11 +76,11 @@ body {
 }
 
 .magick-flows-slide {
-  background-color: white;
+  background-color: transparent;
 }
 
 .app-switcher-one.shrink {
-  transform: scale(0.95);
+  transform: scale(0.75);
   will-change: transform;
 }
 
@@ -606,4 +606,17 @@ footer.magick-flows-stickey-footer_container {
 
 .magick-flows--slide-5 {
   background-color: #00366f;
+}
+
+#content.app-switcher-one.be-left-0 {
+  opacity: 1;
+  transition: transform 500ms, opacity 600ms, left 125ms !important;
+}
+
+#content.app-switcher-one.be-left-0.fake-the-dock {
+  transform: scale(0.2, 0.2) rotatex(68deg) translateY(713%) translateX(-199.7%);
+  background: rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
+  transition: transform 500ms, opacity 600ms, left 125ms !important;
+  opacity: 0;
 }

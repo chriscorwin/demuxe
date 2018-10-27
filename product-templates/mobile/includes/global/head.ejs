@@ -47,14 +47,13 @@ if (locals.pageStylesheets) {
 
 <script type="text/javascript">
 	const demoMagickFlowDirectoryName = '<%=locals.urlSlug%>';
-	console.log('[ product-templates/mobile/includes/global/head.ejs:54 ] locals.urlSlug', '<%-locals.urlSlug%>');
+	console.log('[ product-templates/mobile/includes/global/head.ejs:50 ] locals.urlSlug', '<%-locals.urlSlug%>');
 
 	const locals = {};
 <%
+	// console.group(`[Setting global javascript variables from Demuxe locals]`);
 	Object.keys(locals).forEach(function(key, fileIndex) {
-		console.group(`[setting global javascript variables from Demuxe locals] key: `, key);
-		console.log(`typeof locals[key]: `, typeof locals[key]);
-		console.log(`typeof locals[key] === 'object': `, typeof locals[key] === 'object');
+		// console.group(` --> key: `, key);
 		if (key != '_locals' && key != 'path' && key != 'util' && key != 'classnames' && key != 'sizeOf') {
 			if(typeof locals[key] === 'object') {
 %>
@@ -68,14 +67,14 @@ if (locals.pageStylesheets) {
 %>
 <%
 		} else {
-			console.log('NOT GONNA SAVE: key: ', key);
-
+			// console.log('NOT GONNA SAVE: key: ', key);
 		}
-		console.groupEnd();
+		// console.groupEnd();
 	});
+	// console.groupEnd();
 
 %>
-	console.group(`locals:`);
+	console.group('[ product-templates/mobile/includes/global/head.ejs:77 ] locals:');
 	console.dir(locals);
 	console.groupEnd();
 
