@@ -1,5 +1,5 @@
 <%_
-	let thisMagickFlowConfig = locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]];
+	let thisMagickFlowConfig = locals.magickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]];
 _%>
 <script type="text/javascript">
 	const thisMagickFlowConfig =<%- JSON.stringify(thisMagickFlowConfig)%>;
@@ -18,7 +18,7 @@ _%>
 		// get the "stub" of the filename for each screen, if there is one, and look it up in the metaData
 
 
-		const thisMagifFlowPath = demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].path;
+		const thisMagifFlowPath = magickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].path;
 		let thisMagickFlowsSlideClassnames = {
 			'magick-flows-slide': true
 		};

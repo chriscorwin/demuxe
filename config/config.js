@@ -36,17 +36,39 @@ function getMagickFlowDirectories(dir, directories_) {
 
         if (fs.statSync(aFileOrDirectoryFullPath).isDirectory()) {
 
-            if (aFileOrDirectoryName === 'magick-flows') {
+            if (aFileOrDirectoryName === configData.magickFlows.directoryName) {
 
                 const subFilesAndDirectories = fs.readdirSync(aFileOrDirectoryFullPath);
                 for (const j in subFilesAndDirectories) {
 
 
                     if (fs.statSync(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j])).isDirectory()) {
+
+
                         const thisMagickFlowFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]);
+                        const thisMagickFlowMainContentFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'main');
+                        const thisMagickFlowAssetsContentFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'assets');
                         const thisMagickFlowName = subFilesAndDirectories[j];
 
-                        let thisMagickFlowScreens = getFiles(thisMagickFlowFullPath).sort(sortAlphaNum);
+                        let thisMagickFlowScreens = [];
+                        let thisMagickFlowScreensMetaData = [];
+                        try {
+                            thisMagickFlowScreens = getFiles(thisMagickFlowMainContentFullPath).sort(sortAlphaNum);
+                        }
+                        catch(error) {
+                            console.error(error);
+                        }
+
+
+                        let thisMagickFlowAssets = [];
+                        let thisMagickFlowAssetsMetaData = [];
+                        try {
+                            thisMagickFlowAssets = getFiles(thisMagickFlowAssetsContentFullPath).sort(sortAlphaNum);
+                        }
+                        catch(error) {
+                            console.error(error);
+                        }
+
                         let thisMagickFlowConfigData = {};
 
                         const thisMagickFlowNumberOfScreens = thisMagickFlowScreens.length;
@@ -73,7 +95,6 @@ function getMagickFlowDirectories(dir, directories_) {
 
                         // get it's url slug
                         if (fs.existsSync(path.join(thisMagickFlowFullPath, '../', thisMagickFlowName + '.json'))) {
-                            console.log('we have a config file for ' + thisMagickFlowName);
                             thisMagickFlowConfigData = require(path.join(thisMagickFlowFullPath, '../', thisMagickFlowName + '.json'));
                         }
 
@@ -84,16 +105,185 @@ function getMagickFlowDirectories(dir, directories_) {
                         configData.demoMagickFlowUrlSlugsMapToFlowDirectories[thisMagickFlowUrlSlug] = thisMagickFlowName;
 
 
-                        configData.demoMagickFlows[subFilesAndDirectories[j]] = {
+
+                        // let thisMagickFlowScreensMetaData.pus;
+
+                        thisMagickFlowScreens.forEach(function(fileName, fileIndex) {
+
+                            let thisMagickFlowScreenDataAttributes = {};
+                            let fileNameSplit = fileName.split('___');
+                            let thisNodeKeyValues;
+                            let thisNodeIdValue;
+
+
+
+                            let pathToFile = path.join(thisMagickFlowMainContentFullPath, fileName);
+                            
+                            const dimensions = sizeOf(pathToFile);
+
+                            const isPng = fileName.endsWith('.png');
+                            const isSvg = fileName.endsWith('.svg');
+                            const isMp4 = fileName.endsWith('.mp4');
+                            const isGif = fileName.endsWith('.gif');
+                            const isJpeg = fileName.endsWith('.jpg');
+                            const fileExtension = fileName.split('.')[fileName.split('.').length - 1];
+                            thisMagickFlowScreenDataAttributes.fileExtension = fileExtension;
+                            thisMagickFlowScreenDataAttributes.dimensions = dimensions;
+                            thisMagickFlowScreenDataAttributes.fileName = fileName;
+                            thisMagickFlowScreenDataAttributes.screensIndex = fileIndex;
+
+
+                            fileNameSplit.forEach(function(node, nodeIndex) {
+                                // first one is the sorter, ignore it
+
+                                // other nodes have a KEY= at the beginning, with arbitrary data provided
+                                if ( node.includes('=') === true ) {
+                                    // we have some data, split on the equals sign to get keys and values
+                                    const thisNodeKey = node.split('=')[0];
+                                    let thisNodeKeyValues = node.split('=')[1];
+
+                                    if (thisNodeKey === 'ID') {
+                                        thisNodeIdValue = thisNodeKeyValues.split('.')[0];
+                                    }
+
+                                    let thisNodeKeyValuesFinal = [];
+                                    let thisNodeKeyValuesSplit = [];
+                                    if ( thisNodeKeyValues.includes('__') === true ) {
+                                        thisNodeKeyValuesSplit = thisNodeKeyValues.split('__');
+                                        // each of these is an attribute, but may need cleaned up
+                                        thisNodeKeyValuesSplit.forEach(function(nodeValue, idx) { 
+                                            thisNodeKeyValuesFinal.push(nodeValue.split('.')[0].toLowerCase());
+
+
+                                            if ( nodeValue.split('.').length > 1) {
+                                                // not sure what i was planning here.... hopefully ipll remember. ¯\_(ツ)_/¯
+                                            }
+                                        });
+                                        thisMagickFlowScreenDataAttributes[thisNodeKey.toLowerCase()] = thisNodeKeyValuesFinal;
+                                    } else {
+                                        
+                                        if (thisNodeKey.toLowerCase() === 'data' && typeof thisNodeKeyValues.split('.')[0] === 'string') {
+                                            // make sure the stupid thing is in an array
+                                            thisMagickFlowScreenDataAttributes[thisNodeKey.toLowerCase()] = [thisNodeKeyValues.split('.')[0]];
+
+                                        } else {
+                                            thisMagickFlowScreenDataAttributes[thisNodeKey.toLowerCase()] = thisNodeKeyValues.split('.')[0];
+                                        }
+                                    }
+                                } else {
+                                    thisMagickFlowScreenDataAttributes['sorter'] = node;
+                                }
+                            });
+
+                            // thisMagickFlowScreenDataAttributes
+
+
+                            if ( typeof thisMagickFlowScreenDataAttributes.data === 'undefined' ) {
+                                // thisMagickFlowScreenDataAttributes['hasStickyHeader'] = false;
+                                // thisMagickFlowScreenDataAttributes['hasStickyHeader'] = false;
+                            } else {
+
+                                
+                                // look for headers and footers
+                                if ( fileName.match('sticky-header') || fileName.match('sticky-footer') ) {
+                                    thisMagickFlowAssets.forEach(function(assetFileName, assetFileIndex) {
+
+                                        if ( assetFileName.match(thisNodeIdValue) !== null ) {
+                                            
+                                            console.log(`assetFileName.match(thisNodeIdValue): `, assetFileName.match(thisNodeIdValue));
+
+                                            if ( assetFileName.match('sticky-header') !== null) {
+
+                                                let pathToAssetFile = path.join(thisMagickFlowAssetsContentFullPath, assetFileName);
+                                                let dataToTrack = [];
+                                                const dimensions = sizeOf(pathToAssetFile);
+                                                dataToTrack = {
+                                                    "stickyHeaderPathToAssetFile": pathToAssetFile,
+                                                    "stickyHeaderHeight": dimensions.height,
+                                                    "stickyHeaderWidth": dimensions.width,
+                                                    "stickyHeaderScreensIndex": fileIndex,
+                                                    "stickyHeaderAssetFileIndex": assetFileIndex,
+                                                    "stickyHeaderFileName": assetFileName,
+                                                    "stickyHeaderFileName": assetFileName,
+                                                    "stickyHeaderFilePath": pathToAssetFile,
+                                                };
+                                                thisMagickFlowAssetsMetaData.push(dataToTrack);
+                                                thisMagickFlowScreenDataAttributes['hasStickyHeader'] = true;
+                                                thisMagickFlowScreenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
+                                                thisMagickFlowScreenDataAttributes['stickyHeaderHeight'] = dimensions.height;
+                                                thisMagickFlowScreenDataAttributes['stickyHeaderWidth'] = dimensions.width;
+                                                thisMagickFlowScreenDataAttributes['stickyHeaderScreensIndex'] = fileIndex;
+                                                thisMagickFlowScreenDataAttributes['stickyHeaderAssetFileIndex'] = assetFileIndex;
+                                                thisMagickFlowScreenDataAttributes['stickyHeaderFileName'] = assetFileName;
+                                                thisMagickFlowScreenDataAttributes['stickyHeaderFileName'] = assetFileName;
+                                                thisMagickFlowScreenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
+                                            } else {
+                                            }
+
+
+                                            console.log(`assetFileName.match('sticky-footer'): `, assetFileName.match('sticky-footer'));
+                                            if ( assetFileName.match('sticky-footer') !== null) {
+
+                                                let pathToAssetFile = path.join(thisMagickFlowAssetsContentFullPath, assetFileName);
+                                                let dataToTrack = [];
+                                                const dimensions = sizeOf(pathToAssetFile);
+                                                dataToTrack = {
+                                                    "stickyFooterPathToAssetFile": pathToAssetFile,
+                                                    "stickyFooterHeight": dimensions.height,
+                                                    "stickyFooterWidth": dimensions.width,
+                                                    "stickyFooterScreensIndex": fileIndex,
+                                                    "stickyFooterAssetFileIndex": assetFileIndex,
+                                                    "stickyFooterFileName": assetFileName,
+                                                    "stickyFooterFileName": assetFileName,
+                                                    "stickyFooterFilePath": pathToAssetFile,
+                                                };
+                                                thisMagickFlowAssetsMetaData.push(dataToTrack);
+                                                thisMagickFlowScreenDataAttributes['hasStickyFooter'] = true;
+                                                thisMagickFlowScreenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
+                                                thisMagickFlowScreenDataAttributes['stickyFooterHeight'] = dimensions.height;
+                                                thisMagickFlowScreenDataAttributes['stickyFooterWidth'] = dimensions.width;
+                                                thisMagickFlowScreenDataAttributes['stickyFooterScreensIndex'] = fileIndex;
+                                                thisMagickFlowScreenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
+                                                thisMagickFlowScreenDataAttributes['stickyFooterFileName'] = assetFileName;
+                                                thisMagickFlowScreenDataAttributes['stickyFooterFileName'] = assetFileName;
+                                                thisMagickFlowScreenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
+                                            } else {
+                                            }
+
+
+                                        } else {
+                                            
+                                        }
+
+                                    });
+                                    
+                                }
+
+
+
+                            }
+
+                            thisMagickFlowScreensMetaData.push(thisMagickFlowScreenDataAttributes);
+
+
+                        });
+
+                     
+
+                        configData.magickFlows[subFilesAndDirectories[j]] = {
                             "name": thisMagickFlowName,
                             "path": thisMagickFlowFullPath,
                             "screens": thisMagickFlowScreens,
+                            "assets": thisMagickFlowAssets,
+                            "assetsMetaData": thisMagickFlowAssetsMetaData,
                             "numberOfScreens": thisMagickFlowNumberOfScreens,
                             "urlSlug": thisMagickFlowUrlSlug,
                             "metaData": thisMagickFlowConfigData,
+                            "metaData2": thisMagickFlowScreensMetaData,
                         };
 
                         directories_.push(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]));
+
                     }
                 }
 

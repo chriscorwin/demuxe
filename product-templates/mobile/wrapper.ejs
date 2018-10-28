@@ -3,7 +3,16 @@
 	<head>
 		<%- include('includes/global/head') _%>
 		<% if (locals.siteSection) { %>
-		<%- include(`includes/${locals.siteSection}/head`) _%>
+		<%_
+			try {
+		_%>
+			<%- include(`includes/${locals.siteSection}/head`) _%>
+		<%_
+			}
+			catch(error) {
+				console.error(error);
+			}
+		_%>
 		<% } %>
 	</head>
 

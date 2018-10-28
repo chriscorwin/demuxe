@@ -1,6 +1,6 @@
 console.log(`/product-templates/dmp/javascripts/flow.js running`);
 
-const magickFlowConfig = locals.demoMagickFlows[demoMagickFlowDirectoryName];
+const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 

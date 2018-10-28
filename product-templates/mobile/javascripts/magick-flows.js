@@ -1,4 +1,4 @@
-const magickFlowConfig = locals.demoMagickFlows[demoMagickFlowDirectoryName];
+const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
@@ -50,8 +50,7 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 
 
 	const appSwitcherOne = $('.app-switcher-one');
-	// appSwitcherOne.removeClass('hide').addClass('shrink slide-left rounded-corners');
-	// doAppTransition = true;
+
 	$('.app-switcher-one').removeClass(getAppSwitcherClassNames());
 	if (doAppTransition === true) {
 
@@ -89,7 +88,7 @@ function getAppSwitcherClassNames () {
 
 function locationHashChanged( ) {
 	console.group(`[ /product-templates/mobile/javascripts/magick-flows.js:89 ] : locationHashChanged() running...`);
-
+	console.log(`window.location.hash (before manipulation): `, window.location.hash);
 	// Scroll the window up, because the user could have scrolled down and then hit "back" and normally a demo runner will want to load every screen in its fresh, unscrolled, state.
 	window.scroll(0,0);
 
@@ -133,7 +132,11 @@ function locationHashChanged( ) {
 	let doAppTransition = false;
 	let doNotifcation = false;
 
-	if (clicks === 5 ) {
+
+	console.log(`magickFlowConfig.metaData2[clicks].data: `, magickFlowConfig.metaData2[clicks].data);
+
+	
+	if ( magickFlowConfig.metaData2[clicks].data !== undefined && magickFlowConfig.metaData2[clicks].data[0] === 'use-slide-transition' && magickFlowConfig.metaData2[clicks].data[1] === 'slide-transition_app-switch' ) {
 		doAppTransition = true;
 	}
 
@@ -235,7 +238,7 @@ window.setTimeout(() => {
 window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
 	document.querySelector(`#content`).classList.remove('fake-the-dock');
-	// document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
+	document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
 }, (1000));
 
 

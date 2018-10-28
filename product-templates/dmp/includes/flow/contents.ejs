@@ -5,7 +5,7 @@
 
 
 <div id="preload" style="display: none;">
-  <% locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
+  <% locals.magickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
     <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/<%=fileName%>" width="1" height="1" />
   <% }); %>
 </div>

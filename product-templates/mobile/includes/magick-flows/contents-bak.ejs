@@ -2,7 +2,7 @@
 	let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 </script>
 <%
-	const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( locals.sanitizedQueryParams.screen )]}`;
+	const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.magickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( locals.sanitizedQueryParams.screen )]}`;
 	console.log(`thisMagickFlowScreenUrl: `, thisMagickFlowScreenUrl);
 	
 
@@ -65,10 +65,10 @@
 
 
 <%
-	locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName, fileIndex) {
+	locals.magickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName, fileIndex) {
 %>
 <%
-		const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( fileIndex )]}`;
+		const thisMagickFlowScreenUrl = `/magick-flows/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${locals.magickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens[parseInt( fileIndex )]}`;
 
 
 		const thisMagickFlowScreenHeaderUrl = `includes/${locals.siteSection}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}/${parseInt( fileIndex )}.header.png`;
@@ -177,7 +177,7 @@
 
 
 <div id="preload" style="display: none;">
-	<% locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
+	<% locals.magickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
 		<% console.log(`fileName: `, fileName); %>
 		<img src="/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/<%=fileName%>" width="1" height="1" />
 	<% }); %>
