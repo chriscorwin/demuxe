@@ -32,7 +32,7 @@ if (locals.pageStylesheets) {
 	const accountParam = '<%=accountParam%>';
 	const versionParam = '<%=version%>';
 	const magickFlows = locals.magickFlows;
-	const demoMagickFlowDirectoryName = '<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>';
+	const demoMagickFlowDirectoryName = '<%=magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]%>';
 	const urlSlug = '<%=locals.urlSlug%>';
 	let pageVersion = '<%=version%>';
 	const userParam = '<%=user%>' || 'Dan';

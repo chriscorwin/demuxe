@@ -9,8 +9,21 @@
 			<%- include(`includes/${locals.siteSection}/head`) _%>
 		<%_
 			}
-			catch(error) {
-				console.error(error);
+			catch( error ) {
+
+                if ( error.message.includes(`Could not find the include file "includes/${locals.siteSection}/head"`)) {
+	                console.warn(`
+[ WARNING ] \`includes/${locals.siteSection}/head\` missing.
+
+Demuxe attempts to automagically include content to be included in the <head>
+of the webpage.
+
+This include is completely optional, but the feature is available to use, and
+currently, the page in question is not using it.
+                                `);
+				} else {
+					console.error(error);
+				}
 			}
 		_%>
 		<% } %>

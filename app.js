@@ -16,6 +16,13 @@ const config = require('./config/config.js')();
 const app = express();
 
 
+
+console.group(`
+============================================================
+Demuxe: Express Server up and running...
+------------------------------------------------------------
+`);
+
 console.log('Express server started');
 console.log(`port: ${config.port}`);
 console.log(`process.env.NODE_ENV ${process.env.NODE_ENV}`);
@@ -27,6 +34,7 @@ if (process.env.DEBUG === "true") {
 	console.log(`[ app.js:28 ] config: `, util.inspect(config, { showHidden: false, depth: null, colors: true }));
 }
 
+console.groupEnd();
 
 // view engine setup
 // https://expressjs.com/en/4x/api.html#app.set
@@ -128,7 +136,7 @@ router.get('/*', (req, res) => {
 				if (error) {
 					// find out if it's a slug in our magick-flows
 					let thisUrlSlug = fileName.replace('.ejs', '');
-					if (config.demoMagickFlowUrlSlugs.includes(thisUrlSlug) ) {
+					if (config.magickFlows.urlSlugs.includes(thisUrlSlug) ) {
 						config.urlSlug = thisUrlSlug;
 						// siteSection hard-coded to be "flow", prolly gonna try and change it to be "magic-flow", but not sure...
 						res.render('wrapper-for-magick-flows', { ...config, siteSection: 'magick-flows', sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util });

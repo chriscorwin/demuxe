@@ -1,7 +1,7 @@
 <div class="slds-m-horizontal_medium">
 <%
-	let urlSlugToManage = locals.sanitizedQueryParams.urlSlug || Object.keys(locals.demoMagickFlowUrlSlugsMapToFlowDirectories)[0];
-	let thisMagickFlowConfig = locals.magickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[urlSlugToManage]];
+	let urlSlugToManage = locals.sanitizedQueryParams.urlSlug || Object.keys(locals.magickFlows.urlSlugsMapToFlowDirectories)[0];
+	let thisMagickFlowConfig = locals.magickFlows[urlSlugsMapToFlowDirectories[urlSlugToManage]];
 	let thisMagickFlowMetaData = thisMagickFlowConfig.metaData;
 	let thisMagickFlowMetaData2 = thisMagickFlowConfig.metaData2;
 	let showMetaDataMissingError = true;
@@ -18,7 +18,7 @@
 
 	<div class="slds-grid slds-gutters">
 <%
-	locals.demoMagickFlowUrlSlugs.forEach(function(urlSlug, slugIndex) {
+	locals.magickFlows.urlSlugs.forEach(function(urlSlug, slugIndex) {
 %>
 	<div class="slds-col slds-box slds-p-around_small">
 		<a href="/<%= locals.siteSection %>?urlSlug=<%= urlSlug %>"><%= urlSlug %></a>
@@ -30,7 +30,7 @@
 
 <%
 
-	const webRootPath = `${locals.magickFlows.directoryName}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}`;
+	const webRootPath = `${locals.magickFlows.directoryName}/${magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}`;
 	const mainContentPath = `${webRootPath}/main/`;
 	const assetsContentPath = `${webRootPath}/assets/`;
 

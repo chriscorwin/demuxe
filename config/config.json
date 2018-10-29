@@ -3,7 +3,9 @@
 	"demoName": "Dreamforce 2018 BBVA Mobile Demo (production)",
 	"demoVersion": "0.1",
 	"magickFlows": {
-		"directoryName": "magick-flows"
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": []
 	},
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},

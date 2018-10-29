@@ -133,9 +133,12 @@ function locationHashChanged( ) {
 	let doNotifcation = false;
 
 
-	console.log(`magickFlowConfig.metaData2[clicks].data: `, magickFlowConfig.metaData2[clicks].data);
+	console.log(`[ SPLATS ]magickFlowConfig.metaData2[clicks]: `, magickFlowConfig.metaData2[clicks]);
+	console.log(`[ SPLATS ]magickFlowConfig.metaData2[clicks].data: `, magickFlowConfig.metaData2[clicks].data);
 
 	
+
+
 	if ( magickFlowConfig.metaData2[clicks].data !== undefined && magickFlowConfig.metaData2[clicks].data[0] === 'use-slide-transition' && magickFlowConfig.metaData2[clicks].data[1] === 'slide-transition_app-switch' ) {
 		doAppTransition = true;
 	}
