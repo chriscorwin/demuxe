@@ -1,5 +1,5 @@
 <%_
-	let thisMagickFlowConfig = locals.magickFlows[urlSlugsMapToFlowDirectories[locals.urlSlug]];
+	let thisMagickFlowConfig = locals.magickFlows[locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]];
 	let preLoadImages = '';
 _%>
 <script type="text/javascript">
@@ -14,7 +14,7 @@ _%>
 	let thisMagickFlowMetaData = thisMagickFlowConfig.metaData;
 	let thisMagickFlowMetaData2 = thisMagickFlowConfig.metaData2;
 
-	const webRootPath = `${locals.magickFlows.directoryName}/${demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]}`;
+	const webRootPath = `${locals.magickFlows.directoryName}/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}`;
 	const mainContentPath = `${webRootPath}/main/`;
 	const assetsContentPath = `${webRootPath}/assets/`;
 
@@ -36,6 +36,8 @@ _%>
 
 		// Calculate the height of our scrollable area - 20 magick number for padding ¯\_(ツ)_/¯
 		let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 20);
+		// let OMG_EFFING_PAD_SLIDES_2_AND_4 = 
+		// let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 0);
 
 
 		const isPng = node.dimensions.type === 'png';

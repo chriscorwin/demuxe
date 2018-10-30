@@ -141,10 +141,11 @@ const magickFlowsConfig = {
 
 
                             
-                            // configData.magickFlows.urlSlugs = configDatamagickFlows.urlSlugs || [];
+                            // configData.magickFlows.urlSlugs = configData.magickFlows.urlSlugs || [];
+                            // configData.magickFlows.urlSlugsMapToFlowDirectories = configData.magickFlows.urlSlugsMapToFlowDirectories || {};
 
                             configData.magickFlows.urlSlugs.push(thisMagickFlowUrlSlug);
-                            // configData.magickFlows.urlSlugsMapToFlowDirectories = configData.magickFlows.urlSlugsMapToFlowDirectories || {};
+                            
                             configData.magickFlows.urlSlugsMapToFlowDirectories[thisMagickFlowUrlSlug] = thisMagickFlowName;
 
 

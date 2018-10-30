@@ -5,7 +5,7 @@
 	"magickFlows": {
 		"directoryName": "magick-flows",
 		"urlSlugs": [],
-		"urlSlugsMapToFlowDirectories": []
+		"urlSlugsMapToFlowDirectories": {}
 	},
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},

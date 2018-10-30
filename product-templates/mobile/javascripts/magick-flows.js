@@ -3,9 +3,10 @@ const drawerContentChangingClasses = 'section payment confirmation';
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
+console.log(`[clicks:] `, clicks);
+
 if ( clicks >= magickFlowConfig.numberOfScreens ) {
 	clicks = 0;
-	window.location.hash = `#${clicks}`;
 }
 
 let nextClick = clicks + 1;
@@ -37,36 +38,46 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 	console.log(`[ product-templates/mobile/javascripts/magick-flows.js:37 ] : normalTransition() running...`);
 
 	let nextStepNumber = thisStepNumber + 1;
-	$('.container').attr('data-next', `magick-flows--slide-${nextStepNumber}`);
-	$('.container').attr('data-previous', `magick-flows--slide-${thisStepNumber - 1}`);
+
+
+	if (document.querySelector('.container') !== null) {
+		// document.querySelector('.container').dataset.next = `magick-flows--slide-${nextStepNumber}`;
+		document.querySelector('.container').dataset.next = `magick-flows--slide-${nextClick}`;
+		document.querySelector('.container').dataset.previous = `magick-flows--slide-${previousClick}`;
+	}
 
 	console.log(`thisStepNumber: `, thisStepNumber);
 	
-	// pauseYoutubeVideo();
 
-	$('.drawer').removeClass(drawerContentChangingClasses + ' slide-in');
+	if (document.querySelector(`.drawer`) !== null) {
+		document.querySelector(`.drawer`).classList.remove(drawerContentChangingClasses + ',slide-in');
+	}
 
-	$('.app-switcher-two').removeClass('show');
+	if (document.querySelector(`.app-switcher-two`) !== null) {
+		document.querySelector(`.app-switcher-two`).classList.remove(`show`);
+	}
 
+	const $appSwitcherOne = document.querySelector(`.app-switcher-one`);
 
-	const appSwitcherOne = $('.app-switcher-one');
-
-	$('.app-switcher-one').removeClass(getAppSwitcherClassNames());
+	const appSwitcherClassNames = getAppSwitcherClassNames();
+	$appSwitcherOne.classList.remove(...appSwitcherClassNames);
 	if (doAppTransition === true) {
 
-		$('.app-switcher-one').removeClass('hide').addClass(`shrink rounded-corners slide-left-${thisStepNumber}`);
-		$('.app-switcher-one').removeClass(`be-left-${thisStepNumber}`);
+		$appSwitcherOne.classList.remove('hide');
+		$appSwitcherOne.classList.add(`shrink`, `rounded-corners`, `slide-left-${thisStepNumber}`);
+		$appSwitcherOne.classList.remove(`be-left-${thisStepNumber}`);
 		setTimeout(() => {
-			$('.app-switcher-one').removeClass('shrink');
+			$appSwitcherOne.classList.remove('shrink');
 			
 			setTimeout(() => {
-				$('.app-switcher-one').removeClass('rounded-corners');
+				$appSwitcherOne.classList.remove('rounded-corners');
 			}, 401);
 		}, 401);
 
 	} else {
-		$('.app-switcher-one').removeClass('hide shrink rounded-corners');
-		$('.app-switcher-one').removeClass('hide').addClass(`be-left-${thisStepNumber}`);
+		$appSwitcherOne.classList.remove('hide,shrink,rounded-corners');
+		$appSwitcherOne.classList.remove('hide');
+		$appSwitcherOne.classList.add(`be-left-${thisStepNumber}`);
 	}
 	console.groupEnd();
 }
@@ -74,21 +85,23 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 
 
 function getAppSwitcherClassNames () {
-
-	let step;
-	let out = '';
+	let out = [];
 	for (step = 0; step < magickFlowConfig.numberOfScreens; step++) {
-		out += ' slide-left-' + step;
-		out += ' be-left-' + step;
+		out.push(`slide-left-${step}`);
+		out.push(`be-left-${step}`);
 	}
 	return out;
 }
 
 
 
-function locationHashChanged( ) {
+function locationHashChanged(event) {
+
 	console.group(`[ /product-templates/mobile/javascripts/magick-flows.js:89 ] : locationHashChanged() running...`);
 	console.log(`window.location.hash (before manipulation): `, window.location.hash);
+
+	console.log(`event.oldURL: `, event.oldURL);
+	console.log(`event.newURL: `, event.newURL);
 	// Scroll the window up, because the user could have scrolled down and then hit "back" and normally a demo runner will want to load every screen in its fresh, unscrolled, state.
 	window.scroll(0,0);
 
@@ -139,10 +152,18 @@ function locationHashChanged( ) {
 	
 
 
-	if ( magickFlowConfig.metaData2[clicks].data !== undefined && magickFlowConfig.metaData2[clicks].data[0] === 'use-slide-transition' && magickFlowConfig.metaData2[clicks].data[1] === 'slide-transition_app-switch' ) {
-		doAppTransition = true;
+	let directionOfNavigation = 'forward';
+	let oldUrlHash = parseInt( event.oldURL.split('#')[event.oldURL.split('#').length - 1] ) || 0;
+	let newUrlHash = parseInt( event.newURL.split('#')[event.newURL.split('#').length - 1] ) || 0;
+	if (newUrlHash <= oldUrlHash) {
+		directionOfNavigation = 'back';
 	}
 
+	let stepToEvaluateForAppTransition = directionOfNavigation === 'forward' ? newUrlHash : oldUrlHash;
+
+	if ( magickFlowConfig.metaData2[stepToEvaluateForAppTransition].data !== undefined && magickFlowConfig.metaData2[stepToEvaluateForAppTransition].data[0] === 'use-slide-transition' && magickFlowConfig.metaData2[stepToEvaluateForAppTransition].data[1] === 'slide-transition_app-switch' ) {
+		doAppTransition = true;
+	}
 
 	normalTransition(clicks, doAppTransition);
 
@@ -221,17 +242,35 @@ function locationHashChanged( ) {
 	console.groupEnd();
 }
 
+//let this snippet run before your hashchange event binding code
+if(!window.HashChangeEvent)(function(){
+	var lastURL=document.URL;
+	window.addEventListener("hashchange",function(event){
+		Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
+		Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
+		lastURL=document.URL;
+	});
+}());
+
 window.onhashchange = locationHashChanged;
 document.ontouchstart = function() {
 	const theScreenshot = document.querySelector(`#magick-flows--slide-${nextClick} .auto-replace`);
 	// console.log(`item img: `, theScreenshot.src);
 	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
-
 }
 
-console.group(`[ /product-templates/mobile/javascripts/magick-flows.js:217 ] : locationHashChanged() will run`);
-locationHashChanged();
-console.groupEnd();
+// console.group(`[ /product-templates/mobile/javascripts/magick-flows.js:217 ] : locationHashChanged() will run`);
+// locationHashChanged();
+
+// console.groupEnd();
+
+
+
+window.setTimeout(() => {
+	window.location.hash = `#${clicks}`;
+	window.location.hash = ``;
+
+}, (150));
 
 window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.add('slds-transition-show');
@@ -245,97 +284,6 @@ window.setTimeout(() => {
 }, (1000));
 
 
-
-// document.querySelector(`#magick-flows--slide-${clicks}`).classList.remove('slds-hide');
-// document.querySelector(`#magick-flows--slide-${clicks}`).classList.add('slds-transition-show');
-
-
-function offset(el) {
-	let rect = el.getBoundingClientRect(),
-	scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-	scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-}
-
-
-function scrollIt(destination, duration = 200, easing = 'linear', callback) {
-
-  const easings = {
-    linear(t) {
-      return t;
-    },
-    easeInQuad(t) {
-      return t * t;
-    },
-    easeOutQuad(t) {
-      return t * (2 - t);
-    },
-    easeInOutQuad(t) {
-      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-    },
-    easeInCubic(t) {
-      return t * t * t;
-    },
-    easeOutCubic(t) {
-      return (--t) * t * t + 1;
-    },
-    easeInOutCubic(t) {
-      return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-    },
-    easeInQuart(t) {
-      return t * t * t * t;
-    },
-    easeOutQuart(t) {
-      return 1 - (--t) * t * t * t;
-    },
-    easeInOutQuart(t) {
-      return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
-    },
-    easeInQuint(t) {
-      return t * t * t * t * t;
-    },
-    easeOutQuint(t) {
-      return 1 + (--t) * t * t * t * t;
-    },
-    easeInOutQuint(t) {
-      return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
-    }
-  };
-
-  const start = window.pageYOffset;
-  const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
-
-  const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-  const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
-  let destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
-  destinationOffsetToScroll = destinationOffsetToScroll - destinationOffsetToScroll;
-  if ('requestAnimationFrame' in window === false) {
-    window.scroll(0, destinationOffsetToScroll);
-    if (callback) {
-      callback();
-    }
-    return;
-  }
-
-  function scroll() {
-    const now = 'now' in window.performance ? performance.now() : new Date().getTime();
-    const time = Math.min(1, ((now - startTime) / duration));
-    const timeFunction = easings[easing](time);
-    window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
-
-    if (window.pageYOffset === destinationOffsetToScroll) {
-      if (callback) {
-        callback();
-      }
-      return;
-    }
-
-    requestAnimationFrame(scroll);
-  }
-
-  scroll();
-}
 
 
 document.onkeyup = function(e) {
