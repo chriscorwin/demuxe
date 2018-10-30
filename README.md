@@ -42,9 +42,9 @@ Demos _may_:
 - Use SCSS, since that is the tool used by our very own [SLDS](https://www.lightningdesignsystem.com) team.
 - Make strategic use of JavaScript libraries as-needed to best fulfill the needs of a given demo. 
 	
-	Keep in mind that such tools are a per-demo decision and do not generally  belong in this boilerplate repository.
+	Keep in mind that such tools are a per-demo decision and need not necessarily be included in all demos.
 
-	It _is_ entirely apprpriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository.
+	It _is_ entirely appropriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository.
 	
 	Examples [D3](https://github.com/d3/d3/wiki/Gallery) and [Highcharts](https://www.highcharts.com/demo), which have been used in nearly every demo we've created thus far to generate interactive graphs where SVGs alone do not suite our purposes.
 
@@ -169,7 +169,7 @@ Demuxe uses a fork of Differencify that allows us some more flixibility vs what 
 
 # Spec/Designs
 
-Shall live in `/dev-assets/`. Typically these will be sketch files. These should never be merged into Demuxe proper, and only ever belong in branches or in forks.
+Shall live on your machine or in corporate Google Drive. Typically these will be sketch files. These should never be merged into Demuxe because it will bloat the repo and eventually make it so you literally _can't push your changes_.
 
 # Brand Theming
 Enables brand re-use across demos, and brand-theming demos, quickly and easily.
