@@ -98,16 +98,16 @@ locals.listboxId = locals.listboxId || `listbox-${locals.id}` || randomId;
 </style>
 
 <div class="<%= locals.wrapperClasses ? locals.wrapperClasses : 'slds-m-vertical_xx-small' %>">
-	<div id="<%= locals.comboboxId %>" class="folder-view" <% if (locals.customColor) { %>style="background: <%= locals.customColor.background %>"<% } %>>
+	<div id="<%= locals.comboboxId %>" class="folder-view<%= locals.isOpen ? ' slds-is-open' : '' %>" <% if (locals.customColor) { %>style="background: <%= locals.customColor.background %>"<% } %>>
 		<div class="folder-view__form-element slds-input-has-icon <%= locals.isFolder ? 'slds-input-has-icon_left-right' : 'slds-input-has-icon_right' %>" role="none">
 			<% if (locals.isFolder) { %>
 			<span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_left" title="Description of icon when needed">
-				<svg class="closed slds-icon slds-icon_x-small slds-icon-text-default">
+				<%- locals.customIconClosed ? locals.customIconClosed : `<svg class="closed slds-icon slds-icon_x-small slds-icon-text-default">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#open_folder" />
-				</svg>
-				<svg class="opened slds-icon slds-icon_x-small slds-icon-text-default">
+				</svg>` %>
+				<%- locals.customIconClosed ? locals.customIconOpened : `<svg class="opened slds-icon slds-icon_x-small slds-icon-text-default">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#opened_folder" />
-				</svg>
+				</svg>` %>
 			</span>
 			<% } %>
 			<input type="text" class="slds-input folder-view__input" style="cursor: pointer;<% if (locals.customColor) { %>color: <%= locals.customColor.color %>;<% } %>" id="<%= locals.comboboxId %>-input" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" readonly="" value="<%= locals.text ? locals.text : 'Select an Option' %>" />

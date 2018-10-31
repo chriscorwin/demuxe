@@ -7,13 +7,15 @@
 			<div class="slds-panel-box__header slds-p-around_small">Segment Details</div>
 			<div class="slds-panel-box__body">
 				<div id="details-contents" class="slds-grid slds-gutters_x-small slds-grid_align-spread slds-wrap slds-p-horizontal_medium slds-p-bottom_xx-large">
-					<div id="segment-name" class="slds-col slds-p-vertical_medium slds-size_1-of-3 segment-box slds-m-top_medium"><div class="segment-box_label">Segment Name</div></div>
-					<div class="slds-col slds-p-vertical_medium slds-size_1-of-3 segment-box slds-m-top_medium">
+					<div id="segment-name" class="slds-col slds-p-vertical_medium slds-size_1-of-3 segment-box slds-m-top_medium">
+						<div class="segment-box_label">Segment Name</div>
+					</div>
+					<div id="segment-type" class="slds-col slds-p-vertical_medium slds-size_1-of-3 segment-box slds-m-top_medium">
 						<div class="segment-box_label">Segment Type</div></div>
 					<div class="slds-col slds-p-vertical_medium slds-size_1-of-3 slds-m-top_medium"></div>
-					<div class="slds-col slds-p-vertical_medium slds-size_1-of-3 segment-box slds-m-top_medium">
+					<div id="category-name" class="slds-col slds-p-vertical_medium slds-size_1-of-3 segment-box slds-m-top_medium">
 						<div class="segment-box_label">Category Name</div></div>
-					<div class="slds-col slds-p-vertical_medium slds-size_1-of-3 segment-box slds-m-top_medium">
+					<div id="sub-category-name" class="slds-col slds-p-vertical_medium slds-size_1-of-3 segment-box slds-m-top_medium">
 						<div class="segment-box_label">Sub-Category Name</div></div>
 					<div class="slds-col slds-p-vertical_medium slds-size_1-of-3 slds-m-top_medium"></div>
 					<div id="segment-description" class="slds-col slds-p-vertical_xx-small slds-p-horizontal_small slds-size_2-of-3 segment-box slds-m-top_medium" style="height: 93px;">
@@ -102,6 +104,9 @@
 
 	const getSegmentName = () => '<%= locals.localization.manage_segments.details_and_activation.segment_name %>';
 	const getSegmentDescription = () => '<%= locals.localization.manage_segments.details_and_activation.segment_description %>';
+	const getSegmentType = () => '<%= locals.localization.manage_segments.details_and_activation.segment_type %>';
+	const getCategoryName = () => '<%= locals.localization.manage_segments.details_and_activation.category_name %>';
+	const getSubCategoryName = () => '<%= locals.localization.manage_segments.details_and_activation.sub_category_name %>';
 	const nextPage = <%- locals.localization.manage_segments.details_and_activation.save_action %>;
 	const activateByDefault = <%= locals.localization.manage_segments.details_and_activation.activate_by_default %>;
 </script>

@@ -42,9 +42,9 @@ Demos _may_:
 - Use SCSS, since that is the tool used by our very own [SLDS](https://www.lightningdesignsystem.com) team.
 - Make strategic use of JavaScript libraries as-needed to best fulfill the needs of a given demo. 
 	
-	Keep in mind that such tools are a per-demo decision and do not generally  belong in this boilerplate repository.
+	Keep in mind that such tools are a per-demo decision and need not necessarily be included in all demos.
 
-	It _is_ entirely apprpriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository.
+	It _is_ entirely appropriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository.
 	
 	Examples [D3](https://github.com/d3/d3/wiki/Gallery) and [Highcharts](https://www.highcharts.com/demo), which have been used in nearly every demo we've created thus far to generate interactive graphs where SVGs alone do not suite our purposes.
 
@@ -169,7 +169,7 @@ Demuxe uses a fork of Differencify that allows us some more flixibility vs what 
 
 # Spec/Designs
 
-Shall live in `/dev-assets/`. Typically these will be sketch files. These should never be merged into Demuxe proper, and only ever belong in branches or in forks.
+Shall live on your machine or in corporate Google Drive. Typically these will be sketch files. These should never be merged into Demuxe because it will bloat the repo and eventually make it so you literally _can't push your changes_.
 
 # Brand Theming
 Enables brand re-use across demos, and brand-theming demos, quickly and easily.
@@ -186,13 +186,12 @@ You must structure your brand assets as follows:
     |    +-- brand.js
     +-- images/
     |    +-- brand-logo.svg
-    +-- localization.json
+    +-- localization.js
 ```
 
 NOTE: The folder name is named after the brand (eg, `/brand-themes/ducati/`) but the actual files themselves are named `brand` as the core brand theme files are standardized across all brands.
 
-See `/brand-themes/ducati/` for an example of how this looks.
-
+`/brand-themes/{brand-name}/localization.js` typically imports all sorts of other localization/data from other files so that it isn't just one huge massive JS Object in a single file.
 
 
 ## Sketch -> SVG Files
@@ -254,5 +253,13 @@ Components:
 
 Past demos utilizing this boilerplate (add yours here!)
 
-[Connections 2018 DMP Demo](https://github.exacttarget.com/uxarchitecture/cnx-dmp-2018)
-[Laulima 2018 DMP Demo - Crocks](https://laulima-2018-dmp.herokuapp.com/)
+[Connections 2018 DMP Demo](https://cnx-dmp-2018.herokuapp.com/)*
+[Connections 2018 DMP 201 Demo](https://cnx-dmp-2018.herokuapp.com/201/)**
+[Laulima 2018 DMP Demo - Crocs](https://laulima-2018-dmp.herokuapp.com/) (This demo never saw the light of day)
+[Dreamforce 2018 DMP Demo](https://dmp-dreamforce-2018.herokuapp.com/)
+[Dreamforce 2018 201 DMP Demo](https://df-dmp-2018.herokuapp.com/)**
+[Dreamforce 2018 ROI DMP Demo](https://roi-einstein-df18.herokuapp.com/) (This demo was huge and was created in two days, perfectly illustrating the extreme power of Demuxe)
+
+
+* This demo used the predicessor to Demuxe, and is what Demuxe was loosely based on. It is listed here in honor of the vast swaths of code that were taken from it in order to create Demuxe.
+** This demo is in need of being moved over to this boilerplate, and continues to utilize the precursor to Demuxe. It is included on this list as a reminder to upgrade Demuxe to accomodate the featureset this demo requires (namely, account switching)

@@ -1,6 +1,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="/styles/salesforce-lightning-design-system.css" />
 <link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="/styles/brand.css">
 <link rel="stylesheet" href="/styles/global.css">
 <!-- each page automatically tries to include a css file of the same name -->
 <% if (locals.siteSection) { %>
@@ -144,6 +145,11 @@ if (locals.pageStylesheets) {
 						},
 						{
 							label: 'Custom Index Tool'
+						},
+						{
+							label: 'Einstein Journey Insights',
+							href: `/insights/journey-insights?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
+							id: 'journey-insights-link'
 						}
 					],
 					[ {

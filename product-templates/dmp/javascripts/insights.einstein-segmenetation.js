@@ -101,7 +101,7 @@ var fillForm = function fillForm(d) {
 	const usedParties = d.attributes.filter((focusAttribute, i, attributes) => attributes.indexOf(
 			attributes.find((potentialMatch) => focusAttribute.party === potentialMatch.party)
 	) === i).reduce((partyNumbers, party) => [ ...partyNumbers, party.party ], []).sort();
-
+console.log('usedParties', usedParties, partyColors[1], partyColors[3], partyNumbers[1], partyNumbers[3]);
 	formContents += `
 		<div id="formBody" class="slds-p-horizontal_medium slds-p-bottom_small slds-p-top_xx-small">
 			<p id="formBodyHead" class="slds-m-vertical_small">Attributes that define this persona</p>
