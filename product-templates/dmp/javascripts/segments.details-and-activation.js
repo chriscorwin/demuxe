@@ -14,11 +14,11 @@ const goHome = () => {
 	window.location = `/index.html`;
 };
 
-const makeFilledSegmentDetail = (label) => {
+const makeFilledSegmentDetail = (label, contents) => {
 	return document.createRange().createContextualFragment(`
 		<div class="slds-col slds-p-vertical_xx-small slds-p-horizontal_small slds-size_1-of-3 segment-box slds-m-top_medium">
-			<div class="segment-box_label slds-p-vertical_xxx-small">Segment Name</div>
-			<div class="segment-box_contents">${label}</div>
+			<div class="segment-box_label slds-p-vertical_xxx-small">${label}</div>
+			<div class="segment-box_contents">${contents}</div>
 		</div>
 	`);
 }
@@ -32,15 +32,30 @@ const makeFilledSegmentDescription = (description) => {
 	`)
 }
 
-const $newSegmentName = makeFilledSegmentDetail(getSegmentName(pageVersion, accountParam));
-const $newSegmentDescription = makeFilledSegmentDescription(getSegmentDescription(pageVersion, accountParam));
+const segmentName = getSegmentName(pageVersion, accountParam);
+const segmentType = getSegmentType(pageVersion, accountParam);
+const categoryName = getCategoryName(pageVersion, accountParam);
+const subCategoryName = getSubCategoryName(pageVersion, accountParam);
+const segmentDescription = getSegmentDescription(pageVersion, accountParam);
+
+const $newSegmentNameElm = makeFilledSegmentDetail('Segment Name', segmentName);
+const $newSegmentTypeElm = makeFilledSegmentDetail('Segment Type', segmentType);
+const $newCategoryNameElm = makeFilledSegmentDetail('Category Name', categoryName);
+const $newSubCategoryNameElm = makeFilledSegmentDetail('Sub-Category Name', subCategoryName);
+const $newSegmentDescriptionElm = makeFilledSegmentDescription(segmentDescription);
 
 const $segmentName = document.querySelector('#segment-name');
+const $segmentType = document.querySelector('#segment-type');
+const $categoryName = document.querySelector('#category-name');
+const $subCategoryName = document.querySelector('#sub-category-name');
 const $segmentDescription = document.querySelector('#segment-description');
 
 $segmentName.addEventListener('click', () => {
-	document.getElementById('details-contents').replaceChild($newSegmentName, $segmentName);
-	document.getElementById('details-contents').replaceChild($newSegmentDescription, $segmentDescription);
+	segmentName.length > 0 && document.getElementById('details-contents').replaceChild($newSegmentNameElm, $segmentName);
+	segmentType.length > 0 && document.getElementById('details-contents').replaceChild($newSegmentTypeElm, $segmentType);
+	categoryName.length > 0 && document.getElementById('details-contents').replaceChild($newCategoryNameElm, $categoryName);
+	subCategoryName.length > 0 && document.getElementById('details-contents').replaceChild($newSubCategoryNameElm, $subCategoryName);
+	segmentDescription.length > 0 && document.getElementById('details-contents').replaceChild($newSegmentDescriptionElm, $segmentDescription);
 });
 
 

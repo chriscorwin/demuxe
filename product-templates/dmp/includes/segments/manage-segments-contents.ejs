@@ -4,29 +4,7 @@
 </div>
 
 <% 
-	const tableData = {
-		rows: [
-			{
-				reach: '600,000', similarity: '100%'
-			},
-			{
-				reach: '780,897', similarity: '98%'
-			},
-			{
-				reach: '810,008', similarity: '96%'
-			},
-			{
-				reach: '905,178', similarity: '94%'
-			},
-			{
-				reach: '906,110', similarity: '92%'
-			},
-			{
-				reach: '910,087', similarity: '90%'
-			}
-		],
-		labels: ['Reach', 'Similarity']
-	}
+	const tableData = locals.localization.segments.lookalikes.tableData;
 
 	const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
 
@@ -99,7 +77,7 @@
 							</a>
 						</li>
 						<li class="slds-dropdown__item" role="presentation">
-							<a href="javascript:void(0);" onclick="navigatePage('/data-studio.audience-discovery.html" role="menuitem" tabindex="-1">
+							<a href="javascript:void(0);" onclick="navigatePage('/data-studio.audience-discovery.html')" role="menuitem" tabindex="-1">
 								<span class="slds-truncate" title="Data Studio">Discover Audiences</span>
 							</a>
 						</li>
@@ -137,12 +115,12 @@
 							</a>
 						</li>
 						<li class="slds-dropdown__item" role="presentation">
-							<a href="javascript:void(0);" onclick="navigatePage('/segment-builder.details-and-activation.html" role="menuitem" tabindex="-1">
+							<a href="javascript:void(0);" onclick="navigatePage('/segment-builder.details-and-activation.html')" role="menuitem" tabindex="-1">
 								<span class="slds-truncate" title="Menu Item Two">Update Partners</span>
 							</a>
 						</li>
 						<li class="slds-dropdown__item" role="presentation">
-							<a href="javascript:void(0);" onclick="navigatePage('/data-studio.new-asset.define.html" role="menuitem" tabindex="-1">
+							<a href="javascript:void(0);" onclick="navigatePage('/data-studio.new-asset.define.html')" role="menuitem" tabindex="-1">
 								<span class="slds-truncate" title="Menu Item Two">Provision Segment</span>
 							</a>
 						</li>
@@ -209,7 +187,7 @@
 		<div class="slds-grid">
 			<div class="slds-col slds-size_3-of-5">Select the desired combination of reach and similarity for your objective.</div>
 			<div class="slds-col slds-size_2-of-5" style="text-align: right; font-size: 16px;">
-				<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>$1.75</strong>
+				<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>${locals.localization.segments.lookalikes.cpm}</strong>
 			</div>
 		</div>
 
@@ -225,19 +203,21 @@
 	`);
 	const makeModalContentsFooter = (data) => (`
 		<button disabled class="slds-button slds-button_neutral">Cancel</button>
-		<button disabled onclick="navigatePage('/segments/manage-segments/details-and-activation');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
+		<button disabled onclick="navigatePage('/segments/manage-segments/?trigger=successToast');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
 	`);
 
 	const panels = locals.localization.segments.default;
 
 	if (locals.localization.segments.additional) {
-		if (locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === 'successToast') {
-			locals.localization.segments.additional.forEach((panel) => {
-				if (!panels.includes(panel)) {
-					panels.unshift(panel)
-				}
-			});	
+		locals.localization.segments.cachedAdditional = locals.localization.segments.cachedAdditional || [...locals.localization.segments.additional];
+
+		// add additional elements one by one (or at least don't delete them)
+		if (locals.sanitizedQueryParams.trigger) {
+			locals.localization.segments.cachedAdditional.length > 0 && panels.unshift(locals.localization.segments.cachedAdditional.shift());	
 		} else {
+			// remove all additional elements and start over
+			locals.localization.segments.cachedAdditional = [...locals.localization.segments.additional];
+
 			locals.localization.segments.additional.forEach((panel) => {
 				if (panels.includes(panel)) {
 					var panelIndex = panels.indexOf(panel);
@@ -278,9 +258,22 @@
 
 
 <%- include('components/toast', {
-	contents: '',
-	title: '‘High Value Customer Lookalike’ segment successfully created.',
-	theme: 'success'			
+	contents: 'The segment will be available once processing completes.',
+	title: `‘${locals.localization.segments.default[0].title}’ segment created successfully.`,
+	theme: 'success',
+	id: 'successToast'			
+}) %>
+
+<%- include('components/toast', {
+	title: `You are all set. Einstein Journey Insights Report is ready to run.`,
+	theme: 'success',
+	id: 'reportRunning'			
+}) %>
+
+<%- include('components/toast', {
+	title: `Einstein Journey Insights Report is ready. <a href="javascript:void(0);" onclick="navigatePage('/insights/einstein-journey-insights')">Click to View</a>`,
+	theme: 'success',
+	id: 'reportReady'			
 }) %>
 
 <script>
@@ -316,3 +309,20 @@ document.querySelectorAll('.slds-panel-box__header-settings').forEach((elm) => e
 	}
 }));
 </script>
+
+<% if ( locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === `reportRunning`) { %>
+<script>
+	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the 
+	// flow, which we need to do in order to keep global nav dropdowns working.
+	let reportReadyToastElement =  document.getElementById('reportReady');
+	if (typeof(reportReadyToastElement) != 'undefined' && reportReadyToastElement != null) {
+		window.setTimeout(() => {
+			document.querySelector('#reportReady').classList.add('slds-transition-hide');
+			document.querySelector('#reportReady').classList.remove('slds-hide');
+		}, 4201);
+		window.setTimeout(() => {
+			document.querySelector('#reportReady').classList.add('slds-transition-show');
+		}, 4300);
+	}
+</script>
+<% } %>

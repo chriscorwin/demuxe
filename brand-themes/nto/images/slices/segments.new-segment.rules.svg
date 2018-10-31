@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="777px" height="698px" viewBox="0 0 777 698" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>segments.new-segment.rules</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="22"></rect>
+        <rect id="path-3" x="0" y="0" width="16" height="22"></rect>
+        <rect id="path-5" x="0" y="0" width="16" height="22"></rect>
+    </defs>
+    <g id="Final-Version" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4" transform="translate(-459.000000, -370.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1615"></rect>
+            <g id="Rules" transform="translate(458.000000, 323.000000)" fill="#FFFFFF" stroke="#E0E5EE">
+                <rect id="Rectangle-5" x="0.5" y="0.5" width="781" height="747" rx="4"></rect>
+            </g>
+            <text id="POPULATION" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="1037" y="407">POPULATION</tspan>
+            </text>
+            <text id="CPM" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="920" y="407">CPM</tspan>
+            </text>
+            <text id="FREQ-X-REC" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="763" y="407">FREQ X </tspan>
+                <tspan x="763" y="425">REC</tspan>
+            </text>
+            <text id="Collapse-Rules" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#0070D2">
+                <tspan x="478" y="409">Collapse Rules</tspan>
+            </text>
+            <rect id="Rectangle-17-Copy-2" stroke="#E0E5EE" fill="#FFFFFF" x="478.5" y="544.5" width="741" height="44"></rect>
+            <rect id="Rectangle-17-Copy-4" stroke="#E0E5EE" fill="#FFFFFF" x="478.5" y="648.5" width="741" height="44"></rect>
+            <path d="M1187.98278,565.672727 C1186.58281,565.672727 1185.49395,566.690909 1185.49395,568 C1185.49395,569.309091 1186.58281,570.4 1187.98278,570.4 C1189.38274,570.4 1190.54938,569.309091 1190.54938,568 C1190.54938,566.690909 1189.38274,565.672727 1187.98278,565.672727 Z M1195.52704,570.181818 L1194.20485,569.090909 C1194.28263,568.727273 1194.3604,568.363636 1194.3604,568 C1194.3604,567.636364 1194.28263,567.2 1194.20485,566.836364 L1195.52704,565.818182 C1195.9937,565.454545 1196.14925,564.872727 1195.83815,564.363636 L1195.29371,563.418182 C1195.06039,563.127273 1194.67151,562.909091 1194.20485,562.909091 C1194.0493,562.909091 1193.97152,562.909091 1193.81597,562.981818 L1192.18268,563.563636 C1191.56047,562.981818 1190.78271,562.618182 1190.08273,562.4 L1189.77162,560.8 C1189.69385,560.290909 1189.14942,560 1188.60498,560 L1187.43835,560 C1186.89391,560 1186.34948,560.290909 1186.27171,560.8 L1185.9606,562.327273 C1185.18284,562.618182 1184.48286,562.981818 1183.78288,563.490909 L1182.14958,562.909091 C1181.99403,562.909091 1181.91626,562.836364 1181.7607,562.836364 C1181.37182,562.836364 1180.98294,563.054545 1180.74962,563.418182 L1180.12741,564.363636 C1179.89408,564.8 1179.97186,565.381818 1180.43851,565.745455 L1181.7607,566.763636 C1181.68293,567.127273 1181.68293,567.563636 1181.68293,567.927273 C1181.68293,568.363636 1181.68293,568.727273 1181.7607,569.090909 L1180.43851,570.109091 C1180.04963,570.472727 1179.89408,571.054545 1180.12741,571.490909 L1180.74962,572.436364 C1180.98294,572.8 1181.37182,573.018182 1181.7607,573.018182 C1181.91626,573.018182 1182.07181,572.945455 1182.14958,572.945455 L1183.78288,572.363636 C1184.48286,572.872727 1185.18284,573.236364 1185.9606,573.527273 L1186.19393,575.127273 C1186.34948,575.636364 1186.81614,576 1187.43835,576 L1188.52721,576 C1189.14942,576 1189.61607,575.636364 1189.77162,575.054545 L1190.00495,573.454545 C1190.86049,573.236364 1191.63825,572.8 1192.26045,572.218182 L1193.81597,572.8 C1193.97152,572.8 1194.0493,572.872727 1194.20485,572.872727 C1194.67151,572.872727 1195.06039,572.654545 1195.29371,572.363636 L1195.83815,571.490909 C1196.14925,571.054545 1195.9937,570.472727 1195.52704,570.181818 L1195.52704,570.181818 Z M1187.98278,571.709091 C1185.80505,571.709091 1184.09398,570.109091 1184.09398,568 C1184.09398,565.890909 1185.80505,564.363636 1187.98278,564.363636 C1190.1605,564.363636 1191.94935,565.963636 1191.94935,568 C1191.94935,570.036364 1190.23828,571.709091 1187.98278,571.709091 L1187.98278,571.709091 Z" id="Shape" fill="#536D95"></path>
+            <path d="M1187.98278,668.672727 C1186.58281,668.672727 1185.49395,669.690909 1185.49395,671 C1185.49395,672.309091 1186.58281,673.4 1187.98278,673.4 C1189.38274,673.4 1190.54938,672.309091 1190.54938,671 C1190.54938,669.690909 1189.38274,668.672727 1187.98278,668.672727 Z M1195.52704,673.181818 L1194.20485,672.090909 C1194.28263,671.727273 1194.3604,671.363636 1194.3604,671 C1194.3604,670.636364 1194.28263,670.2 1194.20485,669.836364 L1195.52704,668.818182 C1195.9937,668.454545 1196.14925,667.872727 1195.83815,667.363636 L1195.29371,666.418182 C1195.06039,666.127273 1194.67151,665.909091 1194.20485,665.909091 C1194.0493,665.909091 1193.97152,665.909091 1193.81597,665.981818 L1192.18268,666.563636 C1191.56047,665.981818 1190.78271,665.618182 1190.08273,665.4 L1189.77162,663.8 C1189.69385,663.290909 1189.14942,663 1188.60498,663 L1187.43835,663 C1186.89391,663 1186.34948,663.290909 1186.27171,663.8 L1185.9606,665.327273 C1185.18284,665.618182 1184.48286,665.981818 1183.78288,666.490909 L1182.14958,665.909091 C1181.99403,665.909091 1181.91626,665.836364 1181.7607,665.836364 C1181.37182,665.836364 1180.98294,666.054545 1180.74962,666.418182 L1180.12741,667.363636 C1179.89408,667.8 1179.97186,668.381818 1180.43851,668.745455 L1181.7607,669.763636 C1181.68293,670.127273 1181.68293,670.563636 1181.68293,670.927273 C1181.68293,671.363636 1181.68293,671.727273 1181.7607,672.090909 L1180.43851,673.109091 C1180.04963,673.472727 1179.89408,674.054545 1180.12741,674.490909 L1180.74962,675.436364 C1180.98294,675.8 1181.37182,676.018182 1181.7607,676.018182 C1181.91626,676.018182 1182.07181,675.945455 1182.14958,675.945455 L1183.78288,675.363636 C1184.48286,675.872727 1185.18284,676.236364 1185.9606,676.527273 L1186.19393,678.127273 C1186.34948,678.636364 1186.81614,679 1187.43835,679 L1188.52721,679 C1189.14942,679 1189.61607,678.636364 1189.77162,678.054545 L1190.00495,676.454545 C1190.86049,676.236364 1191.63825,675.8 1192.26045,675.218182 L1193.81597,675.8 C1193.97152,675.8 1194.0493,675.872727 1194.20485,675.872727 C1194.67151,675.872727 1195.06039,675.654545 1195.29371,675.363636 L1195.83815,674.490909 C1196.14925,674.054545 1195.9937,673.472727 1195.52704,673.181818 L1195.52704,673.181818 Z M1187.98278,674.709091 C1185.80505,674.709091 1184.09398,673.109091 1184.09398,671 C1184.09398,668.890909 1185.80505,667.363636 1187.98278,667.363636 C1190.1605,667.363636 1191.94935,668.963636 1191.94935,671 C1191.94935,673.036364 1190.23828,674.709091 1187.98278,674.709091 L1187.98278,674.709091 Z" id="Shape-Copy" fill="#536D95"></path>
+            <path d="M525.5101,588.5 L526.4901,637.5 L1218.98595,637.5 L1218.98595,588.5 L525.5101,588.5 Z" id="Rectangle-17-Copy-3" stroke="#E0E5EE" fill="#FFFFFF"></path>
+            <path d="M525.5101,692.5 L526.4901,741.5 L1218.98595,741.5 L1218.98595,692.5 L525.5101,692.5 Z" id="Rectangle-17-Copy-5" stroke="#E0E5EE" fill="#FFFFFF"></path>
+            <path d="M504,588 L504,648" id="Line-2-Copy-2" stroke="#E0E5EE" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M504,693 L504,753" id="Line-2-Copy-3" stroke="#E0E5EE" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M483,545 L543,545 L543,588 L479,588 L479,549 C479,546.790861 480.790861,545 483,545 Z" id="Rectangle-6" fill="#F4F6F9"></path>
+            <path d="M483,649 L543,649 L543,692 L479,692 L479,653 C479,650.790861 480.790861,649 483,649 Z" id="Rectangle-6-Copy" fill="#F4F6F9"></path>
+            <path d="M531.284426,566 C531.537403,566 531.714487,566.325 531.512105,566.55 L527.1356,571.85 C526.983814,572.05 526.654943,572.05 526.503157,571.85 L522.076056,566.55 C521.898972,566.325 522.050759,566 522.329034,566 L531.284426,566 Z" id="down" fill="#16325C"></path>
+            <path d="M531.284426,670 C531.537403,670 531.714487,670.325 531.512105,670.55 L527.1356,675.85 C526.983814,676.05 526.654943,676.05 526.503157,675.85 L522.076056,670.55 C521.898972,670.325 522.050759,670 522.329034,670 L531.284426,670 Z" id="down-copy" fill="#16325C"></path>
+            <text id="AND" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                <tspan x="489" y="575">AND</tspan>
+            </text>
+            <text id="AND-Copy" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                <tspan x="489" y="679">AND</tspan>
+            </text>
+            <text id="579,101" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="1060" y="677">579,101</tspan>
+            </text>
+            <text id="VALUE-IS-IN-Copy" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="541" y="611">VALUE IS IN</tspan>
+            </text>
+            <text id="VALUE-IS-IN-Copy-2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="541" y="715">VALUE IS IN</tspan>
+            </text>
+            <text id="New-Parents" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="21" fill="#16325C">
+                <tspan x="541" y="730">New Parents</tspan>
+            </text>
+            <text id="Segments" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                <tspan x="580" y="678">Segments</tspan>
+            </text>
+            <rect id="Rectangle-17-Copy-4" stroke="#E0E5EE" fill="#FFFFFF" x="478.5" y="751.5" width="741" height="44"></rect>
+            <path d="M1187.98278,771.672727 C1186.58281,771.672727 1185.49395,772.690909 1185.49395,774 C1185.49395,775.309091 1186.58281,776.4 1187.98278,776.4 C1189.38274,776.4 1190.54938,775.309091 1190.54938,774 C1190.54938,772.690909 1189.38274,771.672727 1187.98278,771.672727 Z M1195.52704,776.181818 L1194.20485,775.090909 C1194.28263,774.727273 1194.3604,774.363636 1194.3604,774 C1194.3604,773.636364 1194.28263,773.2 1194.20485,772.836364 L1195.52704,771.818182 C1195.9937,771.454545 1196.14925,770.872727 1195.83815,770.363636 L1195.29371,769.418182 C1195.06039,769.127273 1194.67151,768.909091 1194.20485,768.909091 C1194.0493,768.909091 1193.97152,768.909091 1193.81597,768.981818 L1192.18268,769.563636 C1191.56047,768.981818 1190.78271,768.618182 1190.08273,768.4 L1189.77162,766.8 C1189.69385,766.290909 1189.14942,766 1188.60498,766 L1187.43835,766 C1186.89391,766 1186.34948,766.290909 1186.27171,766.8 L1185.9606,768.327273 C1185.18284,768.618182 1184.48286,768.981818 1183.78288,769.490909 L1182.14958,768.909091 C1181.99403,768.909091 1181.91626,768.836364 1181.7607,768.836364 C1181.37182,768.836364 1180.98294,769.054545 1180.74962,769.418182 L1180.12741,770.363636 C1179.89408,770.8 1179.97186,771.381818 1180.43851,771.745455 L1181.7607,772.763636 C1181.68293,773.127273 1181.68293,773.563636 1181.68293,773.927273 C1181.68293,774.363636 1181.68293,774.727273 1181.7607,775.090909 L1180.43851,776.109091 C1180.04963,776.472727 1179.89408,777.054545 1180.12741,777.490909 L1180.74962,778.436364 C1180.98294,778.8 1181.37182,779.018182 1181.7607,779.018182 C1181.91626,779.018182 1182.07181,778.945455 1182.14958,778.945455 L1183.78288,778.363636 C1184.48286,778.872727 1185.18284,779.236364 1185.9606,779.527273 L1186.19393,781.127273 C1186.34948,781.636364 1186.81614,782 1187.43835,782 L1188.52721,782 C1189.14942,782 1189.61607,781.636364 1189.77162,781.054545 L1190.00495,779.454545 C1190.86049,779.236364 1191.63825,778.8 1192.26045,778.218182 L1193.81597,778.8 C1193.97152,778.8 1194.0493,778.872727 1194.20485,778.872727 C1194.67151,778.872727 1195.06039,778.654545 1195.29371,778.363636 L1195.83815,777.490909 C1196.14925,777.054545 1195.9937,776.472727 1195.52704,776.181818 L1195.52704,776.181818 Z M1187.98278,777.709091 C1185.80505,777.709091 1184.09398,776.109091 1184.09398,774 C1184.09398,771.890909 1185.80505,770.363636 1187.98278,770.363636 C1190.1605,770.363636 1191.94935,771.963636 1191.94935,774 C1191.94935,776.036364 1190.23828,777.709091 1187.98278,777.709091 L1187.98278,777.709091 Z" id="Shape-Copy" fill="#536D95"></path>
+            <path d="M525.5101,795.5 L526.4901,844.5 L1218.98595,844.5 L1218.98595,795.5 L525.5101,795.5 Z" id="Rectangle-17-Copy-5" stroke="#E0E5EE" fill="#FFFFFF"></path>
+            <path d="M483,752 L543,752 L543,795 L479,795 L479,756 C479,753.790861 480.790861,752 483,752 Z" id="Rectangle-6-Copy" fill="#F4F6F9"></path>
+            <text id="AND-Copy" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                <tspan x="489" y="782">AND</tspan>
+            </text>
+            <text id="879,101" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="1060" y="780">879,101</tspan>
+            </text>
+            <text id="VALUE-IS-IN-Copy-2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="541" y="818">VALUE IS IN</tspan>
+            </text>
+            <text id="Climbing" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="21" fill="#16325C">
+                <tspan x="541" y="833">Climbing</tspan>
+            </text>
+            <text id="NTO-Product-Activity" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                <tspan x="580" y="781">NTO Product Activity</tspan>
+            </text>
+            <g id="Screen-Shot-2017-08-03-at-4.05.21-PM-Copy-8" transform="translate(556.000000, 763.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <image id="Screen-Shot-2017-08-03-at-4.05.21-PM" mask="url(#mask-2)" x="-1.88235294" y="-1.91304348" width="19.7647059" height="25.826087" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA2CAYAAACx1wu7AAAABGdBTUEAALGOGCHvlwAAAtRJREFUaAXtms9PE0EUx7/b7U9aoC0mBCWKxWDCQaOpBxONF09c+h948L/y6l/gyasxejIevEgCMdFIICFahOK2rO227iud3XFnrdvhudK4L4HOzo/3Pv3O7MwuD+OwZQ0wBZaaAsYhYgLKPVPpMId9t7L9o4tOt4fBIJ4lbBgGCpk0ZrIZhE2zAkqQTasTG6AQigQR4iwUCwqsAkqdadBcIY8LczMwU2HfT7jn+3T6fXxttdHqnAyBS66ysikUNN1kcUJSPBKEYpIJhuHF6JcCKtZkXErKMCKmYJDbFFC58TyVE1Du2UgUTRTlVoDbX7JG/1tFlYeS6Ep8x/NXn/H+9NEgfFjKwCX3/K6vLGOtYob3iVh7BtAIEfoD7B5a2H23hYVqBY9uLkE3oO64XymNNO4sz6IIx6s/smxsHtiwRzXNg294upnD4/Wq12eSAg+omcXda0vIBSI/xDFevt3Bm+PThub+F2xfr2JNYxXwbE/uQ2/4Up3Fg/pF1LwoDrb32oGvE+3ScxGtu06vMm6U/TAnjt47mO9BhyHimB69iI2slDFEcaLPWEAtxyc9sv+xouFrFOjtf8KL0c0EGFis5CdSUnTmuevdFzM1vI2PH/bwbKcjYgH5Iu5pbvw8oL02nrzekjbzPqxucIrTaNy+LPXx+aOUeEDdSHbX8Tb3YOB0No9GvYZacKMNdhxzzQPq/jnmynwOpntkepYyMV/IYHWxjKuVoletW+ABNQto3FpRTiZdqLBxPNvTb0+msJB6dTygerEnGpWATiRXhM48ivJ4GYt7hru+hI3769gY656vMQYteGATUB4dfS+Jor4WPKVEUR4dfS+KopRBI6O8T9wmYgoGOb4CSmk+MkpOiYHygL9VFgkx8i8Y5FjKyUS5SEpIUQaNfuI2UpMYgqaAksSUixR5ybDkVNAJx/WfkrZG8h8QHDJLPpSbSWo7V8WpAf0J04m85GlK2tcAAAAASUVORK5CYII="></image>
+            </g>
+            <g id="Group-11" transform="translate(478.000000, 428.000000)">
+                <rect id="Rectangle-17" stroke="#E0E5EE" fill="#FFFFFF" x="0.5" y="0.5" width="741" height="55"></rect>
+                <rect id="Rectangle-17-Copy" stroke="#E0E5EE" fill="#FFFFFF" x="48.5" y="55.5" width="693.485951" height="49"></rect>
+                <g id="Group-10" transform="translate(21.000000, 21.000000)" fill="#FFFFFF">
+                    <rect id="Rectangle-9" x="0" y="0" width="10" height="15"></rect>
+                </g>
+                <path d="M709.982777,25.6727273 C708.582811,25.6727273 707.493948,26.6909091 707.493948,28 C707.493948,29.3090909 708.582811,30.4 709.982777,30.4 C711.382744,30.4 712.549383,29.3090909 712.549383,28 C712.549383,26.6909091 711.382744,25.6727273 709.982777,25.6727273 Z M717.527042,30.1818182 L716.204851,29.0909091 C716.282627,28.7272727 716.360403,28.3636364 716.360403,28 C716.360403,27.6363636 716.282627,27.2 716.204851,26.8363636 L717.527042,25.8181818 C717.993697,25.4545455 718.149249,24.8727273 717.838145,24.3636364 L717.293714,23.4181818 C717.060386,23.1272727 716.671507,22.9090909 716.204851,22.9090909 C716.049299,22.9090909 715.971523,22.9090909 715.815972,22.9818182 L714.182677,23.5636364 C713.56047,22.9818182 712.782711,22.6181818 712.082727,22.4 L711.771624,20.8 C711.693848,20.2909091 711.149416,20 710.604985,20 L709.438346,20 C708.893915,20 708.349483,20.2909091 708.271707,20.8 L707.960603,22.3272727 C707.182844,22.6181818 706.482861,22.9818182 705.782878,23.4909091 L704.149583,22.9090909 C703.994031,22.9090909 703.916256,22.8363636 703.760704,22.8363636 C703.371824,22.8363636 702.982945,23.0545455 702.749617,23.4181818 L702.127409,24.3636364 C701.894082,24.8 701.971858,25.3818182 702.438513,25.7454545 L703.760704,26.7636364 C703.682928,27.1272727 703.682928,27.5636364 703.682928,27.9272727 C703.682928,28.3636364 703.682928,28.7272727 703.760704,29.0909091 L702.438513,30.1090909 C702.049633,30.4727273 701.894082,31.0545455 702.127409,31.4909091 L702.749617,32.4363636 C702.982945,32.8 703.371824,33.0181818 703.760704,33.0181818 C703.916256,33.0181818 704.071807,32.9454545 704.149583,32.9454545 L705.782878,32.3636364 C706.482861,32.8727273 707.182844,33.2363636 707.960603,33.5272727 L708.193931,35.1272727 C708.349483,35.6363636 708.816139,36 709.438346,36 L710.527209,36 C711.149416,36 711.616072,35.6363636 711.771624,35.0545455 L712.004951,33.4545455 C712.860487,33.2363636 713.638246,32.8 714.260453,32.2181818 L715.815972,32.8 C715.971523,32.8 716.049299,32.8727273 716.204851,32.8727273 C716.671507,32.8727273 717.060386,32.6545455 717.293714,32.3636364 L717.838145,31.4909091 C718.149249,31.0545455 717.993697,30.4727273 717.527042,30.1818182 L717.527042,30.1818182 Z M709.982777,31.7090909 C707.805052,31.7090909 706.093981,30.1090909 706.093981,28 C706.093981,25.8909091 707.805052,24.3636364 709.982777,24.3636364 C712.160503,24.3636364 713.949349,25.9636364 713.949349,28 C713.949349,30.0363636 712.238279,31.7090909 709.982777,31.7090909 L709.982777,31.7090909 Z" id="Shape" fill="#536D95"></path>
+                <path d="M26,56 L26,116" id="Line-2-Copy" stroke="#E0E5EE" stroke-width="2" stroke-linecap="square"></path>
+                <text id="VALUE-IS-IN-Copy-3" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                    <tspan x="58" y="76">VALUE IS IN</tspan>
+                </text>
+                <text id="Mens" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="21" fill="#16325C">
+                    <tspan x="58" y="91">Mens</tspan>
+                </text>
+                <text id="Jackets" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="21" fill="#16325C">
+                    <tspan x="178" y="91">Jackets</tspan>
+                </text>
+                <text id="Category" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                    <tspan x="37" y="35">Category</tspan>
+                </text>
+                <text id="1X7" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                    <tspan x="307" y="35">1X7</tspan>
+                </text>
+                <g id="Screen-Shot-2017-08-03-at-4.05.21-PM-Copy-5" transform="translate(13.000000, 17.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <image id="Screen-Shot-2017-08-03-at-4.05.21-PM" mask="url(#mask-4)" x="-1.88235294" y="-1.91304348" width="19.7647059" height="25.826087" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA2CAYAAACx1wu7AAAABGdBTUEAALGOGCHvlwAAAtRJREFUaAXtms9PE0EUx7/b7U9aoC0mBCWKxWDCQaOpBxONF09c+h948L/y6l/gyasxejIevEgCMdFIICFahOK2rO227iud3XFnrdvhudK4L4HOzo/3Pv3O7MwuD+OwZQ0wBZaaAsYhYgLKPVPpMId9t7L9o4tOt4fBIJ4lbBgGCpk0ZrIZhE2zAkqQTasTG6AQigQR4iwUCwqsAkqdadBcIY8LczMwU2HfT7jn+3T6fXxttdHqnAyBS66ysikUNN1kcUJSPBKEYpIJhuHF6JcCKtZkXErKMCKmYJDbFFC58TyVE1Du2UgUTRTlVoDbX7JG/1tFlYeS6Ep8x/NXn/H+9NEgfFjKwCX3/K6vLGOtYob3iVh7BtAIEfoD7B5a2H23hYVqBY9uLkE3oO64XymNNO4sz6IIx6s/smxsHtiwRzXNg294upnD4/Wq12eSAg+omcXda0vIBSI/xDFevt3Bm+PThub+F2xfr2JNYxXwbE/uQ2/4Up3Fg/pF1LwoDrb32oGvE+3ScxGtu06vMm6U/TAnjt47mO9BhyHimB69iI2slDFEcaLPWEAtxyc9sv+xouFrFOjtf8KL0c0EGFis5CdSUnTmuevdFzM1vI2PH/bwbKcjYgH5Iu5pbvw8oL02nrzekjbzPqxucIrTaNy+LPXx+aOUeEDdSHbX8Tb3YOB0No9GvYZacKMNdhxzzQPq/jnmynwOpntkepYyMV/IYHWxjKuVoletW+ABNQto3FpRTiZdqLBxPNvTb0+msJB6dTygerEnGpWATiRXhM48ivJ4GYt7hru+hI3769gY656vMQYteGATUB4dfS+Jor4WPKVEUR4dfS+KopRBI6O8T9wmYgoGOb4CSmk+MkpOiYHygL9VFgkx8i8Y5FjKyUS5SEpIUQaNfuI2UpMYgqaAksSUixR5ybDkVNAJx/WfkrZG8h8QHDJLPpSbSWo7V8WpAf0J04m85GlK2tcAAAAASUVORK5CYII="></image>
+                </g>
+                <text id="1,328,675" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                    <tspan x="574" y="35">1,328,675</tspan>
+                </text>
+            </g>
+            <text id="929,091" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="1060" y="575">929,091</tspan>
+            </text>
+            <text id="Netflix" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="21" fill="#16325C">
+                <tspan x="541" y="626">Netflix</tspan>
+            </text>
+            <text id="NTO-Housing:-Members" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                <tspan x="580" y="575">NTO Housing: Memberships</tspan>
+            </text>
+            <image id="Bitmap" x="549" y="660" width="22" height="22" xlink:href="data:image/png;base64,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"></image>
+            <g id="Button-New-Copy" transform="translate(478.000000, 1003.000000)">
+                <rect id="Rectangle-827" fill="#0070D2" x="0" y="0" width="161" height="32.159601" rx="4"></rect>
+                <text id="Continue-&amp;-Edit-Deta" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="16" y="19.0648379">Continue &amp; Edit Details</tspan>
+                </text>
+            </g>
+            <g id="Button-New-Copy-7" transform="translate(649.000000, 1003.000000)">
+                <rect id="Rectangle-827" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="69" height="31.159601" rx="4"></rect>
+                <text id="Cancel" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                    <tspan x="16" y="19.0072836">Cancel</tspan>
+                </text>
+            </g>
+            <g id="Button-New-Copy-3" transform="translate(478.000000, 930.000000)">
+                <rect id="Rectangle-827" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="113" height="47.2394015" rx="4"></rect>
+                <g id="Group-7" transform="translate(19.000000, 13.054863)" fill="#0070D2">
+                    <g id="Group-8">
+                        <text id="Add-Group" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="0" y="14.9973085">Add Group</tspan>
+                        </text>
+                        <path d="M76.2844256,10.0598504 C76.5374028,10.0598504 76.7144868,10.3864713 76.5121051,10.6125935 L72.1355999,15.9390274 C71.9838136,16.1400249 71.6549433,16.1400249 71.503157,15.9390274 L67.0760564,10.6125935 C66.8989724,10.3864713 67.0507587,10.0598504 67.3290336,10.0598504 L76.2844256,10.0598504 Z" id="down"></path>
+                    </g>
+                </g>
+            </g>
+            <g id="Button-New-Copy-2" transform="translate(478.000000, 860.000000)">
+                <rect id="Rectangle-827" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="190" height="47.2394015" rx="4"></rect>
+                <g id="Group-7" transform="translate(36.000000, 13.054863)" fill="#0070D2">
+                    <g id="Group-8">
+                        <text id="Add-Rule-Operator" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="0" y="14.9973085">Add Rule Operator</tspan>
+                        </text>
+                        <path d="M119.284426,10.0598504 C119.537403,10.0598504 119.714487,10.3864713 119.512105,10.6125935 L115.1356,15.9390274 C114.983814,16.1400249 114.654943,16.1400249 114.503157,15.9390274 L110.076056,10.6125935 C109.898972,10.3864713 110.050759,10.0598504 110.329034,10.0598504 L119.284426,10.0598504 Z" id="down"></path>
+                    </g>
+                </g>
+            </g>
+            <g id="Screen-Shot-2017-08-03-at-4.05.21-PM-Copy" transform="translate(556.000000, 557.000000)">
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <g id="Mask"></g>
+                <image id="Screen-Shot-2017-08-03-at-4.05.21-PM" mask="url(#mask-6)" x="-1.88235294" y="-1.91304348" width="19.7647059" height="25.826087" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA2CAYAAACx1wu7AAAABGdBTUEAALGOGCHvlwAAAtRJREFUaAXtms9PE0EUx7/b7U9aoC0mBCWKxWDCQaOpBxONF09c+h948L/y6l/gyasxejIevEgCMdFIICFahOK2rO227iud3XFnrdvhudK4L4HOzo/3Pv3O7MwuD+OwZQ0wBZaaAsYhYgLKPVPpMId9t7L9o4tOt4fBIJ4lbBgGCpk0ZrIZhE2zAkqQTasTG6AQigQR4iwUCwqsAkqdadBcIY8LczMwU2HfT7jn+3T6fXxttdHqnAyBS66ysikUNN1kcUJSPBKEYpIJhuHF6JcCKtZkXErKMCKmYJDbFFC58TyVE1Du2UgUTRTlVoDbX7JG/1tFlYeS6Ep8x/NXn/H+9NEgfFjKwCX3/K6vLGOtYob3iVh7BtAIEfoD7B5a2H23hYVqBY9uLkE3oO64XymNNO4sz6IIx6s/smxsHtiwRzXNg294upnD4/Wq12eSAg+omcXda0vIBSI/xDFevt3Bm+PThub+F2xfr2JNYxXwbE/uQ2/4Up3Fg/pF1LwoDrb32oGvE+3ScxGtu06vMm6U/TAnjt47mO9BhyHimB69iI2slDFEcaLPWEAtxyc9sv+xouFrFOjtf8KL0c0EGFis5CdSUnTmuevdFzM1vI2PH/bwbKcjYgH5Iu5pbvw8oL02nrzekjbzPqxucIrTaNy+LPXx+aOUeEDdSHbX8Tb3YOB0No9GvYZacKMNdhxzzQPq/jnmynwOpntkepYyMV/IYHWxjKuVoletW+ABNQto3FpRTiZdqLBxPNvTb0+msJB6dTygerEnGpWATiRXhM48ivJ4GYt7hru+hI3769gY656vMQYteGATUB4dfS+Jor4WPKVEUR4dfS+KopRBI6O8T9wmYgoGOb4CSmk+MkpOiYHygL9VFgkx8i8Y5FjKyUS5SEpIUQaNfuI2UpMYgqaAksSUixR5ybDkVNAJx/WfkrZG8h8QHDJLPpSbSWo7V8WpAf0J04m85GlK2tcAAAAASUVORK5CYII="></image>
+                <rect id="Rectangle-9" fill="#FFFFFF" mask="url(#mask-6)" x="3" y="4" width="10" height="15"></rect>
+                <text id="U" mask="url(#mask-6)" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="12" font-weight="bold" fill="#8ABED5">
+                    <tspan x="4" y="18">U</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
