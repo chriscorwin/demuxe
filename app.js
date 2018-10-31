@@ -86,6 +86,11 @@ appUse.push(
 	}),
 	express.static(path.join(__dirname, 'your-code-here'))
 );
+
+appUse.push(
+	express.static(path.join(__dirname, 'test'))
+);
+
 app.use(appUse);
 
 const router = express.Router();
@@ -121,30 +126,27 @@ router.get('/*', (req, res) => {
 			if (!err) error = false;
 			fs.access(path.join(__dirname, 'engine', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 				if (!err) error = false;
-				fs.access(path.join(__dirname, 'test', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
-					if (!err) error = false;
-					if (error) {
-						// find out if it's a slug in our magick-flows
-						let thisUrlSlug = fileName.replace('.ejs', '');
-						if (config.demoMagickFlowUrlSlugs.includes(thisUrlSlug) ) {
-							config.urlSlug = thisUrlSlug;
-							res.render('flow', { ...config, sanitizedQueryParams: sanitizedQueryParams });
-						} else {
-							res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
-								if (req.url.match(/\.css$/)) {
-									res.set('Content-Type', 'text/css');
-								}
-								if (req.url.match(/\.js$/)) {
-									res.set('Content-Type', 'application/javascript');
-									res.set('X-Your-Mom', config);
-								}
-								res.send(html);
-							});
-						}
+				if (error) {
+					// find out if it's a slug in our magick-flows
+					let thisUrlSlug = fileName.replace('.ejs', '');
+					if (config.demoMagickFlowUrlSlugs.includes(thisUrlSlug) ) {
+						config.urlSlug = thisUrlSlug;
+						res.render('flow', { ...config, sanitizedQueryParams: sanitizedQueryParams });
 					} else {
-						res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams });
+						res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+							if (req.url.match(/\.css$/)) {
+								res.set('Content-Type', 'text/css');
+							}
+							if (req.url.match(/\.js$/)) {
+								res.set('Content-Type', 'application/javascript');
+								res.set('X-Your-Mom', config);
+							}
+							res.send(html);
+						});
 					}
-				});
+				} else {
+					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams });
+				}
 			});
 		});
 	});
