@@ -1,6 +1,6 @@
 {
-	"brandTheme": "nto",
-	"demoName": "ROI DF 18",
+	"brandTheme": "bbva",
+	"demoName": "BBVA DF 18",
 	"demoVersion": "0.1",
 	"demoMagickFlows": {},
 	"demoMagickFlowUrlSlugs": [],
@@ -8,13 +8,13 @@
 	"env": "production",
 	"productTemplate": "dmp",
 	"prod": {
-		"host": "https://roi-einstein-df18.herokuapp.com/"
+		"host": "https://dmp-dreamforce-2018.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://roi-einstein-df18-qa.herokuapp.com/"
+		"host": "https://dmp-dreamforce-2018-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://roi-einstein-df18-dev.herokuapp.com/"
+		"host": "https://dmp-dreamforce-2018-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"

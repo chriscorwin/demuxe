@@ -10,9 +10,18 @@ const differencify = new Differencify({
 	mismatchThreshold: settings.tests.mismatchThreshold || 0.001
 });
 
-const getMatchOptions = (step) => ({
-	imgName: `dmp.bbva.${step}`
-});
+let slides = [];
+const getMatchOptions = (step) => {
+	const imgName = `dmp.bbva.${step}`;
+	slides.push(`
+	---
+	![](${settings.dev.host}screenshots/${imgName}.png){.background}
+`);
+
+	return {
+		imgName
+	}
+};
 
 const getScreenshotOptions = () => ({
 	fullPage: true
@@ -24,6 +33,7 @@ describe('DMP Demo Flow', function () {
 
 	it('should be entirely navicable', async function () {
 		let hasError = false;
+
 		const handleResult = (success) => {
 			if (!success) {
 				hasError = true;
@@ -65,7 +75,7 @@ describe('DMP Demo Flow', function () {
 			.toMatchSnapshot(getMatchOptions('0101.data-capture-sources'))
 			.result(handleResult)
 			// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
-			.click('#screenshot')
+			.click('#content a')
 			.waitFor('body')
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0200.consumer-rights-management-page'))
@@ -116,6 +126,8 @@ describe('DMP Demo Flow', function () {
 			.close()
 			.end();
 		await differencify.cleanup();
+
+		console.log(slides);
 
 		hasError.should.be.false;
 	})
