@@ -50,6 +50,13 @@
 				<div class="slds-col_bump-left slds-p-right_medium">
 					<button class="slds-button slds-button_neutral"><%=locals.subHeaderButtonLabel%></button>
 				</div>
+			<% } else if (locals.subHeaderVariant === 'hasText') { %>
+				<div class="slds-col_bump-left slds-p-right_medium">
+					<%= (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text) 
+					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text) 
+					|| locals.sub_header_text
+					|| '' %>
+				</div>
 			<% } %>
 
 				

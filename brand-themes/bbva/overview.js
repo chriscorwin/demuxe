@@ -125,8 +125,10 @@ module.exports = {
 			title: 'Data Capture Sources',
 			view_all_buttons: [
 				{
+					id: 'view-all-data-capture-sources',
 					text: 'View All Data Capture Sources',
-					href: 'javascript:void(0);'
+					href: 'javascript:void(0);',
+					onclick: "navigatePage('/consumer-rights-management');"
 				}
 			]
 		},

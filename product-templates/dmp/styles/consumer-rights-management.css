@@ -1,0 +1,27 @@
+#content {
+	color: #54698D;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h2 img.slds-m-right_small {
+	margin-top: -5px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+#consent-sources-chart-legend {
+	width: 100%;
+}
+
+.circle {
+	border-radius: 12px;
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 5px 8px 0 0;
+}

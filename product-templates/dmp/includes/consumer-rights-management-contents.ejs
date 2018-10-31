@@ -1,0 +1,116 @@
+<div class="slds-p-left_medium">Define your consent collection settings, as well as manage consent changes, raise data deletion and portability requests.</div>
+<div id="content" class="slds-p-vertical_medium slds-container_large">
+	<div class="slds-grid slds-wrap slds-gutters slds-grid_pull-padded-medium slds-grid_vertical-stretch">
+		<div class="slds-col slds-size_1-of-3 slds-p-around_medium slds-m-bottom_large" style="border: 1px solid #E0E5EE; border-radius: 4px 0 0 4px;">
+			<h3>Consent Sources <img class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h3>
+			<div id="consent-sources-chart" style="width:100%; height:200px;"></div>
+			<div class="slds-grid slds-wrap" id="consent-sources-chart-legend">
+				<% locals.localization.consumer_rights_management.consent_sources.forEach((source) => { %>
+				<div class="slds-col slds-size_1-of-2"><div class="circle" style="background-color: <%= source.color %>;"></div> <%= source.name %></div>
+				<% }) %>
+				
+			</div>
+		</div>
+		<div class="slds-col slds-size_2-of-3 slds-p-around_medium slds-m-bottom_large" style="border: 1px solid #E0E5EE; border-style: solid solid solid none; border-radius: 0 4px 4px 0;">
+			<h3>Consent Distribution <img class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h3>
+			<div class="slds-grid slds-wrap slds-m-top_large" id="consent-distribution-graph"></div>
+			<div class="slds-grid slds-wrap slds-m-top_small" id="consent-distribution-graph-legend">
+				<div class="slds-col slds-size_1-of-3"></div>
+				<div class="slds-col slds-size_1-of-3"><div class="circle" style="background-color: #C398F5;"></div> Consented Population</div>
+				<div class="slds-col slds-size_1-of-3"><div class="circle" style="background-color: #D8DDE6;"></div> Non-consented Population</div>
+			</div>
+		</div>
+		<div class="slds-col slds-p-right_medium slds-size_2-of-4">
+			<div class="slds-p-around_medium" style="border: 1px solid #E0E5EE; border-radius: 4px; height: 200px;">
+				<h2 class="slds-m-bottom_medium"><img class="slds-m-right_small" src="/images/icons/calibration.svg" height="32px" width="32px" />Configuration <img width="14px" height="14px" class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h2>
+				<p class="slds-m-bottom_medium">Define default settings for how consent is managed in your organization.</p>
+				<p>LAST UPDATED: <%= locals.localization.consumer_rights_management.last_updated %></p>
+				<button style="margin-top: 33px;float: right;" class="slds-button slds-button_neutral">Edit Configuration</button>
+			</div>
+		</div>
+		<div class="slds-col slds-size_2-of-4">
+			<div class="slds-p-around_medium" style="border: 1px solid #E0E5EE; border-radius: 4px; height: 200px;">
+				<h2 class="slds-m-bottom_medium"><img class="slds-m-right_small" src="/images/icons/shield.svg" height="32px" width="32px" />Consumer Rights Requests <img width="14px" height="14px" class="slds-m-left_xx-small" src="/images/icons/info.svg" /></h2>
+				<p>Update consent settings, request data deletion or portability feeds for data subjects.</p>
+				<button style="margin-top: 68px;float: right;" class="slds-button slds-button_neutral">Raise a new request
+					<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.svg" />
+				</button>
+				<button style="margin-top: 68px;float: right;" class="slds-button slds-button_neutral slds-m-right_small">View all requests</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+const getConsentSourcesData = () => {
+	return [
+		{
+			data: <%- JSON.stringify(locals.localization.consumer_rights_management.consent_sources) %>,
+			size: '80%',
+			innerSize: '70%'
+		}
+	];
+};
+
+// Gets options for the Cumulative 1st Party Overview chart
+const getConsentSourcesOptions = () => {
+	return {
+		legend: {
+			verticalAlign: 'bottom',
+			enabled: true
+		},
+		title: {
+			text: ''
+		},
+		chart: {
+			type: 'pie',
+			height: 200,
+			style: {
+				fontFamily: 'Salesforce Sans'
+			}
+		},
+		plotOptions: {
+			pie: {
+				shadow: false,
+				center: ['50%', '50%'],
+				dataLabels: {
+					enabled: false
+				}
+			},
+			series: {
+				animation: {
+					duration: 2000
+				}
+			}
+		},
+		series: getConsentSourcesData()
+	};
+};
+
+Highcharts.setOptions({credits: { enabled: false }});
+const consentSourcesChart = Highcharts.chart('consent-sources-chart', getConsentSourcesOptions());
+
+
+const makeGraphLine = (data) => (`
+	<div class="slds-col slds-size_1-of-1 slds-grid">
+		<div class="slds-col slds-size_1-of-5 slds-p-right_medium" style="text-align: right;">${data.label}</div>
+		<div class="slds-col slds-size_4-of-5"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="550" height="30" viewBox="0 0 550 30">
+			<g transform="scale(1,-1) translate(0,-30)">
+				<rect x="0" y="10" fill="#D8DDE6" width="550" height="30"></rect>
+				<rect x="0" y="10" fill="#C398F5" height="30" stroke="#fff" stroke-width="2">
+					<animate attributeName="width" from="0" to="${data.width}" dur="0.5s" fill="freeze"/>
+					<animate attributeName="stroke-dasharray" from="0, 0, 30" to="0, ${data.width}, 30" dur="0.5s" fill="freeze" />
+					<animate attributeName="" from="0" to="2" dur="1s" fill="freeze" />
+				</rect>
+			</g>
+		</svg></div>
+	</div>`);
+
+const graphLines = <%- JSON.stringify(locals.localization.consumer_rights_management.consent_distribution) %>;
+
+const makeGraphLines = () => graphLines.reduce((lines, line) => lines + makeGraphLine(line), '');
+
+
+document.querySelector('#consent-distribution-graph').innerHTML = makeGraphLines();
+
+</script>
