@@ -70,13 +70,9 @@
 </div>
 
 <script>
-const navigate = (location) => {
-	window.location = location;
-};
-
 const actionButtons = `<%- locals.localization.einstein_segmentation.actions.reduce((html, action) => html + `<div class="slds-p-horizontal_xx-small" style="margin: 0 auto; width: 276px;">
         <button 
-            ${action.onclick ? `onclick="navigate('${action.onclick}')" ` : ''}
+            ${action.onclick ? `onclick="navigatePage('${action.onclick}')" ` : ''}
             id="confirm" 
             type="submit" 
             class="slds-button slds-button_brand" 

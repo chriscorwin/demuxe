@@ -4,11 +4,6 @@ const switchAccount = ( data ) => {
 	// $ss.click( );
 }
 
-// Keep the host and doesn’t show up when we hover on links, use this instead of href! execs hate to see “heroku” up there
-const navigatePage = ( url ) => {
-	window.location.href = url;
-}
-
 const makeCloudIconForJourneyBuilder = ( data ) => {
 	if ( data.pageVersion === '201' && data.appName === 'Journey Builder' ) {
 		return (`

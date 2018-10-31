@@ -189,12 +189,10 @@ body {
   color: #16325C;
   background: transparent;
   border: 0 none;
-  border-bottom: 1px solid #D8DDE6;
 }
 
 #personaName:focus, #personaName:active {
   border: 0 none;
-  border-bottom: 1px solid #0070D2;
   outline: none;
 }
 

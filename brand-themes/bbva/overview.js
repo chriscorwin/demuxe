@@ -4,8 +4,8 @@ module.exports = {
 			title: 'Audience Population',
 			img: '/images/slices/index.audience-segments-population.svg',
 			tabs: [
-				{ label: 'This Month (Aug 1 &mdash; Aug 7, 2018)' },
-				{ label: 'Last Month (Jul 1 &mdash; Jul 31, 2018)' }
+				{ label: 'This Month (Sep 1 &mdash; Sep 23, 2018)' },
+				{ label: 'Last Month (Aug 1 &mdash; Aug 31, 2018)' }
 			]
 		},
 		activated_segments : {
@@ -19,11 +19,11 @@ module.exports = {
 				'IMPRESSIONS'
 			],
 			segments: [
-				{label: '<img src="/images/icons/dollar.svg" /> Gold Customers_2018_High propensity shoppers', number: '5.2M', width: 362},
-				{label: 'Loyal_Shoppers_2016-2017_potential target', number: '4.7M', width: 308},
-				{label: '<img src="/images/icons/dollar.svg" /> Heavy spenders', number: '4M', width: 290},
-				{label: 'Deals_clicks_converts_group_deal-shoppers_2018', number: '3.7M', width: 270},
-				{label: 'Early_adopters', number: '2.3M', width: 186}
+				{label: 'Mortgage Applicants 2018', number: '5.2M', width: 362},
+				{label: 'Corporate Customers - Risk Management', number: '4.7M', width: 308},
+				{label: 'Loan Expert Seekers', number: '4M', width: 290},
+				{label: 'Mortgage Aspirants', number: '3.7M', width: 270},
+				{label: 'Credit Card Members - Optimizer Card', number: '2.3M', width: 186}
 			],
 			title: 'Activated Segments',
 			view_all: {
@@ -128,7 +128,7 @@ module.exports = {
 					id: 'view-all-data-capture-sources',
 					text: 'View All Data Capture Sources',
 					href: 'javascript:void(0);',
-					onclick: "navigatePage('/consumer-rights-management');"
+					onclick: "navigatePage('/manage/data-capture/sources');"
 				}
 			]
 		},
@@ -184,11 +184,11 @@ module.exports = {
 			],
 			table_rows: [
 				{partner: 'ACTIVATION PARTNERS', type: 'REFRESH TYPE', sent: 'DEVICES SENT'},
-				{partner: '<img src="/images/logos/logo-dblclick-bm.svg" />', type: 'Full', sent: '9M'},
-				{partner: '<img src="/images/logos/sf.svg" />', type: 'Full', sent: '8.75M'},
-				{partner: '<img src="/images/logos/appnexus.svg" />', type: 'Incremental', sent: '7M'},
-				{partner: '<img src="/images/logos/youtube.svg" />', type: 'Incremental', sent: '6.8M'},
-				{partner: '<img src="/images/logos/pinterest.svg" />', type: 'Full', sent: '6M'}
+				{partner: '<img src="/images/logos/logo-google-ads.svg" />', type: 'Full', sent: '5M'},
+				{partner: '<img src="/images/logos/sf.svg" />', type: 'Full', sent: '3.1M'},
+				{partner: '<img src="/images/logos/appnexus.svg" />', type: 'Incremental', sent: '2.8M'},
+				{partner: '<img src="/images/logos/youtube.svg" />', type: 'Incremental', sent: '2.5M'},
+				{partner: '<img src="/images/logos/pinterest.svg" />', type: 'Full', sent: '1.8M'}
 			],
 			title: 'Activation Partners',
 			view_all: {
