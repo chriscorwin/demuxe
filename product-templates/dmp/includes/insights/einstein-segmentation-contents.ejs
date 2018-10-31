@@ -68,3 +68,22 @@
     </div>
 </div>
 </div>
+
+<script>
+const navigate = (location) => {
+	window.location = location;
+};
+
+const actionButtons = `<%- locals.localization.einstein_segmentation.actions.reduce((html, action) => html + `<div class="slds-p-horizontal_xx-small" style="margin: 0 auto; width: 276px;">
+        <button 
+            ${action.onclick ? `onclick="navigate('${action.onclick}')" ` : ''}
+            id="confirm" 
+            type="submit" 
+            class="slds-button slds-button_brand" 
+            value="${action.text}">${action.text}</button>
+    </div>`, ''); %>`;
+
+// interactive force radial graph
+// http://bl.ocks.org/Guerino1/2879486
+const graph = <%- JSON.stringify(locals.localization.einstein_segmentation.personas_graph_data) %>;
+</script>

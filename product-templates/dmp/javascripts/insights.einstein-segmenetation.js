@@ -1,131 +1,3 @@
-const navigate = () => {
-	window.location = `/segments/manage-segments/details-and-activation`;
-};
-
-// interactive force radial graph
-// http://bl.ocks.org/Guerino1/2879486
-const graph = {
-	nodes: [
-		{
-			id: 'p1',
-			rank: 1,
-			value: 'Persona 01',
-			devices: 345427,
-			cpm: 1.75,
-			r: 70,
-			attributes: [
-				{
-					party: 2,
-					main: 'www.coastalliving.com/travel',
-					stats: 'Frequency: 20  ・Recency < 90 days'
-				},
-				{
-					party: 2,
-					main: '...travelchannel.com/interests/beaches'
-				},
-				{
-					party: 2,
-					main: 'Beach Campers'
-				},
-				{
-					party: 1,
-					main: 'Category: Travel Accessories',
-					stats: 'Frequency: 15  ・Recency < 180 days',
-					cpm: true // This forces CPM to show in panel header
-				},
-				{
-					party: 1,
-					main: 'XDiavel S Explorers'
-				}
-			]
-		},
-		{
-			id: 'p2',
-			rank: 2,
-			value: 'Persona 04',
-			devices: 54395,
-			cpm: 1.52,
-			r: 40,
-			attributes: [
-				{ party: 2, main: 'Memberships: Netflix', cmp: true },
-				{ party: 3, main: 'TV Shows: Family Guy', cmp: true }
-			]
-		},
-		{
-			id: 'p3',
-			rank: 3,
-			value: 'Persona 02',
-			devices: 267942,
-			cpm: 2.81,
-			r: 40,
-			attributes: [
-				{
-					party: 1,
-					main: 'Category: Mens',
-					stats: 'Frequency: 1  ・Recency < 7 days'
-				},
-				{
-					party: 1,
-					main: 'Housing/New Homeowners',
-					stats: 'Frequency: 1  ・Recency < 120 days'
-				},
-				{ party: 2, main: 'Memberships: Netflix', cmp: true },
-				{ party: 3, main: 'TV Shows: Family Guy', cmp: true },
-				{ party: 3, main: 'NTO Product Activity: Climbing' }
-			]
-		},
-		{
-			id: 'p4',
-			rank: 4,
-			value: 'Persona 03',
-			devices: 95437,
-			cpm: 1.02,
-			r: 30,
-			attributes: [
-				{
-					party: 1,
-					main: 'Category: Womens',
-					stats: 'Frequency: 1  ・Recency < 7 days'
-				},
-				{ party: 3, main: 'New Parents' }
-			]
-		},
-		{
-			id: 'p5',
-			rank: 5,
-			value: 'Persona 05',
-			devices: 591308,
-			cpm: 3.69,
-			r: 20,
-			attributes: [
-				{
-					party: 1,
-					main: 'Category: Womens',
-					stats: 'Frequency: 1  ・Recency < 7 days'
-				},
-				{
-					party: 1,
-					main: 'Housing/New Homeowners',
-					stats: 'Frequency: 1  ・Recency < 120 days'
-				},
-				{ party: 2, main: 'Memberships: Netflix', cmp: true },
-				{ party: 3, main: 'TV Shows: Family Guy', cmp: true },
-				{ party: 3, main: 'New Parents' },
-				{ party: 3, main: 'NTO Product Activity: Climbing' }
-			]
-		}
-	],
-	links: [
-		{ source: 'p1', target: 'p4', overlap: 13 },
-		{ source: 'p1', target: 'p5', overlap: 18 },
-		{ source: 'p5', target: 'p2', overlap: 25 },
-		{ source: 'p5', target: 'p3', overlap: 13 },
-		{ source: 'p4', target: 'p2', overlap: 18 },
-		{ source: 'p4', target: 'p3', overlap: 15 },
-		{ source: 'p3', target: 'p2', overlap: 13 }
-	]
-};
-
 var active = graph.nodes[0];
 var d3 = d3;
 
@@ -143,9 +15,9 @@ var height = window
 var charge = d3.forceManyBody();
 charge.strength(-5000);
 
+const partyNumbers = ['','1st', '2nd', '3rd'];
+const partyColors = ['', 'purple', 'blue', 'green'];
 var buildAttribute = function buildAttribute(html, attr) {
-	var partyColors = ['', 'purple', 'blue', 'green'];
-
 	var stats = attr.stats ? `<div class="stats">${attr.stats}</div>` : '';
 
 	var className = attr.cmp ? ' dolla' : '';
@@ -220,6 +92,16 @@ var fillForm = function fillForm(d) {
 		</div>
 	`;
 
+	// get unique parties.
+	// Filter each of the attributes, searching the attributes array to find the index of the
+	// very first instance of an attribute with the party matching focusAttribute's party to see if 
+	// focusAttribute is the first attribute with that party. If so, it gets added to the filtered
+	// parties array, otherwise it is ignored. Reduce the results further to extract just the party number
+	// and then sort the final array so that it displays in an intelligent order
+	const usedParties = d.attributes.filter((focusAttribute, i, attributes) => attributes.indexOf(
+			attributes.find((potentialMatch) => focusAttribute.party === potentialMatch.party)
+	) === i).reduce((partyNumbers, party) => [ ...partyNumbers, party.party ], []).sort();
+
 	formContents += `
 		<div id="formBody" class="slds-p-horizontal_medium slds-p-bottom_small slds-p-top_xx-small">
 			<p id="formBodyHead" class="slds-m-vertical_small">Attributes that define this persona</p>
@@ -228,15 +110,11 @@ var fillForm = function fillForm(d) {
 			</ul>
 			<div id="key" class="slds-p-around_medium">
 				<ul class="slds-list_horizontal slds-align_absolute-center">
-					<li class="purple">1st Party</li>
-					<li class="blue">2nd Party</li>
-					<li class="green">3rd Party</li>
+					${usedParties.map((party) => `<li class="${partyColors[party]}">${partyNumbers[party]} Party</li>`)}
 				</ul>
 			</div>
 			<div id="actions">
-				<div class="slds-p-horizontal_xx-small" style="margin: 0 auto; width: 276px;">
-					<button onclick="navigate()" id="confirm" type="submit" class="slds-button slds-button_brand" value="Create a new segment using this persona">Create a new segment using this persona</button>
-				</div>
+				${actionButtons}
 			</div>
 		</div>
 	`;
