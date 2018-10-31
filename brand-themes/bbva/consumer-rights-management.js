@@ -1,11 +1,11 @@
 module.exports = {
 	consent_distribution: [
-		{label: 'Data Collection', width: 460},
-		{label: 'Targeting', width: 339},
-		{label: 'Analytics', width: 106},
-		{label: 'Data Sharing', width: 324},
-		{label: 'Data Selling', width: 85},
-		{label: 'Re-Identification', width: 92}
+		{label: 'Data Collection', width: 530},
+		{label: 'Targeting', width: 430},
+		{label: 'Analytics', width: 400},
+		{label: 'Data Sharing', width: 415},
+		{label: 'Data Provisioning', width: 240},
+		{label: 'Re-Identification', width: 200}
 	],
 	consent_sources: [
 		{
@@ -25,5 +25,8 @@ module.exports = {
 		}
 	],
 	last_updated: 'Aug 12, 2018',
-	sub_header_text: 'As of Sept 23, 2018',
+	subHeaderContents: `<div class="slds-grid">
+						<div>Define your consent collection settings, as well as manage consent changes, raise data deletion and portability requests.</div>
+						<div class="slds-col_bump-left">As of Sep 27, 2018</div>
+					</div>`
 };

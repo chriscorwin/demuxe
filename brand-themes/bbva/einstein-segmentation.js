@@ -11,7 +11,7 @@ module.exports = {
 				id: 'p1',
 				rank: 1,
 				value: 'Persona 01',
-				devices: 345427,
+				devices: 821334,
 				cpm: 1.75,
 				r: 70,
 				attributes: [
@@ -22,7 +22,7 @@ module.exports = {
 					},
 					{
 						party: 1,
-						main: 'bbvacompass.com…/fixed-rate-mortgages',
+						main: 'bbva.com…/fixed-rate-mortgages',
 						stats: 'Frequency: 20  ・Recency < 120 days'
 					},
 					{
@@ -35,7 +35,7 @@ module.exports = {
 					},
 					{
 						party: 1,
-						main: '1-888-8-LENDING Callers'
+						main: 'Moms - HHI > $150K'
 					}
 				]
 			},
@@ -125,5 +125,5 @@ module.exports = {
 			{ source: 'p3', target: 'p2', overlap: 13 }
 		]
 	},
-	sub_header_text: 'Analysis Summary as of September 23, 2018 11:00 AM UTC'
+	sub_header_text: 'Analysis Summary as of Sep 27, 2018 11:00 AM UTC'
 };
