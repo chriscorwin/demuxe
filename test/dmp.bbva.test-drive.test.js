@@ -1,6 +1,7 @@
 // https://docs.google.com/presentation/d/1CaK4X_m1DUN8vbjbA8C6HJLrBXvQpkbPJcExSA5sMwQ/edit#slide=id.g3fd7597332_0_1096
 const settings = require('../config/config.js')();
-var env = process.env.ENV || 'local';
+const env = process.env.ENV || 'local';
+const fs = require('fs');
 const should = require('chai').should();
 const Differencify = require('../node_modules/sf-differencify/dist/index');
 const differencify = new Differencify({
@@ -13,9 +14,10 @@ const differencify = new Differencify({
 let slides = [];
 const getMatchOptions = (step) => {
 	const imgName = `dmp.bbva.${step}`;
-	slides.push(`
-	---
-	![](${settings.dev.host}screenshots/${imgName}.png){.background}
+	slides.push(`---
+
+![](${settings.dev.host}screenshots/${imgName}.png){.background}
+
 `);
 
 	return {
@@ -24,7 +26,7 @@ const getMatchOptions = (step) => {
 };
 
 const getScreenshotOptions = () => ({
-	fullPage: true
+	fullPage: false
 })
 
 describe('DMP Demo Flow', function () {
@@ -127,7 +129,13 @@ describe('DMP Demo Flow', function () {
 			.end();
 		await differencify.cleanup();
 
-		console.log(slides);
+		fs.writeFile("slides/dmp.bbva.md", slides.join(''), function(err) {
+			if(err) {
+				return console.log(err);
+			}
+
+			console.log("The file was saved!");
+		}); 
 
 		hasError.should.be.false;
 	})
