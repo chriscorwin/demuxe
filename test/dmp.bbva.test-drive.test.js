@@ -50,7 +50,8 @@ describe('DMP Demo Flow', function () {
 				testName: 'dmp.bbva.test-drive',
 			})
 			.newPage()
-			.setViewport({ width: 1240, height: 800 })
+			// Google Slides expects 16:9 aspect ratio. 1240x697.50 (can be calculated here https://calculateaspectratio.com/)
+			.setViewport({ width: 1240, height: 698 })
 			// START - OVERVIEW PAGE - SLIDE 42
 			.goto(testhost)
 			.waitFor('body')
