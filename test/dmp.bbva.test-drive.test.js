@@ -34,53 +34,50 @@ describe('DMP Demo Flow', function () {
 		}
 
 
-		const testDefinition = {
-			testName: 'dmp.bbva.test-drive',
+		const demo = {
+			name: 'dmp.bbva.test-drive',
 			headless: false,
 			steps: [
 				{
-					action: 'goto',
-					definition: testhost,
+					goto: testhost,
 					waitFor: 'body',
-					screenshot: '0001.overview'
+					name: '0001.overview'
 				},
 				{
-					action: 'evaluate',
-					definition: () => {
+					evaluate: () => {
 						console.log('in here');
 						window.scrollBy(0, window.innerHeight);
 					},
-					waitFor: 'body',
-					screenshot: '0002.overview'
+					waitFor: 2000,
+					name: '0002.overview'
 				},
-				// {
-				// 	action: 'click',
-				// 	definition: '#view-all-data-capture-sources',
-				// 	waitFor: 'body',
-				// 	screenshot: '0100.data-capture-sources'
-				// }
+				{
+					click: '#view-all-data-capture-sources',
+					waitFor: 'body',
+					name: '0100.data-capture-sources'
+				}
 			]
 		};
 
 
 await (async () => {
-	const target = differencify.init({ testName: testDefinition.testName, chain: false });
-	await target.launch({ headless: testDefinition.headless });
+	const target = differencify.init({ testName: demo.name, chain: false });
+	await target.launch({ headless: demo.headless });
 	const page = await target.newPage();
-	await Promise.all(testDefinition.steps.map(async (step) => {
-		switch (step.action) {
-			case 'goto':
-				await page.goto(step.definition);
-				break;
-			case 'evaluate':
-				await page.evaluate(_ => {
-					window.scrollBy(0, window.innerHeight);
-				})
-				break;
-			case 'click':
-				await page.click(step.definition)
-				break;
-			default:
+	for (let step of demo.steps) {
+		if (typeof step.goto !== "undefined") {
+			console.log('goto', step.goto);
+			await page.goto(step.goto);
+		}
+
+		if (typeof step.evaluate !== "undefined") {
+			console.log('evaluate');
+			await page.evaluate(step.evaluate);
+		}
+		
+		if (typeof step.click !== "undefined") {
+			console.log('click', step.click);
+			await page.click(step.click);
 		}
 
 		await page.waitFor(step.waitFor);
@@ -90,22 +87,21 @@ await (async () => {
 			await page.setViewport({ width: 1600, height: 698 });
 			const slide = await page.screenshot({ fullPage: false });
 			// save the snapshot to disk (ignore non-matches. This is probably not the right way...)
-			await target.toMatchSnapshot(slide, getMatchOptions(step.screenshot + '.slide'));
+			await target.toMatchSnapshot(slide, getMatchOptions(step.name + '.slide'));
 			// move the snapshot to the slides/screenshots directory
-			await fs.rename(`./test/screenshots/${getMatchOptions(step.screenshot + '.slide').imgName}.png`, `./slides/screenshots/${getMatchOptions(step.screenshot + '.slide').imgName}.png`);
+			await fs.rename(`./test/screenshots/${getMatchOptions(step.name + '.slide').imgName}.png`, `./slides/screenshots/${getMatchOptions(step.name + '.slide').imgName}.png`);
 			// push the markdown for the slide to the slides array to be written with the others when all said and done
 			slides.push(`---
 	
-![](${settings.dev.host}slides/${getMatchOptions(step.screenshot + '.slide').imgName}.png){.background}
+![](${settings.dev.host}slides/${getMatchOptions(step.name + '.slide').imgName}.png){.background}
 
 `)
 		}
 
 		await page.setViewport({ width: 1600, height: 1200 });
 		const screenshot = await page.screenshot(getScreenshotOptions());
-		await target.toMatchSnapshot(screenshot, getMatchOptions(step.screenshot), handleResult);
-
-	}));
+		await target.toMatchSnapshot(screenshot, getMatchOptions(step.name), handleResult);
+	};
 	await page.close();
 	await target.close();
 })();
@@ -125,7 +121,7 @@ fs.writeFile("slides/dmp.bbva.md", slides.join(''), function(err) {
 		// });
 		// const result = await differencify
 		// 	.init({
-		// 		testName: testDefinition.testName,
+		// 		testName: demo.testName,
 		// 	})
 		// 	.newPage()
 		// 	// Google Slides expects 16:9 aspect ratio. 1240x697.50 (can be calculated here https://calculateaspectratio.com/)
