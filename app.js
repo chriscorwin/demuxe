@@ -88,7 +88,7 @@ appUse.push(
 );
 
 appUse.push(
-	express.static(path.join(__dirname, 'test'))
+	express.static(path.join(__dirname, 'slides'))
 );
 
 app.use(appUse);

@@ -12,22 +12,11 @@ const differencify = new Differencify({
 });
 
 let slides = [];
-const getMatchOptions = (step) => {
-	const imgName = `dmp.bbva.${step}`;
-	slides.push(`---
-
-![](${settings.dev.host}screenshots/${imgName}.png){.background}
-
-`);
-
-	return {
-		imgName
-	}
-};
+const getMatchOptions = (step) => ({imgName: `dmp.bbva.${step}`});
 
 const getScreenshotOptions = () => ({
-	fullPage: false
-})
+	fullPage: true
+});
 
 describe('DMP Demo Flow', function () {
 	this.timeout(settings.tests.timeout);
@@ -36,107 +25,196 @@ describe('DMP Demo Flow', function () {
 	it('should be entirely navicable', async function () {
 		let hasError = false;
 
-		const handleResult = (success) => {
-			if (!success) {
+		const handleResult = (resultDetail) => {
+			if (!resultDetail.testResult.matched && !resultDetail.testResult.updated) {
 				hasError = true;
+
+				console.error(resultDetail);
 			}
 		}
 
-		await differencify.launchBrowser({
-			headless: settings.tests.headless,
-		});
-		const result = await differencify
-			.init({
-				testName: 'dmp.bbva.test-drive',
-			})
-			.newPage()
-			// Google Slides expects 16:9 aspect ratio. 1240x697.50 (can be calculated here https://calculateaspectratio.com/)
-			.setViewport({ width: 1240, height: 698 })
-			// START - OVERVIEW PAGE - SLIDE 42
-			.goto(testhost)
-			.waitFor('body')
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0001.overview'))
-			.result(handleResult)
-			// SCROLL DOWN ON OVERVIEW PAGE - SLIDE 43
-			.evaluate(_ => {
-				window.scrollBy(0, window.innerHeight);
-			})
-			.waitFor(2000)
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0002.overview'))
-			.result(handleResult)
-			// GOTO DATA CAPTURE SOURCES PAGE - SLIDE 44
-			.click('#view-all-data-capture-sources')
-			.waitFor('body')
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0100.data-capture-sources'))
-			.result(handleResult)
-			// ALLOW ANIMATION TO FINISH
-			.waitFor(2000)
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0101.data-capture-sources'))
-			.result(handleResult)
-			// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
-			.click('#content a')
-			.waitFor('body')
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0200.consumer-rights-management-page'))
-			.result(handleResult)
-			// HOVER INSIGHTS NAV LINK
-			// CLICK EINSTEIN SEGMENTATION LINK
-			.goto(`${testhost}insights/einstein-segmentation`)
-			.waitFor('body')
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0300.einstein-segmentation'))
-			.result(handleResult)
-			// CLICK CREATE NEW SEGMENT USING THIS PERSONA
-			.click('.slds-button.slds-button_brand')
-			.waitFor('body')
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0300.segments.build-standard-segment'))
-			.result(handleResult)
-			// CLICK "SEGMENT NAME" TO FILL
-			.click('#segment-name')
-			.waitFor('body')
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0301.0.segments.build-standard-segment'))
-			// SELECT "MARKETING CLOUD" IN ACTIVATION
-			.click('#checkbox7wrapper')
-			.waitFor('body')
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0301.segments.build-standard-segment'))
-			.result(handleResult)
-			// SELECT "DOUBLE CLICK" IN ACTIVATION
-			.click('#checkbox6wrapper')
-			.waitFor('body')
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('0302.segments.build-standard-segment'))
-			.result(handleResult)
+
+		const testDefinition = {
+			testName: 'dmp.bbva.test-drive',
+			headless: false,
+			steps: [
+				{
+					action: 'goto',
+					definition: testhost,
+					waitFor: 'body',
+					screenshot: '0001.overview'
+				},
+				{
+					action: 'evaluate',
+					definition: () => {
+						console.log('in here');
+						window.scrollBy(0, window.innerHeight);
+					},
+					waitFor: 'body',
+					screenshot: '0002.overview'
+				},
+				// {
+				// 	action: 'click',
+				// 	definition: '#view-all-data-capture-sources',
+				// 	waitFor: 'body',
+				// 	screenshot: '0100.data-capture-sources'
+				// }
+			]
+		};
 
 
-			// CURRENTLY OUTSIDE OF DEMO FLOW
-			// CLICK "SAVE" SHOULD DO NOTHING
-			.click('#saveButton')
-			.waitFor('body')
-			.waitFor(2000)
-			.screenshot(getScreenshotOptions())
-			.toMatchSnapshot(getMatchOptions('030X.segments.build-standard-segment'))
-			.result(handleResult)
+await (async () => {
+	const target = differencify.init({ testName: testDefinition.testName, chain: false });
+	await target.launch({ headless: testDefinition.headless });
+	const page = await target.newPage();
+	await Promise.all(testDefinition.steps.map(async (step) => {
+		switch (step.action) {
+			case 'goto':
+				await page.goto(step.definition);
+				break;
+			case 'evaluate':
+				await page.evaluate(_ => {
+					window.scrollBy(0, window.innerHeight);
+				})
+				break;
+			case 'click':
+				await page.click(step.definition)
+				break;
+			default:
+		}
+
+		await page.waitFor(step.waitFor);
+
+		if (!step.skipSlideCapture) {
+			// set the viewport to 16:9 to match Google Slides
+			await page.setViewport({ width: 1600, height: 698 });
+			const slide = await page.screenshot({ fullPage: false });
+			// save the snapshot to disk (ignore non-matches. This is probably not the right way...)
+			await target.toMatchSnapshot(slide, getMatchOptions(step.screenshot + '.slide'));
+			// move the snapshot to the slides/screenshots directory
+			await fs.rename(`./test/screenshots/${getMatchOptions(step.screenshot + '.slide').imgName}.png`, `./slides/screenshots/${getMatchOptions(step.screenshot + '.slide').imgName}.png`);
+			// push the markdown for the slide to the slides array to be written with the others when all said and done
+			slides.push(`---
+	
+![](${settings.dev.host}slides/${getMatchOptions(step.screenshot + '.slide').imgName}.png){.background}
+
+`)
+		}
+
+		await page.setViewport({ width: 1600, height: 1200 });
+		const screenshot = await page.screenshot(getScreenshotOptions());
+		await target.toMatchSnapshot(screenshot, getMatchOptions(step.screenshot), handleResult);
+
+	}));
+	await page.close();
+	await target.close();
+})();
+
+fs.writeFile("slides/dmp.bbva.md", slides.join(''), function(err) {
+	if(err) {
+		return console.log(err);
+	}
+
+	console.log("The file was saved!");
+}); 
 
 
 
-			.close()
-			.end();
-		await differencify.cleanup();
+		// await differencify.launchBrowser({
+		// 	headless: settings.tests.headless,
+		// });
+		// const result = await differencify
+		// 	.init({
+		// 		testName: testDefinition.testName,
+		// 	})
+		// 	.newPage()
+		// 	// Google Slides expects 16:9 aspect ratio. 1240x697.50 (can be calculated here https://calculateaspectratio.com/)
+		// 	.setViewport({ width: 1240, height: 698 })
+		// 	// START - OVERVIEW PAGE - SLIDE 42
+		// 	.goto(testhost)
+		// 	.waitFor('body')
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0001.overview'))
+		// 	.result(handleResult)
+		// 	// SCROLL DOWN ON OVERVIEW PAGE - SLIDE 43
+		// 	.evaluate(_ => {
+		// 		window.scrollBy(0, window.innerHeight);
+		// 	})
+		// 	.waitFor(2000)
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0002.overview'))
+		// 	.result(handleResult)
+		// 	// GOTO DATA CAPTURE SOURCES PAGE - SLIDE 44
+		// 	.click('#view-all-data-capture-sources')
+		// 	.waitFor('body')
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0100.data-capture-sources'))
+		// 	.result(handleResult)
+		// 	// ALLOW ANIMATION TO FINISH
+		// 	.waitFor(2000)
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0101.data-capture-sources'))
+		// 	.result(handleResult)
+		// 	// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
+		// 	.click('#content a')
+		// 	.waitFor('body')
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0200.consumer-rights-management-page'))
+		// 	.result(handleResult)
+		// 	// HOVER INSIGHTS NAV LINK
+		// 	// CLICK EINSTEIN SEGMENTATION LINK
+		// 	.goto(`${testhost}insights/einstein-segmentation`)
+		// 	.waitFor('body')
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0300.einstein-segmentation'))
+		// 	.result(handleResult)
+		// 	// CLICK CREATE NEW SEGMENT USING THIS PERSONA
+		// 	.click('.slds-button.slds-button_brand')
+		// 	.waitFor('body')
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0300.segments.build-standard-segment'))
+		// 	.result(handleResult)
+		// 	// CLICK "SEGMENT NAME" TO FILL
+		// 	.click('#segment-name')
+		// 	.waitFor('body')
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0301.0.segments.build-standard-segment'))
+		// 	// SELECT "MARKETING CLOUD" IN ACTIVATION
+		// 	.click('#checkbox7wrapper')
+		// 	.waitFor('body')
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0301.segments.build-standard-segment'))
+		// 	.result(handleResult)
+		// 	// SELECT "DOUBLE CLICK" IN ACTIVATION
+		// 	.click('#checkbox6wrapper')
+		// 	.waitFor('body')
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('0302.segments.build-standard-segment'))
+		// 	.result(handleResult)
 
-		fs.writeFile("slides/dmp.bbva.md", slides.join(''), function(err) {
-			if(err) {
-				return console.log(err);
-			}
 
-			console.log("The file was saved!");
-		}); 
+		// 	// CURRENTLY OUTSIDE OF DEMO FLOW
+		// 	// CLICK "SAVE" SHOULD DO NOTHING
+		// 	.click('#saveButton')
+		// 	.waitFor('body')
+		// 	.waitFor(2000)
+		// 	.screenshot(getScreenshotOptions())
+		// 	.toMatchSnapshot(getMatchOptions('030X.segments.build-standard-segment'))
+		// 	.result(handleResult)
+
+
+
+		// 	.close()
+		// 	.end();
+		// await differencify.cleanup();
+
+		// fs.writeFile("slides/dmp.bbva.md", slides.join(''), function(err) {
+		// 	if(err) {
+		// 		return console.log(err);
+		// 	}
+
+		// 	console.log("The file was saved!");
+		// }); 
 
 		hasError.should.be.false;
 	})
