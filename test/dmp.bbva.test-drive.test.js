@@ -100,6 +100,7 @@ await (async () => {
 
 		await page.setViewport({ width: 1600, height: 1200 });
 		const screenshot = await page.screenshot(getScreenshotOptions());
+		console.log('screenshot', screenshot);
 		await target.toMatchSnapshot(screenshot, getMatchOptions(step.name), handleResult);
 	};
 	await page.close();
