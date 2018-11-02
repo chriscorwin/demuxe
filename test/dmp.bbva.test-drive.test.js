@@ -84,7 +84,7 @@ await (async () => {
 
 		if (!step.skipSlideCapture) {
 			// set the viewport to 16:9 to match Google Slides
-			await page.setViewport({ width: 1600, height: 698 });
+			await page.setViewport({ width: 1280, height: 720 });
 			const slide = await page.screenshot({ fullPage: false });
 			// save the snapshot to disk (ignore non-matches. This is probably not the right way...)
 			await target.toMatchSnapshot(slide, getMatchOptions(step.name + '.slide'));
@@ -93,7 +93,7 @@ await (async () => {
 			// push the markdown for the slide to the slides array to be written with the others when all said and done
 			slides.push(`---
 	
-![](${settings.dev.host}slides/${getMatchOptions(step.name + '.slide').imgName}.png){.background}
+![](${settings.dev.host}screenshots/${getMatchOptions(step.name + '.slide').imgName}.png){.background}
 
 `)
 		}
