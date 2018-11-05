@@ -72,6 +72,10 @@ describe('DMP Demo Flow', function () {
 					waitFor: 'body',
 					name: '0200.consumer-rights-management-page'
 				},
+				{
+					waitFor: 2000,
+					name: '0201.consumer-rights-management-page'
+				},
 				// HOVER INSIGHTS NAV LINK
 				// CLICK EINSTEIN SEGMENTATION LINK
 				{
@@ -113,34 +117,38 @@ describe('DMP Demo Flow', function () {
 		};
 
 
+const testStep = async (target, page, step) => {
+	if (typeof step.goto !== "undefined") {
+		console.log('goto', step.goto);
+		await page.goto(step.goto);
+	}
+
+	if (typeof step.click !== "undefined") {
+		console.log('click', step.click);
+		await page.click(step.click);
+	}
+
+	if (typeof step.evaluate !== "undefined") {
+		console.log('evaluate');
+		await page.evaluate(step.evaluate);
+	}
+	
+	await page.waitFor(step.waitFor);
+}
+
 await (async () => {
 	const target = differencify.init({ testName: demo.name, chain: false });
 	await target.launch({ headless: demo.headless });
 	const page = await target.newPage();
-	for (let step of demo.steps) {
-		if (!step.skipSlideCapture) {
-			// set the viewport to 16:9 to match Google Slides
-			await page.setViewport({ width: 1280, height: 720 });
-		}
+	await page.setViewport({ width: 1600, height: 1200 });
 
-		if (typeof step.goto !== "undefined") {
-			console.log('goto', step.goto);
-			await page.goto(step.goto);
-		}
+	// if (!step.skipSlideCapture) {
+		// set the viewport to 16:9 to match Google Slides
+		await page.setViewport({ width: 1280, height: 720 });
 
-		if (typeof step.evaluate !== "undefined") {
-			console.log('evaluate');
-			await page.evaluate(step.evaluate);
-		}
-		
-		if (typeof step.click !== "undefined") {
-			console.log('click', step.click);
-			await page.click(step.click);
-		}
+		for (let step of demo.steps) {
+			await testStep(target, page, step);
 
-		await page.waitFor(step.waitFor);
-
-		if (!step.skipSlideCapture) {
 			const slide = await page.screenshot({ fullPage: false });
 			// save the snapshot to disk (ignore non-matches. This is probably not the right way...)
 			await target.toMatchSnapshot(slide, getMatchOptions(step.name + '.slide'));
@@ -149,15 +157,21 @@ await (async () => {
 			// push the markdown for the slide to the slides array to be written with the others when all said and done
 			slides.push(`---
 	
-![](${settings.dev.host}screenshots/${getMatchOptions(step.name + '.slide').imgName}.png){.background}
+	![](${settings.dev.host}screenshots/${getMatchOptions(step.name + '.slide').imgName}.png){.background}
+	
+	`)
+		};
+	// }
 
-`)
-		}
 
-		await page.setViewport({ width: 1600, height: 1200 });
+	for (let step of demo.steps) {
+		await testStep(target, page, step);
+
 		const screenshot = await page.screenshot(getScreenshotOptions());
 		await target.toMatchSnapshot(screenshot, getMatchOptions(step.name), handleResult);
 	};
+
+
 	await page.close();
 	await target.close();
 })();
