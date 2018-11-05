@@ -52,7 +52,7 @@ describe('DMP Demo Flow', function () {
 				},
 				{
 					evaluate: () => {
-						window.scrollBy(0, window.innerHeight);
+						window.scrollBy(0, window.innerHeight * 2);
 					},
 					waitFor: 2000,
 					name: '0003.overview'
@@ -118,6 +118,11 @@ await (async () => {
 	await target.launch({ headless: demo.headless });
 	const page = await target.newPage();
 	for (let step of demo.steps) {
+		if (!step.skipSlideCapture) {
+			// set the viewport to 16:9 to match Google Slides
+			await page.setViewport({ width: 1280, height: 720 });
+		}
+
 		if (typeof step.goto !== "undefined") {
 			console.log('goto', step.goto);
 			await page.goto(step.goto);
@@ -136,8 +141,6 @@ await (async () => {
 		await page.waitFor(step.waitFor);
 
 		if (!step.skipSlideCapture) {
-			// set the viewport to 16:9 to match Google Slides
-			await page.setViewport({ width: 1280, height: 720 });
 			const slide = await page.screenshot({ fullPage: false });
 			// save the snapshot to disk (ignore non-matches. This is probably not the right way...)
 			await target.toMatchSnapshot(slide, getMatchOptions(step.name + '.slide'));
