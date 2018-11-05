@@ -45,16 +45,69 @@ describe('DMP Demo Flow', function () {
 				},
 				{
 					evaluate: () => {
-						console.log('in here');
 						window.scrollBy(0, window.innerHeight);
 					},
 					waitFor: 2000,
 					name: '0002.overview'
 				},
 				{
+					evaluate: () => {
+						window.scrollBy(0, window.innerHeight);
+					},
+					waitFor: 2000,
+					name: '0003.overview'
+				},
+				{
 					click: '#view-all-data-capture-sources',
 					waitFor: 'body',
 					name: '0100.data-capture-sources'
+				},
+				{
+					waitFor: 2000,
+					name: '0101.data-capture-sources'
+				},
+				// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
+				{
+					click: '#content a',
+					waitFor: 'body',
+					name: '0200.consumer-rights-management-page'
+				},
+				// HOVER INSIGHTS NAV LINK
+				// CLICK EINSTEIN SEGMENTATION LINK
+				{
+					goto: `${testhost}insights/einstein-segmentation`,
+					waitFor: 'body',
+					name: '0300.einstein-segmentation'
+				},
+				// CLICK CREATE NEW SEGMENT USING THIS PERSONA
+				{
+					click: '.slds-button.slds-button_brand',
+					waitFor: 'body',
+					name: '0310.segments.build-standard-segment'
+				},
+				// CLICK "SEGMENT NAME" TO FILL
+				{
+					click: '#segment-name',
+					waitFor: 'body',
+					name: '0311.segments.build-standard-segment'
+				},
+				// SELECT "MARKETING CLOUD" IN ACTIVATION
+				{
+					click: '#checkbox7wrapper',
+					waitFor: 'body',
+					name: '0312.segments.build-standard-segment'
+				},
+				// SELECT "DOUBLE CLICK" IN ACTIVATION
+				{
+					click: '#checkbox6wrapper',
+					waitFor: 'body',
+					name: '0313.segments.build-standard-segment'
+				},
+				// CLICK "SAVE" SHOULD DO NOTHING
+				{
+					click: '#saveButton',
+					waitFor: 'body',
+					name: '0314.segments.build-standard-segment'
 				}
 			]
 		};
@@ -115,102 +168,6 @@ fs.writeFile("slides/dmp.bbva.md", slides.join(''), function(err) {
 }); 
 
 
-
-		// await differencify.launchBrowser({
-		// 	headless: settings.tests.headless,
-		// });
-		// const result = await differencify
-		// 	.init({
-		// 		testName: demo.testName,
-		// 	})
-		// 	.newPage()
-		// 	// Google Slides expects 16:9 aspect ratio. 1240x697.50 (can be calculated here https://calculateaspectratio.com/)
-		// 	.setViewport({ width: 1240, height: 698 })
-		// 	// START - OVERVIEW PAGE - SLIDE 42
-		// 	.goto(testhost)
-		// 	.waitFor('body')
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0001.overview'))
-		// 	.result(handleResult)
-		// 	// SCROLL DOWN ON OVERVIEW PAGE - SLIDE 43
-		// 	.evaluate(_ => {
-		// 		window.scrollBy(0, window.innerHeight);
-		// 	})
-		// 	.waitFor(2000)
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0002.overview'))
-		// 	.result(handleResult)
-		// 	// GOTO DATA CAPTURE SOURCES PAGE - SLIDE 44
-		// 	.click('#view-all-data-capture-sources')
-		// 	.waitFor('body')
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0100.data-capture-sources'))
-		// 	.result(handleResult)
-		// 	// ALLOW ANIMATION TO FINISH
-		// 	.waitFor(2000)
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0101.data-capture-sources'))
-		// 	.result(handleResult)
-		// 	// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
-		// 	.click('#content a')
-		// 	.waitFor('body')
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0200.consumer-rights-management-page'))
-		// 	.result(handleResult)
-		// 	// HOVER INSIGHTS NAV LINK
-		// 	// CLICK EINSTEIN SEGMENTATION LINK
-		// 	.goto(`${testhost}insights/einstein-segmentation`)
-		// 	.waitFor('body')
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0300.einstein-segmentation'))
-		// 	.result(handleResult)
-		// 	// CLICK CREATE NEW SEGMENT USING THIS PERSONA
-		// 	.click('.slds-button.slds-button_brand')
-		// 	.waitFor('body')
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0300.segments.build-standard-segment'))
-		// 	.result(handleResult)
-		// 	// CLICK "SEGMENT NAME" TO FILL
-		// 	.click('#segment-name')
-		// 	.waitFor('body')
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0301.0.segments.build-standard-segment'))
-		// 	// SELECT "MARKETING CLOUD" IN ACTIVATION
-		// 	.click('#checkbox7wrapper')
-		// 	.waitFor('body')
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0301.segments.build-standard-segment'))
-		// 	.result(handleResult)
-		// 	// SELECT "DOUBLE CLICK" IN ACTIVATION
-		// 	.click('#checkbox6wrapper')
-		// 	.waitFor('body')
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('0302.segments.build-standard-segment'))
-		// 	.result(handleResult)
-
-
-		// 	// CURRENTLY OUTSIDE OF DEMO FLOW
-		// 	// CLICK "SAVE" SHOULD DO NOTHING
-		// 	.click('#saveButton')
-		// 	.waitFor('body')
-		// 	.waitFor(2000)
-		// 	.screenshot(getScreenshotOptions())
-		// 	.toMatchSnapshot(getMatchOptions('030X.segments.build-standard-segment'))
-		// 	.result(handleResult)
-
-
-
-		// 	.close()
-		// 	.end();
-		// await differencify.cleanup();
-
-		// fs.writeFile("slides/dmp.bbva.md", slides.join(''), function(err) {
-		// 	if(err) {
-		// 		return console.log(err);
-		// 	}
-
-		// 	console.log("The file was saved!");
-		// }); 
 
 		hasError.should.be.false;
 	})
