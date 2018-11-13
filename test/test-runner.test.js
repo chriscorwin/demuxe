@@ -24,12 +24,18 @@ const testStep = async (target, page, step) => {
 	await page.waitFor(step.waitFor);
 }
 
-const limitToDemo = process.argv[3] || 'All';
+// This will allow for you to test a different demo flow, or All demo flows, by passing in a variable
+// when you start the tests, eg:
+//    npm run test dmp_crocs
+// As of this writing (11/13/18) it is not possible for demuxe to serve more than one product/brand
+// combination at once, but this could be useful if you want to see if previous demo flows work with
+// the current brand/product combination.
+const whatToTest = process.argv[3] || `${settings.productTemplate}_${settings.brandTheme}`;
 
-describe(`${limitToDemo} slideshow creation`, async function () {
+describe(`${whatToTest} slideshow creation`, async function () {
 	this.timeout(settings.tests.timeout);
 	await Promise.all(demos.map(async (demo) => {
-		if (limitToDemo !== 'All' && limitToDemo !== demo.id) return;
+		if (whatToTest !== 'All' && whatToTest !== demo.id) return;
 		if (demo.skipSlideCapture) return;
 
 		let slides = [];
@@ -87,10 +93,10 @@ describe(`${limitToDemo} slideshow creation`, async function () {
 	}));
 })
 
-describe(`${limitToDemo} tests`, async function () {
+describe(`${whatToTest} tests`, async function () {
 	this.timeout(settings.tests.timeout);
 	await Promise.all(demos.map(async (demo) => {
-		if (limitToDemo !== 'All' && limitToDemo !== demo.id) return;
+		if (whatToTest !== 'All' && whatToTest !== demo.id) return;
 
 		const getMatchOptions = (step) => ({imgName: `${demo.name}.${step}`});
 
