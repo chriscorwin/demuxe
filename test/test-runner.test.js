@@ -32,6 +32,8 @@ const testStep = async (target, page, step) => {
 // the current brand/product combination.
 const whatToTest = process.argv[3] || `${settings.productTemplate}_${settings.brandTheme}`;
 
+console.log(`whatToTest ${whatToTest}`);
+
 describe(`${whatToTest} slideshow creation`, async function () {
 	this.timeout(settings.tests.timeout);
 	await Promise.all(demos.map(async (demo) => {
