@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tests are actually demo flows. They should mirror as closely as possible the actual steps the presenter will take when running the actual demo. Defining a test is the very first step of creating a demo, can reasonably be done with the designer at the initial discovery meeting. This will also help ensure the design spec is fully fleshed out. You will know the demo is complete when you run the test and it passes (TDD).
+Tests are actually demo flows. They should mirror as closely as possible the actual steps the presenter will take when running the actual demo. Defining a test is the very first step of creating a demo, can reasonably be done with the designer at the initial discovery meeting. This will also help ensure the design spec is fully fleshed out. You will know the demo is complete when you run the test and it passes (ie Test Driven Development _or_ "TDD").
 
 
 ## Tests
@@ -10,13 +10,13 @@ Tests are actually demo flows. They should mirror as closely as possible the act
 
 Think of tests as DVDs.
 
-`/test/test-runner.test.js` is a DVD player. You almost certainly should open up and modify your DVD player.
+`/test/test-runner.test.js` is a DVD player. You almost certainly should not open up and modify your DVD player.
 
-Your DVD shelf is `/test/demo-flows/`
+Your DVD shelf is `/test/demo-flows/`.
 
-DVDs are named `${product}_${brand}.js`. eg: The dvd for the DMP product branded with the BBVA brand would be named `dmp_bbva.js`, its final path would be: `/test/demo-flows/dmp_bbva.js`
+DVDs are named `${product}_${brand}.js`. eg: The DVD for the DMP product branded with the BBVA brand would be named `dmp_bbva.js`, its final path would be: `/test/demo-flows/dmp_bbva.js`.
 
-You put a DVD into the DVD player with `/config/config.json`. The DVD player will go look in that file to see which Product/Brand combination is currently being served by the server, and test that flow. The variables it will look at are `productTemplate` and `brandTheme`.
+You put a DVD into the DVD player with `/config/config.json`. The DVD player will go look in that config file to see which Product/Brand combination is currently being served by the server, and test the flow specified there. The variables the player will look at are `productTemplate` and `brandTheme`.
 
 
 ### Running the Tests
@@ -42,4 +42,4 @@ Visual testing is done through Mocha/Chai/Differencify.
 
 Differencify's API matches [Puppeteer's](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md) exactly. Reference that when writing interactivity for tests.
 
-Demuxe uses a fork of Differencify that allows us some more flixibility vs what currently exists in the base repository. If someone wants to go through the pain of figuring out Docker and guiding the open PRs through the process etc etc to get these changes merged into the base repository, go for it.
+Demuxe uses a fork of Differencify that allows us some more flexibility than what currently exists in the base differencify repository. If someone wants to go through the pain of figuring out Docker and guiding the open PRs through the process (etc etc) to get these changes merged into the base repository, go for it.
