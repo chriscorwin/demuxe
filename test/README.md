@@ -1,3 +1,13 @@
+# Demo Flows
+
+## Overview
+
+Tests are actually demo flows. They should mirror as closely as possible the actual steps the presenter will take when running the actual demo. Defining a test is the very first step of creating a demo, can reasonably be done with the designer at the initial discovery meeting. This will also help ensure the design spec is fully fleshed out. You will know the demo is complete when you run the test and it passes (TDD).
+
+
+## Tests
+### Defining Tests
+
 Think of tests as DVDs.
 
 `/test/test-runner.test.js` is a DVD player. You almost certainly should open up and modify your DVD player.
@@ -8,6 +18,8 @@ DVDs are named `${product}_${brand}.js`. eg: The dvd for the DMP product branded
 
 You put a DVD into the DVD player with `/config/config.json`. The DVD player will go look in that file to see which Product/Brand combination is currently being served by the server, and test that flow. The variables it will look at are `productTemplate` and `brandTheme`.
 
+
+### Running the Tests
 You "press play" by:
 `npm run test`
 
@@ -19,3 +31,15 @@ This is where the metaphore breaks down slightly. You can tell it to put a diffe
 
 So, if the server is currently serving `dmp` and `bbva`, you can test `dmp` product `crocs` brand by:
 `npm run test test/test-runner.test.js dmp_crocs`
+
+
+The test-drive takes screenshots of each step in the flow for reference and comparison, as well as generating a Google Slide Doc of the entire demo.
+
+
+## Technical Info
+
+Visual testing is done through Mocha/Chai/Differencify.
+
+Differencify's API matches [Puppeteer's](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md) exactly. Reference that when writing interactivity for tests.
+
+Demuxe uses a fork of Differencify that allows us some more flixibility vs what currently exists in the base repository. If someone wants to go through the pain of figuring out Docker and guiding the open PRs through the process etc etc to get these changes merged into the base repository, go for it.

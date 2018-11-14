@@ -141,33 +141,10 @@ Demos shall not have unit tests. There is no point in testing code that changes 
 
 
 # Visual & Behavioral Testing
-Run test drives:
 
-`npm test`
+Each demo must have an explicitly defined "demo flow". This is created as the _first thing_ you do when making a new Demo. This can reasonably be done in your initial discovery meeting with the designer and will function as your spec. See `/test/README.md` for more information.
 
-Update tests:
-
-`npm run test:update`
-
-Visual testing is done through Mocha/Chai/Differencify.
-
-The demo flow shall have a `.test-drive.test.js` file in `./test/` (if a demo has multiple flows, each flow will have its own test-drive file).
-
-Test drives must through the _entire_ flow of your demo using Mocha+Chai+Phantom to ensure that the flow still works and that it has only changed in expected ways. 
-
-This will also serve as a good form of documentation as to what the expected user behavior for each demo is.
-
-The test-drive shall take screenshots of each step in the flow for reference and comparison.
-
-This boilerplate starts off with an example test-drive in place (`./test/test-drive.test.js`).
-
-Differencify's API matches [Puppeteer's](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md) exactly. Reference that when writing interactivity for tests.
-
-Demuxe uses a fork of Differencify that allows us some more flixibility vs what currently exists in the base repository. If someone wants to go through the pain of figuring out Docker and guiding the open PRs through the process etc etc to get these changes merged into the base repository, go for it.
-
-
-
-# Spec/Designs
+# Visual Design Artifacts
 
 Shall live on your machine or in corporate Google Drive. Typically these will be sketch files. These should never be merged into Demuxe because it will bloat the repo and eventually make it so you literally _can't push your changes_.
 
