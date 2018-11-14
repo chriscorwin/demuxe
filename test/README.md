@@ -12,7 +12,7 @@ Think of tests as DVDs.
 
 `/test/test-runner.test.js` is a DVD player. You almost certainly should not open up and modify your DVD player.
 
-Your DVD shelf is `/test/demo-flows/`.
+Your DVD shelf is `/test/demo-flows/`. You must add your DVD to the shelf "directory" in `/test/demo-flows/index.js` so that the DVD player knows it exists.
 
 DVDs are named `${product}_${brand}.js`. eg: The DVD for the DMP product branded with the BBVA brand would be named `dmp_bbva.js`, its final path would be: `/test/demo-flows/dmp_bbva.js`.
 
