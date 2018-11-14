@@ -142,7 +142,7 @@ Demos shall not have unit tests. There is no point in testing code that changes 
 
 # Visual & Behavioral Testing
 
-Each demo must have an explicitly defined "demo flow". This is created as the _first thing_ you do when making a new Demo. This can reasonably be done in your initial discovery meeting with the designer and will function as your spec. See [/test/README.md]() for more information.
+Each demo must have an explicitly defined "demo flow". This is created as the _first thing_ you do when making a new Demo. This can reasonably be done in your initial discovery meeting with the designer and will function as your spec. See [/test/README.md](test/README.md) for more information.
 
 # Visual Design Artifacts
 
