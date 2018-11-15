@@ -40,6 +40,9 @@ describe(`${whatToTest} slideshow creation`, async function () {
 		if (whatToTest !== 'All' && whatToTest !== demo.id) return;
 		if (demo.skipSlideCapture) return;
 
+		console.log('in here');
+
+		let capturedSlides = false;
 		let slides = [];
 
 		const getMatchOptions = (step) => ({imgName: `${demo.name}.${step}`});
@@ -51,24 +54,29 @@ describe(`${whatToTest} slideshow creation`, async function () {
 			imageSnapshotPathProvided: true,
 			mismatchThreshold: settings.tests.mismatchThreshold || tests.mismatchThreshold || 0.001
 		});
-
+console.log('now here');
 		await it(`${demo.id} should generate slideshow`, async function () {
+			console.log('yes/"');
 			await (async () => {
+				console.log('here');
 				const target = differencify.init({ testName: demo.name, chain: false });
 				await target.launch({ headless: demo.headless });
 				const page = await target.newPage();
-				await page.setViewport({ width: 1600, height: 1200 });
 			
 				// set the viewport to 16:9 to match Google Slides
 				await page.setViewport({ width: 1280, height: 720 });
 
 				for (let step of demo.steps) {
+					console.log('capture step?');	
+
 					if (!step.skipSlideCapture) {
+						capturedSlides = true;
+						console.log('capture step');
 						await testStep(target, page, step);
 
 						const slide = await page.screenshot({ fullPage: false });
 						// save the snapshot to disk (ignore non-matches. This is probably not the right way...)
-						await target.toMatchSnapshot(slide, getMatchOptions(step.name + '.slide'));
+						await target.toMatchSnapshot(slide, getMatchOptions(step.name + '.slide'), () => {});
 						// move the snapshot to the slides/screenshots directory
 						await fs.rename(`${imageSnapshotPath}/${getMatchOptions(step.name + '.slide').imgName}.png`, `./slides/screenshots/${getMatchOptions(step.name + '.slide').imgName}.png`);
 						// push the markdown for the slide to the slides array to be written with the others when all said and done
@@ -82,7 +90,7 @@ describe(`${whatToTest} slideshow creation`, async function () {
 
 				await page.close();
 				await target.close();
-			});
+			})();
 
 			fs.writeFile(`slides/${demo.name}.md`, slides.join(''), function(err) {
 				if(err) {
@@ -90,7 +98,9 @@ describe(`${whatToTest} slideshow creation`, async function () {
 				}
 			
 				console.log("The file was saved!");
-			}); 
+			});
+
+			capturedSlides.should.be.true;
 		});
 	}));
 })
@@ -99,6 +109,7 @@ describe(`${whatToTest} tests`, async function () {
 	this.timeout(settings.tests.timeout);
 	await Promise.all(demos.map(async (demo) => {
 		if (whatToTest !== 'All' && whatToTest !== demo.id) return;
+		if (demo.skipTestCapture) return;
 
 		const getMatchOptions = (step) => ({imgName: `${demo.name}.${step}`});
 
@@ -129,7 +140,9 @@ describe(`${whatToTest} tests`, async function () {
 				const target = differencify.init({ testName: demo.name, chain: false });
 				await target.launch({ headless: demo.headless });
 				const page = await target.newPage();
-				await page.setViewport({ width: 1600, height: 1200 });
+
+				// The official screen resolution for Salesforce Keynote demos is 1280x720
+				await page.setViewport(demo.resolution);
 
 				for (let step of demo.steps) {
 					if (!step.skipTestCapture) {

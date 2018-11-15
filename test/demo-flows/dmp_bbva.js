@@ -8,10 +8,13 @@ module.exports = {
 	name: 'dmp.bbva',
 	description: 'DMP Demo Flow',
 	headless: false,
+	resolution: { width: 1280, height: 720 },
 	debug: true,
 	imageSnapshotPath: './test/screenshots/dmp_bbva/',
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
+	skipTestCapture: true,
+	skipSlideCapture: false,
 	steps: [
 		{
 			goto: testhost,
@@ -23,19 +26,22 @@ module.exports = {
 				window.scrollBy(0, window.innerHeight);
 			},
 			waitFor: 2000,
-			name: '0002.overview'
+			name: '0002.overview',
+			skipTestCapture: true
 		},
 		{
 			evaluate: () => {
 				window.scrollBy(0, window.innerHeight * 2);
 			},
 			waitFor: 2000,
-			name: '0003.overview'
+			name: '0003.overview',
+			skipTestCapture: true
 		},
 		{
 			click: '#view-all-data-capture-sources',
 			waitFor: 'body',
-			name: '0100.data-capture-sources'
+			name: '0100.data-capture-sources',
+			skipSlideCapture: true
 		},
 		{
 			waitFor: 2000,
@@ -45,7 +51,8 @@ module.exports = {
 		{
 			click: '#content a',
 			waitFor: 'body',
-			name: '0200.consumer-rights-management-page'
+			name: '0200.consumer-rights-management-page',
+			skipSlideCapture: true
 		},
 		{
 			waitFor: 2000,

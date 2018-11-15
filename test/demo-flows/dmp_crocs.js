@@ -8,6 +8,7 @@ module.exports = {
 	description: 'DMP Crocs Demo Flow',
 	headless: false,
 	debug: true,
+	resultion: { width: 1280, height: 720 },
 	imageSnapshotPath: './test/screenshots/dmp_crocs/',
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
