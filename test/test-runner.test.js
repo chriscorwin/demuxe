@@ -78,7 +78,7 @@ console.log('now here');
 						// save the snapshot to disk (ignore non-matches. This is probably not the right way...)
 						await target.toMatchSnapshot(slide, getMatchOptions(step.name + '.slide'), () => {});
 						// move the snapshot to the slides/screenshots directory
-						await fs.rename(`${imageSnapshotPath}/${getMatchOptions(step.name + '.slide').imgName}.png`, `./slides/screenshots/${getMatchOptions(step.name + '.slide').imgName}.png`);
+						await fs.rename(`${imageSnapshotPath}${getMatchOptions(step.name + '.slide').imgName}.png`, `./slides/screenshots/${getMatchOptions(step.name + '.slide').imgName}.png`);
 						// push the markdown for the slide to the slides array to be written with the others when all said and done
 						slides.push(`---
 
