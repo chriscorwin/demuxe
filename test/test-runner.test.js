@@ -67,12 +67,11 @@ console.log('now here');
 				await page.setViewport({ width: 1280, height: 720 });
 
 				for (let step of demo.steps) {
-					console.log('capture step?');	
+					// make sure to at least RUN the step, even if we don't capture the outcome
+					await testStep(target, page, step);
 
 					if (!step.skipSlideCapture) {
 						capturedSlides = true;
-						console.log('capture step');
-						await testStep(target, page, step);
 
 						const slide = await page.screenshot({ fullPage: false });
 						// save the snapshot to disk (ignore non-matches. This is probably not the right way...)
@@ -97,7 +96,7 @@ console.log('now here');
 					return console.log(err);
 				}
 			
-				console.log("The file was saved!");
+				console.log("Markdown file was saved!");
 			});
 
 			capturedSlides.should.be.true;
@@ -145,9 +144,10 @@ describe(`${whatToTest} tests`, async function () {
 				await page.setViewport(demo.resolution);
 
 				for (let step of demo.steps) {
+					// make sure to at least RUN the step, even if we don't capture the outcome
+					await testStep(target, page, step);
+
 					if (!step.skipTestCapture) {
-						await testStep(target, page, step);
-				
 						const screenshot = await page.screenshot(getScreenshotOptions());
 						await target.toMatchSnapshot(screenshot, getMatchOptions(step.name), handleResult);
 					}
