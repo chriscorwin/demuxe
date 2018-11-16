@@ -28,7 +28,7 @@ If you would like to skip slide capturing for the entire demo, add `skipSlideCap
 
 After you run the tests and the markdown file is created, if you would like to create an actual Google Slide deck, you must:
 
-1. Upload the slides to heroku (commit and push to heroku)
+1. Upload the slides to heroku-dev (eg, commit and then push: `git push heroku your-branch:master`)
 2. `md2gslides slides/[product].[brand].md` (eg: `m32gslides slides/dmp.bbva.md`)
 
 A new slide deck will be generated and you will be given the URL which you can share with whomever you would like.
