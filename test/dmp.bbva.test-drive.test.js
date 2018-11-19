@@ -56,6 +56,7 @@ describe('DMP Demo Flow', function () {
 			// GOTO DATA CAPTURE SOURCES PAGE - SLIDE 44
 			.click('#view-all-data-capture-sources')
 			.waitFor('body')
+			.waitFor(200)
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0100.data-capture-sources'))
 			.result(handleResult)
