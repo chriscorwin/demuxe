@@ -65,7 +65,7 @@ describe('DMP Demo Flow', function () {
 			.toMatchSnapshot(getMatchOptions('0101.data-capture-sources'))
 			.result(handleResult)
 			// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
-			.click('#screenshot')
+			.click('#content a')
 			.waitFor('body')
 			.screenshot(getScreenshotOptions())
 			.toMatchSnapshot(getMatchOptions('0200.consumer-rights-management-page'))
