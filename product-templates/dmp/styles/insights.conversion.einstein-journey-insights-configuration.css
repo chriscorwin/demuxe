@@ -1,0 +1,7 @@
+#content, #subheader {
+	max-width: unset;
+}
+
+#subheader-wrapper {
+	margin-bottom: 0;
+}

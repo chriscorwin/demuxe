@@ -1,0 +1,63 @@
+#content-wrapper {
+  width: 1280px;
+  position: absolute;
+  left: 50%;
+}
+
+#content {
+  width: 1280px;
+  max-width: unset;
+  position: relative;
+  left: -50%;
+}
+
+#content > img {
+  width: 1280px;
+  max-width: unset;
+}
+
+.preload {
+  position: absolute;
+  overflow: hidden;
+  left: -9999px;
+  top: -9999px;
+  height: 1px;
+  width: 1px;
+}
+
+.rpd-object {
+  background-color: transparent;
+  width: 198px;
+  height: 59px;
+  position: absolute;
+  top: 211px;
+  left: 100px;
+  font-size: 0px;
+}
+
+#touchpoints-click-target {
+  left: 17px;
+}
+
+#paths-click-target {
+  left: 216px;
+}
+
+#paths-hover-target {
+  top: 543px;
+  left: 749px;
+  width: 26px;
+  height: 26px;
+}
+
+#combinations-click-target {
+  left: 415px;
+}
+
+body {
+  background-size: 1px 1190px;
+  background-position: top 108px left 0;
+  background-repeat: repeat-x;
+  height: 1575px;
+  background-image: url(/images/slices/insights.einstein-journey-insights.touchpoints.background.svg);
+}
