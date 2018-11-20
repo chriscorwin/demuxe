@@ -2,7 +2,6 @@
 <!-- each page automatically tries to include a javascript file of the same name -->
 <% if (locals.siteSection) { %>
 <script>console.group(`Going to run: <%=locals.siteSection%>.js`)</script>
-<script>console.log(`demoMagickFlowDirectoryName: ${demoMagickFlowDirectoryName}`)</script>
 
 <script src="/javascripts/<%=locals.siteSection%>.js"></script>
 <script>console.groupEnd()</script>

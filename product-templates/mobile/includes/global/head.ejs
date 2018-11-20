@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/styles/style.css">
 <link rel="stylesheet" href="/styles/global.css">
 <!-- each page automatically tries to include a css file of the same name -->
-<% if (locals.siteSection) { %>
+<% if (locals.siteSection && locals.siteSection !== 'magick-flows') { %>
 <link rel="stylesheet" href="/styles/<%=locals.siteSection%>.css">
 <% } %>
 
@@ -32,7 +32,7 @@
 if (locals.pageStylesheets) { 
 	locals.pageStylesheets.forEach(function(stylesheet) { 
 %>
-		<link rel="stylesheet" href="/styles/<%=stylesheet%>">
+		<link rel="stylesheet" href="<%=stylesheet%>">
 <% 
 	});
 } 

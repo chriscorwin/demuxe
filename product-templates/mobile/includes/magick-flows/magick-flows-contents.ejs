@@ -40,6 +40,7 @@ _%>
 		// let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 0);
 
 
+		const isEjs = node.dimensions.type === 'ejs';
 		const isPng = node.dimensions.type === 'png';
 		const isSvg = node.dimensions.type === 'svg';
 		const isMp4 = node.dimensions.type === 'mp4';
@@ -77,38 +78,61 @@ _%>
 	</header>
 <%_ } _%>
 
+<%
+	
+		echo(`
+			<div
+				class="slds-col"
+			>
+		`);
 
-	<div
-		class="slds-col"
-	>
-<%_ if (isPng || isSvg || isGif || isJpeg) { _%>
-		<div
-			class="slds-scrollable"
-			style="height: <%=mainContentScrollableAreaHeight%>px; margin-bottom: <%=footerHeight%>px;"
-		>
-			<img
-				class="screenshot auto-replace is-image "
-				id="screenshot--slide-<%=nodeIndex%>"
-				src="<%=mainContentWebRootUrl%>"
-			>
-		</div>
-<%_ } else if (isMp4) { _%>
-		<video
-			autoplay
-			class="auto-replace is-video "
-			id="screenshot-wrapper--slide-<%=nodeIndex%>"
-			playsinline
-		>
-			<source
-				class="screenshot auto-replace "
-				id="screenshot--slide-<%=nodeIndex%>"
-				src="<%=mainContentWebRootUrl%>"
-				type="video/mp4"
-			>
-			Your browser does not support the video tag.
-		</video>
-<%_ } _%>
-	</div>
+		if (isPng || isSvg || isGif || isJpeg) {
+			echo(`
+				<div
+					class="slds-scrollable"
+					style="height: ${mainContentScrollableAreaHeight}px; margin-bottom: ${footerHeight}px;"
+				>
+					<img
+						class="screenshot auto-replace is-image "
+						id="screenshot--slide-${nodeIndex}"
+						src="${mainContentWebRootUrl}"
+					>
+				</div>
+			`);
+		} else if (isEjs) {
+			echo(`
+				<div
+					class="slds-scrollable"
+				>
+			`);
+				echo(include(mainContentWebRootUrl))
+			echo(`
+				</div>
+			`);
+		} else if (isMp4) {
+			echo(`
+				<video
+					autoplay
+					class="auto-replace is-video "
+					id="screenshot-wrapper--slide-${nodeIndex}"
+					playsinline
+				>
+					<source
+						class="screenshot auto-replace "
+						id="screenshot--slide-${nodeIndex}"
+						src="${mainContentWebRootUrl}"
+						type="video/mp4"
+					>
+					Your browser does not support the video tag.
+				</video>
+			`);
+		}
+
+		echo(`</div>`)
+	
+
+%>
+
 
 <%_ if (showFooter) { _%>
 	<footer class="magick-flows-stickey-footer_container slds-col">

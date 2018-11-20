@@ -49,7 +49,7 @@ app.set('views', appViews);
 app.set('view engine', 'ejs');
 app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/your-code-here' });
 app.set('view options', {compileDebug: true});
-
+app.set('view options', {compileDebug: true, outputFunctionName: 'echo'});
 
 // https://expressjs.com/en/4x/api.html#app.use
 const appUse = [

@@ -268,8 +268,6 @@ document.ontouchstart = function() {
 
 window.setTimeout(() => {
 	window.location.hash = `#${clicks}`;
-	window.location.hash = ``;
-
 }, (150));
 
 window.setTimeout(() => {
