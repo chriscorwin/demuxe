@@ -20,17 +20,6 @@ body {
   width: 100vw;
 }
 
-/* This is done to preload images and reduce load flicker */
-body::after {
-  backface-visibility: visible;
-  content: url("/images/snake-pit-popup.png") url("/magick-flows/bbva-mobile/0000___ID=google-search-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0100___ID=homepage-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0200___ID=homepage-2___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0300___ID=mortgages-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0400___ID=homepage-3___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0500___ID=valora-home.png") url("/magick-flows/bbva-mobile/0600___ID=valora-email-field-blank.png") url("/magick-flows/bbva-mobile/0700___ID=valora-email-field-filled.png") url("/magick-flows/bbva-mobile/0800___ID=valora-use-camera.png") url("/magick-flows/bbva-mobile/0900___ID=valora-fake-video-gif.gif") url("/magick-flows/bbva-mobile/1000___ID=valora-fake-video-found-home.png") url("/magick-flows/bbva-mobile/1100___ID=valora-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/1200___ID=valora-details___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/1300___ID=mortgage-app-step-0___DATA=has-sticky-header.png") url("/magick-flows/bbva-mobile/1400___ID=mortgage-app-step-2___DATA=has-sticky-header__has-sticky-footer.png");
-  height: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 0;
-  z-index: -1;
-}
-
 body {
   background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
@@ -106,17 +95,17 @@ body {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: -395px !important;
-}
-
-.app-switcher-one.slide-left-0 {
-  left: 0px;
+  left: -345px;
 }
 
 .app-switcher-one.be-left-0 {
   left: 0px;
   transition: none !important;
   will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-0 {
+  left: 0px;
 }
 
 .magick-flows--slide-0 {
@@ -127,14 +116,14 @@ body {
   left: 0px;
 }
 
-.app-switcher-one.slide-left-1 {
-  left: -395px;
-}
-
 .app-switcher-one.be-left-1 {
   left: -395px;
   transition: none !important;
   will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-1 {
+  left: -395px;
 }
 
 .magick-flows--slide-1 {
@@ -145,14 +134,14 @@ body {
   left: 395px;
 }
 
-.app-switcher-one.slide-left-2 {
-  left: -790px;
-}
-
 .app-switcher-one.be-left-2 {
   left: -790px;
   transition: none !important;
   will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-2 {
+  left: -790px;
 }
 
 .magick-flows--slide-2 {
@@ -163,14 +152,14 @@ body {
   left: 790px;
 }
 
-.app-switcher-one.slide-left-3 {
-  left: -1185px;
-}
-
 .app-switcher-one.be-left-3 {
   left: -1185px;
   transition: none !important;
   will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-3 {
+  left: -1185px;
 }
 
 .magick-flows--slide-3 {
@@ -181,14 +170,14 @@ body {
   left: 1185px;
 }
 
-.app-switcher-one.slide-left-4 {
-  left: -1580px;
-}
-
 .app-switcher-one.be-left-4 {
   left: -1580px;
   transition: none !important;
   will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-4 {
+  left: -1580px;
 }
 
 .magick-flows--slide-4 {
@@ -199,14 +188,14 @@ body {
   left: 1580px;
 }
 
-.app-switcher-one.slide-left-5 {
-  left: -1975px;
-}
-
 .app-switcher-one.be-left-5 {
   left: -1975px;
   transition: none !important;
   will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-5 {
+  left: -1975px;
 }
 
 .magick-flows--slide-5 {
@@ -217,14 +206,14 @@ body {
   left: 1975px;
 }
 
-.app-switcher-one.slide-left-6 {
-  left: -2370px;
-}
-
 .app-switcher-one.be-left-6 {
   left: -2370px;
   transition: none !important;
   will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-6 {
+  left: -2370px;
 }
 
 .magick-flows--slide-6 {
@@ -235,14 +224,14 @@ body {
   left: 2370px;
 }
 
-.app-switcher-one.slide-left-7 {
-  left: -2765px;
-}
-
 .app-switcher-one.be-left-7 {
   left: -2765px;
   transition: none !important;
   will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-7 {
+  left: -2765px;
 }
 
 .magick-flows--slide-7 {
@@ -253,14 +242,14 @@ body {
   left: 2765px;
 }
 
-.app-switcher-one.slide-left-8 {
-  left: -3160px;
-}
-
 .app-switcher-one.be-left-8 {
   left: -3160px;
   transition: none !important;
   will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-8 {
+  left: -3160px;
 }
 
 .magick-flows--slide-8 {
@@ -483,7 +472,7 @@ footer.magick-flows-stickey-footer_container {
 
 #content.app-switcher-one.be-left-0 {
   opacity: 1;
-  transition: transform 500ms, opacity 600ms, left 125ms !important;
+  transition: transform 500ms, opacity 600ms, left 0ms;
 }
 
 #content.app-switcher-one.be-left-0.fake-the-dock {
@@ -495,7 +484,7 @@ footer.magick-flows-stickey-footer_container {
 }
 
 .notification {
-  background: url("robot-puke—notification.png") no-repeat top left;
+  background: url("/magick-flows/tm-mobile/assets/robot-puke—notification.png") no-repeat top left;
   margin: 0 auto;
   position: absolute;
   transition: 125ms top ease-in-out;
