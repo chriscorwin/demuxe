@@ -10,7 +10,7 @@
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
-	"productTemplate": "mobile",
+	"productTemplate": "dmp",
 	"prod": {
 		"host": "https://roi-einstein-df18.herokuapp.com/"
 	},

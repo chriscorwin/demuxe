@@ -1,7 +1,7 @@
 <script type="text/javascript" src="/javascripts/global-nav.js"></script>
 <!-- each page automatically tries to include a javascript file of the same name -->
 <% if (locals.siteSection) { %>
-<script>console.group(`Going to run: <%=locals.siteSection%>.js`)</script>
+	<script>console.group(`Going to run: <%=locals.siteSection%>.js`)</script>
 
 <script src="/javascripts/<%=locals.siteSection%>.js"></script>
 <script>console.groupEnd()</script>
@@ -16,10 +16,6 @@ if (locals.pageScripts) {
 } 
 %>
 <script type="text/javascript">
-	const navigatePage = ( url ) => {
-		window.location.href = url;
-	}
-
 	if ( location.host === 'localhost:3000' ) {
 		document.write( '<script src="http://' + ( location.host || 'localhost' )
 			.split( ':' )[ 0 ] + ':35729/livereload.js?snipver=1"></' + 'script>' );

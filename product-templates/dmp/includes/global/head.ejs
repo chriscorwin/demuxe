@@ -1,11 +1,30 @@
+<% console.group('[ product-templates/mobile/includes/global/head.ejs ]'); %>
+<% if (locals.title) { %>
+	<title><%= locals.title %></title>
+<%
+	} else {
+		console.warn(`
+============================================================
+[WARNING]
+	${locals.local.host}${locals.urlSlug} does not have a title set.
+
+	product-templates/mobile/includes/global/head.ejs:6
+------------------------------------------------------------
+`);
+
+%>
+	<script>
+		console.warn(`[WARNING: ] <%=locals.local.host%><%=locals.urlSlug%> does not have a title set!`);
+	</script>
+	<title> </title>
+<% } %>
+
 <meta charset="utf-8">
 <link rel="stylesheet" href="/styles/salesforce-lightning-design-system.css" />
 <link rel="stylesheet" href="/styles/style.css">
-<link rel="stylesheet" href="/styles/brand.css">
 <link rel="stylesheet" href="/styles/global.css">
-<link rel="stylesheet" href="/styles/brand.css">
 <!-- each page automatically tries to include a css file of the same name -->
-<% if (locals.siteSection) { %>
+<% if (locals.siteSection && locals.siteSection !== 'magick-flows') { %>
 <link rel="stylesheet" href="/styles/<%=locals.siteSection%>.css">
 <% } %>
 
@@ -13,33 +32,63 @@
 if (locals.pageStylesheets) { 
 	locals.pageStylesheets.forEach(function(stylesheet) { 
 %>
-		<link rel="stylesheet" href="/styles/<%=stylesheet%>">
+		<link rel="stylesheet" href="<%=stylesheet%>">
 <% 
 	});
 } 
 %>
 
+
 <% 
 	const { account, trigger, user, version } = locals.sanitizedQueryParams;
 	const is201 = version && version === '201';
-	const accountParam = account || locals.localization.account_name || '';
+	const accountParam = account || (is201 ? 'nto-electronics' : 'Crocs');
 %>
 
 <script type="text/javascript">
-	const locals =<%- JSON.stringify(locals)%>;
-	// console.dir(locals);
+	const demoMagickFlowDirectoryName = '<%=locals.urlSlug%>';
+	console.log('[ product-templates/mobile/includes/global/head.ejs:50 ] locals.urlSlug', '<%-locals.urlSlug%>');
+
+	const locals = {};
+<%
+	// console.group(`[Setting global javascript variables from Demuxe locals]`);
+	Object.keys(locals).forEach(function(key, fileIndex) {
+		// console.group(` --> key: `, key);
+		if (key != '_locals' && key != 'path' && key != 'util' && key != 'classnames' && key != 'sizeOf') {
+			if(typeof locals[key] === 'object') {
+%>
+				locals['<%- key %>'] = <%- JSON.stringify(locals[key]) %>;
+<%
+			} else {
+%>
+				locals['<%- key %>']  = '<%- locals[key] %>';
+<%
+			}
+%>
+<%
+		} else {
+			// console.log('NOT GONNA SAVE: key: ', key);
+		}
+		// console.groupEnd();
+	});
+	// console.groupEnd();
+
+%>
+	console.group('[ product-templates/mobile/includes/global/head.ejs:77 ] locals:');
+	console.dir(locals);
+	console.groupEnd();
 
 	const url = new URL( window.location.href );
 	const activePage = '<%=locals.siteSection%>';
 	const accountParam = '<%=accountParam%>';
 	const versionParam = '<%=version%>';
-	const magickFlows = locals.magickFlows;
+	const magickFlows = '<%=locals.magickFlows%>';
 	const urlSlug = '<%=locals.urlSlug%>';
 	let pageVersion = '<%=version%>';
 	const userParam = '<%=user%>' || 'Dan';
 	const triggerParam = '<%=trigger%>';
 
-	let accountName = '<%= locals.localization.account_name %>';
+	let accountName = 'Crocs';
 	let userName = '';
 	let appName = 'Salesforce DMP';
 
@@ -145,11 +194,6 @@ if (locals.pageStylesheets) {
 						},
 						{
 							label: 'Custom Index Tool'
-						},
-						{
-							label: 'Einstein Journey Insights',
-							href: `/insights/journey-insights?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
-							id: 'journey-insights-link'
 						}
 					],
 					[ {
@@ -198,8 +242,7 @@ if (locals.pageStylesheets) {
 				label: 'Manage',
 				href: `?version=${pageVersion}&account=${accountParam}&user=${userParam}`,
 				lookLikeDropdown: true,
-				isActive: ( activePage === 'manage' ),
-				dropdownItems: []
+				isActive: ( activePage === 'manage' )
 			},
 			{
 				label: 'Data Studio',
@@ -352,7 +395,6 @@ if (locals.pageStylesheets) {
 		} ]
 	}
 </script>
-
-
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
+<% console.groupEnd(); %>
