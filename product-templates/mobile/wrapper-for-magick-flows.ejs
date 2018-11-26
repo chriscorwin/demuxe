@@ -3,11 +3,17 @@
 	<head>
 		<%- include('includes/global/head', {pageStylesheets: [`/magick-flows/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}/assets/styles.css`]}) _%>
 		<% if (locals.siteSection) { %>
-		<%- include(`includes/${locals.siteSection}/head`) _%>
+			<%- include(`includes/${locals.siteSection}/head`) _%>
 		<% } %>
+		<% if (locals.urlSlug && locals.urlSlug != 'bbva-atm') { %>
+			<%- include(`includes/mobile/mobile-meta-attributes-for-ios-webapp`) _%>
+		<% } %>
+
 	</head>
 
 	<body class="magick-flow">
+
+		<%- locals.urlSlug -%>
 		<% if (locals.siteSection) { %>
 		<div id="content-wrapper"  class="container magick-flow_content-wrapper slds-transition-hide  ">
 			<div id="content" class="app-switcher-one magick-flow_content fake-the-dock">

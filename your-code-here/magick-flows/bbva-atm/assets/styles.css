@@ -1,8 +1,7 @@
-@charset "UTF-8";
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/images/snake-pit-popup.png");
+  content: url("/images/snake-pit-popup.png") url("/magick-flows/bbva-atm/main/0000.png") url("/magick-flows/bbva-atm/main/0101.png") url("/magick-flows/bbva-atm/main/0202.png") url("/magick-flows/bbva-atm/main/0303.png") url("/magick-flows/bbva-atm/main/0404.png") url("/magick-flows/bbva-atm/main/0505.png") url("/magick-flows/bbva-atm/main/0606.png") url("/magick-flows/bbva-atm/main/0707.png") url("/magick-flows/bbva-atm/main/0808.png") url("/magick-flows/bbva-atm/main/0909.png") url("/magick-flows/bbva-atm/main/1010.png") url("/magick-flows/bbva-atm/main/1111.png");
   height: 0;
   overflow: hidden;
   position: absolute;
@@ -30,12 +29,12 @@ body {
 body, .container {
   background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
-  height: 812px;
+  height: 768px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 375px;
+  width: 1024px;
 }
 
 .magick-flows-slide {
@@ -43,12 +42,12 @@ body, .container {
 }
 
 .app-switcher-one {
-  height: 812px;
+  height: 768px;
   left: 0;
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 3140px;
+  width: 12508px;
 }
 
 .app-switcher-one.shrink {
@@ -68,8 +67,8 @@ body, .container {
 }
 
 .app-switcher-one.rounded-corners .magick-flows-slide .slds-scrollable {
-  max-height: 812px;
-  height: 812px;
+  max-height: 768px;
+  height: 768px;
 }
 
 .app-switcher-one.rounded-corners .magick-flows-slide.notification {
@@ -77,7 +76,7 @@ body, .container {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: -345px;
+  left: -994px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -91,155 +90,227 @@ body, .container {
 }
 
 .magick-flows--slide-0 {
-  height: 812px;
+  height: 768px;
   position: absolute;
   top: 0;
-  width: 375px;
+  width: 1024px;
   left: 0px;
 }
 
 .app-switcher-one.be-left-1 {
-  left: -395px;
+  left: -1044px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -395px;
+  left: -1044px;
 }
 
 .magick-flows--slide-1 {
-  height: 812px;
+  height: 768px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 395px;
+  width: 1024px;
+  left: 1044px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -790px;
+  left: -2088px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -790px;
+  left: -2088px;
 }
 
 .magick-flows--slide-2 {
-  height: 812px;
+  height: 768px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 790px;
+  width: 1024px;
+  left: 2088px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -1185px;
+  left: -3132px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -1185px;
+  left: -3132px;
 }
 
 .magick-flows--slide-3 {
-  height: 812px;
+  height: 768px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 1185px;
+  width: 1024px;
+  left: 3132px;
 }
 
 .app-switcher-one.be-left-4 {
-  left: -1580px;
+  left: -4176px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-4 {
-  left: -1580px;
+  left: -4176px;
 }
 
 .magick-flows--slide-4 {
-  height: 812px;
+  height: 768px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 1580px;
+  width: 1024px;
+  left: 4176px;
 }
 
 .app-switcher-one.be-left-5 {
-  left: -1975px;
+  left: -5220px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-5 {
-  left: -1975px;
+  left: -5220px;
 }
 
 .magick-flows--slide-5 {
-  height: 812px;
+  height: 768px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 1975px;
+  width: 1024px;
+  left: 5220px;
 }
 
 .app-switcher-one.be-left-6 {
-  left: -2370px;
+  left: -6264px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-6 {
-  left: -2370px;
+  left: -6264px;
 }
 
 .magick-flows--slide-6 {
-  height: 812px;
+  height: 768px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 2370px;
+  width: 1024px;
+  left: 6264px;
 }
 
 .app-switcher-one.be-left-7 {
-  left: -2765px;
+  left: -7308px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-7 {
-  left: -2765px;
+  left: -7308px;
 }
 
 .magick-flows--slide-7 {
-  height: 812px;
+  height: 768px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 2765px;
+  width: 1024px;
+  left: 7308px;
 }
 
 .app-switcher-one.be-left-8 {
-  left: -3160px;
+  left: -8352px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-8 {
-  left: -3160px;
+  left: -8352px;
 }
 
 .magick-flows--slide-8 {
-  height: 812px;
+  height: 768px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 3160px;
+  width: 1024px;
+  left: 8352px;
+}
+
+.app-switcher-one.be-left-9 {
+  left: -9396px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-9 {
+  left: -9396px;
+}
+
+.magick-flows--slide-9 {
+  height: 768px;
+  position: absolute;
+  top: 0;
+  width: 1024px;
+  left: 9396px;
+}
+
+.app-switcher-one.be-left-10 {
+  left: -10440px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-10 {
+  left: -10440px;
+}
+
+.magick-flows--slide-10 {
+  height: 768px;
+  position: absolute;
+  top: 0;
+  width: 1024px;
+  left: 10440px;
+}
+
+.app-switcher-one.be-left-11 {
+  left: -11484px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-11 {
+  left: -11484px;
+}
+
+.magick-flows--slide-11 {
+  height: 768px;
+  position: absolute;
+  top: 0;
+  width: 1024px;
+  left: 11484px;
+}
+
+.app-switcher-one.be-left-12 {
+  left: -12528px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-12 {
+  left: -12528px;
+}
+
+.magick-flows--slide-12 {
+  height: 768px;
+  position: absolute;
+  top: 0;
+  width: 1024px;
+  left: 12528px;
 }
 
 footer.magick-flows-stickey-footer_container {
@@ -292,21 +363,6 @@ footer.magick-flows-stickey-footer_container {
   opacity: 0;
 }
 
-.notification {
-  background: url("/magick-flows/tm-mobile/assets/robot-puke—notification.png") no-repeat top left;
-  margin: 0 auto;
-  position: absolute;
-  transition: 125ms top ease-in-out;
-  width: 375px;
-  background-color: transparent;
-  height: 812px;
-  top: -210px;
-  transition: 125ms top ease-in-out;
-  will-change: top;
-}
-
-.notification.slide-in {
-  top: 0px;
-  transition: 125ms top ease-in-out;
-  will-change: top;
+.magick-flows--slide-5 {
+  background-color: #00366f;
 }

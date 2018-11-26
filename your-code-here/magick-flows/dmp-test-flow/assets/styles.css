@@ -26,28 +26,8 @@ body {
   padding: 0;
 }
 
-body, .container {
-  background: url("/images/home-background.jpg") no-repeat top left;
-  background-size: 100% 100%;
-  height: 812px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 375px;
-}
-
 .magick-flows-slide {
   background-color: transparent;
-}
-
-.app-switcher-one {
-  height: 812px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: 400ms transform, 800ms left;
-  width: 5510px;
 }
 
 .app-switcher-one.shrink {
@@ -59,16 +39,16 @@ body, .container {
   background-color: white;
 }
 
+.app-switcher-one.rounded-corners .slds-scrollable {
+  max-height: 812px;
+  height: 812px;
+}
+
 .app-switcher-one.rounded-corners .magick-flows-slide {
   border-radius: 2rem;
   background-clip: border-box;
   overflow: hidden;
   box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
-}
-
-.app-switcher-one.rounded-corners .magick-flows-slide .slds-scrollable {
-  max-height: 812px;
-  height: 812px;
 }
 
 .app-switcher-one.rounded-corners .magick-flows-slide.notification {
@@ -349,6 +329,175 @@ body, .container {
   left: 5530px;
 }
 
+/* Drawer styles */
+.drawer {
+  background: #fff;
+  height: 812px;
+  left: 375px;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  transition: .4s left;
+  width: 375px;
+}
+
+.drawer.slide-in {
+  left: 0;
+}
+
+.drawer .content {
+  background: #fff url("/images/stadium.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 966px;
+  width: 375px;
+}
+
+.drawer.confirmation .content {
+  background-color: #f7f7f9;
+  background-image: url("/images/confirmation.png");
+  height: 701px;
+}
+
+.drawer.confirmation .header {
+  background-image: url("/images/drawer-header-3.png");
+  height: 111px;
+}
+
+.drawer.confirmation .scroll-wrapper {
+  top: 111px;
+}
+
+.drawer.payment .content {
+  background-image: url("/images/payment.png");
+  height: 724px;
+}
+
+.drawer.payment .header {
+  background-image: url("/images/drawer-header-2.png");
+}
+
+.drawer.section .content {
+  background-image: url("/images/section.png");
+  height: 724px;
+}
+
+.drawer .header {
+  background: #019cdf url("/images/drawer-header.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 88px;
+  width: 100%;
+}
+
+.drawer .scroll-wrapper {
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 88px;
+}
+
+/* Snake-Pit Popup Styles */
+.snake-pit-popup {
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: relative;
+  transition: .5s opacity;
+  width: 100%;
+}
+
+.snake-pit-popup:after {
+  background: url("/images/snake-pit-popup.png") no-repeat top left;
+  background-size: 100% 100%;
+  content: "";
+  display: block;
+  height: 915px;
+  left: 13px;
+  position: absolute;
+  top: 14px;
+  width: 348px;
+}
+
+.snake-pit-popup.fade-in {
+  opacity: 1;
+}
+
+.snake-pit-popup.show {
+  display: block;
+}
+
+/* App Switcher Two Styles */
+.app-switcher-two {
+  display: none;
+  height: 812px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: .3s transform, .6s left;
+  width: 1165px;
+}
+
+.app-switcher-two.rounded-corners .qr-screen,
+.app-switcher-two.rounded-corners .instagram-screen,
+.app-switcher-two.rounded-corners .email-screen {
+  border-radius: 40px;
+}
+
+.app-switcher-two.show {
+  display: block;
+}
+
+.app-switcher-two.shrink {
+  transform: scale(0.95);
+}
+
+.app-switcher-two.slide-left-one {
+  left: -395px;
+}
+
+.app-switcher-two.slide-left-two {
+  left: -790px;
+}
+
+.qr-screen {
+  background: #fff url("/images/qr-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.qr-screen.show {
+  display: block;
+}
+
+.instagram-screen {
+  background: #fff url("/images/instagram-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 395px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.email-screen {
+  background: #fff url("/images/email-screen.png") no-repeat top left;
+  background-size: 100% 100%;
+  height: 812px;
+  left: 790px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
 footer.magick-flows-stickey-footer_container {
   position: absolute;
   bottom: 0;
@@ -386,6 +535,10 @@ footer.magick-flows-stickey-footer_container {
   left: 1px;
 }
 
+.magick-flows--slide-5 {
+  background-color: #00366f;
+}
+
 #content.app-switcher-one.be-left-0 {
   opacity: 1;
   transition: transform 500ms, opacity 600ms, left 0ms;
@@ -397,8 +550,4 @@ footer.magick-flows-stickey-footer_container {
   box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
   transition: transform 500ms, opacity 600ms, left 125ms !important;
   opacity: 0;
-}
-
-.magick-flows--slide-5 {
-  background-color: #00366f;
 }

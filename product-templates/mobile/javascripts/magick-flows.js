@@ -63,7 +63,6 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 	$appSwitcherOne.classList.remove(...appSwitcherClassNames);
 	if (doAppTransition === true) {
 
-		$appSwitcherOne.classList.remove('hide');
 		$appSwitcherOne.classList.add(`shrink`, `rounded-corners`, `slide-left-${thisStepNumber}`);
 		$appSwitcherOne.classList.remove(`be-left-${thisStepNumber}`);
 		setTimeout(() => {
@@ -77,8 +76,7 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 		}, 401);
 
 	} else {
-		$appSwitcherOne.classList.remove('hide,shrink,rounded-corners');
-		$appSwitcherOne.classList.remove('hide');
+		$appSwitcherOne.classList.remove('shrink,rounded-corners');
 		$appSwitcherOne.classList.add(`be-left-${thisStepNumber}`);
 	}
 	console.groupEnd();
@@ -171,15 +169,15 @@ function locationHashChanged(event) {
 	if ( magickFlowConfig.urlSlug === 'tm-mobile-tokyo' || magickFlowConfig.urlSlug === 'tm-mobile' ) {
 		if (clicks === 6) {
 			doNotifcation = true;
-			document.querySelector(`.notification.magick-flows--slide-6.magick-flows-slide`).classList.remove('slds-hide');
+			document.querySelector(`.notification`).classList.remove('slds-hide');
 
 			window.setTimeout(() => {
-				document.querySelector(`.notification.magick-flows--slide-6.magick-flows-slide`).classList.add('slide-in');
+				document.querySelector(`.notification`).classList.add('slide-in');
 			}, 125);
 		} else {
 			window.setTimeout(() => {
-				document.querySelector(`.notification.magick-flows--slide-6.magick-flows-slide`).classList.add('slds-hide');
-				document.querySelector(`.notification.magick-flows--slide-6.magick-flows-slide`).classList.remove('slide-in');
+				document.querySelector(`.notification`).classList.add('slds-hide');
+				document.querySelector(`.notification`).classList.remove('slide-in');
 			}, 500);
 		}
 	}
