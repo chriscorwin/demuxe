@@ -5,7 +5,7 @@
 		<% if (locals.siteSection) { %>
 			<%- include(`includes/${locals.siteSection}/head`) _%>
 		<% } %>
-		<% if (locals.urlSlug && locals.urlSlug != 'bbva-atm') { %>
+		<% if (locals.urlSlug && (locals.urlSlug != 'bbva-atm' || locals.urlSlug != 'ga360')) { %>
 			<%- include(`includes/mobile/mobile-meta-attributes-for-ios-webapp`) _%>
 		<% } %>
 
