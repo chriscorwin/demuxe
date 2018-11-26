@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/images/snake-pit-popup.png") url("/magick-flows/bbva-mobile/0000___ID=google-search-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0100___ID=homepage-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0200___ID=homepage-2___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0300___ID=mortgages-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0400___ID=homepage-3___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/0500___ID=valora-home.png") url("/magick-flows/bbva-mobile/0600___ID=valora-email-field-blank.png") url("/magick-flows/bbva-mobile/0700___ID=valora-email-field-filled.png") url("/magick-flows/bbva-mobile/0800___ID=valora-use-camera.png") url("/magick-flows/bbva-mobile/0900___ID=valora-fake-video-gif.gif") url("/magick-flows/bbva-mobile/1000___ID=valora-fake-video-found-home.png") url("/magick-flows/bbva-mobile/1100___ID=valora-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/1200___ID=valora-details___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/1300___ID=mortgage-app-step-0___DATA=has-sticky-header.png") url("/magick-flows/bbva-mobile/1400___ID=mortgage-app-step-2___DATA=has-sticky-header__has-sticky-footer.png");
+  content: url("/images/snake-pit-popup.png") url("/magick-flows/bbva-atm/main/0000.png") url("/magick-flows/bbva-atm/main/0101.png") url("/magick-flows/bbva-atm/main/0202.png") url("/magick-flows/bbva-atm/main/0303.png") url("/magick-flows/bbva-atm/main/0404.png") url("/magick-flows/bbva-atm/main/0505.png") url("/magick-flows/bbva-atm/main/0606.png") url("/magick-flows/bbva-atm/main/0707.png") url("/magick-flows/bbva-atm/main/0808.png") url("/magick-flows/bbva-atm/main/0909.png") url("/magick-flows/bbva-atm/main/1010.png") url("/magick-flows/bbva-atm/main/1111.png");
   height: 0;
   overflow: hidden;
   position: absolute;
@@ -26,8 +26,28 @@ body {
   padding: 0;
 }
 
+body, .container {
+  background: url("/images/home-background.jpg") no-repeat top left;
+  background-size: 100% 100%;
+  height: 720px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+}
+
 .magick-flows-slide {
   background-color: transparent;
+}
+
+.app-switcher-one {
+  height: 720px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 400ms transform, 800ms left;
+  width: 16880px;
 }
 
 .app-switcher-one.shrink {
@@ -39,11 +59,6 @@ body {
   background-color: white;
 }
 
-.app-switcher-one.rounded-corners .slds-scrollable {
-  max-height: 812px;
-  height: 812px;
-}
-
 .app-switcher-one.rounded-corners .magick-flows-slide {
   border-radius: 2rem;
   background-clip: border-box;
@@ -51,12 +66,17 @@ body {
   box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
 }
 
+.app-switcher-one.rounded-corners .magick-flows-slide .slds-scrollable {
+  max-height: 720px;
+  height: 720px;
+}
+
 .app-switcher-one.rounded-corners .magick-flows-slide.notification {
   background-color: transparent;
 }
 
 .app-switcher-one.slide-left-0 {
-  left: -345px;
+  left: -1250px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -70,432 +90,245 @@ body {
 }
 
 .magick-flows--slide-0 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
+  width: 1280px;
   left: 0px;
 }
 
 .app-switcher-one.be-left-1 {
-  left: -395px;
+  left: -1300px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -395px;
+  left: -1300px;
 }
 
 .magick-flows--slide-1 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 395px;
+  width: 1280px;
+  left: 1300px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -790px;
+  left: -2600px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -790px;
+  left: -2600px;
 }
 
 .magick-flows--slide-2 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 790px;
+  width: 1280px;
+  left: 2600px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -1185px;
+  left: -3900px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -1185px;
+  left: -3900px;
 }
 
 .magick-flows--slide-3 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 1185px;
+  width: 1280px;
+  left: 3900px;
 }
 
 .app-switcher-one.be-left-4 {
-  left: -1580px;
+  left: -5200px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-4 {
-  left: -1580px;
+  left: -5200px;
 }
 
 .magick-flows--slide-4 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 1580px;
+  width: 1280px;
+  left: 5200px;
 }
 
 .app-switcher-one.be-left-5 {
-  left: -1975px;
+  left: -6500px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-5 {
-  left: -1975px;
+  left: -6500px;
 }
 
 .magick-flows--slide-5 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 1975px;
+  width: 1280px;
+  left: 6500px;
 }
 
 .app-switcher-one.be-left-6 {
-  left: -2370px;
+  left: -7800px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-6 {
-  left: -2370px;
+  left: -7800px;
 }
 
 .magick-flows--slide-6 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 2370px;
+  width: 1280px;
+  left: 7800px;
 }
 
 .app-switcher-one.be-left-7 {
-  left: -2765px;
+  left: -9100px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-7 {
-  left: -2765px;
+  left: -9100px;
 }
 
 .magick-flows--slide-7 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 2765px;
+  width: 1280px;
+  left: 9100px;
 }
 
 .app-switcher-one.be-left-8 {
-  left: -3160px;
+  left: -10400px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-8 {
-  left: -3160px;
+  left: -10400px;
 }
 
 .magick-flows--slide-8 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 3160px;
+  width: 1280px;
+  left: 10400px;
 }
 
 .app-switcher-one.be-left-9 {
-  left: -3555px;
+  left: -11700px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-9 {
-  left: -3555px;
+  left: -11700px;
 }
 
 .magick-flows--slide-9 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 3555px;
+  width: 1280px;
+  left: 11700px;
 }
 
 .app-switcher-one.be-left-10 {
-  left: -3950px;
+  left: -13000px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-10 {
-  left: -3950px;
+  left: -13000px;
 }
 
 .magick-flows--slide-10 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 3950px;
+  width: 1280px;
+  left: 13000px;
 }
 
 .app-switcher-one.be-left-11 {
-  left: -4345px;
+  left: -14300px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-11 {
-  left: -4345px;
+  left: -14300px;
 }
 
 .magick-flows--slide-11 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 4345px;
+  width: 1280px;
+  left: 14300px;
 }
 
 .app-switcher-one.be-left-12 {
-  left: -4740px;
+  left: -15600px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-12 {
-  left: -4740px;
+  left: -15600px;
 }
 
 .magick-flows--slide-12 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 4740px;
+  width: 1280px;
+  left: 15600px;
 }
 
 .app-switcher-one.be-left-13 {
-  left: -5135px;
+  left: -16900px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-13 {
-  left: -5135px;
+  left: -16900px;
 }
 
 .magick-flows--slide-13 {
-  height: 812px;
+  height: 720px;
   position: absolute;
   top: 0;
-  width: 375px;
-  left: 5135px;
-}
-
-.app-switcher-one.be-left-14 {
-  left: -5530px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-14 {
-  left: -5530px;
-}
-
-.magick-flows--slide-14 {
-  height: 812px;
-  position: absolute;
-  top: 0;
-  width: 375px;
-  left: 5530px;
-}
-
-/* Drawer styles */
-.drawer {
-  background: #fff;
-  height: 812px;
-  left: 375px;
-  overflow: auto;
-  position: absolute;
-  top: 0;
-  transition: .4s left;
-  width: 375px;
-}
-
-.drawer.slide-in {
-  left: 0;
-}
-
-.drawer .content {
-  background: #fff url("/images/stadium.png") no-repeat top left;
-  background-size: 100% 100%;
-  height: 966px;
-  width: 375px;
-}
-
-.drawer.confirmation .content {
-  background-color: #f7f7f9;
-  background-image: url("/images/confirmation.png");
-  height: 701px;
-}
-
-.drawer.confirmation .header {
-  background-image: url("/images/drawer-header-3.png");
-  height: 111px;
-}
-
-.drawer.confirmation .scroll-wrapper {
-  top: 111px;
-}
-
-.drawer.payment .content {
-  background-image: url("/images/payment.png");
-  height: 724px;
-}
-
-.drawer.payment .header {
-  background-image: url("/images/drawer-header-2.png");
-}
-
-.drawer.section .content {
-  background-image: url("/images/section.png");
-  height: 724px;
-}
-
-.drawer .header {
-  background: #019cdf url("/images/drawer-header.png") no-repeat top left;
-  background-size: 100% 100%;
-  height: 88px;
-  width: 100%;
-}
-
-.drawer .scroll-wrapper {
-  bottom: 0;
-  left: 0;
-  overflow: auto;
-  position: absolute;
-  right: 0;
-  top: 88px;
-}
-
-/* Snake-Pit Popup Styles */
-.snake-pit-popup {
-  background: rgba(0, 0, 0, 0.55);
-  display: none;
-  height: 100%;
-  opacity: 0;
-  position: relative;
-  transition: .5s opacity;
-  width: 100%;
-}
-
-.snake-pit-popup:after {
-  background: url("/images/snake-pit-popup.png") no-repeat top left;
-  background-size: 100% 100%;
-  content: "";
-  display: block;
-  height: 915px;
-  left: 13px;
-  position: absolute;
-  top: 14px;
-  width: 348px;
-}
-
-.snake-pit-popup.fade-in {
-  opacity: 1;
-}
-
-.snake-pit-popup.show {
-  display: block;
-}
-
-/* App Switcher Two Styles */
-.app-switcher-two {
-  display: none;
-  height: 812px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: .3s transform, .6s left;
-  width: 1165px;
-}
-
-.app-switcher-two.rounded-corners .qr-screen,
-.app-switcher-two.rounded-corners .instagram-screen,
-.app-switcher-two.rounded-corners .email-screen {
-  border-radius: 40px;
-}
-
-.app-switcher-two.show {
-  display: block;
-}
-
-.app-switcher-two.shrink {
-  transform: scale(0.95);
-}
-
-.app-switcher-two.slide-left-one {
-  left: -395px;
-}
-
-.app-switcher-two.slide-left-two {
-  left: -790px;
-}
-
-.qr-screen {
-  background: #fff url("/images/qr-screen.png") no-repeat top left;
-  background-size: 100% 100%;
-  height: 812px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 375px;
-}
-
-.qr-screen.show {
-  display: block;
-}
-
-.instagram-screen {
-  background: #fff url("/images/instagram-screen.png") no-repeat top left;
-  background-size: 100% 100%;
-  height: 812px;
-  left: 395px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 375px;
-}
-
-.email-screen {
-  background: #fff url("/images/email-screen.png") no-repeat top left;
-  background-size: 100% 100%;
-  height: 812px;
-  left: 790px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 375px;
+  width: 1280px;
+  left: 16900px;
 }
 
 footer.magick-flows-stickey-footer_container {
@@ -535,10 +368,6 @@ footer.magick-flows-stickey-footer_container {
   left: 1px;
 }
 
-.magick-flows--slide-5 {
-  background-color: #00366f;
-}
-
 #content.app-switcher-one.be-left-0 {
   opacity: 1;
   transition: transform 500ms, opacity 600ms, left 0ms;
@@ -550,4 +379,8 @@ footer.magick-flows-stickey-footer_container {
   box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
   transition: transform 500ms, opacity 600ms, left 125ms !important;
   opacity: 0;
+}
+
+.magick-flows--slide-5 {
+  background-color: #00366f;
 }

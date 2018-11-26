@@ -35,7 +35,21 @@ _%>
 
 
 		// Calculate the height of our scrollable area - 20 magick number for padding ¯\_(ツ)_/¯
+
+
 		let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 20);
+
+			// mainContentScrollableAreaHeight = ((node.dimensions.height - (headerHeight + footerHeight)) + 20);
+		if (node.dimensions.height <= 812) {
+			// mainContentScrollableAreaHeight = ((node.dimensions.height - (headerHeight + footerHeight)) + 20);
+			mainContentScrollableAreaHeight = node.dimensions.height;
+		}
+		// const mainContentScrollableAreaHeightMax = 812;
+		// const mainContentScrollableAreaHeightPossibilityOne = node.dimensions.height;
+
+
+
+
 		// let OMG_EFFING_PAD_SLIDES_2_AND_4 = 
 		// let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 0);
 

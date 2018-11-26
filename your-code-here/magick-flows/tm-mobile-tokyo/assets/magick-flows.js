@@ -1,3 +1,5 @@
+alert('hi');
+
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
 
