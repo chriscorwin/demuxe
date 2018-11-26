@@ -1,11 +1,11 @@
-<img id="screenshot" class="auto-replace" style="width: 100%; margin: 0;" src="/magick-flows/<%= demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug] %>/0.svg">
+<img id="screenshot" class="auto-replace" style="width: 100%; margin: 0;" src="/magick-flows/<%= magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug] %>/0.svg">
 
 
 
 
 
 <div id="preload" style="display: none;">
-  <% locals.demoMagickFlows[demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
-    <img src="/images/magick-flows/<%=demoMagickFlowUrlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/<%=fileName%>" width="1" height="1" />
+  <% locals.magickFlows[urlSlugsMapToFlowDirectories[locals.urlSlug]].screens.forEach(function(fileName){ %>
+    <img src="/images/magick-flows/<%=magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]%>%>/<%=fileName%>" width="1" height="1" />
   <% }); %>
 </div>

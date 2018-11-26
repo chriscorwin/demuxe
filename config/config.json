@@ -2,11 +2,15 @@
 	"brandTheme": "nto",
 	"demoName": "ROI DF 18",
 	"demoVersion": "0.1",
-	"demoMagickFlows": {},
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
-	"productTemplate": "dmp",
+	"productTemplate": "mobile",
 	"prod": {
 		"host": "https://roi-einstein-df18.herokuapp.com/"
 	},

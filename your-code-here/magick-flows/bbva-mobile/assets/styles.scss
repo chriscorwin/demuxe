@@ -3,7 +3,11 @@ $heightOfSlideValue: 812;
 $widthOfSlideValue: 375;
 $widthOfGutterValue: 20;
 
-$widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) * 1px;
+$widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
+$heightOfAppSwitcher: $heightOfSlideValue + 0px;
+$heightOfSlide: $heightOfSlideValue + 0px;
+$widthOfSlide: $widthOfSlideValue + 0px;
+
 
 
 /* This is done to preload images and reduce load flicker */
@@ -26,9 +30,8 @@ body::after {
 		url('/magick-flows/bbva-mobile/1200___ID=valora-details___DATA=has-sticky-header__has-sticky-footer.png')
 		url('/magick-flows/bbva-mobile/1300___ID=mortgage-app-step-0___DATA=has-sticky-header.png')
 		url('/magick-flows/bbva-mobile/1400___ID=mortgage-app-step-2___DATA=has-sticky-header__has-sticky-footer.png')
-
-
 	;
+
 	height: 0;
 	overflow: hidden;
 	position: absolute;
@@ -36,4 +39,13 @@ body::after {
 	z-index: -1;
 }
 
-@import "./../../../styles/magick-flows.scss"
+
+
+
+@import "./../../../styles/magick-flows.scss";
+@import "./../../../styles/magick-flows-mobile.scss";
+
+
+.magick-flows--slide-5 {
+	background-color: #00366f;
+}

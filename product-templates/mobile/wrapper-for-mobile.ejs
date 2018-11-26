@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% if (locals.siteSection) { %>
+		<%- include(`includes/${locals.siteSection}/head`) _%>
+		<% } %>
+	</head>
+
+	<body>
+<%_
+		try {
+_%>
+		<%- include(`${locals.pageContents}`, {'path': locals.path}) %>
+		<%- include('includes/global/footer-scripts') %>
+<%_
+		}
+		catch(error) {
+_%>
+		<div id="content-wrapper">
+			<div id="content" class="slds-p-vertical_medium slds-container_large">
+				<div class="slds-p-horizontal_medium ">
+					<h1 class="slds-text-heading_large slds-m-top_large">Error</h1>
+
+					<div class="slds-box slds-theme_error slds-theme_alert-texture slds-m-top_medium">
+						<p><%- error %></p>
+					</div>
+				</div>
+			</div>
+		</div>
+<%_
+			console.error(error);
+		}
+_%>
+
+	</body>
+</html>

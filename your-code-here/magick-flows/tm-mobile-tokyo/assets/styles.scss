@@ -3,16 +3,33 @@ $heightOfSlideValue: 812;
 $widthOfSlideValue: 375;
 $widthOfGutterValue: 20;
 
-$widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) * 1px;
+$widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
+$heightOfAppSwitcher: $heightOfSlideValue + 0px;
+$heightOfSlide: $heightOfSlideValue + 0px;
+$widthOfSlide: $widthOfSlideValue + 0px;
 
+
+
+/* This is done to preload images and reduce load flicker */
+body::after {
+	backface-visibility: visible;
+	content: url('/images/snake-pit-popup.png')
+
+	;
+
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	z-index: -1;
+}
 
 @import "./../../../styles/magick-flows.scss";
-
-
+@import "./../../../styles/magick-flows-mobile.scss";
 
 
 .notification {
-	background: url('robot-puke—notification.png') no-repeat top left;
+	background: url('/magick-flows/tm-mobile-tokyo/assets/robot-puke—notification.png') no-repeat top left;
 	margin: 0 auto;
 	position: absolute;
 	transition: 125ms top ease-in-out;

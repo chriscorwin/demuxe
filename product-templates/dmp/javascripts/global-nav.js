@@ -1,3 +1,4 @@
+console.log(`[ /Users/ccorwin/Documents/Workspaces/mobile-bbva-df-2018/product-templates/dmp/javascripts/global-nav.js:1 ] locals: `, util.inspect(, { showHidden: true, depth: null, colors: true }));
 const switchAccount = ( data ) => {
 	console.log( 'switch account!', data );
 	accountName = data;
