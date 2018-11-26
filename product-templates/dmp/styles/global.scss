@@ -149,8 +149,34 @@ HEADER AREA
 	background-color: #F7F9FB;
 	margin-top: 90px;
 	position: relative;
-}
 
+	&.einstein {
+		background-image: url(/images/clouds-bg.svg);
+		background-position-x: 0;
+		background-repeat: repeat-x;
+		background-size: 1990px;
+		background-position-y: 36px;
+		height: 96px;
+	
+		#subheader {
+			&:before {
+				content: "";
+				display: block;
+				width: 51px;
+				height: 61px;
+				background-size: cover;
+				background-image: url(/images/einstein-leaning-left.svg);
+				position: absolute;
+				margin-top: 3px;
+				z-index: 1;
+			}
+
+			.slds-grid {
+				padding-left: 50px;
+			}
+		}
+	}
+}
 
 #subheader {
 	margin: 0 auto;
@@ -166,7 +192,7 @@ HEADER AREA
 }
 
 .einstein-segementation #subheader-wrapper {
-	background-image: url(/img/clouds-bg.svg);
+	background-image: url(/images/clouds-bg.svg);
 	background-position-x: 0;
 	background-repeat: repeat-x;
 	background-size: 1990px;
@@ -178,7 +204,7 @@ HEADER AREA
 	width: 51px;
 	height: 61px;
 	background-size: cover;
-	background-image: url(/img/einstein-leaning-left.svg);
+	background-image: url(/images/einstein-leaning-left.svg);
 	position: absolute;
 	margin-top: 10px;
 	z-index: 1;

@@ -1,0 +1,28 @@
+.slds-container_large, .slds-container--large {
+  max-width: unset;
+}
+
+#content-wrapper {
+  width: unset;
+  background-color: unset;
+  margin-left: unset;
+  margin-right: unset;
+  padding-top: unset;
+}
+
+#subheader-wrapper {
+  background-color: #F7F9FB;
+  margin: 1rem;
+  margin-top: 104px;
+  border-radius: 4px;
+}
+
+#subheader-wrapper.einstein #subheader h1 {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.slds-grid_pull-padded-small, .slds-grid--pull-padded-small, .slds-grid_pull-padded-medium, .slds-grid--pull-padded-medium {
+  margin-right: unset;
+  margin-left: unset;
+}

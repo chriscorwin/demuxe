@@ -1,3 +1,14 @@
-<script>
-	window.location = '/ga360'
-</script>
+<%- 
+	include(
+		'wrapper.ejs', 
+		{ 
+			title: 'Overview', 
+			headerVariant: 'default', 
+			subHeaderVariant: 'hasButton', 
+			subHeaderButtonLabel: 'Customize', 
+			siteSection: 'index', 
+			pageContents: 'includes/index-contents',
+			pageStylesheets: ['index.brand.css']
+		}
+	) 
+%>

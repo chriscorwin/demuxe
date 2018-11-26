@@ -1,0 +1,113 @@
+<!-- 
+Highcharts must be included on page prior to this running
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
+-->
+
+<div id="chart" style="width:100%; height:300px;"></div>
+
+<script type="text/javascript">
+	const graph = <%- JSON.stringify(locals.localization.data_capture_sources.dce.graph) %>;
+	const deviceData = graph.device_data;
+
+	const getLineData = (lineNumber) => {
+		return {
+			data: deviceData[lineNumber].map((data) => data/* * 1000*/),
+			color: graph.line_color[lineNumber],
+			lineWidth: 2,
+			marker: {
+				enabled: true,
+				symbol: 'circle'
+			}
+		}
+	}
+
+	const getCumulativeData = () => {
+		return [
+			getLineData(0),
+			getLineData(1),
+			getLineData(2),
+			getLineData(3)
+		];
+	};
+
+	const dateLabel = <%- JSON.stringify(locals.localization.data_capture_sources.dce.graph.date_labels) %>;
+	const categories = deviceData[0].map((data, i) => {
+		const label = Math.floor(i / 1);
+		return dateLabel[label];
+	}, []);
+
+	const getCumulativeOptions = () => {
+		return {
+			legend: {
+				verticalAlign: 'top',
+				enabled: false
+			},
+			title: {
+				text: ''
+			},
+			chart: {
+				height: 300,
+				style: {
+					fontFamily: 'Salesforce Sans'
+				}
+			},
+			xAxis: {
+				categories,
+				tickLength: 0,
+				gridLineWidth: 0,
+				lineColor: '#eee',
+				gridLineColor: '#eee'
+			},
+			yAxis: {
+				tickInterval: 1,
+				min: 0,
+				max: 3,
+				lineWidth: 1,
+				lineColor: '#eee',
+				gridLineColor: '#eee',
+				title: {
+					text: '<%- locals.localization.data_capture_sources.dce.graph.title %>'
+				},
+				labels: {
+					formatter: <%- locals.localization.data_capture_sources.dce.graph.label_formatter %>
+				}
+			},
+			plotOptions: {
+				series: {
+					animation: {
+						duration: 2000
+					}
+				}
+			},
+			series: getCumulativeData()
+		};
+	};
+
+	const __range__ = (left, right, inclusive) => {
+		let range = [];
+		let ascending = left < right;
+		let nextToLast = ascending ? right + 1 : right - 1;
+		let end = !inclusive ? right : nextToLast;
+		for (let i = left; ascending ? i < end : i > end; ascending ? i++ : i--) {
+			range.push(i);
+		}
+		return range;
+	};
+
+	Highcharts.setOptions({credits: { enabled: false }});
+	let dataCaptureEventsSourcesChart;
+
+	let triggeredDataCaptureEventsAnimation = false;
+	const animateDataCaptureEvents = () => {
+		// if (window.scrollY > 100 && !triggeredDataCaptureEventsAnimation) {
+			triggeredDataCaptureEventsAnimation = true;
+			dataCaptureEventsSourcesChart = Highcharts.chart('chart', getCumulativeOptions());
+		// }
+	};
+
+	// document.addEventListener("scroll", animateDataCaptureEvents);
+	// delay the chart loading because otherwise the chart somehow loads before the SVG and you get a blip
+	// of the chart before the white SVG loads to cover it up and then "animate it in"
+	window.setTimeout(animateDataCaptureEvents, 100);
+</script>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="1027px" viewBox="0 0 1280 1027" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>insights.conversion.einstein-journey-insights-configuration</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="185" width="1280" height="50"></rect>
+        <filter x="-0.1%" y="-3.0%" width="100.2%" height="106.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="EJI--Configuration-1" transform="translate(0.000000, -178.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1280" height="1205"></rect>
+            <rect id="Rectangle-4-Copy-2" fill="#F7F9FB" x="0" y="123" width="1280" height="66"></rect>
+            <g id="Group-6" transform="translate(459.000000, 1024.000000)">
+                <g id="Group-2-Copy">
+                    <rect id="Rectangle-4-Copy" fill="#0C77D5" x="0.626865672" y="0" width="209.373134" height="40.1523438" rx="2"></rect>
+                    <text id="Run-Analysis" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="14" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="62.2595672" y="24">Run Analysis</tspan>
+                    </text>
+                </g>
+                <text id="Cancel" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="14" font-weight="bold" fill="#0070D2">
+                    <tspan x="231.136406" y="25">Cancel</tspan>
+                </text>
+            </g>
+            <g id="Rectangle-4">
+                <use fill="#F7F9FB" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            </g>
+            <text id="Select-the-parameter" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal">
+                <tspan x="24" y="217" fill="#54698D">Select the parameters to be used for running the Journey Insights.</tspan>
+                <tspan x="454.178" y="217" fill="#7A8289"> </tspan>
+                <tspan x="457.79" y="217" font-size="12" fill="#0070D2">Learn More</tspan>
+            </text>
+            <g id="Group-18" transform="translate(16.000000, 490.000000)">
+                <g id="Group-5" transform="translate(27.000000, 71.000000)"></g>
+                <g id="Top-Personas---New-Copy">
+                    <g id="Group-22">
+                        <g id="Group-10">
+                            <rect id="Rectangle-16-Copy" stroke="#E0E5EE" fill="#FFFFFF" x="0.5" y="0.5" width="1247" height="396" rx="4"></rect>
+                            <path d="M1,39.2307692 L1223.16325,39.2307692" id="Line-Copy-5" stroke="#E0E5EE" stroke-linecap="square"></path>
+                            <text id="This-defines-the-suc" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                                <tspan x="20" y="64">This defines the success event in the analysis.</tspan>
+                            </text>
+                            <g id="Group-4" transform="translate(21.000000, 150.000000)">
+                                <rect id="Rectangle-8" stroke="#E0E5EE" fill="#FFFFFF" x="0.5" y="0.5" width="734" height="236" rx="4"></rect>
+                                <path d="M367.5,30.5 L367.5,205.5" id="Line" stroke="#DFE4ED" stroke-linecap="square"></path>
+                                <path d="M350.636364,45.3818182 L355.536364,45.3818182 C355.727273,45.3818182 355.981818,45.1909091 355.981818,44.9363636 L355.981818,44.0454545 C355.981818,43.7909091 355.727273,43.6 355.536364,43.6 L350.636364,43.6 C350.509091,43.6 350.381818,43.4727273 350.381818,43.3454545 L350.381818,38.4454545 C350.381818,38.2545455 350.190909,38 349.936364,38 L349.045455,38 C348.790909,38 348.6,38.2545455 348.6,38.4454545 L348.6,43.3454545 C348.6,43.4727273 348.472727,43.6 348.345455,43.6 L343.445455,43.6 C343.254545,43.6 343,43.7909091 343,44.0454545 L343,44.9363636 C343,45.1909091 343.254545,45.3818182 343.445455,45.3818182 L348.345455,45.3818182 C348.472727,45.3818182 348.6,45.5090909 348.6,45.6363636 L348.6,50.5363636 C348.6,50.7272727 348.790909,50.9818182 349.045455,50.9818182 L349.936364,50.9818182 C350.190909,50.9818182 350.381818,50.7272727 350.381818,50.5363636 L350.381818,45.6363636 C350.381818,45.5090909 350.509091,45.3818182 350.636364,45.3818182 L350.636364,45.3818182 Z" id="Shape" fill="#16325C"></path>
+                                <path d="M350.636364,70.3818182 L355.536364,70.3818182 C355.727273,70.3818182 355.981818,70.1909091 355.981818,69.9363636 L355.981818,69.0454545 C355.981818,68.7909091 355.727273,68.6 355.536364,68.6 L350.636364,68.6 C350.509091,68.6 350.381818,68.4727273 350.381818,68.3454545 L350.381818,63.4454545 C350.381818,63.2545455 350.190909,63 349.936364,63 L349.045455,63 C348.790909,63 348.6,63.2545455 348.6,63.4454545 L348.6,68.3454545 C348.6,68.4727273 348.472727,68.6 348.345455,68.6 L343.445455,68.6 C343.254545,68.6 343,68.7909091 343,69.0454545 L343,69.9363636 C343,70.1909091 343.254545,70.3818182 343.445455,70.3818182 L348.345455,70.3818182 C348.472727,70.3818182 348.6,70.5090909 348.6,70.6363636 L348.6,75.5363636 C348.6,75.7272727 348.790909,75.9818182 349.045455,75.9818182 L349.936364,75.9818182 C350.190909,75.9818182 350.381818,75.7272727 350.381818,75.5363636 L350.381818,70.6363636 C350.381818,70.5090909 350.509091,70.3818182 350.636364,70.3818182 L350.636364,70.3818182 Z" id="Shape" fill="#16325C"></path>
+                                <path d="M350.636364,95.3818182 L355.536364,95.3818182 C355.727273,95.3818182 355.981818,95.1909091 355.981818,94.9363636 L355.981818,94.0454545 C355.981818,93.7909091 355.727273,93.6 355.536364,93.6 L350.636364,93.6 C350.509091,93.6 350.381818,93.4727273 350.381818,93.3454545 L350.381818,88.4454545 C350.381818,88.2545455 350.190909,88 349.936364,88 L349.045455,88 C348.790909,88 348.6,88.2545455 348.6,88.4454545 L348.6,93.3454545 C348.6,93.4727273 348.472727,93.6 348.345455,93.6 L343.445455,93.6 C343.254545,93.6 343,93.7909091 343,94.0454545 L343,94.9363636 C343,95.1909091 343.254545,95.3818182 343.445455,95.3818182 L348.345455,95.3818182 C348.472727,95.3818182 348.6,95.5090909 348.6,95.6363636 L348.6,100.536364 C348.6,100.727273 348.790909,100.981818 349.045455,100.981818 L349.936364,100.981818 C350.190909,100.981818 350.381818,100.727273 350.381818,100.536364 L350.381818,95.6363636 C350.381818,95.5090909 350.509091,95.3818182 350.636364,95.3818182 L350.636364,95.3818182 Z" id="Shape" fill="#16325C"></path>
+                                <text id="Summer-sale-click" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                                    <tspan x="10" y="76">Summer sale click</tspan>
+                                </text>
+                                <text id="Add-to-Wishlist" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                                    <tspan x="10" y="51">Add to Wishlist</tspan>
+                                </text>
+                                <text id="Climbing-gear-click" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                                    <tspan x="10" y="101">Climbing gear click</tspan>
+                                </text>
+                                <text id="Add-to-Cart" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                                    <tspan x="379" y="50">Add to Cart</tspan>
+                                </text>
+                                <g id="add" transform="translate(710.000000, 42.000000)" fill="#16325C">
+                                    <path d="M13.0454545,1.89090909 C13.2363636,1.89090909 13.4909091,1.7 13.4909091,1.44545455 L13.4909091,0.554545455 C13.4909091,0.3 13.2363636,0.109090909 13.0454545,0.109090909 L0.954545455,0.109090909 C0.763636364,0.109090909 0.509090909,0.3 0.509090909,0.554545455 L0.509090909,1.44545455 C0.509090909,1.7 0.763636364,1.89090909 0.954545455,1.89090909 L13.0454545,1.89090909 Z" id="Shape"></path>
+                                </g>
+                                <path d="M5,1 L367,1 L367,31 L1,31 L1,5 C1,2.790861 2.790861,1 5,1 Z" id="Rectangle-7" fill="#F4F6F9"></path>
+                                <path d="M5,206 L367,206 L367,236 L1,236 L1,210 C1,207.790861 2.790861,206 5,206 Z" id="Rectangle-7-Copy-2" fill="#F4F6F9" transform="translate(184.000000, 221.000000) scale(1, -1) translate(-184.000000, -221.000000) "></path>
+                                <text id="5-item(s)-match,-4-d" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#54698D">
+                                    <tspan x="9" y="228">5 item(s) match, 4 displayed</tspan>
+                                </text>
+                                <text id="Events" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#54698D">
+                                    <tspan x="9" y="23">Events</tspan>
+                                </text>
+                                <text id="Add-All" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#0070D2">
+                                    <tspan x="310" y="23">Add All</tspan>
+                                </text>
+                                <path d="M370,1 L734,1 L734,31 L366,31 L366,5 C366,2.790861 367.790861,1 370,1 Z" id="Rectangle-7-Copy" fill="#F4F6F9" transform="translate(550.000000, 16.000000) scale(-1, 1) translate(-550.000000, -16.000000) "></path>
+                                <path d="M370,206 L734,206 L734,236 L366,236 L366,210 C366,207.790861 367.790861,206 370,206 Z" id="Rectangle-7-Copy-3" fill="#F4F6F9" transform="translate(550.000000, 221.000000) scale(-1, -1) translate(-550.000000, -221.000000) "></path>
+                                <text id="1-Selected" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#54698D">
+                                    <tspan x="377" y="228">1 Selected</tspan>
+                                </text>
+                                <text id="Remove-All" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#0070D2">
+                                    <tspan x="651" y="23">Remove All</tspan>
+                                </text>
+                            </g>
+                            <g id="Radio-Button---Selected" transform="translate(20.000000, 81.000000)">
+                                <text id="Radio-Value-Two-(sel" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                                    <tspan x="119" y="15">Event</tspan>
+                                </text>
+                                <text id="Radio-Value-One" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                                    <tspan x="24" y="15">Segment</tspan>
+                                </text>
+                                <circle id="Oval-2" stroke="#DDDBDA" fill="#FFFFFF" cx="8" cy="9" r="8"></circle>
+                                <g id="Group-2" transform="translate(95.000000, 1.000000)">
+                                    <circle id="Oval-2-Copy" stroke="#DDDBDA" fill="#FFFFFF" cx="8" cy="8" r="8"></circle>
+                                    <circle id="Oval" fill="#1589EE" cx="8" cy="8" r="4"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="picklist" transform="translate(20.000000, 108.000000)">
+                        <g id="Group-11">
+                            <rect id="bkgd" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="304" height="31" rx="4"></rect>
+                            <text id="Search-Events" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#16325C">
+                                <tspan x="12" y="22">Search Events</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+                <g id="Data-Activation-Copy">
+                    <path d="M0.5,39.5 L1247.5,39.5 L1247.5,4.00002553 C1247.5,2.06252316 1245.93825,0.5 1243.99309,0.5 L4.0069082,0.5 C2.07193024,0.5 0.5,2.07073471 0.5,4.00002553 L0.5,39.5 Z" id="Rectangle-760-Copy" stroke="#E0E5EE" fill="#F4F6F9"></path>
+                    <path d="M26.9642249,19.6899489 C27.1277683,19.8534923 27.1277683,20.1260647 26.9642249,20.2896082 L21.3219761,25.8773424 C21.1584327,26.0408859 20.8858603,26.0408859 20.7223169,25.8773424 L20.1226576,25.2776831 C19.9591141,25.1141397 19.9591141,24.8415673 20.1226576,24.6780239 L24.5655877,20.2896082 C24.7291312,20.1260647 24.7291312,19.8534923 24.5655877,19.6899489 L20.1499148,15.3015332 C19.9863714,15.1379898 19.9863714,14.8654174 20.1499148,14.7018739 L20.7495741,14.1022147 C20.9131175,13.9659284 21.1584327,13.9659284 21.3219761,14.1022147 L26.9642249,19.6899489 Z" id="Shape" fill="#16325C" transform="translate(23.543441, 20.000000) rotate(90.000000) translate(-23.543441, -20.000000) "></path>
+                    <text id="*-Conversion-signal:" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#16325C">
+                        <tspan x="45" y="27">* Conversion signal: Event or Segment</tspan>
+                    </text>
+                    <text id="*" fill="#E7140D" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal">
+                        <tspan x="45" y="27">*</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-4" transform="translate(16.000000, 259.000000)">
+                <text id="Outdoor-Enthusiasts" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" line-spacing="20" fill="#16325C">
+                    <tspan x="0" y="18">Outdoor Enthusiasts - Add to cart - 09/30/2018</tspan>
+                </text>
+                <path d="M0,24 L405,24" id="Line" stroke="#E0E5EE" stroke-linecap="square"></path>
+                <text id="You-can-edit-the-nam" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                    <tspan x="0" y="42">You can edit the name, and provide a more relevant name as desired.</tspan>
+                </text>
+                <path d="M404.612616,6.579545 L403.412162,5.3790908 C402.906708,4.8736364 402.211708,4.8736364 401.769435,5.3790908 L400.821708,6.3268178 C400.695345,6.4531814 400.695345,6.6427268 400.821708,6.7059086 L403.285798,9.23318061 C403.412162,9.35954421 403.601707,9.35954421 403.664889,9.23318061 L404.675798,8.22227181 C405.118071,7.7799992 405.118071,7.0849994 404.612616,6.579545 Z M400.000345,7.527272 C399.873981,7.4640902 399.684436,7.4640902 399.558072,7.527272 L391.976256,15.1722698 L391.028529,18.4577234 C390.902166,18.7736324 391.218075,19.0895414 391.533984,19.0263596 L394.882619,18.0786326 L394.819437,18.0786326 L402.464435,10.4968166 C402.527617,10.370453 402.527617,10.1809076 402.464435,10.054544 L400.000345,7.527272 L400.000345,7.527272 Z" id="Shape" fill="#54698D"></path>
+            </g>
+            <text id="Clicking-on-‘Run-Ana" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                <tspan x="402.156" y="1087">Clicking on ‘Run Analysis’, will schedule analysis based on this configuration.</tspan>
+                <tspan x="432.486" y="1105">Results will only be available tomorrow after the daily processing.</tspan>
+            </text>
+            <g id="Group-18" transform="translate(16.000000, 324.000000)">
+                <g id="Top-Personas---New">
+                    <g id="Group-22">
+                        <g id="Group-9">
+                            <rect id="Rectangle-16-Copy" stroke="#E0E5EE" fill="#FFFFFF" x="0.5" y="0.5" width="1247" height="155" rx="4"></rect>
+                            <text id="This-defines-the-use" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#54698D">
+                                <tspan x="20" y="64">This defines the users that would be included in the analysis.</tspan>
+                            </text>
+                            <g id="Group-2" transform="translate(20.000000, 108.000000)">
+                                <rect id="bkgd" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="304" height="31" rx="4"></rect>
+                                <g id="picklist" transform="translate(12.000000, 8.000000)" fill="#16325C">
+                                    <text id="Outdoor-Enthusiasts" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                        <tspan x="0" y="14">Outdoor Enthusiasts 92% Similar </tspan>
+                                    </text>
+                                    <path d="M272.329034,5 L281.284426,5 C281.537403,5 281.714487,5.325 281.512105,5.55 L277.1356,10.85 C276.983814,11.05 276.654943,11.05 276.503157,10.85 L272.076056,5.55 C271.898972,5.325 272.050759,5 272.329034,5" id="down"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Radio-Button---Selected" transform="translate(20.000000, 81.000000)">
+                        <text id="Radio-Value-Two-(sel" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                            <tspan x="119" y="15">Campaign </tspan>
+                        </text>
+                        <text id="Radio-Value-One" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                            <tspan x="24" y="15">Segment</tspan>
+                        </text>
+                        <circle id="Oval-2" stroke="#DDDBDA" fill="#FFFFFF" cx="8" cy="9" r="8"></circle>
+                        <g id="Group-2" transform="translate(4.000000, 1.000000)">
+                            <circle id="Oval-2-Copy" stroke="#DDDBDA" fill="#FFFFFF" cx="99" cy="8" r="8"></circle>
+                            <circle id="Oval" fill="#1589EE" cx="4" cy="8" r="4"></circle>
+                        </g>
+                    </g>
+                </g>
+                <g id="Data-Activation">
+                    <path d="M0.5,39.5 L1247.5,39.5 L1247.5,4.00002553 C1247.5,2.06252316 1245.93825,0.5 1243.99309,0.5 L4.0069082,0.5 C2.07193024,0.5 0.5,2.07073471 0.5,4.00002553 L0.5,39.5 Z" id="Rectangle-760-Copy" stroke="#E0E5EE" fill="#F4F6F9"></path>
+                    <path d="M26.9642249,19.6899489 C27.1277683,19.8534923 27.1277683,20.1260647 26.9642249,20.2896082 L21.3219761,25.8773424 C21.1584327,26.0408859 20.8858603,26.0408859 20.7223169,25.8773424 L20.1226576,25.2776831 C19.9591141,25.1141397 19.9591141,24.8415673 20.1226576,24.6780239 L24.5655877,20.2896082 C24.7291312,20.1260647 24.7291312,19.8534923 24.5655877,19.6899489 L20.1499148,15.3015332 C19.9863714,15.1379898 19.9863714,14.8654174 20.1499148,14.7018739 L20.7495741,14.1022147 C20.9131175,13.9659284 21.1584327,13.9659284 21.3219761,14.1022147 L26.9642249,19.6899489 Z" id="Shape" fill="#16325C" transform="translate(23.543441, 20.000000) rotate(90.000000) translate(-23.543441, -20.000000) "></path>
+                    <text id="*-Segment-or-Campaig" fill="#16325C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal">
+                        <tspan x="45" y="27">* Segment or Campaign to run the analysis on</tspan>
+                    </text>
+                    <text id="*" fill="#E7140D" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal">
+                        <tspan x="45" y="27">*</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-18" transform="translate(16.000000, 897.000000)">
+                <g id="Top-Personas---New-Copy-2">
+                    <g id="Group-22">
+                        <g id="Group-7">
+                            <rect id="Rectangle-16-Copy" stroke="#E0E5EE" fill="#FFFFFF" x="0.5" y="0.5" width="1247" height="102" rx="4"></rect>
+                            <g id="Group-12" transform="translate(20.000000, 55.000000)">
+                                <path d="M4,0.5 C2.06700338,0.5 0.5,2.06700338 0.5,4 L0.5,28 C0.5,29.9329966 2.06700338,31.5 4,31.5 L164,31.5 C165.932997,31.5 167.5,29.9329966 167.5,28 L167.5,4 C167.5,2.06700338 165.932997,0.5 164,0.5 L4,0.5 Z" id="Rectangle-2" stroke="#E0E5EE" fill="#FFFFFF"></path>
+                                <g id="icons/utility/monthlyview" transform="translate(144.000000, 8.000000)" fill="#54698D" fill-rule="nonzero">
+                                    <path d="M12.2818182,2 L10.8181818,2 L10.8181818,1.4375 C10.8181818,1 10.4363636,0.5625 9.92727273,0.5625 C9.48181818,0.5625 9.03636364,0.9375 9.03636364,1.4375 L9.03636364,2 L4.96363636,2 L4.96363636,1.4375 C4.96363636,1 4.58181818,0.5625 4.07272727,0.5625 C3.56363636,0.5625 3.18181818,0.9375 3.18181818,1.4375 L3.18181818,2 L1.71818182,2 C1.08181818,2 0.509090909,2.5625 0.509090909,3.1875 L0.509090909,3.875 C0.509090909,4.125 0.763636364,4.3125 0.954545455,4.3125 L13.0454545,4.3125 C13.2363636,4.3125 13.4909091,4.125 13.4909091,3.875 L13.4909091,3.1875 C13.4909091,2.5625 12.9181818,2 12.2818182,2 Z M13.0454545,5.75 L0.954545455,5.75 C0.763636364,5.75 0.509090909,6 0.509090909,6.1875 L0.509090909,13.25 C0.509090909,13.875 1.08181818,14.4375 1.71818182,14.4375 L12.2818182,14.4375 C12.9181818,14.4375 13.4909091,13.875 13.4909091,13.25 L13.4909091,6.1875 C13.4909091,6 13.2363636,5.75 13.0454545,5.75 Z M5.53636364,12.6875 C4.83636364,12.6875 4.07272727,12.4375 3.81818182,12.0625 C3.81818182,12 3.75454545,11.9375 3.75454545,11.875 C3.75454545,11.625 4.00909091,11.375 4.26363636,11.375 C4.32727273,11.375 4.39090909,11.4375 4.51818182,11.4375 C4.83636364,11.625 5.21818182,11.75 5.53636364,11.75 C6.10909091,11.75 6.42727273,11.5 6.42727273,11.125 C6.42727273,10.75 6.17272727,10.5625 5.47272727,10.5625 C5.09090909,10.625 4.83636364,10.5 4.83636364,10.125 C4.83636364,9.875 5.02727273,9.6875 5.28181818,9.6875 C5.91818182,9.75 6.36363636,9.5625 6.36363636,9.1875 C6.36363636,8.8125 5.98181818,8.625 5.47272727,8.625 C5.15454545,8.625 4.83636364,8.6875 4.51818182,8.875 C4.45454545,8.9375 4.39090909,8.9375 4.32727273,8.9375 C4.07272727,8.9375 3.88181818,8.75 3.88181818,8.5 C3.88181818,8.375 3.94545455,8.25 4.00909091,8.1875 C4.39090909,7.875 4.9,7.6875 5.6,7.6875 C6.68181818,7.6875 7.38181818,8.1875 7.38181818,9 C7.38181818,9.5625 6.87272727,9.9375 6.36363636,10.0625 C6.87272727,10.125 7.44545455,10.5 7.44545455,11.1875 C7.44545455,12.125 6.68181818,12.6875 5.53636364,12.6875 Z M10.2454545,12.125 C10.2454545,12.375 10.0545455,12.6875 9.8,12.6875 C9.54545455,12.6875 9.35454545,12.4375 9.35454545,12.125 L9.35454545,9.1875 L8.71818182,9.75 C8.65454545,9.8125 8.52727273,9.8125 8.4,9.8125 C8.14545455,9.8125 7.95454545,9.6875 7.95454545,9.375 C7.95454545,9.3125 8.01818182,9.1875 8.08181818,9.125 L9.22727273,8 C9.29090909,7.875 9.48181818,7.8125 9.67272727,7.8125 C9.99090909,7.8125 10.2454545,8.125 10.2454545,8.4375 L10.2454545,12.125 Z" id="Shape"></path>
+                                </g>
+                                <text id="To" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#3E3E3C">
+                                    <tspan x="176" y="21">To</tspan>
+                                </text>
+                                <text id="06/01/2018" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#14315D">
+                                    <tspan x="12" y="23">06/01/2018</tspan>
+                                </text>
+                                <path d="M203,0.5 C201.067003,0.5 199.5,2.06700338 199.5,4 L199.5,28 C199.5,29.9329966 201.067003,31.5 203,31.5 L363,31.5 C364.932997,31.5 366.5,29.9329966 366.5,28 L366.5,4 C366.5,2.06700338 364.932997,0.5 363,0.5 L203,0.5 Z" id="Rectangle-2" stroke="#E0E5EE" fill="#FFFFFF"></path>
+                                <g id="icons/utility/monthlyview" transform="translate(343.000000, 8.000000)" fill="#54698D" fill-rule="nonzero">
+                                    <path d="M12.2818182,2 L10.8181818,2 L10.8181818,1.4375 C10.8181818,1 10.4363636,0.5625 9.92727273,0.5625 C9.48181818,0.5625 9.03636364,0.9375 9.03636364,1.4375 L9.03636364,2 L4.96363636,2 L4.96363636,1.4375 C4.96363636,1 4.58181818,0.5625 4.07272727,0.5625 C3.56363636,0.5625 3.18181818,0.9375 3.18181818,1.4375 L3.18181818,2 L1.71818182,2 C1.08181818,2 0.509090909,2.5625 0.509090909,3.1875 L0.509090909,3.875 C0.509090909,4.125 0.763636364,4.3125 0.954545455,4.3125 L13.0454545,4.3125 C13.2363636,4.3125 13.4909091,4.125 13.4909091,3.875 L13.4909091,3.1875 C13.4909091,2.5625 12.9181818,2 12.2818182,2 Z M13.0454545,5.75 L0.954545455,5.75 C0.763636364,5.75 0.509090909,6 0.509090909,6.1875 L0.509090909,13.25 C0.509090909,13.875 1.08181818,14.4375 1.71818182,14.4375 L12.2818182,14.4375 C12.9181818,14.4375 13.4909091,13.875 13.4909091,13.25 L13.4909091,6.1875 C13.4909091,6 13.2363636,5.75 13.0454545,5.75 Z M5.53636364,12.6875 C4.83636364,12.6875 4.07272727,12.4375 3.81818182,12.0625 C3.81818182,12 3.75454545,11.9375 3.75454545,11.875 C3.75454545,11.625 4.00909091,11.375 4.26363636,11.375 C4.32727273,11.375 4.39090909,11.4375 4.51818182,11.4375 C4.83636364,11.625 5.21818182,11.75 5.53636364,11.75 C6.10909091,11.75 6.42727273,11.5 6.42727273,11.125 C6.42727273,10.75 6.17272727,10.5625 5.47272727,10.5625 C5.09090909,10.625 4.83636364,10.5 4.83636364,10.125 C4.83636364,9.875 5.02727273,9.6875 5.28181818,9.6875 C5.91818182,9.75 6.36363636,9.5625 6.36363636,9.1875 C6.36363636,8.8125 5.98181818,8.625 5.47272727,8.625 C5.15454545,8.625 4.83636364,8.6875 4.51818182,8.875 C4.45454545,8.9375 4.39090909,8.9375 4.32727273,8.9375 C4.07272727,8.9375 3.88181818,8.75 3.88181818,8.5 C3.88181818,8.375 3.94545455,8.25 4.00909091,8.1875 C4.39090909,7.875 4.9,7.6875 5.6,7.6875 C6.68181818,7.6875 7.38181818,8.1875 7.38181818,9 C7.38181818,9.5625 6.87272727,9.9375 6.36363636,10.0625 C6.87272727,10.125 7.44545455,10.5 7.44545455,11.1875 C7.44545455,12.125 6.68181818,12.6875 5.53636364,12.6875 Z M10.2454545,12.125 C10.2454545,12.375 10.0545455,12.6875 9.8,12.6875 C9.54545455,12.6875 9.35454545,12.4375 9.35454545,12.125 L9.35454545,9.1875 L8.71818182,9.75 C8.65454545,9.8125 8.52727273,9.8125 8.4,9.8125 C8.14545455,9.8125 7.95454545,9.6875 7.95454545,9.375 C7.95454545,9.3125 8.01818182,9.1875 8.08181818,9.125 L9.22727273,8 C9.29090909,7.875 9.48181818,7.8125 9.67272727,7.8125 C9.99090909,7.8125 10.2454545,8.125 10.2454545,8.4375 L10.2454545,12.125 Z" id="Shape"></path>
+                                </g>
+                                <text id="09/30/2018" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#14315D">
+                                    <tspan x="211" y="23">09/30/2018</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Data-Activation-Copy-3">
+                    <path d="M0.5,39.5 L1247.5,39.5 L1247.5,4.00002553 C1247.5,2.06252316 1245.93825,0.5 1243.99309,0.5 L4.0069082,0.5 C2.07193024,0.5 0.5,2.07073471 0.5,4.00002553 L0.5,39.5 Z" id="Rectangle-760-Copy" stroke="#E0E5EE" fill="#F4F6F9"></path>
+                    <text id="*-Date-range-for-the" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal">
+                        <tspan x="45" y="27" fill="#E60505">* </tspan>
+                        <tspan x="55.752" y="27" fill="#16325C">Date range for the analysis</tspan>
+                    </text>
+                    <path d="M26.9642249,19.6899489 C27.1277683,19.8534923 27.1277683,20.1260647 26.9642249,20.2896082 L21.3219761,25.8773424 C21.1584327,26.0408859 20.8858603,26.0408859 20.7223169,25.8773424 L20.1226576,25.2776831 C19.9591141,25.1141397 19.9591141,24.8415673 20.1226576,24.6780239 L24.5655877,20.2896082 C24.7291312,20.1260647 24.7291312,19.8534923 24.5655877,19.6899489 L20.1499148,15.3015332 C19.9863714,15.1379898 19.9863714,14.8654174 20.1499148,14.7018739 L20.7495741,14.1022147 C20.9131175,13.9659284 21.1584327,13.9659284 21.3219761,14.1022147 L26.9642249,19.6899489 Z" id="Shape" fill="#16325C" transform="translate(23.543441, 20.000000) rotate(90.000000) translate(-23.543441, -20.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,21 +1,3 @@
-const activations = [
-	'<span class="text">Send to Site</span>',
-	'<span class="text">AdRoll</span>',
-	'<img src="/images/slices/activation-tiles/activation-tile.aol.svg" />',
-	'<span class="text">BlueKai</span>',
-	'<img src="/images/slices/activation-tiles/activation-tile.dataxu.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.youtube.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.double-click.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.sfmc.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.media-math.svg" />',
-	'<span class="text">MoPub</span>',
-	'<img src="/images/slices/activation-tiles/activation-tile.app-nexus.svg" />',
-	'<img src="/images/slices/activation-tiles/activation-tile.wordpress.svg" />',
-	'<span class="text">RocketFuel</span>',
-	'<span class="text">SAS Institute</span>',
-	'<img src="/images/slices/activation-tiles/activation-tile.commerce-cloud.svg" />'
-];
-
 const checkBox = (boxId) => {
 	const box = document.querySelector(boxId);
 	const boxWrapper = document.querySelector(boxId + 'wrapper');
@@ -32,26 +14,11 @@ const goHome = () => {
 	window.location = `/index.html`;
 };
 
-const nextPage = () => {
-	if ( pageVersion === '201' ) {
-		if (accountParam === 'nto-apparel') {
-			window.location = '/jb/'
-			return;
-		}
-		window.location = `/segments/manage-segments?version=${pageVersion}&account=${accountParam}&trigger=successToast`;
-		return;
-		// window.location = `./index.html?version=${pageVersion}&account=${accountParam}`;
-	} else {
-		window.location = `/segments/manage-segments?trigger=successToast`;
-	}
-};
-
-
-const makeFilledSegmentDetail = (label) => {
+const makeFilledSegmentDetail = (label, contents) => {
 	return document.createRange().createContextualFragment(`
 		<div class="slds-col slds-p-vertical_xx-small slds-p-horizontal_small slds-size_1-of-3 segment-box slds-m-top_medium">
-			<div class="segment-box_label slds-p-vertical_xxx-small">Segment Name</div>
-			<div class="segment-box_contents">${label}</div>
+			<div class="segment-box_label slds-p-vertical_xxx-small">${label}</div>
+			<div class="segment-box_contents">${contents}</div>
 		</div>
 	`);
 }
@@ -65,42 +32,30 @@ const makeFilledSegmentDescription = (description) => {
 	`)
 }
 
-const getSegmentName = (pageVersion, accountParam) => {
-	if (pageVersion === '201') {
-		if (accountParam === 'nto-apparel') {
-			return 'Winter Jackets - New High Value';
-		}
-		return '<span style="font-size: 12px;">Winter Jackets Propensity Customers</span>';
-	}
+const segmentName = getSegmentName(pageVersion, accountParam);
+const segmentType = getSegmentType(pageVersion, accountParam);
+const categoryName = getCategoryName(pageVersion, accountParam);
+const subCategoryName = getSubCategoryName(pageVersion, accountParam);
+const segmentDescription = getSegmentDescription(pageVersion, accountParam);
 
-	return 'High Value Customers Lookalikes';
-}
-
-const getSegmentDescription = (pageVersion, accountParam) => {
-	if (pageVersion === '201') {
-		if (accountParam === 'nto-apparel') {
-			return '';
-		}
-		return 'Interested in snow & winter activities';
-	}
-
-	return ' ';
-}
-
-const $newSegmentName = makeFilledSegmentDetail(getSegmentName(pageVersion, accountParam));
-const $newSegmentDescription = makeFilledSegmentDescription(getSegmentDescription(pageVersion, accountParam));
+const $newSegmentNameElm = makeFilledSegmentDetail('Segment Name', segmentName);
+const $newSegmentTypeElm = makeFilledSegmentDetail('Segment Type', segmentType);
+const $newCategoryNameElm = makeFilledSegmentDetail('Category Name', categoryName);
+const $newSubCategoryNameElm = makeFilledSegmentDetail('Sub-Category Name', subCategoryName);
+const $newSegmentDescriptionElm = makeFilledSegmentDescription(segmentDescription);
 
 const $segmentName = document.querySelector('#segment-name');
+const $segmentType = document.querySelector('#segment-type');
+const $categoryName = document.querySelector('#category-name');
+const $subCategoryName = document.querySelector('#sub-category-name');
 const $segmentDescription = document.querySelector('#segment-description');
 
-if (pageVersion === '201' && accountParam === 'nto-apparel') {
-	document.getElementById('details-contents').replaceChild($newSegmentName, $segmentName);
-	document.getElementById('details-contents').replaceChild($newSegmentDescription, $segmentDescription);
-}
-
 $segmentName.addEventListener('click', () => {
-	document.getElementById('details-contents').replaceChild($newSegmentName, $segmentName);
-	document.getElementById('details-contents').replaceChild($newSegmentDescription, $segmentDescription);
+	segmentName.length > 0 && document.getElementById('details-contents').replaceChild($newSegmentNameElm, $segmentName);
+	segmentType.length > 0 && document.getElementById('details-contents').replaceChild($newSegmentTypeElm, $segmentType);
+	categoryName.length > 0 && document.getElementById('details-contents').replaceChild($newCategoryNameElm, $categoryName);
+	subCategoryName.length > 0 && document.getElementById('details-contents').replaceChild($newSubCategoryNameElm, $subCategoryName);
+	segmentDescription.length > 0 && document.getElementById('details-contents').replaceChild($newSegmentDescriptionElm, $segmentDescription);
 });
 
 
@@ -117,6 +72,10 @@ const deactivate = () => {
 	$activationHeader.classList.add('slds-hide');
 }
 
+if (activateByDefault) {
+	activate();
+}
+
 const checkbox = document.getElementById('activate-toggle');
 // Activate by default -- toggle still works
 checkbox.addEventListener('change', (event) => {
@@ -125,12 +84,7 @@ checkbox.addEventListener('change', (event) => {
 	} else {
 		deactivate();
 	}
-})
-
-
-// activating by default
-document.getElementById('details-contents').replaceChild($newSegmentName, $segmentName);
-activate();
+});
 
 document.querySelector('#activation-contents').innerHTML = activations.reduce((contents, activation, i) => {
 	return `

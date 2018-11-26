@@ -144,6 +144,31 @@ HEADER AREA
   position: relative;
 }
 
+#subheader-wrapper.einstein {
+  background-image: url(/images/clouds-bg.svg);
+  background-position-x: 0;
+  background-repeat: repeat-x;
+  background-size: 1990px;
+  background-position-y: 36px;
+  height: 96px;
+}
+
+#subheader-wrapper.einstein #subheader:before {
+  content: "";
+  display: block;
+  width: 51px;
+  height: 61px;
+  background-size: cover;
+  background-image: url(/images/einstein-leaning-left.svg);
+  position: absolute;
+  margin-top: 3px;
+  z-index: 1;
+}
+
+#subheader-wrapper.einstein #subheader .slds-grid {
+  padding-left: 50px;
+}
+
 #subheader {
   margin: 0 auto;
 }
@@ -157,7 +182,7 @@ HEADER AREA
 }
 
 .einstein-segementation #subheader-wrapper {
-  background-image: url(/img/clouds-bg.svg);
+  background-image: url(/images/clouds-bg.svg);
   background-position-x: 0;
   background-repeat: repeat-x;
   background-size: 1990px;
@@ -170,7 +195,7 @@ HEADER AREA
   width: 51px;
   height: 61px;
   background-size: cover;
-  background-image: url(/img/einstein-leaning-left.svg);
+  background-image: url(/images/einstein-leaning-left.svg);
   position: absolute;
   margin-top: 10px;
   z-index: 1;
@@ -453,4 +478,8 @@ body {
 .slds-panel-box__header svg, .slds-panel-box__header img {
   fill: #54698D;
   width: 16px;
+}
+
+.slds-text-heading_medium, .slds-text-heading--medium {
+  font-weight: 400;
 }

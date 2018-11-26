@@ -1,6 +1,6 @@
 {
-	"brandTheme": "bbva",
-	"demoName": "Dreamforce 2018 BBVA Mobile Demo (production)",
+	"brandTheme": "nto",
+	"demoName": "ROI DF 18",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -12,13 +12,13 @@
 	"env": "production",
 	"productTemplate": "mobile",
 	"prod": {
-		"host": "https://mobile-bbva-dreamforce-2018.herokuapp.com/"
+		"host": "https://roi-einstein-df18.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://mobile-bbva-dreamforce-2018-qa.herokuapp.com/"
+		"host": "https://roi-einstein-df18-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://mobile-bbva-dreamforce-2018-dev.herokuapp.com/"
+		"host": "https://roi-einstein-df18-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"

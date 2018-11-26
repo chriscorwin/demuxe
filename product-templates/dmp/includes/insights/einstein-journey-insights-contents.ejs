@@ -1,0 +1,50 @@
+<img id="einstein-journey-insights-img" src="/images/slices/insights.einstein-journey-insights.touchpoints.svg" />
+
+<img class="preload" src="/images/slices/insights.einstein-journey-insights.paths.svg" />
+<img class="preload" src="/images/slices/insights.einstein-journey-insights.paths.hovered.svg" />
+<img class="preload" src="/images/slices/insights.einstein-journey-insights.combinations.svg" />
+
+
+<div class="rpd-object" id="touchpoints-click-target">touchpoints-click-targe</div>
+<div class="rpd-object" id="paths-click-target">paths-click-target</div>
+<div class="rpd-object" id="combinations-click-target">combinations-click-target</div>
+<div class="rpd-object" id="paths-hover-target">paths-hover-target</div>
+
+<script>
+const img = document.getElementById('einstein-journey-insights-img');
+let pathsImageSelected = false;
+const body = document.getElementsByTagName('body')[0];
+
+document.getElementById('touchpoints-click-target').onclick = () => {
+	pathsImageSelected = false;	
+	img.src = '/images/slices/insights.einstein-journey-insights.touchpoints.svg';
+	body.style.backgroundImage = 'url(/images/slices/insights.einstein-journey-insights.touchpoints.background.svg)';
+	body.style.backgroundSize = '1px 1190px';
+}
+
+document.getElementById('paths-click-target').onclick = () => {
+	pathsImageSelected = true;
+	img.src = '/images/slices/insights.einstein-journey-insights.paths.svg';
+	body.style.backgroundImage = 'url(/images/slices/insights.einstein-journey-insights.paths.background.svg)';
+	body.style.backgroundSize = '1px 1368px';
+}
+
+document.getElementById('paths-hover-target').onmouseover = () => {
+	if (pathsImageSelected) {
+		img.src = '/images/slices/insights.einstein-journey-insights.paths.hovered.svg';
+	}
+}
+
+document.getElementById('paths-hover-target').onmouseout = () => {
+	if (pathsImageSelected) {
+		img.src = '/images/slices/insights.einstein-journey-insights.paths.svg';
+	}
+}
+
+document.getElementById('combinations-click-target').onclick = () => {
+	pathsImageSelected = false;	
+	img.src = '/images/slices/insights.einstein-journey-insights.combinations.svg';
+	body.style.backgroundImage = 'url(/images/slices/insights.einstein-journey-insights.combinations.background.svg)';
+	body.style.backgroundSize = '1px 1453px';
+}
+</script>

@@ -1,12 +1,13 @@
 <%- 
 	include(
 		'wrapper.ejs', 
-		{ 
-			title:'Einstein Segmentation', 
-			headerVariant: 'einstein', 
+		{
+			breadcrumbs: ['Einstein Segmentation'],
+			headerVariant: 'einstein',
+			page: 'einstein_segmentation',
 			siteSection: 'insights',
 			pageContents:'includes/insights/einstein-segmentation-contents',
-			pageStylesheets: ['insights.einstein-segmentation.css'],
+			pageStylesheets: ['insights.einstein-segmentation.css', 'insights.einstein-segmentation.brand.css'],
 			pageScripts: ['third-party-libraries/d3.js', 'third-party-libraries/d3-tip.js', 'insights.einstein-segmenetation.js']
 		}
 	) 

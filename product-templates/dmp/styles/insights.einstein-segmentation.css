@@ -189,12 +189,10 @@ body {
   color: #16325C;
   background: transparent;
   border: 0 none;
-  border-bottom: 1px solid #D8DDE6;
 }
 
 #personaName:focus, #personaName:active {
   border: 0 none;
-  border-bottom: 1px solid #0070D2;
   outline: none;
 }
 
@@ -250,35 +248,35 @@ body {
 }
 
 #key > ul li.purple {
-  background: url("/img/icons/purple.svg") no-repeat left center/10px;
+  background: url("/images/icons/purple.svg") no-repeat left center/10px;
 }
 
 #key > ul li.blue {
-  background: url("/img/icons/blue.svg") no-repeat left center/10px;
+  background: url("/images/icons/blue.svg") no-repeat left center/10px;
 }
 
 #key > ul li.green {
-  background: url("/img/icons/green.svg") no-repeat left center/10px;
+  background: url("/images/icons/green.svg") no-repeat left center/10px;
 }
 
 #formBody > ul li.purple {
-  background: url("/img/icons/purple.svg") no-repeat left top/16px;
+  background: url("/images/icons/purple.svg") no-repeat left top/16px;
   padding-right: 4px;
 }
 
 #formBody > ul li.blue {
-  background: url("/img/icons/blue.svg") no-repeat left top/16px;
+  background: url("/images/icons/blue.svg") no-repeat left top/16px;
 }
 
 #formBody > ul li.blue.dolla {
-  background: url("/img/icons/blue-dolla.svg") no-repeat left top/16px;
+  background: url("/images/icons/blue-dolla.svg") no-repeat left top/16px;
   padding-right: 4px;
 }
 
 #formBody > ul li.green {
-  background: url("/img/icons/green.svg") no-repeat left top/16px;
+  background: url("/images/icons/green.svg") no-repeat left top/16px;
 }
 
 #formBody > ul li.green.dolla {
-  background: url("/img/icons/green-dolla.svg") no-repeat left top/16px;
+  background: url("/images/icons/green-dolla.svg") no-repeat left top/16px;
 }

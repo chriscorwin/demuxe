@@ -83,5 +83,28 @@ module.exports = {
 			category: 'Behavioral',
 			subCategory: 'Loyalty'
 		}
-	]
+	],
+	lookalikesTableData: {
+		rows: [
+			{
+				reach: '600,000', similarity: '100%'
+			},
+			{
+				reach: '780,897', similarity: '98%'
+			},
+			{
+				reach: '810,008', similarity: '96%'
+			},
+			{
+				reach: '905,178', similarity: '94%'
+			},
+			{
+				reach: '906,110', similarity: '92%'
+			},
+			{
+				reach: '910,087', similarity: '90%'
+			}
+		],
+		labels: ['Reach', 'Similarity']
+	}
 };

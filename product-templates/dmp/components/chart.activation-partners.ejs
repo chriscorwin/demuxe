@@ -14,13 +14,17 @@
 	.grid-row:last-child {
 		border-bottom: 0 none;
 	}
+
+	#activation-partner-grid .grid-row:nth-of-type(1) {
+		font-size: 12px;
+	}
 </style>
 <div class="slds-panel-box">
-	<div class="slds-panel-box__header slds-p-around_small"><%- locals.localization.overview.panels.activation_partners.title %>
+	<div class="slds-panel-box__header slds-p-around_x-small"><%- locals.localization.overview.panels.activation_partners.title %>
 		<img class="icon slds-float_right" src="/images/settings.svg" />
 	</div>
 	<div class="slds-panel-box__body">
-		<div class="slds-panel-box__sub-header slds-p-around_small slds-m-bottom_medium">
+		<div class="slds-panel-box__sub-header slds-p-around_x-small slds-m-bottom_xx-small">
 			<button class="slds-button slds-button_neutral"><%- locals.localization.overview.panels.activation_partners.buttons[0].label %>
 				<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />
 			</button>
@@ -32,15 +36,15 @@
 			</button>
 		</div>
 		<div id="activation-partner-grid"></div>
-		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_small">
-		<a href="<%- locals.localization.overview.panels.activation_partners.view_all.href %>"><%- locals.localization.overview.panels.activation_partners.view_all.text %></a>
+		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_x-small">
+		<a href="javascript:void(0);" onclick="navigatePage('<%- locals.localization.overview.panels.activation_partners.view_all.href %>')"><%- locals.localization.overview.panels.activation_partners.view_all.text %></a>
 		</div>
 	</div>
 </div>
 
 <script>
 const makeActivationPartnerRow = (data) => (`
-	<div class="slds-grid grid-row slds-p-around_medium">
+	<div class="slds-grid grid-row slds-p-around_small">
 		<div class="slds-col slds-size_2-of-4 slds-p-left_medium">${data.partner}</div>
 		<div class="slds-col slds-size_1-of-4" style="text-align: right;">${data.type}</div>
 		<div class="slds-col slds-size_1-of-4 slds-p-right_medium" style="text-align: right;">${data.sent}</div>

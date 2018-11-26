@@ -5,11 +5,6 @@ const switchAccount = ( data ) => {
 	// $ss.click( );
 }
 
-// Keep the host and doesn’t show up when we hover on links, use this instead of href! execs hate to see “heroku” up there
-const navigatePage = ( url ) => {
-	window.location.href = url;
-}
-
 const makeCloudIconForJourneyBuilder = ( data ) => {
 	if ( data.pageVersion === '201' && data.appName === 'Journey Builder' ) {
 		return (`
@@ -242,6 +237,22 @@ const makePrimaryNav = ( data ) => {
 	return ( `
 		<div class="slds-context-bar__primary">
 			<div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+				<div class="slds-context-bar__icon-action">
+					<button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
+						<span class="slds-icon-waffle">
+							<span class="slds-r1"></span>
+							<span class="slds-r2"></span>
+							<span class="slds-r3"></span>
+							<span class="slds-r4"></span>
+							<span class="slds-r5"></span>
+							<span class="slds-r6"></span>
+							<span class="slds-r7"></span>
+							<span class="slds-r8"></span>
+							<span class="slds-r9"></span>
+						</span>
+						<span class="slds-assistive-text">Open App Launcher</span>
+					</button>
+				</div>
 				<span class="slds-context-bar__label-action slds-context-bar__app-name">
 					${makeCloudIconForJourneyBuilder(data)}
 					<span class="slds-truncate" title="${data.appName}">${data.appName}</span>
@@ -252,13 +263,11 @@ const makePrimaryNav = ( data ) => {
 			${makeNavLinks(data.navItems)}
 		</ul></nav>
 		<ul class="slds-grid slds-col--bump-left" role="tablist">
-			<li class="slds-context-bar__item slds-context-bar__item_tab" style="width: auto;">
-				<div class="menu-item slds-m-right_small" id="pins"><img class="icon" src="/icons/utility/pin-dark-blue.svg" /> <span>1</span></div>
-			</li>
-			<li class="slds-context-bar__item slds-context-bar__item_tab" style="width: auto;">
-				<div class="menu-item slds-m-right_small"><img class="icon" src="/images/cart.svg" /> 0</div>
-			</li>
-			${makeNotificationsMenu(data)}
+			<style>
+				.slds-context-bar__item_tab {
+					border-left: 0 none;
+				}
+			</style>
 			<li class="slds-context-bar__item slds-context-bar__item_tab slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover" style="width: auto; max-width: 20rem;">
 				<a href="javascript:void(0);" class="slds-context-bar__label-action" title="${data.accountName}">
 					<span class="slds-truncate" title="${data.accountName}">${data.accountName}</span>
