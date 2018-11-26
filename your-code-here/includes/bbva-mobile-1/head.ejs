@@ -1,0 +1,83 @@
+<% if (locals.title) { %>
+	<title><%= locals.title %></title>
+<%
+	} else {
+		console.warn(`
+============================================================
+[WARNING]
+	${locals.local.host}${locals.urlSlug} does not have a title set.
+------------------------------------------------------------
+`);
+
+%>
+	<script>
+		console.warn(`[WARNING: ] <%=locals.local.host%><%=locals.urlSlug%> does not have a title set!`);
+	</script>
+	<title> </title>
+<% } %>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="/styles/salesforce-lightning-design-system.css" />
+
+<!-- each page automatically tries to include a css file of the same name -->
+<% if (locals.siteSection) { %>
+<link rel="stylesheet" href="/styles/<%=locals.siteSection%>.css">
+<% } %>
+
+<% 
+if (locals.pageStylesheets) { 
+	locals.pageStylesheets.forEach(function(stylesheet) { 
+%>
+		<link rel="stylesheet" href="/styles/<%=stylesheet%>">
+<% 
+	});
+} 
+%>
+
+
+<script type="text/javascript">
+	const demoMagickFlowDirectoryName = '<%=locals.urlSlug%>';
+
+	const locals = {};
+<%
+	Object.keys(locals).forEach(function(key, fileIndex) {
+		console.group(`[setting global javascript variables from Demuxe locals] key: `, key);
+		console.log(`typeof locals[key]: `, typeof locals[key]);
+		console.log(`typeof locals[key] === 'object': `, typeof locals[key] === 'object');
+		if (key != '_locals' && key != 'path' && key != 'util' && key != 'classnames' && key != 'sizeOf') {
+			if(typeof locals[key] === 'object') {
+%>
+				locals['<%- key %>'] = <%- JSON.stringify(locals[key]) %>;
+<%
+			} else {
+%>
+				locals['<%- key %>']  = '<%- locals[key] %>';
+<%
+			}
+%>
+<%
+		} else {
+			console.log('NOT GONNA SAVE: key: ', key);
+
+		}
+		console.groupEnd();
+	});
+
+%>
+	console.group(`locals:`);
+	console.dir(locals);
+	console.groupEnd();
+
+
+</script>
+
+
+<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<script
+    src="/javascripts/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
