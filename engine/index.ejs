@@ -111,9 +111,12 @@
 
 
   </section>
+    <script src="/javascripts/queryParams.js"></script>
     <script src="/javascripts/brand.js"></script>
     <script src="/javascripts/non-existent.js"></script>
     <script type="text/javascript">
+    queryParams.add('bob', 'villa');
+
     if (location.host === 'localhost:3000') {
         document.write('<script src="http://' + (location.host || 'localhost')
             .split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
