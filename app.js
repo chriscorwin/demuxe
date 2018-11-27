@@ -118,6 +118,9 @@ router.get('/*', (req, res) => {
 	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
 	const fileName = (sanitizedURL.match(/\/$/)) ? `${sanitizedURL}index.ejs` : `${sanitizedURL}.ejs`;
 
+	const state = sanitizedQueryParams.state || 'initial';
+	config.state = state;
+
 	let error = true;
 	// Check to see if the file exists in any of the three possible view directories. If not, error.
 	fs.access(path.join(__dirname, 'your-code-here', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
