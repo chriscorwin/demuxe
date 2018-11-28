@@ -116,6 +116,8 @@
     <script src="/javascripts/non-existent.js"></script>
     <script type="text/javascript">
     queryParams.add('bob', 'villa');
+    queryParams.add('bob', 'hope');
+    queryParams.remove('bob');
 
     if (location.host === 'localhost:3000') {
         document.write('<script src="http://' + (location.host || 'localhost')

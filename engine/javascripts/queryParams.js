@@ -1,20 +1,26 @@
 //function to remove query params form a url
 const queryParams = {
-	remove: (url, parameter) => {
-		const urlparts = url.split('?');   
-		if (urlparts.length>=2) {
-			const prefix= encodeURIComponent(parameter)+'=';
-			const parts= urlparts[1].split(/[&;]/g);
+	remove: (parameter, pushToState=true) => {
+		const url = window.location.href;
+		const urlparts = url.split('?');
 
-			//reverse iteration as may be destructive
-			for (var i= parts.length; i-- > 0;) {    
-				//idiom for string.startsWith
+		if (urlparts.length >= 2) {
+			const prefix = encodeURIComponent(parameter)+'=';
+			const parts = urlparts[1].split(/[&;]/g);
+
+			for (let i = parts.length; i-- > 0;) {    
 				if (parts[i].lastIndexOf(prefix, 0) !== -1) {  
 					parts.splice(i, 1);
 				}
 			}
 
-			return urlparts[0] + (parts.length > 0 ? '?' + parts.join('&') : "");
+			const newurl = urlparts[0] + (parts.length > 0 ? '?' + parts.join('&') : "");
+
+			if (pushToState) {
+				window.history.pushState({path:newurl},'',newurl);
+			}
+			
+			return newurl;
 		} else {
 			return url;
 		}
@@ -24,7 +30,7 @@ const queryParams = {
 		if (history.pushState) {
 			let currentUrl = window.location.href;
 			//remove any param for the same key
-			currentUrl = queryParams.remove(currentUrl, key);
+			currentUrl = queryParams.remove(key, false);
 
 			//figure out if we need to add the param with a ? or a &
 			let queryStart;
