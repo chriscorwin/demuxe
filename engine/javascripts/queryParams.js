@@ -1,4 +1,17 @@
-//function to remove query params form a url
+/*
+ * Utility methods available to Demuxe to help manage URL for link-ability. 
+ *
+ * This will NOT HELP YOU MANAGE Session and State in prototypes. It ONLY manipulates
+ * the URL without reloading the page. It also pushes each URL variant to browser history,
+ * but there are no mechanics to handle changing page state on forward/back, so it kind
+ * of breaks the back button.
+ * See /README.md#Sessions-and-State for more info.
+ * 
+ * To use, include `<script src="/javascripts/queryParams.js"></script>` on your page.
+ * `queryParams.add('param', 'value');` to add a query param
+ * `queryParams.remove('param');` to remove a query param
+ */
+
 const queryParams = {
 	remove: (parameter, pushToState=true) => {
 		const url = window.location.href;
