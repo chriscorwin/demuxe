@@ -125,6 +125,7 @@ module.exports = function() {
         appViews.push(path.join(__dirname, '../', 'product-templates', configData.productTemplate));
     }
     appViews.push(path.join(__dirname, '../', 'engine'));
+    appViews.push(path.join(__dirname, '../', 'slides'));
     configData.appViews = appViews;
 
 

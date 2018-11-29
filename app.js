@@ -86,6 +86,11 @@ appUse.push(
 	}),
 	express.static(path.join(__dirname, 'your-code-here'))
 );
+
+appUse.push(
+	express.static(path.join(__dirname, 'slides'))
+);
+
 app.use(appUse);
 
 const router = express.Router();

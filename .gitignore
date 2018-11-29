@@ -16,3 +16,6 @@ jsconfig.json
 
 # Other
 package-lock.json
+
+
+credentials.json
