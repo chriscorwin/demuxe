@@ -65,19 +65,18 @@ module.exports = function() {
       http://localhost:3000/${aDirectoryPath.split('/')[aDirectoryPath.split('/').length - 1]}`;
     });
 
-    magickFlowDirectoriesFormattedForConsoleStartupLog += `
-
-    There is a dashboard for Magick Flows available at: 
-
-    http://localhost:3000/magick-flows-dashboard`;
 
     console.group(`
 ============================================================
 Demuxe Magick Flows Setup Information
 ------------------------------------------------------------
 
-Demuxe found ${magickFlowDirectories.length} Magick Flows:
+There is a dashboard for Magick Flows available at: 
 
+http://localhost:3000/magick-flows-dashboard
+------------------------------------------------------------
+
+Demuxe found ${magickFlowDirectories.length} Magick Flows:
 ${magickFlowDirectoriesFormattedForConsoleStartupLog}
 `);
 
