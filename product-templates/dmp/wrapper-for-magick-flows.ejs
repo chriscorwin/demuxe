@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<%- include('includes/global/head', {pageStylesheets: [`/magick-flows/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}/assets/styles.css`]}) _%>
+		<%- include('includes/global/head') _%>
+		<%- include('includes/global/head-magick-flows') _%>
 		<% if (locals.siteSection) { %>
 			<%- include(`includes/${locals.siteSection}/head`) _%>
 		<% } %>
