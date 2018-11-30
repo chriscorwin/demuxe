@@ -1,13 +1,19 @@
+<%
+
+const segments = locals.localization.segments.states[locals.state].segments;
+const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
+
+%>
+
 <div class="slds-grid slds-grid_pull-padded-medium slds-p-vertical_small">
 	<img class="slds-p-horizontal_medium" src="/images/slices/segments.manage-segments.menu-a-left.svg" style="height: 33px;" />
 	<img class="slds-p-horizontal_medium slds-col_bump-left" src="/images/slices/segments.manage-segments.menu-a-right.svg" style="height: 33px;" />
 </div>
 
 <% 
-	const tableData = locals.localization.segments.lookalikes.tableData;
+	const tableData = lookalikes.tableData;
 
 	const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
-
 
 	const makeTable = (data) => (`
 	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
@@ -187,7 +193,7 @@
 		<div class="slds-grid">
 			<div class="slds-col slds-size_3-of-5">Select the desired combination of reach and similarity for your objective.</div>
 			<div class="slds-col slds-size_2-of-5" style="text-align: right; font-size: 16px;">
-				<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>${locals.localization.segments.lookalikes.cpm}</strong>
+				<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>${lookalikes.cpm}</strong>
 			</div>
 		</div>
 
@@ -206,27 +212,7 @@
 		<button disabled onclick="navigatePage('/segments/manage-segments/?trigger=successToast');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
 	`);
 
-	const panels = locals.localization.segments.default;
-
-	if (locals.localization.segments.additional) {
-		locals.localization.segments.cachedAdditional = locals.localization.segments.cachedAdditional || [...locals.localization.segments.additional];
-
-		// add additional elements one by one (or at least don't delete them)
-		if (locals.sanitizedQueryParams.trigger) {
-			locals.localization.segments.cachedAdditional.length > 0 && panels.unshift(locals.localization.segments.cachedAdditional.shift());	
-		} else {
-			// remove all additional elements and start over
-			locals.localization.segments.cachedAdditional = [...locals.localization.segments.additional];
-
-			locals.localization.segments.additional.forEach((panel) => {
-				if (panels.includes(panel)) {
-					var panelIndex = panels.indexOf(panel);
-					panels.splice(panelIndex, 1);
-				}
-			});	
-		}
-	}
-
+	const panels = segments;
 
 	const makePanels = () => panels.reduce((panels, panel) => panels + makePanel(panel), '');
 %>
@@ -259,7 +245,7 @@
 
 <%- include('components/toast', {
 	contents: 'The segment will be available once processing completes.',
-	title: `‘${locals.localization.segments.default[0].title}’ segment created successfully.`,
+	title: `‘${segments[0].title}’ segment created successfully.`,
 	theme: 'success',
 	id: 'successToast'			
 }) %>
