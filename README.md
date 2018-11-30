@@ -101,6 +101,20 @@ Demuxe utilizes:
 - Any query params `?like=this` are passed along into the EJS template and available for use in the global js `locals.sanitizedQueryParams` object `<%= locals.sanitizedQueryParams.likeThis %>`.
 - EJS files can be included in other EJS files (server side) `<%- include('includes/like-this') %>` and follow the same rules as outlined in `.ejs` bullet-point above.
 
+### Sessions and State
+
+- State is controlled by config data (typically inside `/brand-themes/[brand]/localization.js`).
+- Never modify state from the code.
+- Indicate desired state at page load through the query param `?state=`.
+	- There is only ever _one_ state at a time.
+	- See `/brand-themes/bbva/segments.js` for a good D.R.Y. example of how to re-use data across multiple states without repeating lines of code (defining the same thing the same way in two different places).
+- For convenience, to encourage maintaining link-ability throughout demo, the Demuxe engine itself contains a library for manipulating query params (see `/engine/index.ejs`).
+	
+	It should be noted though, that while this may _feel_ "Single Page Web App"ish, it isn't. Adding/Removing query params has absolutely no affect on page contents, _will not_ update state on page, and is _only_ intended as a way to make the URL copy/paste-able. Fetching new data from the server will require an actual page re-load. Pushing data to the server is a crime against humanity and will be punished by time-cops sent back from the wrecked future that you destroyed by abusing the Demuxe framework (It'll know once it becomes sentient. Trust me.).
+	
+	- Include `<script src="/javascripts/queryParams.js"></script>` on your page.
+	- `queryParams.add('param', 'value');` to add a query param
+	- `queryParams.remove('param');` to remove a query param
 
 
 
@@ -168,7 +182,7 @@ You must structure your brand assets as follows:
 
 NOTE: The folder name is named after the brand (eg, `/brand-themes/ducati/`) but the actual files themselves are named `brand` as the core brand theme files are standardized across all brands.
 
-`/brand-themes/{brand-name}/localization.js` typically imports all sorts of other localization/data from other files so that it isn't just one huge massive JS Object in a single file.
+`/brand-themes/{brand-name}/localization.js` typically imports all sorts of other localization/data from other files so that it isn't just one huge massive JS Object in a single file. See [Sessions and State](#sessions-and-state) for more info about dynamic demo variables contained in these JSON objects.
 
 
 ## Sketch -> SVG Files
