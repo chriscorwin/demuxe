@@ -1,13 +1,13 @@
-const path = require('path');
-const fs = require('fs');
-const util = require('util');
-const sizeOf = require('image-size');
-
 console.group(`
 ============================================================
 Demuxe: Running \`config/config-magick-flows.js\` now...
 ------------------------------------------------------------
 `);
+const path = require('path');
+const fs = require('fs');
+const util = require('util');
+const sizeOf = require('image-size');
+
 
 const magickFlowsConfig = {
 
@@ -357,3 +357,4 @@ const magickFlowsConfig = {
 }
 
 module.exports = magickFlowsConfig;
+

@@ -1,14 +1,14 @@
-const path = require('path');
-const fs = require('fs');
-const util = require('util');
-const sizeOf = require('image-size');
-const configMagickFlows = require('./config-magick-flows');
-
 console.group(`
 ============================================================
 Demuxe: Running \`config/config.js\` now...
 ------------------------------------------------------------
 `);
+
+const path = require('path');
+const fs = require('fs');
+const util = require('util');
+const sizeOf = require('image-size');
+const configMagickFlows = require('./config-magick-flows');
 
 
 
@@ -88,6 +88,13 @@ ${magickFlowDirectoriesFormattedForConsoleStartupLog}
     configData.SOME_STATIC_VAR = process.env.SOME_STATIC_VAR;
     configData.port = process.env.port || configData.port;
 
+
+    console.log(`
+...and thus, the end of \`config/config-magick-flows.js\` was reached.
+------------------------------------------------------------
+`);
+
+console.groupEnd();
     console.log(`
 ...and thus, the end of \`config/config.js\` was reached.
 ------------------------------------------------------------
