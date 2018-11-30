@@ -1,4 +1,10 @@
-<% console.group('[ product-templates/dmp/includes/global/head.ejs ]'); %>
+<% 
+console.group(`
+============================================================
+Demuxe: Running \`product-templates/dmp/includes/global/head.ejs\` now...
+------------------------------------------------------------
+`);
+%>
 <% if (locals.title) { %>
 	<title><%= locals.title %></title>
 <%
@@ -48,7 +54,7 @@ if (locals.pageStylesheets) {
 
 <script type="text/javascript">
 	const demoMagickFlowDirectoryName = '<%=locals.urlSlug%>';
-	console.log('[ product-templates/mobile/includes/global/head.ejs:50 ] locals.urlSlug', '<%-locals.urlSlug%>');
+	console.log('[ product-templates/mobile/includes/global/head.ejs:57 ] locals.urlSlug', '<%-locals.urlSlug%>');
 
 	const locals = {};
 <%
@@ -406,5 +412,12 @@ if (locals.pageStylesheets) {
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
 
-<% console.groupEnd(); %>
+<% 
+
+ console.log(`...and thus, the end of \`product-templates/dmp/includes/global/head.ejs\` was reached.
+------------------------------------------------------------
+`);
+
+console.groupEnd();
+ %>
 

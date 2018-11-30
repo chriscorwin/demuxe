@@ -20,13 +20,13 @@
 	<div class="slds-context-bar slds-p-left_medium" id="primaryNav"></div>
 </header>
 <div id="subheader-wrapper" class="slds-p-around_medium slds-m-bottom_small<%= locals.headerVariant === 'einstein' ? ' einstein' : '' %>">
-	<% if (locals.breadcrumbs) { console.log('bread crumb');%>
+	<% if (locals.breadcrumbs) { %>
 	<nav role="navigation" aria-label="Breadcrumbs" class="slds-p-bottom_x-small">
 		<ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
-			<% locals.breadcrumbs.forEach(function(crumb) { console.log('there is a bread crumb'); %> <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);"><%=crumb%></a></li> <% }) %>
+			<% locals.breadcrumbs.forEach(function(crumb) { %> <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);"><%=crumb%></a></li> <% }) %>
 		</ol>
 	</nav>
-	<% } else { console.log('no breadcrumb')} %>
+	<% } %>
 
 	<div id="subheader" class="slds-container_large">
 		<div class="slds-grid slds-grid_vertical-align-center">
