@@ -1,13 +1,18 @@
 <%_
+console.group(`
+============================================================
+Demuxe: including \`engine/includes/magick-flows/magick-flows-contents.ejs\` now...
+------------------------------------------------------------
+`);
+
 	let thisMagickFlowConfig = locals.magickFlows[locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]];
 	let preLoadImages = '';
 _%>
 <script type="text/javascript">
 	const thisMagickFlowConfig =<%- JSON.stringify(thisMagickFlowConfig)%>;
-	console.group('[ /product-templates/mobile/includes/magick-flows/contents.ejs:8 ] thisMagickFlowConfig:');
+	console.group('[ includes/magick-flows/magick-flows-contents.ejs:14 ] thisMagickFlowConfig:');
 	console.dir(thisMagickFlowConfig);
 	console.groupEnd();
-	// console.log('thisMagickFlowConfig', thisMagickFlowConfig);
 </script>
 <%_
 	let showMetaDataMissingError = true;
@@ -168,3 +173,9 @@ _%>
 
 <div class="notification magick-flows--slide-6 magick-flows-slide"></div>
 
+<%_
+console.log(`...end \`engine/includes/magick-flows/magick-flows-contents.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

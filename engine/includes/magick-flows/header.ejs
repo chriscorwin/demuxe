@@ -1,3 +1,11 @@
+<%_
+console.group(`
+============================================================
+Demuxe: including \`engine/includes/magick-flows/header.ejs\` now...
+------------------------------------------------------------
+`);
+%>
+
 <header class="slds-global-header_container slds-flow-header_container">
 	<div class="slds-global-header slds-flow-header slds-grid slds-grid_align-spread" style="box-shadow: none;">
 		<div class="slds-global-header__item">
@@ -28,3 +36,9 @@
 	</div>
 	<div class="slds-context-bar slds-p-left_medium" id="primaryNav"></div>
 </header>
+<%_
+console.log(`...end \`engine/includes/magick-flows/header.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

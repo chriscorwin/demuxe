@@ -1,7 +1,7 @@
-<% 
+<%_
 console.group(`
 ============================================================
-Demuxe: Running \`product-templates/dmp/includes/global/head.ejs\` now...
+Demuxe: including \`product-templates/dmp/includes/global/head.ejs\` now...
 ------------------------------------------------------------
 `);
 %>
@@ -13,8 +13,6 @@ Demuxe: Running \`product-templates/dmp/includes/global/head.ejs\` now...
 ============================================================
 [WARNING]
 	${locals.local.host}${locals.urlSlug} does not have a title set.
-
-	product-templates/mobile/includes/global/head.ejs:6
 ------------------------------------------------------------
 `);
 
@@ -411,13 +409,9 @@ if (locals.pageStylesheets) {
 
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
-
-<% 
-
- console.log(`...and thus, the end of \`product-templates/dmp/includes/global/head.ejs\` was reached.
+<%_
+console.log(`...end \`product-templates/dmp/includes/global/head.ejs\`
 ------------------------------------------------------------
 `);
-
 console.groupEnd();
- %>
-
+%>

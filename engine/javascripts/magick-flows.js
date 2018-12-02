@@ -1,6 +1,6 @@
 console.group(`
 ============================================================
-Demuxe: Running \`/product-templates/dmp/javascripts/magick-flows.js\` now...
+Demuxe: Running \`engine/javascripts/magick-flows.js\` now...
 ------------------------------------------------------------
 `);
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
@@ -40,7 +40,7 @@ $contentWrapper.onclick = ( ) => {
 
 
 function normalTransition (thisStepNumber = 0, doAppTransition = false) {
-	console.log(`[ normalTransition() ](/product-templates/mobile/javascripts/magick-flows.js:43) running...`);
+	console.group(`[ normalTransition() ](/product-templates/mobile/javascripts/magick-flows.js:43) running...`);
 
 	let nextStepNumber = thisStepNumber + 1;
 

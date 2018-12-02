@@ -1,10 +1,16 @@
+<%_
+console.group(`
+============================================================
+Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
+------------------------------------------------------------
+`);
+%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<%- include('includes/global/head') _%>
-		<%- include('includes/global/head-magick-flows') _%>
 		<% if (locals.siteSection) { %>
-			<%- include(`includes/${locals.siteSection}/head`) _%>
+			<%- include(`includes/${locals.siteSection}/${locals.siteSection}-head`) _%>
 		<% } %>
 		<% if (locals.urlSlug && (locals.urlSlug != 'bbva-atm' || locals.urlSlug != 'ga360')) { %>
 			<%- include(`includes/mobile/mobile-meta-attributes-for-ios-webapp`) _%>
@@ -33,3 +39,10 @@
 		<%- include('includes/global/footer-scripts') %>
 	</body>
 </html>
+<link rel="stylesheet" href="magick-flows/<%=locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]%>/assets/styles.css">
+<%_
+console.log(`...end \`engine/wrapper-for-magick-flows.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

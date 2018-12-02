@@ -66,7 +66,10 @@ const magickFlowsConfig = {
 							catch(error) {
 								if ( error.message.includes('ENOENT: no such file or directory')) {
 									console.error(`
-	[ ERROR IN: \`${thisMagickFlowName}\`]
+	[ ERROR IN: \`config/config-magick-flows.js:69\`]
+
+	Magick Flow URL Slug: \`${thisMagickFlowName}\`.
+
 	The app is attempting to render a Magick Flow at:
 
 	${thisMagickFlowMainContentFullPath}
@@ -358,3 +361,6 @@ const magickFlowsConfig = {
 
 module.exports = magickFlowsConfig;
 
+console.log(`...end: \`config/config-magick-flows.js\`
+------------------------------------------------------------`);
+console.groupEnd();

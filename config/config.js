@@ -80,7 +80,6 @@ The Demuxe engine looked around, and, lo, it found ${magickFlowDirectories.lengt
 
 ${magickFlowDirectoriesFormattedForConsoleStartupLog}
 `);
-
     console.groupEnd();
 
     configData.magickFlowDirectories = magickFlowDirectories;
@@ -90,18 +89,9 @@ ${magickFlowDirectoriesFormattedForConsoleStartupLog}
     configData.port = process.env.port || configData.port;
 
 
-    console.log(`
-...and thus, the end of \`config/config-magick-flows.js\` was reached.
-------------------------------------------------------------
-`);
-
-console.groupEnd();
-    console.log(`
-...and thus, the end of \`config/config.js\` was reached.
-------------------------------------------------------------
-
-`);
-    console.groupEnd();
 
     return configData;
 }
+console.log(`...end: \`config/config.js\`
+------------------------------------------------------------`);
+console.groupEnd();

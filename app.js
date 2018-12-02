@@ -1,3 +1,8 @@
+console.group(`
+============================================================
+Demuxe: Running \`app.js\` now...
+------------------------------------------------------------
+`);
 const cookieParser = require('cookie-parser');
 const createError = require('http-errors');
 const ejs = require('ejs');
@@ -31,7 +36,7 @@ console.log(`productTemplate: ${config.productTemplate}`);
 
 if (process.env.DEBUG === "true") {
 	console.log('config data');
-	console.log(`[ app.js:28 ] config: `, util.inspect(config, { showHidden: false, depth: null, colors: true }));
+	console.log(`[ app.js:39 ] config: `, util.inspect(config, { showHidden: false, depth: null, colors: true }));
 }
 
 console.groupEnd();
@@ -187,3 +192,8 @@ app.use((err, req, res) => {
 });
 
 module.exports = app;
+
+console.log(`...end \`app.js\`
+------------------------------------------------------------
+`);
+console.groupEnd();
