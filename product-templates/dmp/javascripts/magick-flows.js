@@ -144,14 +144,6 @@ function locationHashChanged(event) {
 
 	let doAppTransition = false;
 	let doNotifcation = false;
-
-
-	console.log(`[ SPLATS ]magickFlowConfig.metaData2[clicks]: `, magickFlowConfig.metaData2[clicks]);
-	console.log(`[ SPLATS ]magickFlowConfig.metaData2[clicks].data: `, magickFlowConfig.metaData2[clicks].data);
-
-	
-
-
 	let directionOfNavigation = 'forward';
 	let oldUrlHash = parseInt( event.oldURL.split('#')[event.oldURL.split('#').length - 1] ) || 0;
 	let newUrlHash = parseInt( event.newURL.split('#')[event.newURL.split('#').length - 1] ) || 0;

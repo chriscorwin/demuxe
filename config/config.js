@@ -58,7 +58,7 @@ module.exports = function() {
     const startingPath = path.join(__dirname, '..');
     const magickFlowDirectories = configMagickFlows.getMagickFlowDirectories(startingPath, [], configData).sort(configMagickFlows.sortAlphaNum);
 
-
+    //  @todo stop hard-coding this port
     let magickFlowDirectoriesFormattedForConsoleStartupLog = ``;
     magickFlowDirectories.forEach(function(aDirectoryPath){
       magickFlowDirectoriesFormattedForConsoleStartupLog += `
@@ -68,7 +68,7 @@ module.exports = function() {
 
     console.group(`
 ============================================================
-Demuxe Magick Flows Setup Information
+Demuxe: Magick Flows Setup Information
 ------------------------------------------------------------
 
 There is a dashboard for Magick Flows available at: 
@@ -76,7 +76,8 @@ There is a dashboard for Magick Flows available at:
 http://localhost:3000/magick-flows-dashboard
 ------------------------------------------------------------
 
-Demuxe found ${magickFlowDirectories.length} Magick Flows:
+The Demuxe engine looked around, and, lo, it found ${magickFlowDirectories.length} Magick Flows:
+
 ${magickFlowDirectoriesFormattedForConsoleStartupLog}
 `);
 
