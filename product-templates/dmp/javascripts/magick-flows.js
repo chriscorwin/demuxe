@@ -1,3 +1,8 @@
+console.group(`
+============================================================
+Demuxe: Running \`/product-templates/dmp/javascripts/magick-flows.js\` now...
+------------------------------------------------------------
+`);
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
 
@@ -35,7 +40,7 @@ $contentWrapper.onclick = ( ) => {
 
 
 function normalTransition (thisStepNumber = 0, doAppTransition = false) {
-	console.log(`[ product-templates/mobile/javascripts/magick-flows.js:37 ] : normalTransition() running...`);
+	console.log(`[ normalTransition() ](/product-templates/mobile/javascripts/magick-flows.js:43) running...`);
 
 	let nextStepNumber = thisStepNumber + 1;
 
@@ -96,30 +101,27 @@ function getAppSwitcherClassNames () {
 
 
 function locationHashChanged(event) {
-
-	console.group(`[ /product-templates/mobile/javascripts/magick-flows.js:89 ] : locationHashChanged() running...`);
+	console.group(`[ locationHashChanged() ](/product-templates/dmp/javascripts/magick-flows.js:104)  running...`);
 	console.log(`window.location.hash (before manipulation): `, window.location.hash);
-
 	console.log(`event.oldURL: `, event.oldURL);
 	console.log(`event.newURL: `, event.newURL);
-	// Scroll the window up, because the user could have scrolled down and then hit "back" and normally a demo runner will want to load every screen in its fresh, unscrolled, state.
-	window.scroll(0,0);
 
+	// get the non-string version of the hash -- that is the number of clicks so far
 	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+
+	// if the number of clicks is greater than our number of screens, we override that and set that thing back to zero
 	if ( clicks >= magickFlowConfig.numberOfScreens ) {
 		clicks = 0;
 		window.location.hash = `#${clicks}`;
 	}
 
-	// theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x=OH HI THERE";
-
+	// figure out which things come next and which things are backwards -- because it's a _loop_ we have to do some maths here
 	nextClick = clicks + 1;
 	if ( nextClick >= magickFlowConfig.numberOfScreens ) {
 		nextClick = 0
 	}
-
 	previousClick = clicks - 1;
-	console.log(`previousClick: `, previousClick);
+
 	if ( previousClick < 0 ) {
 		previousClick = magickFlowConfig.numberOfScreens - 1
 	}
@@ -135,13 +137,18 @@ function locationHashChanged(event) {
 
 
 
+	
 
+	// Scroll the window, and scrollable areas, up, because the user could have scrolled down and then hit "back" and normally a demo runner will want to load every screen in its fresh, unscrolled, state.
+	// this may eventaully prove problematic, and may have to be re-thought, or, over-ridable, at least.
+	window.scroll(0,0);
 	document.querySelectorAll( '.slds-scrollable')[nextClick].scroll(0,0);
 	document.querySelectorAll( '.slds-scrollable')[clicks].scroll(0,0);
 	document.querySelectorAll( '.slds-scrollable')[previousClick].scroll(0,0);
 
 
-
+	// we assume that we will not do an app transition nor show a notificaiton
+	// eventually we'll assume we aren't showing a drawer, or sliding in a wizard, or anything else.
 	let doAppTransition = false;
 	let doNotifcation = false;
 	let directionOfNavigation = 'forward';
@@ -150,6 +157,7 @@ function locationHashChanged(event) {
 	if (newUrlHash <= oldUrlHash) {
 		directionOfNavigation = 'back';
 	}
+	console.log(`directionOfNavigation: `, directionOfNavigation);
 
 	let stepToEvaluateForAppTransition = directionOfNavigation === 'forward' ? newUrlHash : oldUrlHash;
 
@@ -158,6 +166,8 @@ function locationHashChanged(event) {
 	}
 
 
+	// for now these things are hard-coded as exceptions into this script.
+	// we'd like it to come from the names of the files/assets themselves
 	if ( magickFlowConfig.urlSlug === 'tm-mobile-tokyo' || magickFlowConfig.urlSlug === 'tm-mobile' ) {
 		if (clicks === 6) {
 			doNotifcation = true;
@@ -174,28 +184,23 @@ function locationHashChanged(event) {
 		}
 	}
 
+	// once we've sorted out _what_ sort of transition to affect, we trigger it
 	normalTransition(clicks, doAppTransition);
 
+	// depending upon data-slide seems okay, though i've always been worried it is too fragile, it seems to work well
+	//  ¯\_(ツ)_/¯
 	for (var item of document.querySelectorAll(`[data-slide]`)) {
 		if (typeof(item) != 'undefined' && item != null) {
 			const itemId = item.id;
-			// console.log(`item.dataset.slide: `, item.dataset.slide);
-
-
-
 
 			if (parseInt(item.dataset.slide) == clicks) {
 
 				const thisMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.screens[clicks]}`;
-				// console.log(`thisMagickFlowScreenshotUrl: `, thisMagickFlowScreenshotUrl);
 				const nextMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.screens[nextClick]}`;
-				// console.log(`nextMagickFlowScreenshotUrl: `, nextMagickFlowScreenshotUrl);
 				const theOneAfterNextMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.screens[nextClick + 1]}`;
-				// console.log(`theOneAfterNextMagickFlowScreenshotUrl: `, theOneAfterNextMagickFlowScreenshotUrl);
 				const previousMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.screens[previousClick]}`;
-				// console.log(`previousMagickFlowScreenshotUrl: `, previousMagickFlowScreenshotUrl);
 
-
+				// this is where we wanna also sense .esj or even maybe .html and do _other_ stuff
 				const isPng = thisMagickFlowScreenshotUrl.endsWith('.png');
 				const isSvg = thisMagickFlowScreenshotUrl.endsWith('.svg');
 				const isMp4 = thisMagickFlowScreenshotUrl.endsWith('.mp4');
@@ -205,31 +210,6 @@ function locationHashChanged(event) {
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-previous');
 				document.querySelector(`#${itemId}`).classList.add('slds-is-active');
 				document.querySelector(`#${itemId}`).classList.remove('slds-hide');
-				// document.querySelector(`#${itemId}`).classList.add('slds-transition-show');
-
-
-				// if(isGif) {
-				// 	const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
-				// 	console.log(`item img: `, theScreenshot.src);
-				// 	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
-				// }
-
-
-				// if(isGif) {
-				// 	window.setTimeout(() => {
-				// 			console.log(`isGif: `, isGif);
-				// 			const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
-				// 			console.log(`item img: `, theScreenshot.src);
-				// 			theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
-				// 	}, 4000);
-				// }
-
-				// document.querySelector(`#magick-flows--slide-${nextClick}`).classList.add('slds-transition-show');
-
-
-
-				// window.setTimeout(() => {
-				// }, 2);
 
 			} else if ( parseInt(item.dataset.slide) == nextClick) {
 				// document.querySelector(`#${itemId}`).classList.remove('slds-transition-show');
@@ -258,11 +238,10 @@ function locationHashChanged(event) {
 			}
 		}
 	}
-
 	console.groupEnd();
 }
 
-//let this snippet run before your hashchange event binding code
+// this gives our hash change event some history to poke at introspectively
 if(!window.HashChangeEvent)(function(){
 	var lastURL=document.URL;
 	window.addEventListener("hashchange",function(event){
@@ -275,27 +254,22 @@ if(!window.HashChangeEvent)(function(){
 window.onhashchange = locationHashChanged;
 document.ontouchstart = function() {
 	const theScreenshot = document.querySelector(`#magick-flows--slide-${nextClick} .auto-replace`);
-	// console.log(`item img: `, theScreenshot.src);
 	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
 }
 
-// console.group(`[ /product-templates/mobile/javascripts/magick-flows.js:217 ] : locationHashChanged() will run`);
-// locationHashChanged();
-
-// console.groupEnd();
-
-
-
+// The very first time the URL for this Magick Flow is loaded in the browser we run a "reset" on it 
+// Why? WE DON'T KNOW!! 
+// ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
 window.setTimeout(() => {
 	window.location.hash = `#reset`;
 	window.location.hash = `#${clicks}`;
 }, (150));
 
+// Give the whole thing a chance to cache some assets before presenting the UI. This only runs once per page load, not every click.
 window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.add('slds-transition-show');
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-hide');
 }, (500));
-
 window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
 	document.querySelector(`#content`).classList.remove('fake-the-dock');
@@ -306,25 +280,26 @@ window.setTimeout(() => {
 
 
 document.onkeyup = function(e) {
-  if (e.which == 72) {
-    console.log("H key was pressed, going home.");
-    window.location.hash = `#0`;
-
-  } else if (e.which == 39) {
-    console.log("Right arrow key was pressed, go to next...");
-    window.location.hash = `#${nextClick}`;
-  } else if (e.which == 37) {
-    console.log("Left arrow key was pressed, go to previous...");
-    window.location.hash = `#${previousClick}`;
-  } else if (e.which == 71) {
-    console.log("GIF...");
-	const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
-	console.log(`item img: `, theScreenshot.src);
-	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
-
-  } else if (e.ctrlKey && e.altKey && e.which == 89) {
-    alert("Ctrl + Alt + Y shortcut combination was pressed");
-  } else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
-    alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
+	if (e.which == 72) {
+		console.log("H key was pressed, go to the first slide.");
+		window.location.hash = `#0`;
+	} else if (e.which == 39) {
+		console.log("Right arrow key was pressed, go to next...");
+		window.location.hash = `#${nextClick}`;
+	} else if (e.which == 37) {
+		console.log("Left arrow key was pressed, go to previous...");
+		window.location.hash = `#${previousClick}`;
+	} else if (e.which == 71) {
+		console.log("GIF...");
+		const theScreenshot = document.querySelector(`#magick-flows--slide-${clicks} .auto-replace`);
+		console.log(`item img: `, theScreenshot.src);
+		theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
+	} else if (e.ctrlKey && e.altKey && e.which == 89) {
+		// these are here to remind us how to do combos, not cause we want these combos
+		// alert("Ctrl + Alt + Y shortcut combination was pressed");
+	} else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
+		// these are here to remind us how to do combos, not cause we want these combos
+		// alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
   }
 };
+
