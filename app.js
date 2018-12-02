@@ -152,7 +152,14 @@ router.get('/*', (req, res) => {
 					if (config.magickFlows.urlSlugs.includes(thisUrlSlug) ) {
 						config.urlSlug = thisUrlSlug;
 						// siteSection hard-coded to be "flow", prolly gonna try and change it to be "magic-flow", but not sure...
+						console.group(`
+============================================================
+Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
+------------------------------------------------------------
+						`);
 						res.render('wrapper-for-magick-flows', { ...config, siteSection: 'magick-flows', sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util });
+						console.groupEnd();
+						
 					} else {
 						res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
 							if (req.url.match(/\.css$/)) {

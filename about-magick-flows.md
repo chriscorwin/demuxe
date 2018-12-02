@@ -4,8 +4,9 @@ Magick Flows build themselves.
 
 That's what makes them magickal.
 
-In the simplest possible case, one simply need place one or more media files into the proper directory, and, *poof*, nexts time you start the server a Magick Flow will exist at the same name of the folder you created.
+In the simplest possible case, one simply need place one or more media files into the proper directory, and, *poof*, next time you start the server a Magick Flow will exist at the same name of the folder you created.
 
+If you pop
 
 
 ## Naming conventions
