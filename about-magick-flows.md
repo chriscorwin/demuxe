@@ -6,19 +6,50 @@ That's what makes them magickal.
 
 In the simplest possible case, one simply need place one or more media files into the proper directory, and, *poof*, next time you start the server a Magick Flow will exist at the same name of the folder you created.
 
-If you pop
+## Quick start
+
+- Duplicate the `your-code-here/magick-flows/optical-illusions` directory, rename it to what you want.
+- Put files in the `../main` directory there. Name them whatever you want, they will be displayed one at a time, in order.
+- Put assets in the accompnaying `../assets` directory.
+- Edit the `../assets/styles.scss` file to inform the system how many slides you want, what size they are, and other CSS stuff.
+- Restart the server and go look at your new Magick Flow in the browser. You can find a handy link right to it in the terminal output of the server.
 
 
 ## Naming conventions
 
-A file 
+You can name your files alphanumerically order to control which order they are presented in.
 
-### Do not use negatives
+So, `0000.png` will come before `0015.png`.
 
-*Wrong:*
-`0.no-header.no-footer.svg`
 
-*Correct:*
-`0.has-header.has-footer.svg`
+Beyond that there are some conventions you can follow in order to take advantage of Magick Flows', uh, magickalness.
+
+### Header and footer example
+
+`0000___ID=google-search-results___DATA=has-sticky-header__has-sticky-footer.png`
+
+We break that file name down into three parts: _sorter_, _unique identifyer_, _meta data_.
+
+- The _order_ is `0000`.
+- The _unique identifyer_ is `google-search-results`.
+- The _meta data_ is: `has-sticky-header__has-sticky-footer`
+
+The Magick Flows system will use the _unique identifyer_ and _meta data_ to find and display header and footer assets for this image.
+
+It will find the header att `../assets/google-search-results___sticky-header.png`.
+
+
+### Side transition example
+
+`0500___ID=valora-home___DATA=use-slide-transition__slide-transition_app-switch.png`
+
+
+- The _order_ is `0500`.
+- The _unique identifyer_ is `valora-home`.
+- The _meta data_ is: `use-slide-transition__slide-transition_app-switch`
+
+Given that meta data, the system will do a nice little animation to go between that file and the one before it.
+
+The Demuxe Magick Flows roadmap has plans to implement more special meta data parsing along these lines.
 
 
