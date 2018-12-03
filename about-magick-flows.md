@@ -18,7 +18,7 @@ In the simplest possible case, one simply need place one or more media files int
 
 ## Naming conventions
 
-You can name your files alphanumerically order to control which order they are presented in.
+You can name your files alphanumerically so as to to control which order they are presented in.
 
 So, `0000.png` will come before `0015.png`.
 
