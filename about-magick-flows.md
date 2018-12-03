@@ -36,7 +36,7 @@ We break that file name down into three parts: _sorter_, _unique identifyer_, _m
 
 The Magick Flows system will use the _unique identifier_ and _meta data_ to find and display header and footer assets for this image.
 
-It will find the header att `../assets/google-search-results___sticky-header.png`.
+It will find the header at `../assets/google-search-results___sticky-header.png`.
 
 
 ### Side transition example
@@ -45,7 +45,7 @@ It will find the header att `../assets/google-search-results___sticky-header.png
 
 
 - The _order_ is `0500`.
-- The _unique identifyer_ is `valora-home`.
+- The _unique identifier_ is `valora-home`.
 - The _meta data_ is: `use-slide-transition__slide-transition_app-switch`
 
 Given that meta data, the system will do a nice little animation to go between that file and the one before it.
