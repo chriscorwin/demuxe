@@ -34,7 +34,7 @@ We break that file name down into three parts: _sorter_, _unique identifyer_, _m
 - The _unique identifyer_ is `google-search-results`.
 - The _meta data_ is: `has-sticky-header__has-sticky-footer`
 
-The Magick Flows system will use the _unique identifyer_ and _meta data_ to find and display header and footer assets for this image.
+The Magick Flows system will use the _unique identifier_ and _meta data_ to find and display header and footer assets for this image.
 
 It will find the header att `../assets/google-search-results___sticky-header.png`.
 
