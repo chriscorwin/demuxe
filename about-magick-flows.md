@@ -8,10 +8,11 @@ In the simplest possible case, one simply need place one or more media files int
 
 ## Quick start
 
-- Duplicate the `your-code-here/magick-flows/optical-illusions` directory, rename it to what you want.
-- Put files in the `../main` directory there. Name them whatever you want, they will be displayed one at a time, in order.
-- Put assets in the accompnaying `../assets` directory.
-- Edit the `../assets/styles.scss` file to inform the system how many slides you want, what size they are, and other CSS stuff.
+- Duplicate the `/your-code-here/magick-flows/optical-illusions` directory, rename it to what you want. In this example we shall use `doot`.
+- In your new `/your-code-here/magick-flows/doot` directory, you will find a directory named `main`: this is where your main content goes.
+- Name them whatever you want, they will be displayed one at a time, in alphanumeric order.
+- Assets accompnaying your new `doot` Magick Flow live in a sibling of `main`, called `assets`.
+- Edit the `/your-code-here/magick-flows/doot/assets/styles.scss` file. In it you shall find a variable telling the SASS system how many slides you have.
 - Restart the server and go look at your new Magick Flow in the browser. You can find a handy link right to it in the terminal output of the server.
 
 
@@ -20,7 +21,6 @@ In the simplest possible case, one simply need place one or more media files int
 You can name your files alphanumerically order to control which order they are presented in.
 
 So, `0000.png` will come before `0015.png`.
-
 
 Beyond that there are some conventions you can follow in order to take advantage of Magick Flows', uh, magickalness.
 
