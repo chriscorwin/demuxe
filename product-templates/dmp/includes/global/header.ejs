@@ -39,7 +39,7 @@
 
 
 			<% if (locals.subHeaderVariant === 'hasButton') { 
-				console.log('customizable button in sub-header please');
+				// console.log('customizable button in sub-header please');
 			%>
 				<div class="slds-col_bump-left slds-p-right_medium">
 					<button class="slds-button slds-button_neutral"><%=locals.subHeaderButtonLabel%></button>
@@ -56,7 +56,7 @@
 				
 		</div>
 		<% if (locals.subHeaderVariant === 'hasCustomSubheader')  {
-			console.log('customizable sub-header please');
+			// console.log('customizable sub-header please');
 		%>
 			<%- (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents) 
 					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents) 

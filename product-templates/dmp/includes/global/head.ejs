@@ -56,45 +56,6 @@ console.group(`
 ============================================================
 Demuxe: setting client-side javascript variables from Demuxe \`locals\`
 ------------------------------------------------------------
-/*
-	This here \`Object.keys\` loop looks strange, but is helful.
-
-	This exposes _some_ of the \`locals\` variable in the client side
-	scripts.
-
-	Magick Flows, in particular, take advantage of this capability.
-
-	The \`locals\` object in the EJS server memory can, under some
-	circumstances, contain a reference to itself, it seems.
-
-	Although scary and worrisome the first time one encounters it, it
-	actually is not a big deal, it's a thing JavaScript handles fairly
-	elegantly.
-
-	The problem comes when attempting to turn the object into a JSON string
-	-- \`JSON.siteSection\` does not know how to handle this circumstance
-	   without guidance.
-
-	It will throw an error about a circular reference. ¯\\_(ツ)_/¯
-
-
-	> See this Stack Exchange for more information:
-	> 
-	> https://stackoverflow.com/questions/10392293/stringify-convert-to-json-a-javascript-object-with-circular-reference
-
-	Anyhoooooo...  What we're doing _here_ is iterating through the keys of
-	the \`locals\` object and explicitly excluding some keys from that
-	object.
-
-	NOW: the tricky bit here is to remember that this is a mixture of server-
-	side and client-side code.
-
-	We are iterating through the server-side variable and writing out
-	statements in a \`<script>\` tag in the rendered HTML.
-
-	Don't mess it up!
-*/
-------------------------------------------------------------
 `);
 // server-side log output ---^
 %>
@@ -105,7 +66,45 @@ Demuxe: setting client-side javascript variables from Demuxe \`locals\`
 	const locals = {};
 <%
 	Object.keys(locals).forEach(function(key, fileIndex) {
-		console.group(` --> key: `, key);
+		/*
+			This here \`Object.keys\` loop looks strange, but is helful.
+
+			This exposes _some_ of the \`locals\` variable in the client side
+			scripts.
+
+			Magick Flows, in particular, take advantage of this capability.
+
+			The \`locals\` object in the EJS server memory can, under some
+			circumstances, contain a reference to itself, it seems.
+
+			Although scary and worrisome the first time one encounters it, it
+			actually is not a big deal, it's a thing JavaScript handles fairly
+			elegantly.
+
+			The problem comes when attempting to turn the object into a JSON string
+			-- \`JSON.siteSection\` does not know how to handle this circumstance
+			   without guidance.
+
+			It will throw an error about a circular reference. ¯\\_(ツ)_/¯
+
+
+			> See this Stack Exchange for more information:
+			> 
+			> https://stackoverflow.com/questions/10392293/stringify-convert-to-json-a-javascript-object-with-circular-reference
+
+			Anyhoooooo...  What we're doing _here_ is iterating through the keys of
+			the \`locals\` object and explicitly excluding some keys from that
+			object.
+
+			NOW: the tricky bit here is to remember that this is a mixture of server-
+			side and client-side code.
+
+			We are iterating through the server-side variable and writing out
+			statements in a \`<script>\` tag in the rendered HTML.
+
+			Don't mess it up!
+		*/
+		// console.group(` --> key: `, key);
 		if (key != '_locals' && key != 'path' && key != 'util' && key != 'classnames' && key != 'sizeOf') {
 			if(typeof locals[key] === 'object') {
 
@@ -122,10 +121,13 @@ Demuxe: setting client-side javascript variables from Demuxe \`locals\`
 				// client-side output above ---^
 			}
 		} else {
-			console.log('NOT GONNA SAVE: key: ', key);
+			// console.log('NOT GONNA SAVE: key: ', key);
 		}
-		console.groupEnd();
+		// console.groupEnd();
 	});
+
+
+	
 	console.groupEnd();
 	// server-side output above ---^
 	// 
