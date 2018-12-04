@@ -11,9 +11,11 @@ Demuxe: including \`product-templates/dmp/includes/global/head.ejs\` now...
 	} else {
 		console.warn(`
 ============================================================
-[WARNING]
+[WARNING] No title set!
+
 	${locals.local.host}${locals.urlSlug} does not have a title set.
-------------------------------------------------------------
+============================================================
+
 `);
 
 %>
@@ -36,9 +38,7 @@ Demuxe: including \`product-templates/dmp/includes/global/head.ejs\` now...
 <% 
 if (locals.pageStylesheets) { 
 	locals.pageStylesheets.forEach(function(stylesheet) { 
-%>
-		<link rel="stylesheet" href="/styles/<%=stylesheet%>">
-<% 
+		echo(`<link rel="stylesheet" href="/styles/${stylesheet}">`);
 	});
 } 
 %>
@@ -50,36 +50,90 @@ if (locals.pageStylesheets) {
 %>
 
 
-<script type="text/javascript">
-	const demoMagickFlowDirectoryName = '<%=locals.urlSlug%>';
-	console.log('[ product-templates/mobile/includes/global/head.ejs:57 ] locals.urlSlug', '<%-locals.urlSlug%>');
+<%
 
+console.group(`
+============================================================
+Demuxe: setting client-side javascript variables from Demuxe \`locals\`
+------------------------------------------------------------
+/*
+	This here \`Object.keys\` loop looks strange, but is helful.
+
+	This exposes _some_ of the \`locals\` variable in the client side
+	scripts.
+
+	Magick Flows, in particular, take advantage of this capability.
+
+	The \`locals\` object in the EJS server memory can, under some
+	circumstances, contain a reference to itself, it seems.
+
+	Although scary and worrisome the first time one encounters it, it
+	actually is not a big deal, it's a thing JavaScript handles fairly
+	elegantly.
+
+	The problem comes when attempting to turn the object into a JSON string
+	-- \`JSON.siteSection\` does not know how to handle this circumstance
+	   without guidance.
+
+	It will throw an error about a circular reference. ¯\\_(ツ)_/¯
+
+
+	> See this Stack Exchange for more information:
+	> 
+	> https://stackoverflow.com/questions/10392293/stringify-convert-to-json-a-javascript-object-with-circular-reference
+
+	Anyhoooooo...  What we're doing _here_ is iterating through the keys of
+	the \`locals\` object and explicitly excluding some keys from that
+	object.
+
+	NOW: the tricky bit here is to remember that this is a mixture of server-
+	side and client-side code.
+
+	We are iterating through the server-side variable and writing out
+	statements in a \`<script>\` tag in the rendered HTML.
+
+	Don't mess it up!
+*/
+------------------------------------------------------------
+`);
+// server-side log output ---^
+%>
+
+
+<script>
+	const demoMagickFlowDirectoryName = '<%=locals.urlSlug%>';
 	const locals = {};
 <%
-	// console.group(`[Setting global javascript variables from Demuxe locals]`);
 	Object.keys(locals).forEach(function(key, fileIndex) {
-		// console.group(` --> key: `, key);
+		console.group(` --> key: `, key);
 		if (key != '_locals' && key != 'path' && key != 'util' && key != 'classnames' && key != 'sizeOf') {
 			if(typeof locals[key] === 'object') {
-%>
-				locals['<%- key %>'] = <%- JSON.stringify(locals[key]) %>;
-<%
-			} else {
-%>
-				locals['<%- key %>']  = '<%- locals[key] %>';
-<%
-			}
-%>
-<%
-		} else {
-			// console.log('NOT GONNA SAVE: key: ', key);
-		}
-		// console.groupEnd();
-	});
-	// console.groupEnd();
 
+				// client-side output below ---v
+				// echo(`console.group('Setting variable from key \`${key}\`');`);
+				echo(`locals['${key}'] = ${JSON.stringify(locals[key])};`);
+				// echo(`console.groupEnd();`)
+				// client-side output above ---^
+			} else {
+				// client-side output below ---v
+				// echo(`console.group('Setting variable from key \`${key}\`');`);
+				echo(`locals['${key}'] = "${locals[key]}";`);
+				// echo(`console.groupEnd();`)
+				// client-side output above ---^
+			}
+		} else {
+			console.log('NOT GONNA SAVE: key: ', key);
+		}
+		console.groupEnd();
+	});
+	console.groupEnd();
+	// server-side output above ---^
+	// 
+	// back to client-side output now ---V
 %>
-	console.group('[ product-templates/dmp/includes/global/head.ejs:79 ] locals:');
+	console.group(`Demuxse: server-side \`locals\`:
+Set: /product-templates/dmp/includes/global/head.ejs:134
+`);
 	console.dir(locals);
 	console.groupEnd();
 	const url = new URL( window.location.href );
