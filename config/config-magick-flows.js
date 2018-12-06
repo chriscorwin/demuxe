@@ -8,51 +8,97 @@ const fs = require('fs');
 const util = require('util');
 const sizeOf = require('image-size');
 
+const noFileError = (error, thisMagickFlowName, thisMagickFlowMainContentFullPath) => {
+	if ( error.message.includes('ENOENT: no such file or directory')) {
+		console.error(`
+[ ERROR IN: \`config/config-magick-flows.js:69\`]
+
+Magick Flow URL Slug: \`${thisMagickFlowName}\`.
+
+The app is attempting to render a Magick Flow at:
+
+${thisMagickFlowMainContentFullPath}
+
+...and did not find anything there.
+
+THERE IS NO CONTENT FOR IT. 
+
+This is not required to make the app work, so, take this for what its worth,
+you seem to not be using the headers and footers feature.
+		`);
+	} else {
+		console.warn(error);
+	}
+}
+
+const noAssetsError = (error, thisMagickFlowName, thisMagickFlowAssetsContentFullPath) => {
+	if ( error.message.includes('ENOENT: no such file or directory')) {
+		console.warn(`
+[ THERE ARE NO ASSETS FOR \`${thisMagickFlowName}\`]
+The app is attempting to render a Magick Flow at:
+
+${thisMagickFlowAssetsContentFullPath}
+
+...and did not find anything there. This is not required to make the app
+work, so, take this for what its worth, you seem to not be using the headers
+and footers feature.
+			`);
+	} else {
+		console.warn(error);
+	}
+}
+
+// WARNING: This is not a true pure function. thisMagickFlowScreens is currently being mutated here. Fix it.
+const getURLSlug = (thisMagickFlowScreens, thisMagickFlowName, thisMagickFlowFullPath) => {
+	let thisMagickFlowUrlSlugPath;
+	let thisMagickFlowUrlSlug;
+
+	if (fs.existsSync(path.join(thisMagickFlowFullPath, '.url-slug'))) {
+		try {
+			thisMagickFlowScreens.shift(); // not sure why we are mutating the thisMagickFlowScreens array here...
+			thisMagickFlowUrlSlugPath = path.join(thisMagickFlowFullPath, '.url-slug');
+			thisMagickFlowUrlSlug = readFirstLine(thisMagickFlowUrlSlugPath);
+		} catch(error) {
+			console.error(error);
+		}
+	} else {
+		thisMagickFlowUrlSlug = thisMagickFlowName;
+	}
+
+	return thisMagickFlowUrlSlug;
+}
 
 const magickFlowsConfig = {
-
-
 	// Sorts an array alphanumerically, so that '10.svg' comes after '2.svg' in our lists of screens.
 	sortAlphaNum: (a, b) => a.localeCompare(b, 'en', { numeric: true }),
 
 	// Used in getting the url slug 
-	readFirstLine: function(pathToFile) {
-		let toReturn = '';
-		fs.readFileSync(pathToFile).toString().split("\n").forEach(function(line, index, arr) {
-		  if (index === arr.length - 1 && line === "") { return; }
-		  if (index === 0) {
-			toReturn = line;
-		  }
+	readFirstLine: (pathToFile) => {
+		let firstLine = '';
+		fs.readFileSync(pathToFile).toString().split('\n').forEach((line, index, arr) => {
+			if (index === arr.length - 1 && line === '') { return; }
+			if (index === 0) {
+				firstLine = line;
+			}
 		});
-		return toReturn;
+		return firstLine;
 	},
 
-
-
-
-
-	// Given, say, the root of our project, it creates the config data objects for the magick flows.
-	getMagickFlowDirectories: function (dir, directories_ = [], configData) {
+	// Creates config data objects for the magick flows based on provided directory.
+	getMagickFlowDirectories: (dir, directories_ = [], configData) => {
+		directories_ = directories_ || []; // protects against them passing `null`
 		
-		directories_ = directories_ || [];
-		let toReturn = {}
 		const filesAndDirectories = fs.readdirSync(dir);
 		for (const i in filesAndDirectories) {
-
 			const aFileOrDirectoryFullPath = path.join(dir, filesAndDirectories[i]);
 			const aFileOrDirectoryName = filesAndDirectories[i];
 
 			if (fs.statSync(aFileOrDirectoryFullPath).isDirectory()) {
-
 				if (aFileOrDirectoryName === configData.magickFlows.directoryName) {
-
 					const subFilesAndDirectories = fs.readdirSync(aFileOrDirectoryFullPath);
+					
 					for (const j in subFilesAndDirectories) {
-
-
 						if (fs.statSync(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j])).isDirectory()) {
-
-
 							const thisMagickFlowFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]);
 							const thisMagickFlowMainContentFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'main');
 							const thisMagickFlowAssetsContentFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'assets');
@@ -62,81 +108,21 @@ const magickFlowsConfig = {
 							let thisMagickFlowScreensMetaData = [];
 							try {
 								thisMagickFlowScreens = magickFlowsConfig.getFiles(thisMagickFlowMainContentFullPath).sort(magickFlowsConfig.sortAlphaNum);
+							} catch(error) {
+								noFileError(error, thisMagickFlowName, thisMagickFlowMainContentFullPath);
 							}
-							catch(error) {
-								if ( error.message.includes('ENOENT: no such file or directory')) {
-									console.error(`
-	[ ERROR IN: \`config/config-magick-flows.js:69\`]
-
-	Magick Flow URL Slug: \`${thisMagickFlowName}\`.
-
-	The app is attempting to render a Magick Flow at:
-
-	${thisMagickFlowMainContentFullPath}
-
-	...and did not find anything there.
-
-	THERE IS NO CONTENT FOR IT. 
-
-	This is not required to make the app work, so, take this for what its worth,
-	you seem to not be using the headers and footers feature.
-									`);
-								} else {
-									console.warn(error);
-									
-								}
-							}
-
 
 							let thisMagickFlowAssets = [];
-							let thisMagickFlowAssetsMetaData = [];
 							try {
 								thisMagickFlowAssets = magickFlowsConfig.getFiles(thisMagickFlowAssetsContentFullPath).sort(magickFlowsConfig.sortAlphaNum);
+							} catch(error) {
+								noAssetsError(error, thisMagickFlowName, thisMagickFlowAssetsContentFullPath);
 							}
-							catch(error) {
-								if ( error.message.includes('ENOENT: no such file or directory')) {
-									console.warn(`
-	[ THERE ARE NO ASSETS FOR \`${thisMagickFlowName}\`]
-	The app is attempting to render a Magick Flow at:
-
-	${thisMagickFlowAssetsContentFullPath}
-
-	...and did not find anything there. This is not required to make the app
-	work, so, take this for what its worth, you seem to not be using the headers
-	and footers feature.
-										`);
-								} else {
-									console.warn(error);
-									
-								}
-							}
-
-
-							let thisMagickFlowConfigData = {};
 
 							const thisMagickFlowNumberOfScreens = thisMagickFlowScreens.length;
+							const thisMagickFlowUrlSlug = getURLSlug(thisMagickFlowScreens, thisMagickFlowName, thisMagickFlowFullPath);
 
-							let thisMagickFlowUrlSlugPath;
-							let thisMagickFlowUrlSlug;
-
-							
-							// get it's url slug
-							if (fs.existsSync(path.join(thisMagickFlowFullPath, '.url-slug'))) {
-								try {
-									let firstElement = thisMagickFlowScreens.shift();
-									thisMagickFlowUrlSlugPath = path.join(thisMagickFlowFullPath, '.url-slug');
-									thisMagickFlowUrlSlug = readFirstLine(thisMagickFlowUrlSlugPath);
-								}
-								catch(error) {
-									console.error(error);
-								}
-								// Do something
-							} else {
-								thisMagickFlowUrlSlug = thisMagickFlowName;
-							}
-
-
-							// get it's url slug
+							let thisMagickFlowConfigData = {};
 							if (fs.existsSync(path.join(thisMagickFlowFullPath, '../', thisMagickFlowName + '.json'))) {
 								thisMagickFlowConfigData = require(path.join(thisMagickFlowFullPath, '../', thisMagickFlowName + '.json'));
 							}
@@ -145,14 +131,11 @@ const magickFlowsConfig = {
 							configData.magickFlows.urlSlugs.push(thisMagickFlowUrlSlug);
 							configData.magickFlows.urlSlugsMapToFlowDirectories[thisMagickFlowUrlSlug] = thisMagickFlowName;
 
+							const assetsMetaData = [];
 
-
-							// let thisMagickFlowScreensMetaData.pus;
-							thisMagickFlowScreens.forEach(function(fileName, fileIndex) {
-
+							thisMagickFlowScreens.forEach((fileName, fileIndex) => {
 								let thisMagickFlowScreenDataAttributes = {};
 								let fileNameSplit = fileName.split('___');
-								let thisNodeKeyValues;
 								let thisNodeIdValue;
 
 								let pathToFile = path.join(thisMagickFlowMainContentFullPath, fileName);
@@ -165,11 +148,6 @@ const magickFlowsConfig = {
 									thisMagickFlowScreenDataAttributes.dimensions = dimensions;
 								}
 
-								const isPng = fileName.endsWith('.png');
-								const isSvg = fileName.endsWith('.svg');
-								const isMp4 = fileName.endsWith('.mp4');
-								const isGif = fileName.endsWith('.gif');
-								const isJpeg = fileName.endsWith('.jpg');
 								const fileExtension = fileName.split('.')[fileName.split('.').length - 1];
 
 								thisMagickFlowScreenDataAttributes.fileExtension = fileExtension;
@@ -177,7 +155,7 @@ const magickFlowsConfig = {
 								thisMagickFlowScreenDataAttributes.screensIndex = fileIndex;
 
 
-								fileNameSplit.forEach(function(node, nodeIndex) {
+								fileNameSplit.forEach((node, nodeIndex) => {
 									// first one is the sorter, ignore it
 
 									// other nodes have a KEY= at the beginning, with arbitrary data provided
@@ -195,21 +173,15 @@ const magickFlowsConfig = {
 										if ( thisNodeKeyValues.includes('__') === true ) {
 											thisNodeKeyValuesSplit = thisNodeKeyValues.split('__');
 											// each of these is an attribute, but may need cleaned up
-											thisNodeKeyValuesSplit.forEach(function(nodeValue, idx) { 
+											thisNodeKeyValuesSplit.forEach((nodeValue, idx) => { 
 												thisNodeKeyValuesFinal.push(nodeValue.split('.')[0].toLowerCase());
-
-
-												if ( nodeValue.split('.').length > 1) {
-													// not sure what i was planning here.... hopefully will remember. ¯\_(ツ)_/¯
-												}
 											});
 											thisMagickFlowScreenDataAttributes[thisNodeKey.toLowerCase()] = thisNodeKeyValuesFinal;
+										
 										} else {
-											
 											if (thisNodeKey.toLowerCase() === 'data' && typeof thisNodeKeyValues.split('.')[0] === 'string') {
 												// make sure the stupid thing is in an array
 												thisMagickFlowScreenDataAttributes[thisNodeKey.toLowerCase()] = [thisNodeKeyValues.split('.')[0]];
-
 											} else {
 												thisMagickFlowScreenDataAttributes[thisNodeKey.toLowerCase()] = thisNodeKeyValues.split('.')[0];
 											}
@@ -219,24 +191,16 @@ const magickFlowsConfig = {
 									}
 								});
 
-								// thisMagickFlowScreenDataAttributes
-
 
 								if ( typeof thisMagickFlowScreenDataAttributes.data === 'undefined' ) {
 									// thisMagickFlowScreenDataAttributes['hasStickyHeader'] = false;
-									// thisMagickFlowScreenDataAttributes['hasStickyHeader'] = false;
 								} else {
-
-									
 									// look for headers and footers
 									if ( fileName.match('sticky-header') || fileName.match('sticky-footer') ) {
-										thisMagickFlowAssets.forEach(function(assetFileName, assetFileIndex) {
+										thisMagickFlowAssets.forEach((assetFileName, assetFileIndex) => {
 
 											if ( assetFileName.match(thisNodeIdValue) !== null ) {
-												
-
 												if ( assetFileName.match('sticky-header') !== null) {
-
 													let pathToAssetFile = path.join(thisMagickFlowAssetsContentFullPath, assetFileName);
 													let dataToTrack = [];
 													const dimensions = sizeOf(pathToAssetFile);
@@ -250,7 +214,7 @@ const magickFlowsConfig = {
 														"stickyHeaderFileName": assetFileName,
 														"stickyHeaderFilePath": pathToAssetFile,
 													};
-													thisMagickFlowAssetsMetaData.push(dataToTrack);
+													assetsMetaData.push(dataToTrack);
 													thisMagickFlowScreenDataAttributes['hasStickyHeader'] = true;
 													thisMagickFlowScreenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
 													thisMagickFlowScreenDataAttributes['stickyHeaderHeight'] = dimensions.height;
@@ -260,12 +224,9 @@ const magickFlowsConfig = {
 													thisMagickFlowScreenDataAttributes['stickyHeaderFileName'] = assetFileName;
 													thisMagickFlowScreenDataAttributes['stickyHeaderFileName'] = assetFileName;
 													thisMagickFlowScreenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
-												} else {
 												}
 
-
 												if ( assetFileName.match('sticky-footer') !== null) {
-
 													let pathToAssetFile = path.join(thisMagickFlowAssetsContentFullPath, assetFileName);
 													let dataToTrack = [];
 													const dimensions = sizeOf(pathToAssetFile);
@@ -279,7 +240,7 @@ const magickFlowsConfig = {
 														"stickyFooterFileName": assetFileName,
 														"stickyFooterFilePath": pathToAssetFile,
 													};
-													thisMagickFlowAssetsMetaData.push(dataToTrack);
+													assetsMetaData.push(dataToTrack);
 													thisMagickFlowScreenDataAttributes['hasStickyFooter'] = true;
 													thisMagickFlowScreenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
 													thisMagickFlowScreenDataAttributes['stickyFooterHeight'] = dimensions.height;
@@ -289,35 +250,21 @@ const magickFlowsConfig = {
 													thisMagickFlowScreenDataAttributes['stickyFooterFileName'] = assetFileName;
 													thisMagickFlowScreenDataAttributes['stickyFooterFileName'] = assetFileName;
 													thisMagickFlowScreenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
-												} else {
 												}
-
-
-											} else {
-												
 											}
-
 										});
-										
 									}
-
-
-
 								}
 
 								thisMagickFlowScreensMetaData.push(thisMagickFlowScreenDataAttributes);
-
-
 							});
-
-						 
 
 							configData.magickFlows[subFilesAndDirectories[j]] = {
 								"name": thisMagickFlowName,
 								"path": thisMagickFlowFullPath,
 								"screens": thisMagickFlowScreens,
 								"assets": thisMagickFlowAssets,
-								"assetsMetaData": thisMagickFlowAssetsMetaData,
+								assetsMetaData,
 								"numberOfScreens": thisMagickFlowNumberOfScreens,
 								"urlSlug": thisMagickFlowUrlSlug,
 								"metaData": thisMagickFlowConfigData,
@@ -325,14 +272,11 @@ const magickFlowsConfig = {
 							};
 
 							directories_.push(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]));
-
 						}
 					}
-
 				} else {
 					magickFlowsConfig.getMagickFlowDirectories(aFileOrDirectoryFullPath, directories_, configData);
 				}
-			} else {
 			}
 		}
 		return directories_;
@@ -340,7 +284,7 @@ const magickFlowsConfig = {
 
 
 	// This gets files -- used to get the lists of screens for each magick flow.
-	getFiles: function(dir, files_) {
+	getFiles: (dir, files_) => {
 		files_ = files_ || [];
 		const files = fs.readdirSync(dir);
 		for (const i in files) {
