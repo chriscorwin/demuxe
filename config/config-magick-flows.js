@@ -81,6 +81,73 @@ const getParamValuesFromFilename = (fileName) => {
 	return foundAttributes;
 }
 
+const getPermutations = (metaData, screenDataAttributes, fileName) => {
+	// exit conditions for speed
+	if ( typeof screenDataAttributes.data === 'undefined' ) return;
+	// no target states
+	const targetStates = 'sticky-header|sticky-footer';
+	if ( !fileName.match(targetStates) ) return;
+
+	metaData.assets.forEach((assetFileName, assetFileIndex) => {
+		// only grab assets for the screen we are on
+		if ( !assetFileName.match(screenDataAttributes.ID) ) return;
+
+		if ( assetFileName.match('sticky-header') !== null) {
+			let pathToAssetFile = path.join(fullAssetsPath, assetFileName);
+			let dataToTrack = [];
+			const dimensions = sizeOf(pathToAssetFile);
+			dataToTrack = {
+				"stickyHeaderPathToAssetFile": pathToAssetFile,
+				"stickyHeaderHeight": dimensions.height,
+				"stickyHeaderWidth": dimensions.width,
+				"stickyHeaderScreensIndex": fileIndex,
+				"stickyHeaderAssetFileIndex": assetFileIndex,
+				"stickyHeaderFileName": assetFileName,
+				"stickyHeaderFileName": assetFileName,
+				"stickyHeaderFilePath": pathToAssetFile,
+			};
+			metaData.assetsMetaData.push(dataToTrack);
+			screenDataAttributes['hasStickyHeader'] = true;
+			screenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
+			screenDataAttributes['stickyHeaderHeight'] = dimensions.height;
+			screenDataAttributes['stickyHeaderWidth'] = dimensions.width;
+			screenDataAttributes['stickyHeaderScreensIndex'] = fileIndex;
+			screenDataAttributes['stickyHeaderAssetFileIndex'] = assetFileIndex;
+			screenDataAttributes['stickyHeaderFileName'] = assetFileName;
+			screenDataAttributes['stickyHeaderFileName'] = assetFileName;
+			screenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
+		}
+
+		if ( assetFileName.match('sticky-footer') !== null) {
+			let pathToAssetFile = path.join(fullAssetsPath, assetFileName);
+			let dataToTrack = [];
+			const dimensions = sizeOf(pathToAssetFile);
+			dataToTrack = {
+				"stickyFooterPathToAssetFile": pathToAssetFile,
+				"stickyFooterHeight": dimensions.height,
+				"stickyFooterWidth": dimensions.width,
+				"stickyFooterScreensIndex": fileIndex,
+				"stickyFooterAssetFileIndex": assetFileIndex,
+				"stickyFooterFileName": assetFileName,
+				"stickyFooterFileName": assetFileName,
+				"stickyFooterFilePath": pathToAssetFile,
+			};
+			metaData.assetsMetaData.push(dataToTrack);
+			screenDataAttributes['hasStickyFooter'] = true;
+			screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
+			screenDataAttributes['stickyFooterHeight'] = dimensions.height;
+			screenDataAttributes['stickyFooterWidth'] = dimensions.width;
+			screenDataAttributes['stickyFooterScreensIndex'] = fileIndex;
+			screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
+			screenDataAttributes['stickyFooterFileName'] = assetFileName;
+			screenDataAttributes['stickyFooterFileName'] = assetFileName;
+			screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
+		}
+	});
+
+	return { metaData, screenDataAttributes };
+}
+
 const magickFlowsConfig = {
 	// Sorts an array alphanumerically, so that '10.svg' comes after '2.svg' in our lists of screens.
 	sortAlphaNum: (a, b) => a.localeCompare(b, 'en', { numeric: true }),
@@ -149,90 +216,21 @@ const magickFlowsConfig = {
 
 
 							metaData.screens.forEach((fileName, fileIndex) => {
-								let pathToFile = path.join(fullContentPath, fileName);
-								
-								let screenDataAttributes = {};
+								const screenDataAttributes = getParamValuesFromFilename(fileName);
+								screenDataAttributes.fileName = fileName;
+								screenDataAttributes.screensIndex = fileIndex;
+
 								if ( fileName.endsWith('.ejs') === true ) {
 									screenDataAttributes.dimensions = {type: 'ejs'};
 								} else {
+									const pathToFile = path.join(fullContentPath, fileName);
 									screenDataAttributes.dimensions = sizeOf(pathToFile);
 								}
 
 								const fileExtension = fileName.split('.')[fileName.split('.').length - 1];
-
 								screenDataAttributes.fileExtension = fileExtension;
-								screenDataAttributes.fileName = fileName;
-								screenDataAttributes.screensIndex = fileIndex;
 
-								// Things I need to get here:
-								// nodeIdValue
-								// screenDataAttributes[thisNodeKey.toLowerCase()]
-								// screenDataAttributes['sorter']
-
-								const foundAttributes = getParamValuesFromFilename(fileName);
-								screenDataAttributes = { ...screenDataAttributes, ...foundAttributes };
-
-								if ( typeof screenDataAttributes.data !== 'undefined' ) {
-									// look for headers and footers
-									if ( fileName.match('sticky-header') || fileName.match('sticky-footer') ) {
-										metaData.assets.forEach((assetFileName, assetFileIndex) => {
-
-											if ( assetFileName.match(screenDataAttributes.ID) !== null ) {
-												if ( assetFileName.match('sticky-header') !== null) {
-													let pathToAssetFile = path.join(fullAssetsPath, assetFileName);
-													let dataToTrack = [];
-													const dimensions = sizeOf(pathToAssetFile);
-													dataToTrack = {
-														"stickyHeaderPathToAssetFile": pathToAssetFile,
-														"stickyHeaderHeight": dimensions.height,
-														"stickyHeaderWidth": dimensions.width,
-														"stickyHeaderScreensIndex": fileIndex,
-														"stickyHeaderAssetFileIndex": assetFileIndex,
-														"stickyHeaderFileName": assetFileName,
-														"stickyHeaderFileName": assetFileName,
-														"stickyHeaderFilePath": pathToAssetFile,
-													};
-													metaData.assetsMetaData.push(dataToTrack);
-													screenDataAttributes['hasStickyHeader'] = true;
-													screenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
-													screenDataAttributes['stickyHeaderHeight'] = dimensions.height;
-													screenDataAttributes['stickyHeaderWidth'] = dimensions.width;
-													screenDataAttributes['stickyHeaderScreensIndex'] = fileIndex;
-													screenDataAttributes['stickyHeaderAssetFileIndex'] = assetFileIndex;
-													screenDataAttributes['stickyHeaderFileName'] = assetFileName;
-													screenDataAttributes['stickyHeaderFileName'] = assetFileName;
-													screenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
-												}
-
-												if ( assetFileName.match('sticky-footer') !== null) {
-													let pathToAssetFile = path.join(fullAssetsPath, assetFileName);
-													let dataToTrack = [];
-													const dimensions = sizeOf(pathToAssetFile);
-													dataToTrack = {
-														"stickyFooterPathToAssetFile": pathToAssetFile,
-														"stickyFooterHeight": dimensions.height,
-														"stickyFooterWidth": dimensions.width,
-														"stickyFooterScreensIndex": fileIndex,
-														"stickyFooterAssetFileIndex": assetFileIndex,
-														"stickyFooterFileName": assetFileName,
-														"stickyFooterFileName": assetFileName,
-														"stickyFooterFilePath": pathToAssetFile,
-													};
-													metaData.assetsMetaData.push(dataToTrack);
-													screenDataAttributes['hasStickyFooter'] = true;
-													screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
-													screenDataAttributes['stickyFooterHeight'] = dimensions.height;
-													screenDataAttributes['stickyFooterWidth'] = dimensions.width;
-													screenDataAttributes['stickyFooterScreensIndex'] = fileIndex;
-													screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
-													screenDataAttributes['stickyFooterFileName'] = assetFileName;
-													screenDataAttributes['stickyFooterFileName'] = assetFileName;
-													screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
-												}
-											}
-										});
-									}
-								}
+								const { metaData, screenDataAttributes } = getPermutations(metaData, screenDataAttributes, fileName);
 
 								metaData.metaData2.push(screenDataAttributes);
 							});
