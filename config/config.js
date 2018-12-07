@@ -56,11 +56,13 @@ module.exports = function() {
 
 
     const startingPath = path.join(__dirname, '..');
-    const magickFlowDirectories = configMagickFlows.getMagickFlowDirectories(startingPath, [], configData).sort(configMagickFlows.sortAlphaNum);
+    const { magickFlowDirectories, magickFlowsConfigData } = configMagickFlows.getMagickFlowsConfig(startingPath, [], configData);
+    // Add the magickFlowsConfigData to the other configData
+    configData.magickFlows = magickFlowsConfigData;
 
     //  @todo stop hard-coding this port
     let magickFlowDirectoriesFormattedForConsoleStartupLog = ``;
-    magickFlowDirectories.forEach(function(aDirectoryPath){
+    magickFlowDirectories.sort(configMagickFlows.sortAlphaNum).forEach(function(aDirectoryPath){
       magickFlowDirectoriesFormattedForConsoleStartupLog += `
       http://localhost:3000/${aDirectoryPath.split('/')[aDirectoryPath.split('/').length - 1]}`;
     });
