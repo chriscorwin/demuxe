@@ -48,6 +48,23 @@ and footers feature.
 	}
 }
 
+// This gets files -- used to get the lists of screens for each magick flow.
+const getFiles = (dir, files_) => {
+	files_ = files_ || [];
+	const files = fs.readdirSync(dir);
+	for (const file in files) {
+		const fullPath = dir + '/' + files[file];
+		const name = files[file];
+		if (fs.statSync(fullPath).isDirectory()) {
+			// If we end up allowing "packages" as a Magick Flow step, here is where the code needs to be aware of it.
+			getFiles(fullPath, files_);
+		} else {
+			files_.push(name);
+		}
+	}
+	return files_;
+}
+
 const getParamValuesFromFilename = (fileName) => {
 	const foundAttributes = [];
 	const splitFileName = fileName.split('___');
@@ -81,18 +98,20 @@ const getParamValuesFromFilename = (fileName) => {
 	return foundAttributes;
 }
 
-const getPermutations = (metaData, screenDataAttributes, fileName) => {
-	// exit conditions for speed
-	if ( typeof screenDataAttributes.data === 'undefined' ) return;
-	// no target states
+const getPermutations = (assetFiles, screenId, fileName, fileIndex, fullAssetsPath) => {
+	const foundData = {
+		assetsMetaData: [],
+		screenDataAttributes: {}
+	};
+
 	const targetStates = 'sticky-header|sticky-footer';
-	if ( !fileName.match(targetStates) ) return;
+	if ( !fileName.match(targetStates) ) return foundData;
 
-	metaData.assets.forEach((assetFileName, assetFileIndex) => {
-		// only grab assets for the screen we are on
-		if ( !assetFileName.match(screenDataAttributes.ID) ) return;
+	assetFiles.forEach((assetFileName, assetFileIndex) => {
+		// only grab assetFiles for the screen we are on
+		if ( !assetFileName.match(screenId) ) return foundData;
 
-		if ( assetFileName.match('sticky-header') !== null) {
+		if ( assetFileName.match('sticky-header') ) {
 			let pathToAssetFile = path.join(fullAssetsPath, assetFileName);
 			let dataToTrack = [];
 			const dimensions = sizeOf(pathToAssetFile);
@@ -106,19 +125,19 @@ const getPermutations = (metaData, screenDataAttributes, fileName) => {
 				"stickyHeaderFileName": assetFileName,
 				"stickyHeaderFilePath": pathToAssetFile,
 			};
-			metaData.assetsMetaData.push(dataToTrack);
-			screenDataAttributes['hasStickyHeader'] = true;
-			screenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
-			screenDataAttributes['stickyHeaderHeight'] = dimensions.height;
-			screenDataAttributes['stickyHeaderWidth'] = dimensions.width;
-			screenDataAttributes['stickyHeaderScreensIndex'] = fileIndex;
-			screenDataAttributes['stickyHeaderAssetFileIndex'] = assetFileIndex;
-			screenDataAttributes['stickyHeaderFileName'] = assetFileName;
-			screenDataAttributes['stickyHeaderFileName'] = assetFileName;
-			screenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
+			foundData.assetsMetaData.push(dataToTrack);
+			foundData.screenDataAttributes['hasStickyHeader'] = true;
+			foundData.screenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
+			foundData.screenDataAttributes['stickyHeaderHeight'] = dimensions.height;
+			foundData.screenDataAttributes['stickyHeaderWidth'] = dimensions.width;
+			foundData.screenDataAttributes['stickyHeaderScreensIndex'] = fileIndex;
+			foundData.screenDataAttributes['stickyHeaderAssetFileIndex'] = assetFileIndex;
+			foundData.screenDataAttributes['stickyHeaderFileName'] = assetFileName;
+			foundData.screenDataAttributes['stickyHeaderFileName'] = assetFileName;
+			foundData.screenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
 		}
 
-		if ( assetFileName.match('sticky-footer') !== null) {
+		if ( assetFileName.match('sticky-footer') ) {
 			let pathToAssetFile = path.join(fullAssetsPath, assetFileName);
 			let dataToTrack = [];
 			const dimensions = sizeOf(pathToAssetFile);
@@ -132,20 +151,20 @@ const getPermutations = (metaData, screenDataAttributes, fileName) => {
 				"stickyFooterFileName": assetFileName,
 				"stickyFooterFilePath": pathToAssetFile,
 			};
-			metaData.assetsMetaData.push(dataToTrack);
-			screenDataAttributes['hasStickyFooter'] = true;
-			screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
-			screenDataAttributes['stickyFooterHeight'] = dimensions.height;
-			screenDataAttributes['stickyFooterWidth'] = dimensions.width;
-			screenDataAttributes['stickyFooterScreensIndex'] = fileIndex;
-			screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
-			screenDataAttributes['stickyFooterFileName'] = assetFileName;
-			screenDataAttributes['stickyFooterFileName'] = assetFileName;
-			screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
+			foundData.assetsMetaData.push(dataToTrack);
+			foundData.screenDataAttributes['hasStickyFooter'] = true;
+			foundData.screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
+			foundData.screenDataAttributes['stickyFooterHeight'] = dimensions.height;
+			foundData.screenDataAttributes['stickyFooterWidth'] = dimensions.width;
+			foundData.screenDataAttributes['stickyFooterScreensIndex'] = fileIndex;
+			foundData.screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
+			foundData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
+			foundData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
+			foundData.screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
 		}
 	});
 
-	return { metaData, screenDataAttributes };
+	return foundData;
 }
 
 const magickFlowsConfig = {
@@ -169,39 +188,39 @@ const magickFlowsConfig = {
 		directories_ = directories_ || []; // protects against them passing `null`
 		
 		const filesAndDirectories = fs.readdirSync(dir);
-		for (const i in filesAndDirectories) {
-			const aFileOrDirectoryFullPath = path.join(dir, filesAndDirectories[i]);
-			const aFileOrDirectoryName = filesAndDirectories[i];
+		// SOMETHING BROKE HERE ILLUSIONS DEMO DOESN'T WORK ANYMORE
+		// Maybe canging this from for in -> forEach did it?
+		filesAndDirectories.forEach(fileOrDirectoryName => {
+			const fileOrDirectoryFullPath = path.join(dir, fileOrDirectoryName);
 
-			if (fs.statSync(aFileOrDirectoryFullPath).isDirectory()) {
-				if (aFileOrDirectoryName === configData.magickFlows.directoryName) {
-					const subFilesAndDirectories = fs.readdirSync(aFileOrDirectoryFullPath);
+			if (fs.statSync(fileOrDirectoryFullPath).isDirectory()) {
+				if (fileOrDirectoryName === configData.magickFlows.directoryName) {
+					const subFilesAndDirectories = fs.readdirSync(fileOrDirectoryFullPath);
 					
 					for (const j in subFilesAndDirectories) {
-						if (fs.statSync(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j])).isDirectory()) {
-							const fullContentPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'main');
-							const fullAssetsPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'assets');
+						if (fs.statSync(path.join(fileOrDirectoryFullPath, subFilesAndDirectories[j])).isDirectory()) {
+							const fullContentPath = path.join(fileOrDirectoryFullPath, subFilesAndDirectories[j], 'main');
+							const fullAssetsPath = path.join(fileOrDirectoryFullPath, subFilesAndDirectories[j], 'assets');
 
 							const metaData = {
 								assets: [],
-								assetsMetaData: [],
 								metaData: {},
 								metaData2: [],
 								name: subFilesAndDirectories[j],
-								path: path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]),
+								path: path.join(fileOrDirectoryFullPath, subFilesAndDirectories[j]),
 								urlSlug: subFilesAndDirectories[j],
 								screens: []
 							};
 
 							try {
-								metaData.screens = magickFlowsConfig.getFiles(fullContentPath).sort(magickFlowsConfig.sortAlphaNum);
+								metaData.screens = getFiles(fullContentPath).sort(magickFlowsConfig.sortAlphaNum);
 								metaData.numberOfScreens = metaData.screens.length;
 							} catch(error) {
 								noFileError(error, metaData.name, fullContentPath);
 							}
 
 							try {
-								metaData.assets = magickFlowsConfig.getFiles(fullAssetsPath).sort(magickFlowsConfig.sortAlphaNum);
+								metaData.assets = getFiles(fullAssetsPath).sort(magickFlowsConfig.sortAlphaNum);
 							} catch(error) {
 								noAssetsError(error, metaData.name, fullAssetsPath);
 							}
@@ -230,43 +249,28 @@ const magickFlowsConfig = {
 								const fileExtension = fileName.split('.')[fileName.split('.').length - 1];
 								screenDataAttributes.fileExtension = fileExtension;
 
-								const { metaData, screenDataAttributes } = getPermutations(metaData, screenDataAttributes, fileName);
-
+								if ( typeof screenDataAttributes.data !== 'undefined' ) {
+									const foundData = getPermutations(metaData.assets, screenDataAttributes.ID, fileName, fileIndex, fullAssetsPath);
+									metaData.assetsMetaData = foundData.assetsMetaData;
+									Object.assign(screenDataAttributes, foundData.screenDataAttributes);
+								}
+	
 								metaData.metaData2.push(screenDataAttributes);
 							});
 
 							configData.magickFlows[subFilesAndDirectories[j]] = metaData;
 
-							directories_.push(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]));
+							directories_.push(path.join(fileOrDirectoryFullPath, subFilesAndDirectories[j]));
 						}
 					}
 				} else {
-					magickFlowsConfig.getMagickFlowDirectories(aFileOrDirectoryFullPath, directories_, configData);
+					magickFlowsConfig.getMagickFlowDirectories(fileOrDirectoryFullPath, directories_, configData);
 				}
 			}
-		}
+		});
+
 		return directories_;
-	},
-
-
-	// This gets files -- used to get the lists of screens for each magick flow.
-	getFiles: (dir, files_) => {
-		files_ = files_ || [];
-		const files = fs.readdirSync(dir);
-		for (const i in files) {
-			const fullPath = dir + '/' + files[i];
-			const name = files[i];
-			if (fs.statSync(fullPath).isDirectory()) {
-				// If we end up allowing "packages" as a Magick Flow step, here is where the code needs to be aware of it.
-				magickFlowsConfig.getFiles(fullPath, files_);
-			} else {
-				files_.push(name);
-			}
-		}
-		return files_;
 	}
-
-
 }
 
 module.exports = magickFlowsConfig;
