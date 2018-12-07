@@ -8,16 +8,16 @@ const fs = require('fs');
 const util = require('util');
 const sizeOf = require('image-size');
 
-const noFileError = (error, thisMagickFlowName, thisMagickFlowMainContentFullPath) => {
+const noFileError = (error, name, fullContentPath) => {
 	if ( error.message.includes('ENOENT: no such file or directory')) {
 		console.error(`
 [ ERROR IN: \`config/config-magick-flows.js:69\`]
 
-Magick Flow URL Slug: \`${thisMagickFlowName}\`.
+Magick Flow URL Slug: \`${name}\`.
 
 The app is attempting to render a Magick Flow at:
 
-${thisMagickFlowMainContentFullPath}
+${fullContentPath}
 
 ...and did not find anything there.
 
@@ -31,13 +31,13 @@ you seem to not be using the headers and footers feature.
 	}
 }
 
-const noAssetsError = (error, thisMagickFlowName, thisMagickFlowAssetsContentFullPath) => {
+const noAssetsError = (error, name, fullAssetsPath) => {
 	if ( error.message.includes('ENOENT: no such file or directory')) {
 		console.warn(`
-[ THERE ARE NO ASSETS FOR \`${thisMagickFlowName}\`]
+[ THERE ARE NO ASSETS FOR \`${name}\`]
 The app is attempting to render a Magick Flow at:
 
-${thisMagickFlowAssetsContentFullPath}
+${fullAssetsPath}
 
 ...and did not find anything there. This is not required to make the app
 work, so, take this for what its worth, you seem to not be using the headers
@@ -48,24 +48,37 @@ and footers feature.
 	}
 }
 
-// WARNING: This is not a true pure function. thisMagickFlowScreens is currently being mutated here. Fix it.
-const getURLSlug = (thisMagickFlowScreens, thisMagickFlowName, thisMagickFlowFullPath) => {
-	let thisMagickFlowUrlSlugPath;
-	let thisMagickFlowUrlSlug;
+const getParamValuesFromFilename = (fileName) => {
+	const foundAttributes = [];
+	const splitFileName = fileName.split('___');
 
-	if (fs.existsSync(path.join(thisMagickFlowFullPath, '.url-slug'))) {
-		try {
-			thisMagickFlowScreens.shift(); // not sure why we are mutating the thisMagickFlowScreens array here...
-			thisMagickFlowUrlSlugPath = path.join(thisMagickFlowFullPath, '.url-slug');
-			thisMagickFlowUrlSlug = readFirstLine(thisMagickFlowUrlSlugPath);
-		} catch(error) {
-			console.error(error);
+	splitFileName.forEach((node) => {
+		// other nodes have a KEY= at the beginning, with arbitrary data provided
+		if ( node.includes('=') === true ) {
+			// we have some data, split on the equals sign to get keys and values
+			const [ rawKey, valueWithExt ] = node.split('=');
+			const value = valueWithExt.split('.')[0];
+			const key = rawKey.toLowerCase();
+
+			let valueFinal = [];
+			let valueSplit = [];
+			if ( value.includes('__') === true ) {
+				foundAttributes[key] = value.split('__').map(val => val.toLowerCase());
+			} else {
+				if (key === 'data' && typeof value === 'string') {
+					// make sure the stupid thing is in an array
+					foundAttributes[key] = [value];
+				} else {
+					foundAttributes[key] = value;
+				}
+			}
+		} else {
+			// first one is the sorter, store it as such
+			foundAttributes['sorter'] = node;
 		}
-	} else {
-		thisMagickFlowUrlSlug = thisMagickFlowName;
-	}
+	});
 
-	return thisMagickFlowUrlSlug;
+	return foundAttributes;
 }
 
 const magickFlowsConfig = {
@@ -99,109 +112,74 @@ const magickFlowsConfig = {
 					
 					for (const j in subFilesAndDirectories) {
 						if (fs.statSync(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j])).isDirectory()) {
-							const thisMagickFlowFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]);
-							const thisMagickFlowMainContentFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'main');
-							const thisMagickFlowAssetsContentFullPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'assets');
-							const thisMagickFlowName = subFilesAndDirectories[j];
+							const fullContentPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'main');
+							const fullAssetsPath = path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j], 'assets');
 
-							let thisMagickFlowScreens = [];
-							let thisMagickFlowScreensMetaData = [];
+							const metaData = {
+								assets: [],
+								assetsMetaData: [],
+								metaData: {},
+								metaData2: [],
+								name: subFilesAndDirectories[j],
+								path: path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]),
+								urlSlug: subFilesAndDirectories[j],
+								screens: []
+							};
+
 							try {
-								thisMagickFlowScreens = magickFlowsConfig.getFiles(thisMagickFlowMainContentFullPath).sort(magickFlowsConfig.sortAlphaNum);
+								metaData.screens = magickFlowsConfig.getFiles(fullContentPath).sort(magickFlowsConfig.sortAlphaNum);
+								metaData.numberOfScreens = metaData.screens.length;
 							} catch(error) {
-								noFileError(error, thisMagickFlowName, thisMagickFlowMainContentFullPath);
+								noFileError(error, metaData.name, fullContentPath);
 							}
 
-							let thisMagickFlowAssets = [];
 							try {
-								thisMagickFlowAssets = magickFlowsConfig.getFiles(thisMagickFlowAssetsContentFullPath).sort(magickFlowsConfig.sortAlphaNum);
+								metaData.assets = magickFlowsConfig.getFiles(fullAssetsPath).sort(magickFlowsConfig.sortAlphaNum);
 							} catch(error) {
-								noAssetsError(error, thisMagickFlowName, thisMagickFlowAssetsContentFullPath);
-							}
-
-							const thisMagickFlowNumberOfScreens = thisMagickFlowScreens.length;
-							const thisMagickFlowUrlSlug = getURLSlug(thisMagickFlowScreens, thisMagickFlowName, thisMagickFlowFullPath);
-
-							let thisMagickFlowConfigData = {};
-							if (fs.existsSync(path.join(thisMagickFlowFullPath, '../', thisMagickFlowName + '.json'))) {
-								thisMagickFlowConfigData = require(path.join(thisMagickFlowFullPath, '../', thisMagickFlowName + '.json'));
+								noAssetsError(error, metaData.name, fullAssetsPath);
 							}
 
 
-							configData.magickFlows.urlSlugs.push(thisMagickFlowUrlSlug);
-							configData.magickFlows.urlSlugsMapToFlowDirectories[thisMagickFlowUrlSlug] = thisMagickFlowName;
+							if (fs.existsSync(path.join(metaData.path, '../', metaData.name + '.json'))) {
+								metaData.metaData = require(path.join(metaData.path, '../', metaData.name + '.json'));
+							}
 
-							const assetsMetaData = [];
+							configData.magickFlows.urlSlugs.push(metaData.urlSlug);
+							configData.magickFlows.urlSlugsMapToFlowDirectories[metaData.urlSlug] = metaData.name;
 
-							thisMagickFlowScreens.forEach((fileName, fileIndex) => {
-								let thisMagickFlowScreenDataAttributes = {};
-								let fileNameSplit = fileName.split('___');
-								let thisNodeIdValue;
 
-								let pathToFile = path.join(thisMagickFlowMainContentFullPath, fileName);
+							metaData.screens.forEach((fileName, fileIndex) => {
+								let pathToFile = path.join(fullContentPath, fileName);
 								
-								const isEjs = fileName.endsWith('.ejs');
-								if ( isEjs === true ) {
-									thisMagickFlowScreenDataAttributes.dimensions = {type: 'ejs'};
+								let screenDataAttributes = {};
+								if ( fileName.endsWith('.ejs') === true ) {
+									screenDataAttributes.dimensions = {type: 'ejs'};
 								} else {
-									const dimensions = sizeOf(pathToFile);
-									thisMagickFlowScreenDataAttributes.dimensions = dimensions;
+									screenDataAttributes.dimensions = sizeOf(pathToFile);
 								}
 
 								const fileExtension = fileName.split('.')[fileName.split('.').length - 1];
 
-								thisMagickFlowScreenDataAttributes.fileExtension = fileExtension;
-								thisMagickFlowScreenDataAttributes.fileName = fileName;
-								thisMagickFlowScreenDataAttributes.screensIndex = fileIndex;
+								screenDataAttributes.fileExtension = fileExtension;
+								screenDataAttributes.fileName = fileName;
+								screenDataAttributes.screensIndex = fileIndex;
 
+								// Things I need to get here:
+								// nodeIdValue
+								// screenDataAttributes[thisNodeKey.toLowerCase()]
+								// screenDataAttributes['sorter']
 
-								fileNameSplit.forEach((node, nodeIndex) => {
-									// first one is the sorter, ignore it
+								const foundAttributes = getParamValuesFromFilename(fileName);
+								screenDataAttributes = { ...screenDataAttributes, ...foundAttributes };
 
-									// other nodes have a KEY= at the beginning, with arbitrary data provided
-									if ( node.includes('=') === true ) {
-										// we have some data, split on the equals sign to get keys and values
-										const thisNodeKey = node.split('=')[0];
-										let thisNodeKeyValues = node.split('=')[1];
-
-										if (thisNodeKey === 'ID') {
-											thisNodeIdValue = thisNodeKeyValues.split('.')[0];
-										}
-
-										let thisNodeKeyValuesFinal = [];
-										let thisNodeKeyValuesSplit = [];
-										if ( thisNodeKeyValues.includes('__') === true ) {
-											thisNodeKeyValuesSplit = thisNodeKeyValues.split('__');
-											// each of these is an attribute, but may need cleaned up
-											thisNodeKeyValuesSplit.forEach((nodeValue, idx) => { 
-												thisNodeKeyValuesFinal.push(nodeValue.split('.')[0].toLowerCase());
-											});
-											thisMagickFlowScreenDataAttributes[thisNodeKey.toLowerCase()] = thisNodeKeyValuesFinal;
-										
-										} else {
-											if (thisNodeKey.toLowerCase() === 'data' && typeof thisNodeKeyValues.split('.')[0] === 'string') {
-												// make sure the stupid thing is in an array
-												thisMagickFlowScreenDataAttributes[thisNodeKey.toLowerCase()] = [thisNodeKeyValues.split('.')[0]];
-											} else {
-												thisMagickFlowScreenDataAttributes[thisNodeKey.toLowerCase()] = thisNodeKeyValues.split('.')[0];
-											}
-										}
-									} else {
-										thisMagickFlowScreenDataAttributes['sorter'] = node;
-									}
-								});
-
-
-								if ( typeof thisMagickFlowScreenDataAttributes.data === 'undefined' ) {
-									// thisMagickFlowScreenDataAttributes['hasStickyHeader'] = false;
-								} else {
+								if ( typeof screenDataAttributes.data !== 'undefined' ) {
 									// look for headers and footers
 									if ( fileName.match('sticky-header') || fileName.match('sticky-footer') ) {
-										thisMagickFlowAssets.forEach((assetFileName, assetFileIndex) => {
+										metaData.assets.forEach((assetFileName, assetFileIndex) => {
 
-											if ( assetFileName.match(thisNodeIdValue) !== null ) {
+											if ( assetFileName.match(screenDataAttributes.ID) !== null ) {
 												if ( assetFileName.match('sticky-header') !== null) {
-													let pathToAssetFile = path.join(thisMagickFlowAssetsContentFullPath, assetFileName);
+													let pathToAssetFile = path.join(fullAssetsPath, assetFileName);
 													let dataToTrack = [];
 													const dimensions = sizeOf(pathToAssetFile);
 													dataToTrack = {
@@ -214,20 +192,20 @@ const magickFlowsConfig = {
 														"stickyHeaderFileName": assetFileName,
 														"stickyHeaderFilePath": pathToAssetFile,
 													};
-													assetsMetaData.push(dataToTrack);
-													thisMagickFlowScreenDataAttributes['hasStickyHeader'] = true;
-													thisMagickFlowScreenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
-													thisMagickFlowScreenDataAttributes['stickyHeaderHeight'] = dimensions.height;
-													thisMagickFlowScreenDataAttributes['stickyHeaderWidth'] = dimensions.width;
-													thisMagickFlowScreenDataAttributes['stickyHeaderScreensIndex'] = fileIndex;
-													thisMagickFlowScreenDataAttributes['stickyHeaderAssetFileIndex'] = assetFileIndex;
-													thisMagickFlowScreenDataAttributes['stickyHeaderFileName'] = assetFileName;
-													thisMagickFlowScreenDataAttributes['stickyHeaderFileName'] = assetFileName;
-													thisMagickFlowScreenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
+													metaData.assetsMetaData.push(dataToTrack);
+													screenDataAttributes['hasStickyHeader'] = true;
+													screenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
+													screenDataAttributes['stickyHeaderHeight'] = dimensions.height;
+													screenDataAttributes['stickyHeaderWidth'] = dimensions.width;
+													screenDataAttributes['stickyHeaderScreensIndex'] = fileIndex;
+													screenDataAttributes['stickyHeaderAssetFileIndex'] = assetFileIndex;
+													screenDataAttributes['stickyHeaderFileName'] = assetFileName;
+													screenDataAttributes['stickyHeaderFileName'] = assetFileName;
+													screenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
 												}
 
 												if ( assetFileName.match('sticky-footer') !== null) {
-													let pathToAssetFile = path.join(thisMagickFlowAssetsContentFullPath, assetFileName);
+													let pathToAssetFile = path.join(fullAssetsPath, assetFileName);
 													let dataToTrack = [];
 													const dimensions = sizeOf(pathToAssetFile);
 													dataToTrack = {
@@ -240,36 +218,26 @@ const magickFlowsConfig = {
 														"stickyFooterFileName": assetFileName,
 														"stickyFooterFilePath": pathToAssetFile,
 													};
-													assetsMetaData.push(dataToTrack);
-													thisMagickFlowScreenDataAttributes['hasStickyFooter'] = true;
-													thisMagickFlowScreenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
-													thisMagickFlowScreenDataAttributes['stickyFooterHeight'] = dimensions.height;
-													thisMagickFlowScreenDataAttributes['stickyFooterWidth'] = dimensions.width;
-													thisMagickFlowScreenDataAttributes['stickyFooterScreensIndex'] = fileIndex;
-													thisMagickFlowScreenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
-													thisMagickFlowScreenDataAttributes['stickyFooterFileName'] = assetFileName;
-													thisMagickFlowScreenDataAttributes['stickyFooterFileName'] = assetFileName;
-													thisMagickFlowScreenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
+													metaData.assetsMetaData.push(dataToTrack);
+													screenDataAttributes['hasStickyFooter'] = true;
+													screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
+													screenDataAttributes['stickyFooterHeight'] = dimensions.height;
+													screenDataAttributes['stickyFooterWidth'] = dimensions.width;
+													screenDataAttributes['stickyFooterScreensIndex'] = fileIndex;
+													screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
+													screenDataAttributes['stickyFooterFileName'] = assetFileName;
+													screenDataAttributes['stickyFooterFileName'] = assetFileName;
+													screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
 												}
 											}
 										});
 									}
 								}
 
-								thisMagickFlowScreensMetaData.push(thisMagickFlowScreenDataAttributes);
+								metaData.metaData2.push(screenDataAttributes);
 							});
 
-							configData.magickFlows[subFilesAndDirectories[j]] = {
-								"name": thisMagickFlowName,
-								"path": thisMagickFlowFullPath,
-								"screens": thisMagickFlowScreens,
-								"assets": thisMagickFlowAssets,
-								assetsMetaData,
-								"numberOfScreens": thisMagickFlowNumberOfScreens,
-								"urlSlug": thisMagickFlowUrlSlug,
-								"metaData": thisMagickFlowConfigData,
-								"metaData2": thisMagickFlowScreensMetaData,
-							};
+							configData.magickFlows[subFilesAndDirectories[j]] = metaData;
 
 							directories_.push(path.join(aFileOrDirectoryFullPath, subFilesAndDirectories[j]));
 						}
