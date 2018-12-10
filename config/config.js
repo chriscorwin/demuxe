@@ -8,7 +8,7 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 const sizeOf = require('image-size');
-const configMagickFlows = require('./config-magick-flows');
+const addMagickFlowsToConfig = require('./config-magick-flows');
 
 
 
@@ -28,7 +28,6 @@ module.exports = function() {
 
     // default to production
     const defaultConfigData = require('./config.json');
-
 
     let envConfigData = {};
     // obtain env specific config
@@ -54,37 +53,23 @@ module.exports = function() {
     appViews.push(path.join(__dirname, '../', 'slides'));
     configData.appViews = appViews;
 
-
-    const startingPath = path.join(__dirname, '..');
-    const { magickFlowDirectories, magickFlowsConfigData } = configMagickFlows.getMagickFlowsConfig(startingPath, [], configData);
-    // Add the magickFlowsConfigData to the other configData
-    configData.magickFlows = magickFlowsConfigData;
-
-    //  @todo stop hard-coding this port
-    let magickFlowDirectoriesFormattedForConsoleStartupLog = ``;
-    magickFlowDirectories.sort(configMagickFlows.sortAlphaNum).forEach(function(aDirectoryPath){
-      magickFlowDirectoriesFormattedForConsoleStartupLog += `
-      http://localhost:3000/${aDirectoryPath.split('/')[aDirectoryPath.split('/').length - 1]}`;
-    });
-
+    configData = addMagickFlowsToConfig(configData);
 
     console.group(`
-============================================================
-Demuxe: Magick Flows Setup Information
-------------------------------------------------------------
-
-There is a dashboard for Magick Flows available at: 
-
-http://localhost:3000/magick-flows-dashboard
-------------------------------------------------------------
-
-The Demuxe engine looked around, and, lo, it found ${magickFlowDirectories.length} Magick Flows:
-
-${magickFlowDirectoriesFormattedForConsoleStartupLog}
-`);
+    ============================================================
+    Demuxe: Magick Flows Setup Information
+    ------------------------------------------------------------
+    
+    There is a dashboard for Magick Flows available at: 
+    
+    ${configData[process.env.NODE_ENV].host}magick-flows-dashboard
+    ------------------------------------------------------------
+    
+    The Demuxe engine looked around, and, lo, it found ${configData.magickFlowURLS.length} Magick Flows:
+    
+    ${configData.magickFlowURLS.join(`\n`)}
+    `);
     console.groupEnd();
-
-    configData.magickFlowDirectories = magickFlowDirectories;
 
     // LOAD FROM ENV VARIABLES -- you can set an env variable and this will just catch it. NICE.
     configData.SOME_STATIC_VAR = process.env.SOME_STATIC_VAR;

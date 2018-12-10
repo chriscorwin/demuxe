@@ -167,109 +167,115 @@ const getPermutations = (assetFiles, screenId, fileName, fileIndex, fullAssetsPa
 	return foundData;
 }
 
-const configMagickFlows = {
-	// Sorts an array alphanumerically, so that '10.svg' comes after '2.svg' in our lists of screens.
-	sortAlphaNum: (a, b) => a.localeCompare(b, 'en', { numeric: true }),
-	
-	// Creates config data objects for the magick flows based on provided directory.
-	getMagickFlowsConfig: (dir, magickFlowDirectories = [], configData, recursionMax = 1000, retryCount = 0) => {
-		magickFlowDirectories = magickFlowDirectories || []; // protects against them passing `null`
-		const magickFlowsConfigData = Object.assign( {}, configData.magickFlows );
+// Sorts an array alphanumerically, so that '10.svg' comes after '2.svg' in our lists of screens.
+const sortAlphaNum = (a, b) => a.localeCompare(b, 'en', { numeric: true });
 
-		const directoryContents = fs.readdirSync(dir);
-		directoryContents.forEach(fileOrDirectory => {
-			const fileOrDirectoryPath = path.join(dir, fileOrDirectory);
+// Creates config data objects for the magick flows based on provided directory.
+const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '..'), magickFlowDirectories = [], recursionMax = 1000, retryCount = 0) => {
+	magickFlowDirectories = magickFlowDirectories || []; // protects against them passing `null`
 
-			// We only care about directories.
-			if (!fs.statSync(fileOrDirectoryPath).isDirectory()) return;
+	const directoryContents = fs.readdirSync(dir);
+	directoryContents.forEach(fileOrDirectory => {
+		const fileOrDirectoryPath = path.join(dir, fileOrDirectory);
 
-			// Make sure this is the directory we actually want
-			if (fileOrDirectory !== configData.magickFlows.directoryName) {
-				if (retryCount > recursionMax) {
-					console.error(`Arbitrary ${recursionMax + 1} retry maximum achieved! Congratulations, you have broken the app.`);
-				} else {
-					// This was not the directory we were looking for, look again...
-					configMagickFlows.getMagickFlowsConfig(fileOrDirectoryPath, magickFlowDirectories, configData, recursionMax, retryCount++);
-				}
+		// We only care about directories.
+		if (!fs.statSync(fileOrDirectoryPath).isDirectory()) return configData;
 
-				return;
+		// Make sure this is the directory we actually want
+		if (fileOrDirectory !== configData.magickFlows.directoryName) {
+			if (retryCount > recursionMax) {
+				console.error(`Arbitrary ${recursionMax + 1} retry maximum achieved! Congratulations, you have broken the app.`);
+			} else {
+				// This was not the directory we were looking for, look again...
+				addMagickFlowsToConfig(configData, fileOrDirectoryPath, magickFlowDirectories, recursionMax, retryCount++);
 			}
-			
-			const subDirectoryContents = fs.readdirSync(fileOrDirectoryPath);
-			
-			subDirectoryContents.forEach(subFileOrDirectory => {
-				if (fs.statSync(path.join(fileOrDirectoryPath, subFileOrDirectory)).isDirectory()) {
-					const fullContentPath = path.join(fileOrDirectoryPath, subFileOrDirectory, 'main');
-					const fullAssetsPath = path.join(fileOrDirectoryPath, subFileOrDirectory, 'assets');
 
-					const metaData = {
-						assets: [],
-						metaData: {},
-						metaData2: [],
-						name: subFileOrDirectory,
-						path: path.join(fileOrDirectoryPath, subFileOrDirectory),
-						urlSlug: subFileOrDirectory,
-						screens: []
-					};
+			return configData;
+		}
+		
+		const subDirectoryContents = fs.readdirSync(fileOrDirectoryPath);
+		
+		subDirectoryContents.forEach(subFileOrDirectory => {
+			if (fs.statSync(path.join(fileOrDirectoryPath, subFileOrDirectory)).isDirectory()) {
+				const fullContentPath = path.join(fileOrDirectoryPath, subFileOrDirectory, 'main');
+				const fullAssetsPath = path.join(fileOrDirectoryPath, subFileOrDirectory, 'assets');
 
-					try {
-						metaData.screens = getFiles(fullContentPath).sort(configMagickFlows.sortAlphaNum);
-						metaData.numberOfScreens = metaData.screens.length;
-					} catch(error) {
-						noFileError(error, metaData.name, fullContentPath);
-					}
+				const metaData = {
+					assets: [],
+					metaData: {},
+					metaData2: [],
+					name: subFileOrDirectory,
+					path: path.join(fileOrDirectoryPath, subFileOrDirectory),
+					urlSlug: subFileOrDirectory,
+					screens: []
+				};
 
-					try {
-						metaData.assets = getFiles(fullAssetsPath).sort(configMagickFlows.sortAlphaNum);
-					} catch(error) {
-						noAssetsError(error, metaData.name, fullAssetsPath);
-					}
-
-
-					if (fs.existsSync(path.join(metaData.path, '../', metaData.name + '.json'))) {
-						metaData.metaData = require(path.join(metaData.path, '../', metaData.name + '.json'));
-					}
-
-					magickFlowsConfigData.urlSlugs.push(metaData.urlSlug);
-					magickFlowsConfigData.urlSlugsMapToFlowDirectories[metaData.urlSlug] = metaData.name;
-
-
-					metaData.screens.forEach((fileName, fileIndex) => {
-						const screenDataAttributes = getParamValuesFromFilename(fileName);
-						screenDataAttributes.fileName = fileName;
-						screenDataAttributes.screensIndex = fileIndex;
-
-						if ( fileName.endsWith('.ejs') === true ) {
-							screenDataAttributes.dimensions = {type: 'ejs'};
-						} else {
-							const pathToFile = path.join(fullContentPath, fileName);
-							screenDataAttributes.dimensions = sizeOf(pathToFile);
-						}
-
-						const fileExtension = fileName.split('.')[fileName.split('.').length - 1];
-						screenDataAttributes.fileExtension = fileExtension;
-
-						if ( typeof screenDataAttributes.data !== 'undefined' ) {
-							const foundData = getPermutations(metaData.assets, screenDataAttributes.ID, fileName, fileIndex, fullAssetsPath);
-							metaData.assetsMetaData = foundData.assetsMetaData;
-							Object.assign(screenDataAttributes, foundData.screenDataAttributes);
-						}
-
-						metaData.metaData2.push(screenDataAttributes);
-					});
-
-					magickFlowsConfigData[subFileOrDirectory] = metaData;
-
-					magickFlowDirectories.push(path.join(fileOrDirectoryPath, subFileOrDirectory));
+				try {
+					metaData.screens = getFiles(fullContentPath).sort(sortAlphaNum);
+					metaData.numberOfScreens = metaData.screens.length;
+				} catch(error) {
+					noFileError(error, metaData.name, fullContentPath);
 				}
-			});
+
+				try {
+					metaData.assets = getFiles(fullAssetsPath).sort(sortAlphaNum);
+				} catch(error) {
+					noAssetsError(error, metaData.name, fullAssetsPath);
+				}
+
+
+				if (fs.existsSync(path.join(metaData.path, '../', metaData.name + '.json'))) {
+					metaData.metaData = require(path.join(metaData.path, '../', metaData.name + '.json'));
+				}
+
+				configData.magickFlows.urlSlugs.push(metaData.urlSlug);
+				configData.magickFlows.urlSlugsMapToFlowDirectories[metaData.urlSlug] = metaData.name;
+
+
+				metaData.screens.forEach((fileName, fileIndex) => {
+					const screenDataAttributes = getParamValuesFromFilename(fileName);
+					screenDataAttributes.fileName = fileName;
+					screenDataAttributes.screensIndex = fileIndex;
+
+					if ( fileName.endsWith('.ejs') === true ) {
+						screenDataAttributes.dimensions = {type: 'ejs'};
+					} else {
+						const pathToFile = path.join(fullContentPath, fileName);
+						screenDataAttributes.dimensions = sizeOf(pathToFile);
+					}
+
+					const fileExtension = fileName.split('.')[fileName.split('.').length - 1];
+					screenDataAttributes.fileExtension = fileExtension;
+
+					if ( typeof screenDataAttributes.data !== 'undefined' ) {
+						const foundData = getPermutations(metaData.assets, screenDataAttributes.ID, fileName, fileIndex, fullAssetsPath);
+						metaData.assetsMetaData = foundData.assetsMetaData;
+						Object.assign(screenDataAttributes, foundData.screenDataAttributes);
+					}
+
+					metaData.metaData2.push(screenDataAttributes);
+				});
+
+				configData.magickFlows[subFileOrDirectory] = metaData;
+
+				magickFlowDirectories.push(path.join(fileOrDirectoryPath, subFileOrDirectory));
+			}
 		});
+	});
 
-		return { magickFlowDirectories, magickFlowsConfigData };
-	}
-}
+	const magickFlowURLS = magickFlowDirectories
+		.sort(sortAlphaNum)
+		.map(magickFlowPath => 
+			`${configData[process.env.NODE_ENV].host}${magickFlowPath.split('/')[magickFlowPath.split('/').length - 1]}`
+		);
 
-module.exports = configMagickFlows;
+	configData.magickFlowDirectories = magickFlowDirectories;
+	configData.magickFlowURLS = magickFlowURLS;
+
+	return configData;
+};
+
+module.exports = addMagickFlowsToConfig;
 
 console.log(`...end: \`config/config-magick-flows.js\`
 ------------------------------------------------------------`);
