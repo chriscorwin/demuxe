@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-const util = require('util');
 const sizeOf = require('image-size');
 const sortAlphaNum = require('./sort-alpha-num.js');
 
@@ -61,7 +60,7 @@ const getFiles = (dir, files_) => {
 	return files_;
 }
 
-const getParamValuesFromFilename = (fileName) => {
+const getDataFromFilename = (fileName) => {
 	const foundAttributes = [];
 	const splitFileName = fileName.split('___');
 
@@ -161,15 +160,15 @@ const getScreenCharacteristics = (assetFiles, screenId, fileName, fileIndex, ful
 	return foundData;
 }
 
-const getScreenData = (flowData, fileName, fileIndex, fullContentPath, fullAssetsPath) => {
-	const screenDataAttributes = getParamValuesFromFilename(fileName);
+const getScreenData = (flowData, fileName, fileIndex) => {
+	const screenDataAttributes = getDataFromFilename(fileName);
 	screenDataAttributes.fileName = fileName;
 	screenDataAttributes.screensIndex = fileIndex;
 
 	if ( fileName.endsWith('.ejs') === true ) {
 		screenDataAttributes.dimensions = {type: 'ejs'};
 	} else {
-		const pathToFile = path.join(fullContentPath, fileName);
+		const pathToFile = path.join(flowData.fullContentPath, fileName);
 		screenDataAttributes.dimensions = sizeOf(pathToFile);
 	}
 
@@ -177,50 +176,51 @@ const getScreenData = (flowData, fileName, fileIndex, fullContentPath, fullAsset
 	screenDataAttributes.fileExtension = fileExtension;
 
 	if ( typeof screenDataAttributes.data !== 'undefined' ) {
-		const foundData = getScreenCharacteristics(flowData.assets, screenDataAttributes.ID, fileName, fileIndex, fullAssetsPath);
-		flowData.assetsMetaData = foundData.assetsMetaData;
-		Object.assign(screenDataAttributes, foundData.screenDataAttributes);
+		const foundCharacteristics = getScreenCharacteristics(flowData.assets, screenDataAttributes.ID, fileName, fileIndex, flowData.fullAssetsPath);
+		flowData.assetsMetaData = foundCharacteristics.assetsMetaData;
+		Object.assign(screenDataAttributes, foundCharacteristics.screenDataAttributes);
 	}
 
 	flowData.metaData.push(screenDataAttributes);
 };
 
 const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
-	if (fs.statSync(path.join(fileOrDirectoryPath, subFileOrDirectory)).isDirectory()) {
-		const fullContentPath = path.join(fileOrDirectoryPath, subFileOrDirectory, 'main');
-		const fullAssetsPath = path.join(fileOrDirectoryPath, subFileOrDirectory, 'assets');
-
-		const flowData = {
-			assets: [],
-			metaData: [],
-			name: subFileOrDirectory,
-			path: path.join(fileOrDirectoryPath, subFileOrDirectory),
-			urlSlug: subFileOrDirectory,
-			screens: []
-		};
-
-		try {
-			flowData.screens = getFiles(fullContentPath).sort(sortAlphaNum);
-			flowData.numberOfScreens = flowData.screens.length;
-		} catch(error) {
-			noFileError(error, flowData.name, fullContentPath);
-		}
-
-		try {
-			flowData.assets = getFiles(fullAssetsPath).sort(sortAlphaNum);
-		} catch(error) {
-			noAssetsError(error, flowData.name, fullAssetsPath);
-		}
-
-		flowData.screens.forEach((fileName, fileIndex) => {
-			getScreenData(flowData, fileName, fileIndex, fullContentPath, fullAssetsPath);
-		});
-
-		configData.magickFlows[subFileOrDirectory] = flowData;
-		configData.magickFlows.urlSlugs.push(flowData.urlSlug);
-		configData.magickFlows.urlSlugsMapToFlowDirectories[flowData.urlSlug] = flowData.name;
-		configData.magickFlowDirectories.push(path.join(fileOrDirectoryPath, subFileOrDirectory));
+	if(!fs.statSync(path.join(fileOrDirectoryPath, subFileOrDirectory)).isDirectory()) {
+		return configData;
 	}
+
+	const flowData = {
+		assets: [],
+		metaData: [],
+		name: subFileOrDirectory,
+		path: path.join(fileOrDirectoryPath, subFileOrDirectory),
+		fullContentPath: path.join(fileOrDirectoryPath, subFileOrDirectory, 'main'),
+		fullAssetsPath: path.join(fileOrDirectoryPath, subFileOrDirectory, 'assets'),
+		urlSlug: subFileOrDirectory,
+		screens: []
+	};
+
+	try {
+		flowData.screens = getFiles(flowData.fullContentPath).sort(sortAlphaNum);
+		flowData.numberOfScreens = flowData.screens.length;
+	} catch(error) {
+		noFileError(error, flowData.name, flowData.fullContentPath);
+	}
+
+	try {
+		flowData.assets = getFiles(flowData.fullAssetsPath).sort(sortAlphaNum);
+	} catch(error) {
+		noAssetsError(error, flowData.name, flowData.fullAssetsPath);
+	}
+
+	flowData.screens.forEach((fileName, fileIndex) => {
+		getScreenData(flowData, fileName, fileIndex);
+	});
+
+	configData.magickFlows[subFileOrDirectory] = flowData;
+	configData.magickFlows.urlSlugs.push(flowData.urlSlug);
+	configData.magickFlows.urlSlugsMapToFlowDirectories[flowData.urlSlug] = flowData.name;
+	configData.magickFlowDirectories.push(path.join(fileOrDirectoryPath, subFileOrDirectory));
 
 	return configData;
 }

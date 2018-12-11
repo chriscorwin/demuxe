@@ -21,6 +21,9 @@ const config = require('./config/config.js')();
 const app = express();
 
 
+if (process.env.DEBUG === "true") {
+	console.debug = console.log;
+}
 
 console.group(`
 ============================================================
@@ -34,10 +37,8 @@ console.log(`process.env.NODE_ENV ${process.env.NODE_ENV}`);
 console.log(`brandTheme: ${config.brandTheme}`);
 console.log(`productTemplate: ${config.productTemplate}`);
 
-if (process.env.DEBUG === "true") {
-	console.log('config data');
-	console.log(`[ app.js:39 ] config: `, util.inspect(config, { showHidden: false, depth: null, colors: true }));
-}
+console.debug('config data');
+console.debug(`[ app.js:39 ] config: `, util.inspect(config, { showHidden: false, depth: null, colors: true }));
 
 console.groupEnd();
 

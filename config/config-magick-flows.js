@@ -8,25 +8,32 @@ const fs = require('fs');
 const getFlowData = require('./magick-flows-util/get-flow-data.js');
 const sortAlphaNum = require('./magick-flows-util/sort-alpha-num.js');
 
-let foundAnythingAtAll = false;
+if (process.env.DEBUG === "true") {
+	console.debug = console.log;
+}
 
 // Creates config data objects for the magick flows based on provided directory.
-const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../your-code-here/'), recursionMax = 1000, retryCount = 0) => {
-	console.log(`looking in ${dir}`);
+const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), recursionMax = 1000, retryCount = 0) => {
+	console.debug(`looking in ${dir}`);
 
 	configData.magickFlowDirectories = configData.magickFlowDirectories || []; // protects against them passing `null`
 
 	const directoryContents = fs.readdirSync(dir);
 	directoryContents.forEach(fileOrDirectory => {
-		console.log('searching in', fileOrDirectory);
+		console.debug('considering: ', fileOrDirectory);
 		const fileOrDirectoryPath = path.join(dir, fileOrDirectory);
 
 		// We only care about directories.
-		if (!fs.statSync(fileOrDirectoryPath).isDirectory()) return;
+		if (!fs.statSync(fileOrDirectoryPath).isDirectory()) {
+			console.debug(`ignoring ${fileOrDirectoryPath}; it is not a directory.`)
+
+			return;
+		}
 
 		// Make sure this is the directory we actually want
 		if (fileOrDirectory !== configData.magickFlows.directoryName) {
-			console.log(`${fileOrDirectory} !== ${configData.magickFlows.directoryName} ${fileOrDirectory !== configData.magickFlows.directoryName}`)
+			console.debug(`ignoring ${fileOrDirectory}; ${fileOrDirectory} !== ${configData.magickFlows.directoryName}`)
+
 			if (retryCount > recursionMax) {
 				console.error(`Arbitrary ${recursionMax + 1} retry maximum achieved! Congratulations, you have broken the app.`);
 			} else {
@@ -34,14 +41,10 @@ const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../your-
 				addMagickFlowsToConfig(configData, fileOrDirectoryPath, recursionMax, retryCount++);
 			}
 
-			console.log('no, ignore this directory');
-
 			return;
 		}
 
-		console.log('found something!');
-
-		foundAnythingAtAll = true;
+		console.debug(`target directory found! (${fileOrDirectory})`);
 
 		const subDirectoryContents = fs.readdirSync(fileOrDirectoryPath);
 		
@@ -49,10 +52,6 @@ const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../your-
 			configData = getFlowData(configData, fileOrDirectoryPath, subFileOrDirectory)
 		});
 	});
-
-	if (!foundAnythingAtAll) {
-		console.warn(`WARNING: No magic flows were discovered`);
-	}
 
 	const magickFlowURLS = configData.magickFlowDirectories
 		.sort(sortAlphaNum)

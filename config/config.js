@@ -55,21 +55,27 @@ module.exports = function() {
 
     configData = addMagickFlowsToConfig(configData);
 
-    console.group(`
-    ============================================================
-    Demuxe: Magick Flows Setup Information
-    ------------------------------------------------------------
-    
-    There is a dashboard for Magick Flows available at: 
-    
-    ${configData[process.env.NODE_ENV].host}magick-flows-dashboard
-    ------------------------------------------------------------
-    
-    The Demuxe engine looked around, and, lo, it found ${configData.magickFlowURLS.length} Magick Flows:
-    
-    ${configData.magickFlowURLS.join(`\n`)}
-    `);
-    console.groupEnd();
+    if (!configData.magickFlowURLS.length) {
+        console.warn(`WARNING: No magic flows were discovered`);
+    } else {
+        console.group(`
+        ============================================================
+        Demuxe: Magick Flows Setup Information
+        ------------------------------------------------------------
+        
+        There is a dashboard for Magick Flows available at: 
+        
+        ${configData[process.env.NODE_ENV].host}magick-flows-dashboard
+        ------------------------------------------------------------
+        
+        The Demuxe engine looked around, and, lo, it found ${configData.magickFlowURLS.length} Magick Flows:
+        
+        ${configData.magickFlowURLS.join(`\n        `)}
+
+        Hold Cmd & click on one of the above URLs to open it in a browser.
+        `);
+        console.groupEnd();
+    }
 
     // LOAD FROM ENV VARIABLES -- you can set an env variable and this will just catch it. NICE.
     configData.SOME_STATIC_VAR = process.env.SOME_STATIC_VAR;
