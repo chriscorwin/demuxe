@@ -1,9 +1,10 @@
 const path = require('path');
+const sizeOf = require('image-size');
 
 const stickyFooter = {
 	id: 'sticky-footer',
-	isRequiredBy: (fileName) => stickyFooter.id.match(fileName),
-	addCharacteristicData: (foundData, screenInfo, assetFileName, assetFileIndex) => {
+	isRequiredBy: (fileName) => fileName.match(stickyFooter.id),
+	addTraitData: (foundData, screenInfo, assetFileName, assetFileIndex) => {
 		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
 		let dataToTrack = [];
 		const dimensions = sizeOf(pathToAssetFile);

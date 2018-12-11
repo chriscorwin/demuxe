@@ -254,7 +254,3 @@ footer.magick-flows-stickey-footer_container {
   transition: transform 500ms, opacity 600ms, left 125ms !important;
   opacity: 0;
 }
-
-.magick-flows--slide-5 {
-  background-color: #00366f;
-}

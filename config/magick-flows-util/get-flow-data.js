@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const sizeOf = require('image-size');
 const sortAlphaNum = require('./sort-alpha-num.js');
-const getScreenCharacteristics = require('./get-screen-characteristics.js');
+const getScreenTraits = require('./get-screen-traits.js');
 
 const noFileError = (error, name, fullContentPath) => {
 	if ( error.message.includes('ENOENT: no such file or directory')) {
@@ -115,9 +115,9 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 			fileIndex, 
 			fullAssetsPath: flowData.fullAssetsPath
 		};
-		const foundCharacteristics = getScreenCharacteristics(screenInfo);
-		flowData.assetsMetaData = foundCharacteristics.assetsMetaData;
-		Object.assign(screenDataAttributes, foundCharacteristics.screenDataAttributes);
+		const foundTraits = getScreenTraits(screenInfo);
+		flowData.assetsMetaData = foundTraits.assetsMetaData;
+		Object.assign(screenDataAttributes, foundTraits.screenDataAttributes);
 	}
 
 	flowData.metaData.push(screenDataAttributes);
