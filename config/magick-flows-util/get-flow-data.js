@@ -108,7 +108,14 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 	screenDataAttributes.fileExtension = fileExtension;
 
 	if ( typeof screenDataAttributes.data !== 'undefined' ) {
-		const foundCharacteristics = getScreenCharacteristics(flowData.assets, screenDataAttributes.ID, fileName, fileIndex, flowData.fullAssetsPath);
+		const screenInfo = { 
+			assetFiles: flowData.assets, 
+			screenId:screenDataAttributes.ID, 
+			fileName, 
+			fileIndex, 
+			fullAssetsPath: flowData.fullAssetsPath
+		};
+		const foundCharacteristics = getScreenCharacteristics(screenInfo);
 		flowData.assetsMetaData = foundCharacteristics.assetsMetaData;
 		Object.assign(screenDataAttributes, foundCharacteristics.screenDataAttributes);
 	}
