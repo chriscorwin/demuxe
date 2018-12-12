@@ -19,11 +19,12 @@ const getScreenTraits = (screenInfo) => {
 	if ( !screenInfo.fileName.match(possibleTraitIds) ) return foundData;
 
 	screenInfo.assetFiles.forEach((assetFileName, assetFileIndex) => {
-		// only grab screenInfo.assetFiles for the screen we are on
+		// only grab asset files for the screen we are on
 		if ( assetFileName.match(screenInfo.screenId) ) {
 			// loops through all possible traits and adds each one's data
 			possibleTraits.forEach((trait) => {
-				if (trait.isRequiredBy(assetFileName)) {
+				// make sure the screen is requesting this trait
+				if (trait.isRequiredBy(screenInfo.fileName)) {
 					foundData = trait.addTraitData(foundData, screenInfo, assetFileName, assetFileIndex);
 				}
 			});
