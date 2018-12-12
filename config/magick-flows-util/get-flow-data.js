@@ -62,7 +62,9 @@ const getFiles = (dir, files_) => {
 }
 
 const getDataFromFilename = (fileName) => {
-	const foundAttributes = [];
+	const foundAttributes = {
+		fileName
+	};
 	const splitFileName = fileName.split('___');
 
 	splitFileName.forEach((node) => {
@@ -93,32 +95,40 @@ const getDataFromFilename = (fileName) => {
 }
 
 const getScreenData = (flowData, fileName, fileIndex) => {
-	const screenDataAttributes = getDataFromFilename(fileName);
-	screenDataAttributes.fileName = fileName;
-	screenDataAttributes.screensIndex = fileIndex;
-
+	let dimensions;
 	if ( fileName.endsWith('.ejs') === true ) {
-		screenDataAttributes.dimensions = {type: 'ejs'};
+		dimensions = {type: 'ejs'};
 	} else {
 		const pathToFile = path.join(flowData.fullContentPath, fileName);
-		screenDataAttributes.dimensions = sizeOf(pathToFile);
+		dimensions = sizeOf(pathToFile);
 	}
-
 	const fileExtension = fileName.split('.')[fileName.split('.').length - 1];
-	screenDataAttributes.fileExtension = fileExtension;
 
-	if ( typeof screenDataAttributes.data !== 'undefined' ) {
+	const fileNameData = getDataFromFilename(fileName);
+
+	let foundTraits = { screenDataAttributes: {} };
+	if ( typeof fileNameData.data !== 'undefined' ) {
 		const screenInfo = { 
 			assetFiles: flowData.assets, 
-			screenId:screenDataAttributes.ID, 
+			screenId: fileNameData.id, 
 			fileName, 
 			fileIndex, 
 			fullAssetsPath: flowData.fullAssetsPath
 		};
-		const foundTraits = getScreenTraits(screenInfo);
+		foundTraits = getScreenTraits(screenInfo);
 		flowData.assetsMetaData = foundTraits.assetsMetaData;
-		Object.assign(screenDataAttributes, foundTraits.screenDataAttributes);
 	}
+
+	const screenDataAttributes = Object.assign(
+		{},
+		{ 
+			screensIndex: fileIndex,
+			dimensions,
+			fileExtension
+		},
+		fileNameData,
+		foundTraits.screenDataAttributes
+	);
 
 	flowData.metaData.push(screenDataAttributes);
 };
