@@ -1,0 +1,11 @@
+$numberOfSlides: 5;
+$heightOfSlideValue: 812;
+$widthOfSlideValue: 375;
+$widthOfGutterValue: 20;
+
+$widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
+$heightOfAppSwitcher: $heightOfSlideValue + 0px;
+$heightOfSlide: $heightOfSlideValue + 0px;
+$widthOfSlide: $widthOfSlideValue + 0px;
+
+@import "./../../../../engine/styles/magick-flows.scss";

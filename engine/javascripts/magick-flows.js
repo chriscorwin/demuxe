@@ -161,7 +161,7 @@ function locationHashChanged(event) {
 
 	let stepToEvaluateForAppTransition = directionOfNavigation === 'forward' ? newUrlHash : oldUrlHash;
 
-	if ( magickFlowConfig.metaData2[stepToEvaluateForAppTransition].data !== undefined && magickFlowConfig.metaData2[stepToEvaluateForAppTransition].data[0] === 'use-slide-transition' && magickFlowConfig.metaData2[stepToEvaluateForAppTransition].data[1] === 'slide-transition_app-switch' ) {
+	if ( magickFlowConfig.metaData[stepToEvaluateForAppTransition].data !== undefined && magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[0] === 'use-slide-transition' && magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[1] === 'slide-transition_app-switch' ) {
 		doAppTransition = true;
 	}
 
