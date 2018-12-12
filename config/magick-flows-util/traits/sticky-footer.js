@@ -6,9 +6,8 @@ const stickyFooter = {
 	isRequiredBy: (fileName) => fileName.match(stickyFooter.id),
 	addTraitData: (foundData, screenInfo, assetFileName, assetFileIndex) => {
 		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
-		let dataToTrack = [];
 		const dimensions = sizeOf(pathToAssetFile);
-		dataToTrack = {
+		const dataToTrack = {
 			"stickyFooterPathToAssetFile": pathToAssetFile,
 			"stickyFooterHeight": dimensions.height,
 			"stickyFooterWidth": dimensions.width,

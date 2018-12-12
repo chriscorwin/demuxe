@@ -6,9 +6,8 @@ const stickyHeader = {
 	isRequiredBy: (fileName) => fileName.match(stickyHeader.id),
 	addTraitData: (foundData, screenInfo, assetFileName, assetFileIndex) => {
 		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
-		let dataToTrack = [];
 		const dimensions = sizeOf(pathToAssetFile);
-		dataToTrack = {
+		const dataToTrack = {
 			"stickyHeaderPathToAssetFile": pathToAssetFile,
 			"stickyHeaderHeight": dimensions.height,
 			"stickyHeaderWidth": dimensions.width,
