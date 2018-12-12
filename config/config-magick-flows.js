@@ -9,6 +9,8 @@ const util = require('util');
 const sizeOf = require('image-size');
 
 
+
+
 const magickFlowsConfig = {
 
 
@@ -28,6 +30,26 @@ const magickFlowsConfig = {
 	},
 
 
+
+
+	writeScssVariablesToFile: function (filePath, data = {}) {
+		if (process.env.DEBUG === "true") {
+			console.group(`
+============================================================
+[writeScssVariablesToFile]: \`config/config-magick-flows.js:39\`
+------------------------------------------------------------
+			`);
+		}
+
+		
+
+
+		if (process.env.DEBUG === "true") {
+			console.log(`...end [writeScssVariablesToFile]: \`config/config-magick-flows.js:39\`
+------------------------------------------------------------`);
+		console.groupEnd();
+		}
+	},
 
 
 
