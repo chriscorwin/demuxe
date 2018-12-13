@@ -4,6 +4,7 @@ const sizeOf = require('image-size');
 const stickyFooter = {
 	id: 'sticky-footer',
 	isRequiredBy: (fileName) => fileName.match(stickyFooter.id),
+	isAssetForTrait: (assetFileName) => assetFileName.match(stickyFooter.id),
 	addTraitData: (traitsData, screenInfo, assetFileName, assetFileIndex) => {
 		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
 		const dimensions = sizeOf(pathToAssetFile);

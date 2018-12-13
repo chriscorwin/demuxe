@@ -24,7 +24,7 @@ const getScreenTraits = (screenInfo) => {
 			// loops through all possible traits and adds each one's data
 			possibleTraits.forEach((trait) => {
 				// make sure the screen is requesting this trait
-				if (trait.isRequiredBy(screenInfo.fileName)) {
+				if (trait.isRequiredBy(screenInfo.fileName) && trait.isAssetForTrait(assetFileName)) {
 					traitsData = trait.addTraitData(traitsData, screenInfo, assetFileName, assetFileIndex);
 				}
 			});

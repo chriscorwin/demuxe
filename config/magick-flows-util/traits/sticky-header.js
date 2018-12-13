@@ -4,6 +4,7 @@ const sizeOf = require('image-size');
 const stickyHeader = {
 	id: 'sticky-header',
 	isRequiredBy: (fileName) => fileName.match(stickyHeader.id),
+	isAssetForTrait: (assetFileName) => assetFileName.match(stickyHeader.id),
 	addTraitData: (traitsData, screenInfo, assetFileName, assetFileIndex) => {
 		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
 		const dimensions = sizeOf(pathToAssetFile);
