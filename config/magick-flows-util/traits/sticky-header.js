@@ -4,7 +4,7 @@ const sizeOf = require('image-size');
 const stickyHeader = {
 	id: 'sticky-header',
 	isRequiredBy: (fileName) => fileName.match(stickyHeader.id),
-	addTraitData: (foundData, screenInfo, assetFileName, assetFileIndex) => {
+	addTraitData: (assetsData, screenInfo, assetFileName, assetFileIndex) => {
 		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
 		const dimensions = sizeOf(pathToAssetFile);
 		const dataToTrack = {
@@ -17,18 +17,18 @@ const stickyHeader = {
 			"stickyHeaderFileName": assetFileName,
 			"stickyHeaderFilePath": pathToAssetFile,
 		};
-		foundData.assetsMetaData.push(dataToTrack);
-		foundData.screenDataAttributes['hasStickyHeader'] = true;
-		foundData.screenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
-		foundData.screenDataAttributes['stickyHeaderHeight'] = dimensions.height;
-		foundData.screenDataAttributes['stickyHeaderWidth'] = dimensions.width;
-		foundData.screenDataAttributes['stickyHeaderScreensIndex'] = screenInfo.fileIndex;
-		foundData.screenDataAttributes['stickyHeaderAssetFileIndex'] = assetFileIndex;
-		foundData.screenDataAttributes['stickyHeaderFileName'] = assetFileName;
-		foundData.screenDataAttributes['stickyHeaderFileName'] = assetFileName;
-		foundData.screenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
+		assetsData.assetsMetaData.push(dataToTrack);
+		assetsData.screenDataAttributes['hasStickyHeader'] = true;
+		assetsData.screenDataAttributes['stickyHeaderPathToAssetFile'] = pathToAssetFile;
+		assetsData.screenDataAttributes['stickyHeaderHeight'] = dimensions.height;
+		assetsData.screenDataAttributes['stickyHeaderWidth'] = dimensions.width;
+		assetsData.screenDataAttributes['stickyHeaderScreensIndex'] = screenInfo.fileIndex;
+		assetsData.screenDataAttributes['stickyHeaderAssetFileIndex'] = assetFileIndex;
+		assetsData.screenDataAttributes['stickyHeaderFileName'] = assetFileName;
+		assetsData.screenDataAttributes['stickyHeaderFileName'] = assetFileName;
+		assetsData.screenDataAttributes['stickyHeaderFilePath'] = pathToAssetFile;
 
-		return foundData;
+		return assetsData;
 	}
 }
 

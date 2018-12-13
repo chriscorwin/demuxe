@@ -4,7 +4,7 @@ const sizeOf = require('image-size');
 const stickyFooter = {
 	id: 'sticky-footer',
 	isRequiredBy: (fileName) => fileName.match(stickyFooter.id),
-	addTraitData: (foundData, screenInfo, assetFileName, assetFileIndex) => {
+	addTraitData: (assetsData, screenInfo, assetFileName, assetFileIndex) => {
 		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
 		const dimensions = sizeOf(pathToAssetFile);
 		const dataToTrack = {
@@ -17,18 +17,18 @@ const stickyFooter = {
 			"stickyFooterFileName": assetFileName,
 			"stickyFooterFilePath": pathToAssetFile,
 		};
-		foundData.assetsMetaData.push(dataToTrack);
-		foundData.screenDataAttributes['hasStickyFooter'] = true;
-		foundData.screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
-		foundData.screenDataAttributes['stickyFooterHeight'] = dimensions.height;
-		foundData.screenDataAttributes['stickyFooterWidth'] = dimensions.width;
-		foundData.screenDataAttributes['stickyFooterScreensIndex'] = screenInfo.fileIndex;
-		foundData.screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
-		foundData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
-		foundData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
-		foundData.screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
+		assetsData.assetsMetaData.push(dataToTrack);
+		assetsData.screenDataAttributes['hasStickyFooter'] = true;
+		assetsData.screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
+		assetsData.screenDataAttributes['stickyFooterHeight'] = dimensions.height;
+		assetsData.screenDataAttributes['stickyFooterWidth'] = dimensions.width;
+		assetsData.screenDataAttributes['stickyFooterScreensIndex'] = screenInfo.fileIndex;
+		assetsData.screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
+		assetsData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
+		assetsData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
+		assetsData.screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
 
-		return foundData;
+		return assetsData;
 	}
 };
 
