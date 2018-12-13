@@ -6,7 +6,7 @@ const getScreenTraits = (screenInfo) => {
 	// screens without IDs can't have data. Abort.
 	if ( !screenInfo.screenId ) return {};
 
-	let assetsData = {
+	let traitsData = {
 		assetsMetaData: [],
 		screenDataAttributes: {}
 	};
@@ -16,7 +16,7 @@ const getScreenTraits = (screenInfo) => {
 		(ids, trait) => `${ids}|${trait.id}`,
 		''
 	);
-	if ( !screenInfo.fileName.match(possibleTraitIds) ) return assetsData;
+	if ( !screenInfo.fileName.match(possibleTraitIds) ) return traitsData;
 
 	screenInfo.assetFiles.forEach((assetFileName, assetFileIndex) => {
 		// only grab asset files for the screen we are on
@@ -25,13 +25,13 @@ const getScreenTraits = (screenInfo) => {
 			possibleTraits.forEach((trait) => {
 				// make sure the screen is requesting this trait
 				if (trait.isRequiredBy(screenInfo.fileName)) {
-					assetsData = trait.addTraitData(assetsData, screenInfo, assetFileName, assetFileIndex);
+					traitsData = trait.addTraitData(traitsData, screenInfo, assetFileName, assetFileIndex);
 				}
 			});
 		}
 	});
 
-	return assetsData;
+	return traitsData;
 }
 
 module.exports = getScreenTraits;
