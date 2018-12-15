@@ -32,11 +32,11 @@ const makeFilledSegmentDescription = (description) => {
 	`)
 }
 
-const segmentName = getSegmentName(pageVersion, accountParam);
-const segmentType = getSegmentType(pageVersion, accountParam);
-const categoryName = getCategoryName(pageVersion, accountParam);
-const subCategoryName = getSubCategoryName(pageVersion, accountParam);
-const segmentDescription = getSegmentDescription(pageVersion, accountParam);
+const segmentName = getSegmentName();
+const segmentType = getSegmentType();
+const categoryName = getCategoryName();
+const subCategoryName = getSubCategoryName();
+const segmentDescription = getSegmentDescription();
 
 const $newSegmentNameElm = makeFilledSegmentDetail('Segment Name', segmentName);
 const $newSegmentTypeElm = makeFilledSegmentDetail('Segment Type', segmentType);
