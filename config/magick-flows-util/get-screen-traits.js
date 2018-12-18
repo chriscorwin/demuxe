@@ -1,12 +1,10 @@
-const sizeOf = require('image-size');
-
 const possibleTraits = require('./traits/index');
 
 const getScreenTraits = (screenInfo) => {
 	// screens without IDs can't have data. Abort.
 	if ( !screenInfo.screenId ) return {};
 
-	let foundData = {
+	let traitsData = {
 		assetsMetaData: [],
 		screenDataAttributes: {}
 	};
@@ -16,22 +14,41 @@ const getScreenTraits = (screenInfo) => {
 		(ids, trait) => `${ids}|${trait.id}`,
 		''
 	);
-	if ( !screenInfo.fileName.match(possibleTraitIds) ) return foundData;
+	if ( !screenInfo.fileName.match(possibleTraitIds) ) return traitsData;
 
-	screenInfo.assetFiles.forEach((assetFileName, assetFileIndex) => {
-		// only grab asset files for the screen we are on
-		if ( assetFileName.match(screenInfo.screenId) ) {
-			// loops through all possible traits and adds each one's data
-			possibleTraits.forEach((trait) => {
-				// make sure the screen is requesting this trait
-				if (trait.isRequiredBy(screenInfo.fileName)) {
-					foundData = trait.addTraitData(foundData, screenInfo, assetFileName, assetFileIndex);
-				}
-			});
+	const relevantAssets = screenInfo.assetFiles.filter(asset => {
+		return asset.match(screenInfo.screenId);
+	});
+
+	const requiredTraits = possibleTraits.filter(trait => {
+		return trait.isRequiredBy(screenInfo.fileName);
+	});
+
+	// Add trait data for each
+	requiredTraits.forEach(trait => {
+		const assetForTrait = relevantAssets.find(asset => trait.isAssetForTrait(asset));
+		const assetFileIndex = screenInfo.assetFiles.findIndex(asset => assetForTrait === asset);
+
+		if (assetForTrait && assetFileIndex >= 0) {
+			traitsData = trait.addTraitData(traitsData, screenInfo, assetForTrait, assetFileIndex);
+		} else {
+			const requiredTraitNames = requiredTraits.reduce((traits, trait) => `${traits}\n ${trait.id}`, '');
+			console.warn(`
+			YOUR DEMO MIGHT BE BROKEN!
+			The trait '${trait.id}' is indicated as being required by ${screenInfo.fileName}, 
+			but no asset file was found among the possible assets present in Demuxe.
+			
+			The following asset files were found and determined to be associated with this screen:`);
+			console.dir(relevantAssets);
+			console.warn(`
+			The following traits were determined to be required by this screen: ${requiredTraitNames}
+			
+			The following is a listing of all discovered asset files within Magick Flows itself:`);
+			console.dir(screenInfo.assetFiles)
 		}
 	});
 
-	return foundData;
+	return traitsData;
 }
 
 module.exports = getScreenTraits;

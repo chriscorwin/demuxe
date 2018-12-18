@@ -7,6 +7,9 @@
 	 isRequiredBy: Function (fileName) - This method accepts a file name
 		 and then tests to see this trait is required. At its most basic
 		 level this will be a simple string match.
+	 isAssetForTrait: Function (assetFileName) - This method accepts the file name
+		 of the asset in question and then tests to see if the asset file is appropriate
+		 to this trait.
 	 addTraitData: Function (foundData, screenInfo, assetFileName, assetFileIndex) 
 		 - This method accepts the currently found traits data, the screenInfo,
 			and the assetFileName and assetFileIndex of the asset being considered
@@ -22,6 +25,7 @@
 	const fakeTrait = {
 		id: 'fake-trait',
 		isRequiredBy: (fileName) => fileName.match(fakeTrait.id),
+		isAssetForTrait: (assetFileName) => assetFileName.match(fakeTrait.id),
 		addTraitData: (foundData, screenInfo, assetFileName, assetFileIndex) => {
 			let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
 			const dimensions = sizeOf(pathToAssetFile);

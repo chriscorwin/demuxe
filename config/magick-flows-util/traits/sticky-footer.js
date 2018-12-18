@@ -4,7 +4,8 @@ const sizeOf = require('image-size');
 const stickyFooter = {
 	id: 'sticky-footer',
 	isRequiredBy: (fileName) => fileName.match(stickyFooter.id),
-	addTraitData: (foundData, screenInfo, assetFileName, assetFileIndex) => {
+	isAssetForTrait: (assetFileName) => assetFileName.match(stickyFooter.id),
+	addTraitData: (traitsData, screenInfo, assetFileName, assetFileIndex) => {
 		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
 		const dimensions = sizeOf(pathToAssetFile);
 		const dataToTrack = {
@@ -17,18 +18,18 @@ const stickyFooter = {
 			"stickyFooterFileName": assetFileName,
 			"stickyFooterFilePath": pathToAssetFile,
 		};
-		foundData.assetsMetaData.push(dataToTrack);
-		foundData.screenDataAttributes['hasStickyFooter'] = true;
-		foundData.screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
-		foundData.screenDataAttributes['stickyFooterHeight'] = dimensions.height;
-		foundData.screenDataAttributes['stickyFooterWidth'] = dimensions.width;
-		foundData.screenDataAttributes['stickyFooterScreensIndex'] = screenInfo.fileIndex;
-		foundData.screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
-		foundData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
-		foundData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
-		foundData.screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
+		traitsData.assetsMetaData.push(dataToTrack);
+		traitsData.screenDataAttributes['hasStickyFooter'] = true;
+		traitsData.screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
+		traitsData.screenDataAttributes['stickyFooterHeight'] = dimensions.height;
+		traitsData.screenDataAttributes['stickyFooterWidth'] = dimensions.width;
+		traitsData.screenDataAttributes['stickyFooterScreensIndex'] = screenInfo.fileIndex;
+		traitsData.screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
+		traitsData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
+		traitsData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
+		traitsData.screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
 
-		return foundData;
+		return traitsData;
 	}
 };
 
