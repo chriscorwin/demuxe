@@ -2,7 +2,11 @@
 	"brandTheme": "bbva",
 	"demoName": "BBVA DF 18",
 	"demoVersion": "0.1",
-	"demoMagickFlows": {},
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",

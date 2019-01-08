@@ -1,4 +1,24 @@
 
+
+/* This should be done to preload images and reduce load flicker */
+// body::after {
+//   backface-visibility: visible;
+//   content: url('./assets/snake-pit-popup.png') url('./assets/stadium.png') url('./assets/section.png')
+//     url('./assets/payment.png') url('./assets/confirmation.png') url('./assets/qr-screen.png')
+//     url('./assets/notification.png') url('./assets/drawer-header.png') url('./assets/drawer-header-2.png')
+//     url('./assets/drawer-header-3.png') url('./assets/email-screen.png') url('./assets/home-background.png')
+//     url('./assets/instagram-screen.png') url('./assets/search-screen.png') url('./assets/youtube-ad.png')
+//     url('./assets/youtube-screen.png');
+//   height: 0;
+//   overflow: hidden;
+//   position: absolute;
+//   width: 0;
+//   z-index: -1;
+// }
+
+
+
+
 @font-face {
 	font-family: 'Salesforce Sans Light';
 	src: url("/fonts/webfonts/SalesforceSans-Light.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
@@ -38,22 +58,6 @@
 	font-weight: 700;
 }
 
-// Currenct versions of SLDS have the background color #fafaf9 by default. Override that.
-@import 'slds-background-override';
-
-body {
-	&.has-debug {
-	  .is-ssi-block { display: inline-block; outline: 1px solid red;}
-	}
-}
-
-code, var {
-	background-color: #eee;
-}
-
-#main-container {
-	margin: auto;
-}
 
 /**
  * @summary Hides an element from the page by setting the opacity property set to `0`
@@ -63,11 +67,18 @@ code, var {
  * @modifier
  */
 .slds-transition-hide {
-	transition: opacity 0.4s ease-in-out;
-	will-change: opacity;
-	opacity: 0; 
+  transition: opacity 300ms ease-in-out;
+  will-change: opacity;
+  // transition-delay: 0s;
+  opacity: 0; 
 }
 
+// .slds-hide {
+// 	transition: opacity 0.25s ease-in-out;
+// 	will-change: opacity;
+// 	opacity: 0; 
+//   display: initial !important;
+// }
 	/**
  * @summary Shows the element using the opacity property set to `1`
  *
@@ -76,7 +87,9 @@ code, var {
  * @modifier
  */
 .slds-transition-show {
-	transition: opacity 0.4s ease-in-out;
+	transition: opacity 300ms ease-in-out;
 	will-change: opacity;
 	opacity: 1; 
 }
+
+

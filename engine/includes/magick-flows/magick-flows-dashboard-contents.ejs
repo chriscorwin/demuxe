@@ -1,0 +1,26 @@
+<%_
+console.group(`
+============================================================
+Demuxe: including \`engine/includes/magick-flows-dashboard-contents.ejs\` now...
+------------------------------------------------------------
+`);
+%>
+<div class="slds-p-around_medium">
+	<h1>Magick Flows in this instance of Demuxe</h1>
+	<ul class="slds-has-dividers_bottom slds-has-block-links_space">
+	<%_
+		let magickFlowsUrlSlugs = locals.magickFlows.urlSlugs;
+		// let magickFlowsUrls = magickFlowsConfigAll.urlSlugsMapToFlowDirectories;
+
+		magickFlowsUrlSlugs.forEach(function(node, nodeIndex) {
+			echo(`<li class="slds-item"><a href="/${node}">${node}</a></li>`);
+		});
+	_%>
+	</ul>
+</div>
+<%_
+console.log(`...end \`engine/includes/magick-flows-dashboard-contents.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

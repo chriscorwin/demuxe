@@ -1,3 +1,8 @@
+console.group(`
+============================================================
+Demuxe: Running \`app.js\` now...
+------------------------------------------------------------
+`);
 const cookieParser = require('cookie-parser');
 const createError = require('http-errors');
 const ejs = require('ejs');
@@ -8,11 +13,23 @@ const util = require('util');
 const logger = require('morgan');
 const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
+const classnames = require('classnames');
+const sizeOf = require('image-size');
 
 const config = require('./config/config.js')();
 
 const app = express();
 
+
+if (process.env.DEBUG === "true") {
+	console.debug = console.log;
+}
+
+console.group(`
+============================================================
+Demuxe: Express Server up and running...
+------------------------------------------------------------
+`);
 
 console.log('Express server started');
 console.log(`port: ${config.port}`);
@@ -20,11 +37,10 @@ console.log(`process.env.NODE_ENV ${process.env.NODE_ENV}`);
 console.log(`brandTheme: ${config.brandTheme}`);
 console.log(`productTemplate: ${config.productTemplate}`);
 
-if (process.env.DEBUG === "true") {
-	console.log('config data');
-	console.dir(config);
-}
+console.debug('config data');
+console.debug(`[ app.js:39 ] config: `, util.inspect(config, { showHidden: false, depth: null, colors: true }));
 
+console.groupEnd();
 
 // view engine setup
 // https://expressjs.com/en/4x/api.html#app.set
@@ -38,6 +54,8 @@ app.set('views', appViews);
 
 app.set('view engine', 'ejs');
 app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/your-code-here' });
+app.set('view options', {compileDebug: true});
+app.set('view options', {compileDebug: true, outputFunctionName: 'echo'});
 
 // https://expressjs.com/en/4x/api.html#app.use
 const appUse = [
@@ -132,9 +150,17 @@ router.get('/*', (req, res) => {
 				if (error) {
 					// find out if it's a slug in our magick-flows
 					let thisUrlSlug = fileName.replace('.ejs', '');
-					if (config.demoMagickFlowUrlSlugs.includes(thisUrlSlug) ) {
+					if (config.magickFlows.urlSlugs.includes(thisUrlSlug) ) {
 						config.urlSlug = thisUrlSlug;
-						res.render('flow', { ...config, sanitizedQueryParams: sanitizedQueryParams });
+						// siteSection hard-coded to be "flow", prolly gonna try and change it to be "magic-flow", but not sure...
+						console.group(`
+============================================================
+Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
+------------------------------------------------------------
+						`);
+						res.render('wrapper-for-magick-flows', { ...config, siteSection: 'magick-flows', sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util });
+						console.groupEnd();
+						
 					} else {
 						res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
 							if (req.url.match(/\.css$/)) {
@@ -148,13 +174,14 @@ router.get('/*', (req, res) => {
 						});
 					}
 				} else {
-					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams });
+					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
 				}
 			});
 		});
 	});
 });
 app.use('/', router);
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -173,3 +200,8 @@ app.use((err, req, res) => {
 });
 
 module.exports = app;
+
+console.log(`...end \`app.js\`
+------------------------------------------------------------
+`);
+console.groupEnd();

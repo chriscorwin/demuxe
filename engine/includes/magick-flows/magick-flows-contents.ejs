@@ -1,0 +1,180 @@
+<%_
+console.group(`
+============================================================
+Demuxe: including \`engine/includes/magick-flows/magick-flows-contents.ejs\` now...
+------------------------------------------------------------
+`);
+
+	let thisMagickFlowConfig = locals.magickFlows[locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]];
+	let preLoadImages = '';
+_%>
+<script type="text/javascript">
+	const thisMagickFlowConfig =<%- JSON.stringify(thisMagickFlowConfig)%>;
+	console.group('[ includes/magick-flows/magick-flows-contents.ejs:14 ] thisMagickFlowConfig:');
+	console.dir(thisMagickFlowConfig);
+	console.groupEnd();
+</script>
+<%_
+	let showMetaDataMissingError = true;
+	let thisMagickFlowMetaData = thisMagickFlowConfig.metaData;
+
+	const webRootPath = `${locals.magickFlows.directoryName}/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}`;
+	const mainContentPath = `${webRootPath}/main/`;
+	const assetsContentPath = `${webRootPath}/assets/`;
+
+	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
+
+
+		const mainContentWebRootUrl = `${mainContentPath}${node.fileName}`;
+		const showHeader = node.hasStickyHeader === true || false;
+		const showFooter = node.hasStickyFooter === true || false;
+		const nodeData = node.data;
+
+
+		let headerHeight = node.stickyHeaderHeight | 0;
+		let footerHeight = node.stickyFooterHeight | 0;
+
+		const headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
+		const footerWebRootUrl = `${assetsContentPath}${node.stickyFooterFileName}`;
+
+
+		// Calculate the height of our scrollable area - 20 magick number for padding ¯\_(ツ)_/¯
+
+
+		let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 20);
+
+			// mainContentScrollableAreaHeight = ((node.dimensions.height - (headerHeight + footerHeight)) + 20);
+		if (node.dimensions.height <= 812) {
+			// mainContentScrollableAreaHeight = ((node.dimensions.height - (headerHeight + footerHeight)) + 20);
+			mainContentScrollableAreaHeight = node.dimensions.height;
+		}
+		// const mainContentScrollableAreaHeightMax = 812;
+		// const mainContentScrollableAreaHeightPossibilityOne = node.dimensions.height;
+
+
+
+
+		// let OMG_EFFING_PAD_SLIDES_2_AND_4 = 
+		// let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 0);
+
+
+		const isEjs = node.dimensions.type === 'ejs';
+		const isPng = node.dimensions.type === 'png';
+		const isSvg = node.dimensions.type === 'svg';
+		const isMp4 = node.dimensions.type === 'mp4';
+		const isGif = node.dimensions.type === 'gif';
+		const isJpeg = node.dimensions.type === 'jpg';
+		let thisMagickFlowsSlideClassnames = {
+			'magick-flows-slide': true
+		};
+
+		preLoadImages += `<img
+			class=""
+			src="${mainContentWebRootUrl}"
+			height="0"
+			width="0"
+			>
+		`;
+
+
+_%>
+
+<div
+	class="slds-grid slds-grid_vertical magick-flows--slide-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	data-slide="<%=nodeIndex%>"
+	id="magick-flows--slide-<%=nodeIndex%>"
+>
+<%_ if (showHeader) { _%>
+	<header class="slds-col">
+		<div class="magick-flows-stickey-header_container">
+			<img
+				id="sticky-header--slide-<%=nodeIndex%>"
+				class="sticky-footer "
+				src="<%=headerWebRootUrl%>"
+			/>
+		</div>
+	</header>
+<%_ } _%>
+
+<%
+	
+		echo(`
+			<div
+				class="slds-col"
+			>
+		`);
+
+		if (isPng || isSvg || isGif || isJpeg) {
+			echo(`
+				<div
+					class="slds-scrollable"
+					style="height: ${mainContentScrollableAreaHeight}px; margin-bottom: ${footerHeight}px;"
+				>
+					<img
+						class="screenshot auto-replace is-image "
+						id="screenshot--slide-${nodeIndex}"
+						src="${mainContentWebRootUrl}"
+					>
+				</div>
+			`);
+		} else if (isEjs) {
+			echo(`
+				<div
+					class="slds-scrollable"
+				>
+			`);
+				echo(include(mainContentWebRootUrl))
+			echo(`
+				</div>
+			`);
+		} else if (isMp4) {
+			echo(`
+				<video
+					autoplay
+					class="auto-replace is-video "
+					id="screenshot-wrapper--slide-${nodeIndex}"
+					playsinline
+				>
+					<source
+						class="screenshot auto-replace "
+						id="screenshot--slide-${nodeIndex}"
+						src="${mainContentWebRootUrl}"
+						type="video/mp4"
+					>
+					Your browser does not support the video tag.
+				</video>
+			`);
+		}
+
+		echo(`</div>`)
+	
+
+%>
+
+
+<%_ if (showFooter) { _%>
+	<footer class="magick-flows-stickey-footer_container slds-col">
+		<img
+			id="sticky-footer--slide-<%=nodeIndex%>"
+			class="sticky-footer "
+			src="<%=footerWebRootUrl%>"
+		/>
+	</footer>
+<%_ } _%>
+</div>
+
+
+<%_ }); _%>
+
+<div class="preload-images">
+<%- preLoadImages %>
+</div>
+
+<div class="notification magick-flows--slide-6 magick-flows-slide"></div>
+
+<%_
+console.log(`...end \`engine/includes/magick-flows/magick-flows-contents.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

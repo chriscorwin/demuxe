@@ -1,0 +1,24 @@
+<%-
+console.group(`
+============================================================
+Demuxe: including \`engine/magick-flows-dashboard.ejs\` now...
+------------------------------------------------------------
+`);
+%>
+<%- 
+	include(
+		'wrapper.ejs', 
+		{ 
+			title: 'Magick Flows Dashboard', 
+			headerVariant: 'default', 
+			siteSection: 'mobile', 
+			pageContents: 'includes/magick-flows/magick-flows-dashboard-contents'
+		}
+	);
+%>
+<%_
+console.log(`...end \`engine/magick-flows-dashboard.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

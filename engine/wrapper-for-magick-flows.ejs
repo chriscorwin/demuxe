@@ -1,0 +1,47 @@
+<%_
+console.group(`
+============================================================
+Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
+------------------------------------------------------------
+`);
+%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include('includes/global/head') _%>
+		<% if (locals.siteSection) { %>
+			<%- include(`includes/${locals.siteSection}/${locals.siteSection}-head`) _%>
+		<% } %>
+		<% if (locals.urlSlug && (locals.urlSlug != 'bbva-atm' || locals.urlSlug != 'ga360')) { %>
+			<%- include(`includes/mobile/mobile-meta-attributes-for-ios-webapp`) _%>
+		<% } %>
+
+	</head>
+
+	<body class="magick-flow">
+
+		<% if (locals.siteSection) { %>
+		<div id="content-wrapper"  class="container magick-flow_content-wrapper slds-transition-hide  ">
+			<div id="content" class="app-switcher-one magick-flow_content fake-the-dock">
+				<%- include(`includes/${locals.siteSection}/${locals.siteSection}-contents`) _%>
+			</div>
+		</div>
+		<% } %>
+
+
+		<%- include('components/toast', {
+			contents: 'Will be available only under ‘Northern Trail Outfitters - Apparel&rsquo; account as &lsquo;Winter Jackets &ndash; New High Value&rsquo;',
+			title: '&lsquo;Winter Jackets Propensity Customers&rsquo; segment provisioned successfully.',
+			theme: 'success'			
+		}) %>
+
+
+		<%- include('includes/global/footer-scripts') %>
+	</body>
+</html>
+<%_
+console.log(`...end \`engine/wrapper-for-magick-flows.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

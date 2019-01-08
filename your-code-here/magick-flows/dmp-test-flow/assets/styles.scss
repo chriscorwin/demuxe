@@ -1,0 +1,41 @@
+$numberOfSlides: 13;
+$widthOfSlideValue: 1280;
+$heightOfSlideValue: 720;
+$widthOfGutterValue: 20;
+
+$widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
+$heightOfAppSwitcher: $heightOfSlideValue + 0px;
+$heightOfSlide: $heightOfSlideValue + 0px;
+$widthOfSlide: $widthOfSlideValue + 0px;
+
+
+
+/* This is done to preload images and reduce load flicker */
+body::after {
+	backface-visibility: visible;
+	content: url('/images/snake-pit-popup.png')
+
+
+		url('/magick-flows/bbva-atm/main/0000.png')
+		url('/magick-flows/bbva-atm/main/0101.png')
+		url('/magick-flows/bbva-atm/main/0202.png')
+		url('/magick-flows/bbva-atm/main/0303.png')
+		url('/magick-flows/bbva-atm/main/0404.png')
+		url('/magick-flows/bbva-atm/main/0505.png')
+		url('/magick-flows/bbva-atm/main/0606.png')
+		url('/magick-flows/bbva-atm/main/0707.png')
+		url('/magick-flows/bbva-atm/main/0808.png')
+		url('/magick-flows/bbva-atm/main/0909.png')
+		url('/magick-flows/bbva-atm/main/1010.png')
+		url('/magick-flows/bbva-atm/main/1111.png')
+	;
+
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	z-index: -1;
+}
+
+
+@import "./../../../../engine/styles/magick-flows.scss";

@@ -1,0 +1,167 @@
+
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+	-webkit-text-size-adjust: none;				/* prevent webkit from resizing text to fit */
+	-webkit-touch-callout: none;				/* prevent callout to copy image, etc when tap to hold */
+}
+
+body {
+	background: white;
+	font-family: "Helvetica Neue", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+body, .container {
+	background: url('/images/home-background.jpg') no-repeat top left;
+	background-size: 100% 100%;
+	height: $heightOfAppSwitcher;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: $widthOfSlide;
+}
+
+
+
+.magick-flows {
+	&-slide {
+		background-color: transparent;
+	}
+}
+
+
+.app-switcher-one {
+	height: $heightOfAppSwitcher;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition: 400ms transform, 800ms left;
+	width: $widthOfAppSwitcher;
+
+	&.shrink {
+		transform: scale(0.75);
+		will-change: transform;
+		.magick-flows--slide {
+			// I'm pretty sure this gets overridden later, but, in the meantime... is this what we want? It seems way too generic.
+			// In fact, I went and looked and this class is not used _at all_, though, it may be what `.magick-flows-slide` _should_ be?
+			background-color: white;
+		}
+	}
+
+	&.rounded-corners {
+		.magick-flows-slide {
+			border-radius: 2rem;
+			background-clip: border-box;
+			overflow: hidden;
+			// background-color: white;
+			box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
+
+			.slds-scrollable {
+				max-height: $heightOfAppSwitcher;
+				height: $heightOfAppSwitcher;
+			}
+
+			&.notification {
+				background-color: transparent;
+			}
+		}
+	}
+
+	&.slide-left-0 {
+		$theValue: (($widthOfSlideValue + $widthOfGutterValue) -  ($widthOfGutterValue * 2.5)) * -1px;
+		left: $theValue;
+	}
+}
+
+
+
+@for $i from 0 through $numberOfSlides {
+	$theValue: ($widthOfSlideValue + $widthOfGutterValue) * $i;
+
+	.app-switcher-one.be-left-#{$i} {
+		// left: -#{$theValue}px;
+		left: $theValue * -1px;
+		transition: none !important;
+		will-change: transform, left;
+	}
+	.app-switcher-one.slide-left-#{$i} {
+		left: $theValue * -1px;
+	}
+
+
+
+	.magick-flows--slide-#{$i} {
+		height: $heightOfSlideValue + 0px;
+		position: absolute;
+		top: 0;
+		width: $widthOfSlideValue + 0px;
+		left: $theValue + 0px;
+	}
+}
+
+
+
+footer.magick-flows-stickey-footer_container {
+	position: absolute;
+	bottom: 0;
+}
+
+
+/**
+ * @summary Hides an element from the page by setting the opacity property set to `0`
+ *
+ * @selector .transition-hide
+ * @notes This works like the `.slds-hidden` class and reserves the space but allows you to add the `transition` property to transition the speed that it is shown or hidden.
+ * @modifier
+ */
+.slds-transition-hide {
+  transition: opacity 300ms ease-in-out;
+  will-change: opacity;
+  // transition-delay: 0s;
+  opacity: 0; 
+}
+
+// .slds-hide {
+// 	transition: opacity 0.25s ease-in-out;
+// 	will-change: opacity;
+// 	opacity: 0; 
+//   display: initial !important;
+// }
+	/**
+ * @summary Shows the element using the opacity property set to `1`
+ *
+ * @selector .transition-show
+ * @notes This is toggled on the element. `.slds-transition-hide` class is removed and `.slds-transition-show` is added.
+ * @modifier
+ */
+.slds-transition-show {
+	transition: opacity 300ms ease-in-out;
+	will-change: opacity;
+	opacity: 1; 
+}
+
+
+
+.preload-images {
+	position: absolute;
+	top: 1px;
+	left: 1px;
+}
+
+
+#content.app-switcher-one.be-left-0 {
+	opacity: 1;
+	transition: transform 500ms, opacity 600ms, left 0ms;
+}
+#content.app-switcher-one.be-left-0.fake-the-dock {
+	transform: scale(0.2, 0.2) rotatex(68deg) translateY(713%) translateX(-199.7%);
+	background: rgba(0, 0, 0, 0.34);
+	box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
+	transition: transform 500ms, opacity 600ms, left 125ms !important;
+	opacity: 0;
+}
+

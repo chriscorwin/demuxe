@@ -1,0 +1,21 @@
+<%_
+console.group(`
+============================================================
+Demuxe: including \`engine/includes/magick-flows/magick-flows-head.ejs\` now...
+------------------------------------------------------------
+
+Here we shall attempt to find and include a style sheet specific to this Magick Flow.
+
+We will look here:
+
+\`magick-flows/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}/assets/styles.scss\`
+
+`);
+%>
+<link rel="stylesheet" href="magick-flows/<%=locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]%>/assets/styles.css">
+<%_
+console.log(`...end \`engine/includes/magick-flows/magick-flows-head.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

@@ -1,3 +1,4 @@
+/* This should be done to preload images and reduce load flicker */
 @font-face {
   font-family: 'Salesforce Sans Light';
   src: url("/fonts/webfonts/SalesforceSans-Light.woff2") format("woff2"), url("/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
@@ -37,23 +38,6 @@
   font-weight: 700;
 }
 
-html {
-  background-color: #fdfdfd;
-}
-
-body.has-debug .is-ssi-block {
-  display: inline-block;
-  outline: 1px solid red;
-}
-
-code, var {
-  background-color: #eee;
-}
-
-#main-container {
-  margin: auto;
-}
-
 /**
  * @summary Hides an element from the page by setting the opacity property set to `0`
  *
@@ -62,7 +46,7 @@ code, var {
  * @modifier
  */
 .slds-transition-hide {
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 300ms ease-in-out;
   will-change: opacity;
   opacity: 0;
 }
@@ -75,7 +59,7 @@ code, var {
  * @modifier
  */
 .slds-transition-show {
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 300ms ease-in-out;
   will-change: opacity;
   opacity: 1;
 }
