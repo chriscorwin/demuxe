@@ -17,13 +17,12 @@ _%>
 <%_
 	let showMetaDataMissingError = true;
 	let thisMagickFlowMetaData = thisMagickFlowConfig.metaData;
-	let thisMagickFlowMetaData2 = thisMagickFlowConfig.metaData2;
 
 	const webRootPath = `${locals.magickFlows.directoryName}/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}`;
 	const mainContentPath = `${webRootPath}/main/`;
 	const assetsContentPath = `${webRootPath}/assets/`;
 
-	thisMagickFlowMetaData2.forEach(function(node, nodeIndex) {
+	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
 
 
 		const mainContentWebRootUrl = `${mainContentPath}${node.fileName}`;

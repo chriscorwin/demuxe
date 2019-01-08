@@ -21,6 +21,27 @@ const config = require('./config/config.js')();
 const app = express();
 
 
+if (process.env.DEBUG === "true") {
+	console.debug = console.log;
+}
+
+console.group(`
+============================================================
+Demuxe: Express Server up and running...
+------------------------------------------------------------
+`);
+
+console.log('Express server started');
+console.log(`port: ${config.port}`);
+console.log(`process.env.NODE_ENV ${process.env.NODE_ENV}`);
+console.log(`brandTheme: ${config.brandTheme}`);
+console.log(`productTemplate: ${config.productTemplate}`);
+
+console.debug('config data');
+console.debug(`[ app.js:39 ] config: `, util.inspect(config, { showHidden: false, depth: null, colors: true }));
+
+console.groupEnd();
+
 // view engine setup
 // https://expressjs.com/en/4x/api.html#app.set
 // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
@@ -179,46 +200,6 @@ app.use((err, req, res) => {
 });
 
 module.exports = app;
-
-
-
-console.group(`
-============================================================
-Demuxe: Express Server up and running...
-------------------------------------------------------------
-`);
-
-if (process.env.DEBUG === "true") {
-	console.group(`
-============================================================
-Demuxe: config data
-------------------------------------------------------------
-	`);
-	console.log(`[ app.js:197 ] config: `, util.inspect(config, { showHidden: false, depth: 2, colors: true }));
-	console.log(`...end config data [ app.js:197 ]
-------------------------------------------------------------
-You can increase the depth to which this log statement digs into objects by
-editing \`app.js:197\`
-
-If you are using a good enough terminal emulator, such as iTerm for macOS,
-you can even *command + click* on the filename above and it'll launch your editor to
-the right place.
-
-You're welcome.
-------------------------------------------------------------`);
-	console.groupEnd();
-}
-
-
-console.log('Express server started');
-console.log(`port: ${config.port}`);
-console.log(`process.env.NODE_ENV ${process.env.NODE_ENV}`);
-console.log(`brandTheme: ${config.brandTheme}`);
-console.log(`productTemplate: ${config.productTemplate}`);
-
-console.groupEnd();
-
-
 
 console.log(`...end \`app.js\`
 ------------------------------------------------------------
