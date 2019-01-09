@@ -17,7 +17,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="slds-context-bar slds-p-left_medium" id="primaryNav"></div>
+	<div class="slds-context-bar slds-p-left_medium" id="primaryNav">
+		<%- include('includes/global/global-nav'); %>
+	</div>
 </header>
 <div id="subheader-wrapper" class="slds-p-around_medium slds-m-bottom_small<%= locals.headerVariant === 'einstein' ? ' einstein' : '' %>">
 	<% if (locals.breadcrumbs) { %>

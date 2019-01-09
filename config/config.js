@@ -37,8 +37,12 @@ module.exports = function() {
 
     // merge default with env config, overwriting defaults
     configData = { ...defaultConfigData, ...envConfigData };
-    configData.localization = require(`../brand-themes/${configData.brandTheme}/localization.js`);
 
+    const defaultProductConfig = require(`../product-templates/${configData.productTemplate}/default-config.js`);
+    const brandThemeConfig = require(`../brand-themes/${configData.brandTheme}/localization.js`);
+    configData.localization = Object.assign({}, defaultProductConfig, brandThemeConfig);
+
+    console.dir(configData.localization.navData);
 
 
     // view engine setup
