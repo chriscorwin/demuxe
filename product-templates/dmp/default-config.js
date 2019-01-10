@@ -5,7 +5,7 @@ module.exports = {
 	navData: {
 		accountNavItems: [],
 		navItems: [ {
-				label: 'Overview2',
+				label: 'Overview',
 				href: `/`,
 				isActive: (activePage) => activePage === 'index'
 			},
