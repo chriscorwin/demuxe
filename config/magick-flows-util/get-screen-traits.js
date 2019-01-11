@@ -1,4 +1,14 @@
+console.group(`
+============================================================
+Demuxe: Running \`config/magick-flows-util/get-screen-traits.js\` now...
+------------------------------------------------------------
+`);
+const util = require('util');
 const possibleTraits = require('./traits/index');
+
+if (process.env.DEBUG === "true") {
+	console.debug = console.log;
+}
 
 const getScreenTraits = (screenInfo) => {
 	// screens without IDs can't have data. Abort.
@@ -14,6 +24,7 @@ const getScreenTraits = (screenInfo) => {
 		(ids, trait) => `${ids}|${trait.id}`,
 		''
 	);
+	
 	if ( !screenInfo.fileName.match(possibleTraitIds) ) return traitsData;
 
 	const relevantAssets = screenInfo.assetFiles.filter(asset => {
@@ -33,18 +44,89 @@ const getScreenTraits = (screenInfo) => {
 			traitsData = trait.addTraitData(traitsData, screenInfo, assetForTrait, assetFileIndex);
 		} else {
 			const requiredTraitNames = requiredTraits.reduce((traits, trait) => `${traits}\n ${trait.id}`, '');
-			console.warn(`
-			YOUR DEMO MIGHT BE BROKEN!
-			The trait '${trait.id}' is indicated as being required by ${screenInfo.fileName}, 
-			but no asset file was found among the possible assets present in Demuxe.
-			
-			The following asset files were found and determined to be associated with this screen:`);
-			console.dir(relevantAssets);
-			console.warn(`
-			The following traits were determined to be required by this screen: ${requiredTraitNames}
-			
-			The following is a listing of all discovered asset files within Magick Flows itself:`);
-			console.dir(screenInfo.assetFiles)
+			console.error('\u0007');
+
+			const screenInfoFileNameFormattedForConsoleOutput = util.inspect(screenInfo.fileName, { showHidden: true, depth: null, colors: true });
+			const screenInfoFormattedForConsoleOutput = util.inspect(screenInfo, { showHidden: false, depth: 3, colors: true });
+			const traitIdFormattedForConsoleOutput = util.inspect(trait.id, { showHidden: false, depth: 3, colors: true });
+			const relevantAssetsFormattedForConsoleOutput = util.inspect(relevantAssets, { showHidden: false, depth: 3, colors: true });
+
+			console.error(`
+
+
+
+
+============================================================
+[ERROR] Your demo is broken!
+============================================================
+
+The trait ${traitIdFormattedForConsoleOutput} is indicated as being 
+required by the file:
+
+	${screenInfoFileNameFormattedForConsoleOutput}
+
+...however, no asset file was found among the possible 
+assets present in Demuxe.
+`);
+
+if ( relevantAssets.length === 0 ) {
+	console.warn(`
+As a matter of fact, the systen found zero (0) assets 
+associated with this screen.
+------------------------------------------------------------
+
+Some more information about this screen: 
+	${screenInfoFormattedForConsoleOutput}
+`);
+
+} else {
+	console.info(`
+The following asset files were found and determined to be 
+associated with this screen:
+
+	${relevantAssetsFormattedForConsoleOutput}
+------------------------------------------------------------
+
+Some more information about this screen: 
+	${screenInfoFormattedForConsoleOutput}
+
+`);
+
+
+}
+console.warn(`
+The following traits were determined to be required by this 
+screen:
+
+	${requiredTraitNames}
+`);
+
+
+if (process.env.DEBUG === "true") {
+	console.info(`
+============================================================
+[ERROR] Debug Information
+============================================================
+
+Note that because you are in 'dev' mode this error has 
+caused the server to fail to start.
+
+If this is annoying you, try starting the server with local 
+instead of dev ;)
+	`);
+	process.exit(126);
+} else if (process.env.NODE_ENV === "local") {
+	console.info(`
+
+Note that if you were in 'dev' mode this error would have 
+caused the server to fail to start.
+
+So if you find that it took you way too long to figure out 
+that this demo is borked, try starting the server with dev 
+instead of local.
+
+`);
+}
 		}
 	});
 
@@ -52,3 +134,14 @@ const getScreenTraits = (screenInfo) => {
 }
 
 module.exports = getScreenTraits;
+
+console.log(`...end: \`config/magick-flows-util/get-screen-traits.js\`
+------------------------------------------------------------
+
+
+
+
+
+
+`);
+console.groupEnd();
