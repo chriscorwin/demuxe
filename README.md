@@ -267,7 +267,7 @@ While the RPD Controller exists in `/engine/`, it must be explicitly included in
 
 See `/product-templates/dmp/wrapper.ejs` for an example of this.
 
-
+Append `?showRPDController=true` to your URL to make the page load with RPD Controller visible. Enter the KONAMI code (up up down down left right left right b a) at any time to toggle RPD Controller visibility.
 
 # Hall of Fame
 

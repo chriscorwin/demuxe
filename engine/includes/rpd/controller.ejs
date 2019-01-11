@@ -1,4 +1,30 @@
-<div style="height: 500px; min-width: 615px; overflow-x: auto;">
+<% const showRPDController = locals.sanitizedQueryParams.showRPDController; %>
+<script>
+<%- !locals.sanitizedQueryParams.disableKonami ? `console.log('KONAMI CODE LISTENER ACTIVE. To deactivate, add ?disableKonami to URL. UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A to show/hide RPD Controller');` : '' %>
+console.log('<%= !showRPDController ? `RPD Controller hidden. Add ?showRPDController=true to URL to show.` : `RPD Controller visible` %>');
+
+const showHideRPDController = () => {
+	const rpdController = document.getElementById('RPDController');
+
+	if (rpdController.style.display === 'none') {
+		rpdController.style.display = 'block';
+	} else {
+		rpdController.style.display = 'none'
+	}
+}
+
+let cursor = 0;
+const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+document.addEventListener('keydown', (e) => {
+	cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
+	if (cursor == KONAMI_CODE.length) {
+		showHideRPDController();
+		cursor = 0;
+	};
+});
+</script>
+
+<div id="RPDController" style="height: 500px; min-width: 615px; overflow-x: auto; <%= showRPDController ? '' : 'display: none;' %>">
 	<div class="slds-docked_container">
 		<section class="slds-docked-composer slds-grid slds-grid_vertical slds-is-open" role="dialog" aria-labelledby="dialog-heading-id-1" aria-describedby="dialog-content-id-1">
 			<header class="slds-docked-composer__header slds-grid slds-shrink-none" aria-live="assertive">
