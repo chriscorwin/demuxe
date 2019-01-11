@@ -1,28 +1,4 @@
 <% const showRPDController = locals.sanitizedQueryParams.showRPDController; %>
-<script>
-<%- !locals.sanitizedQueryParams.disableKonami ? `console.log('KONAMI CODE LISTENER ACTIVE. To deactivate, add ?disableKonami to URL. UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A to show/hide RPD Controller');` : '' %>
-console.log('<%= !showRPDController ? `RPD Controller hidden. Add ?showRPDController=true to URL to show.` : `RPD Controller visible` %>');
-
-const showHideRPDController = () => {
-	const rpdController = document.getElementById('RPDController');
-
-	if (rpdController.style.display === 'none') {
-		rpdController.style.display = 'block';
-	} else {
-		rpdController.style.display = 'none'
-	}
-}
-
-let cursor = 0;
-const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-document.addEventListener('keydown', (e) => {
-	cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
-	if (cursor == KONAMI_CODE.length) {
-		showHideRPDController();
-		cursor = 0;
-	};
-});
-</script>
 
 <div id="RPDController" style="height: 500px; min-width: 615px; overflow-x: auto; <%= showRPDController ? '' : 'display: none;' %>">
 	<div class="slds-docked_container">
@@ -41,7 +17,7 @@ document.addEventListener('keydown', (e) => {
 					</div>
 				</div>
 				<div class="slds-col_bump-left slds-shrink-none">
-					<button class="slds-button slds-button_icon slds-button_icon" title="Minimize window">
+					<button id="minimizeRPDController" class="slds-button slds-button_icon slds-button_icon" title="Minimize window">
 						<svg class="slds-button__icon" aria-hidden="true">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#minimize_window" />
 						</svg>
@@ -53,7 +29,7 @@ document.addEventListener('keydown', (e) => {
 						</svg>
 						<span class="slds-assistive-text">Expand RPD Controller</span>
 					</button -->
-					<button class="slds-button slds-button_icon slds-button_icon" title="Close">
+					<button id="closeRPDController" class="slds-button slds-button_icon slds-button_icon" title="Close">
 						<svg class="slds-button__icon" aria-hidden="true">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#close" />
 						</svg>
@@ -94,3 +70,43 @@ document.addEventListener('keydown', (e) => {
 		</section>
 	</div>
 </div>
+
+<script>
+<%- !locals.sanitizedQueryParams.disableKonami ? `console.log('KONAMI CODE LISTENER ACTIVE. To deactivate, add ?disableKonami to URL. UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A to show/hide RPD Controller');` : '' %>
+console.log('<%= !showRPDController ? `RPD Controller hidden. Add ?showRPDController=true to URL to show.` : `RPD Controller visible` %>');
+
+const rpdController = document.getElementById('RPDController');
+
+const showHideRPDController = () => {
+	if (rpdController.style.display === 'none') {
+		rpdController.style.display = 'block';
+	} else {
+		rpdController.style.display = 'none'
+	}
+}
+
+const toggleRPDController = () => {
+	const sectionStyles = document.querySelector('#RPDController > div > section').classList;
+
+	if (sectionStyles.contains('slds-is-open')) {
+		sectionStyles.remove('slds-is-open');
+		sectionStyles.add('slds-is-closed');
+	} else {
+		sectionStyles.add('slds-is-open');
+		sectionStyles.remove('slds-is-closed');
+	}
+}
+
+let cursor = 0;
+const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+document.addEventListener('keydown', (e) => {
+	cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
+	if (cursor == KONAMI_CODE.length) {
+		showHideRPDController();
+		cursor = 0;
+	};
+});
+
+document.querySelector('#closeRPDController').addEventListener('click', showHideRPDController);
+document.querySelector('#minimizeRPDController').addEventListener('click', toggleRPDController);
+</script>
