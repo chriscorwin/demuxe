@@ -72,7 +72,6 @@
 </div>
 
 <script>
-<%- !locals.sanitizedQueryParams.disableKonami ? `console.log('KONAMI CODE LISTENER ACTIVE. To deactivate, add ?disableKonami to URL. UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A to show/hide RPD Controller');` : '' %>
 console.log('<%= !showRPDController ? `RPD Controller hidden. Add ?showRPDController=true to URL to show.` : `RPD Controller visible` %>');
 
 const rpdController = document.getElementById('RPDController');
@@ -97,6 +96,8 @@ const toggleRPDController = () => {
 	}
 }
 
+<% if (!locals.sanitizedQueryParams.disableKonami) { %>
+console.log('KONAMI CODE LISTENER ACTIVE. To deactivate, add ?disableKonami=true to URL. UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A to show/hide RPD Controller');
 let cursor = 0;
 const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 document.addEventListener('keydown', (e) => {
@@ -106,6 +107,9 @@ document.addEventListener('keydown', (e) => {
 		cursor = 0;
 	};
 });
+<% } else { %>
+	console.log('KONAMI CODE LISTENER DISABLED.');
+<% } %>
 
 document.querySelector('#closeRPDController').addEventListener('click', showHideRPDController);
 document.querySelector('#minimizeRPDController').addEventListener('click', toggleRPDController);
