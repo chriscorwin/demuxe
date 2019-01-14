@@ -61,6 +61,10 @@ const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), r
 
 	configData.magickFlowURLS = magickFlowURLS;
 
+	// now that we have settled on what our Magick Flows config data is, we will
+	// use it to programaticallly prepare some SCSS variables for each one.
+
+
 	return configData;
 };
 

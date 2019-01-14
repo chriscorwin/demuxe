@@ -1,4 +1,9 @@
-$numberOfSlides: 12;
+@import "./variables.scss";
+
+$numberOfSlides: 1 !default;
+$preloadImagesData: "url('/fake.png')" !default;
+
+
 $widthOfSlideValue: 1024;
 $heightOfSlideValue: 768;
 $widthOfGutterValue: 20;
@@ -11,23 +16,8 @@ $widthOfSlide: $widthOfSlideValue + 0px;
 /* This is done to preload images and reduce load flicker */
 body::after {
 	backface-visibility: visible;
-	content: url('/images/snake-pit-popup.png')
-
-
-		url('/magick-flows/bbva-atm/main/0000.png')
-		url('/magick-flows/bbva-atm/main/0101.png')
-		url('/magick-flows/bbva-atm/main/0202.png')
-		url('/magick-flows/bbva-atm/main/0303.png')
-		url('/magick-flows/bbva-atm/main/0404.png')
-		url('/magick-flows/bbva-atm/main/0505.png')
-		url('/magick-flows/bbva-atm/main/0606.png')
-		url('/magick-flows/bbva-atm/main/0707.png')
-		url('/magick-flows/bbva-atm/main/0808.png')
-		url('/magick-flows/bbva-atm/main/0909.png')
-		url('/magick-flows/bbva-atm/main/1010.png')
-		url('/magick-flows/bbva-atm/main/1111.png')
-	;
-
+	content: $preloadImagesData;
+	outline:1px solid red;
 	height: 0;
 	overflow: hidden;
 	position: absolute;
