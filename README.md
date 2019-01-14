@@ -53,11 +53,10 @@ Demos _may_:
 # How to Use
 - Create a fork of this repository, or a new topic branch, for each new demo.
 - Create a discrete Heroku pipeline for each new demo.
-- Do **not** commit demos directly back to master in this repository. 
 - In the retrospective phase of a demo, update master in this repo:
-	- Identify and separate out components within your template.
-	- Review and update existing components in your template.
-	- Review and update your template.
+	- Identify and separate out components within your demo.
+	- Review and update existing components in your demo.
+	- Review and update your product template.
 	- Thoughtfully incorporate new ideas for Demuxe itself based on lessons learned.
 
 
@@ -162,7 +161,16 @@ Each demo must have an explicitly defined "demo flow". This is created as the _f
 
 Shall live on your machine or in corporate Google Drive. Typically these will be sketch files. These should never be merged into Demuxe because it will bloat the repo and eventually make it so you literally _can't push your changes_.
 
-# Brand Theming
+# Demuxe Structure
+
+Demuxe consists of:
+
+1. Engine (located under `/engine/`). DO NOT MODIFY this while making a demo.
+2. Product Templates (located under `/product-templates/`). DO NOT MODIFY an existing product template while making a demo, put any changes you want to make to a template into `/your-code-here/` instead).
+3. Brand Themes (located under `/brand-themes/`). PLEASE MODIFY during demo creation. This is the theme for your demo. You will nearly always be creating a new brand-theme during your demo creation.
+4. Your demo specific modifications (located under `/your-code-here/`). PLEASE MODIFY during your demo creation. Any modifications you would like to make to the engine or product templates during demo creation should instead be made here. These modifications include RPD Components.
+
+## Brand Theming
 Enables brand re-use across demos, and brand-theming demos, quickly and easily.
 
 All brand assets and verbiage associated with that brand shall live in `/brand-themes/{brand-name}/`. 
@@ -185,11 +193,11 @@ NOTE: The folder name is named after the brand (eg, `/brand-themes/ducati/`) but
 `/brand-themes/{brand-name}/localization.js` typically imports all sorts of other localization/data from other files so that it isn't just one huge massive JS Object in a single file. See [Sessions and State](#sessions-and-state) for more info about dynamic demo variables contained in these JSON objects.
 
 
-## Sketch -> SVG Files
+### Sketch -> SVG Files
 
 There is a [deep dive on using SVGs in demos](svg-quirks-deep-dive.md) available.
 
-### Using SVGs summary
+#### Using SVGs summary
 
 SVGs can be used to great effect in demos, but can exhibit layout quirks, where text elements appear misaligned.
 
@@ -216,7 +224,7 @@ Also, SVG files do not have access to fonts the same way HTML elements do, so we
 
 
 
-# Product Templates
+## Product Templates
 
 Product Templates are page shells that can be quickly used to re-create different products.
 
@@ -227,7 +235,7 @@ Product Templates are page shells that can be quickly used to re-create differen
 - The more complete our library of product templates the better.
 - Once per quarter existing templates shall be audited with designers and updated. In this manner when we are asked to quickly complete a demo, we will have an even better jumping off point.
 
-## Components
+### Components
 Components:
 - Are _single file_ modules containing all JS, CSS, and HTML required to display the component on the page.
 
@@ -239,6 +247,27 @@ Components:
 	The intent is that you ought to be able to copy a component out of any template into whatever demo you are building regardless of the template the component was originally built for.
 
 
+## Your Code Here
+
+Anything changes you would like to make to `/engine/` or `/product-template/[product]/` must be made here instead. Place a copy of the file you would like to modify here (at the same path it existed at in its original location, eg: `/product-template/dmp/includes/file.ejs` would be copied to `/your-code-here/includes/file.ejs`) and make your modifications.
+
+### RPD Tool
+
+RPD tool allows you to add RPD Components (aka "Rapid Components", usually "Rapid Divs") to your page. Rapid Components allow you to quickly add components with hover, click, and drag & drop interactions to your page without having to write any code.
+
+#### RPD Controller
+
+The RPD Controller looks for any RPD Components placed within `/your-code-here/rpd-components/` and adds them to the demo at the proper time and place.
+
+The RPD Controller also allows you to edit RPD Components and gives you the code required to insert these components into your demo (they must be placed within `/your-code-here/rpd-components/`).
+
+While the RPD Controller exists in `/engine/`, it must be explicitly included in each product-template. Do this with a single line of code just before your closing `</body>` tag in your product template's EJS wrapper:
+
+`<%- include('includes/rpd/controller.ejs') %>`
+
+See `/product-templates/dmp/wrapper.ejs` for an example of this.
+
+Append `?showRPDController=true` to your URL to make the page load with RPD Controller visible. Enter the KONAMI code (up up down down left right left right b a) at any time to toggle RPD Controller visibility (`?disableKonami=true` to disable KONAMI code listener).
 
 # Hall of Fame
 
