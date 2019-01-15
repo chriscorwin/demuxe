@@ -2,7 +2,8 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/images/snake-pit-popup.png");
+  content: url("/magick-flows/tm-mobile/main/0000___home.png") url("/magick-flows/tm-mobile/main/0101___ID=baseball___DATA=use-slide-transition__slide-transition_app-switch.png") url("/magick-flows/tm-mobile/main/0202.png") url("/magick-flows/tm-mobile/main/0303.png") url("/magick-flows/tm-mobile/main/0404.png") url("/magick-flows/tm-mobile/main/0505___ID=robot-puke-notificaiton-1.png") url("/magick-flows/tm-mobile/main/0606___ID=robot-puke-notificaiton-2___DATA=show-ios-notification.png") url("/magick-flows/tm-mobile/main/0707___ID=instagram-2___DATA=use-slide-transition__slide-transition_app-switch.png") url("/magick-flows/tm-mobile/main/0808.png") url("/magick-flows/tm-mobile/assets/robot-puke—notification.png");
+  outline: 1px solid red;
   height: 0;
   overflow: hidden;
   position: absolute;
@@ -48,7 +49,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 3140px;
+  width: 3535px;
 }
 
 .app-switcher-one.shrink {
@@ -240,6 +241,24 @@ body, .container {
   top: 0;
   width: 375px;
   left: 3160px;
+}
+
+.app-switcher-one.be-left-9 {
+  left: -3555px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-9 {
+  left: -3555px;
+}
+
+.magick-flows--slide-9 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 3555px;
 }
 
 footer.magick-flows-stickey-footer_container {

@@ -38,7 +38,7 @@ console.log(`brandTheme: ${config.brandTheme}`);
 console.log(`productTemplate: ${config.productTemplate}`);
 
 console.debug('config data');
-console.debug(`[ app.js:39 ] config: `, util.inspect(config, { showHidden: false, depth: null, colors: true }));
+console.debug(`[ app.js:39 ] config: `, util.inspect(config, { showHidden: false, depth: 1, colors: true }));
 
 console.groupEnd();
 
