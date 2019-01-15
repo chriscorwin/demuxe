@@ -1,4 +1,3 @@
-// Where the "sassGenerator" functions could looks something like
 const sassGenerator = {
 	sassVariable: function(name, value) {
 		return "$" + name + ": " + value + ";";
