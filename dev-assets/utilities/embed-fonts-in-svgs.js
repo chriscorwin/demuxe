@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const svgFontEmbedder = require('svg-font-embedder');
 
-const directoryToConvert = path.resolve(process.cwd(), argv._[0] || './your-code-here');
+const directoryToConvert = path.resolve(process.cwd(), argv._[0] || './demo-overrides');
 
 const svgFiles = svgFontEmbedder(directoryToConvert);
 

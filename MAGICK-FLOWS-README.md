@@ -8,11 +8,11 @@ In the simplest possible case, one simply need place one or more media files int
 
 ## Quick start
 
-- Duplicate the `/your-code-here/magick-flows/optical-illusions` directory, rename it to what you want. In this example we shall use `doot`.
-- In your new `/your-code-here/magick-flows/doot` directory, you will find a directory named `main`: this is where your main content goes.
+- Duplicate the `/demo-overrides/magick-flows/optical-illusions` directory, rename it to what you want. In this example we shall use `doot`.
+- In your new `/demo-overrides/magick-flows/doot` directory, you will find a directory named `main`: this is where your main content goes.
 - Name them whatever you want, they will be displayed one at a time, in alphanumeric order.
 - Assets accompnaying your new `doot` Magick Flow live in a sibling of `main`, called `assets`.
-- Edit the `/your-code-here/magick-flows/doot/assets/styles.scss` file. In it you shall find a variable telling the SASS system how many slides you have.
+- Edit the `/demo-overrides/magick-flows/doot/assets/styles.scss` file. In it you shall find a variable telling the SASS system how many slides you have.
 - Restart the server and go look at your new Magick Flow in the browser. You can find a handy link right to it in the terminal output of the server.
 
 

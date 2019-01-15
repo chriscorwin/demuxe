@@ -1,6 +1,8 @@
 {
+	"demoName": "BBVA DF 18 Keynote",
 	"brandTheme": "bbva",
-	"demoName": "BBVA DF 18",
+	"productTemplate": "dmp",
+	"demoVenue": "df18keynote",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -10,7 +12,7 @@
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
-	"productTemplate": "dmp",
+
 	"prod": {
 		"host": "https://dmp-dreamforce-2018.herokuapp.com/"
 	},
