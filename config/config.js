@@ -23,7 +23,10 @@ function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleErro
 
     fs.writeFile(scssVariablesFilePath, dataString, function(err){
         if(!err){
-            console.log(`[ config/config.js:31 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
+            // console.log(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
+        } else {
+            console.error(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
+
         }
     });
 }
@@ -78,7 +81,7 @@ module.exports = function() {
     configData = addMagickFlowsToConfig(configData);
 
     if (!configData.magickFlowURLS.length) {
-        console.warn(`WARNING: No magic flows were discovered`);
+        console.warn(`WARNING: No Magick Flows were discovered. This is pretty rare, since, the system comes with at lesat _one_ to show you how they work. Y'all okay?`);
     } else {
 
         // now that we have settled on what our Magick Flows config data is, we will
