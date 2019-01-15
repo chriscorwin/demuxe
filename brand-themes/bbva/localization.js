@@ -7,7 +7,6 @@ const segments = require('./segments');
 
 module.exports = {
 	account_name: 'BBVA',
-	body_class: 'slds-brand-band slds-brand-band_medium',
 	consumer_rights_management,
 	data_capture_sources,
 	einstein_segmentation,

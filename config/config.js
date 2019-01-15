@@ -39,8 +39,9 @@ module.exports = function() {
     configData = { ...defaultConfigData, ...envConfigData };
 
     const defaultProductConfig = require(`../product-templates/${configData.productTemplate}/default-config.js`);
+    const demoOverrideConfig = require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`);
     const brandThemeConfig = require(`../brand-themes/${configData.brandTheme}/localization.js`);
-    configData.localization = Object.assign({}, defaultProductConfig, brandThemeConfig);
+    configData.localization = Object.assign({}, defaultProductConfig, demoOverrideConfig, brandThemeConfig);
 
     console.dir(configData.localization.navData);
 
