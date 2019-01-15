@@ -81,7 +81,7 @@ module.exports = function() {
     configData = addMagickFlowsToConfig(configData);
 
     if (!configData.magickFlowURLS.length) {
-        console.warn(`WARNING: No Magick Flows were discovered. This is pretty rare, since, the system comes with at lesat _one_ to show you how they work. Y'all okay?`);
+        console.warn(`WARNING: No Magick Flows were discovered. This is pretty rare, since, the system comes with at least _one_ to show you how they work. Y'all okay?`);
     } else {
 
         // now that we have settled on what our Magick Flows config data is, we will
