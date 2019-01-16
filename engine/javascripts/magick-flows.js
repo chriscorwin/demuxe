@@ -168,7 +168,7 @@ function locationHashChanged(event) {
 
 	// for now these things are hard-coded as exceptions into this script.
 	// we'd like it to come from the names of the files/assets themselves
-	if ( magickFlowConfig.urlSlug === 'tm-mobile-tokyo' || magickFlowConfig.urlSlug === 'tm-mobile' ) {
+	if ( magickFlowConfig.urlSlug === 'tm-mobile-tokyo' || magickFlowConfig.urlSlug === 'tm-mobile' || magickFlowConfig.urlSlug === 'tm-mobile-new' ) {
 		if (clicks === 6) {
 			doNotifcation = true;
 			document.querySelector(`.notification`).classList.remove('slds-hide');
