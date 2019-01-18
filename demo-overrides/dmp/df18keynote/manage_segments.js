@@ -20,6 +20,6 @@ module.exports = {
 		],
 		save_action: () => {},
 		segment_description: '',
-		segment_name: 'Working Mom Mortgage Seekers'
+		segment_name: 'Target Audience'
 	}
 };

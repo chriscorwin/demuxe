@@ -1,8 +1,7 @@
 const consumer_rights_management = require('./consumer-rights-management');
 const einstein_segmentation = require('./einstein-segmentation');
 const data_capture_sources = require('./data-capture-sources');
-const manage_segments = require('./manage-segments');
-const overview = require('./overview');
+const manage_segments = require('./manage_segments');
 const segments = require('./segments');
 
 module.exports = {
@@ -12,6 +11,5 @@ module.exports = {
 	einstein_segmentation,
 	manage_segments,
 	NAME: 'BBVA',
-	overview,
 	segments	
 };
