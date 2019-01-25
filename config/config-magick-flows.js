@@ -14,25 +14,25 @@ if (process.env.DEBUG === "true") {
 
 // Creates config data objects for the magick flows based on provided directory.
 const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), recursionMax = 1000, retryCount = 0) => {
-	console.debug(`looking in ${dir}`);
+	// console.debug(`looking in ${dir}`);
 
 	configData.magickFlowDirectories = configData.magickFlowDirectories || []; // protects against them passing `null`
 
 	const directoryContents = fs.readdirSync(dir);
 	directoryContents.forEach(fileOrDirectory => {
-		console.debug('considering: ', fileOrDirectory);
+		// console.debug('considering: ', fileOrDirectory);
 		const fileOrDirectoryPath = path.join(dir, fileOrDirectory);
 
 		// We only care about directories.
 		if (!fs.statSync(fileOrDirectoryPath).isDirectory()) {
-			console.debug(`ignoring ${fileOrDirectoryPath}; it is not a directory.`)
+			// console.debug(`ignoring ${fileOrDirectoryPath}; it is not a directory.`)
 
 			return;
 		}
 
 		// Make sure this is the directory we actually want
 		if (fileOrDirectory !== configData.magickFlows.directoryName) {
-			console.debug(`ignoring ${fileOrDirectory}; ${fileOrDirectory} !== ${configData.magickFlows.directoryName}`)
+			// console.debug(`ignoring ${fileOrDirectory}; ${fileOrDirectory} !== ${configData.magickFlows.directoryName}`)
 
 			if (retryCount > recursionMax) {
 				console.error(`Arbitrary ${recursionMax + 1} retry maximum achieved! Congratulations, you have broken the app.`);

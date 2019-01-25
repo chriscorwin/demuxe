@@ -9,6 +9,7 @@ const fs = require('fs');
 const util = require('util');
 const sizeOf = require('image-size');
 const addMagickFlowsToConfig = require('./config-magick-flows');
+const sassGenerator = require('./magick-flows-util/sass-generator.js');
 
 
 
@@ -16,6 +17,23 @@ const addMagickFlowsToConfig = require('./config-magick-flows');
 // Satic data here, so that we do not have to generate the config data all for every environment unless we wanna
 let configData = null;
 
+function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleError) {
+    // Dynamically create "SASS variable declarations"
+    const dataString = sassGenerator.sassVariables(variables);
+
+    fs.writeFile(scssVariablesFilePath, dataString, function(err){
+        if(!err){
+            console.log(`[ config/config.js:31 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
+        }
+    });
+}
+
+function dynamicSassHandleSuccess(data){
+    console.log(`[ dynamicSassHandleSuccess ]: `, data);
+}
+function dynamicSassHandleError(data){
+    console.log(`[ dynamicSassHandleError ]: `, data);
+}
 
 
 
@@ -63,6 +81,35 @@ module.exports = function() {
     if (!configData.magickFlowURLS.length) {
         console.warn(`WARNING: No magic flows were discovered`);
     } else {
+
+        // now that we have settled on what our Magick Flows config data is, we will
+        // use it to programaticallly prepare some SCSS variables for each one.
+        configData.magickFlows.urlSlugs.forEach(magickFlowUrlSlug => {
+            const thisMagickFlowObject = configData.magickFlows[magickFlowUrlSlug];
+            const thisMagickFlowScreens = configData.magickFlows[magickFlowUrlSlug].screens;
+            const thisMagickFlowAssets = configData.magickFlows[magickFlowUrlSlug].assets;
+
+
+            const thisMagickFlowMainImagesForScssVariables = thisMagickFlowScreens.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.gif') || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+            const thisMagickFlowAssetsImagesForScssVariables = thisMagickFlowAssets.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.gif') || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+            const thisMagickFlowBackgroundImageVariable = [];
+
+            // iterate through the main images, add url and path to it
+            thisMagickFlowMainImagesForScssVariables.forEach(function(item){
+                thisMagickFlowBackgroundImageVariable.push(`url('/magick-flows/${magickFlowUrlSlug}/main/${item}')`);
+            });
+            // iterate through the assets images, add url and path to it
+            thisMagickFlowAssetsImagesForScssVariables.forEach(function(item){
+                thisMagickFlowBackgroundImageVariable.push(`url('/magick-flows/${magickFlowUrlSlug}/assets/${item}')`);
+            });
+
+            const scssVariablesFilePath = path.join(thisMagickFlowObject.fullAssetsPath, 'variables.scss')
+            dynamicSass(scssVariablesFilePath, {
+                'numberOfSlides': thisMagickFlowObject.numberOfScreens,
+                'preloadImagesData': thisMagickFlowBackgroundImageVariable.join('\r\n\t\t')
+            }, dynamicSassHandleSuccess, dynamicSassHandleError);
+        });
+
         console.group(`
         ============================================================
         Demuxe: Magick Flows Setup Information

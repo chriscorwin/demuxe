@@ -1,3 +1,15 @@
+/* This is done to preload images and reduce load flicker */
+body::after {
+  backface-visibility: visible;
+  content: url("/magick-flows/optical-illusions/main/loopy-loopy.jpg") url("/magick-flows/optical-illusions/main/no-really-those-are-parralel-lines.png") url("/magick-flows/optical-illusions/main/red-and-yellow-circles-spinning.gif") url("/magick-flows/optical-illusions/main/sliding-square-changes-colour-trick.gif") url("/magick-flows/optical-illusions/main/starry-night-optical-illusion.gif");
+  outline: 1px solid red;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
