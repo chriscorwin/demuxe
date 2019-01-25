@@ -1,6 +1,6 @@
-const rpdController = document.getElementById('RPDController');
-
 const showHideRPDController = () => {
+	const rpdController = document.getElementById('RPDController');
+
 	if (rpdController.style.display === 'none') {
 		rpdController.style.display = 'block';
 	} else {
@@ -35,3 +35,10 @@ const addListener = () => {
 
 document.querySelector('#closeRPDController').addEventListener('click', showHideRPDController);
 document.querySelector('#minimizeRPDController').addEventListener('click', toggleRPDController);
+
+const addRapidDiv = () => {
+	console.log('add rapid div');
+}
+
+
+document.querySelector('#addRapidDiv').addEventListener('click', addRapidDiv);
