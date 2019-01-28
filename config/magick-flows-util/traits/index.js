@@ -47,10 +47,12 @@
  to the module.exports in this file. Once you have done that, it will be magically
  taken into consideration by magick-flows.
 */
+const iosNotification = require('./ios-notification');
 const stickyHeader = require('./sticky-header');
 const stickyFooter = require('./sticky-footer');
 
 module.exports = [
+	iosNotification,
 	stickyHeader,
 	stickyFooter
 ];

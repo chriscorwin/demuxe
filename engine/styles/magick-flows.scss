@@ -26,6 +26,29 @@ body, .container {
 }
 
 
+.notification {
+	margin: 0 auto;
+	position: absolute;
+	transition: 125ms top ease-in-out;
+	width: 375px;
+	background-color: transparent;
+	height: 812px;
+	top: -210px;
+	transition: 125ms top ease-in-out;
+	will-change: top;
+
+}
+
+.notification.slide-in {
+	top: 0px;
+	transition: 125ms top ease-in-out;
+	will-change: top;
+	// transition-delay: 1000ms;
+}
+
+
+
+
 
 .magick-flows {
 	&-slide {
@@ -164,4 +187,5 @@ footer.magick-flows-stickey-footer_container {
 	transition: transform 500ms, opacity 600ms, left 125ms !important;
 	opacity: 0;
 }
+
 

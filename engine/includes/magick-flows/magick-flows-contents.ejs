@@ -22,6 +22,8 @@ _%>
 	const mainContentPath = `${webRootPath}/main/`;
 	const assetsContentPath = `${webRootPath}/assets/`;
 
+
+
 	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
 
 
@@ -33,14 +35,12 @@ _%>
 
 		let headerHeight = node.stickyHeaderHeight | 0;
 		let footerHeight = node.stickyFooterHeight | 0;
+		let iosNotificationHtmlOut = '';
 
 		const headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
 		const footerWebRootUrl = `${assetsContentPath}${node.stickyFooterFileName}`;
 
-
 		// Calculate the height of our scrollable area - 20 magick number for padding ¯\_(ツ)_/¯
-
-
 		let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 20);
 
 			// mainContentScrollableAreaHeight = ((node.dimensions.height - (headerHeight + footerHeight)) + 20);
@@ -77,6 +77,19 @@ _%>
 		`;
 
 
+
+		const showIosNotification = node.showIosNotification === true || false;
+		if ( showIosNotification === true ) {
+			const iosNotificationWebRootUrl = `${assetsContentPath}${node.iosNotificationFileName}`;
+			iosNotificationHtmlOut += `
+				<div
+					id="ios-notification--slide-${node.screensIndex}"
+					class="notification ios-notification ios-notification--slide-${node.screensIndex}  magick-flows-slide-asset"
+				><img src="${iosNotificationWebRootUrl}" /></div>
+			`
+		}
+
+
 _%>
 
 <div
@@ -89,7 +102,7 @@ _%>
 		<div class="magick-flows-stickey-header_container">
 			<img
 				id="sticky-header--slide-<%=nodeIndex%>"
-				class="sticky-footer "
+				class="sticky-header "
 				src="<%=headerWebRootUrl%>"
 			/>
 		</div>
@@ -116,6 +129,7 @@ _%>
 						src="${mainContentWebRootUrl}"
 					>
 				</div>
+				${iosNotificationHtmlOut}
 			`);
 		} else if (isEjs) {
 			echo(`
@@ -146,6 +160,8 @@ _%>
 			`);
 		}
 
+
+
 		echo(`</div>`)
 	
 
@@ -169,8 +185,6 @@ _%>
 <div class="preload-images">
 <%- preLoadImages %>
 </div>
-
-<div class="notification magick-flows--slide-6 magick-flows-slide"></div>
 
 <%_
 console.log(`...end \`engine/includes/magick-flows/magick-flows-contents.ejs\`
