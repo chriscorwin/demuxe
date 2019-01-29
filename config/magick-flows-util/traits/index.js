@@ -49,6 +49,7 @@
 */
 const drawerFromBottom = require('./drawer-from-bottom');
 const drawerFromLeft = require('./drawer-from-left');
+const drawerFromRight = require('./drawer-from-right');
 const iosNotification = require('./ios-notification');
 const stickyHeader = require('./sticky-header');
 const stickyFooter = require('./sticky-footer');
@@ -56,6 +57,7 @@ const stickyFooter = require('./sticky-footer');
 module.exports = [
 	drawerFromBottom,
 	drawerFromLeft,
+	drawerFromRight,
 	iosNotification,
 	stickyHeader,
 	stickyFooter

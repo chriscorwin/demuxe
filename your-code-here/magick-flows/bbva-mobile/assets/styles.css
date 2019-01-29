@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/bbva-mobile/main/0000___ID=google-search-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0099___ID=homepage-0___DATA=has-sticky-header__has-sticky-footer__show-drawer-from-left.png") url("/magick-flows/bbva-mobile/main/0100___ID=homepage-1___DATA=has-sticky-header__has-sticky-footer__show-drawer-from-bottom.png") url("/magick-flows/bbva-mobile/main/0200___ID=homepage-2___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0300___ID=mortgages-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0400___ID=homepage-3___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0500___ID=valora-home___DATA=use-slide-transition__slide-transition_app-switch.png") url("/magick-flows/bbva-mobile/main/0600___ID=valora-email-field-blank.png") url("/magick-flows/bbva-mobile/main/0700___ID=valora-email-field-filled.png") url("/magick-flows/bbva-mobile/main/0800___ID=valora-use-camera.png") url("/magick-flows/bbva-mobile/main/0900___ID=valora-fake-video-gif.gif") url("/magick-flows/bbva-mobile/main/1000___ID=valora-fake-video-found-home.png") url("/magick-flows/bbva-mobile/main/1100___ID=valora-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/1200___ID=valora-details___DATA=has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/1300___ID=mortgage-app-step-0___DATA=has-sticky-header.png") url("/magick-flows/bbva-mobile/main/1400___ID=mortgage-app-step-2___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/assets/google-search-results___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/google-search-results___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-0___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-0___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-1___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-1___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-2___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-2___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-3___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-3___sticky-header.png") url("/magick-flows/bbva-mobile/assets/mortgage-app-step-0___sticky-header.png") url("/magick-flows/bbva-mobile/assets/mortgage-app-step-2___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/mortgage-app-step-2___sticky-header.png") url("/magick-flows/bbva-mobile/assets/mortgages-1___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/mortgages-1___sticky-header.png") url("/magick-flows/bbva-mobile/assets/valora-details___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/valora-home___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/valora-results___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/valora-results___sticky-header.png");
+  content: url("/magick-flows/bbva-mobile/main/0000___ID=google-search-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0099___ID=homepage-0___DATA=has-sticky-header__has-sticky-footer__show-drawer-from-left.png") url("/magick-flows/bbva-mobile/main/0100___ID=homepage-1___DATA=has-sticky-header__has-sticky-footer__show-drawer-from-bottom.png") url("/magick-flows/bbva-mobile/main/0200___ID=homepage-2___DATA=has-sticky-header__has-sticky-footer copy.png") url("/magick-flows/bbva-mobile/main/0201___ID=homepage-3___DATA=has-sticky-header__has-sticky-footer__show-drawer-from-right.png") url("/magick-flows/bbva-mobile/main/0300___ID=mortgages-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0400___ID=homepage-3___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0500___ID=valora-home___DATA=use-slide-transition__slide-transition_app-switch.png") url("/magick-flows/bbva-mobile/main/0600___ID=valora-email-field-blank.png") url("/magick-flows/bbva-mobile/main/0700___ID=valora-email-field-filled.png") url("/magick-flows/bbva-mobile/main/0800___ID=valora-use-camera.png") url("/magick-flows/bbva-mobile/main/0900___ID=valora-fake-video-gif.gif") url("/magick-flows/bbva-mobile/main/1000___ID=valora-fake-video-found-home.png") url("/magick-flows/bbva-mobile/main/1100___ID=valora-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/1200___ID=valora-details___DATA=has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/1300___ID=mortgage-app-step-0___DATA=has-sticky-header.png") url("/magick-flows/bbva-mobile/main/1400___ID=mortgage-app-step-2___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/assets/google-search-results___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/google-search-results___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-0___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-0___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-1___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-1___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-2___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-2___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-3___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-3___sticky-header.png") url("/magick-flows/bbva-mobile/assets/mortgage-app-step-0___sticky-header.png") url("/magick-flows/bbva-mobile/assets/mortgage-app-step-2___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/mortgage-app-step-2___sticky-header.png") url("/magick-flows/bbva-mobile/assets/mortgages-1___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/mortgages-1___sticky-header.png") url("/magick-flows/bbva-mobile/assets/valora-details___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/valora-home___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/valora-results___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/valora-results___sticky-header.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -78,6 +78,24 @@ body, .container {
   will-change: left;
 }
 
+.drawer-from-right {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms right ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  top: 0;
+  right: -375px;
+  will-change: right;
+}
+
+.drawer-from-right.slide-in {
+  right: 0px;
+  transition: 125ms right ease-in-out;
+  will-change: right;
+}
+
 .drawer-from-bottom {
   margin: 0 auto;
   position: absolute;
@@ -105,7 +123,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 6300px;
+  width: 6695px;
 }
 
 .app-switcher-one.shrink {
@@ -441,6 +459,24 @@ body, .container {
   top: 0;
   width: 375px;
   left: 6320px;
+}
+
+.app-switcher-one.be-left-17 {
+  left: -6715px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-17 {
+  left: -6715px;
+}
+
+.magick-flows--slide-17 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 6715px;
 }
 
 footer.magick-flows-stickey-footer_container {

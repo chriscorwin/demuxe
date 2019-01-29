@@ -223,9 +223,11 @@ function locationHashChanged(event) {
 		}
 
 
+
+
+
 		if (document.querySelector(`.drawer-from-bottom--slide-${previousClick}`) !== null) {
 			if ( magickFlowConfig.metaData[previousClick].showDrawerFromBottom === true ) {
-
 				setTimeout(() => {
 					document.querySelector(`.drawer-from-bottom--slide-${previousClick}`).classList.remove('slide-in');
 					
@@ -233,12 +235,9 @@ function locationHashChanged(event) {
 						document.querySelector(`.drawer-from-bottom--slide-${previousClick}`).classList.add('slds-hide');
 					}, 125);
 				}, 0);
-
 				delayTransition = 125;
 			}
 		}
-
-
 		if ( magickFlowConfig.metaData[clicks].showDrawerFromBottom === true ) {
 			doDrawer = true;
 			document.querySelector(`.drawer-from-bottom--slide-${clicks}`).classList.remove('slds-hide');
@@ -246,10 +245,8 @@ function locationHashChanged(event) {
 				document.querySelector(`.drawer-from-bottom--slide-${clicks}`).classList.add('slide-in');
 			}, 125);
 		}
-
 		if (document.querySelector(`.drawer-from-bottom--slide-${nextClick}`) !== null) {
 			if ( magickFlowConfig.metaData[nextClick].showDrawerFromBottom === true ) {
-
 				setTimeout(() => {
 					document.querySelector(`.drawer-from-bottom--slide-${nextClick}`).classList.remove('slide-in');
 					
@@ -257,7 +254,42 @@ function locationHashChanged(event) {
 						document.querySelector(`.drawer-from-bottom--slide-${nextClick}`).classList.add('slds-hide');
 					}, 125);
 				}, 0);
+				delayTransition = 125;
+			}
+		}
 
+
+
+
+
+		if (document.querySelector(`.drawer-from-right--slide-${previousClick}`) !== null) {
+			if ( magickFlowConfig.metaData[previousClick].showDrawerFromRight === true ) {
+				setTimeout(() => {
+					document.querySelector(`.drawer-from-right--slide-${previousClick}`).classList.remove('slide-in');
+					
+					setTimeout(() => {
+						document.querySelector(`.drawer-from-right--slide-${previousClick}`).classList.add('slds-hide');
+					}, 125);
+				}, 0);
+				delayTransition = 125;
+			}
+		}
+		if ( magickFlowConfig.metaData[clicks].showDrawerFromRight === true ) {
+			doDrawer = true;
+			document.querySelector(`.drawer-from-right--slide-${clicks}`).classList.remove('slds-hide');
+			window.setTimeout(() => {
+				document.querySelector(`.drawer-from-right--slide-${clicks}`).classList.add('slide-in');
+			}, 125);
+		}
+		if (document.querySelector(`.drawer-from-right--slide-${nextClick}`) !== null) {
+			if ( magickFlowConfig.metaData[nextClick].showDrawerFromRight === true ) {
+				setTimeout(() => {
+					document.querySelector(`.drawer-from-right--slide-${nextClick}`).classList.remove('slide-in');
+					
+					setTimeout(() => {
+						document.querySelector(`.drawer-from-right--slide-${nextClick}`).classList.add('slds-hide');
+					}, 125);
+				}, 0);
 				delayTransition = 125;
 			}
 		}

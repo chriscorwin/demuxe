@@ -74,6 +74,24 @@ body, .container {
   will-change: left;
 }
 
+.drawer-from-right {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms right ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  top: 0;
+  right: -375px;
+  will-change: right;
+}
+
+.drawer-from-right.slide-in {
+  right: 0px;
+  transition: 125ms right ease-in-out;
+  will-change: right;
+}
+
 .drawer-from-bottom {
   margin: 0 auto;
   position: absolute;

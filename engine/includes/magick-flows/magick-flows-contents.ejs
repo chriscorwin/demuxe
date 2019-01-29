@@ -118,6 +118,19 @@ _%>
 		}
 
 
+		let drawerFromRightHtmlOut = '';
+		const showDrawerFromRight = node.showDrawerFromRight === true || false;
+		if ( showDrawerFromRight === true ) {
+			const drawerFromRightWebRootUrl = `${assetsContentPath}${node.drawerFromRightFileName}`;
+			drawerFromRightHtmlOut = `
+				<div
+					id="drawer-from-right--slide-${node.screensIndex}"
+					class="drawer drawer-from-right drawer-from-right--slide-${node.screensIndex}  magick-flows-slide-asset"
+				><img src="${drawerFromRightWebRootUrl}" /></div>
+			`
+		}
+
+
 _%>
 
 <div
@@ -207,6 +220,7 @@ _%>
 <%_ } _%>
 	<%- drawerFromLeftHtmlOut %>
 	<%- drawerFromBottomHtmlOut %>
+	<%- drawerFromRightHtmlOut %>
 </div>
 
 
