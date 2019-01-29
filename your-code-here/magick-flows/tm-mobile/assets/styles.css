@@ -56,6 +56,41 @@ body, .container {
   will-change: top;
 }
 
+.drawer-from-left {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms left ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  top: 0;
+  left: -375px;
+  will-change: left;
+}
+
+.drawer-from-left.slide-in {
+  left: 0px;
+  transition: 125ms left ease-in-out;
+  will-change: left;
+}
+
+.drawer-from-bottom {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms bottom ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  bottom: -812px;
+  will-change: bottom;
+}
+
+.drawer-from-bottom.slide-in {
+  bottom: 0px;
+  transition: 125ms bottom ease-in-out;
+  will-change: bottom;
+}
+
 .magick-flows-slide {
   background-color: transparent;
 }

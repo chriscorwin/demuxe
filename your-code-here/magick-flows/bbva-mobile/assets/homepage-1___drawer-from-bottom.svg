@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="812px" viewBox="0 0 375 812" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>homepage-1___drawer-from-bottom</title>
+    <desc>Created with Sketch.</desc>
+    <g id="homepage-1___drawer-from-bottom" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" opacity="0" x="0" y="0" width="375" height="812"></rect>
+        <path d="M23.5,811.5 L355.5,811.5 L355.5,41.2555408 C355.5,38.0797567 355.238905,36.727695 354.490563,35.3284166 C353.839934,34.1118471 352.888153,33.1600659 351.671583,32.5094374 C350.272305,31.7610952 348.920243,31.5 345.744459,31.5 L33.2555408,31.5 C30.0797567,31.5 28.727695,31.7610952 27.3284166,32.5094374 C26.1118471,33.1600659 25.1600659,34.1118471 24.5094374,35.3284166 C23.7610952,36.727695 23.5,38.0797567 23.5,41.2555408 L23.5,811.5 Z" id="Combined-Shape" stroke="#979797" fill-opacity="0.9" fill="#FFFFFF"></path>
+        <text id="This-is-a-bottom-drawer" font-family="Arial-BoldMT, Arial" font-size="60" font-weight="bold" fill="#000000">
+            <tspan x="43" y="147">This</tspan>
+            <tspan x="43" y="219">is</tspan>
+            <tspan x="43" y="291">a</tspan>
+            <tspan x="43" y="363" font-family="Arial-BoldItalicMT, Arial" font-style="italic">bottom</tspan>
+            <tspan x="246.261719" y="363"></tspan>
+            <tspan x="43" y="435">drawer.</tspan>
+        </text>
+        <text id="drawer-from-bottom" font-family="InputMono-Regular, Input Mono" font-size="20" font-weight="normal" fill="#000000">
+            <tspan x="43" y="503">drawer-from-bottom</tspan>
+        </text>
+    </g>
+</svg>

@@ -39,7 +39,7 @@ $contentWrapper.onclick = ( ) => {
 };
 
 
-function normalTransition (thisStepNumber = 0, doAppTransition = false) {
+function normalTransition (thisStepNumber = 0, doAppTransition = false, delayTransition = 0) {
 	console.group(`[ normalTransition() ](/product-templates/mobile/javascripts/magick-flows.js:43) running...`);
 
 	let nextStepNumber = thisStepNumber + 1;
@@ -54,9 +54,10 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 	console.log(`thisStepNumber: `, thisStepNumber);
 	
 
-	if (document.querySelector(`.drawer`) !== null) {
-		document.querySelector(`.drawer`).classList.remove(drawerContentChangingClasses + ',slide-in');
-	}
+	// if (document.querySelector(`.drawer`) !== null) {
+	// 	document.querySelector(`.drawer`).classList.remove(drawerContentChangingClasses.split(' ').join(',') + ',slide-in');
+	// }
+
 
 	if (document.querySelector(`.app-switcher-two`) !== null) {
 		document.querySelector(`.app-switcher-two`).classList.remove(`show`);
@@ -65,8 +66,11 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 	const $appSwitcherOne = document.querySelector(`.app-switcher-one`);
 
 	const appSwitcherClassNames = getAppSwitcherClassNames();
-	$appSwitcherOne.classList.remove(...appSwitcherClassNames);
+	// $appSwitcherOne.classList.remove(...appSwitcherClassNames);
+
 	if (doAppTransition === true) {
+
+		$appSwitcherOne.classList.remove(...appSwitcherClassNames);
 
 		$appSwitcherOne.classList.add(`shrink`, `rounded-corners`, `slide-left-${thisStepNumber}`);
 		$appSwitcherOne.classList.remove(`be-left-${thisStepNumber}`);
@@ -81,8 +85,15 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 		}, 401);
 
 	} else {
-		$appSwitcherOne.classList.remove('shrink,rounded-corners');
-		$appSwitcherOne.classList.add(`be-left-${thisStepNumber}`);
+
+		setTimeout(() => {
+			$appSwitcherOne.classList.remove(...appSwitcherClassNames);
+
+			$appSwitcherOne.classList.remove('shrink,rounded-corners');
+			$appSwitcherOne.classList.add(`be-left-${thisStepNumber}`);
+		}, delayTransition);
+
+
 	}
 	console.groupEnd();
 }
@@ -151,6 +162,8 @@ function locationHashChanged(event) {
 	// eventually we'll assume we aren't showing a drawer, or sliding in a wizard, or anything else.
 	let doAppTransition = false;
 	let doNotifcation = false;
+	let delayTransition = 0;
+	let doDrawer = false;
 	let directionOfNavigation = 'forward';
 	let oldUrlHash = parseInt( event.oldURL.split('#')[event.oldURL.split('#').length - 1] ) || 0;
 	let newUrlHash = parseInt( event.newURL.split('#')[event.newURL.split('#').length - 1] ) || 0;
@@ -166,26 +179,141 @@ function locationHashChanged(event) {
 	}
 
 
-	// for now these things are hard-coded as exceptions into this script.
-	// we'd like it to come from the names of the files/assets themselves
-	if ( magickFlowConfig.urlSlug === 'tm-mobile-tokyo' || magickFlowConfig.urlSlug === 'tm-mobile' || magickFlowConfig.urlSlug === 'tm-mobile-new' ) {
-		if (clicks === 6) {
-			doNotifcation = true;
-			document.querySelector(`.notification`).classList.remove('slds-hide');
+	
+	if (document.querySelector(`.drawer`) !== null) {
+		
 
-			window.setTimeout(() => {
-				document.querySelector(`.notification`).classList.add('slide-in');
-			}, 125);
-		} else {
-			window.setTimeout(() => {
-				document.querySelector(`.notification`).classList.add('slds-hide');
-				document.querySelector(`.notification`).classList.remove('slide-in');
-			}, 500);
+		if (document.querySelector(`.drawer-from-left--slide-${previousClick}`) !== null) {
+			if ( magickFlowConfig.metaData[previousClick].showDrawerFromLeft === true ) {
+
+				setTimeout(() => {
+					document.querySelector(`.drawer-from-left--slide-${previousClick}`).classList.remove('slide-in');
+					
+					setTimeout(() => {
+						document.querySelector(`.drawer-from-left--slide-${previousClick}`).classList.add('slds-hide');
+					}, 125);
+				}, 0);
+
+				delayTransition = 125;
+			}
 		}
+
+
+		if ( magickFlowConfig.metaData[clicks].showDrawerFromLeft === true ) {
+			doDrawer = true;
+			document.querySelector(`.drawer-from-left--slide-${clicks}`).classList.remove('slds-hide');
+			window.setTimeout(() => {
+				document.querySelector(`.drawer-from-left--slide-${clicks}`).classList.add('slide-in');
+			}, 125);
+		}
+
+		if (document.querySelector(`.drawer-from-left--slide-${nextClick}`) !== null) {
+			if ( magickFlowConfig.metaData[nextClick].showDrawerFromLeft === true ) {
+
+				setTimeout(() => {
+					document.querySelector(`.drawer-from-left--slide-${nextClick}`).classList.remove('slide-in');
+					
+					setTimeout(() => {
+						document.querySelector(`.drawer-from-left--slide-${nextClick}`).classList.add('slds-hide');
+					}, 125);
+				}, 0);
+
+				delayTransition = 125;
+			}
+		}
+
+
+		if (document.querySelector(`.drawer-from-bottom--slide-${previousClick}`) !== null) {
+			if ( magickFlowConfig.metaData[previousClick].showDrawerFromBottom === true ) {
+
+				setTimeout(() => {
+					document.querySelector(`.drawer-from-bottom--slide-${previousClick}`).classList.remove('slide-in');
+					
+					setTimeout(() => {
+						document.querySelector(`.drawer-from-bottom--slide-${previousClick}`).classList.add('slds-hide');
+					}, 125);
+				}, 0);
+
+				delayTransition = 125;
+			}
+		}
+
+
+		if ( magickFlowConfig.metaData[clicks].showDrawerFromBottom === true ) {
+			doDrawer = true;
+			document.querySelector(`.drawer-from-bottom--slide-${clicks}`).classList.remove('slds-hide');
+			window.setTimeout(() => {
+				document.querySelector(`.drawer-from-bottom--slide-${clicks}`).classList.add('slide-in');
+			}, 125);
+		}
+
+		if (document.querySelector(`.drawer-from-bottom--slide-${nextClick}`) !== null) {
+			if ( magickFlowConfig.metaData[nextClick].showDrawerFromBottom === true ) {
+
+				setTimeout(() => {
+					document.querySelector(`.drawer-from-bottom--slide-${nextClick}`).classList.remove('slide-in');
+					
+					setTimeout(() => {
+						document.querySelector(`.drawer-from-bottom--slide-${nextClick}`).classList.add('slds-hide');
+					}, 125);
+				}, 0);
+
+				delayTransition = 125;
+			}
+		}
+
+
 	}
 
+	
+	if (document.querySelector(`.ios-notification`) !== null) {
+		
+		if (document.querySelector(`.ios-notification--slide-${previousClick}`) !== null) {
+			if ( magickFlowConfig.metaData[previousClick].showIosNotification === true ) {
+				document.querySelector(`.ios-notification--slide-${previousClick}`).classList.remove('slide-in');
+				document.querySelector(`.ios-notification--slide-${previousClick}`).classList.add('slds-hide');
+			}
+		}
+
+		if ( magickFlowConfig.metaData[clicks].showIosNotification === true ) {
+				doNotifcation = true;
+				document.querySelector(`.ios-notification--slide-${clicks}`).classList.remove('slds-hide');
+				window.setTimeout(() => {
+					document.querySelector(`.ios-notification--slide-${clicks}`).classList.add('slide-in');
+				}, 125);
+		}
+
+		if (document.querySelector(`.ios-notification--slide-${nextClick}`) !== null) {
+			if ( magickFlowConfig.metaData[nextClick].showIosNotification === true ) {
+				document.querySelector(`.ios-notification--slide-${nextClick}`).classList.remove('slide-in');
+				document.querySelector(`.ios-notification--slide-${nextClick}`).classList.add('slds-hide');
+			}
+		}
+
+		// if (document.querySelector(`.ios-notification`) !== null) {
+		// 	document.querySelector(`.ios-notification`).classList.remove(drawerContentChangingClasses.split(' ').join(',') + ',slide-in');
+		// }
+	}
+
+
+	// if ( magickFlowConfig.urlSlug === 'tm-mobile-tokyo' || magickFlowConfig.urlSlug === 'tm-mobile' || magickFlowConfig.urlSlug === 'tm-mobile-new' ) {
+	// 	if (clicks === 6) {
+	// 		doNotifcation = true;
+	// 		document.querySelector(`.notification`).classList.remove('slds-hide');
+
+	// 		window.setTimeout(() => {
+	// 			document.querySelector(`.notification`).classList.add('slide-in');
+	// 		}, 125);
+	// 	} else {
+	// 		window.setTimeout(() => {
+	// 			document.querySelector(`.notification`).classList.add('slds-hide');
+	// 			document.querySelector(`.notification`).classList.remove('slide-in');
+	// 		}, 500);
+	// 	}
+	// }
+
 	// once we've sorted out _what_ sort of transition to affect, we trigger it
-	normalTransition(clicks, doAppTransition);
+	normalTransition(clicks, doAppTransition, delayTransition);
 
 	// depending upon data-slide seems okay, though i've always been worried it is too fragile, it seems to work well
 	//  ¯\_(ツ)_/¯

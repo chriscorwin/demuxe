@@ -35,7 +35,6 @@ _%>
 
 		let headerHeight = node.stickyHeaderHeight | 0;
 		let footerHeight = node.stickyFooterHeight | 0;
-		let iosNotificationHtmlOut = '';
 
 		const headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
 		const footerWebRootUrl = `${assetsContentPath}${node.stickyFooterFileName}`;
@@ -78,14 +77,43 @@ _%>
 
 
 
+		let iosNotificationHtmlOut = '';
 		const showIosNotification = node.showIosNotification === true || false;
 		if ( showIosNotification === true ) {
 			const iosNotificationWebRootUrl = `${assetsContentPath}${node.iosNotificationFileName}`;
-			iosNotificationHtmlOut += `
+			iosNotificationHtmlOut = `
 				<div
 					id="ios-notification--slide-${node.screensIndex}"
 					class="notification ios-notification ios-notification--slide-${node.screensIndex}  magick-flows-slide-asset"
 				><img src="${iosNotificationWebRootUrl}" /></div>
+			`
+		}
+
+
+
+
+		let drawerFromLeftHtmlOut = '';
+		const showDrawerFromLeft = node.showDrawerFromLeft === true || false;
+		if ( showDrawerFromLeft === true ) {
+			const drawerFromLeftWebRootUrl = `${assetsContentPath}${node.drawerFromLeftFileName}`;
+			drawerFromLeftHtmlOut = `
+				<div
+					id="drawer-from-left--slide-${node.screensIndex}"
+					class="drawer drawer-from-left drawer-from-left--slide-${node.screensIndex}  magick-flows-slide-asset"
+				><img src="${drawerFromLeftWebRootUrl}" /></div>
+			`
+		}
+
+
+		let drawerFromBottomHtmlOut = '';
+		const showDrawerFromBottom = node.showDrawerFromBottom === true || false;
+		if ( showDrawerFromBottom === true ) {
+			const drawerFromBottomWebRootUrl = `${assetsContentPath}${node.drawerFromBottomFileName}`;
+			drawerFromBottomHtmlOut = `
+				<div
+					id="drawer-from-bottom--slide-${node.screensIndex}"
+					class="drawer drawer-from-bottom drawer-from-bottom--slide-${node.screensIndex}  magick-flows-slide-asset"
+				><img src="${drawerFromBottomWebRootUrl}" /></div>
 			`
 		}
 
@@ -177,6 +205,8 @@ _%>
 		/>
 	</footer>
 <%_ } _%>
+	<%- drawerFromLeftHtmlOut %>
+	<%- drawerFromBottomHtmlOut %>
 </div>
 
 
