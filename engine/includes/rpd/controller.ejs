@@ -1,5 +1,31 @@
 <% const showRPDController = locals.sanitizedQueryParams.showRPDController; %>
 
+<style>
+	body.editMode .rapidDiv {
+		height: 200px;
+		width: 200px;
+		border: 3px double red;
+		background: grey;
+		position: absolute;
+		top: 500px;
+		left: 30px;
+		display: block;
+		padding: 12px;
+		color: white;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	body.editMode .rapidDiv:hover {
+		cursor: pointer;
+		border: 3px double blue;
+	}
+
+	body.editMode .rapidDiv.grabbing {
+		cursor: grabbing;
+	}
+</style>
+
 <div id="RPDController" style="height: 500px; min-width: 615px; overflow-x: auto; <%= showRPDController ? '' : 'display: none;' %>">
 	<div class="slds-docked_container">
 		<section class="slds-docked-composer slds-grid slds-grid_vertical slds-is-open" role="dialog" aria-labelledby="dialog-heading-id-1" aria-describedby="dialog-content-id-1">
@@ -76,6 +102,8 @@
 <script>
 	console.log('<%= !showRPDController ? `RPD Controller hidden. Add ?showRPDController=true to URL to show.` : `RPD Controller visible` %>');
 
+	<%- showRPDController ? "enableEditMode(document.getElementsByTagName('body')[0])" : '' %>
+
 	document.querySelector('#addRapidDiv').addEventListener('click', () => {
 		addRapidDiv(document.querySelector('body')) 
 	});
@@ -83,7 +111,7 @@
 	const RPDController = document.getElementById('RPDController');
 
 	document.querySelector('#closeRPDController').addEventListener('click', () => {
-		showHide(RPDController);
+		showHide(RPDController, document.getElementsByTagName('body')[0]);
 	});
 	document.querySelector('#minimizeRPDController').addEventListener('click', () => {
 		toggleOpen(document.querySelector('#RPDController > div > section').classList);
@@ -96,7 +124,7 @@
 		document.addEventListener('keydown', (e) => {
 			cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
 			if (cursor == KONAMI_CODE.length) {
-				showHide(RPDController);
+				showHide(RPDController, document.getElementsByTagName('body')[0]);
 				cursor = 0;
 			};
 		});
