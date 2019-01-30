@@ -118,4 +118,9 @@
 		console.log('KONAMI CODE LISTENER DISABLED.');
 	<% } %>
 
+	document.querySelectorAll('.rapidDiv').forEach((rpdDiv) => {
+		updateData(rpdDiv);
+		addListeners(rpdDiv, RPDController);
+	});
+
 </script>
