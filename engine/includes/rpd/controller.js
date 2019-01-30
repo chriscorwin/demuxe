@@ -57,16 +57,14 @@ const setSelection = (rpdDiv, RPDController) => {
 <fieldset class="slds-form-element slds-form_compound">
 	<div class="slds-form-element__control">
 		<div class="slds-form-element__group slds-grid slds-wrap">
+			<textarea rows=5 class="slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
+${rpdDiv.outerHTML}
+			</textarea>
 			<ul class="slds-button-group-list slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
 				<li>
 					<button class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
 						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#cases"></use>
 					</svg>View Selection Code</button>
-				</li>
-				<li>
-					<button class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#copy_to_clipboard"></use>
-					</svg>Copy Selection Code</button>
 				</li>
 			</ul>
 		</div>
@@ -78,6 +76,8 @@ const setSelection = (rpdDiv, RPDController) => {
 }
 
 const updateOffsets = (rpdDiv, e) => {
+	updateData(rpdDiv);
+	
 	return {
 		divLeft: rpdDiv.offsetLeft,
 		divTop: rpdDiv.offsetTop,
@@ -121,6 +121,13 @@ const addListeners = (rpdDiv, RPDController) => {
 
 }
 
+const updateData = (rpdDiv) => {
+	rpdDiv.dataset.top = rpdDiv.offsetTop;
+	rpdDiv.dataset.left = rpdDiv.offsetLeft;
+	rpdDiv.dataset.width = rpdDiv.offsetWidth;
+	rpdDiv.dataset.height = rpdDiv.offsetHeight;
+}
+
 const addRapidDiv = (target, RPDController) => {
 	const uniqueID = `rpdDiv${Date.now()}`;
 	const rapidDiv = `
@@ -132,6 +139,8 @@ const addRapidDiv = (target, RPDController) => {
 	target.insertAdjacentHTML('beforeend', rapidDiv);
 
 	const rpdDiv = target.querySelector(`#${uniqueID}`);
+
+	updateData(rpdDiv);
 	addListeners(rpdDiv, RPDController);
 }
 
