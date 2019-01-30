@@ -60,13 +60,30 @@ const setSelection = (rpdDiv, RPDController) => {
 			<textarea rows=5 class="slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
 ${rpdDiv.outerHTML}
 			</textarea>
-			<ul class="slds-button-group-list slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
-				<li>
-					<button class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#cases"></use>
-					</svg>View Selection Code</button>
-				</li>
-			</ul>
+			<div class="slds-form-element slds-col slds-size_1-of-2">
+				<label class="slds-form-element__label" for="text-input-id-1">Top</label>
+				<div class="slds-form-element__control">
+					<input id="${rpdDiv.attributes.id}Top" placeholder="Top" class="slds-input" type="text" value="${rpdDiv.dataset.top}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-2">
+				<label class="slds-form-element__label" for="text-input-id-1">Left</label>
+				<div class="slds-form-element__control">
+					<input id="${rpdDiv.attributes.id}Left" placeholder="Left" class="slds-input" type="text" value="${rpdDiv.dataset.left}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-2">
+				<label class="slds-form-element__label" for="text-input-id-1">Width</label>
+				<div class="slds-form-element__control">
+					<input id="${rpdDiv.attributes.id}Width" placeholder="Width" class="slds-input" type="text" value="${rpdDiv.dataset.width}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-2">
+				<label class="slds-form-element__label" for="text-input-id-1">Height</label>
+				<div class="slds-form-element__control">
+					<input id="${rpdDiv.attributes.id}Height" placeholder="Height" class="slds-input" type="text" value="${rpdDiv.dataset.height}" />
+				</div>
+			</div>
 		</div>
 	</div>
 </fieldset>
@@ -77,7 +94,7 @@ ${rpdDiv.outerHTML}
 
 const updateOffsets = (rpdDiv, e) => {
 	updateData(rpdDiv);
-	
+
 	return {
 		divLeft: rpdDiv.offsetLeft,
 		divTop: rpdDiv.offsetTop,
@@ -117,6 +134,8 @@ const addListeners = (rpdDiv, RPDController) => {
 		offsets = {};
 
 		rpdDiv.removeEventListener('mousemove', handleMove);
+
+		setSelection(rpdDiv, RPDController);
 	});
 
 }
