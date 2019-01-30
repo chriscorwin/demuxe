@@ -28,7 +28,7 @@
 
 <div id="RPDController" style="height: 500px; min-width: 615px; overflow-x: auto; <%= showRPDController ? '' : 'display: none;' %>">
 	<div class="slds-docked_container">
-		<section class="slds-docked-composer slds-grid slds-grid_vertical slds-is-open" role="dialog" aria-labelledby="dialog-heading-id-1" aria-describedby="dialog-content-id-1">
+		<section class="slds-docked-composer slds-grid slds-grid_vertical slds-is-open" role="dialog" aria-labelledby="dialog-heading-id-1" aria-describedby="RPDControllerForm">
 			<header class="slds-docked-composer__header slds-grid slds-shrink-none" aria-live="assertive">
 				<div class="slds-media slds-media_center slds-no-space">
 					<div class="slds-media__figure slds-m-right_x-small">
@@ -63,36 +63,12 @@
 					</button>
 				</div>
 			</header>
-			<div class="slds-docked-composer__body slds-docked-composer__body_form" id="dialog-content-id-1">
-				<fieldset class="slds-form-element slds-form_compound">
-					<div class="slds-form-element__control">
-						<div class="slds-form-element__group slds-grid slds-wrap">
-							<ul class="slds-button-group-list slds-col slds-size_1-of-1">
-								<li>
-									<button id="addRapidDiv" class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#steps"></use>
-									</svg>Add a Rapid Div</button>
-								</li>
-							</ul>
-							<ul class="slds-button-group-list slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
-								<li>
-									<button class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#cases"></use>
-									</svg>View RPD Code</button>
-								</li>
-								<li>
-									<button class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#copy_to_clipboard"></use>
-									</svg>Copy RPD Code</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</fieldset>
+			<div class="slds-docked-composer__body slds-docked-composer__body_form" id="RPDControllerForm">
+
 			</div>
-			<!-- footer class="slds-docked-composer__footer slds-shrink-none">
-				<button class="slds-button slds-button_brand slds-col_bump-left">Save</button>
-			</footer -->
+			<footer class="slds-docked-composer__footer slds-shrink-none slds-hidden">
+				<button id="RPDControllerHomeButton" class="slds-button slds-button_neutral">Clear Selection</button>
+			</footer>
 		</section>
 	</div>
 </div>
@@ -104,11 +80,17 @@
 
 	<%- showRPDController ? "enableEditMode(document.getElementsByTagName('body')[0])" : '' %>
 
+	const RPDController = document.getElementById('RPDController');
+
+	showHomeForm(RPDController);
+
 	document.querySelector('#addRapidDiv').addEventListener('click', () => {
-		addRapidDiv(document.querySelector('body')) 
+		addRapidDiv(document.querySelector('body'), RPDController) 
 	});
 
-	const RPDController = document.getElementById('RPDController');
+	document.querySelector('#RPDControllerHomeButton').addEventListener('click', () => {
+		showHomeForm(RPDController);
+	});
 
 	document.querySelector('#closeRPDController').addEventListener('click', () => {
 		showHide(RPDController, document.getElementsByTagName('body')[0]);
@@ -135,4 +117,5 @@
 	<% } else { %>
 		console.log('KONAMI CODE LISTENER DISABLED.');
 	<% } %>
+
 </script>
