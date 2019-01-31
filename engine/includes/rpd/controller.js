@@ -64,7 +64,10 @@ const setSelection = (rpdDiv, RPDController) => {
 					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1">
 ${rpdDiv.outerHTML}
 					</textarea>
-					<div class="slds-form-element__help">You must update or insert the code for this Rapid Component in the applicable <code>*-contents.ejs</code> file in <code>/demo-overrides/{product}/{venue}/</code>. If this file does not yet exist, you must create it.</div>
+					<div class="slds-form-element__help">You must update or insert the code for this Rapid Component in 
+					the applicable <code>*-contents.ejs</code> file in <code>/demo-overrides/{product}/{venue}/</code>. 
+					If this file does not yet exist, you must create it. Try doing a global search on <code>${id}</code> 
+					to determine if/where this Rapid Component exists in the code base.</div>
 				</div>
 			</div>
 

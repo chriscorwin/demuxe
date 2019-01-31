@@ -145,7 +145,6 @@ router.get('/*', (req, res) => {
 	// the file exists in a place_. If you want to add a new place that files can be served from, all
 	// of that config stuff happens in config.js in the "view engine setup" area.
 	fs.access(path.join(__dirname, 'demo-overrides', (config.productTemplate) ? config.productTemplate : '', (config.demoVenue) ? config.demoVenue : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
-		console.log(path.join(__dirname, 'demo-overrides', (config.productTemplate) ? config.productTemplate : '', (config.demoVenue) ? config.demoVenue : '', fileName));
 		if (!err) error = false;
 		fs.access(path.join(__dirname, 'product-templates', (config.productTemplate) ? config.productTemplate : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 			if (!err) error = false;
@@ -178,7 +177,6 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 						});
 					}
 				} else {
-					console.log('about to render', fileName, path);
 					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
 				}
 			});
