@@ -53,41 +53,69 @@ const showHomeForm = (RPDController) => {
 }
 
 const setSelection = (rpdDiv, RPDController) => {
+	const id = rpdDiv.attributes.id.value;
 	RPDController.querySelector('.slds-docked-composer__body_form').innerHTML = `
 <fieldset class="slds-form-element slds-form_compound">
 	<div class="slds-form-element__control">
 		<div class="slds-form-element__group slds-grid slds-wrap">
-			<textarea rows=5 class="slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">Rapid Component Code</label>
+				<div class="slds-form-element__control">
+					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1">
 ${rpdDiv.outerHTML}
-			</textarea>
+					</textarea>
+				</div>
+			</div>
+
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Top</label>
 				<div class="slds-form-element__control">
-					<input id="${rpdDiv.attributes.id}Top" placeholder="Top" class="slds-input" type="text" value="${rpdDiv.dataset.top}" />
+					<input id="${id}Top" placeholder="Top" class="slds-input" type="text" value="${rpdDiv.dataset.top}" />
 				</div>
 			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Left</label>
 				<div class="slds-form-element__control">
-					<input id="${rpdDiv.attributes.id}Left" placeholder="Left" class="slds-input" type="text" value="${rpdDiv.dataset.left}" />
+					<input id="${id}Left" placeholder="Left" class="slds-input" type="text" value="${rpdDiv.dataset.left}" />
 				</div>
 			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Width</label>
 				<div class="slds-form-element__control">
-					<input id="${rpdDiv.attributes.id}Width" placeholder="Width" class="slds-input" type="text" value="${rpdDiv.dataset.width}" />
+					<input id="${id}Width" placeholder="Width" class="slds-input" type="text" value="${rpdDiv.dataset.width}" />
 				</div>
 			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Height</label>
 				<div class="slds-form-element__control">
-					<input id="${rpdDiv.attributes.id}Height" placeholder="Height" class="slds-input" type="text" value="${rpdDiv.dataset.height}" />
+					<input id="${id}Height" placeholder="Height" class="slds-input" type="text" value="${rpdDiv.dataset.height}" />
 				</div>
 			</div>
 		</div>
 	</div>
 </fieldset>
 	`;
+
+	RPDController.querySelector(`#${id}Top`).addEventListener('change', (e) => {
+		rpdDiv.style.top = `${e.target.value}px`;
+		updateData(rpdDiv);
+		setSelection(rpdDiv, RPDController);
+	})
+	RPDController.querySelector(`#${id}Left`).addEventListener('change', (e) => {
+		rpdDiv.style.left = `${e.target.value}px`;
+		updateData(rpdDiv);	
+		setSelection(rpdDiv, RPDController);	
+	})
+	RPDController.querySelector(`#${id}Width`).addEventListener('change', (e) => {
+		rpdDiv.style.width = `${e.target.value}px`;
+		updateData(rpdDiv);
+		setSelection(rpdDiv, RPDController);		
+	})
+	RPDController.querySelector(`#${id}Height`).addEventListener('change', (e) => {
+		rpdDiv.style.height = `${e.target.value}px`;
+		updateData(rpdDiv);
+		setSelection(rpdDiv, RPDController);		
+	})
 
 	RPDController.querySelector('.slds-docked-composer__footer').classList.remove('slds-hidden');
 }
