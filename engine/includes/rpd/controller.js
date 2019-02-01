@@ -72,27 +72,41 @@ ${rpdDiv.outerHTML}
 			</div>
 
 			<div class="slds-form-element slds-col slds-size_1-of-2">
+				<label class="slds-form-element__label" for="text-input-id-1">ID</label>
+				<div class="slds-form-element__control">
+					<input id="${id}ID" placeholder="ID" class="slds-input" type="text" value="${rpdDiv.dataset.id}" />
+				</div>
+			</div>
+
+			<div class="slds-form-element slds-col slds-size_1-of-2">
+				<label class="slds-form-element__label" for="text-input-id-1">Classes</label>
+				<div class="slds-form-element__control">
+					<input id="${id}Classes" placeholder="Classes" class="slds-input" type="text" value="${rpdDiv.dataset.classes}" />
+				</div>
+			</div>
+
+			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Top</label>
 				<div class="slds-form-element__control">
-					<input id="${id}Top" placeholder="Top" class="slds-input" type="text" value="${rpdDiv.dataset.top}" />
+					<input id="${id}Top" placeholder="Top" class="slds-input" type="number" value="${rpdDiv.dataset.top}" />
 				</div>
 			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Left</label>
 				<div class="slds-form-element__control">
-					<input id="${id}Left" placeholder="Left" class="slds-input" type="text" value="${rpdDiv.dataset.left}" />
+					<input id="${id}Left" placeholder="Left" class="slds-input" type="number" value="${rpdDiv.dataset.left}" />
 				</div>
 			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Width</label>
 				<div class="slds-form-element__control">
-					<input id="${id}Width" placeholder="Width" class="slds-input" type="text" value="${rpdDiv.dataset.width}" />
+					<input id="${id}Width" placeholder="Width" class="slds-input" type="number" value="${rpdDiv.dataset.width}" />
 				</div>
 			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Height</label>
 				<div class="slds-form-element__control">
-					<input id="${id}Height" placeholder="Height" class="slds-input" type="text" value="${rpdDiv.dataset.height}" />
+					<input id="${id}Height" placeholder="Height" class="slds-input" type="number" value="${rpdDiv.dataset.height}" />
 				</div>
 			</div>
 		</div>
@@ -100,32 +114,54 @@ ${rpdDiv.outerHTML}
 </fieldset>
 	`;
 
+	RPDController.querySelector(`#${id}ID`).addEventListener('change', (e) => {
+		rpdDiv.dataset.id = `${e.target.value}`;
+		rpdDiv.id = e.target.value;
+		setSelection(rpdDiv, RPDController);
+	});
+	RPDController.querySelector(`#${id}Classes`).addEventListener('change', (e) => {
+		while (rpdDiv.classList.length > 0) {
+			rpdDiv.classList.remove(rpdDiv.classList.item(0));
+		}
+		let newClasses = `${e.target.value.replace(/, /g, ',').replace(/ /g, ',')}`;
+		if (!newClasses.includes('rapidDiv')) {
+			newClasses = `rapidDiv,${newClasses}`;
+		}
+
+		const newClassesArray = newClasses.split(',');
+		newClassesArray.forEach(newClass => rpdDiv.classList.add(newClass));
+		rpdDiv.dataset.classes = rpdDiv.classList.value;
+		
+		setSelection(rpdDiv, RPDController);
+	});
+
+
 	RPDController.querySelector(`#${id}Top`).addEventListener('change', (e) => {
 		rpdDiv.style.top = `${e.target.value}px`;
-		updateData(rpdDiv);
+		updatePositionData(rpdDiv);
 		setSelection(rpdDiv, RPDController);
-	})
+	});
 	RPDController.querySelector(`#${id}Left`).addEventListener('change', (e) => {
 		rpdDiv.style.left = `${e.target.value}px`;
-		updateData(rpdDiv);	
+		updatePositionData(rpdDiv);	
 		setSelection(rpdDiv, RPDController);	
-	})
+	});
 	RPDController.querySelector(`#${id}Width`).addEventListener('change', (e) => {
 		rpdDiv.style.width = `${e.target.value}px`;
-		updateData(rpdDiv);
+		updatePositionData(rpdDiv);
 		setSelection(rpdDiv, RPDController);		
-	})
+	});
 	RPDController.querySelector(`#${id}Height`).addEventListener('change', (e) => {
 		rpdDiv.style.height = `${e.target.value}px`;
-		updateData(rpdDiv);
+		updatePositionData(rpdDiv);
 		setSelection(rpdDiv, RPDController);		
-	})
+	});
 
 	RPDController.querySelector('.slds-docked-composer__footer').classList.remove('slds-hidden');
 }
 
 const updateOffsets = (rpdDiv, e) => {
-	updateData(rpdDiv);
+	updatePositionData(rpdDiv);
 
 	return {
 		divLeft: rpdDiv.offsetLeft,
@@ -172,7 +208,7 @@ const addListeners = (rpdDiv, RPDController) => {
 
 }
 
-const updateData = (rpdDiv) => {
+const updatePositionData = (rpdDiv) => {
 	rpdDiv.dataset.top = rpdDiv.offsetTop;
 	rpdDiv.dataset.left = rpdDiv.offsetLeft;
 	rpdDiv.dataset.width = rpdDiv.offsetWidth;
@@ -191,7 +227,7 @@ const addRapidDiv = (target, RPDController) => {
 
 	const rpdDiv = target.querySelector(`#${uniqueID}`);
 
-	updateData(rpdDiv);
+	updatePositionData(rpdDiv);
 	addListeners(rpdDiv, RPDController);
 }
 
