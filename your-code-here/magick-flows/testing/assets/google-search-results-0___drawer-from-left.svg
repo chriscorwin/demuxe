@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="812px" viewBox="0 0 375 812" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>google-search-results-0___drawer-from-left</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M75.2555408,31 L344.744459,31 C348.310534,31 349.603679,31.3713024 350.907383,32.0685308 C352.211087,32.7657592 353.234241,33.7889135 353.931469,35.0926172 C354.628698,36.3963209 355,37.6894658 355,41.2555408 L355,777.744459 C355,781.310534 354.628698,782.603679 353.931469,783.907383 C353.234241,785.211087 352.211087,786.234241 350.907383,786.931469 C349.603679,787.628698 348.310534,788 344.744459,788 L75.2555408,788 L-1,788 L-1,31 L75.2555408,31 Z" id="path-1"></path>
+        <filter x="-1.7%" y="-0.8%" width="103.4%" height="101.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="google-search-results-0___drawer-from-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" opacity="0" x="0" y="0" width="375" height="812"></rect>
+        <g id="Combined-Shape">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <path stroke="#979797" stroke-width="1" d="M-0.5,31.5 L-0.5,787.5 L344.744459,787.5 C347.920243,787.5 349.272305,787.238905 350.671583,786.490563 C351.888153,785.839934 352.839934,784.888153 353.490563,783.671583 C354.238905,782.272305 354.5,780.920243 354.5,777.744459 L354.5,41.2555408 C354.5,38.0797567 354.238905,36.727695 353.490563,35.3284166 C352.839934,34.1118471 351.888153,33.1600659 350.671583,32.5094374 C349.272305,31.7610952 347.920243,31.5 344.744459,31.5 L-0.5,31.5 Z" stroke-linejoin="square" fill-opacity="0.9" fill="#FFFFFF" fill-rule="evenodd"></path>
+        </g>
+        <text id="This-is-a-left-drawe" font-family="Arial-BoldMT, Arial" font-size="60" font-weight="bold" fill="#000000">
+            <tspan x="43" y="147">This</tspan>
+            <tspan x="43" y="219">is</tspan>
+            <tspan x="43" y="291">a</tspan>
+            <tspan x="43" y="363" font-family="Arial-BoldItalicMT, Arial" font-style="italic">left</tspan>
+            <tspan x="133" y="363"></tspan>
+            <tspan x="43" y="435">drawer.</tspan>
+        </text>
+        <text id="drawer-from-left" font-family="InputMono-Regular, Input Mono" font-size="20" font-weight="normal" fill="#000000">
+            <tspan x="43" y="503">drawer-from-left</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="812px" viewBox="0 0 375 812" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>google-search-results-0___drawer-from-top</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M356,746.744459 L356,781 L23,781 L23,746.744459 L23,10.2555408 C23,6.68946584 23.3713024,5.39632089 24.0685308,4.09261719 C24.7657592,2.78891348 25.7889135,1.76575919 27.0926172,1.06853082 C28.3963209,0.371302445 29.6894658,2.4074122e-16 33.2555408,-4.14336123e-16 L345.744459,4.14336123e-16 C349.310534,-2.4074122e-16 350.603679,0.371302445 351.907383,1.06853082 C353.211087,1.76575919 354.234241,2.78891348 354.931469,4.09261719 C355.628698,5.39632089 356,6.68946584 356,10.2555408 L356,746.744459 Z" id="path-1"></path>
+        <filter x="-2.1%" y="-1.2%" width="104.2%" height="101.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="-2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="google-search-results-0___drawer-from-top" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" opacity="0" x="0" y="0" width="375" height="812"></rect>
+        <g id="Combined-Shape" transform="translate(189.500000, 390.500000) rotate(-180.000000) translate(-189.500000, -390.500000) ">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <path stroke="#979797" stroke-width="1" d="M23.5,780.5 L355.5,780.5 L355.5,10.2555408 C355.5,7.07975665 355.238905,5.72769499 354.490563,4.32841662 C353.839934,3.11184715 352.888153,2.16006588 351.671583,1.50943741 C350.272305,0.761095152 348.920243,0.5 345.744459,0.5 L33.2555408,0.5 C30.0797567,0.5 28.727695,0.761095152 27.3284166,1.50943741 C26.1118471,2.16006588 25.1600659,3.11184715 24.5094374,4.32841662 C23.7610952,5.72769499 23.5,7.07975665 23.5,10.2555408 L23.5,780.5 Z" stroke-linejoin="square" fill-opacity="0.9" fill="#FFFFFF" fill-rule="evenodd"></path>
+        </g>
+        <text id="This-is-a-bottom-bottom" font-family="Arial-BoldMT, Arial" font-size="60" font-weight="bold" fill="#000000">
+            <tspan x="43" y="147">This</tspan>
+            <tspan x="43" y="219">is</tspan>
+            <tspan x="43" y="291">a</tspan>
+            <tspan x="43" y="363" font-family="Arial-BoldItalicMT, Arial" font-style="italic">top</tspan>
+            <tspan x="136.28125" y="363"></tspan>
+            <tspan x="43" y="435">drawer.</tspan>
+        </text>
+        <text id="drawer-from-top" font-family="InputMono-Regular, Input Mono" font-size="20" font-weight="normal" fill="#000000">
+            <tspan x="43" y="503">drawer-from-top</tspan>
+        </text>
+    </g>
+</svg>

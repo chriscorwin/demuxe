@@ -56,6 +56,24 @@ body, .container {
   will-change: top;
 }
 
+.drawer-from-top {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms top ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  top: -210px;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top.slide-in {
+  top: 0px;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
 .drawer-from-left {
   margin: 0 auto;
   position: absolute;

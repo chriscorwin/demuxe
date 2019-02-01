@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="812px" viewBox="0 0 375 812" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>google-search-results-0___drawer-from-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M96.2555408,31 L365.744459,31 C369.310534,31 370.603679,31.3713024 371.907383,32.0685308 C373.211087,32.7657592 374.234241,33.7889135 374.931469,35.0926172 C375.628698,36.3963209 376,37.6894658 376,41.2555408 L376,777.744459 C376,781.310534 375.628698,782.603679 374.931469,783.907383 C374.234241,785.211087 373.211087,786.234241 371.907383,786.931469 C370.603679,787.628698 369.310534,788 365.744459,788 L96.2555408,788 L20,788 L20,31 L96.2555408,31 Z" id="path-1"></path>
+        <filter x="-1.7%" y="-0.8%" width="103.4%" height="101.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="google-search-results-0___drawer-from-right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" opacity="0" x="0" y="0" width="375" height="812"></rect>
+        <g id="Combined-Shape" transform="translate(198.000000, 409.500000) rotate(-180.000000) translate(-198.000000, -409.500000) ">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <path stroke="#979797" stroke-width="1" d="M20.5,31.5 L20.5,787.5 L365.744459,787.5 C368.920243,787.5 370.272305,787.238905 371.671583,786.490563 C372.888153,785.839934 373.839934,784.888153 374.490563,783.671583 C375.238905,782.272305 375.5,780.920243 375.5,777.744459 L375.5,41.2555408 C375.5,38.0797567 375.238905,36.727695 374.490563,35.3284166 C373.839934,34.1118471 372.888153,33.1600659 371.671583,32.5094374 C370.272305,31.7610952 368.920243,31.5 365.744459,31.5 L20.5,31.5 Z" stroke-linejoin="square" fill-opacity="0.9" fill="#FFFFFF" fill-rule="evenodd"></path>
+        </g>
+        <text id="This-is-a-right-drawer" font-family="Arial-BoldMT, Arial" font-size="60" font-weight="bold" fill="#000000">
+            <tspan x="43" y="147">This</tspan>
+            <tspan x="43" y="219">is</tspan>
+            <tspan x="43" y="291">a</tspan>
+            <tspan x="43" y="363" font-family="Arial-BoldItalicMT, Arial" font-style="italic">right</tspan>
+            <tspan x="176.300781" y="363"></tspan>
+            <tspan x="43" y="435">drawer.</tspan>
+        </text>
+        <text id="drawer-from-right" font-family="InputMono-Regular, Input Mono" font-size="20" font-weight="normal" fill="#000000">
+            <tspan x="43" y="503">drawer-from-right</tspan>
+        </text>
+    </g>
+</svg>

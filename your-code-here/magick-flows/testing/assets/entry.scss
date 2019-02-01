@@ -1,0 +1,7 @@
+// entry.scss
+@import 'variables';
+
+.some-selector-or-other { 
+	color: $someColor;
+	font-size: $someFontSize;
+}

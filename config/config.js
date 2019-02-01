@@ -92,8 +92,8 @@ module.exports = function() {
             const thisMagickFlowAssets = configData.magickFlows[magickFlowUrlSlug].assets;
 
 
-            const thisMagickFlowMainImagesForScssVariables = thisMagickFlowScreens.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.gif') || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
-            const thisMagickFlowAssetsImagesForScssVariables = thisMagickFlowAssets.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.gif') || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+            const thisMagickFlowMainImagesForScssVariables = thisMagickFlowScreens.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+            const thisMagickFlowAssetsImagesForScssVariables = thisMagickFlowAssets.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
             const thisMagickFlowBackgroundImageVariable = [];
 
             // iterate through the main images, add url and path to it
