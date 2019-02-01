@@ -14,6 +14,11 @@ $heightOfAppSwitcher: $heightOfSlideValue + 0px;
 $heightOfSlide: $heightOfSlideValue + 0px;
 $widthOfSlide: $widthOfSlideValue + 0px;
 
+$widthOfAppSwitcherNegative: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) * -1px;
+$heightOfAppSwitcherNegative: $heightOfSlideValue * -1px;
+$heightOfSlideNegative: $heightOfSlideValue * -1px;
+$widthOfSlideNegative: $widthOfSlideValue * -1px;
+
 
 
 /* This is done to preload images and reduce load flicker */

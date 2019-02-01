@@ -30,9 +30,9 @@ body, .container {
 	margin: 0 auto;
 	position: absolute;
 	transition: 125ms top ease-in-out;
-	width: 375px;
+	width: $widthOfSlide;
 	background-color: transparent;
-	height: 812px;
+	height: $heightOfAppSwitcher;
 	top: -210px;
 	transition: 125ms top ease-in-out;
 	will-change: top;
@@ -51,10 +51,10 @@ body, .container {
 	margin: 0 auto;
 	position: absolute;
 	transition: 125ms top ease-in-out;
-	width: 375px;
+	width: $widthOfSlide;
 	background-color: transparent;
-	height: 812px;
-	top: -210px;
+	height: $heightOfAppSwitcher;
+	top: $heightOfSlideNegative;
 	transition: 125ms top ease-in-out;
 	will-change: top;
 
@@ -73,11 +73,11 @@ body, .container {
 	margin: 0 auto;
 	position: absolute;
 	transition: 125ms left ease-in-out;
-	width: 375px;
+	width: $widthOfSlide;
 	background-color: transparent;
-	height: 812px;
+	height: $heightOfAppSwitcher;
 	top: 0;
-	left: -375px;
+	left: $widthOfSlideNegative;
 	will-change: left;
 }
 
@@ -93,11 +93,11 @@ body, .container {
 	margin: 0 auto;
 	position: absolute;
 	transition: 125ms right ease-in-out;
-	width: 375px;
+	width: $widthOfSlide;
 	background-color: transparent;
-	height: 812px;
+	height: $heightOfAppSwitcher;
 	top: 0;
-	right: -375px;
+	right: $widthOfSlideNegative;
 	will-change: right;
 }
 
@@ -114,10 +114,10 @@ body, .container {
 	margin: 0 auto;
 	position: absolute;
 	transition: 125ms bottom ease-in-out;
-	width: 375px;
+	width: $widthOfSlide;
 	background-color: transparent;
-	height: 812px;
-	bottom: $heightOfSlideValue * -1px;
+	height: $heightOfAppSwitcher;
+	bottom: $heightOfSlideNegative;
 	will-change: bottom;
 }
 

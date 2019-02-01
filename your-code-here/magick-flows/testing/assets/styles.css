@@ -67,7 +67,7 @@ body, .container {
   width: 375px;
   background-color: transparent;
   height: 812px;
-  top: -210px;
+  top: -812px;
   transition: 125ms top ease-in-out;
   will-change: top;
 }

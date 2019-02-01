@@ -5,6 +5,7 @@ Demuxe: Running \`engine/javascripts/magick-flows.js\` now...
 `);
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
+const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
@@ -179,123 +180,62 @@ function locationHashChanged(event) {
 	}
 
 
-	
+
+
+
 	if (document.querySelector(`.drawer`) !== null) {
-		
 
-		if (document.querySelector(`.drawer-from-left--slide-${previousClick}`) !== null) {
-			if ( magickFlowConfig.metaData[previousClick].showDrawerFromLeft === true ) {
+		drawerDirectionOptions.forEach(direction => {
 
-				setTimeout(() => {
-					document.querySelector(`.drawer-from-left--slide-${previousClick}`).classList.remove('slide-in');
-					
+			// Direction is just the direction, capitalied, so that the camelCase stuff is correct.
+			const Direction = direction.charAt(0).toUpperCase() + direction.substring(1);
+
+			if (document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`) !== null) {
+				if ( magickFlowConfig.metaData[previousClick][`showDrawerFrom${Direction}`] === true ) {
+
 					setTimeout(() => {
-						document.querySelector(`.drawer-from-left--slide-${previousClick}`).classList.add('slds-hide');
-					}, 125);
-				}, 0);
+						document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.remove('slide-in');
+						
+						setTimeout(() => {
+							document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.add('slds-hide');
+						}, 125);
+					}, 0);
 
-				delayTransition = 125;
+					delayTransition = 125;
+				}
 			}
-		}
 
 
-		if ( magickFlowConfig.metaData[clicks].showDrawerFromLeft === true ) {
-			doDrawer = true;
-			document.querySelector(`.drawer-from-left--slide-${clicks}`).classList.remove('slds-hide');
-			window.setTimeout(() => {
-				document.querySelector(`.drawer-from-left--slide-${clicks}`).classList.add('slide-in');
-			}, 125);
-		}
+			if ( magickFlowConfig.metaData[clicks][`showDrawerFrom${Direction}`] === true ) {
+				doDrawer = true;
+				document.querySelector(`.drawer-from-${direction}--slide-${clicks}`).classList.remove('slds-hide');
+				window.setTimeout(() => {
+					document.querySelector(`.drawer-from-${direction}--slide-${clicks}`).classList.add('slide-in');
+				}, 125);
+			}
 
-		if (document.querySelector(`.drawer-from-left--slide-${nextClick}`) !== null) {
-			if ( magickFlowConfig.metaData[nextClick].showDrawerFromLeft === true ) {
+			if (document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`) !== null) {
+				if ( magickFlowConfig.metaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
 
-				setTimeout(() => {
-					document.querySelector(`.drawer-from-left--slide-${nextClick}`).classList.remove('slide-in');
-					
 					setTimeout(() => {
-						document.querySelector(`.drawer-from-left--slide-${nextClick}`).classList.add('slds-hide');
-					}, 125);
-				}, 0);
+						document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.remove('slide-in');
+						
+						setTimeout(() => {
+							document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.add('slds-hide');
+						}, 125);
+					}, 0);
 
-				delayTransition = 125;
+					delayTransition = 125;
+				}
 			}
-		}
-
-
-
-
-
-		if (document.querySelector(`.drawer-from-bottom--slide-${previousClick}`) !== null) {
-			if ( magickFlowConfig.metaData[previousClick].showDrawerFromBottom === true ) {
-				setTimeout(() => {
-					document.querySelector(`.drawer-from-bottom--slide-${previousClick}`).classList.remove('slide-in');
-					
-					setTimeout(() => {
-						document.querySelector(`.drawer-from-bottom--slide-${previousClick}`).classList.add('slds-hide');
-					}, 125);
-				}, 0);
-				delayTransition = 125;
-			}
-		}
-		if ( magickFlowConfig.metaData[clicks].showDrawerFromBottom === true ) {
-			doDrawer = true;
-			document.querySelector(`.drawer-from-bottom--slide-${clicks}`).classList.remove('slds-hide');
-			window.setTimeout(() => {
-				document.querySelector(`.drawer-from-bottom--slide-${clicks}`).classList.add('slide-in');
-			}, 125);
-		}
-		if (document.querySelector(`.drawer-from-bottom--slide-${nextClick}`) !== null) {
-			if ( magickFlowConfig.metaData[nextClick].showDrawerFromBottom === true ) {
-				setTimeout(() => {
-					document.querySelector(`.drawer-from-bottom--slide-${nextClick}`).classList.remove('slide-in');
-					
-					setTimeout(() => {
-						document.querySelector(`.drawer-from-bottom--slide-${nextClick}`).classList.add('slds-hide');
-					}, 125);
-				}, 0);
-				delayTransition = 125;
-			}
-		}
-
-
-
-
-
-		if (document.querySelector(`.drawer-from-right--slide-${previousClick}`) !== null) {
-			if ( magickFlowConfig.metaData[previousClick].showDrawerFromRight === true ) {
-				setTimeout(() => {
-					document.querySelector(`.drawer-from-right--slide-${previousClick}`).classList.remove('slide-in');
-					
-					setTimeout(() => {
-						document.querySelector(`.drawer-from-right--slide-${previousClick}`).classList.add('slds-hide');
-					}, 125);
-				}, 0);
-				delayTransition = 125;
-			}
-		}
-		if ( magickFlowConfig.metaData[clicks].showDrawerFromRight === true ) {
-			doDrawer = true;
-			document.querySelector(`.drawer-from-right--slide-${clicks}`).classList.remove('slds-hide');
-			window.setTimeout(() => {
-				document.querySelector(`.drawer-from-right--slide-${clicks}`).classList.add('slide-in');
-			}, 125);
-		}
-		if (document.querySelector(`.drawer-from-right--slide-${nextClick}`) !== null) {
-			if ( magickFlowConfig.metaData[nextClick].showDrawerFromRight === true ) {
-				setTimeout(() => {
-					document.querySelector(`.drawer-from-right--slide-${nextClick}`).classList.remove('slide-in');
-					
-					setTimeout(() => {
-						document.querySelector(`.drawer-from-right--slide-${nextClick}`).classList.add('slds-hide');
-					}, 125);
-				}, 0);
-				delayTransition = 125;
-			}
-		}
+		});
 
 
 	}
+
+
+
+
 
 	
 	if (document.querySelector(`.ios-notification`) !== null) {
