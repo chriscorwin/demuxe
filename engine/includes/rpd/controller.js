@@ -60,14 +60,24 @@ const setSelection = (rpdDiv, RPDController) => {
 		<div class="slds-form-element__group slds-grid slds-wrap">
 			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
 				<label class="slds-form-element__label" for="text-input-id-1">Rapid Component Code</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}HTMLHelp').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-hide" role="tooltip" id="${id}HTMLHelp" style="position: absolute;top: 30px;left: -16px;width: 320px;">
+						<div class="slds-popover__body">You must update or insert the code for this Rapid Component in 
+						the applicable <code>*-contents.ejs</code> file in <code>/demo-overrides/{product}/{venue}/</code>. 
+						If this file does not yet exist, you must create it. Try doing a global search on <code>rpdDiv1548883102089</code> 
+						to determine if/where this Rapid Component exists in the code base.</div>
+					</div>
+				</div>
 				<div class="slds-form-element__control">
 					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1">
 ${rpdDiv.outerHTML}
 					</textarea>
-					<div class="slds-form-element__help">You must update or insert the code for this Rapid Component in 
-					the applicable <code>*-contents.ejs</code> file in <code>/demo-overrides/{product}/{venue}/</code>. 
-					If this file does not yet exist, you must create it. Try doing a global search on <code>${id}</code> 
-					to determine if/where this Rapid Component exists in the code base.</div>
 				</div>
 			</div>
 
@@ -107,6 +117,14 @@ ${rpdDiv.outerHTML}
 				<label class="slds-form-element__label" for="text-input-id-1">Height</label>
 				<div class="slds-form-element__control">
 					<input id="${id}Height" placeholder="Height" class="slds-input" type="number" value="${rpdDiv.dataset.height}" />
+				</div>
+			</div>
+
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">onClick</label>
+				<div class="slds-form-element__control">
+					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1">
+					</textarea>
 				</div>
 			</div>
 		</div>
