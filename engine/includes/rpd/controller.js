@@ -75,9 +75,7 @@ const setSelection = (rpdDiv, RPDController) => {
 					</div>
 				</div>
 				<div class="slds-form-element__control">
-					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1">
-${rpdDiv.outerHTML}
-					</textarea>
+					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1">${rpdDiv.outerHTML}</textarea>
 				</div>
 			</div>
 
@@ -122,9 +120,26 @@ ${rpdDiv.outerHTML}
 
 			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
 				<label class="slds-form-element__label" for="text-input-id-1">onClick</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}onclickHelp').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-hide" role="tooltip" id="${id}onclickHelp" style="position: absolute;top: 30px;left: -16px;width: 320px;">
+						<div class="slds-popover__body">
+							Raw Javascript code to be executed when clicking on this Rapid Div.<br>
+							The following built in JS methods can be utilized:<br>
+							<code>addClass('class');</code><br>
+							<code>removeClass('class');</code><br>
+							<code>toggleClass('class');</code><br>
+							<code>swapWith('rpdDivID');</code><br>
+						</div>
+					</div>
+				</div>
 				<div class="slds-form-element__control">
-					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1">
-					</textarea>
+					<textarea rows=1 class="slds-form-element slds-col slds-size_1-of-1"></textarea>
 				</div>
 			</div>
 		</div>
