@@ -28,6 +28,13 @@ const toggleOpen = (classList) => {
 	}
 }
 
+const addClasses = (rpdDiv, classes) => {
+	let newClasses = `${classes.replace(/, /g, ',').replace(/ /g, ',')}`;
+
+	const newClassesArray = newClasses.split(',');
+	newClassesArray.forEach(newClass => rpdDiv.classList.add(newClass));
+}
+
 const showHomeForm = (RPDController) => {
 	RPDController.querySelector('.slds-docked-composer__body_form').innerHTML = `
 <fieldset class="slds-form-element slds-form_compound">
@@ -131,11 +138,6 @@ const setSelection = (rpdDiv, RPDController) => {
 				');</label>
 			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
-				<label class="slds-form-element__label" for="text-input-id-1">swapWith('
-					<input id="${id}onclickSwapWith" placeholder="rpdDivID" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onclickSwapWith}" />
-				');</label>
-			</div>
-			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
 				<label class="slds-form-element__label" for="text-input-id-1">Raw onclick JS:</label>
 				<div class="slds-form-element__control">
 					<textarea id="${id}onclickRaw" rows=1 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${decodeURI(rpdDiv.dataset.onclickRaw)}</textarea>
@@ -146,11 +148,19 @@ const setSelection = (rpdDiv, RPDController) => {
 </fieldset>
 	`;
 
+	RPDController.querySelector(`#${id}onclickAddClass`).addEventListener('change', (e) => {
+		const addClassClasses = e.target.value;
+		rpdDiv.dataset.onclickAddClass = addClassClasses;
+		rpdDiv.querySelector('.onclickAddClass').text = `document.querySelector('#${id}').addEventListener('click', (e) => {
+	addClasses(e.target, '${e.target.value}');
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
 	RPDController.querySelector(`#${id}onclickRaw`).addEventListener('change', (e) => {
 		const rawClickCode = e.target.value;
 		rpdDiv.dataset.onclickRaw = encodeURI(rawClickCode);
-		rpdDiv.querySelector('.onclickRaw').text = `
-document.querySelector('#${id}').addEventListener('click', (e) => {
+		rpdDiv.querySelector('.onclickRaw').text = `document.querySelector('#${id}').addEventListener('click', (e) => {
 	${rawClickCode}
 });`
 		setSelection(rpdDiv, RPDController);
@@ -165,13 +175,10 @@ document.querySelector('#${id}').addEventListener('click', (e) => {
 		while (rpdDiv.classList.length > 0) {
 			rpdDiv.classList.remove(rpdDiv.classList.item(0));
 		}
-		let newClasses = `${e.target.value.replace(/, /g, ',').replace(/ /g, ',')}`;
-		if (!newClasses.includes('rapidDiv')) {
-			newClasses = `rapidDiv,${newClasses}`;
-		}
 
-		const newClassesArray = newClasses.split(',');
-		newClassesArray.forEach(newClass => rpdDiv.classList.add(newClass));
+		addClasses(rpdDiv, e.target.value);
+		addClasses(rpdDiv, 'rapidDiv');
+
 		rpdDiv.dataset.classes = rpdDiv.classList.value;
 		
 		setSelection(rpdDiv, RPDController);
@@ -272,9 +279,11 @@ const addRapidDiv = (target, RPDController) => {
 			data-onclick-add-class=""
 			data-onclick-remove-class=""
 			data-onclick-toggle-class=""
-			data-onclick-swap-with=""
 			data-onclick-raw=""
 		>
+			<script class="onclickAddClass"></script>
+			<script class="onclickRemoveClass"></script>
+			<script class="onclickToggleClass"></script>
 			<script class="onclickRaw"></script>
 			Rapid Div ${uniqueID}
 		</div>
