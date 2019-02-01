@@ -28,10 +28,6 @@ const toggleOpen = (classList) => {
 	}
 }
 
-const editModeEnabled = () => {
-
-}
-
 const showHomeForm = (RPDController) => {
 	RPDController.querySelector('.slds-docked-composer__body_form').innerHTML = `
 <fieldset class="slds-form-element slds-form_compound">
@@ -75,7 +71,7 @@ const setSelection = (rpdDiv, RPDController) => {
 					</div>
 				</div>
 				<div class="slds-form-element__control">
-					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1">${rpdDiv.outerHTML}</textarea>
+					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${rpdDiv.outerHTML}</textarea>
 				</div>
 			</div>
 
@@ -118,34 +114,47 @@ const setSelection = (rpdDiv, RPDController) => {
 				</div>
 			</div>
 
-			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
-				<label class="slds-form-element__label" for="text-input-id-1">onClick</label>
-				<div class="slds-form-element__icon">
-					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}onclickHelp').classList.toggle('slds-hide');})()">
-						<svg class="slds-button__icon" aria-hidden="true">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
-						</svg>
-						<span class="slds-assistive-text">Help</span>
-					</button>
-					<div class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-hide" role="tooltip" id="${id}onclickHelp" style="position: absolute;top: 30px;left: -16px;width: 320px;">
-						<div class="slds-popover__body">
-							Raw Javascript code to be executed when clicking on this Rapid Div.<br>
-							The following built in JS methods can be utilized:<br>
-							<code>addClass('class');</code><br>
-							<code>removeClass('class');</code><br>
-							<code>toggleClass('class');</code><br>
-							<code>swapWith('rpdDivID');</code><br>
-						</div>
-					</div>
-				</div>
+			<div class="slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_x-small">onclick</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">addClass('
+					<input id="${id}onclickAddClass" placeholder="classes, here" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onclickAddClass}" />
+				')</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">removeClass('
+					<input id="${id}onclickRemoveClass" placeholder="classes, here" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onclickRemoveClass}" />
+				');</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">toggleClass('
+					<input id="${id}onclickToggleClass" placeholder="classes, here" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onclickToggleClass}" />
+				');</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">swapWith('
+					<input id="${id}onclickSwapWith" placeholder="rpdDivID" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onclickSwapWith}" />
+				');</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">Raw onclick JS:</label>
 				<div class="slds-form-element__control">
-					<textarea rows=1 class="slds-form-element slds-col slds-size_1-of-1"></textarea>
+					<textarea id="${id}onclickRaw" rows=1 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${decodeURI(rpdDiv.dataset.onclickRaw)}</textarea>
 				</div>
 			</div>
 		</div>
 	</div>
 </fieldset>
 	`;
+
+	RPDController.querySelector(`#${id}onclickRaw`).addEventListener('change', (e) => {
+		const rawClickCode = e.target.value;
+		rpdDiv.dataset.onclickRaw = encodeURI(rawClickCode);
+		rpdDiv.querySelector('.onclickRaw').text = `
+document.querySelector('#${id}').addEventListener('click', (e) => {
+	${rawClickCode}
+});`
+		setSelection(rpdDiv, RPDController);
+	});
 
 	RPDController.querySelector(`#${id}ID`).addEventListener('change', (e) => {
 		rpdDiv.dataset.id = `${e.target.value}`;
@@ -251,7 +260,22 @@ const updatePositionData = (rpdDiv) => {
 const addRapidDiv = (target, RPDController) => {
 	const uniqueID = `rpdDiv${Date.now()}`;
 	const rapidDiv = `
-		<div id="${uniqueID}" class="rapidDiv">
+		<div 
+			id="${uniqueID}" 
+			class="rapidDiv"
+			data-width="200"
+			data-height="200"
+			data-top="500"
+			data-left="30"
+			data-classes="rapidDiv"
+			data-id="${uniqueID}"
+			data-onclick-add-class=""
+			data-onclick-remove-class=""
+			data-onclick-toggle-class=""
+			data-onclick-swap-with=""
+			data-onclick-raw=""
+		>
+			<script class="onclickRaw"></script>
 			Rapid Div ${uniqueID}
 		</div>
 `;

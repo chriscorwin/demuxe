@@ -1,15 +1,19 @@
 <% const showRPDController = locals.sanitizedQueryParams.showRPDController; %>
 
 <style>
-	body.editMode .rapidDiv {
+
+	.rapidDiv {
+		position: absolute;
+		display: block;
 		height: 200px;
 		width: 200px;
-		border: 3px double red;
-		background: grey;
-		position: absolute;
 		top: 500px;
 		left: 30px;
-		display: block;
+	}
+
+	body.editMode .rapidDiv {
+		border: 3px double red;
+		background: grey;
 		padding: 12px;
 		color: white;
 		font-weight: bold;
