@@ -35,6 +35,13 @@ const addClasses = (rpdDiv, classes) => {
 	newClassesArray.forEach(newClass => rpdDiv.classList.add(newClass));
 }
 
+const removeClasses = (rpdDiv, classes) => {
+	let classesToRemove = `${classes.replace(/, /g, ',').replace(/ /g, ',')}`;
+
+	const classesToRemoveArray = classesToRemove.split(',');
+	classesToRemoveArray.forEach(targetClass => rpdDiv.classList.remove(targetClass));
+}
+
 const showHomeForm = (RPDController) => {
 	RPDController.querySelector('.slds-docked-composer__body_form').innerHTML = `
 <fieldset class="slds-form-element slds-form_compound">
@@ -153,6 +160,15 @@ const setSelection = (rpdDiv, RPDController) => {
 		rpdDiv.dataset.onclickAddClass = addClassClasses;
 		rpdDiv.querySelector('.onclickAddClass').text = `document.querySelector('#${id}').addEventListener('click', (e) => {
 	addClasses(e.target, '${e.target.value}');
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
+	RPDController.querySelector(`#${id}onclickRemoveClass`).addEventListener('change', (e) => {
+		const removeClassClasses = e.target.value;
+		rpdDiv.dataset.onclickRemoveClass = removeClassClasses;
+		rpdDiv.querySelector('.onclickRemoveClass').text = `document.querySelector('#${id}').addEventListener('click', (e) => {
+	removeClasses(e.target, '${e.target.value}');
 });`
 		setSelection(rpdDiv, RPDController);
 	});
