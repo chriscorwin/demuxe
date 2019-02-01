@@ -67,9 +67,12 @@ module.exports = function() {
     // view engine setup
     // https://expressjs.com/en/4x/api.html#app.set
     // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
-    const appViews = [path.join(__dirname, '../', 'demo-overrides')];
+    const appViews = [];
 
     if (configData.productTemplate) {
+        if (configData.demoVenue) {
+            appViews.push(path.join(__dirname, '../', 'demo-overrides', configData.productTemplate, configData.demoVenue));
+        }
         appViews.push(path.join(__dirname, '../', 'product-templates', configData.productTemplate));
     }
     appViews.push(path.join(__dirname, '../', 'engine'));

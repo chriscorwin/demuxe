@@ -1,0 +1,49 @@
+<div id="top" class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch">
+    <div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
+        <div class="slds-panel-box">
+            <div class="slds-panel-box__header slds-p-around_x-small"><%- locals.localization.overview.panels.audience_population.title %>
+                <img class="icon slds-float_right" src="/images/settings.svg" />
+            </div>
+            <div class="slds-panel-box__body" style="background-color: white;">
+                <div class="slds-grid slds-panel-box__sub-header slds-m-bottom_medium">
+                    <div class="slds-col slds-p-around_x-small slds-size_1-of-2" style="text-align: center; border-bottom: 2px solid #0070D2;"><%- locals.localization.overview.panels.audience_population.tabs[0].label %></div>
+                    <div class="slds-col slds-p-around_x-small slds-size_1-of-2" style="text-align: center"><%- locals.localization.overview.panels.audience_population.tabs[1].label %></div>
+                </div>
+                <div class="slds-grid slds-wrap slds-p-around_medium" style="height: 243px;">
+                    <img id="index-audience-segments-population" style="margin: 0px auto;" src="<%- locals.localization.overview.panels.audience_population.img %>" />
+                </div>
+                <div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;" class="slds-p-around_small slds-grid">
+                    <div class="slds-col slds-size_1-of-2" style="margin-top: -4px;">
+                        Find 1st, 2nd and 3rd Party segments to add to your audience.
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <button style="float: right; color: #0070D2;" class="slds-button slds-button_neutral"><img class="slds-button__icon slds-button__icon_left" src="/images/icons/plus-people.svg" style="width: 24px; height: 22px;" />Discover Audiences</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-col slds-p-right_medium slds-size_1-of-2">
+        <%- include('components/chart.activated-segments.ejs') %>
+    </div>
+</div>
+<div id="middle" class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch">
+    <div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
+        <%- include('components/highcharts.data-capture-events.ejs') %>
+    </div>
+    <div class="slds-col slds-p-right_medium slds-size_1-of-2">
+        <%- include('components/highcharts.data-capture-methods.ejs') %>
+    </div>
+</div>
+<div id="bottom" class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-top_medium">
+    <div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
+        <%- include('components/highcharts.marketer-campaigns.ejs') %>
+    </div>
+    <div class="slds-col slds-p-right_medium slds-size_1-of-2">
+        <%- include('components/chart.activation-partners.ejs') %>
+    </div>
+</div>
+
+<div id="rpdDiv1548883102089" class="rapidDiv" data-top="249" data-left="151" data-width="200" data-height="200" style="top: 249px; left: 151px;">
+	Rapid Div from index-contents.ejs
+</div>

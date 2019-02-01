@@ -141,6 +141,9 @@ router.get('/*', (req, res) => {
 
 	let error = true;
 	// Check to see if the file exists in any of the three possible view directories. If not, error.
+	// Note that this doesn't actually decide where files are served from, it just _checks to see if
+	// the file exists in a place_. If you want to add a new place that files can be served from, all
+	// of that config stuff happens in config.js in the "view engine setup" area.
 	fs.access(path.join(__dirname, 'demo-overrides', (config.productTemplate) ? config.productTemplate : '', (config.demoVenue) ? config.demoVenue : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 		if (!err) error = false;
 		fs.access(path.join(__dirname, 'product-templates', (config.productTemplate) ? config.productTemplate : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {

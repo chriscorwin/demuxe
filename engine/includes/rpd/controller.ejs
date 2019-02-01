@@ -1,8 +1,34 @@
 <% const showRPDController = locals.sanitizedQueryParams.showRPDController; %>
 
+<style>
+	body.editMode .rapidDiv {
+		height: 200px;
+		width: 200px;
+		border: 3px double red;
+		background: grey;
+		position: absolute;
+		top: 500px;
+		left: 30px;
+		display: block;
+		padding: 12px;
+		color: white;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	body.editMode .rapidDiv:hover {
+		cursor: pointer;
+		border: 3px double blue;
+	}
+
+	body.editMode .rapidDiv.grabbing {
+		cursor: grabbing;
+	}
+</style>
+
 <div id="RPDController" style="height: 500px; min-width: 615px; overflow-x: auto; <%= showRPDController ? '' : 'display: none;' %>">
 	<div class="slds-docked_container">
-		<section class="slds-docked-composer slds-grid slds-grid_vertical slds-is-open" role="dialog" aria-labelledby="dialog-heading-id-1" aria-describedby="dialog-content-id-1">
+		<section class="slds-docked-composer slds-grid slds-grid_vertical slds-is-open" role="dialog" aria-labelledby="dialog-heading-id-1" aria-describedby="RPDControllerForm">
 			<header class="slds-docked-composer__header slds-grid slds-shrink-none" aria-live="assertive">
 				<div class="slds-media slds-media_center slds-no-space">
 					<div class="slds-media__figure slds-m-right_x-small">
@@ -37,80 +63,64 @@
 					</button>
 				</div>
 			</header>
-			<div class="slds-docked-composer__body slds-docked-composer__body_form" id="dialog-content-id-1">
-				<fieldset class="slds-form-element slds-form_compound">
-					<div class="slds-form-element__control">
-						<div class="slds-form-element__group slds-grid slds-wrap">
-							<ul class="slds-button-group-list slds-col slds-size_1-of-1">
-								<li>
-									<button class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#steps"></use>
-									</svg>Add a Rapid Div</button>
-								</li>
-							</ul>
-							<ul class="slds-button-group-list slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
-								<li>
-									<button class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#cases"></use>
-									</svg>View RPD Code</button>
-								</li>
-								<li>
-									<button class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#copy_to_clipboard"></use>
-									</svg>Copy RPD Code</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</fieldset>
+			<div class="slds-docked-composer__body slds-docked-composer__body_form" id="RPDControllerForm">
+
 			</div>
-			<!-- footer class="slds-docked-composer__footer slds-shrink-none">
-				<button class="slds-button slds-button_brand slds-col_bump-left">Save</button>
-			</footer -->
+			<footer class="slds-docked-composer__footer slds-shrink-none slds-hidden">
+				<button id="RPDControllerHomeButton" class="slds-button slds-button_neutral">Clear Selection</button>
+			</footer>
 		</section>
 	</div>
 </div>
 
+<script src="/includes/rpd/controller.js"></script>
+
 <script>
-console.log('<%= !showRPDController ? `RPD Controller hidden. Add ?showRPDController=true to URL to show.` : `RPD Controller visible` %>');
+	console.log('<%= !showRPDController ? `RPD Controller hidden. Add ?showRPDController=true to URL to show.` : `RPD Controller visible` %>');
 
-const rpdController = document.getElementById('RPDController');
+	<%- showRPDController ? "enableEditMode(document.getElementsByTagName('body')[0])" : '' %>
 
-const showHideRPDController = () => {
-	if (rpdController.style.display === 'none') {
-		rpdController.style.display = 'block';
-	} else {
-		rpdController.style.display = 'none'
+	const RPDController = document.getElementById('RPDController');
+
+	showHomeForm(RPDController);
+
+	document.querySelector('#addRapidDiv').addEventListener('click', () => {
+		addRapidDiv(document.querySelector('body'), RPDController) 
+	});
+
+	document.querySelector('#RPDControllerHomeButton').addEventListener('click', () => {
+		showHomeForm(RPDController);
+	});
+
+	document.querySelector('#closeRPDController').addEventListener('click', () => {
+		showHide(RPDController, document.getElementsByTagName('body')[0]);
+	});
+	document.querySelector('#minimizeRPDController').addEventListener('click', () => {
+		toggleOpen(document.querySelector('#RPDController > div > section').classList);
+	});
+
+	const addListener = () => {
+		console.log('KONAMI CODE LISTENER ACTIVE. To deactivate, add ?disableKonami=true to URL. UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A to show/hide RPD Controller');
+		let cursor = 0;
+		const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+		document.addEventListener('keydown', (e) => {
+			cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
+			if (cursor == KONAMI_CODE.length) {
+				showHide(RPDController, document.getElementsByTagName('body')[0]);
+				cursor = 0;
+			};
+		});
 	}
-}
 
-const toggleRPDController = () => {
-	const sectionStyles = document.querySelector('#RPDController > div > section').classList;
+	<% if (!locals.sanitizedQueryParams.disableKonami) { %>
+		addListener();
+	<% } else { %>
+		console.log('KONAMI CODE LISTENER DISABLED.');
+	<% } %>
 
-	if (sectionStyles.contains('slds-is-open')) {
-		sectionStyles.remove('slds-is-open');
-		sectionStyles.add('slds-is-closed');
-	} else {
-		sectionStyles.add('slds-is-open');
-		sectionStyles.remove('slds-is-closed');
-	}
-}
+	document.querySelectorAll('.rapidDiv').forEach((rpdDiv) => {
+		updateData(rpdDiv);
+		addListeners(rpdDiv, RPDController);
+	});
 
-<% if (!locals.sanitizedQueryParams.disableKonami) { %>
-console.log('KONAMI CODE LISTENER ACTIVE. To deactivate, add ?disableKonami=true to URL. UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A to show/hide RPD Controller');
-let cursor = 0;
-const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-document.addEventListener('keydown', (e) => {
-	cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
-	if (cursor == KONAMI_CODE.length) {
-		showHideRPDController();
-		cursor = 0;
-	};
-});
-<% } else { %>
-	console.log('KONAMI CODE LISTENER DISABLED.');
-<% } %>
-
-document.querySelector('#closeRPDController').addEventListener('click', showHideRPDController);
-document.querySelector('#minimizeRPDController').addEventListener('click', toggleRPDController);
 </script>
