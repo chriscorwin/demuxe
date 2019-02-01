@@ -157,6 +157,52 @@ const setSelection = (rpdDiv, RPDController) => {
 					<textarea id="${id}onclickRaw" rows=1 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${decodeURI(rpdDiv.dataset.onclickRaw)}</textarea>
 				</div>
 			</div>
+
+			<div class="slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_x-small">onmouseover</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">addClass('
+					<input id="${id}onmouseoverAddClass" placeholder="classes, here" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onmouseoverAddClass}" />
+				')</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">removeClass('
+					<input id="${id}onmouseoverRemoveClass" placeholder="classes, here" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onmouseoverRemoveClass}" />
+				');</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">toggleClass('
+					<input id="${id}onmouseoverToggleClass" placeholder="classes, here" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onmouseoverToggleClass}" />
+				');</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">Raw onmouseover JS:</label>
+				<div class="slds-form-element__control">
+					<textarea id="${id}onmouseoverRaw" rows=1 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${decodeURI(rpdDiv.dataset.onmouseoverRaw)}</textarea>
+				</div>
+			</div>
+
+			<div class="slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_x-small">onmouseout</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">addClass('
+					<input id="${id}onmouseoutAddClass" placeholder="classes, here" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onmouseoutAddClass}" />
+				')</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">removeClass('
+					<input id="${id}onmouseoutRemoveClass" placeholder="classes, here" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onmouseoutRemoveClass}" />
+				');</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">toggleClass('
+					<input id="${id}onmouseoutToggleClass" placeholder="classes, here" class="slds-input" style="width: auto;" type="text" value="${rpdDiv.dataset.onmouseoutToggleClass}" />
+				');</label>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">Raw onmouseout JS:</label>
+				<div class="slds-form-element__control">
+					<textarea id="${id}onmouseoutRaw" rows=1 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${decodeURI(rpdDiv.dataset.onmouseoutRaw)}</textarea>
+				</div>
+			</div>
 		</div>
 	</div>
 </fieldset>
@@ -198,6 +244,81 @@ const setSelection = (rpdDiv, RPDController) => {
 		setSelection(rpdDiv, RPDController);
 	});
 
+	// ON MOUSEOVER
+	RPDController.querySelector(`#${id}onmouseoverAddClass`).addEventListener('change', (e) => {
+		const addClassClasses = e.target.value;
+		rpdDiv.dataset.onmouseoverAddClass = addClassClasses;
+		rpdDiv.querySelector('.onmouseoverAddClass').text = `document.querySelector('#${id}').addEventListener('mouseover', (e) => {
+	addClasses(e.target, '${e.target.value}');
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
+	RPDController.querySelector(`#${id}onmouseoverRemoveClass`).addEventListener('change', (e) => {
+		const removeClassClasses = e.target.value;
+		rpdDiv.dataset.onmouseoverRemoveClass = removeClassClasses;
+		rpdDiv.querySelector('.onmouseoverRemoveClass').text = `document.querySelector('#${id}').addEventListener('mouseover', (e) => {
+	removeClasses(e.target, '${e.target.value}');
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
+	RPDController.querySelector(`#${id}onmouseoverToggleClass`).addEventListener('change', (e) => {
+		const toggleClassClasses = e.target.value;
+		rpdDiv.dataset.onmouseoverToggleClass = toggleClassClasses;
+		rpdDiv.querySelector('.onmouseoverToggleClass').text = `document.querySelector('#${id}').addEventListener('mouseover', (e) => {
+	toggleClasses(e.target, '${e.target.value}');
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
+	RPDController.querySelector(`#${id}onmouseoverRaw`).addEventListener('change', (e) => {
+		const rawMouseOverCode = e.target.value;
+		rpdDiv.dataset.onmouseoverRaw = encodeURI(rawMouseOverCode);
+		rpdDiv.querySelector('.onmouseoverRaw').text = `document.querySelector('#${id}').addEventListener('mouseover', (e) => {
+	${rawMouseOverCode}
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
+	// ON MOUSEOUT
+	RPDController.querySelector(`#${id}onmouseoutAddClass`).addEventListener('change', (e) => {
+		const addClassClasses = e.target.value;
+		rpdDiv.dataset.onmouseoutAddClass = addClassClasses;
+		rpdDiv.querySelector('.onmouseoutAddClass').text = `document.querySelector('#${id}').addEventListener('mouseout', (e) => {
+	addClasses(e.target, '${e.target.value}');
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
+	RPDController.querySelector(`#${id}onmouseoutRemoveClass`).addEventListener('change', (e) => {
+		const removeClassClasses = e.target.value;
+		rpdDiv.dataset.onmouseoutRemoveClass = removeClassClasses;
+		rpdDiv.querySelector('.onmouseoutRemoveClass').text = `document.querySelector('#${id}').addEventListener('mouseout', (e) => {
+	removeClasses(e.target, '${e.target.value}');
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
+	RPDController.querySelector(`#${id}onmouseoutToggleClass`).addEventListener('change', (e) => {
+		const toggleClassClasses = e.target.value;
+		rpdDiv.dataset.onmouseoutToggleClass = toggleClassClasses;
+		rpdDiv.querySelector('.onmouseoutToggleClass').text = `document.querySelector('#${id}').addEventListener('mouseout', (e) => {
+	toggleClasses(e.target, '${e.target.value}');
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
+	RPDController.querySelector(`#${id}onmouseoutRaw`).addEventListener('change', (e) => {
+		const rawMouseOutCode = e.target.value;
+		rpdDiv.dataset.onmouseoutRaw = encodeURI(rawMouseOutCode);
+		rpdDiv.querySelector('.onmouseoutRaw').text = `document.querySelector('#${id}').addEventListener('mouseout', (e) => {
+	${rawMouseOutCode}
+});`
+		setSelection(rpdDiv, RPDController);
+	});
+
+	// ATTRIBUTES
 	RPDController.querySelector(`#${id}ID`).addEventListener('change', (e) => {
 		rpdDiv.dataset.id = `${e.target.value}`;
 		rpdDiv.id = e.target.value;
@@ -312,11 +433,27 @@ const addRapidDiv = (target, RPDController) => {
 			data-onclick-remove-class=""
 			data-onclick-toggle-class=""
 			data-onclick-raw=""
+			data-onmouseover-add-class=""
+			data-onmouseover-remove-class=""
+			data-onmouseover-toggle-class=""
+			data-onmouseover-raw=""
+			data-onmouseout-add-class=""
+			data-onmouseout-remove-class=""
+			data-onmouseout-toggle-class=""
+			data-onmouseout-raw=""
 		>
 			<script class="onclickAddClass"></script>
 			<script class="onclickRemoveClass"></script>
 			<script class="onclickToggleClass"></script>
 			<script class="onclickRaw"></script>
+			<script class="onmouseoverAddClass"></script>
+			<script class="onmouseoverRemoveClass"></script>
+			<script class="onmouseoverToggleClass"></script>
+			<script class="onmouseoverRaw"></script>
+			<script class="onmouseoutAddClass"></script>
+			<script class="onmouseoutRemoveClass"></script>
+			<script class="onmouseoutToggleClass"></script>
+			<script class="onmouseoutRaw"></script>
 			Rapid Div ${uniqueID}
 		</div>
 `;
