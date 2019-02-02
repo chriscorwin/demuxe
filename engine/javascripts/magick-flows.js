@@ -190,22 +190,20 @@ function locationHashChanged(event) {
 			// Direction is just the direction, capitalied, so that the camelCase stuff is correct.
 			const Direction = direction.charAt(0).toUpperCase() + direction.substring(1);
 
+			// First we will hide any previous screen's drawer.
 			if (document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`) !== null) {
 				if ( magickFlowConfig.metaData[previousClick][`showDrawerFrom${Direction}`] === true ) {
-
 					setTimeout(() => {
 						document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.remove('slide-in');
-						
 						setTimeout(() => {
 							document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.add('slds-hide');
 						}, 125);
 					}, 0);
-
 					delayTransition = 125;
 				}
 			}
 
-
+			// Now we will show this screen's drawer, if it exists.
 			if ( magickFlowConfig.metaData[clicks][`showDrawerFrom${Direction}`] === true ) {
 				doDrawer = true;
 				document.querySelector(`.drawer-from-${direction}--slide-${clicks}`).classList.remove('slds-hide');
@@ -214,23 +212,19 @@ function locationHashChanged(event) {
 				}, 125);
 			}
 
+			// Finally, we will hide the _next_ screen's drawer, too -- this is in case we're going backwards.
 			if (document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`) !== null) {
 				if ( magickFlowConfig.metaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
-
 					setTimeout(() => {
 						document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.remove('slide-in');
-						
 						setTimeout(() => {
 							document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.add('slds-hide');
 						}, 125);
 					}, 0);
-
 					delayTransition = 125;
 				}
 			}
 		});
-
-
 	}
 
 
