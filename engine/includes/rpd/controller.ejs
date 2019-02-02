@@ -1,15 +1,23 @@
 <% const showRPDController = locals.sanitizedQueryParams.showRPDController; %>
 
 <style>
-	body.editMode .rapidDiv {
+
+	.rapidDiv {
+		position: absolute;
+		display: block;
 		height: 200px;
 		width: 200px;
-		border: 3px double red;
-		background: grey;
-		position: absolute;
 		top: 500px;
 		left: 30px;
-		display: block;
+	}
+
+	.rapidDiv.blue {
+		background-color: blue !important;
+	}
+
+	body.editMode .rapidDiv {
+		border: 3px double red;
+		background: grey;
 		padding: 12px;
 		color: white;
 		font-weight: bold;
@@ -28,7 +36,7 @@
 
 <div id="RPDController" style="height: 500px; min-width: 615px; overflow-x: auto; <%= showRPDController ? '' : 'display: none;' %>">
 	<div class="slds-docked_container">
-		<section class="slds-docked-composer slds-grid slds-grid_vertical slds-is-open" role="dialog" aria-labelledby="dialog-heading-id-1" aria-describedby="RPDControllerForm">
+		<section class="slds-docked-composer slds-grid slds-grid_vertical slds-is-open" style="overflow: scroll" role="dialog" aria-labelledby="dialog-heading-id-1" aria-describedby="RPDControllerForm">
 			<header class="slds-docked-composer__header slds-grid slds-shrink-none" aria-live="assertive">
 				<div class="slds-media slds-media_center slds-no-space">
 					<div class="slds-media__figure slds-m-right_x-small">
