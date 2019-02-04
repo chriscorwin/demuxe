@@ -94,9 +94,9 @@ Demuxe utilizes:
 - [Express server](https://expressjs.com).
 - Serves from port `:3000` (http://localhost:3000).
 - `.ejs` files are processed server-side and served.
-	- Routes all requests to corresponding files in `/your-code-here/`, `/product-templates/{config.productTemplate}`, and `/engine/` _in that order_ (eg: `localhost:3000/bobs/books` routes to `your-code-here/bobs/books.ejs`, if that doesn't exist, it tries `/product-templates/{config.productTemplate}/bobs/books.ejs`, if that doesn't exist, it tries `/engine/bobs/books.ejs`, and if that doesn't exist it serves up `/engine/404.ejs` (unless you've overridden that in the product-template or `your-code-here`)).
+	- Routes all requests to corresponding files in `/demo-overrides/`, `/product-templates/{config.productTemplate}`, and `/engine/` _in that order_ (eg: `localhost:3000/bobs/books` routes to `demo-overrides/bobs/books.ejs`, if that doesn't exist, it tries `/product-templates/{config.productTemplate}/bobs/books.ejs`, if that doesn't exist, it tries `/engine/bobs/books.ejs`, and if that doesn't exist it serves up `/engine/404.ejs` (unless you've overridden that in the product-template or `demo-overrides`)).
 	- User input is magically sanitized using [express-sanitizer](https://www.npmjs.com/package/express-sanitizer).
-- All other files under `/your-code-here/`, `/product-templates/{config.productTemplate}`, and `/engine/` are served as static files, _in that order of prioritization_.
+- All other files under `/demo-overrides/`, `/product-templates/{config.productTemplate}`, and `/engine/` are served as static files, _in that order of prioritization_.
 - Any query params `?like=this` are passed along into the EJS template and available for use in the global js `locals.sanitizedQueryParams` object `<%= locals.sanitizedQueryParams.likeThis %>`.
 - EJS files can be included in other EJS files (server side) `<%- include('includes/like-this') %>` and follow the same rules as outlined in `.ejs` bullet-point above.
 
@@ -166,9 +166,9 @@ Shall live on your machine or in corporate Google Drive. Typically these will be
 Demuxe consists of:
 
 1. Engine (located under `/engine/`). DO NOT MODIFY this while making a demo.
-2. Product Templates (located under `/product-templates/`). DO NOT MODIFY an existing product template while making a demo, put any changes you want to make to a template into `/your-code-here/` instead).
+2. Product Templates (located under `/product-templates/`). DO NOT MODIFY an existing product template while making a demo, put any changes you want to make to a template into `/demo-overrides/` instead).
 3. Brand Themes (located under `/brand-themes/`). PLEASE MODIFY during demo creation. This is the theme for your demo. You will nearly always be creating a new brand-theme during your demo creation.
-4. Your demo specific modifications (located under `/your-code-here/`). PLEASE MODIFY during your demo creation. Any modifications you would like to make to the engine or product templates during demo creation should instead be made here. These modifications include RPD Components.
+4. Your demo specific modifications (located under `/demo-overrides/`). PLEASE MODIFY during your demo creation. Any modifications you would like to make to the engine or product templates during demo creation should instead be made here. These modifications include RPD Components.
 
 ## Brand Theming
 Enables brand re-use across demos, and brand-theming demos, quickly and easily.
@@ -215,7 +215,7 @@ Also, SVG files do not have access to fonts the same way HTML elements do, so we
 	
 		`node ./dev-assets/utilities/embed-fonts-in-svgs`
 
-	- By default the script will scan the `your-code-here/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
+	- By default the script will scan the `demo-overrides/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
 
 	- To convert other project directories, add a directory path when running the script, thus: 
 	
@@ -249,7 +249,7 @@ Components:
 
 ## Your Code Here
 
-Anything changes you would like to make to `/engine/` or `/product-template/[product]/` must be made here instead. Place a copy of the file you would like to modify here (at the same path it existed at in its original location, eg: `/product-template/dmp/includes/file.ejs` would be copied to `/your-code-here/includes/file.ejs`) and make your modifications.
+Anything changes you would like to make to `/engine/` or `/product-template/[product]/` must be made here instead. Place a copy of the file you would like to modify here (at the same path it existed at in its original location, eg: `/product-template/dmp/includes/file.ejs` would be copied to `/demo-overrides/includes/file.ejs`) and make your modifications.
 
 ### RPD Tool
 
@@ -257,9 +257,9 @@ RPD tool allows you to add RPD Components (aka "Rapid Components", usually "Rapi
 
 #### RPD Controller
 
-The RPD Controller looks for any RPD Components placed within `/your-code-here/rpd-components/` and adds them to the demo at the proper time and place.
+The RPD Controller looks for any RPD Components placed within `/demo-overrides/rpd-components/` and adds them to the demo at the proper time and place.
 
-The RPD Controller also allows you to edit RPD Components and gives you the code required to insert these components into your demo (they must be placed within `/your-code-here/rpd-components/`).
+The RPD Controller also allows you to edit RPD Components and gives you the code required to insert these components into your demo (they must be placed within `/demo-overrides/rpd-components/`).
 
 While the RPD Controller exists in `/engine/`, it must be explicitly included in each product-template. Do this with a single line of code just before your closing `</body>` tag in your product template's EJS wrapper:
 

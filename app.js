@@ -53,7 +53,7 @@ const appViews = config.appViews;
 app.set('views', appViews);
 
 app.set('view engine', 'ejs');
-app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/your-code-here' });
+app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/demo-overrides' });
 app.set('view options', {compileDebug: true});
 app.set('view options', {compileDebug: true, outputFunctionName: 'echo'});
 
@@ -100,9 +100,9 @@ appUse.push(
 	sassMiddleware({
 		debug: false,
 		outputStyle: 'expanded',
-		src: path.join(__dirname, 'your-code-here')
+		src: path.join(__dirname, 'demo-overrides')
 	}),
-	express.static(path.join(__dirname, 'your-code-here'))
+	express.static(path.join(__dirname, 'demo-overrides'))
 );
 
 appUse.push(
@@ -119,8 +119,8 @@ const router = express.Router();
  * This dynamically routes to any .ejs file that exists, otherwise it routes to 
  * the /404.ejs file.
  * 
- * eg: http://your.site.com/kidney/beans, serves the ejs file /your-code-here/kidney/beans.ejs
- * or serves /your-code-here/404.ejs if that file does not exist.
+ * eg: http://your.site.com/kidney/beans, serves the ejs file /demo-overrides/kidney/beans.ejs
+ * or serves /demo-overrides/404.ejs if that file does not exist.
  * 
  * If a non-existent static (js/css/html/svg/png/etc) file is requested, it will fall through the
  * express.static middleware into this. This will handle it and serve an appropriate 404 error.
@@ -141,7 +141,10 @@ router.get('/*', (req, res) => {
 
 	let error = true;
 	// Check to see if the file exists in any of the three possible view directories. If not, error.
-	fs.access(path.join(__dirname, 'your-code-here', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+	// Note that this doesn't actually decide where files are served from, it just _checks to see if
+	// the file exists in a place_. If you want to add a new place that files can be served from, all
+	// of that config stuff happens in config.js in the "view engine setup" area.
+	fs.access(path.join(__dirname, 'demo-overrides', (config.productTemplate) ? config.productTemplate : '', (config.demoVenue) ? config.demoVenue : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 		if (!err) error = false;
 		fs.access(path.join(__dirname, 'product-templates', (config.productTemplate) ? config.productTemplate : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 			if (!err) error = false;
