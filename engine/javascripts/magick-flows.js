@@ -230,36 +230,46 @@ function locationHashChanged(event) {
 
 
 
-
-	
 	if (document.querySelector(`.ios-notification`) !== null) {
-		
+
+		// First we will hide any previous screen's drawer.
 		if (document.querySelector(`.ios-notification--slide-${previousClick}`) !== null) {
-			if ( magickFlowConfig.metaData[previousClick].showIosNotification === true ) {
-				document.querySelector(`.ios-notification--slide-${previousClick}`).classList.remove('slide-in');
-				document.querySelector(`.ios-notification--slide-${previousClick}`).classList.add('slds-hide');
+			if ( magickFlowConfig.metaData[previousClick][`showIosNotification`] === true ) {
+				setTimeout(() => {
+					document.querySelector(`.ios-notification--slide-${previousClick}`).classList.remove('slide-in');
+					setTimeout(() => {
+						document.querySelector(`.ios-notification--slide-${previousClick}`).classList.add('slds-hide');
+					}, 125);
+				}, 0);
+				delayTransition = 125;
 			}
 		}
 
-		if ( magickFlowConfig.metaData[clicks].showIosNotification === true ) {
-				doNotifcation = true;
-				document.querySelector(`.ios-notification--slide-${clicks}`).classList.remove('slds-hide');
-				window.setTimeout(() => {
-					document.querySelector(`.ios-notification--slide-${clicks}`).classList.add('slide-in');
-				}, 125);
+		// Now we will show this screen's drawer, if it exists.
+		if ( magickFlowConfig.metaData[clicks][`showIosNotification`] === true ) {
+			doDrawer = true;
+			document.querySelector(`.ios-notification--slide-${clicks}`).classList.remove('slds-hide');
+			window.setTimeout(() => {
+				document.querySelector(`.ios-notification--slide-${clicks}`).classList.add('slide-in');
+			}, 125);
 		}
 
+		// Finally, we will hide the _next_ screen's drawer, too -- this is in case we're going backwards.
 		if (document.querySelector(`.ios-notification--slide-${nextClick}`) !== null) {
-			if ( magickFlowConfig.metaData[nextClick].showIosNotification === true ) {
-				document.querySelector(`.ios-notification--slide-${nextClick}`).classList.remove('slide-in');
-				document.querySelector(`.ios-notification--slide-${nextClick}`).classList.add('slds-hide');
+			if ( magickFlowConfig.metaData[nextClick][`showIosNotification`] === true ) {
+				setTimeout(() => {
+					document.querySelector(`.ios-notification--slide-${nextClick}`).classList.remove('slide-in');
+					setTimeout(() => {
+						document.querySelector(`.ios-notification--slide-${nextClick}`).classList.add('slds-hide');
+					}, 125);
+				}, 0);
+				delayTransition = 125;
 			}
 		}
-
-		// if (document.querySelector(`.ios-notification`) !== null) {
-		// 	document.querySelector(`.ios-notification`).classList.remove(drawerContentChangingClasses.split(' ').join(',') + ',slide-in');
-		// }
+		
 	}
+
+
 
 
 	// if ( magickFlowConfig.urlSlug === 'tm-mobile-tokyo' || magickFlowConfig.urlSlug === 'tm-mobile' || magickFlowConfig.urlSlug === 'tm-mobile-new' ) {

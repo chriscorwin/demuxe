@@ -26,20 +26,21 @@ body, .container {
 }
 
 
-.notification {
+
+.ios-notification {
 	margin: 0 auto;
 	position: absolute;
 	transition: 125ms top ease-in-out;
 	width: $widthOfSlide;
 	background-color: transparent;
 	height: $heightOfAppSwitcher;
-	top: -210px;
+	top: $heightOfSlideNegative;
 	transition: 125ms top ease-in-out;
 	will-change: top;
 
 }
 
-.notification.slide-in {
+.ios-notification.slide-in {
 	top: 0px;
 	transition: 125ms top ease-in-out;
 	will-change: top;

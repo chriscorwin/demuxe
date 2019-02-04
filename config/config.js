@@ -25,7 +25,7 @@ function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleErro
         if(!err){
             // console.log(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
         } else {
-            console.error(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
+            console.error(`[ config/config.js:28 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
 
         }
     });

@@ -3,15 +3,19 @@
 $numberOfSlides: 1 !default;
 $preloadImagesData: "url('/fake.png')" !default;
 
-
-$widthOfSlideValue: 1024;
-$heightOfSlideValue: 768;
+$heightOfSlideValue: 1024;
+$widthOfSlideValue: 768;
 $widthOfGutterValue: 20;
 
 $widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
 $heightOfAppSwitcher: $heightOfSlideValue + 0px;
 $heightOfSlide: $heightOfSlideValue + 0px;
 $widthOfSlide: $widthOfSlideValue + 0px;
+
+$widthOfAppSwitcherNegative: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) * -1px;
+$heightOfAppSwitcherNegative: $heightOfSlideValue * -1px;
+$heightOfSlideNegative: $heightOfSlideValue * -1px;
+$widthOfSlideNegative: $widthOfSlideValue * -1px;
 
 /* This is done to preload images and reduce load flicker */
 body::after {

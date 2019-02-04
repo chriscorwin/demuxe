@@ -84,7 +84,7 @@ _%>
 			iosNotificationHtmlOut = `
 				<div
 					id="ios-notification--slide-${node.screensIndex}"
-					class="notification ios-notification ios-notification--slide-${node.screensIndex}  magick-flows-slide-asset"
+					class="ios-notification ios-notification--slide-${node.screensIndex}  magick-flows-slide-asset"
 				><img src="${iosNotificationWebRootUrl}" /></div>
 			`
 		}
@@ -184,7 +184,6 @@ _%>
 						src="${mainContentWebRootUrl}"
 					>
 				</div>
-				${iosNotificationHtmlOut}
 			`);
 		} else if (isEjs) {
 			echo(`
@@ -236,6 +235,8 @@ _%>
 	<%- drawerFromRightHtmlOut %>
 	<%- drawerFromBottomHtmlOut %>
 	<%- drawerFromLeftHtmlOut %>
+	<%- iosNotificationHtmlOut %>
+
 </div>
 
 
