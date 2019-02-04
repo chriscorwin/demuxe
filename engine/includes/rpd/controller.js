@@ -96,20 +96,28 @@ const setSelection = (rpdDiv, RPDController) => {
 				</div>
 			</div>
 
+			<!-- STYLE DATA -->
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">ID</label>
 				<div class="slds-form-element__control">
 					<input id="${id}ID" placeholder="ID" class="slds-input" type="text" value="${rpdDiv.dataset.id}" />
 				</div>
 			</div>
-
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Classes</label>
 				<div class="slds-form-element__control">
 					<input id="${id}Classes" placeholder="Classes" class="slds-input" type="text" value="${rpdDiv.dataset.classes}" />
 				</div>
 			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1">
+				<label class="slds-form-element__label" for="text-input-id-1">Background Image</label>
+				<div class="slds-form-element__control">
+					<input id="${id}BackgroundImage" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImage}" />
+					<label for="${id}BackgroundImage">${rpdDiv.dataset.backgroundImage}</lable>
+				</div>
+			</div>
 
+			<!-- POSITION DATA -->
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Top</label>
 				<div class="slds-form-element__control">
@@ -135,6 +143,7 @@ const setSelection = (rpdDiv, RPDController) => {
 				</div>
 			</div>
 
+			<!-- INTERACTION DATA -->
 			<div class="slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_x-small">onclick</div>
 			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
 				<label class="slds-form-element__label" for="text-input-id-1">addClass('
@@ -337,6 +346,16 @@ const setSelection = (rpdDiv, RPDController) => {
 		setSelection(rpdDiv, RPDController);
 	});
 
+	RPDController.querySelector(`#${id}BackgroundImage`).addEventListener('change', (e) => {
+		const fileName = `/images/${e.target.files[0].name}`;
+		rpdDiv.querySelector('.backgroundImage').innerHTML = `
+		#${id} {
+			background-image: url('${fileName}');
+		}	
+`
+		rpdDiv.dataset.backgroundImage = `${fileName}`;
+		setSelection(rpdDiv, RPDController);
+	});
 
 	RPDController.querySelector(`#${id}Top`).addEventListener('change', (e) => {
 		rpdDiv.style.top = `${e.target.value}px`;
@@ -441,7 +460,9 @@ const addRapidDiv = (target, RPDController) => {
 			data-onmouseout-remove-class=""
 			data-onmouseout-toggle-class=""
 			data-onmouseout-raw=""
+			data-background-image=""
 		>
+			<style class="backgroundImage"></style>
 			<script class="onclickAddClass"></script>
 			<script class="onclickRemoveClass"></script>
 			<script class="onclickToggleClass"></script>

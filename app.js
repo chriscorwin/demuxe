@@ -94,16 +94,20 @@ if (config.productTemplate) {
 		}),
 		express.static(path.join(__dirname, 'product-templates', config.productTemplate))
 	);
+
+	if (config.demoVenue) {
+		appUse.push(
+			sassMiddleware({
+				debug: false,
+				outputStyle: 'expanded',
+				src: path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue)
+			}),
+			express.static(path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue))
+		);
+	}
 }
 
-appUse.push(
-	sassMiddleware({
-		debug: false,
-		outputStyle: 'expanded',
-		src: path.join(__dirname, 'demo-overrides')
-	}),
-	express.static(path.join(__dirname, 'demo-overrides'))
-);
+
 
 appUse.push(
 	express.static(path.join(__dirname, 'slides'))
