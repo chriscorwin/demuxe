@@ -99,7 +99,6 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 
 const getScreenData = (flowData, fileName, fileIndex) => {
 
-	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:102 ] fileName: `, util.inspect(fileName, { showHidden: true, depth: null, colors: true }));
 	let screenDataAttributes = {
 		screensIndex: fileIndex,
 		fileExtension: fileName.split('.')[fileName.split('.').length - 1]
@@ -116,7 +115,6 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 
 	if ( typeof screenDataAttributes.data !== 'undefined' ) {
 
-		console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:118 ] screenDataAttributes.data: `, util.inspect(screenDataAttributes.data, { showHidden: true, depth: null, colors: true }));
 		const screenInfo = { 
 			assetFiles: flowData.assets, 
 			screenId: screenDataAttributes.id, 
