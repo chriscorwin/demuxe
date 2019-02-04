@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/testing-magick-flows/main/0000___start-here-0.svg") url("/magick-flows/testing-magick-flows/main/0100___ID=introducing-drawers.svg") url("/magick-flows/testing-magick-flows/main/0102___ID=introducing-drawers___DATA=show-drawer-from-top.svg") url("/magick-flows/testing-magick-flows/main/0103___ID=introducing-drawers___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0104___ID=introducing-drawers___DATA=show-drawer-from-right.svg") url("/magick-flows/testing-magick-flows/main/0105___ID=introducing-drawers___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0106___ID=introducing-drawers___DATA=show-drawer-from-bottom.svg") url("/magick-flows/testing-magick-flows/main/0107___ID=introducing-drawers___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0108___ID=introducing-drawers___DATA=show-drawer-from-left.svg") url("/magick-flows/testing-magick-flows/main/0109___ID=introducing-drawers-end___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0200___ID=introducing-ios-notifications.svg") url("/magick-flows/testing-magick-flows/main/0201___ID=introducing-ios-notifications___DATA=show-ios-notification.svg") url("/magick-flows/testing-magick-flows/main/0202___ID=introducing-ios-notifications___NOTES=clears-notification.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-bottom.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-left.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-right.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-top.svg") url("/magick-flows/testing-magick-flows/assets/introducing-ios-notifications___ios-notification.svg");
+  content: url("/magick-flows/testing-magick-flows/main/0000___start-here-0.svg") url("/magick-flows/testing-magick-flows/main/0100___ID=introducing-drawers.svg") url("/magick-flows/testing-magick-flows/main/0102___ID=introducing-drawers___DATA=show-drawer-from-top.svg") url("/magick-flows/testing-magick-flows/main/0103___ID=introducing-drawers___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0104___ID=introducing-drawers___DATA=show-drawer-from-right.svg") url("/magick-flows/testing-magick-flows/main/0105___ID=introducing-drawers___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0106___ID=introducing-drawers___DATA=show-drawer-from-bottom.svg") url("/magick-flows/testing-magick-flows/main/0107___ID=introducing-drawers___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0108___ID=introducing-drawers___DATA=show-drawer-from-left.svg") url("/magick-flows/testing-magick-flows/main/0109___ID=introducing-drawers-end___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0200___ID=introducing-ios-notifications.svg") url("/magick-flows/testing-magick-flows/main/0201___ID=introducing-ios-notifications___DATA=show-ios-notification.svg") url("/magick-flows/testing-magick-flows/main/0202___ID=introducing-ios-notifications___NOTES=clears-notification.svg") url("/magick-flows/testing-magick-flows/main/0300___ID=introducing-headers-and-footers.svg") url("/magick-flows/testing-magick-flows/main/0301___ID=introducing-headers-and-footers___DATA=has-sticky-header__has-sticky-footer.svg") url("/magick-flows/testing-magick-flows/main/0400___ID=introducing-application-transitions.svg") url("/magick-flows/testing-magick-flows/main/0401___ID=this-is-the-end___DATA=use-slide-transition__slide-transition_app-switch.svg") url("/magick-flows/testing-magick-flows/main/0402___ID=this-is-the-end.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-bottom.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-left.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-right.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-top.svg") url("/magick-flows/testing-magick-flows/assets/introducing-headers-and-footers___sticky-footer.svg") url("/magick-flows/testing-magick-flows/assets/introducing-headers-and-footers___sticky-header.svg") url("/magick-flows/testing-magick-flows/assets/introducing-ios-notifications___ios-notification.svg");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -141,11 +141,11 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 5115px;
+  width: 7090px;
 }
 
 .app-switcher-one.shrink {
-  transform: scale(0.75);
+  transform: scale(0.85);
   will-change: transform;
 }
 
@@ -423,6 +423,96 @@ body, .container {
   top: 0;
   width: 375px;
   left: 5135px;
+}
+
+.app-switcher-one.be-left-14 {
+  left: -5530px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-14 {
+  left: -5530px;
+}
+
+.magick-flows--slide-14 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 5530px;
+}
+
+.app-switcher-one.be-left-15 {
+  left: -5925px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-15 {
+  left: -5925px;
+}
+
+.magick-flows--slide-15 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 5925px;
+}
+
+.app-switcher-one.be-left-16 {
+  left: -6320px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-16 {
+  left: -6320px;
+}
+
+.magick-flows--slide-16 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 6320px;
+}
+
+.app-switcher-one.be-left-17 {
+  left: -6715px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-17 {
+  left: -6715px;
+}
+
+.magick-flows--slide-17 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 6715px;
+}
+
+.app-switcher-one.be-left-18 {
+  left: -7110px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-18 {
+  left: -7110px;
+}
+
+.magick-flows--slide-18 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 7110px;
 }
 
 footer.magick-flows-stickey-footer_container {

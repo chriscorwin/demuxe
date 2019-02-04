@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="1892px" viewBox="0 0 375 1892" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>0301___ID=introducing-headers-and-footers___DATA=has-sticky-header__has-sticky-footer</title>
+    <desc>Created with Sketch.</desc>
+    <g id="0301___ID=introducing-headers-and-footers___DATA=has-sticky-header__has-sticky-footer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Background" fill="#EAEAEA" x="0" y="0" width="375" height="1892"></rect>
+        <g id="Magick-Flows-Tutorial-Texts" transform="translate(20.000000, 19.000000)">
+            <g id="Group" stroke-width="1" fill-rule="evenodd"></g>
+            <g id="Step-Number" transform="translate(0.000000, 1583.000000)" fill-rule="evenodd" stroke-width="1">
+                <g id="Group-2">
+                    <path d="M15.3833112,0.5 C10.5818938,0.5 8.51481192,0.899171926 6.37472521,2.04370282 C4.50630389,3.04294548 3.04294548,4.50630389 2.04370282,6.37472521 C0.899171926,8.51481192 0.5,10.5818938 0.5,15.3833112 L0.5,193.616689 C0.5,198.418106 0.899171926,200.485188 2.04370282,202.625275 C3.04294548,204.493696 4.50630389,205.957055 6.37472521,206.956297 C8.51481192,208.100828 10.5818938,208.5 15.3833112,208.5 L319.616689,208.5 C324.418106,208.5 326.485188,208.100828 328.625275,206.956297 C330.493696,205.957055 331.957055,204.493696 332.956297,202.625275 C334.100828,200.485188 334.5,198.418106 334.5,193.616689 L334.5,15.3833112 C334.5,10.5818938 334.100828,8.51481192 332.956297,6.37472521 C331.957055,4.50630389 330.493696,3.04294548 328.625275,2.04370282 C326.485188,0.899171926 324.418106,0.5 319.616689,0.5 L15.3833112,0.5 Z" id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8"></path>
+                    <text id="Label" font-family="Menlo-Regular, Menlo" font-size="94" font-weight="normal" fill="#080707">
+                        <tspan x="111.907227" y="138.65">14</tspan>
+                    </text>
+                </g>
+            </g>
+            <text id="Magick-Flows-are-gen" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal"></text>
+            <text id="Click-or-Key" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="18" font-weight="bold"></text>
+            <text id="This-Magick-Flow-ser" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="20" fill="#080707">
+                <tspan x="0" y="59">Each step of a Magick Flow can have a “Sticky Header” </tspan>
+                <tspan x="0" y="79">and/or ”Sticky Footer”. These anchor to the top and </tspan>
+                <tspan x="0" y="99">bottom of the screen, respectively. This allows the main </tspan>
+                <tspan x="0" y="119">content to be scrolled behind them.</tspan>
+                <tspan x="0" y="139"></tspan>
+                <tspan x="0" y="159">Now we will just put in a bunch of lorem ipsum to </tspan>
+                <tspan x="0" y="179">make this scrollable.</tspan>
+                <tspan x="0" y="199"></tspan>
+                <tspan x="0" y="219">Lorem ipsum dolor sit amet, consectetur adipiscing </tspan>
+                <tspan x="0" y="239">elit. Sed erat mauris, semper quis massa eget, blandit </tspan>
+                <tspan x="0" y="259">hendrerit nisi. Duis eleifend dolor in felis commodo </tspan>
+                <tspan x="0" y="279">placerat. Nam blandit rutrum tincidunt. Nunc augue </tspan>
+                <tspan x="0" y="299">augue, vehicula eu ex at, accumsan accumsan nisl. Sed </tspan>
+                <tspan x="0" y="319">lobortis lorem ut diam porttitor consectetur a eu tellus. </tspan>
+                <tspan x="0" y="339">Integer tincidunt quis elit accumsan semper. </tspan>
+                <tspan x="0" y="359">Suspendisse accumsan augue tellus, vitae volutpat </tspan>
+                <tspan x="0" y="379">mauris auctor vel. Nulla in urna non est fringilla </tspan>
+                <tspan x="0" y="399">suscipit. Maecenas non massa id nisi hendrerit </tspan>
+                <tspan x="0" y="419">consequat non vitae neque. Morbi cursus eu magna </tspan>
+                <tspan x="0" y="439">quis accumsan.</tspan>
+                <tspan x="0" y="459"></tspan>
+                <tspan x="0" y="479">In sit amet enim at velit posuere commodo. Fusce </tspan>
+                <tspan x="0" y="499">laoreet ipsum vitae quam molestie, eget elementum </tspan>
+                <tspan x="0" y="519">justo commodo. Nulla faucibus volutpat urna hendrerit </tspan>
+                <tspan x="0" y="539">vehicula. Vestibulum non interdum justo, id varius </tspan>
+                <tspan x="0" y="559">justo. Nam rutrum, sapien non fermentum eleifend, </tspan>
+                <tspan x="0" y="579">nunc est blandit enim, nec auctor urna quam euismod </tspan>
+                <tspan x="0" y="599">mauris. Mauris non dui et lectus dapibus sodales. </tspan>
+                <tspan x="0" y="619">Aliquam erat volutpat. Fusce metus augue, lobortis ut </tspan>
+                <tspan x="0" y="639">aliquet a, posuere vel nisl.</tspan>
+                <tspan x="0" y="659"></tspan>
+                <tspan x="0" y="679">Fusce finibus sapien non elementum suscipit. Proin </tspan>
+                <tspan x="0" y="699">feugiat sed ante id vulputate. Integer commodo </tspan>
+                <tspan x="0" y="719">ultrices diam, a luctus odio sodales eget. Quisque </tspan>
+                <tspan x="0" y="739">aliquam, leo sit amet blandit ornare, diam tortor lacinia </tspan>
+                <tspan x="0" y="759">justo, lacinia interdum lorem lacus ut nunc. Morbi </tspan>
+                <tspan x="0" y="779">condimentum tempus felis, vitae rhoncus ex lacinia ac. </tspan>
+                <tspan x="0" y="799">Sed gravida risus vel justo tincidunt malesuada. Sed </tspan>
+                <tspan x="0" y="819">dignissim, quam ac malesuada ullamcorper, urna est </tspan>
+                <tspan x="0" y="839">tincidunt sapien, vitae posuere est diam malesuada </tspan>
+                <tspan x="0" y="859">tortor. Pellentesque in ligula sed felis semper </tspan>
+                <tspan x="0" y="879">elementum vel et ipsum. Donec bibendum nisi quis </tspan>
+                <tspan x="0" y="899">eros eleifend vehicula.</tspan>
+                <tspan x="0" y="919"></tspan>
+                <tspan x="0" y="939">Duis id turpis nec leo tempus faucibus. Quisque arcu </tspan>
+                <tspan x="0" y="959">sapien, malesuada quis vehicula ut, viverra in justo. </tspan>
+                <tspan x="0" y="979">Maecenas varius odio dui, in semper nunc aliquet sed. </tspan>
+                <tspan x="0" y="999">Nulla pretium massa at libero commodo commodo. </tspan>
+                <tspan x="0" y="1019">Integer sit amet diam hendrerit, auctor libero id, </tspan>
+                <tspan x="0" y="1039">condimentum arcu. Vestibulum vitae ornare nulla. </tspan>
+                <tspan x="0" y="1059">Class aptent taciti sociosqu ad litora torquent per </tspan>
+                <tspan x="0" y="1079">conubia nostra, per inceptos himenaeos. Sed eget </tspan>
+                <tspan x="0" y="1099">magna condimentum, euismod mauris in, porttitor dui. </tspan>
+                <tspan x="0" y="1119">Fusce ultrices ex enim, in elementum libero venenatis </tspan>
+                <tspan x="0" y="1139">a. Sed arcu ante, molestie at metus elementum, </tspan>
+                <tspan x="0" y="1159">venenatis imperdiet urna. Maecenas vitae tincidunt </tspan>
+                <tspan x="0" y="1179">ipsum. Nam in massa auctor, aliquet magna sed, </tspan>
+                <tspan x="0" y="1199">congue leo. Donec metus orci, feugiat imperdiet </tspan>
+                <tspan x="0" y="1219">convallis ut, ornare nec arcu. In commodo lacus </tspan>
+                <tspan x="0" y="1239">pellentesque nisl sodales, id congue nisi volutpat.</tspan>
+                <tspan x="0" y="1259"></tspan>
+                <tspan x="0" y="1279">Etiam id tellus nulla. Fusce mollis neque eu dictum </tspan>
+                <tspan x="0" y="1299">hendrerit. Donec malesuada, dolor a malesuada </tspan>
+                <tspan x="0" y="1319">vehicula, quam arcu fringilla turpis, et elementum </tspan>
+                <tspan x="0" y="1339">ligula ex non velit. Cras rutrum, risus ac cursus ultricies, </tspan>
+                <tspan x="0" y="1359">enim ipsum ornare quam, id interdum ante purus at </tspan>
+                <tspan x="0" y="1379">diam. Pellentesque sit amet ultricies sem. Interdum et </tspan>
+                <tspan x="0" y="1399">malesuada fames ac ante ipsum primis in faucibus. In </tspan>
+                <tspan x="0" y="1419">ullamcorper est turpis, at vestibulum lectus dignissim </tspan>
+                <tspan x="0" y="1439">eu. Morbi vitae tempor leo. Morbi sed mi </tspan>
+                <tspan x="0" y="1459">condimentum, pellentesque lectus ut, commodo dui.</tspan>
+                <tspan x="0" y="1479"></tspan>
+            </text>
+            <text id="Testing-Magick-Flows" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="22" font-weight="bold" line-spacing="27" fill="#080707">
+                <tspan x="0" y="22">Headers + Footers</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
