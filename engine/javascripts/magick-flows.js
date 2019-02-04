@@ -197,9 +197,9 @@ function locationHashChanged(event) {
 						document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.remove('slide-in');
 						setTimeout(() => {
 							document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.add('slds-hide');
-						}, 125);
+						}, 250);
 					}, 0);
-					delayTransition = 125;
+					delayTransition = 250;
 				}
 			}
 
@@ -209,7 +209,7 @@ function locationHashChanged(event) {
 				document.querySelector(`.drawer-from-${direction}--slide-${clicks}`).classList.remove('slds-hide');
 				window.setTimeout(() => {
 					document.querySelector(`.drawer-from-${direction}--slide-${clicks}`).classList.add('slide-in');
-				}, 125);
+				}, 250);
 			}
 
 			// Finally, we will hide the _next_ screen's drawer, too -- this is in case we're going backwards.
@@ -219,9 +219,9 @@ function locationHashChanged(event) {
 						document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.remove('slide-in');
 						setTimeout(() => {
 							document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.add('slds-hide');
-						}, 125);
+						}, 250);
 					}, 0);
-					delayTransition = 125;
+					delayTransition = 250;
 				}
 			}
 		});
@@ -239,9 +239,9 @@ function locationHashChanged(event) {
 					document.querySelector(`.ios-notification--slide-${previousClick}`).classList.remove('slide-in');
 					setTimeout(() => {
 						document.querySelector(`.ios-notification--slide-${previousClick}`).classList.add('slds-hide');
-					}, 125);
+					}, 250);
 				}, 0);
-				delayTransition = 125;
+				delayTransition = 500;
 			}
 		}
 
@@ -251,7 +251,7 @@ function locationHashChanged(event) {
 			document.querySelector(`.ios-notification--slide-${clicks}`).classList.remove('slds-hide');
 			window.setTimeout(() => {
 				document.querySelector(`.ios-notification--slide-${clicks}`).classList.add('slide-in');
-			}, 125);
+			}, 250);
 		}
 
 		// Finally, we will hide the _next_ screen's drawer, too -- this is in case we're going backwards.
@@ -261,9 +261,9 @@ function locationHashChanged(event) {
 					document.querySelector(`.ios-notification--slide-${nextClick}`).classList.remove('slide-in');
 					setTimeout(() => {
 						document.querySelector(`.ios-notification--slide-${nextClick}`).classList.add('slds-hide');
-					}, 125);
+					}, 250);
 				}, 0);
-				delayTransition = 125;
+				delayTransition = 250;
 			}
 		}
 		

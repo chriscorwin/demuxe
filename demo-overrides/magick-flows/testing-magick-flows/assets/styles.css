@@ -45,43 +45,43 @@ body, .container {
 .ios-notification {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
   top: -812px;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   will-change: top;
 }
 
 .ios-notification.slide-in {
   top: 0px;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   will-change: top;
 }
 
 .drawer-from-top {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
   top: -812px;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   will-change: top;
 }
 
 .drawer-from-top.slide-in {
   top: 0px;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   will-change: top;
 }
 
 .drawer-from-left {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms left ease-in-out;
+  transition: 250ms left ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
@@ -92,14 +92,14 @@ body, .container {
 
 .drawer-from-left.slide-in {
   left: 0px;
-  transition: 125ms left ease-in-out;
+  transition: 250ms left ease-in-out;
   will-change: left;
 }
 
 .drawer-from-right {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms right ease-in-out;
+  transition: 250ms right ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
@@ -110,14 +110,14 @@ body, .container {
 
 .drawer-from-right.slide-in {
   right: 0px;
-  transition: 125ms right ease-in-out;
+  transition: 250ms right ease-in-out;
   will-change: right;
 }
 
 .drawer-from-bottom {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms bottom ease-in-out;
+  transition: 250ms bottom ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
@@ -127,7 +127,7 @@ body, .container {
 
 .drawer-from-bottom.slide-in {
   bottom: 0px;
-  transition: 125ms bottom ease-in-out;
+  transition: 250ms bottom ease-in-out;
   will-change: bottom;
 }
 
