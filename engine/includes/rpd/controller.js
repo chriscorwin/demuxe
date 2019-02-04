@@ -86,7 +86,7 @@ const setSelection = (rpdDiv, RPDController) => {
 					</button>
 					<div class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-hide" role="tooltip" id="${id}HTMLHelp" style="position: absolute;top: 30px;left: -16px;width: 320px;">
 						<div class="slds-popover__body">You must update or insert the code for this Rapid Component in 
-						the applicable <code>*-contents.ejs</code> file in <code>/demo-overrides/{product}/{venue}/</code>. 
+						the applicable <code>*-contents.ejs</code> file in <code>/demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/</code>. 
 						If this file does not yet exist, you must create it. Try doing a global search on <code>rpdDiv1548883102089</code> 
 						to determine if/where this Rapid Component exists in the code base.</div>
 					</div>
@@ -110,10 +110,12 @@ const setSelection = (rpdDiv, RPDController) => {
 				</div>
 			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-1">
-				<label class="slds-form-element__label" for="text-input-id-1">Background Image</label>
+				<label class="slds-form-element__label" for="text-input-id-1">
+					Background Image (${rpdDiv.dataset.backgroundImage})
+					<br>(image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/)
+				</label>
 				<div class="slds-form-element__control">
 					<input id="${id}BackgroundImage" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImage}" />
-					<label for="${id}BackgroundImage">${rpdDiv.dataset.backgroundImage}</lable>
 				</div>
 			</div>
 
