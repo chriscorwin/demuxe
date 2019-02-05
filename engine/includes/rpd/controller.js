@@ -71,6 +71,11 @@ const showHomeForm = (RPDController) => {
 
 const setSelection = (rpdDiv, RPDController) => {
 	const id = rpdDiv.attributes.id.value;
+
+	const rpdDivClone = rpdDiv.cloneNode(true);
+
+	rpdDivClone.classList.remove('clicked');
+
 	RPDController.querySelector('.slds-docked-composer__body_form').innerHTML = `
 <fieldset class="slds-form-element slds-form_compound">
 	<div class="slds-form-element__control">
@@ -92,7 +97,7 @@ const setSelection = (rpdDiv, RPDController) => {
 					</div>
 				</div>
 				<div class="slds-form-element__control">
-					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${rpdDiv.outerHTML}</textarea>
+					<textarea rows=5 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${rpdDivClone.outerHTML}</textarea>
 				</div>
 			</div>
 
@@ -112,10 +117,58 @@ const setSelection = (rpdDiv, RPDController) => {
 			<div class="slds-form-element slds-col slds-size_1-of-1">
 				<label class="slds-form-element__label" for="text-input-id-1">
 					Background Image (${rpdDiv.dataset.backgroundImage})
-					<br>(image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/)
 				</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}BackgroundImageHelp').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}BackgroundImageHelp" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/</div>
+					</div>
+				</div>
 				<div class="slds-form-element__control">
 					<input id="${id}BackgroundImage" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImage}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1">
+				<label class="slds-form-element__label" for="text-input-id-1">
+					Background Image on mouseover (${rpdDiv.dataset.backgroundImageOnMouseover})
+				</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}BackgroundImageOnMouseoverHelp').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}BackgroundImageOnMouseoverHelp" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/</div>
+					</div>
+				</div>
+				<div class="slds-form-element__control">
+					<input id="${id}BackgroundImageOnMouseover" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImageOnMouseover}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1">
+				<label class="slds-form-element__label" for="text-input-id-1">
+					Background Image on click (${rpdDiv.dataset.backgroundImageOnClick})
+				</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}BackgroundImageOnClickHelp').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}BackgroundImageOnClickHelp" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/</div>
+					</div>
+				</div>
+				<div class="slds-form-element__control">
+					<input id="${id}BackgroundImageOnClick" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImageOnClick}" />
 				</div>
 			</div>
 
@@ -358,6 +411,27 @@ const setSelection = (rpdDiv, RPDController) => {
 		rpdDiv.dataset.backgroundImage = `${fileName}`;
 		setSelection(rpdDiv, RPDController);
 	});
+	RPDController.querySelector(`#${id}BackgroundImageOnMouseover`).addEventListener('change', (e) => {
+		const fileName = `/images/${e.target.files[0].name}`;
+		rpdDiv.querySelector('.backgroundImageOnMouseover').innerHTML = `
+		#${id}:hover {
+			background-image: url('${fileName}');
+		}	
+`
+		rpdDiv.dataset.backgroundImageOnMouseover = `${fileName}`;
+		setSelection(rpdDiv, RPDController);
+	});
+	RPDController.querySelector(`#${id}BackgroundImageOnClick`).addEventListener('change', (e) => {
+		const fileName = `/images/${e.target.files[0].name}`;
+		rpdDiv.querySelector('.backgroundImageOnClick').innerHTML = `
+		#${id}.clicked {
+			background-image: url('${fileName}');
+		}	
+`
+		rpdDiv.dataset.backgroundImageOnClick = `${fileName}`;
+		setSelection(rpdDiv, RPDController);
+	});
+
 
 	RPDController.querySelector(`#${id}Top`).addEventListener('change', (e) => {
 		rpdDiv.style.top = `${e.target.value}px`;
@@ -413,6 +487,7 @@ const addListeners = (rpdDiv, RPDController) => {
 	rpdDiv.addEventListener('mousedown', (e) => {
 		setSelection(rpdDiv, RPDController);
 
+		rpdDiv.classList.add('clicked');
 		rpdDiv.classList.add('grabbing');
 
 		offsets = updateOffsets(rpdDiv, e);
@@ -463,8 +538,12 @@ const addRapidDiv = (target, RPDController) => {
 			data-onmouseout-toggle-class=""
 			data-onmouseout-raw=""
 			data-background-image=""
+			data-background-image-on-mouseover=""
+			data-background-image-on-click=""
 		>
 			<style class="backgroundImage"></style>
+			<style class="backgroundImageOnMouseover"></style>
+			<style class="backgroundImageOnClick"></style>
 			<script class="onclickAddClass"></script>
 			<script class="onclickRemoveClass"></script>
 			<script class="onclickToggleClass"></script>
