@@ -232,7 +232,7 @@ function locationHashChanged(event) {
 
 	if (document.querySelector(`.ios-notification`) !== null) {
 
-		// First we will hide any previous screen's drawer.
+		// First we will hide any previous screen's ios-notification.
 		if (document.querySelector(`.ios-notification--slide-${previousClick}`) !== null) {
 			if ( magickFlowConfig.metaData[previousClick][`showIosNotification`] === true ) {
 				setTimeout(() => {
@@ -245,7 +245,7 @@ function locationHashChanged(event) {
 			}
 		}
 
-		// Now we will show this screen's drawer, if it exists.
+		// Now we will show this screen's ios-notification, if it exists.
 		if ( magickFlowConfig.metaData[clicks][`showIosNotification`] === true ) {
 			doDrawer = true;
 			document.querySelector(`.ios-notification--slide-${clicks}`).classList.remove('slds-hide');
@@ -254,7 +254,7 @@ function locationHashChanged(event) {
 			}, 250);
 		}
 
-		// Finally, we will hide the _next_ screen's drawer, too -- this is in case we're going backwards.
+		// Finally, we will hide the _next_ screen's ios-notification, too -- this is in case we're going backwards.
 		if (document.querySelector(`.ios-notification--slide-${nextClick}`) !== null) {
 			if ( magickFlowConfig.metaData[nextClick][`showIosNotification`] === true ) {
 				setTimeout(() => {
@@ -269,24 +269,6 @@ function locationHashChanged(event) {
 		
 	}
 
-
-
-
-	// if ( magickFlowConfig.urlSlug === 'tm-mobile-tokyo' || magickFlowConfig.urlSlug === 'tm-mobile' || magickFlowConfig.urlSlug === 'tm-mobile-new' ) {
-	// 	if (clicks === 6) {
-	// 		doNotifcation = true;
-	// 		document.querySelector(`.notification`).classList.remove('slds-hide');
-
-	// 		window.setTimeout(() => {
-	// 			document.querySelector(`.notification`).classList.add('slide-in');
-	// 		}, 125);
-	// 	} else {
-	// 		window.setTimeout(() => {
-	// 			document.querySelector(`.notification`).classList.add('slds-hide');
-	// 			document.querySelector(`.notification`).classList.remove('slide-in');
-	// 		}, 500);
-	// 	}
-	// }
 
 	// once we've sorted out _what_ sort of transition to affect, we trigger it
 	normalTransition(clicks, doAppTransition, delayTransition);
