@@ -34,7 +34,7 @@
 	}
 </style>
 
-<div id="RPDController" style="height: 500px; min-width: 615px; overflow-x: auto; <%= showRPDController ? '' : 'display: none;' %>">
+<div id="RPDController" data-product-template="<%= locals.productTemplate %>" data-demo-venue="<%= locals.demoVenue %>" style="height: 500px; min-width: 615px; overflow-x: auto; <%= showRPDController ? '' : 'display: none;' %>">
 	<div class="slds-docked_container">
 		<section class="slds-docked-composer slds-grid slds-grid_vertical slds-is-open" style="overflow: scroll" role="dialog" aria-labelledby="dialog-heading-id-1" aria-describedby="RPDControllerForm">
 			<header class="slds-docked-composer__header slds-grid slds-shrink-none" aria-live="assertive">
