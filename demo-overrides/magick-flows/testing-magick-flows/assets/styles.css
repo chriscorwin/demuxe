@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/bbva-mobile/main/0000___ID=google-search-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0100___ID=homepage-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0200___ID=homepage-2___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0300___ID=mortgages-1___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0400___ID=homepage-3___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/0500___ID=valora-home___DATA=use-slide-transition__slide-transition_app-switch.png") url("/magick-flows/bbva-mobile/main/0600___ID=valora-email-field-blank.png") url("/magick-flows/bbva-mobile/main/0700___ID=valora-email-field-filled.png") url("/magick-flows/bbva-mobile/main/0800___ID=valora-use-camera.png") url("/magick-flows/bbva-mobile/main/0900___ID=valora-fake-video-gif.gif") url("/magick-flows/bbva-mobile/main/1000___ID=valora-fake-video-found-home.png") url("/magick-flows/bbva-mobile/main/1100___ID=valora-results___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/1200___ID=valora-details___DATA=has-sticky-footer.png") url("/magick-flows/bbva-mobile/main/1300___ID=mortgage-app-step-0___DATA=has-sticky-header.png") url("/magick-flows/bbva-mobile/main/1400___ID=mortgage-app-step-2___DATA=has-sticky-header__has-sticky-footer.png") url("/magick-flows/bbva-mobile/assets/google-search-results___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/google-search-results___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-0___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-0___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-1___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-1___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-2___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-2___sticky-header.png") url("/magick-flows/bbva-mobile/assets/homepage-3___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/homepage-3___sticky-header.png") url("/magick-flows/bbva-mobile/assets/mortgage-app-step-0___sticky-header.png") url("/magick-flows/bbva-mobile/assets/mortgage-app-step-2___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/mortgage-app-step-2___sticky-header.png") url("/magick-flows/bbva-mobile/assets/mortgages-1___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/mortgages-1___sticky-header.png") url("/magick-flows/bbva-mobile/assets/valora-details___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/valora-home___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/valora-results___sticky-footer.png") url("/magick-flows/bbva-mobile/assets/valora-results___sticky-header.png");
+  content: url("/magick-flows/testing-magick-flows/main/0000___start-here-0.svg") url("/magick-flows/testing-magick-flows/main/0100___ID=introducing-drawers.svg") url("/magick-flows/testing-magick-flows/main/0102___ID=introducing-drawers___DATA=show-drawer-from-top.svg") url("/magick-flows/testing-magick-flows/main/0103___ID=introducing-drawers___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0104___ID=introducing-drawers___DATA=show-drawer-from-right.svg") url("/magick-flows/testing-magick-flows/main/0105___ID=introducing-drawers___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0106___ID=introducing-drawers___DATA=show-drawer-from-bottom.svg") url("/magick-flows/testing-magick-flows/main/0107___ID=introducing-drawers___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0108___ID=introducing-drawers___DATA=show-drawer-from-left.svg") url("/magick-flows/testing-magick-flows/main/0109___ID=introducing-drawers-end___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0200___ID=introducing-ios-notifications.svg") url("/magick-flows/testing-magick-flows/main/0201___ID=introducing-ios-notifications___DATA=show-ios-notification.svg") url("/magick-flows/testing-magick-flows/main/0202___ID=introducing-ios-notifications___NOTES=clears-notification.svg") url("/magick-flows/testing-magick-flows/main/0300___ID=introducing-headers-and-footers.svg") url("/magick-flows/testing-magick-flows/main/0301___ID=introducing-headers-and-footers___DATA=has-sticky-header__has-sticky-footer.svg") url("/magick-flows/testing-magick-flows/main/0400___ID=introducing-application-transitions.svg") url("/magick-flows/testing-magick-flows/main/0401___ID=this-is-the-end___DATA=use-slide-transition__slide-transition_app-switch.svg") url("/magick-flows/testing-magick-flows/main/0402___ID=this-is-the-end.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-bottom.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-left.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-right.svg") url("/magick-flows/testing-magick-flows/assets/introducing-drawers___drawer-from-top.svg") url("/magick-flows/testing-magick-flows/assets/introducing-headers-and-footers___sticky-footer.svg") url("/magick-flows/testing-magick-flows/assets/introducing-headers-and-footers___sticky-header.svg") url("/magick-flows/testing-magick-flows/assets/introducing-ios-notifications___ios-notification.svg");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -42,46 +42,46 @@ body, .container {
   width: 375px;
 }
 
-.notification {
+.ios-notification {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
-  top: -210px;
-  transition: 125ms top ease-in-out;
+  top: -812px;
+  transition: 250ms top ease-in-out;
   will-change: top;
 }
 
-.notification.slide-in {
+.ios-notification.slide-in {
   top: 0px;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   will-change: top;
 }
 
 .drawer-from-top {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
-  top: -210px;
-  transition: 125ms top ease-in-out;
+  top: -812px;
+  transition: 250ms top ease-in-out;
   will-change: top;
 }
 
 .drawer-from-top.slide-in {
   top: 0px;
-  transition: 125ms top ease-in-out;
+  transition: 250ms top ease-in-out;
   will-change: top;
 }
 
 .drawer-from-left {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms left ease-in-out;
+  transition: 250ms left ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
@@ -92,14 +92,14 @@ body, .container {
 
 .drawer-from-left.slide-in {
   left: 0px;
-  transition: 125ms left ease-in-out;
+  transition: 250ms left ease-in-out;
   will-change: left;
 }
 
 .drawer-from-right {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms right ease-in-out;
+  transition: 250ms right ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
@@ -110,14 +110,14 @@ body, .container {
 
 .drawer-from-right.slide-in {
   right: 0px;
-  transition: 125ms right ease-in-out;
+  transition: 250ms right ease-in-out;
   will-change: right;
 }
 
 .drawer-from-bottom {
   margin: 0 auto;
   position: absolute;
-  transition: 125ms bottom ease-in-out;
+  transition: 250ms bottom ease-in-out;
   width: 375px;
   background-color: transparent;
   height: 812px;
@@ -127,7 +127,7 @@ body, .container {
 
 .drawer-from-bottom.slide-in {
   bottom: 0px;
-  transition: 125ms bottom ease-in-out;
+  transition: 250ms bottom ease-in-out;
   will-change: bottom;
 }
 
@@ -141,11 +141,11 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 5905px;
+  width: 7090px;
 }
 
 .app-switcher-one.shrink {
-  transform: scale(0.75);
+  transform: scale(0.85);
   will-change: transform;
 }
 
@@ -459,6 +459,60 @@ body, .container {
   top: 0;
   width: 375px;
   left: 5925px;
+}
+
+.app-switcher-one.be-left-16 {
+  left: -6320px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-16 {
+  left: -6320px;
+}
+
+.magick-flows--slide-16 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 6320px;
+}
+
+.app-switcher-one.be-left-17 {
+  left: -6715px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-17 {
+  left: -6715px;
+}
+
+.magick-flows--slide-17 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 6715px;
+}
+
+.app-switcher-one.be-left-18 {
+  left: -7110px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-18 {
+  left: -7110px;
+}
+
+.magick-flows--slide-18 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 7110px;
 }
 
 footer.magick-flows-stickey-footer_container {

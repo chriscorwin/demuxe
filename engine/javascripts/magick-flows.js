@@ -5,6 +5,7 @@ Demuxe: Running \`engine/javascripts/magick-flows.js\` now...
 `);
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
+const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
@@ -39,7 +40,7 @@ $contentWrapper.onclick = ( ) => {
 };
 
 
-function normalTransition (thisStepNumber = 0, doAppTransition = false) {
+function normalTransition (thisStepNumber = 0, doAppTransition = false, delayTransition = 0) {
 	console.group(`[ normalTransition() ](/product-templates/mobile/javascripts/magick-flows.js:43) running...`);
 
 	let nextStepNumber = thisStepNumber + 1;
@@ -54,9 +55,10 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 	console.log(`thisStepNumber: `, thisStepNumber);
 	
 
-	if (document.querySelector(`.drawer`) !== null) {
-		document.querySelector(`.drawer`).classList.remove(drawerContentChangingClasses + ',slide-in');
-	}
+	// if (document.querySelector(`.drawer`) !== null) {
+	// 	document.querySelector(`.drawer`).classList.remove(drawerContentChangingClasses.split(' ').join(',') + ',slide-in');
+	// }
+
 
 	if (document.querySelector(`.app-switcher-two`) !== null) {
 		document.querySelector(`.app-switcher-two`).classList.remove(`show`);
@@ -65,8 +67,11 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 	const $appSwitcherOne = document.querySelector(`.app-switcher-one`);
 
 	const appSwitcherClassNames = getAppSwitcherClassNames();
-	$appSwitcherOne.classList.remove(...appSwitcherClassNames);
+	// $appSwitcherOne.classList.remove(...appSwitcherClassNames);
+
 	if (doAppTransition === true) {
+
+		$appSwitcherOne.classList.remove(...appSwitcherClassNames);
 
 		$appSwitcherOne.classList.add(`shrink`, `rounded-corners`, `slide-left-${thisStepNumber}`);
 		$appSwitcherOne.classList.remove(`be-left-${thisStepNumber}`);
@@ -81,8 +86,15 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false) {
 		}, 401);
 
 	} else {
-		$appSwitcherOne.classList.remove('shrink,rounded-corners');
-		$appSwitcherOne.classList.add(`be-left-${thisStepNumber}`);
+
+		setTimeout(() => {
+			$appSwitcherOne.classList.remove(...appSwitcherClassNames);
+
+			$appSwitcherOne.classList.remove('shrink,rounded-corners');
+			$appSwitcherOne.classList.add(`be-left-${thisStepNumber}`);
+		}, delayTransition);
+
+
 	}
 	console.groupEnd();
 }
@@ -151,6 +163,8 @@ function locationHashChanged(event) {
 	// eventually we'll assume we aren't showing a drawer, or sliding in a wizard, or anything else.
 	let doAppTransition = false;
 	let doNotifcation = false;
+	let delayTransition = 0;
+	let doDrawer = false;
 	let directionOfNavigation = 'forward';
 	let oldUrlHash = parseInt( event.oldURL.split('#')[event.oldURL.split('#').length - 1] ) || 0;
 	let newUrlHash = parseInt( event.newURL.split('#')[event.newURL.split('#').length - 1] ) || 0;
@@ -166,26 +180,98 @@ function locationHashChanged(event) {
 	}
 
 
-	// for now these things are hard-coded as exceptions into this script.
-	// we'd like it to come from the names of the files/assets themselves
-	if ( magickFlowConfig.urlSlug === 'tm-mobile-tokyo' || magickFlowConfig.urlSlug === 'tm-mobile' ) {
-		if (clicks === 6) {
-			doNotifcation = true;
-			document.querySelector(`.notification`).classList.remove('slds-hide');
 
-			window.setTimeout(() => {
-				document.querySelector(`.notification`).classList.add('slide-in');
-			}, 125);
-		} else {
-			window.setTimeout(() => {
-				document.querySelector(`.notification`).classList.add('slds-hide');
-				document.querySelector(`.notification`).classList.remove('slide-in');
-			}, 500);
-		}
+
+
+	if (document.querySelector(`.drawer`) !== null) {
+
+		drawerDirectionOptions.forEach(direction => {
+
+			// Direction is just the direction, capitalied, so that the camelCase stuff is correct.
+			const Direction = direction.charAt(0).toUpperCase() + direction.substring(1);
+
+			// First we will hide any previous screen's drawer.
+			if (document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`) !== null) {
+				if ( magickFlowConfig.metaData[previousClick][`showDrawerFrom${Direction}`] === true ) {
+					setTimeout(() => {
+						document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.remove('slide-in');
+						setTimeout(() => {
+							document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.add('slds-hide');
+						}, 250);
+					}, 0);
+					delayTransition = 250;
+				}
+			}
+
+			// Now we will show this screen's drawer, if it exists.
+			if ( magickFlowConfig.metaData[clicks][`showDrawerFrom${Direction}`] === true ) {
+				doDrawer = true;
+				document.querySelector(`.drawer-from-${direction}--slide-${clicks}`).classList.remove('slds-hide');
+				window.setTimeout(() => {
+					document.querySelector(`.drawer-from-${direction}--slide-${clicks}`).classList.add('slide-in');
+				}, 250);
+			}
+
+			// Finally, we will hide the _next_ screen's drawer, too -- this is in case we're going backwards.
+			if (document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`) !== null) {
+				if ( magickFlowConfig.metaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
+					setTimeout(() => {
+						document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.remove('slide-in');
+						setTimeout(() => {
+							document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.add('slds-hide');
+						}, 250);
+					}, 0);
+					delayTransition = 250;
+				}
+			}
+		});
 	}
 
+
+
+
+	if (document.querySelector(`.ios-notification`) !== null) {
+
+		// First we will hide any previous screen's ios-notification.
+		if (document.querySelector(`.ios-notification--slide-${previousClick}`) !== null) {
+			if ( magickFlowConfig.metaData[previousClick][`showIosNotification`] === true ) {
+				setTimeout(() => {
+					document.querySelector(`.ios-notification--slide-${previousClick}`).classList.remove('slide-in');
+					setTimeout(() => {
+						document.querySelector(`.ios-notification--slide-${previousClick}`).classList.add('slds-hide');
+					}, 250);
+				}, 0);
+				delayTransition = 500;
+			}
+		}
+
+		// Now we will show this screen's ios-notification, if it exists.
+		if ( magickFlowConfig.metaData[clicks][`showIosNotification`] === true ) {
+			doDrawer = true;
+			document.querySelector(`.ios-notification--slide-${clicks}`).classList.remove('slds-hide');
+			window.setTimeout(() => {
+				document.querySelector(`.ios-notification--slide-${clicks}`).classList.add('slide-in');
+			}, 250);
+		}
+
+		// Finally, we will hide the _next_ screen's ios-notification, too -- this is in case we're going backwards.
+		if (document.querySelector(`.ios-notification--slide-${nextClick}`) !== null) {
+			if ( magickFlowConfig.metaData[nextClick][`showIosNotification`] === true ) {
+				setTimeout(() => {
+					document.querySelector(`.ios-notification--slide-${nextClick}`).classList.remove('slide-in');
+					setTimeout(() => {
+						document.querySelector(`.ios-notification--slide-${nextClick}`).classList.add('slds-hide');
+					}, 250);
+				}, 0);
+				delayTransition = 250;
+			}
+		}
+		
+	}
+
+
 	// once we've sorted out _what_ sort of transition to affect, we trigger it
-	normalTransition(clicks, doAppTransition);
+	normalTransition(clicks, doAppTransition, delayTransition);
 
 	// depending upon data-slide seems okay, though i've always been worried it is too fragile, it seems to work well
 	//  ¯\_(ツ)_/¯

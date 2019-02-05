@@ -22,6 +22,8 @@ _%>
 	const mainContentPath = `${webRootPath}/main/`;
 	const assetsContentPath = `${webRootPath}/assets/`;
 
+
+
 	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
 
 
@@ -37,10 +39,7 @@ _%>
 		const headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
 		const footerWebRootUrl = `${assetsContentPath}${node.stickyFooterFileName}`;
 
-
 		// Calculate the height of our scrollable area - 20 magick number for padding ¯\_(ツ)_/¯
-
-
 		let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 20);
 
 			// mainContentScrollableAreaHeight = ((node.dimensions.height - (headerHeight + footerHeight)) + 20);
@@ -77,6 +76,75 @@ _%>
 		`;
 
 
+
+		let iosNotificationHtmlOut = '';
+		const showIosNotification = node.showIosNotification === true || false;
+		if ( showIosNotification === true ) {
+			const iosNotificationWebRootUrl = `${assetsContentPath}${node.iosNotificationFileName}`;
+			iosNotificationHtmlOut = `
+				<div
+					id="ios-notification--slide-${node.screensIndex}"
+					class="ios-notification ios-notification--slide-${node.screensIndex}  magick-flows-slide-asset"
+				><img src="${iosNotificationWebRootUrl}" /></div>
+			`
+		}
+
+
+
+
+		let drawerFromTopHtmlOut = '';
+		const showDrawerFromTop = node.showDrawerFromTop === true || false;
+		if ( showDrawerFromTop === true ) {
+			const drawerFromTopWebRootUrl = `${assetsContentPath}${node.drawerFromTopFileName}`;
+			drawerFromTopHtmlOut = `
+				<div
+					id="drawer-from-top--slide-${node.screensIndex}"
+					class="drawer drawer-from-top drawer-from-top--slide-${node.screensIndex}  magick-flows-slide-asset"
+				><img src="${drawerFromTopWebRootUrl}" /></div>
+			`
+		}
+
+
+
+		let drawerFromLeftHtmlOut = '';
+		const showDrawerFromLeft = node.showDrawerFromLeft === true || false;
+		if ( showDrawerFromLeft === true ) {
+			const drawerFromLeftWebRootUrl = `${assetsContentPath}${node.drawerFromLeftFileName}`;
+			drawerFromLeftHtmlOut = `
+				<div
+					id="drawer-from-left--slide-${node.screensIndex}"
+					class="drawer drawer-from-left drawer-from-left--slide-${node.screensIndex}  magick-flows-slide-asset"
+				><img src="${drawerFromLeftWebRootUrl}" /></div>
+			`
+		}
+
+
+		let drawerFromBottomHtmlOut = '';
+		const showDrawerFromBottom = node.showDrawerFromBottom === true || false;
+		if ( showDrawerFromBottom === true ) {
+			const drawerFromBottomWebRootUrl = `${assetsContentPath}${node.drawerFromBottomFileName}`;
+			drawerFromBottomHtmlOut = `
+				<div
+					id="drawer-from-bottom--slide-${node.screensIndex}"
+					class="drawer drawer-from-bottom drawer-from-bottom--slide-${node.screensIndex}  magick-flows-slide-asset"
+				><img src="${drawerFromBottomWebRootUrl}" /></div>
+			`
+		}
+
+
+		let drawerFromRightHtmlOut = '';
+		const showDrawerFromRight = node.showDrawerFromRight === true || false;
+		if ( showDrawerFromRight === true ) {
+			const drawerFromRightWebRootUrl = `${assetsContentPath}${node.drawerFromRightFileName}`;
+			drawerFromRightHtmlOut = `
+				<div
+					id="drawer-from-right--slide-${node.screensIndex}"
+					class="drawer drawer-from-right drawer-from-right--slide-${node.screensIndex}  magick-flows-slide-asset"
+				><img src="${drawerFromRightWebRootUrl}" /></div>
+			`
+		}
+
+
 _%>
 
 <div
@@ -89,7 +157,7 @@ _%>
 		<div class="magick-flows-stickey-header_container">
 			<img
 				id="sticky-header--slide-<%=nodeIndex%>"
-				class="sticky-footer "
+				class="sticky-header "
 				src="<%=headerWebRootUrl%>"
 			/>
 		</div>
@@ -146,6 +214,8 @@ _%>
 			`);
 		}
 
+
+
 		echo(`</div>`)
 	
 
@@ -161,6 +231,12 @@ _%>
 		/>
 	</footer>
 <%_ } _%>
+	<%- drawerFromTopHtmlOut %>
+	<%- drawerFromRightHtmlOut %>
+	<%- drawerFromBottomHtmlOut %>
+	<%- drawerFromLeftHtmlOut %>
+	<%- iosNotificationHtmlOut %>
+
 </div>
 
 
@@ -169,8 +245,6 @@ _%>
 <div class="preload-images">
 <%- preLoadImages %>
 </div>
-
-<div class="notification magick-flows--slide-6 magick-flows-slide"></div>
 
 <%_
 console.log(`...end \`engine/includes/magick-flows/magick-flows-contents.ejs\`

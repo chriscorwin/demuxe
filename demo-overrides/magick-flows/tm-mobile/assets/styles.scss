@@ -3,7 +3,19 @@
 $numberOfSlides: 1 !default;
 $preloadImagesData: "url('/fake.png')" !default;
 
+$heightOfSlideValue: 812;
+$widthOfSlideValue: 375;
+$widthOfGutterValue: 20;
 
+$widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
+$heightOfAppSwitcher: $heightOfSlideValue + 0px;
+$heightOfSlide: $heightOfSlideValue + 0px;
+$widthOfSlide: $widthOfSlideValue + 0px;
+
+$widthOfAppSwitcherNegative: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) * -1px;
+$heightOfAppSwitcherNegative: $heightOfSlideValue * -1px;
+$heightOfSlideNegative: $heightOfSlideValue * -1px;
+$widthOfSlideNegative: $widthOfSlideValue * -1px;
 
 /* This is done to preload images and reduce load flicker */
 body::after {
@@ -28,27 +40,5 @@ $widthOfSlide: $widthOfSlideValue + 0px;
 
 
 @import "./../../../../engine/styles/magick-flows.scss";
-
-
-.notification {
-	background: url('/magick-flows/tm-mobile/assets/robot-puke—notification.png') no-repeat top left;
-	margin: 0 auto;
-	position: absolute;
-	transition: 125ms top ease-in-out;
-	width: 375px;
-	background-color: transparent;
-	height: 812px;
-	top: -210px;
-	transition: 125ms top ease-in-out;
-	will-change: top;
-
-}
-
-.notification.slide-in {
-	top: 0px;
-	transition: 125ms top ease-in-out;
-	will-change: top;
-	// transition-delay: 1000ms;
-}
 
 

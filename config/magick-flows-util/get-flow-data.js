@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const util = require('util');
 const sizeOf = require('image-size');
 const sortAlphaNum = require('./sort-alpha-num.js');
 const getScreenTraits = require('./get-screen-traits.js');
@@ -7,7 +8,7 @@ const getScreenTraits = require('./get-screen-traits.js');
 const noFileError = (error, name, fullContentPath) => {
 	if ( error.message.includes('ENOENT: no such file or directory')) {
 		console.error(`
-[ ERROR IN: \`config/config-magick-flows.js:69\`]
+[ ERROR IN: \`config/magick-flows-util/get-flow-data.js:10\`]
 
 Magick Flow URL Slug: \`${name}\`.
 
@@ -65,8 +66,9 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 	screenDataAttributes.fileName = fileName;
 	const splitFileName = fileName.split('___');
 
-	splitFileName.forEach((node) => {
+	splitFileName.forEach((node, index) => {
 		// other nodes have a KEY= at the beginning, with arbitrary data provided
+
 		if ( node.includes('=') === true ) {
 			// we have some data, split on the equals sign to get keys and values
 			const [ rawKey, valueWithExt ] = node.split('=');
@@ -85,7 +87,10 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 			}
 		} else {
 			// first one is the sorter, store it as such
-			screenDataAttributes['sorter'] = node;
+			if ( index === 0 ) {
+				screenDataAttributes['sorter'] = node;
+			}
+
 		}
 	});
 
@@ -93,12 +98,13 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 }
 
 const getScreenData = (flowData, fileName, fileIndex) => {
+
 	let screenDataAttributes = {
 		screensIndex: fileIndex,
 		fileExtension: fileName.split('.')[fileName.split('.').length - 1]
 	}
 
-	screenDataAttributes = getDataFromFilename(screenDataAttributes, fileName)
+	screenDataAttributes = getDataFromFilename(screenDataAttributes, fileName);
 
 	if ( fileName.endsWith('.ejs') === true ) {
 		screenDataAttributes.dimensions = {type: 'ejs'};
@@ -108,6 +114,7 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 	}
 
 	if ( typeof screenDataAttributes.data !== 'undefined' ) {
+
 		const screenInfo = { 
 			assetFiles: flowData.assets, 
 			screenId: screenDataAttributes.id, 
@@ -121,6 +128,9 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 	}
 
 	flowData.metaData.push(screenDataAttributes);
+	console.log(`
+
+`);
 	return flowData;
 };
 

@@ -1,8 +1,7 @@
-@charset "UTF-8";
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/tm-mobile/main/0000___home.png") url("/magick-flows/tm-mobile/main/0101___ID=baseball___DATA=use-slide-transition__slide-transition_app-switch.png") url("/magick-flows/tm-mobile/main/0202.png") url("/magick-flows/tm-mobile/main/0303.png") url("/magick-flows/tm-mobile/main/0404.png") url("/magick-flows/tm-mobile/main/0505___ID=robot-puke-notificaiton-1.png") url("/magick-flows/tm-mobile/main/0606___ID=robot-puke-notificaiton-2___DATA=show-ios-notification.png") url("/magick-flows/tm-mobile/main/0707___ID=instagram-2___DATA=use-slide-transition__slide-transition_app-switch.png") url("/magick-flows/tm-mobile/main/0808.png") url("/magick-flows/tm-mobile/assets/robot-puke—notification.png");
+  content: url("/magick-flows/tm-mobile/main/0000___home.png") url("/magick-flows/tm-mobile/main/0101___ID=baseball___DATA=use-slide-transition__slide-transition_app-switch.png") url("/magick-flows/tm-mobile/main/0202.png") url("/magick-flows/tm-mobile/main/0303.png") url("/magick-flows/tm-mobile/main/0404.png") url("/magick-flows/tm-mobile/main/0505___ID=robot-puke-notificaiton-1.png") url("/magick-flows/tm-mobile/main/0606___ID=robot-puke-notificaiton-2___DATA=show-ios-notification.png") url("/magick-flows/tm-mobile/main/0707___ID=instagram-2___DATA=use-slide-transition__slide-transition_app-switch.png") url("/magick-flows/tm-mobile/main/0808.png") url("/magick-flows/tm-mobile/assets/robot-puke-notificaiton-2___ios-notification.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -37,6 +36,95 @@ body, .container {
   position: absolute;
   top: 0;
   width: 375px;
+}
+
+.notification {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms top ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  top: -210px;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
+.notification.slide-in {
+  top: 0px;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms top ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  top: -210px;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top.slide-in {
+  top: 0px;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-left {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms left ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  top: 0;
+  left: -375px;
+  will-change: left;
+}
+
+.drawer-from-left.slide-in {
+  left: 0px;
+  transition: 125ms left ease-in-out;
+  will-change: left;
+}
+
+.drawer-from-right {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms right ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  top: 0;
+  right: -375px;
+  will-change: right;
+}
+
+.drawer-from-right.slide-in {
+  right: 0px;
+  transition: 125ms right ease-in-out;
+  will-change: right;
+}
+
+.drawer-from-bottom {
+  margin: 0 auto;
+  position: absolute;
+  transition: 125ms bottom ease-in-out;
+  width: 375px;
+  background-color: transparent;
+  height: 812px;
+  bottom: -812px;
+  will-change: bottom;
+}
+
+.drawer-from-bottom.slide-in {
+  bottom: 0px;
+  transition: 125ms bottom ease-in-out;
+  will-change: bottom;
 }
 
 .magick-flows-slide {
@@ -309,23 +397,4 @@ footer.magick-flows-stickey-footer_container {
   box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
   transition: transform 500ms, opacity 600ms, left 125ms !important;
   opacity: 0;
-}
-
-.notification {
-  background: url("/magick-flows/tm-mobile/assets/robot-puke—notification.png") no-repeat top left;
-  margin: 0 auto;
-  position: absolute;
-  transition: 125ms top ease-in-out;
-  width: 375px;
-  background-color: transparent;
-  height: 812px;
-  top: -210px;
-  transition: 125ms top ease-in-out;
-  will-change: top;
-}
-
-.notification.slide-in {
-  top: 0px;
-  transition: 125ms top ease-in-out;
-  will-change: top;
 }
