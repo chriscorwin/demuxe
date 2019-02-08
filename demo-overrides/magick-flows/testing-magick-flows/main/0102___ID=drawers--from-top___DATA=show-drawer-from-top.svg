@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="375px" height="812px" viewBox="0 0 375 812" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
-    <title>0000___start-here-0</title>
+    <title>0102___ID=drawers--from-top___DATA=show-drawer-from-top</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0" width="375" height="78"></rect>
     </defs>
-    <g id="0000___start-here-0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="0102___ID=drawers--from-top___DATA=show-drawer-from-top" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect id="Background" fill="#F3F2F2" x="0" y="0" width="375" height="812"></rect>
         <g id="Banner">
             <mask id="mask-2" fill="white">
@@ -21,29 +21,26 @@
                 <g id="Group-2">
                     <path d="M15.3833112,0.5 C10.5818938,0.5 8.51481192,0.899171926 6.37472521,2.04370282 C4.50630389,3.04294548 3.04294548,4.50630389 2.04370282,6.37472521 C0.899171926,8.51481192 0.5,10.5818938 0.5,15.3833112 L0.5,193.616689 C0.5,198.418106 0.899171926,200.485188 2.04370282,202.625275 C3.04294548,204.493696 4.50630389,205.957055 6.37472521,206.956297 C8.51481192,208.100828 10.5818938,208.5 15.3833112,208.5 L319.616689,208.5 C324.418106,208.5 326.485188,208.100828 328.625275,206.956297 C330.493696,205.957055 331.957055,204.493696 332.956297,202.625275 C334.100828,200.485188 334.5,198.418106 334.5,193.616689 L334.5,15.3833112 C334.5,10.5818938 334.100828,8.51481192 332.956297,6.37472521 C331.957055,4.50630389 330.493696,3.04294548 328.625275,2.04370282 C326.485188,0.899171926 324.418106,0.5 319.616689,0.5 L15.3833112,0.5 Z" id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8"></path>
                     <text id="Label" font-family="Menlo-Regular, Menlo" font-size="94" font-weight="normal" fill="#080707">
-                        <tspan x="140.203613" y="138.65">0</tspan>
+                        <tspan x="140.203613" y="138.65">2</tspan>
                     </text>
                 </g>
             </g>
             <text id="Magick-Flows-are-gen" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#080707">
-                <tspan x="0" y="196">Magick Flows are genearlly designed to be a one-way </tspan>
-                <tspan x="0" y="213">flow through a set narrative, clicking anywhere on the </tspan>
-                <tspan x="0" y="230">screen will advance to the next step.</tspan>
-                <tspan x="0" y="247"></tspan>
-                <tspan x="0" y="264">If you have a keyboard available, however, you may </tspan>
-                <tspan x="0" y="281">also use the left and right arrow keys to go forward and </tspan>
-                <tspan x="0" y="298">backward.</tspan>
+                <tspan x="0" y="196">Click anywhere on the screen to go to the next step. A </tspan>
+                <tspan x="0" y="213">drawer will slide in from the top. Then, keep clicking to </tspan>
+                <tspan x="0" y="230">see drawers from the right, bottom, and left.</tspan>
             </text>
             <text id="Click-or-Key" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="18" font-weight="bold" fill="#080707">
-                <tspan x="0" y="171">Click or Key</tspan>
+                <tspan x="0" y="171"> Try it now.</tspan>
             </text>
             <text id="This-Magick-Flow-ser" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="20" fill="#080707">
-                <tspan x="0" y="59">This Magick Flow serves as a demo and tutorial, as well </tspan>
-                <tspan x="0" y="79">as being the sandbox within which new capabilities, or </tspan>
-                <tspan x="0" y="99">“traits”, are developed.</tspan>
+                <tspan x="0" y="59">One of the traits Magick Flows can have is drawers. </tspan>
+                <tspan x="0" y="79">When entering a step that has a drawer, the drawer  </tspan>
+                <tspan x="0" y="99">slides in from one of the edges of the screen and stays </tspan>
+                <tspan x="0" y="119">there. You may indicate which side it slides in from.</tspan>
             </text>
             <text id="Testing-Magick-Flows" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="22" font-weight="bold" line-spacing="27" fill="#080707">
-                <tspan x="0" y="22">Testing Magick Flows</tspan>
+                <tspan x="0" y="22">Drawers</tspan>
             </text>
         </g>
     </g>
