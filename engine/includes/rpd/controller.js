@@ -66,6 +66,10 @@ const showHomeForm = (RPDController) => {
 </fieldset>
 `;
 	
+	RPDController.querySelector('#addRapidDiv').addEventListener('click', () => {
+		addRapidDiv(RPDController.parentNode, RPDController) 
+	});
+
 	RPDController.querySelector('.slds-docked-composer__footer').classList.add('slds-hidden');
 }
 
