@@ -88,6 +88,8 @@ module.exports = function() {
         console.warn(`WARNING: No Magick Flows were discovered. This is pretty rare, since, the system comes with at least _one_ to show you how they work. Y'all okay?`);
     } else {
 
+        appViews.push(path.join(__dirname, '../', 'product-templates', 'magick-flows'));
+
         // now that we have settled on what our Magick Flows config data is, we will
         // use it to programaticallly prepare some SCSS variables for each one.
         configData.magickFlows.urlSlugs.forEach(magickFlowUrlSlug => {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="375px" height="812px" viewBox="0 0 375 812" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
-    <title>drawers-from-left___drawer-from-left</title>
+    <title>drawers--from-left___drawer-from-left</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <path d="M392,540.581704 L392,558.5 L-50,558.5 L-50,437.5 L-49.5,437.5 L-49.5,186.255541 C-49.5,182.689466 -49.1286976,181.396321 -48.4314692,180.092617 C-47.7342408,178.788913 -46.7110865,177.765759 -45.4073828,177.068531 C-44.1036791,176.371302 -42.8105342,176 -39.2444592,176 L382.244459,176 C385.810534,176 387.103679,176.371302 388.407383,177.068531 C389.711087,177.765759 390.734241,178.788913 391.431469,180.092617 C392.128698,181.396321 392.5,182.689466 392.5,186.255541 L392.5,535.744459 C392.5,538.167417 392.328589,539.541082 392,540.581704 Z" id="path-1"></path>
@@ -13,7 +13,7 @@
         </filter>
         <rect id="path-3" x="0" y="0" width="333" height="324"></rect>
     </defs>
-    <g id="drawers-from-left___drawer-from-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="drawers--from-left___drawer-from-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Combined-Shape" transform="translate(171.250000, 367.250000) rotate(-270.000000) translate(-171.250000, -367.250000) ">
             <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
             <path stroke-opacity="0.95" stroke="#979797" stroke-width="1" d="M-49.5,438 L-49.5,558 L391.5,558 L391.5,540.581704 L391.523205,540.431151 C391.851017,539.39299 392,538.014815 392,535.744459 L392,186.255541 C392,183.079757 391.738905,181.727695 390.990563,180.328417 C390.339934,179.111847 389.388153,178.160066 388.171583,177.509437 C386.772305,176.761095 385.420243,176.5 382.244459,176.5 L-39.2444592,176.5 C-42.4202433,176.5 -43.772305,176.761095 -45.1715834,177.509437 C-46.3881529,178.160066 -47.3399341,179.111847 -47.9905626,180.328417 C-48.7389048,181.727695 -49,183.079757 -49,186.255541 L-49,438 L-49.5,438 Z" stroke-linejoin="square" fill-opacity="0.95" fill="#FFFFFF" fill-rule="evenodd"></path>

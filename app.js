@@ -105,6 +105,8 @@ if (config.productTemplate) {
 			express.static(path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue))
 		);
 	}
+} else {
+	console.log('uhhh')
 }
 
 
@@ -149,14 +151,32 @@ router.get('/*', (req, res) => {
 	// the file exists in a place_. If you want to add a new place that files can be served from, all
 	// of that config stuff happens in config.js in the "view engine setup" area.
 	fs.access(path.join(__dirname, 'demo-overrides', (config.productTemplate) ? config.productTemplate : '', (config.demoVenue) ? config.demoVenue : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+
+		// console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:152 ] err: `, util.inspect(err, { showHidden: true, depth: null, colors: true }));
+		
 		if (!err) error = false;
 		fs.access(path.join(__dirname, 'product-templates', (config.productTemplate) ? config.productTemplate : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+
+			// console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:158 ] err: `, util.inspect(err, { showHidden: true, depth: null, colors: true }));
+
 			if (!err) error = false;
+
+
 			fs.access(path.join(__dirname, 'engine', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
+
+				console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:167 ] err: `, util.inspect(err, { showHidden: true, depth: null, colors: true }));
+
 				if (!err) error = false;
 				if (error) {
 					// find out if it's a slug in our magick-flows
+
 					let thisUrlSlug = fileName.replace('.ejs', '');
+
+					console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:175 ] fileName: `, util.inspect(fileName, { showHidden: true, depth: null, colors: true }));
+					console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:176 ] thisUrlSlug: `, util.inspect(thisUrlSlug, { showHidden: true, depth: null, colors: true }));
+
+					console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:174 ] config.magickFlows.urlSlugs.includes(thisUrlSlug): `, util.inspect(config.magickFlows.urlSlugs.includes(thisUrlSlug), { showHidden: true, depth: null, colors: true }));
+
 					if (config.magickFlows.urlSlugs.includes(thisUrlSlug) ) {
 						config.urlSlug = thisUrlSlug;
 						// siteSection hard-coded to be "flow", prolly gonna try and change it to be "magic-flow", but not sure...
