@@ -70,6 +70,8 @@ const showHomeForm = (RPDController) => {
 }
 
 const setSelection = (rpdDiv, RPDController) => {
+	// Bail if edit mode isn't activated
+	if (RPDController.style.display === 'none') return;
 	const id = rpdDiv.attributes.id.value;
 
 	const rpdDivClone = rpdDiv.cloneNode(true);
@@ -267,6 +269,18 @@ const setSelection = (rpdDiv, RPDController) => {
 					<textarea id="${id}onmouseoutRaw" rows=1 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${decodeURI(rpdDiv.dataset.onmouseoutRaw)}</textarea>
 				</div>
 			</div>
+
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<div class="slds-form-element__control">
+					<div class="slds-checkbox">
+						<input type="checkbox" name="options" id="${id}isDraggable" ${rpdDiv.dataset.isDraggable === 'true' ? 'checked' : ''} />
+						<label class="slds-checkbox__label" for="${id}isDraggable">
+							<span class="slds-checkbox_faux"></span>
+							<span class="slds-form-element__label">Is Draggable</span>
+						</label>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </fieldset>
@@ -382,6 +396,19 @@ const setSelection = (rpdDiv, RPDController) => {
 		setSelection(rpdDiv, RPDController);
 	});
 
+	// DRAGGABLE
+	RPDController.querySelector(`#${id}isDraggable`).addEventListener('change', (e) => {
+		rpdDiv.dataset.isDraggable = `${e.target.checked}`;
+
+		if (rpdDiv.dataset.isDraggable === 'true') {
+			rpdDiv.classList.add('draggable');
+		} else {
+			rpdDiv.classList.remove('draggable');
+		}
+
+		setSelection(rpdDiv, RPDController);
+	});
+
 	// ATTRIBUTES
 	RPDController.querySelector(`#${id}ID`).addEventListener('change', (e) => {
 		rpdDiv.dataset.id = `${e.target.value}`;
@@ -470,6 +497,13 @@ const updateOffsets = (rpdDiv, e) => {
 	};
 }
 
+const canDrag = (target, RPDController) => {
+	const editModeEnabled = RPDController.style.display !== 'none';
+	const targetIsDraggable = target.dataset.isDraggable === 'true';
+	
+	return editModeEnabled || targetIsDraggable;
+}
+
 const addListeners = (rpdDiv, RPDController) => {
 	let offsets;
 
@@ -485,23 +519,28 @@ const addListeners = (rpdDiv, RPDController) => {
 	}
 
 	rpdDiv.addEventListener('mousedown', (e) => {
+		rpdDiv.classList.add('clicked');
+
 		setSelection(rpdDiv, RPDController);
 
-		rpdDiv.classList.add('clicked');
-		rpdDiv.classList.add('grabbing');
+		if (canDrag(rpdDiv, RPDController)) {
+			rpdDiv.classList.add('grabbing');
 
-		offsets = updateOffsets(rpdDiv, e);
-
-		rpdDiv.addEventListener('mousemove', handleMove);
+			offsets = updateOffsets(rpdDiv, e);
+	
+			rpdDiv.addEventListener('mousemove', handleMove);
+		}
 	});
 	rpdDiv.addEventListener('mouseup', (e) => {
 		rpdDiv.classList.remove('grabbing');
 
-		offsets = {};
+		if (canDrag(rpdDiv, RPDController)) {
+			offsets = {};
 
-		rpdDiv.removeEventListener('mousemove', handleMove);
+			rpdDiv.removeEventListener('mousemove', handleMove);
 
-		setSelection(rpdDiv, RPDController);
+			setSelection(rpdDiv, RPDController);
+		}
 	});
 
 }
@@ -529,6 +568,7 @@ const addRapidDiv = (target, RPDController) => {
 			data-onclick-remove-class=""
 			data-onclick-toggle-class=""
 			data-onclick-raw=""
+			data-is-draggable=""
 			data-onmouseover-add-class=""
 			data-onmouseover-remove-class=""
 			data-onmouseover-toggle-class=""
