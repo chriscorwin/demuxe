@@ -508,6 +508,48 @@ const canDrag = (target, RPDController) => {
 	return editModeEnabled || targetIsDraggable;
 }
 
+const canDrop = (rpdDiv) => {
+	return rpdDiv.dataset.dropTarget !== '';
+}
+
+const overDropTarget = (rpdDiv) => {
+	const rpdRect = rpdDiv.getBoundingClientRect();
+	rpdDiv.parentNode.querySelectorAll(`.${rpdDiv.dataset.dropTarget}`).forEach((target) => {
+		const targetRect = target.getBoundingClientRect();
+		
+		let horizontalInRange = false;
+		let verticalInRange = false;
+
+		if (rpdRect.top > targetRect.top && rpdRect.top < targetRect.bottom) {
+			verticalInRange = true;
+		} else if (rpdRect.bottom > targetRect.top && rpdRect.bottom < targetRect.bottom) {
+			verticalInRange = true;
+		} else if (rpdRect.top === targetRect.top || rpdRect.bottom === targetRect.bottom) {
+			verticalInRange = true;
+		}
+
+		if (rpdRect.left > targetRect.left && rpdRect.left < targetRect.right) {
+			horizontalInRange = true;
+		} else if (rpdRect.right > targetRect.left && rpdRect.right < targetRect.right) {
+			horizontalInRange = true;
+		} else if (rpdRect.left === targetRect.left || rpdRect.right === targetRect.right) {
+			horizontalInRange = true;
+		}
+
+		if (horizontalInRange && verticalInRange) {
+			console.log('overlapping!');
+		}
+	})
+
+	return true;
+}
+
+const fireDrops = (rpdDiv) => {
+	console.log('fire drops');
+	// check to see which drop target(s) rpd div is over
+	// fire drop effects on drop target(s)
+}
+
 const addListeners = (rpdDiv, RPDController) => {
 	let offsets;
 
@@ -520,6 +562,10 @@ const addListeners = (rpdDiv, RPDController) => {
 		rpdDiv.style.left = `${mouseLeft - offsets.left}px`;
 
 		offsets = updateOffsets(rpdDiv, e);
+
+		if (canDrop(rpdDiv)) {
+			overDropTarget(rpdDiv);
+		}
 	}
 
 	rpdDiv.addEventListener('mousedown', (e) => {
@@ -544,9 +590,12 @@ const addListeners = (rpdDiv, RPDController) => {
 			rpdDiv.removeEventListener('mousemove', handleMove);
 
 			setSelection(rpdDiv, RPDController);
+
+			if (canDrop(rpdDiv)) {
+				fireDrops(rpdDiv);
+			}
 		}
 	});
-
 }
 
 const updatePositionData = (rpdDiv) => {
@@ -573,6 +622,7 @@ const addRapidDiv = (target, RPDController) => {
 			data-onclick-toggle-class=""
 			data-onclick-raw=""
 			data-is-draggable=""
+			data-drop-target="dropTarget"
 			data-onmouseover-add-class=""
 			data-onmouseover-remove-class=""
 			data-onmouseover-toggle-class=""
