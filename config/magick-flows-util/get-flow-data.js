@@ -128,9 +128,6 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 	}
 
 	flowData.metaData.push(screenDataAttributes);
-	console.log(`
-
-`);
 	return flowData;
 };
 
