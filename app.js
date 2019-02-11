@@ -85,6 +85,16 @@ if (config.brandTheme) {
 }
 
 
+appUse.push(
+	sassMiddleware({
+		debug: false,
+		outputStyle: 'expanded',
+		src: path.join(__dirname, 'magick-flows-web-root')
+	}),
+	express.static(path.join(__dirname, 'magick-flows-web-root'))
+);
+
+
 if (config.productTemplate) {
 	appUse.push(
 		sassMiddleware({
@@ -94,6 +104,7 @@ if (config.productTemplate) {
 		}),
 		express.static(path.join(__dirname, 'product-templates', config.productTemplate))
 	);
+
 
 	if (config.demoVenue) {
 		appUse.push(

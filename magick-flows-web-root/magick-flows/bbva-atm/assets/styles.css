@@ -1,7 +1,8 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/images/snake-pit-popup.png") url("/magick-flows/bbva-atm/main/0000.png") url("/magick-flows/bbva-atm/main/0101.png") url("/magick-flows/bbva-atm/main/0202.png") url("/magick-flows/bbva-atm/main/0303.png") url("/magick-flows/bbva-atm/main/0404.png") url("/magick-flows/bbva-atm/main/0505.png") url("/magick-flows/bbva-atm/main/0606.png") url("/magick-flows/bbva-atm/main/0707.png") url("/magick-flows/bbva-atm/main/0808.png") url("/magick-flows/bbva-atm/main/0909.png") url("/magick-flows/bbva-atm/main/1010.png") url("/magick-flows/bbva-atm/main/1111.png");
+  content: url("/magick-flows/bbva-atm/main/0000.png") url("/magick-flows/bbva-atm/main/0101.png") url("/magick-flows/bbva-atm/main/0202.png") url("/magick-flows/bbva-atm/main/0303.png") url("/magick-flows/bbva-atm/main/0404.png") url("/magick-flows/bbva-atm/main/0505.png") url("/magick-flows/bbva-atm/main/0606.png") url("/magick-flows/bbva-atm/main/0707.png") url("/magick-flows/bbva-atm/main/0808.png") url("/magick-flows/bbva-atm/main/0909.png") url("/magick-flows/bbva-atm/main/1010.png") url("/magick-flows/bbva-atm/main/1111.png");
+  outline: 1px solid red;
   height: 0;
   overflow: hidden;
   position: absolute;
@@ -29,12 +30,101 @@ body {
 body, .container {
   background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
-  height: 768px;
+  height: 1024px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 1024px;
+  width: 768px;
+}
+
+.ios-notification {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms top ease-in-out;
+  width: 768px;
+  background-color: transparent;
+  height: 1024px;
+  top: -1024px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.ios-notification.slide-in {
+  top: 0px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms top ease-in-out;
+  width: 768px;
+  background-color: transparent;
+  height: 1024px;
+  top: -1024px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top.slide-in {
+  top: 0px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-left {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms left ease-in-out;
+  width: 768px;
+  background-color: transparent;
+  height: 1024px;
+  top: 0;
+  left: -768px;
+  will-change: left;
+}
+
+.drawer-from-left.slide-in {
+  left: 0px;
+  transition: 250ms left ease-in-out;
+  will-change: left;
+}
+
+.drawer-from-right {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms right ease-in-out;
+  width: 768px;
+  background-color: transparent;
+  height: 1024px;
+  top: 0;
+  right: -768px;
+  will-change: right;
+}
+
+.drawer-from-right.slide-in {
+  right: 0px;
+  transition: 250ms right ease-in-out;
+  will-change: right;
+}
+
+.drawer-from-bottom {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms bottom ease-in-out;
+  width: 768px;
+  background-color: transparent;
+  height: 1024px;
+  bottom: -1024px;
+  will-change: bottom;
+}
+
+.drawer-from-bottom.slide-in {
+  bottom: 0px;
+  transition: 250ms bottom ease-in-out;
+  will-change: bottom;
 }
 
 .magick-flows-slide {
@@ -42,16 +132,16 @@ body, .container {
 }
 
 .app-switcher-one {
-  height: 768px;
+  height: 1024px;
   left: 0;
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 12508px;
+  width: 9436px;
 }
 
 .app-switcher-one.shrink {
-  transform: scale(0.75);
+  transform: scale(0.85);
   will-change: transform;
 }
 
@@ -67,8 +157,8 @@ body, .container {
 }
 
 .app-switcher-one.rounded-corners .magick-flows-slide .slds-scrollable {
-  max-height: 768px;
-  height: 768px;
+  max-height: 1024px;
+  height: 1024px;
 }
 
 .app-switcher-one.rounded-corners .magick-flows-slide.notification {
@@ -76,7 +166,7 @@ body, .container {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: -994px;
+  left: -738px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -90,227 +180,227 @@ body, .container {
 }
 
 .magick-flows--slide-0 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
+  width: 768px;
   left: 0px;
 }
 
 .app-switcher-one.be-left-1 {
-  left: -1044px;
+  left: -788px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -1044px;
+  left: -788px;
 }
 
 .magick-flows--slide-1 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 1044px;
+  width: 768px;
+  left: 788px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -2088px;
+  left: -1576px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -2088px;
+  left: -1576px;
 }
 
 .magick-flows--slide-2 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 2088px;
+  width: 768px;
+  left: 1576px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -3132px;
+  left: -2364px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -3132px;
+  left: -2364px;
 }
 
 .magick-flows--slide-3 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 3132px;
+  width: 768px;
+  left: 2364px;
 }
 
 .app-switcher-one.be-left-4 {
-  left: -4176px;
+  left: -3152px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-4 {
-  left: -4176px;
+  left: -3152px;
 }
 
 .magick-flows--slide-4 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 4176px;
+  width: 768px;
+  left: 3152px;
 }
 
 .app-switcher-one.be-left-5 {
-  left: -5220px;
+  left: -3940px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-5 {
-  left: -5220px;
+  left: -3940px;
 }
 
 .magick-flows--slide-5 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 5220px;
+  width: 768px;
+  left: 3940px;
 }
 
 .app-switcher-one.be-left-6 {
-  left: -6264px;
+  left: -4728px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-6 {
-  left: -6264px;
+  left: -4728px;
 }
 
 .magick-flows--slide-6 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 6264px;
+  width: 768px;
+  left: 4728px;
 }
 
 .app-switcher-one.be-left-7 {
-  left: -7308px;
+  left: -5516px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-7 {
-  left: -7308px;
+  left: -5516px;
 }
 
 .magick-flows--slide-7 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 7308px;
+  width: 768px;
+  left: 5516px;
 }
 
 .app-switcher-one.be-left-8 {
-  left: -8352px;
+  left: -6304px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-8 {
-  left: -8352px;
+  left: -6304px;
 }
 
 .magick-flows--slide-8 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 8352px;
+  width: 768px;
+  left: 6304px;
 }
 
 .app-switcher-one.be-left-9 {
-  left: -9396px;
+  left: -7092px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-9 {
-  left: -9396px;
+  left: -7092px;
 }
 
 .magick-flows--slide-9 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 9396px;
+  width: 768px;
+  left: 7092px;
 }
 
 .app-switcher-one.be-left-10 {
-  left: -10440px;
+  left: -7880px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-10 {
-  left: -10440px;
+  left: -7880px;
 }
 
 .magick-flows--slide-10 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 10440px;
+  width: 768px;
+  left: 7880px;
 }
 
 .app-switcher-one.be-left-11 {
-  left: -11484px;
+  left: -8668px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-11 {
-  left: -11484px;
+  left: -8668px;
 }
 
 .magick-flows--slide-11 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 11484px;
+  width: 768px;
+  left: 8668px;
 }
 
 .app-switcher-one.be-left-12 {
-  left: -12528px;
+  left: -9456px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-12 {
-  left: -12528px;
+  left: -9456px;
 }
 
 .magick-flows--slide-12 {
-  height: 768px;
+  height: 1024px;
   position: absolute;
   top: 0;
-  width: 1024px;
-  left: 12528px;
+  width: 768px;
+  left: 9456px;
 }
 
 footer.magick-flows-stickey-footer_container {

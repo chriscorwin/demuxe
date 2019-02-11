@@ -80,6 +80,7 @@ module.exports = function() {
     }
     appViews.push(path.join(__dirname, '../', 'engine'));
     appViews.push(path.join(__dirname, '../', 'slides'));
+    appViews.push(path.join(__dirname, '../', 'magick-flows-web-root'));
     configData.appViews = appViews;
 
     configData = addMagickFlowsToConfig(configData);
