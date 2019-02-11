@@ -182,13 +182,13 @@ function locationHashChanged(event) {
 
 
 	if ( magickFlowConfig.metaData[stepToEvaluateForAppTransition].data !== undefined && magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[0] === 'use-slide-transition' && magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[1] === 'slide-transition_auto-advance' ) {
-		let timing = 500;
+		let timing = 1000;
 
 		if (magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[2] === 'slide-transition-timing--slow') {
-			timing = 1500;
+			timing = 5000;
 		}
 		if (magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[2] === 'slide-transition-timing--fast') {
-			timing = 250;
+			timing = 500;
 		}
 		doAutoAdvanceTransition = true;
 		setTimeout(() => {
