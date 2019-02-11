@@ -224,7 +224,7 @@ footer.magick-flows-stickey-footer_container {
  * @modifier
  */
 .slds-transition-hide {
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 750ms ease-in-out;
   will-change: opacity;
   // transition-delay: 0s;
   opacity: 0; 
@@ -244,7 +244,7 @@ footer.magick-flows-stickey-footer_container {
  * @modifier
  */
 .slds-transition-show {
-	transition: opacity 300ms ease-in-out;
+	transition: opacity 750ms ease-in-out;
 	will-change: opacity;
 	opacity: 1; 
 }

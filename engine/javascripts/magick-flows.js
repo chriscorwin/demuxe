@@ -41,7 +41,7 @@ $contentWrapper.onclick = ( ) => {
 
 
 function normalTransition (thisStepNumber = 0, doAppTransition = false, delayTransition = 0) {
-	console.group(`[ normalTransition() ](/product-templates/mobile/javascripts/magick-flows.js:43) running...`);
+	console.group(`[Magick Flows: normalTransition() ](/product-templates/mobile/javascripts/magick-flows.js:43) running...`);
 
 	let nextStepNumber = thisStepNumber + 1;
 
@@ -52,7 +52,7 @@ function normalTransition (thisStepNumber = 0, doAppTransition = false, delayTra
 		document.querySelector('.container').dataset.previous = `magick-flows--slide-${previousClick}`;
 	}
 
-	console.log(`thisStepNumber: `, thisStepNumber);
+	console.log(`[Magick Flows: normalTransition() ] thisStepNumber: `, thisStepNumber);
 	
 
 	// if (document.querySelector(`.drawer`) !== null) {
@@ -162,7 +162,8 @@ function locationHashChanged(event) {
 	// we assume that we will not do an app transition nor show a notificaiton
 	// eventually we'll assume we aren't showing a drawer, or sliding in a wizard, or anything else.
 	let doAppTransition = false;
-	let doNotifcation = false;
+	let doAutoAdvanceTransition = false;
+
 	let delayTransition = 0;
 	let doDrawer = false;
 	let directionOfNavigation = 'forward';
@@ -179,6 +180,21 @@ function locationHashChanged(event) {
 		doAppTransition = true;
 	}
 
+
+	if ( magickFlowConfig.metaData[stepToEvaluateForAppTransition].data !== undefined && magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[0] === 'use-slide-transition' && magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[1] === 'slide-transition_auto-advance' ) {
+		let timing = 500;
+
+		if (magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[2] === 'slide-transition-timing--slow') {
+			timing = 1500;
+		}
+		if (magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[2] === 'slide-transition-timing--fast') {
+			timing = 250;
+		}
+		doAutoAdvanceTransition = true;
+		setTimeout(() => {
+			window.location.hash = `#${stepToEvaluateForAppTransition + 1}`;
+		}, timing);
+	}
 
 
 
