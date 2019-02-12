@@ -81,6 +81,10 @@ const setSelection = (rpdDiv, RPDController) => {
 	const rpdDivClone = rpdDiv.cloneNode(true);
 
 	rpdDivClone.classList.remove('clicked');
+	rpdDivClone.classList.remove('receivedDrop');
+	rpdDivClone.classList.remove('hoverOverDropTarget');
+	rpdDivClone.classList.remove('wasDropped');
+	rpdDivClone.classList.remove('wasDroppedOverTarget');
 
 	RPDController.querySelector('.slds-docked-composer__body_form').innerHTML = `
 <fieldset class="slds-form-element slds-form_compound">
@@ -178,6 +182,7 @@ const setSelection = (rpdDiv, RPDController) => {
 				</div>
 			</div>
 
+
 			<!-- POSITION DATA -->
 			<div class="slds-form-element slds-col slds-size_1-of-2">
 				<label class="slds-form-element__label" for="text-input-id-1">Top</label>
@@ -274,7 +279,7 @@ const setSelection = (rpdDiv, RPDController) => {
 				</div>
 			</div>
 
-			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
 				<div class="slds-form-element__control">
 					<div class="slds-checkbox">
 						<input type="checkbox" name="options" id="${id}isDraggable" ${rpdDiv.dataset.isDraggable === 'true' ? 'checked' : ''} />
@@ -283,6 +288,168 @@ const setSelection = (rpdDiv, RPDController) => {
 							<span class="slds-form-element__label">Is Draggable</span>
 						</label>
 					</div>
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">
+					Background Image on hover over target (${rpdDiv.dataset.backgroundImageOnHover})
+				</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}backgroundImageOnHover').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}backgroundImageOnHover" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/</div>
+					</div>
+				</div>
+				<div class="slds-form-element__control">
+					<input id="${id}BackgroundImageOnHover" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImageOnHover}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">
+					Background Image on dropped (${rpdDiv.dataset.backgroundImageOnDropped})
+				</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}backgroundImageOnDropped').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}backgroundImageOnDropped" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/</div>
+					</div>
+				</div>
+				<div class="slds-form-element__control">
+					<input id="${id}BackgroundImageOnDropped" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImageOnDropped}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">
+					Background Image on dropped over target (${rpdDiv.dataset.backgroundImageOnDroppedOverTarget})
+				</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}backgroundImageOnDroppedOverTarget').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}backgroundImageOnDroppedOverTarget" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/</div>
+					</div>
+				</div>
+				<div class="slds-form-element__control">
+					<input id="${id}BackgroundImageOnDroppedOverTarget" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImageOnDroppedOverTarget}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">Raw on dropped JS:</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}onWasDroppedRaw').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}onWasDroppedRaw" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">DOM elements for <code>dropped</code> and <code>target</code> are made avaiable to this code, eg:<br>
+						<code>
+						// Remove dropped when dropped <br>
+						// over target<br>
+						if (target) {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;dropped.remove();<br>
+						}
+						</code> </div>
+					</div>
+				</div>
+				<div class="slds-form-element__control">
+					<textarea id="${id}onWasDroppedRaw" rows=1 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${decodeURI(rpdDiv.dataset.onWasDroppedRaw)}</textarea>
+				</div>
+			</div>
+
+
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
+				<div class="slds-form-element__control">
+					<div class="slds-checkbox">
+						<input type="checkbox" name="options" id="${id}isDropTarget" ${rpdDiv.dataset.isDropTarget === 'true' ? 'checked' : ''} />
+						<label class="slds-checkbox__label" for="${id}isDropTarget">
+							<span class="slds-checkbox_faux"></span>
+							<span class="slds-form-element__label">Is Drop Target</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">Accepts only drops with class (otherwise accepts all drop)</label>
+				<div class="slds-form-element__control">
+					<input id="${id}acceptsOnlyDropsWithClass" placeholder="Class" class="slds-input" type="text" value="${rpdDiv.dataset.acceptsOnlyDropsWithClass}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">
+					Background Image on hovered (${rpdDiv.dataset.backgroundImageOnHovered})
+				</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}backgroundImageOnHoveredHelp').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}backgroundImageOnHoveredHelp" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/</div>
+					</div>
+				</div>
+				<div class="slds-form-element__control">
+					<input id="${id}BackgroundImageOnHovered" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImageOnHovered}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">
+					Background Image on received dropped (${rpdDiv.dataset.backgroundImageOnReceivedDrop})
+				</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}backgroundImageOnReceivedDropHelp').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}backgroundImageOnReceivedDropHelp" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">image must live in /demo-overrides/${RPDController.dataset.productTemplate}/${RPDController.dataset.demoVenue}/images/</div>
+					</div>
+				</div>
+				<div class="slds-form-element__control">
+					<input id="${id}BackgroundImageOnReceivedDrop" placeholder="Background Image" accept=".jpg, .jpeg, .png, .svg, .gif" class="slds-input" type="file" value="${rpdDiv.dataset.backgroundImageOnReceivedDrop}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_small slds-m-top_xx-small">
+				<label class="slds-form-element__label" for="text-input-id-1">Raw on received dropped JS:</label>
+				<div class="slds-form-element__icon">
+					<button class="slds-button slds-button_icon" aria-describedby="help" onclick="(function(){document.getElementById('${id}onReceivedDropRaw').classList.toggle('slds-hide');})()">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#info" />
+						</svg>
+						<span class="slds-assistive-text">Help</span>
+					</button>
+					<div class="slds-popover slds-popover_tooltip slds-nubbin_top slds-hide" role="tooltip" id="${id}onReceivedDropRaw" style="position: absolute;top: 30px;left: -152px;width: 320px;">
+						<div class="slds-popover__body">DOM elements for <code>dropped</code> and <code>target</code> are made avaiable to this code, eg:<br>
+						<code>
+						// Remove dropped when dropped <br>
+						// over target<br>
+						if (target) {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;dropped.remove();<br>
+						}
+						</code> </div>
+					</div>
+				</div>
+				<div class="slds-form-element__control">
+					<textarea id="${id}onReceivedDropRaw" rows=1 class="slds-form-element slds-col slds-size_1-of-1 slds-textarea">${decodeURI(rpdDiv.dataset.onReceivedDropRaw)}</textarea>
 				</div>
 			</div>
 		</div>
@@ -400,7 +567,7 @@ const setSelection = (rpdDiv, RPDController) => {
 		setSelection(rpdDiv, RPDController);
 	});
 
-	// DRAGGABLE
+	// DRAGGABLE/DROPPABLE
 	RPDController.querySelector(`#${id}isDraggable`).addEventListener('change', (e) => {
 		rpdDiv.dataset.isDraggable = `${e.target.checked}`;
 
@@ -412,6 +579,42 @@ const setSelection = (rpdDiv, RPDController) => {
 
 		setSelection(rpdDiv, RPDController);
 	});
+	RPDController.querySelector(`#${id}isDropTarget`).addEventListener('change', (e) => {
+		rpdDiv.dataset.isDropTarget = `${e.target.checked}`;
+
+		if (rpdDiv.dataset.isDropTarget === 'true') {
+			rpdDiv.classList.add('isDropTarget');
+		} else {
+			rpdDiv.classList.remove('isDropTarget');
+		}
+
+		setSelection(rpdDiv, RPDController);
+	});
+	RPDController.querySelector(`#${id}acceptsOnlyDropsWithClass`).addEventListener('change', (e) => {
+		rpdDiv.dataset.acceptsOnlyDropsWithClass = e.target.value;
+		
+		setSelection(rpdDiv, RPDController);
+	});
+
+	RPDController.querySelector(`#${id}onReceivedDropRaw`).addEventListener('change', (e) => {
+		const rawReceivedDropCode = e.target.value;
+		rpdDiv.dataset.onReceivedDropRaw = encodeURI(rawReceivedDropCode);
+		rpdDiv.querySelector('.onReceivedDropRaw').text = `window.rawReceivedDropCode = window.rawReceivedDropCode || {};
+rawReceivedDropCode['${id}'] = (dropped, target) => {
+	${rawReceivedDropCode}
+};`
+		setSelection(rpdDiv, RPDController);
+	});
+	RPDController.querySelector(`#${id}onWasDroppedRaw`).addEventListener('change', (e) => {
+		const rawWasDroppedCode = e.target.value;
+		rpdDiv.dataset.onWasDroppedRaw = encodeURI(rawWasDroppedCode);
+		rpdDiv.querySelector('.onWasDroppedRaw').text = `window.rawWasDroppedCode = window.rawWasDroppedCode || {};
+rawWasDroppedCode['${id}'] = (dropped, target) => {
+	${rawWasDroppedCode}
+};`
+		setSelection(rpdDiv, RPDController);
+	});
+
 
 	// ATTRIBUTES
 	RPDController.querySelector(`#${id}ID`).addEventListener('change', (e) => {
@@ -462,7 +665,57 @@ const setSelection = (rpdDiv, RPDController) => {
 		rpdDiv.dataset.backgroundImageOnClick = `${fileName}`;
 		setSelection(rpdDiv, RPDController);
 	});
-
+	RPDController.querySelector(`#${id}BackgroundImageOnHover`).addEventListener('change', (e) => {
+		const fileName = `/images/${e.target.files[0].name}`;
+		rpdDiv.querySelector('.backgroundImageOnHover').innerHTML = `
+		#${id}.hoverOverDropTarget {
+			background-image: url('${fileName}');
+		}	
+`
+		rpdDiv.dataset.backgroundImageOnHover = `${fileName}`;
+		setSelection(rpdDiv, RPDController);
+	});
+	RPDController.querySelector(`#${id}BackgroundImageOnDropped`).addEventListener('change', (e) => {
+		const fileName = `/images/${e.target.files[0].name}`;
+		rpdDiv.querySelector('.backgroundImageOnDropped').innerHTML = `
+		#${id}.wasDropped {
+			background-image: url('${fileName}');
+		}	
+`
+		rpdDiv.dataset.backgroundImageOnDropped = `${fileName}`;
+		setSelection(rpdDiv, RPDController);
+	});
+	RPDController.querySelector(`#${id}BackgroundImageOnDroppedOverTarget`).addEventListener('change', (e) => {
+		const fileName = `/images/${e.target.files[0].name}`;
+		rpdDiv.querySelector('.backgroundImageOnDroppedOverTarget').innerHTML = `
+		#${id}.wasDroppedOverTarget {
+			background-image: url('${fileName}');
+		}	
+`
+		rpdDiv.dataset.backgroundImageOnDroppedOverTarget = `${fileName}`;
+		setSelection(rpdDiv, RPDController);
+	});
+	RPDController.querySelector(`#${id}BackgroundImageOnHovered`).addEventListener('change', (e) => {
+		const fileName = `/images/${e.target.files[0].name}`;
+		rpdDiv.querySelector('.backgroundImageOnHovered').innerHTML = `
+		#${id}.receivedDropHover {
+			background-image: url('${fileName}');
+		}	
+`
+		rpdDiv.dataset.backgroundImageOnHovered = `${fileName}`;
+		setSelection(rpdDiv, RPDController);
+	});
+	RPDController.querySelector(`#${id}BackgroundImageOnReceivedDrop`).addEventListener('change', (e) => {
+		console.log('changed');
+		const fileName = `/images/${e.target.files[0].name}`;
+		rpdDiv.querySelector('.backgroundImageOnReceivedDrop').innerHTML = `
+		#${id}.receivedDrop {
+			background-image: url('${fileName}');
+		}	
+`
+		rpdDiv.dataset.backgroundImageOnReceivedDrop = `${fileName}`;
+		setSelection(rpdDiv, RPDController);
+	});
 
 	RPDController.querySelector(`#${id}Top`).addEventListener('change', (e) => {
 		rpdDiv.style.top = `${e.target.value}px`;
@@ -508,13 +761,12 @@ const canDrag = (target, RPDController) => {
 	return editModeEnabled || targetIsDraggable;
 }
 
-const canDrop = (rpdDiv) => {
-	return rpdDiv.dataset.dropTarget !== '';
-}
-
-const overDropTarget = (rpdDiv) => {
+const checkDropOverlap = (rpdDiv, fireDrop) => {
 	const rpdRect = rpdDiv.getBoundingClientRect();
-	rpdDiv.parentNode.querySelectorAll(`.${rpdDiv.dataset.dropTarget}`).forEach((target) => {
+
+	rpdDiv.parentNode.querySelectorAll(`.isDropTarget`).forEach((target) => {
+		if (target.dataset.acceptsOnlyDropsWithClass !== '' && !rpdDiv.classList.contains(target.dataset.acceptsOnlyDropsWithClass)) { return; }
+
 		const targetRect = target.getBoundingClientRect();
 		
 		let horizontalInRange = false;
@@ -536,18 +788,32 @@ const overDropTarget = (rpdDiv) => {
 			horizontalInRange = true;
 		}
 
+		target.classList.remove('receivedDropHover');
+		rpdDiv.classList.remove('hoverOverDropTarget');
 		if (horizontalInRange && verticalInRange) {
-			console.log('overlapping!');
+			target.classList.add('receivedDropHover');
+			rpdDiv.classList.add('hoverOverDropTarget');
+
+			if (fireDrop) {
+				target.classList.remove('receivedDropHover');
+				rpdDiv.classList.remove('hoverOverDropTarget');
+				target.classList.add('receivedDrop');
+				rpdDiv.classList.add('wasDroppedOverTarget');
+
+				// Is there an associated receivedDrop script? Fire it.
+				if (target.dataset.onReceivedDropRaw) { window.rawReceivedDropCode[target.id](rpdDiv, target); }
+				// Is there an associated wasDropped script? Fire it.
+				if (rpdDiv.dataset.onWasDroppedRaw) { window.rawWasDroppedCode[rpdDiv.id](rpdDiv, target); }
+			}
 		}
-	})
+	});
+
+	if (fireDrop) {
+		rpdDiv.classList.add('wasDropped');
+		if (rpdDiv.dataset.onWasDroppedRaw) { window.rawWasDroppedCode[rpdDiv.id](rpdDiv); }
+	}
 
 	return true;
-}
-
-const fireDrops = (rpdDiv) => {
-	console.log('fire drops');
-	// check to see which drop target(s) rpd div is over
-	// fire drop effects on drop target(s)
 }
 
 const addListeners = (rpdDiv, RPDController) => {
@@ -563,9 +829,7 @@ const addListeners = (rpdDiv, RPDController) => {
 
 		offsets = updateOffsets(rpdDiv, e);
 
-		if (canDrop(rpdDiv)) {
-			overDropTarget(rpdDiv);
-		}
+		checkDropOverlap(rpdDiv, false);
 	}
 
 	rpdDiv.addEventListener('mousedown', (e) => {
@@ -591,9 +855,7 @@ const addListeners = (rpdDiv, RPDController) => {
 
 			setSelection(rpdDiv, RPDController);
 
-			if (canDrop(rpdDiv)) {
-				fireDrops(rpdDiv);
-			}
+			checkDropOverlap(rpdDiv, true);
 		}
 	});
 }
@@ -622,7 +884,6 @@ const addRapidDiv = (target, RPDController) => {
 			data-onclick-toggle-class=""
 			data-onclick-raw=""
 			data-is-draggable=""
-			data-drop-target="dropTarget"
 			data-onmouseover-add-class=""
 			data-onmouseover-remove-class=""
 			data-onmouseover-toggle-class=""
@@ -634,10 +895,26 @@ const addRapidDiv = (target, RPDController) => {
 			data-background-image=""
 			data-background-image-on-mouseover=""
 			data-background-image-on-click=""
+			data-background-image-on-received-drop=""
+			data-background-image-on-hover=""
+			data-background-image-on-hovered=""
+			data-background-image-on-dropped=""
+			data-background-image-on-dropped-over-target=""
+			data-on-was-dropped-raw=""
+			data-on-received-drop-raw=""
+			data-accepts-only-drops-with-class=""
 		>
 			<style class="backgroundImage"></style>
 			<style class="backgroundImageOnMouseover"></style>
 			<style class="backgroundImageOnClick"></style>
+			<style class="backgroundImageOnHover"></style>
+			<style class="backgroundImageOnDropped"></style>
+			<style class="backgroundImageOnDroppedOverTarget"></style>
+			<style class="backgroundImageOnReceivedDrop"></style>
+			<style class="backgroundImageOnHovered"></style>
+
+			<script class="onWasDroppedRaw"></script>
+			<script class="onReceivedDropRaw"></script>
 			<script class="onclickAddClass"></script>
 			<script class="onclickRemoveClass"></script>
 			<script class="onclickToggleClass"></script>
