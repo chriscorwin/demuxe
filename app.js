@@ -116,8 +116,6 @@ if (config.productTemplate) {
 			express.static(path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue))
 		);
 	}
-} else {
-	console.log('uhhh')
 }
 
 
