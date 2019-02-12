@@ -16,6 +16,11 @@ if (process.env.DEBUG === "true") {
 const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), recursionMax = 1000, retryCount = 0) => {
 	// console.debug(`looking in ${dir}`);
 
+	configData.productTemplate = "magick-flows";
+	configData.brandTheme = "";
+	configData.demoVenue = "";
+
+
 	configData.magickFlowDirectories = configData.magickFlowDirectories || []; // protects against them passing `null`
 
 	const directoryContents = fs.readdirSync(dir);

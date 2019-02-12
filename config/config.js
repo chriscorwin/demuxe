@@ -80,6 +80,7 @@ module.exports = function() {
     }
     appViews.push(path.join(__dirname, '../', 'engine'));
     appViews.push(path.join(__dirname, '../', 'slides'));
+    appViews.push(path.join(__dirname, '../', 'magick-flows-web-root'));
     configData.appViews = appViews;
 
     configData = addMagickFlowsToConfig(configData);
@@ -87,6 +88,8 @@ module.exports = function() {
     if (!configData.magickFlowURLS.length) {
         console.warn(`WARNING: No Magick Flows were discovered. This is pretty rare, since, the system comes with at least _one_ to show you how they work. Y'all okay?`);
     } else {
+
+        appViews.push(path.join(__dirname, '../', 'product-templates', 'magick-flows'));
 
         // now that we have settled on what our Magick Flows config data is, we will
         // use it to programaticallly prepare some SCSS variables for each one.
