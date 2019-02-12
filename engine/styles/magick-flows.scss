@@ -148,7 +148,7 @@ body, .container {
 	width: $widthOfAppSwitcher;
 
 	&.shrink {
-		transform: scale(0.85);
+		transform: scale(0.95);
 		will-change: transform;
 		.magick-flows--slide {
 			// I'm pretty sure this gets overridden later, but, in the meantime... is this what we want? It seems way too generic.
