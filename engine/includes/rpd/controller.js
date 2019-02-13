@@ -125,6 +125,17 @@ const setSelection = (rpdDiv, RPDController) => {
 					<input id="${id}Classes" placeholder="Classes" class="slds-input" type="text" value="${rpdDiv.dataset.classes}" />
 				</div>
 			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
+				<div class="slds-form-element__control">
+					<div class="slds-checkbox">
+						<input type="checkbox" name="options" id="${id}isHidden" ${rpdDiv.dataset.isHidden === 'true' ? 'checked' : ''} />
+						<label class="slds-checkbox__label" for="${id}isHidden">
+							<span class="slds-checkbox_faux"></span>
+							<span class="slds-form-element__label">Is Hidden</span>
+						</label>
+					</div>
+				</div>
+			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-1">
 				<label class="slds-form-element__label" for="text-input-id-1">
 					Background Image (${rpdDiv.dataset.backgroundImage})
@@ -458,6 +469,7 @@ const setSelection = (rpdDiv, RPDController) => {
 </fieldset>
 	`;
 
+	// ON CLICK
 	RPDController.querySelector(`#${id}onclickAddClass`).addEventListener('change', (e) => {
 		const addClassClasses = e.target.value;
 		rpdDiv.dataset.onclickAddClass = addClassClasses;
@@ -707,7 +719,6 @@ rawWasDroppedCode['${id}'] = (dropped, target) => {
 		setSelection(rpdDiv, RPDController);
 	});
 	RPDController.querySelector(`#${id}BackgroundImageOnReceivedDrop`).addEventListener('change', (e) => {
-		console.log('changed');
 		const fileName = `/images/${e.target.files[0].name}`;
 		rpdDiv.querySelector('.backgroundImageOnReceivedDrop').innerHTML = `
 		#${id}.receivedDrop {
@@ -718,6 +729,17 @@ rawWasDroppedCode['${id}'] = (dropped, target) => {
 		setSelection(rpdDiv, RPDController);
 	});
 
+	RPDController.querySelector(`#${id}isHidden`).addEventListener('change', (e) => {
+		rpdDiv.dataset.isHidden = `${e.target.checked}`;
+
+		if (rpdDiv.dataset.isHidden === 'true') {
+			rpdDiv.classList.add('slds-hide');
+		} else {
+			rpdDiv.classList.remove('slds-hide');
+		}
+
+		setSelection(rpdDiv, RPDController);
+	});
 	RPDController.querySelector(`#${id}Top`).addEventListener('change', (e) => {
 		rpdDiv.style.top = `${e.target.value}px`;
 		updatePositionData(rpdDiv);
