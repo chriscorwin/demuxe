@@ -870,6 +870,9 @@ const addListeners = (rpdDiv, RPDController) => {
 	}
 
 	rpdDiv.addEventListener('mousedown', (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+
 		rpdDiv.classList.add('clicked');
 
 		setSelection(rpdDiv, RPDController);
@@ -883,6 +886,9 @@ const addListeners = (rpdDiv, RPDController) => {
 		}
 	});
 	rpdDiv.addEventListener('mouseup', (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		
 		rpdDiv.classList.remove('grabbing');
 
 		if (canDrag(rpdDiv, RPDController)) {
