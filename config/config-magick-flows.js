@@ -16,9 +16,13 @@ if (process.env.DEBUG === "true") {
 const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), recursionMax = 1000, retryCount = 0) => {
 	// console.debug(`looking in ${dir}`);
 
-	configData.productTemplate = "magick-flows";
-	configData.brandTheme = "";
-	configData.demoVenue = "";
+	// NO. THIS BREAKS THINGS.
+	// No idea why this was done, but whatever the reason, there's a better way.
+	// Possibly just cloning configData and using the clone for whatever you were
+	// needing this for. Talk to cmcculloh about this.
+	// configData.productTemplate = "magick-flows";
+	// configData.brandTheme = "";
+	// configData.demoVenue = "";
 
 
 	configData.magickFlowDirectories = configData.magickFlowDirectories || []; // protects against them passing `null`
