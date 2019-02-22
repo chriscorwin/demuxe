@@ -5,10 +5,6 @@
 	.rapidDiv {
 		position: absolute;
 		display: block;
-		height: 200px;
-		width: 200px;
-		top: 500px;
-		left: 30px;
 	}
 
 	.rapidDiv.blue {
@@ -22,6 +18,12 @@
 		color: white;
 		font-weight: bold;
 		cursor: pointer;
+		margin: -3px;
+	}
+
+	body.editMode .rapidDiv.slds-hide {
+		display: block !important;
+		opacity: 0.3;
 	}
 
 	body.editMode .rapidDiv:hover {

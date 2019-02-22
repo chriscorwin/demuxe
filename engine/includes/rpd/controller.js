@@ -90,6 +90,15 @@ const setSelection = (rpdDiv, RPDController) => {
 <fieldset class="slds-form-element slds-form_compound">
 	<div class="slds-form-element__control">
 		<div class="slds-form-element__group slds-grid slds-wrap">
+			<ul class="slds-button-group-list slds-col slds-size_1-of-1">
+				<li>
+					<button id="addRapidDiv" class="slds-button slds-button_neutral"><svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
+						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#steps"></use>
+					</svg>Add a Rapid Div</button>
+				</li>
+			</ul>
+		</div>
+		<div class="slds-form-element__group slds-grid slds-wrap">
 			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
 				<label class="slds-form-element__label" for="text-input-id-1">Rapid Component Code</label>
 				<div class="slds-form-element__icon">
@@ -123,6 +132,17 @@ const setSelection = (rpdDiv, RPDController) => {
 				<label class="slds-form-element__label" for="text-input-id-1">Classes</label>
 				<div class="slds-form-element__control">
 					<input id="${id}Classes" placeholder="Classes" class="slds-input" type="text" value="${rpdDiv.dataset.classes}" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-col slds-size_1-of-1 slds-m-left_none slds-m-top_xx-small">
+				<div class="slds-form-element__control">
+					<div class="slds-checkbox">
+						<input type="checkbox" name="options" id="${id}isHidden" ${rpdDiv.dataset.isHidden === 'true' ? 'checked' : ''} />
+						<label class="slds-checkbox__label" for="${id}isHidden">
+							<span class="slds-checkbox_faux"></span>
+							<span class="slds-form-element__label">Is Hidden</span>
+						</label>
+					</div>
 				</div>
 			</div>
 			<div class="slds-form-element slds-col slds-size_1-of-1">
@@ -458,6 +478,11 @@ const setSelection = (rpdDiv, RPDController) => {
 </fieldset>
 	`;
 
+	RPDController.querySelector('#addRapidDiv').addEventListener('click', () => {
+		addRapidDiv(rpdDiv, RPDController, {height: 100, width: 100, top: 10, left: 10}) 
+	});
+
+	// ON CLICK
 	RPDController.querySelector(`#${id}onclickAddClass`).addEventListener('change', (e) => {
 		const addClassClasses = e.target.value;
 		rpdDiv.dataset.onclickAddClass = addClassClasses;
@@ -707,7 +732,6 @@ rawWasDroppedCode['${id}'] = (dropped, target) => {
 		setSelection(rpdDiv, RPDController);
 	});
 	RPDController.querySelector(`#${id}BackgroundImageOnReceivedDrop`).addEventListener('change', (e) => {
-		console.log('changed');
 		const fileName = `/images/${e.target.files[0].name}`;
 		rpdDiv.querySelector('.backgroundImageOnReceivedDrop').innerHTML = `
 		#${id}.receivedDrop {
@@ -718,6 +742,17 @@ rawWasDroppedCode['${id}'] = (dropped, target) => {
 		setSelection(rpdDiv, RPDController);
 	});
 
+	RPDController.querySelector(`#${id}isHidden`).addEventListener('change', (e) => {
+		rpdDiv.dataset.isHidden = `${e.target.checked}`;
+
+		if (rpdDiv.dataset.isHidden === 'true') {
+			rpdDiv.classList.add('slds-hide');
+		} else {
+			rpdDiv.classList.remove('slds-hide');
+		}
+
+		setSelection(rpdDiv, RPDController);
+	});
 	RPDController.querySelector(`#${id}Top`).addEventListener('change', (e) => {
 		rpdDiv.style.top = `${e.target.value}px`;
 		updatePositionData(rpdDiv);
@@ -822,6 +857,7 @@ const addListeners = (rpdDiv, RPDController) => {
 
 	const handleMove = (e) => {
 		e.preventDefault();
+		e.stopPropagation();
 
 		const mouseTop = e.clientY;
 		const mouseLeft = e.clientX;
@@ -834,6 +870,9 @@ const addListeners = (rpdDiv, RPDController) => {
 	}
 
 	rpdDiv.addEventListener('mousedown', (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+
 		rpdDiv.classList.add('clicked');
 
 		setSelection(rpdDiv, RPDController);
@@ -847,6 +886,9 @@ const addListeners = (rpdDiv, RPDController) => {
 		}
 	});
 	rpdDiv.addEventListener('mouseup', (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		
 		rpdDiv.classList.remove('grabbing');
 
 		if (canDrag(rpdDiv, RPDController)) {
@@ -868,16 +910,25 @@ const updatePositionData = (rpdDiv) => {
 	rpdDiv.dataset.height = rpdDiv.offsetHeight;
 }
 
-const addRapidDiv = (target, RPDController) => {
+const addRapidDiv = (target, RPDController, options) => {
 	const uniqueID = `rpdDiv${Date.now()}`;
+	const defaults = {
+		width: 200,
+		height: 200,
+		top: 500,
+		left: 30,
+		contents: `Rapid Div ${uniqueID}`
+	}
+	const data = Object.assign({}, defaults, options);
+	console.log('data', data);
 	const rapidDiv = `
 		<div 
 			id="${uniqueID}" 
 			class="rapidDiv"
-			data-width="200"
-			data-height="200"
-			data-top="500"
-			data-left="30"
+			data-width="${data.width}"
+			data-height="${data.height}"
+			data-top="${data.top}"
+			data-left="${data.left}"
 			data-classes="rapidDiv"
 			data-id="${uniqueID}"
 			data-onclick-add-class=""
@@ -928,13 +979,17 @@ const addRapidDiv = (target, RPDController) => {
 			<script class="onmouseoutRemoveClass"></script>
 			<script class="onmouseoutToggleClass"></script>
 			<script class="onmouseoutRaw"></script>
-			Rapid Div ${uniqueID}
+			${data.contents}
 		</div>
 `;
 
 	target.insertAdjacentHTML('beforeend', rapidDiv);
 
 	const rpdDiv = target.querySelector(`#${uniqueID}`);
+	rpdDiv.style.top = `${data.top}px`;
+	rpdDiv.style.left = `${data.left}px`;
+	rpdDiv.style.width = `${data.width}px`;
+	rpdDiv.style.height = `${data.height}px`;
 
 	updatePositionData(rpdDiv);
 	addListeners(rpdDiv, RPDController);
