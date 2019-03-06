@@ -1,24 +1,26 @@
 <% const showRPDController = locals.sanitizedQueryParams.showRPDController; %>
 
 <style>
+	#RPDController {
+		z-index: 999999;
+	}
+
+	#RPDController .slds-docked_container.left {
+		right: unset;
+	}
 
 	.rapidDiv {
 		position: absolute;
 		display: block;
 	}
 
-	.rapidDiv.blue {
-		background-color: blue !important;
-	}
-
 	body.editMode .rapidDiv {
-		border: 3px double red;
-		background: grey;
+		box-shadow: 0 0 0 3px red;
+		background-color: grey;
 		padding: 12px;
 		color: white;
 		font-weight: bold;
 		cursor: pointer;
-		margin: -3px;
 	}
 
 	body.editMode .rapidDiv.slds-hide {
@@ -28,13 +30,25 @@
 
 	body.editMode .rapidDiv:hover {
 		cursor: pointer;
-		border: 3px double blue;
+		box-shadow: 0 0 0 3px blue;
 	}
 
 	body.editMode .rapidDiv.grabbing {
 		cursor: grabbing;
 	}
-</style>
+
+	.rapidDiv.blue {
+		background-color: blue;
+	}
+
+	.rapidDiv.retina {
+		background-size: 50%;
+	}
+
+	.rapidDiv.cover {
+		background-size: cover;
+	}
+	</style>
 
 <div id="RPDController" data-product-template="<%= locals.productTemplate %>" data-demo-venue="<%= locals.demoVenue %>" style="height: 500px; min-width: 615px; overflow-x: auto; <%= showRPDController ? '' : 'display: none;' %>">
 	<div class="slds-docked_container">
@@ -53,6 +67,18 @@
 					</div>
 				</div>
 				<div class="slds-col_bump-left slds-shrink-none">
+					<button id="dockLeftRPDController" class="slds-button slds-button_icon slds-button_icon" title="Dock Left">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#chevronleft" />
+						</svg>
+						<span class="slds-assistive-text">Dock Left</span>
+					</button>
+					<button id="dockRightRPDController" class="slds-button slds-button_icon slds-button_icon slds-hide" title="Dock Right">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#chevronright" />
+						</svg>
+						<span class="slds-assistive-text">Dock Right</span>
+					</button>
 					<button id="minimizeRPDController" class="slds-button slds-button_icon slds-button_icon" title="Minimize window">
 						<svg class="slds-button__icon" aria-hidden="true">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#minimize_window" />
@@ -103,6 +129,16 @@
 	});
 	document.querySelector('#minimizeRPDController').addEventListener('click', () => {
 		toggleOpen(document.querySelector('#RPDController > div > section').classList);
+	});
+	document.querySelector('#dockLeftRPDController').addEventListener('click', () => {
+		document.querySelector('#dockLeftRPDController').classList.add('slds-hide');
+		document.querySelector('#dockRightRPDController').classList.remove('slds-hide');
+		document.querySelector('#RPDController > .slds-docked_container').style.right = "unset";
+	});
+	document.querySelector('#dockRightRPDController').addEventListener('click', () => {
+		document.querySelector('#dockLeftRPDController').classList.remove('slds-hide');
+		document.querySelector('#dockRightRPDController').classList.add('slds-hide');
+		document.querySelector('#RPDController > .slds-docked_container').style.right = "0";
 	});
 
 	const addListener = () => {

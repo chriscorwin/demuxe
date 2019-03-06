@@ -777,19 +777,6 @@ rawWasDroppedCode['${id}'] = (dropped, target) => {
 	RPDController.querySelector('.slds-docked-composer__footer').classList.remove('slds-hidden');
 }
 
-const updateOffsets = (rpdDiv, e) => {
-	updatePositionData(rpdDiv);
-
-	return {
-		divLeft: rpdDiv.offsetLeft,
-		divTop: rpdDiv.offsetTop,
-		mouseLeft: e.clientX,
-		mouseTop: e.clientY,
-		left: e.clientX - rpdDiv.offsetLeft,
-		top: e.clientY - rpdDiv.offsetTop
-	};
-}
-
 const canDrag = (target, RPDController) => {
 	const editModeEnabled = RPDController.style.display !== 'none';
 	const targetIsDraggable = target.dataset.isDraggable === 'true';
@@ -852,6 +839,26 @@ const checkDropOverlap = (rpdDiv, fireDrop) => {
 	return true;
 }
 
+const updatePositionData = (rpdDiv) => {
+	rpdDiv.dataset.top = rpdDiv.offsetTop;
+	rpdDiv.dataset.left = rpdDiv.offsetLeft;
+	rpdDiv.dataset.width = rpdDiv.offsetWidth;
+	rpdDiv.dataset.height = rpdDiv.offsetHeight;
+}
+
+const updateOffsets = (rpdDiv, e) => {
+	updatePositionData(rpdDiv);
+
+	return {
+		divLeft: rpdDiv.offsetLeft,
+		divTop: rpdDiv.offsetTop,
+		mouseLeft: e.clientX,
+		mouseTop: e.clientY,
+		left: e.clientX - rpdDiv.offsetLeft,
+		top: e.clientY - rpdDiv.offsetTop
+	};
+}
+
 const addListeners = (rpdDiv, RPDController) => {
 	let offsets;
 
@@ -859,12 +866,10 @@ const addListeners = (rpdDiv, RPDController) => {
 		e.preventDefault();
 		e.stopPropagation();
 
-		const mouseTop = e.clientY;
-		const mouseLeft = e.clientX;
-		rpdDiv.style.top = `${mouseTop - offsets.top}px`;
-		rpdDiv.style.left = `${mouseLeft - offsets.left}px`;
-
+		rpdDiv.style.top = `${e.clientY - offsets.top}px`;
+		rpdDiv.style.left = `${e.clientX - offsets.left}px`;
 		offsets = updateOffsets(rpdDiv, e);
+
 
 		checkDropOverlap(rpdDiv, false);
 	}
@@ -903,13 +908,6 @@ const addListeners = (rpdDiv, RPDController) => {
 	});
 }
 
-const updatePositionData = (rpdDiv) => {
-	rpdDiv.dataset.top = rpdDiv.offsetTop;
-	rpdDiv.dataset.left = rpdDiv.offsetLeft;
-	rpdDiv.dataset.width = rpdDiv.offsetWidth;
-	rpdDiv.dataset.height = rpdDiv.offsetHeight;
-}
-
 const addRapidDiv = (target, RPDController, options) => {
 	const uniqueID = `rpdDiv${Date.now()}`;
 	const defaults = {
@@ -920,7 +918,7 @@ const addRapidDiv = (target, RPDController, options) => {
 		contents: `Rapid Div ${uniqueID}`
 	}
 	const data = Object.assign({}, defaults, options);
-	console.log('data', data);
+
 	const rapidDiv = `
 		<div 
 			id="${uniqueID}" 
@@ -979,7 +977,7 @@ const addRapidDiv = (target, RPDController, options) => {
 			<script class="onmouseoutRemoveClass"></script>
 			<script class="onmouseoutToggleClass"></script>
 			<script class="onmouseoutRaw"></script>
-			${data.contents}
+			<!--${data.contents}-->
 		</div>
 `;
 
