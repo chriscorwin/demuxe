@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include('includes/global/head') %>
+	</head>
+	<body>
+		<%- locals.sanitizedQueryParams.showRPDController ? '' : '<a href="?showRPDController=true">Add ?showRPDController=true to URL</a>' %>
+
+		<%- include('includes/rpd/controller.ejs') %>
+	</body>
+</html>
