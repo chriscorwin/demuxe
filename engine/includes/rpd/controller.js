@@ -918,7 +918,7 @@ const addRapidDiv = (target, RPDController, options) => {
 		contents: `Rapid Div ${uniqueID}`
 	}
 	const data = Object.assign({}, defaults, options);
-	console.log('data', data);
+
 	const rapidDiv = `
 		<div 
 			id="${uniqueID}" 
@@ -977,7 +977,7 @@ const addRapidDiv = (target, RPDController, options) => {
 			<script class="onmouseoutRemoveClass"></script>
 			<script class="onmouseoutToggleClass"></script>
 			<script class="onmouseoutRaw"></script>
-			${data.contents}
+			<!--${data.contents}-->
 		</div>
 `;
 
