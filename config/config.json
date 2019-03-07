@@ -1,8 +1,8 @@
 {
-	"demoName": "BBVA DF 18 Keynote",
-	"brandTheme": "",
-	"productTemplate": "",
-	"demoVenue": "",
+	"demoName": "JB NTO Test Run",
+	"brandTheme": "nto",
+	"productTemplate": "jb",
+	"demoVenue": "test-run",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -13,13 +13,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://dmp-dreamforce-2018.herokuapp.com/"
+		"host": "https://jb-test-run-nto.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://dmp-dreamforce-2018-qa.herokuapp.com/"
+		"host": "https://jb-test-run-nto-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://dmp-dreamforce-2018-dev.herokuapp.com/"
+		"host": "https://jb-test-run-nto-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
