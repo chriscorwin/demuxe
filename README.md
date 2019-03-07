@@ -78,8 +78,17 @@ Demuxe utilizes:
 	`npm install`
 
 - Edit `/config/config.json` (and other config files). 
-	- Specify your brand and product-template. 
+	- Specify
+		+ `brandTheme`
+		+ `productTemplate`
+		+ `demoVenue`
+		+ `host` for local, dev, qa, and production
 	- `config.json` should be _production settings_.
+- Make your folders (these names *must match* what you put in `config.json`)
+	+ Create a folder under `brand-themes` for your brand
+	+ Create a folder under `demo-overrides` for your product template (if it doesn't exist yet).
+	+ Create a folder under `demo-overrides/{product-template}` for your demo venue
+	+ Create a folder under `product-templates` for your product template if it doesn't exist yet.
 - Get coding, you are under deadline, kiddo.
 
 
