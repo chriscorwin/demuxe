@@ -16,17 +16,18 @@ module.exports = {
 	skipTestCapture: true,
 	skipSlideCapture: false,
 	steps: [
+		// MC Homepage
 		{
 			goto: testhost,
 			waitFor: 'body',
-			name: '0001.overview'
+			name: '0001.marketing-cloud-homepage'
 		},
 		{
 			evaluate: () => {
 				window.scrollBy(0, window.innerHeight);
 			},
 			waitFor: 2000,
-			name: '0002.overview',
+			name: '0002.marketing-cloud-homepage',
 			skipTestCapture: true
 		},
 		{
@@ -34,66 +35,87 @@ module.exports = {
 				window.scrollBy(0, window.innerHeight * 2);
 			},
 			waitFor: 2000,
-			name: '0003.overview',
+			name: '0003.marketing-cloud-homepage',
 			skipTestCapture: true
 		},
+		// Select Journey Builder
 		{
-			click: '#view-all-data-capture-sources',
-			waitFor: 'body',
-			name: '0100.data-capture-sources',
-			skipSlideCapture: true
+			click: '#journey-builder',
+			name: '0010.marketing-cloud-homepage.jb-link',
 		},
 		{
+			click: '#dashboard-link',
+			name: '0011.marketing-cloud-homepage.dashboard-link',
+		},
+		// JB Dashboard
+		{
+			waitFor: 'body',
+			name: '0100.jb-dashboard'
+		},
+		// Select an existing journey from the current folder
+		// Journey Canvas
+		{
+			click: '#existing-journey',
+			waitFor: 'body',
+			name: '0200.jb-canvas'
+		},
+		// Review Journey analytics by clicking Pie icon
+		{
+			click: '#pie-icon',
 			waitFor: 2000,
-			name: '0101.data-capture-sources'
+			name: '0210.jb-canvas.review-analytics'
 		},
-		// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
+		// Return to canvas
 		{
-			click: '#content a',
-			waitFor: 'body',
-			name: '0200.consumer-rights-management-page',
-			skipSlideCapture: true
-		},
-		{
+			click: '#close-analytics',
 			waitFor: 2000,
-			name: '0201.consumer-rights-management-page'
+			name: '0211.jb-canvas'
 		},
-		// HOVER INSIGHTS NAV LINK
-		// CLICK EINSTEIN SEGMENTATION LINK
+		// Review email analytics by clicking on the existing email
 		{
-			goto: `${testhost}insights/einstein-segmentation`,
-			waitFor: 'body',
-			name: '0300.einstein-segmentation'
+			click: '#existing-email',
+			waitFor: 2000,
+			name: '0220.jb-canvas.review-email'
 		},
-		// CLICK CREATE NEW SEGMENT USING THIS PERSONA
+		// Create new journey version by clicking the related button
+		// Display the editable Journey canvas
 		{
-			click: '.slds-button.slds-button_brand',
-			waitFor: 'body',
-			name: '0310.segments.build-standard-segment'
+			click: '#related-button',
+			waitFor: 2000,
+			name: '0230.jb-canvas.create-new-journey'
 		},
-		// CLICK "SEGMENT NAME" TO FILL
+		// Drag new SMS message to canvas
+		// Left drawer opens on drop to show empty SMS configuration
 		{
-			click: '#segment-name',
-			waitFor: 'body',
-			name: '0311.segments.build-standard-segment'
+			drag: '#sms',
+			dragTo: '#canvas-drop-target',
+			waitFor: 2000,
+			name: '0231.jb-canvas.drag-new-sms'
 		},
-		// SELECT "MARKETING CLOUD" IN ACTIVATION
+		// Choose “New Message”
+		// Editor slides out covering the full screen
 		{
-			click: '#checkbox7wrapper',
-			waitFor: 'body',
-			name: '0312.segments.build-standard-segment'
+			click: '#new-message',
+			waitFor: 2000,
+			name: '0240.jb-canvas.new-message'
 		},
-		// SELECT "DOUBLE CLICK" IN ACTIVATION
+		// Add text in the “Message” text box and display the same text in the preview
 		{
-			click: '#checkbox6wrapper',
-			waitFor: 'body',
-			name: '0313.segments.build-standard-segment'
+			click: '#new-message-box',
+			waitFor: 2000,
+			name: '0241.jb-canvas.new-message.add-text'
 		},
-		// CLICK "SAVE" SHOULD DO NOTHING
+		// Close editor and return to the activity
 		{
-			click: '#saveButton',
-			waitFor: 'body',
-			name: '0314.segments.build-standard-segment'
+			click: '#close-editor',
+			waitFor: 2000,
+			name: '0250.jb-canvas.activity'
+		},
+		// Activate updated journey
+		{
+			click: '#activate-journey',
+			waitFor: 2000,
+			name: '0260.jb-canvas.activate-journey'
 		}
 	]
 };
