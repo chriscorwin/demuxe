@@ -83,6 +83,7 @@ Demuxe utilizes:
 		+ `productTemplate`
 		+ `demoVenue`
 		+ `host` for local, dev, qa, and production
+		+ `gapixelid` (Go to analytics.google.com, create a new "property" for your demo, and get a new Tracking ID to put here)
 	- `config.json` should be _production settings_.
 - Make your folders (these names *must match* what you put in `config.json`)
 	+ Create a folder under `brand-themes` for your brand

@@ -1,7 +1,7 @@
 <%_
 console.group(`
 ============================================================
-Demuxe: including \`product-templates/dmp/includes/global/head.ejs\` now...
+Demuxe: including \`engine/includes/global/head.ejs\` now...
 ------------------------------------------------------------
 `);
 %>
@@ -35,15 +35,15 @@ Demuxe: including \`product-templates/dmp/includes/global/head.ejs\` now...
 <link rel="stylesheet" href="/styles/<%=locals.siteSection%>.css">
 <% } %>
 
-<% 
-if (locals.pageStylesheets) { 
-	locals.pageStylesheets.forEach(function(stylesheet) { 
+<%
+if (locals.pageStylesheets) {
+	locals.pageStylesheets.forEach(function(stylesheet) {
 		echo(`<link rel="stylesheet" href="/styles/${stylesheet}">`);
 	});
-} 
+}
 %>
 
-<% 
+<%
 	const { trigger } = locals.sanitizedQueryParams;
 %>
 
@@ -87,7 +87,7 @@ Demuxe: setting client-side javascript variables from Demuxe \`locals\`
 
 
 			> See this Stack Exchange for more information:
-			> 
+			>
 			> https://stackoverflow.com/questions/10392293/stringify-convert-to-json-a-javascript-object-with-circular-reference
 
 			Anyhoooooo...  What we're doing _here_ is iterating through the keys of
@@ -125,14 +125,14 @@ Demuxe: setting client-side javascript variables from Demuxe \`locals\`
 	});
 
 
-	
+
 	console.groupEnd();
 	// server-side output above ---^
-	// 
+	//
 	// back to client-side output now ---V
 %>
 	console.group(`Demuxe: server-side \`locals\`:
-Set: /product-templates/dmp/includes/global/head.ejs:134
+Set: /engine/includes/global/head.ejs:134
 `);
 	console.dir(locals);
 	console.groupEnd();
@@ -146,7 +146,7 @@ Set: /product-templates/dmp/includes/global/head.ejs:134
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
 <%_
-console.log(`...end \`product-templates/dmp/includes/global/head.ejs\`
+console.log(`...end \`engine/includes/global/head.ejs\`
 ------------------------------------------------------------
 `);
 console.groupEnd();
