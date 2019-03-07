@@ -12,12 +12,18 @@
 
 
     <% if (locals) { %>
-      <script>
-        const clientSideLocals = <%- JSON.stringify(locals) %>;
-        console.group('Locals');
-        console.dir(<%- JSON.stringify(locals) %>);
-        console.groupEnd();
-      </script>
+        <script>
+      <% try { JSON.stringify(locals) %>
+          const clientSideLocals = <%- JSON.stringify(locals) %>;
+          console.group('Locals');
+          console.dir(<%- JSON.stringify(locals) %>);
+          console.groupEnd();
+      <% } catch (e) { %>
+          const clientSideLocals = {};
+          console.log('ERROR STRINGIFYING LOCALS');
+          console.log('<%= e %>');
+      <% } %>
+        </script>
     <% } else { %>
       <script>
         const clientSideLocals = {};
@@ -35,7 +41,7 @@
       <h1 class="slds-text-heading_large">Index</h1>
       <p>
         If you are reading this, your demo app server is up and running, congratulations!
-        <br>Now go add your own `index.ejs` file to `/demo-overrides/`, or specify a productTemplate (if you specified a productTemplate, it probably would have an `index.ejs` file, and you wouldn't be seeing this). 
+        <br>Now go add your own `index.ejs` file to `/demo-overrides/`, or specify a productTemplate (if you specified a productTemplate, it probably would have an `index.ejs` file, and you wouldn't be seeing this).
         <br><i>This</i> file lives in `/engine/` and is part of the Demuxe engine itself. It should not be edited.
       </p>
       <p>Demo settings live in `/config/`. Default settings go in `config.json` and should default to production values. Your config settings are currently set to:

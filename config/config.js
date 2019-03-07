@@ -59,13 +59,10 @@ module.exports = function() {
     // merge default with env config, overwriting defaults
     configData = { ...defaultConfigData, ...envConfigData };
 
-    const defaultProductConfig = require(`../product-templates/${configData.productTemplate}/default-config.js`);
-    const demoOverrideConfig = require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`);
-    const brandThemeConfig = require(`../brand-themes/${configData.brandTheme}/localization.js`);
+    const defaultProductConfig = configData.productTemplate ? require(`../product-templates/${configData.productTemplate}/default-config.js`) : {};
+    const demoOverrideConfig = configData.demoVenue && configData.productTemplate ? require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`) : {};
+    const brandThemeConfig = configData.brandTheme ? require(`../brand-themes/${configData.brandTheme}/localization.js`) : {};
     configData.localization = Object.assign({}, defaultProductConfig, demoOverrideConfig, brandThemeConfig);
-
-    console.dir(configData.localization.navData);
-
 
     // view engine setup
     // https://expressjs.com/en/4x/api.html#app.set
@@ -123,14 +120,14 @@ module.exports = function() {
         ============================================================
         Demuxe: Magick Flows Setup Information
         ------------------------------------------------------------
-        
-        There is a dashboard for Magick Flows available at: 
-        
+
+        There is a dashboard for Magick Flows available at:
+
         ${configData[process.env.NODE_ENV].host}magick-flows-dashboard
         ------------------------------------------------------------
-        
+
         The Demuxe engine looked around, and, lo, it found ${configData.magickFlowURLS.length} Magick Flows:
-        
+
         ${configData.magickFlowURLS.join(`\n        `)}
 
         Hold Cmd & click on one of the above URLs to open it in a browser.

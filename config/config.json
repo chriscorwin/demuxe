@@ -1,8 +1,8 @@
 {
 	"demoName": "BBVA DF 18 Keynote",
-	"brandTheme": "bbva",
-	"productTemplate": "dmp",
-	"demoVenue": "df18keynote",
+	"brandTheme": "",
+	"productTemplate": "",
+	"demoVenue": "",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
