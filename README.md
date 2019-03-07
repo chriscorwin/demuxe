@@ -130,14 +130,13 @@ After starting the server (see Starting the Server), open a new Terminal tab and
 It is assumed here, that is, taken as a _given_ that demos _will_ be served on Heroku, utilizing a pipeline.
 
 ## Setting up your pipeline
-1. Create a new pipeline (you can connect to Github if you are using a fork of Demuxe, otherwise do not).
+1. Create a new pipeline.
 2. Create a `{app-name}-dev`, `{app-name}-qa`, and `{app-name}` environment in the pipeline for the app.
 	- You may have to create the `-dev` version in the "staging" area of the pipeline and then click on the disclosure menu at the top right of the app tile and select "Move app to `development`". Heroku pipelines do not seem to have `development` channels by default that you can easily add apps to.
-3. Click into the dev instance of your app.
-4. Click on the deploy tab.
-5. Copy the command from the very bottom for "Existing Git repository".
-	It will look something like this: `heroku git:remote -a laulima-2018-dmp-dev`.
-6. Run the command in your terminal.
+3. Login to Heroku by running `heroku login` from your terminal
+*** THIS NEEDS AUDITED AND CONFIRMED AND BETTER YET SCRIPTED ***
+4. Add the Heroku pipeline by running this command in your terminal:
+	`git remote add https://git.heroku.com/[your heroku pipeline name]-dev.git && git remote add https://git.heroku.com/[your heroku pipeline name]-qa.git && git remote add https://git.heroku.com/[your heroku pipeline name].git && heroku git:remote -a [your heroku pipeline name]` eg: `git remote add https://git.heroku.com/jb-test-run-nto-dev.git && git remote add https://git.heroku.com/jb-test-run-nto-qa.git && git remote add https://git.heroku.com/jb-test-run-nto.git && heroku git:remote -a jb-test-run-nto-dev` (you can find this in the url, eg: `https://dashboard.heroku.com/apps/jb-test-run-nto-dev/deploy/heroku-git`)
 
 ## Deploying
 1. `git push heroku {branch}:master` your changes to the dev area of the pipeline to test a branch in dev on Heroku.

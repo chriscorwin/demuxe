@@ -13,7 +13,7 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 
-	"prod": {
+	"production": {
 		"host": "https://dmp-dreamforce-2018.herokuapp.com/"
 	},
 	"qa": {
