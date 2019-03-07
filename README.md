@@ -86,9 +86,19 @@ Demuxe utilizes:
 	- `config.json` should be _production settings_.
 - Make your folders (these names *must match* what you put in `config.json`)
 	+ Create a folder under `brand-themes` for your brand
+		* If one already exists, you might want to consider creating one with a different name in case the two demos using this brand have different brand assets or something. This is exceedingly unlikely to happen.
 	+ Create a folder under `demo-overrides` for your product template (if it doesn't exist yet).
 	+ Create a folder under `demo-overrides/{product-template}` for your demo venue
 	+ Create a folder under `product-templates` for your product template if it doesn't exist yet.
+- Make your default files
+	+ Create `brand-themes/{brandTheme}/localization.js`
+		* Entry point for all brand related localization data
+	+ Create `brand-themes/{brandTheme}/styles/brand.css`
+		* Entry point for all brand css customizations
+	+ Create `demo-overrides/{productTemplate}/{demoVenue}/localization.js`
+		* Entry point for all venue related localization data
+	+ Create `product-templates/{productTemplate}/index.ejs`
+		* The index page for your product template. See DMP for an example of using a `wrapper.ejs` file to help manage the includes/architecture of your demo.
 - Get coding, you are under deadline, kiddo.
 
 
