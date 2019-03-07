@@ -21,6 +21,23 @@ const testStep = async (target, page, step) => {
 		await page.evaluate(step.evaluate);
 	}
 
+	if (typeof step.drag !== "undefined") {
+		console.log('drag');
+		const dragThis = await page.$( step.drag );
+		const dragThisBoundingBox = await dragThis.boundingBox();
+		const dragThisX = dragThisBoundingBox.x + dragThisBoundingBox.width / 2;
+		const dragThisY = dragThisBoundingBox.y + dragThisBoundingBox.height / 2;
+		const dragTo = await page.$( step.dragTo );
+		const dragToBoundingBox = await dragTo.boundingBox();
+		const xDiff = dragThisX - (dragToBoundingBox.x + dragToBoundingBox.width / 2);
+		const yDiff = dragThisY - (dragToBoundingBox.y + dragToBoundingBox.height / 2);
+
+		await page.mouse.move( dragThisX, dragThisY );
+		await page.mouse.down();
+		await page.mouse.move( xDiff, yDiff );
+		await page.mouse.up();
+	}
+
 	await page.waitFor(step.waitFor);
 }
 
