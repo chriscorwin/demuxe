@@ -59,9 +59,28 @@ module.exports = function() {
     // merge default with env config, overwriting defaults
     configData = { ...defaultConfigData, ...envConfigData };
 
-    const defaultProductConfig = configData.productTemplate ? require(`../product-templates/${configData.productTemplate}/default-config.js`) : {};
-    const demoOverrideConfig = configData.demoVenue && configData.productTemplate ? require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`) : {};
-    const brandThemeConfig = configData.brandTheme ? require(`../brand-themes/${configData.brandTheme}/localization.js`) : {};
+
+    let defaultProductConfig = {};
+    try {
+        defaultProductConfig = configData.productTemplate ? require(`../product-templates/${configData.productTemplate}/default-config.js`) : {};
+    } catch (e) {
+        console.warn('no default product config');
+    }
+
+    let demoOverrideConfig = {};
+    try {
+        demoOverrideConfig = configData.demoVenue && configData.productTemplate ? require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`) : {};
+    } catch (e) {
+        console.warn('no demo overrides localization');
+    }
+
+    let brandThemeConfig = {};
+    try {
+        brandThemeConfig = configData.brandTheme ? require(`../brand-themes/${configData.brandTheme}/localization.js`) : {};
+    } catch (e) {
+        console.warn('no brand theme localization');
+    }
+
     configData.localization = Object.assign({}, defaultProductConfig, demoOverrideConfig, brandThemeConfig);
 
     // view engine setup
