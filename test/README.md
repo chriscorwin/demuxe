@@ -14,13 +14,13 @@ Think of tests as DVDs.
 
 Your DVD shelf is `/test/demo-flows/`. You must add your DVD to the shelf "directory" in `/test/demo-flows/index.js` so that the DVD player knows it exists.
 
-DVDs are named `${product}_${brand}.js`. eg: The DVD for the DMP product branded with the BBVA brand would be named `dmp_bbva.js`, its final path would be: `/test/demo-flows/dmp_bbva.js`.
+DVDs are named `${product}_${venue}_${brand}.js`. eg: The DVD for the DMP product for the Dreamforce 2018 Keynote venue branded with the BBVA brand would be named `dmp_df18keynote_bbva.js`, its final path would be: `/test/demo-flows/dmp_df18keynote_bbva.js`.
 
-You put a DVD into the DVD player with `/config/config.json`. The DVD player will go look in that config file to see which Product/Brand combination is currently being served by the server, and test the flow specified there. The variables the player will look at are `productTemplate` and `brandTheme`.
+You put a DVD into the DVD player with `/config/config.json`. The DVD player will go look in that config file to see which Product/Brand combination is currently being served by the server, and test the flow specified there. The variables the player will look at are `productTemplate`, `demoVenue`, and `brandTheme`.
 
 ### Google Slides Creation
 
-When the tests run they capture 1280x720 screenshots which are used to create a Markdown file named `/slides/${product}.${theme}.md` (eg `/slides/dmp.bbva.md`) which can be used by [md2googleslides](https://github.com/gsuitedevs/md2googleslides) to generate a Google Slide Deck. 
+When the tests run they capture 1280x720 screenshots which are used to create a Markdown file named `/slides/${product}.${venue}.${theme}.md` (eg `/slides/dmp.df18keynote.bbva.md`) which can be used by [md2googleslides](https://github.com/gsuitedevs/md2googleslides) to generate a Google Slide Deck. 
 
 If you want to skip capturing a step as a slide, add `skipSlideCapture: true` to the step you wish to capture.
 
@@ -29,7 +29,7 @@ If you would like to skip slide capturing for the entire demo, add `skipSlideCap
 After you run the tests and the markdown file is created, if you would like to create an actual Google Slide deck, you must:
 
 1. Upload the slides to heroku-dev (eg, commit and then push: `git push heroku your-branch:master`)
-2. `md2gslides slides/[product].[brand].md` (eg: `m32gslides slides/dmp.bbva.md`)
+2. `md2gslides slides/[product].[venue].[brand].md` (eg: `m32gslides slides/dmp.df18keynote.bbva.md`)
 
 A new slide deck will be generated and you will be given the URL which you can share with whomever you would like.
 
@@ -47,76 +47,115 @@ You update tests by:
 `npm run test:update`
 
 This is where the metaphore breaks down slightly. You can tell it to put a different DVD in and play that regardless of which product/brand is being served by the server by:
-`npm run test test/test-runner.test.js [product]_[brand]`
+`npm run test test/test-runner.test.js [product]_[venue]_[brand]`
 
 So, if the server is currently serving `dmp` and `bbva`, you can test `dmp` product `crocs` brand by:
-`npm run test test/test-runner.test.js dmp_crocs`
+`npm run test test/test-runner.test.js dmp_df18keynote_crocs`
 
 
 The test-drive takes screenshots of each step in the flow for reference and comparison, as well as generating a Google Slide Doc of the entire demo.
 
 ## Example Test Flow Definition
 
-```
-	const env = process.env.ENV || 'local';
-	const settings = require('../../config/config.js')();
-	const testhost = settings[env].host;
+```	
+const env = process.env.ENV || 'local';
+const settings = require('../../config/config.js')();
+const testhost = settings[env].host;
 
-	module.exports = {
-		id: 'dmp_bbva',
-		name: 'dmp.bbva',
-		description: 'DMP Demo Flow',
-		headless: false,
-		resolution: { width: 1280, height: 720 },
-		debug: true,
-		imageSnapshotPath: './test/screenshots/dmp_bbva/',
-		imageSnapshotPathProvided: true,
-		mismatchThreshold: 0.001,
-		skipSlideCapture: false,
-		skipTestCapture: false,
-		steps: [
-			// OVERVIEW PAGE - SLIDE 43
-			{
-				goto: testhost,
-				waitFor: 'body',
-				name: '0001.overview'
+module.exports = {
+	id: 'dmp_df18keynote_bbva',
+	name: 'dmp.df18keynote.bbva',
+	description: 'DMP Demo Flow',
+	headless: false,
+	resolution: { width: 1280, height: 720 },
+	debug: true,
+	imageSnapshotPath: './test/screenshots/dmp_df18keynote_bbva/',
+	imageSnapshotPathProvided: true,
+	mismatchThreshold: 0.001,
+	skipTestCapture: true,
+	skipSlideCapture: false,
+	steps: [
+		{
+			goto: testhost,
+			waitFor: 'body',
+			name: '0001.overview'
+		},
+		{
+			evaluate: () => {
+				window.scrollBy(0, window.innerHeight);
 			},
-			// SCROLL DOWN
-			{
-				evaluate: () => {
-					window.scrollBy(0, window.innerHeight);
-				},
-				waitFor: 2000,
-				name: '0002.overview',
-				skipTestCapture: true
+			waitFor: 2000,
+			name: '0002.overview',
+			skipTestCapture: true
+		},
+		{
+			evaluate: () => {
+				window.scrollBy(0, window.innerHeight * 2);
 			},
-			// DATA CAPTURE SOURCES PAGE - SLIDE 44
-			{
-				click: '#view-all-data-capture-sources',
-				waitFor: 'body',
-				name: '0100.data-capture-sources',
-				skipSlideCapture: true
-			},
-			// WAIT FOR GRAPH ANIMATIONS TO FINISH
-			{
-				waitFor: 2000,
-				name: '0101.data-capture-sources'
-			},
-			// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
-			{
-				click: '#content a',
-				waitFor: 'body',
-				name: '0200.consumer-rights-management-page',
-				skipSlideCapture: true
-			},
-			// WAIT FOR GRAPH ANIMATIONS TO FINISH
-			{
-				waitFor: 2000,
-				name: '0201.consumer-rights-management-page'
-			},
-
-		]
-	};
+			waitFor: 2000,
+			name: '0003.overview',
+			skipTestCapture: true
+		},
+		{
+			click: '#view-all-data-capture-sources',
+			waitFor: 'body',
+			name: '0100.data-capture-sources',
+			skipSlideCapture: true
+		},
+		{
+			waitFor: 2000,
+			name: '0101.data-capture-sources'
+		},
+		// GOTO CONSUMER RIGHTS MANAGEMENT PAGE - SLIDE 45
+		{
+			click: '#content a',
+			waitFor: 'body',
+			name: '0200.consumer-rights-management-page',
+			skipSlideCapture: true
+		},
+		{
+			waitFor: 2000,
+			name: '0201.consumer-rights-management-page'
+		},
+		// HOVER INSIGHTS NAV LINK
+		// CLICK EINSTEIN SEGMENTATION LINK
+		{
+			goto: `${testhost}insights/einstein-segmentation`,
+			waitFor: 'body',
+			name: '0300.einstein-segmentation'
+		},
+		// CLICK CREATE NEW SEGMENT USING THIS PERSONA
+		{
+			click: '.slds-button.slds-button_brand',
+			waitFor: 'body',
+			name: '0310.segments.build-standard-segment'
+		},
+		// CLICK "SEGMENT NAME" TO FILL
+		{
+			click: '#segment-name',
+			waitFor: 'body',
+			name: '0311.segments.build-standard-segment'
+		},
+		// SELECT "MARKETING CLOUD" IN ACTIVATION
+		{
+			click: '#checkbox7wrapper',
+			waitFor: 'body',
+			name: '0312.segments.build-standard-segment'
+		},
+		// SELECT "DOUBLE CLICK" IN ACTIVATION
+		{
+			click: '#checkbox6wrapper',
+			waitFor: 'body',
+			name: '0313.segments.build-standard-segment'
+		},
+		// CLICK "SAVE" SHOULD DO NOTHING
+		{
+			click: '#saveButton',
+			waitFor: 'body',
+			name: '0314.segments.build-standard-segment'
+		}
+	]
+};
 ```
 
 

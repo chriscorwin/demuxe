@@ -4,13 +4,13 @@ const settings = require('../../config/config.js')();
 const testhost = settings[env].host;
 
 module.exports = {
-	id: 'dmp_bbva',
-	name: 'dmp.bbva',
-	description: 'DMP Demo Flow',
+	id: 'jb_test_run_nto',
+	name: 'jb.test_run.nto',
+	description: 'JB Test Run NTO Flow',
 	headless: false,
 	resolution: { width: 1280, height: 720 },
 	debug: true,
-	imageSnapshotPath: './test/screenshots/dmp_bbva/',
+	imageSnapshotPath: './test/screenshots/jb_test_run_nto/',
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
 	skipTestCapture: true,
