@@ -203,7 +203,7 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 						
 					} else {
 
-
+						// For CSS and images we bypass the 404.ejs file entirely and just serve up the error from here.
 						if (req.url.match(/.*\.css$/)) {
 							res.status(404);
 							res.set('Content-Type', 'text/css');
@@ -224,9 +224,9 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 								}
 							`);
 						} else if (req.url.match(/.*\.png$/)) {
-							// res.status(404);
 							res.set('Content-Type', 'image/png');
 							res.status(404);
+							// We should figure out if this is, like, a thing. I had an idea here that doesn't hurt stuff, but, it may be nice to exploit this to serve up a generic image?
 							res.send(`data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==`);
 						} else {
 
