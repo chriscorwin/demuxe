@@ -5,14 +5,14 @@
 <script src="/javascripts/<%=locals.siteSection%>.js"></script>
 <script>console.groupEnd()</script>
 <% } %>
-<% 
-if (locals.pageScripts) { 
-	locals.pageScripts.forEach(function(script) { 
+<%
+if (locals.pageScripts) {
+	locals.pageScripts.forEach(function(script) {
 %>
 		<script src="/javascripts/<%=script%>"></script>
-<% 
+<%
 	});
-} 
+}
 %>
 <script type="text/javascript">
 	const navigatePage = ( url ) => {
@@ -27,13 +27,12 @@ if (locals.pageScripts) {
 
 <% if (locals.env !== 'local') { %>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133829434-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%= gapixelid %>"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-133829434-1');
+  gtag('config', '<%= gapixelid %>');
 </script>
 <% } %>
-

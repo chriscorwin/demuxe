@@ -60,11 +60,18 @@ module.exports = function() {
     configData = { ...defaultConfigData, ...envConfigData };
 
 
-    let defaultProductConfig = {};
+    let defaultEngineConfig = {};
     try {
-        defaultProductConfig = configData.productTemplate ? require(`../product-templates/${configData.productTemplate}/default-config.js`) : {};
+        defaultEngineConfig = configData.productTemplate ? require(`../engine/default-config.js`) : {};
     } catch (e) {
-        console.warn('no default product config');
+        console.warn('no default engine config');
+    }
+
+    let defaultProductTemplateConfig = {};
+    try {
+        defaultProductTemplateConfig = configData.productTemplate ? require(`../product-templates/${configData.productTemplate}/default-config.js`) : {};
+    } catch (e) {
+        console.warn('no default product template config');
     }
 
     let demoOverrideConfig = {};
@@ -81,7 +88,7 @@ module.exports = function() {
         console.warn('no brand theme localization');
     }
 
-    configData.localization = Object.assign({}, defaultProductConfig, demoOverrideConfig, brandThemeConfig);
+    configData.localization = Object.assign({}, defaultEngineConfig, defaultProductTemplateConfig, demoOverrideConfig, brandThemeConfig);
 
     // view engine setup
     // https://expressjs.com/en/4x/api.html#app.set

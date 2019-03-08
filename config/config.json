@@ -29,5 +29,6 @@
 		"imageSnapshotPath": "./test/screenshots/",
 		"mismatchThreshold": 0.01,
 		"timeout": 30000
-	}
+	},
+	"gapixelid": "UA-133829434-2"
 }
