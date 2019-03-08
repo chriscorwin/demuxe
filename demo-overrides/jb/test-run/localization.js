@@ -2,7 +2,7 @@
 
 module.exports = {
 	header: {
-		avatar: 'images/avatar2.jpg',
+		avatar: 'images/avatar4.png',
 		help: true,
 		setup: true
 	}
