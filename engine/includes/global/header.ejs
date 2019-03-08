@@ -1,12 +1,5 @@
-<style>
-.slds-global-header {
-	padding: 0;
-}
+<% const localization = locals.localization; %>
 
-.slds-global-header__item {
-	padding: 0;
-}
-</style>
 <header class="slds-global-header_container">
 	<div class="slds-global-header slds-grid slds-grid_align-spread" style="box-shadow: none;">
 		<div class="slds-global-header__item">
@@ -15,6 +8,90 @@
 					<img src="/images/sf-logo.svg" />
 				</a>
 			</div>
+		</div>
+		 <div class="slds-global-header__item">
+			<ul class="slds-global-actions">
+				<% if (localization.header && localization.header.favorites) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-global-actions__favorites slds-dropdown-trigger slds-dropdown-trigger_click">
+						<div class="slds-button-group">
+							<button class="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small" aria-pressed="false" title="Toggle Favorites">
+								<svg class="slds-button__icon" aria-hidden="true">
+									<use xlink:href="/icons/utility-sprite/svg/symbols.svg#favorite"></use>
+								</svg>
+								<span class="slds-assistive-text">Toggle Favorite</span>
+							</button>
+							<button class="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small" title="View Favorites">
+								<svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+									<use xlink:href="/icons/utility-sprite/svg/symbols.svg#down"></use>
+								</svg>
+								<span class="slds-assistive-text">View Favorites</span>
+							</button>
+						</div>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.global_actions) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action" aria-haspopup="true" title="Global Actions">
+							<svg class="slds-button__icon" aria-hidden="true">
+								<use xlink:href="/icons/utility-sprite/svg/symbols.svg#add"></use>
+							</svg>
+							<span class="slds-assistive-text">Global Actions</span>
+						</button>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.help) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action" aria-haspopup="true" title="Help and Training">
+							<svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+								<use xlink:href="/icons/utility-sprite/svg/symbols.svg#question"></use>
+							</svg>
+							<span class="slds-assistive-text">Help and Training</span>
+						</button>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.setup) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action" aria-haspopup="true" title="Setup">
+							<svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+								<use xlink:href="/icons/utility-sprite/svg/symbols.svg#setup"></use>
+							</svg>
+							<span class="slds-assistive-text">Setup</span>
+						</button>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.notifications) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action" title="no new notifications" aria-live="assertive" aria-atomic="true">
+							<svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+								<use xlink:href="/icons/utility-sprite/svg/symbols.svg#notification"></use>
+							</svg>
+							<span class="slds-assistive-text">no new notifications</span>
+						</button>
+						<span aria-hidden="true" class="slds-notification-badge">0</span>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.avatar) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-global-actions__avatar slds-global-actions__item-action" title="person name" aria-haspopup="true">
+							<span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+								<img alt="Person name" src="<%= localization.header.avatar %>" title="User avatar" />
+							</span>
+						</button>
+					</div>
+				</li>
+				<% } %>
+			</ul>
 		</div>
 	</div>
 	<div class="slds-context-bar slds-p-left_medium" id="primaryNav">
@@ -33,14 +110,14 @@
 	<div id="subheader" class="slds-container_large">
 		<div class="slds-grid slds-grid_vertical-align-center">
 			<div>
-				<h1 class="slds-text-heading_medium"><%= locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text) 
-				|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text) 
+				<h1 class="slds-text-heading_medium"><%= locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
+				|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text)
 				|| locals.sub_header_text
 				|| '' %></h1>
 			</div>
 
 
-			<% if (locals.subHeaderVariant === 'hasButton') { 
+			<% if (locals.subHeaderVariant === 'hasButton') {
 				// console.log('customizable button in sub-header please');
 			%>
 				<div class="slds-col_bump-left slds-p-right_medium">
@@ -48,20 +125,20 @@
 				</div>
 			<% } else if (locals.subHeaderVariant === 'hasText') { %>
 				<div class="slds-col_bump-left slds-p-right_medium">
-					<%= (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text) 
-					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text) 
+					<%= (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
+					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text)
 					|| locals.sub_header_text
 					|| '' %>
 				</div>
 			<% } %>
 
-				
+
 		</div>
 		<% if (locals.subHeaderVariant === 'hasCustomSubheader')  {
 			// console.log('customizable sub-header please');
 		%>
-			<%- (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents) 
-					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents) 
+			<%- (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents)
+					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents)
 					|| locals.subHeaderContents
 					|| '' %>
 		<% } %>
