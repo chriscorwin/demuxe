@@ -42,7 +42,6 @@ console.debug(`${path.join(__dirname, 'app.js')}:41 ] config: `, util.inspect(co
 
 console.groupEnd();
 
-
 // view engine setup
 // https://expressjs.com/en/4x/api.html#app.set
 // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
@@ -57,9 +56,6 @@ app.set('view engine', 'ejs');
 app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/demo-overrides' });
 app.set('view options', {compileDebug: true});
 app.set('view options', {compileDebug: true, outputFunctionName: 'echo'});
-
-
-
 
 // https://expressjs.com/en/4x/api.html#app.use
 const appUse = [
