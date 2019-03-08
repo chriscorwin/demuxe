@@ -63,3 +63,18 @@
   will-change: opacity;
   opacity: 1;
 }
+
+body.has-debug .is-ssi-block {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  box-shadow: 0px 0px 14px 0px rgba(255, 0, 0, 0.34);
+  border-radius: 0.125rem;
+  box-sizing: content-box;
+}
+
+body.has-debug span.is-ssi-block {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  display: inherit;
+  box-shadow: 0px 0px 14px 0px rgba(255, 0, 0, 0.34);
+  border-radius: 0.125rem;
+  box-sizing: content-box;
+}

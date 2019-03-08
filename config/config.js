@@ -1,9 +1,3 @@
-console.group(`
-============================================================
-Demuxe: Running \`config/config.js\` now...
-------------------------------------------------------------
-`);
-
 const path = require('path');
 const fs = require('fs');
 const util = require('util');
@@ -80,7 +74,7 @@ module.exports = function() {
     } catch (e) {
         console.warn('no demo overrides localization');
     }
-
+    
     let brandThemeConfig = {};
     try {
         brandThemeConfig = configData.brandTheme ? require(`../brand-themes/${configData.brandTheme}/localization.js`) : {};
@@ -169,6 +163,3 @@ module.exports = function() {
 
     return configData;
 }
-console.log(`...end: \`config/config.js\`
-------------------------------------------------------------`);
-console.groupEnd();

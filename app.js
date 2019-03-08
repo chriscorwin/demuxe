@@ -149,7 +149,12 @@ router.get('/*', (req, res) => {
 		return sanitizedQueryParams;
 	}, {});
 	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
-	const fileName = (sanitizedURL.match(/\/$/)) ? `${sanitizedURL}index.ejs` : `${sanitizedURL}.ejs`;
+	let fileName = (sanitizedURL.match(/\/$/)) ? `${sanitizedURL}index.ejs` : `${sanitizedURL}.ejs`;
+
+	// Okay, so, the server's glee at finding and including stuff can bite us when it attempts to find `file.css.ejs`. Just silly. Here we tell it in static asset casses to just look for the asset, not an .esj file.
+	if ( fileName.endsWith('.css.ejs') || fileName.endsWith('.js.ejs') || fileName.endsWith('.png.ejs') || fileName.endsWith('.png.ejs') ) {
+		fileName = fileName.replace('.ejs', '');
+	}
 
 	const state = sanitizedQueryParams.state || 'initial';
 	config.state = state;
@@ -173,7 +178,7 @@ router.get('/*', (req, res) => {
 
 			fs.access(path.join(__dirname, 'engine', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 
-				console.log(`[ ${path.join(__dirname, 'app.js')}:176 ] err: `, util.inspect(err, { showHidden: true, depth: null, colors: true }));
+				// console.log(`[ ${path.join(__dirname, 'app.js')}:176 ] err: `, util.inspect(err, { showHidden: true, depth: null, colors: true }));
 
 				if (!err) error = false;
 				if (error) {
@@ -181,10 +186,9 @@ router.get('/*', (req, res) => {
 
 					let thisUrlSlug = fileName.replace('.ejs', '');
 
-					console.log(`${path.join(__dirname, 'app.js')}:184 ] fileName: `, util.inspect(fileName, { showHidden: true, depth: null, colors: true }));
-					console.log(`${path.join(__dirname, 'app.js')}:185 ] thisUrlSlug: `, util.inspect(thisUrlSlug, { showHidden: true, depth: null, colors: true }));
-
-					console.log(`${path.join(__dirname, 'app.js')}:187 ] config.magickFlows.urlSlugs.includes(thisUrlSlug): `, util.inspect(config.magickFlows.urlSlugs.includes(thisUrlSlug), { showHidden: true, depth: null, colors: true }));
+					// console.log(`${path.join(__dirname, 'app.js')}:184 ] fileName: `, util.inspect(fileName, { showHidden: true, depth: null, colors: true }));
+					// console.log(`${path.join(__dirname, 'app.js')}:185 ] thisUrlSlug: `, util.inspect(thisUrlSlug, { showHidden: true, depth: null, colors: true }));
+					// console.log(`${path.join(__dirname, 'app.js')}:187 ] config.magickFlows.urlSlugs.includes(thisUrlSlug): `, util.inspect(config.magickFlows.urlSlugs.includes(thisUrlSlug), { showHidden: true, depth: null, colors: true }));
 
 					if (config.magickFlows.urlSlugs.includes(thisUrlSlug) ) {
 						config.urlSlug = thisUrlSlug;
@@ -198,16 +202,46 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 						console.groupEnd();
 						
 					} else {
-						res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
-							if (req.url.match(/\.css$/)) {
-								res.set('Content-Type', 'text/css');
-							}
-							if (req.url.match(/\.js$/)) {
-								res.set('Content-Type', 'application/javascript');
-								res.set('X-Your-Mom', config);
-							}
-							res.send(html);
-						});
+
+						// For CSS and images we bypass the 404.ejs file entirely and just serve up the error from here.
+						if (req.url.match(/.*\.css$/)) {
+							res.status(404);
+							res.set('Content-Type', 'text/css');
+							res.send(`
+								body.has-debug:after {
+									display: block;
+									font-size: 22px;
+									color: #fff;
+									background-color: #800;
+									padding: 10px;
+									height: 50px;
+									width: 100%;
+									content: "404. Page: ${fileName} Not Found." !important;
+									text-align: center;
+									position: absolute;
+									top: 20%;
+									left: 25%;
+								}
+							`);
+						} else if (req.url.match(/.*\.png$/)) {
+							res.set('Content-Type', 'image/png');
+							res.status(404);
+							// We should figure out if this is, like, a thing. I had an idea here that doesn't hurt stuff, but, it may be nice to exploit this to serve up a generic image?
+							res.send(`data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==`);
+						} else {
+
+							res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+
+								if (req.url.match(/\.js$/)) {
+									res.set('Content-Type', 'application/javascript');
+									res.send(html);
+								} else {
+									res.set('X-error', err);
+									res.set('X-original-filename', fileName);
+									res.send(html);
+								}
+							});
+						}
 					}
 				} else {
 					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
