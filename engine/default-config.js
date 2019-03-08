@@ -1,22 +1,22 @@
 module.exports = {
-	account_name: '',
-	appName: 'Salesforce UX Demuxe',
+	account_name: 'NTO',
+	appName: 'Engine',
 	body_class: 'slds-brand-band slds-brand-band_medium',
 	navData: {
 		accountNavItems: [],
 		navItems: [ {
-				label: 'You',
+				label: 'Overview',
 				href: `/`,
 				isActive: (activePage) => activePage === 'index'
 			},
 			{
-				label: 'Really',
+				label: 'Segments',
 				id: 'segments-global-nav-link',
 				href: '/segments/manage-segments/',
 				isActive: (activePage) => activePage === 'segments'
 			},
 			{
-				label: 'Should Change',
+				label: 'Insights',
 				ID: 'insights-global-nav-link',
 				href: ``,
 				isActive: (activePage) => activePage === 'insights',
@@ -94,20 +94,20 @@ module.exports = {
 				]
 			},
 			{
-				label: 'Your',
+				label: 'Activation',
 				href: ``,
 				lookLikeDropdown: true,
 				isActive: (activePage) => activePage === 'activation'
 			},
 			{
-				label: 'Config',
+				label: 'Manage',
 				href: ``,
 				lookLikeDropdown: true,
 				isActive: (activePage) => activePage === 'manage',
 				dropdownItems: []
 			},
 			{
-				label: 'Cool?',
+				label: 'Data Studio',
 				id: 'data-studio',
 				href: `/data-studio/audience-discovery`,
 				lookLikeDropdown: true,

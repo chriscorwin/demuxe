@@ -78,8 +78,28 @@ Demuxe utilizes:
 	`npm install`
 
 - Edit `/config/config.json` (and other config files). 
-	- Specify your brand and product-template. 
+	- Specify
+		+ `brandTheme`
+		+ `productTemplate`
+		+ `demoVenue`
+		+ `host` for local, dev, qa, and production
+		+ `gapixelid` (Go to analytics.google.com, create a new "property" for your demo, and get a new Tracking ID to put here)
 	- `config.json` should be _production settings_.
+- Make your folders (these names *must match* what you put in `config.json`)
+	+ Create a folder under `brand-themes` for your brand
+		* If one already exists, you might want to consider creating one with a different name in case the two demos using this brand have different brand assets or something. This is exceedingly unlikely to happen.
+	+ Create a folder under `demo-overrides` for your product template (if it doesn't exist yet).
+	+ Create a folder under `demo-overrides/{product-template}` for your demo venue
+	+ Create a folder under `product-templates` for your product template if it doesn't exist yet.
+- Make your default files
+	+ Create `brand-themes/{brandTheme}/localization.js`
+		* Entry point for all brand related localization data
+	+ Create `brand-themes/{brandTheme}/styles/brand.css`
+		* Entry point for all brand css customizations
+	+ Create `demo-overrides/{productTemplate}/{demoVenue}/localization.js`
+		* Entry point for all venue related localization data
+	+ Create `product-templates/{productTemplate}/index.ejs`
+		* The index page for your product template. See DMP for an example of using a `wrapper.ejs` file to help manage the includes/architecture of your demo.
 - Get coding, you are under deadline, kiddo.
 
 
@@ -130,14 +150,13 @@ After starting the server (see Starting the Server), open a new Terminal tab and
 It is assumed here, that is, taken as a _given_ that demos _will_ be served on Heroku, utilizing a pipeline.
 
 ## Setting up your pipeline
-1. Create a new pipeline (you can connect to Github if you are using a fork of Demuxe, otherwise do not).
+1. Create a new pipeline.
 2. Create a `{app-name}-dev`, `{app-name}-qa`, and `{app-name}` environment in the pipeline for the app.
 	- You may have to create the `-dev` version in the "staging" area of the pipeline and then click on the disclosure menu at the top right of the app tile and select "Move app to `development`". Heroku pipelines do not seem to have `development` channels by default that you can easily add apps to.
-3. Click into the dev instance of your app.
-4. Click on the deploy tab.
-5. Copy the command from the very bottom for "Existing Git repository".
-	It will look something like this: `heroku git:remote -a laulima-2018-dmp-dev`.
-6. Run the command in your terminal.
+3. Login to Heroku by running `heroku login` from your terminal
+*** THIS NEEDS AUDITED AND CONFIRMED AND BETTER YET SCRIPTED ***
+4. Add the Heroku pipeline by running this command in your terminal:
+	`git remote add https://git.heroku.com/[your heroku pipeline name]-dev.git && git remote add https://git.heroku.com/[your heroku pipeline name]-qa.git && git remote add https://git.heroku.com/[your heroku pipeline name].git && heroku git:remote -a [your heroku pipeline name]` eg: `git remote add https://git.heroku.com/jb-test-run-nto-dev.git && git remote add https://git.heroku.com/jb-test-run-nto-qa.git && git remote add https://git.heroku.com/jb-test-run-nto.git && heroku git:remote -a jb-test-run-nto-dev` (you can find this in the url, eg: `https://dashboard.heroku.com/apps/jb-test-run-nto-dev/deploy/heroku-git`)
 
 ## Deploying
 1. `git push heroku {branch}:master` your changes to the dev area of the pipeline to test a branch in dev on Heroku.

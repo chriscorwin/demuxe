@@ -20,7 +20,24 @@ const testStep = async (target, page, step) => {
 		console.log('evaluate');
 		await page.evaluate(step.evaluate);
 	}
-	
+
+	if (typeof step.drag !== "undefined") {
+		console.log('drag');
+		const dragThis = await page.$( step.drag );
+		const dragThisBoundingBox = await dragThis.boundingBox();
+		const dragThisX = dragThisBoundingBox.x + dragThisBoundingBox.width / 2;
+		const dragThisY = dragThisBoundingBox.y + dragThisBoundingBox.height / 2;
+		const dragTo = await page.$( step.dragTo );
+		const dragToBoundingBox = await dragTo.boundingBox();
+		const xDiff = dragThisX - (dragToBoundingBox.x + dragToBoundingBox.width / 2);
+		const yDiff = dragThisY - (dragToBoundingBox.y + dragToBoundingBox.height / 2);
+
+		await page.mouse.move( dragThisX, dragThisY );
+		await page.mouse.down();
+		await page.mouse.move( xDiff, yDiff );
+		await page.mouse.up();
+	}
+
 	await page.waitFor(step.waitFor);
 }
 
@@ -30,7 +47,7 @@ const testStep = async (target, page, step) => {
 // As of this writing (11/13/18) it is not possible for demuxe to serve more than one product/brand
 // combination at once, but this could be useful if you want to see if previous demo flows work with
 // the current brand/product combination.
-const whatToTest = process.argv[3] || `${settings.productTemplate}_${settings.brandTheme}`;
+const whatToTest = process.argv[3] || `${settings.productTemplate}_${settings.demoVenue}_${settings.brandTheme}`;
 
 console.log(`whatToTest ${whatToTest}`);
 
@@ -39,8 +56,6 @@ describe(`${whatToTest} slideshow creation`, async function () {
 	await Promise.all(demos.map(async (demo) => {
 		if (whatToTest !== 'All' && whatToTest !== demo.id) return;
 		if (demo.skipSlideCapture) return;
-
-		console.log('in here');
 
 		let capturedSlides = false;
 		let slides = [];
@@ -54,7 +69,7 @@ describe(`${whatToTest} slideshow creation`, async function () {
 			imageSnapshotPathProvided: true,
 			mismatchThreshold: settings.tests.mismatchThreshold || tests.mismatchThreshold || 0.001
 		});
-console.log('now here');
+
 		await it(`${demo.id} should generate slideshow`, async function () {
 			console.log('yes/"');
 			await (async () => {
@@ -62,7 +77,7 @@ console.log('now here');
 				const target = differencify.init({ testName: demo.name, chain: false });
 				await target.launch({ headless: demo.headless });
 				const page = await target.newPage();
-			
+
 				// set the viewport to 16:9 to match Google Slides
 				await page.setViewport({ width: 1280, height: 720 });
 
@@ -95,7 +110,7 @@ console.log('now here');
 				if(err) {
 					return console.log(err);
 				}
-			
+
 				console.log("Markdown file was saved!");
 			});
 
@@ -152,11 +167,11 @@ describe(`${whatToTest} tests`, async function () {
 						await target.toMatchSnapshot(screenshot, getMatchOptions(step.name), handleResult);
 					}
 				};
-			
+
 				await page.close();
 				await target.close();
 			})();
-	
+
 			hasError.should.be.false;
 		});
 	}));
