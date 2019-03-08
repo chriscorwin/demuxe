@@ -1,9 +1,3 @@
-console.group(`
-============================================================
-Demuxe: Running \`config/config.js\` now...
-------------------------------------------------------------
-`);
-
 const path = require('path');
 const fs = require('fs');
 const util = require('util');
@@ -59,7 +53,10 @@ module.exports = function() {
     // merge default with env config, overwriting defaults
     configData = { ...defaultConfigData, ...envConfigData };
 
-    const defaultProductConfig = configData.productTemplate ? require(`../product-templates/${configData.productTemplate}/default-config.js`) : {};
+    const defaultProductConfig = configData.productTemplate ? require(`../product-templates/${configData.productTemplate}/default-config.js`) : (require(`../engine/default-config.js`) || {});
+    
+
+    // const defaultProductConfig = configData.productTemplate ? require(`../product-templates/${configData.productTemplate}/default-config.js`) : {};
     const demoOverrideConfig = configData.demoVenue && configData.productTemplate ? require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`) : {};
     const brandThemeConfig = configData.brandTheme ? require(`../brand-themes/${configData.brandTheme}/localization.js`) : {};
     configData.localization = Object.assign({}, defaultProductConfig, demoOverrideConfig, brandThemeConfig);
@@ -143,6 +140,3 @@ module.exports = function() {
 
     return configData;
 }
-console.log(`...end: \`config/config.js\`
-------------------------------------------------------------`);
-console.groupEnd();

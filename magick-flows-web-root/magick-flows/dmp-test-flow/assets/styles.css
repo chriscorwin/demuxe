@@ -1,7 +1,8 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/images/snake-pit-popup.png") url("/magick-flows/bbva-atm/main/0000.png") url("/magick-flows/bbva-atm/main/0101.png") url("/magick-flows/bbva-atm/main/0202.png") url("/magick-flows/bbva-atm/main/0303.png") url("/magick-flows/bbva-atm/main/0404.png") url("/magick-flows/bbva-atm/main/0505.png") url("/magick-flows/bbva-atm/main/0606.png") url("/magick-flows/bbva-atm/main/0707.png") url("/magick-flows/bbva-atm/main/0808.png") url("/magick-flows/bbva-atm/main/0909.png") url("/magick-flows/bbva-atm/main/1010.png") url("/magick-flows/bbva-atm/main/1111.png");
+  content: url("/magick-flows/dmp-test-flow/main/0.svg") url("/magick-flows/dmp-test-flow/main/0000.svg") url("/magick-flows/dmp-test-flow/main/1.svg") url("/magick-flows/dmp-test-flow/main/2.svg") url("/magick-flows/dmp-test-flow/main/3.svg") url("/magick-flows/dmp-test-flow/main/4.svg") url("/magick-flows/dmp-test-flow/main/5.svg") url("/magick-flows/dmp-test-flow/main/6.svg") url("/magick-flows/dmp-test-flow/main/7.svg") url("/magick-flows/dmp-test-flow/main/8.svg") url("/magick-flows/dmp-test-flow/main/9.svg") url("/magick-flows/dmp-test-flow/main/10.svg") url("/magick-flows/dmp-test-flow/main/11.svg") url("/magick-flows/dmp-test-flow/main/12.svg") url("/magick-flows/dmp-test-flow/main/0101.svg") url("/magick-flows/dmp-test-flow/main/0202.svg") url("/magick-flows/dmp-test-flow/main/0303.svg") url("/magick-flows/dmp-test-flow/main/0404.svg") url("/magick-flows/dmp-test-flow/main/0505.svg") url("/magick-flows/dmp-test-flow/main/0606.svg") url("/magick-flows/dmp-test-flow/main/0707.svg") url("/magick-flows/dmp-test-flow/main/0808.svg") url("/magick-flows/dmp-test-flow/main/0909.svg") url("/magick-flows/dmp-test-flow/main/1010.svg") url("/magick-flows/dmp-test-flow/main/1111.svg") url("/magick-flows/dmp-test-flow/main/1212.svg");
+  outline: 1px solid red;
   height: 0;
   overflow: hidden;
   position: absolute;
@@ -37,6 +38,95 @@ body, .container {
   width: 1280px;
 }
 
+.ios-notification {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms top ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: -812px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.ios-notification.slide-in {
+  top: 0px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms top ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: -812px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top.slide-in {
+  top: 0px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-left {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms left ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: 0;
+  left: -375px;
+  will-change: left;
+}
+
+.drawer-from-left.slide-in {
+  left: 0px;
+  transition: 250ms left ease-in-out;
+  will-change: left;
+}
+
+.drawer-from-right {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms right ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: 0;
+  right: -375px;
+  will-change: right;
+}
+
+.drawer-from-right.slide-in {
+  right: 0px;
+  transition: 250ms right ease-in-out;
+  will-change: right;
+}
+
+.drawer-from-bottom {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms bottom ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  bottom: -812px;
+  will-change: bottom;
+}
+
+.drawer-from-bottom.slide-in {
+  bottom: 0px;
+  transition: 250ms bottom ease-in-out;
+  will-change: bottom;
+}
+
 .magick-flows-slide {
   background-color: transparent;
 }
@@ -47,11 +137,11 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 16880px;
+  width: 33780px;
 }
 
 .app-switcher-one.shrink {
-  transform: scale(0.75);
+  transform: scale(0.95);
   will-change: transform;
 }
 
@@ -331,6 +421,240 @@ body, .container {
   left: 16900px;
 }
 
+.app-switcher-one.be-left-14 {
+  left: -18200px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-14 {
+  left: -18200px;
+}
+
+.magick-flows--slide-14 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 18200px;
+}
+
+.app-switcher-one.be-left-15 {
+  left: -19500px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-15 {
+  left: -19500px;
+}
+
+.magick-flows--slide-15 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 19500px;
+}
+
+.app-switcher-one.be-left-16 {
+  left: -20800px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-16 {
+  left: -20800px;
+}
+
+.magick-flows--slide-16 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 20800px;
+}
+
+.app-switcher-one.be-left-17 {
+  left: -22100px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-17 {
+  left: -22100px;
+}
+
+.magick-flows--slide-17 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 22100px;
+}
+
+.app-switcher-one.be-left-18 {
+  left: -23400px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-18 {
+  left: -23400px;
+}
+
+.magick-flows--slide-18 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 23400px;
+}
+
+.app-switcher-one.be-left-19 {
+  left: -24700px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-19 {
+  left: -24700px;
+}
+
+.magick-flows--slide-19 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 24700px;
+}
+
+.app-switcher-one.be-left-20 {
+  left: -26000px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-20 {
+  left: -26000px;
+}
+
+.magick-flows--slide-20 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 26000px;
+}
+
+.app-switcher-one.be-left-21 {
+  left: -27300px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-21 {
+  left: -27300px;
+}
+
+.magick-flows--slide-21 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 27300px;
+}
+
+.app-switcher-one.be-left-22 {
+  left: -28600px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-22 {
+  left: -28600px;
+}
+
+.magick-flows--slide-22 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 28600px;
+}
+
+.app-switcher-one.be-left-23 {
+  left: -29900px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-23 {
+  left: -29900px;
+}
+
+.magick-flows--slide-23 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 29900px;
+}
+
+.app-switcher-one.be-left-24 {
+  left: -31200px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-24 {
+  left: -31200px;
+}
+
+.magick-flows--slide-24 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 31200px;
+}
+
+.app-switcher-one.be-left-25 {
+  left: -32500px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-25 {
+  left: -32500px;
+}
+
+.magick-flows--slide-25 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 32500px;
+}
+
+.app-switcher-one.be-left-26 {
+  left: -33800px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-26 {
+  left: -33800px;
+}
+
+.magick-flows--slide-26 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 33800px;
+}
+
 footer.magick-flows-stickey-footer_container {
   position: absolute;
   bottom: 0;
@@ -379,8 +703,4 @@ footer.magick-flows-stickey-footer_container {
   box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
   transition: transform 500ms, opacity 600ms, left 125ms !important;
   opacity: 0;
-}
-
-.magick-flows--slide-5 {
-  background-color: #00366f;
 }

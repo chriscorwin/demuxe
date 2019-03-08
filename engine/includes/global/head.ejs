@@ -1,19 +1,3 @@
-<%_
-const includeDebugInfoStart = `
-============================================================
-Demuxe: including 'product-templates/dmp/includes/global/head.ejs' now...
-------------------------------------------------------------
-`;
-const includeDebugInfoEnd = `
-...end 'product-templates/dmp/includes/global/head.ejs'
-------------------------------------------------------------
-`;
-console.group(includeDebugInfoStart);
-%>
-<script>
-	console.group(`<%=includeDebugInfoStart%>`);
-</script>
-
 <% if (locals.title) { %>
 	<title><%= locals.title %></title>
 <%
@@ -141,7 +125,7 @@ Demuxe: setting client-side javascript variables from Demuxe \`locals\`
 	// back to client-side output now ---V
 %>
 	console.group(`Demuxe: server-side \`locals\`:
-Set: /product-templates/dmp/includes/global/head.ejs:134
+Set: /engine/includes/global/head.ejs:134
 `);
 	console.dir(locals);
 	console.groupEnd();
@@ -154,11 +138,3 @@ Set: /product-templates/dmp/includes/global/head.ejs:134
 
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
-<script>
-	console.log(`<%=includeDebugInfoEnd%>`);
-	console.groupEnd();
-</script>
-<%_
-console.log(includeDebugInfoEnd);
-console.groupEnd();
-%>

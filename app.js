@@ -42,6 +42,7 @@ console.debug(`${path.join(__dirname, 'app.js')}:41 ] config: `, util.inspect(co
 
 console.groupEnd();
 
+
 // view engine setup
 // https://expressjs.com/en/4x/api.html#app.set
 // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
@@ -56,6 +57,9 @@ app.set('view engine', 'ejs');
 app.set('view options', { root: '/Users/cmcculloh/projects/demuxe/demo-overrides' });
 app.set('view options', {compileDebug: true});
 app.set('view options', {compileDebug: true, outputFunctionName: 'echo'});
+
+
+
 
 // https://expressjs.com/en/4x/api.html#app.use
 const appUse = [
@@ -149,7 +153,10 @@ router.get('/*', (req, res) => {
 		return sanitizedQueryParams;
 	}, {});
 	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
-	const fileName = (sanitizedURL.match(/\/$/)) ? `${sanitizedURL}index.ejs` : `${sanitizedURL}.ejs`;
+	let fileName = (sanitizedURL.match(/\/$/)) ? `${sanitizedURL}index.ejs` : `${sanitizedURL}.ejs`;
+	if ( fileName.endsWith('.css.ejs') || fileName.endsWith('.js.ejs') || fileName.endsWith('.png.ejs') || fileName.endsWith('.png.ejs') ) {
+		fileName = fileName.replace('.ejs', '');
+	}
 
 	const state = sanitizedQueryParams.state || 'initial';
 	config.state = state;
@@ -173,7 +180,7 @@ router.get('/*', (req, res) => {
 
 			fs.access(path.join(__dirname, 'engine', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 
-				console.log(`[ ${path.join(__dirname, 'app.js')}:176 ] err: `, util.inspect(err, { showHidden: true, depth: null, colors: true }));
+				// console.log(`[ ${path.join(__dirname, 'app.js')}:176 ] err: `, util.inspect(err, { showHidden: true, depth: null, colors: true }));
 
 				if (!err) error = false;
 				if (error) {
@@ -181,10 +188,9 @@ router.get('/*', (req, res) => {
 
 					let thisUrlSlug = fileName.replace('.ejs', '');
 
-					console.log(`${path.join(__dirname, 'app.js')}:184 ] fileName: `, util.inspect(fileName, { showHidden: true, depth: null, colors: true }));
-					console.log(`${path.join(__dirname, 'app.js')}:185 ] thisUrlSlug: `, util.inspect(thisUrlSlug, { showHidden: true, depth: null, colors: true }));
-
-					console.log(`${path.join(__dirname, 'app.js')}:187 ] config.magickFlows.urlSlugs.includes(thisUrlSlug): `, util.inspect(config.magickFlows.urlSlugs.includes(thisUrlSlug), { showHidden: true, depth: null, colors: true }));
+					// console.log(`${path.join(__dirname, 'app.js')}:184 ] fileName: `, util.inspect(fileName, { showHidden: true, depth: null, colors: true }));
+					// console.log(`${path.join(__dirname, 'app.js')}:185 ] thisUrlSlug: `, util.inspect(thisUrlSlug, { showHidden: true, depth: null, colors: true }));
+					// console.log(`${path.join(__dirname, 'app.js')}:187 ] config.magickFlows.urlSlugs.includes(thisUrlSlug): `, util.inspect(config.magickFlows.urlSlugs.includes(thisUrlSlug), { showHidden: true, depth: null, colors: true }));
 
 					if (config.magickFlows.urlSlugs.includes(thisUrlSlug) ) {
 						config.urlSlug = thisUrlSlug;
@@ -198,16 +204,46 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 						console.groupEnd();
 						
 					} else {
-						res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
-							if (req.url.match(/\.css$/)) {
-								res.set('Content-Type', 'text/css');
-							}
-							if (req.url.match(/\.js$/)) {
-								res.set('Content-Type', 'application/javascript');
-								res.set('X-Your-Mom', config);
-							}
-							res.send(html);
-						});
+
+
+						if (req.url.match(/.*\.css$/)) {
+							res.status(404);
+							res.set('Content-Type', 'text/css');
+							res.send(`
+								body.has-debug:after {
+									display: block;
+									font-size: 22px;
+									color: #fff;
+									background-color: #800;
+									padding: 10px;
+									height: 50px;
+									width: 100%;
+									content: "404. Page: ${fileName} Not Found." !important;
+									text-align: center;
+									position: absolute;
+									top: 20%;
+									left: 25%;
+								}
+							`);
+						} else if (req.url.match(/.*\.png$/)) {
+							// res.status(404);
+							res.set('Content-Type', 'image/png');
+							res.status(404);
+							res.send(`data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==`);
+						} else {
+
+							res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+
+								if (req.url.match(/\.js$/)) {
+									res.set('Content-Type', 'application/javascript');
+									res.send(html);
+								} else {
+									res.set('X-error', err);
+									res.set('X-original-filename', fileName);
+									res.send(html);
+								}
+							});
+						}
 					}
 				} else {
 					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });

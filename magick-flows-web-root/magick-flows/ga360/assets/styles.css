@@ -1,7 +1,8 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/images/snake-pit-popup.png") url("/magick-flows/bbva-atm/main/0000.png") url("/magick-flows/bbva-atm/main/0101.png") url("/magick-flows/bbva-atm/main/0202.png") url("/magick-flows/bbva-atm/main/0303.png") url("/magick-flows/bbva-atm/main/0404.png") url("/magick-flows/bbva-atm/main/0505.png") url("/magick-flows/bbva-atm/main/0606.png") url("/magick-flows/bbva-atm/main/0707.png") url("/magick-flows/bbva-atm/main/0808.png") url("/magick-flows/bbva-atm/main/0909.png") url("/magick-flows/bbva-atm/main/1010.png") url("/magick-flows/bbva-atm/main/1111.png");
+  content: url("/magick-flows/ga360/main/0000.png") url("/magick-flows/ga360/main/0101.png") url("/magick-flows/ga360/main/0202.png") url("/magick-flows/ga360/main/0303.png") url("/magick-flows/ga360/main/0404.png");
+  outline: 1px solid red;
   height: 0;
   overflow: hidden;
   position: absolute;
@@ -37,6 +38,95 @@ body, .container {
   width: 1280px;
 }
 
+.ios-notification {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms top ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: -812px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.ios-notification.slide-in {
+  top: 0px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms top ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: -812px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top.slide-in {
+  top: 0px;
+  transition: 250ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-left {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms left ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: 0;
+  left: -375px;
+  will-change: left;
+}
+
+.drawer-from-left.slide-in {
+  left: 0px;
+  transition: 250ms left ease-in-out;
+  will-change: left;
+}
+
+.drawer-from-right {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms right ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: 0;
+  right: -375px;
+  will-change: right;
+}
+
+.drawer-from-right.slide-in {
+  right: 0px;
+  transition: 250ms right ease-in-out;
+  will-change: right;
+}
+
+.drawer-from-bottom {
+  margin: 0 auto;
+  position: absolute;
+  transition: 250ms bottom ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  bottom: -812px;
+  will-change: bottom;
+}
+
+.drawer-from-bottom.slide-in {
+  bottom: 0px;
+  transition: 250ms bottom ease-in-out;
+  will-change: bottom;
+}
+
 .magick-flows-slide {
   background-color: transparent;
 }
@@ -51,7 +141,7 @@ body, .container {
 }
 
 .app-switcher-one.shrink {
-  transform: scale(0.75);
+  transform: scale(0.95);
   will-change: transform;
 }
 

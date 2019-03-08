@@ -141,7 +141,7 @@ body, .container {
 }
 
 .app-switcher-one.shrink {
-  transform: scale(0.85);
+  transform: scale(0.95);
   will-change: transform;
 }
 

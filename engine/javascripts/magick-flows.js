@@ -1,8 +1,14 @@
-console.group(`
+const pathToIncludeForLogging = `engine/javascripts/magick-flows.js`;
+const includeDebugInfoStart = `
 ============================================================
-Demuxe: Running \`engine/javascripts/magick-flows.js\` now...
+Demuxe: including ${pathToIncludeForLogging} now...
 ------------------------------------------------------------
-`);
+`;
+const includeDebugInfoEnd = `
+...end ${pathToIncludeForLogging}
+------------------------------------------------------------
+`;
+console.group(includeDebugInfoStart);
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
 const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
@@ -41,7 +47,7 @@ $contentWrapper.onclick = ( ) => {
 
 
 function normalTransition (thisStepNumber = 0, doAppTransition = false, delayTransition = 0) {
-	console.group(`[Magick Flows: normalTransition() ](/product-templates/mobile/javascripts/magick-flows.js:43) running...`);
+	console.group(`[Magick Flows: normalTransition() ](${pathToIncludeForLogging}:50) running...`);
 
 	let nextStepNumber = thisStepNumber + 1;
 
@@ -113,7 +119,7 @@ function getAppSwitcherClassNames () {
 
 
 function locationHashChanged(event) {
-	console.group(`[ locationHashChanged() ](/product-templates/dmp/javascripts/magick-flows.js:104)  running...`);
+	console.group(`[ locationHashChanged() ](${pathToIncludeForLogging}:122)  running...`);
 	console.log(`window.location.hash (before manipulation): `, window.location.hash);
 	console.log(`event.oldURL: `, event.oldURL);
 	console.log(`event.newURL: `, event.newURL);
@@ -404,4 +410,7 @@ document.onkeyup = function(e) {
 		// alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
   }
 };
+
+console.log(includeDebugInfoEnd);
+console.groupEnd();
 
