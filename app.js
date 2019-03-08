@@ -150,6 +150,8 @@ router.get('/*', (req, res) => {
 	}, {});
 	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
 	let fileName = (sanitizedURL.match(/\/$/)) ? `${sanitizedURL}index.ejs` : `${sanitizedURL}.ejs`;
+
+	// Okay, so, the server's glee at finding and including stuff can bite us when it attempts to find `file.css.ejs`. Just silly. Here we tell it in static asset casses to just look for the asset, not an .esj file.
 	if ( fileName.endsWith('.css.ejs') || fileName.endsWith('.js.ejs') || fileName.endsWith('.png.ejs') || fileName.endsWith('.png.ejs') ) {
 		fileName = fileName.replace('.ejs', '');
 	}
