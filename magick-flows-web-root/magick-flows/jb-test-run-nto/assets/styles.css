@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/jb-test-run-nto/main/0000___marketing-cloud-dashboard.svg") url("/magick-flows/jb-test-run-nto/main/0100___ID=journey-builder-dashbaord-select-journey.svg") url("/magick-flows/jb-test-run-nto/main/0200___ID=journey-canvas-with-simple-journey.svg") url("/magick-flows/jb-test-run-nto/main/0300___ID=journey-canvas-full-drawer-with-editor-shown.svg") url("/magick-flows/jb-test-run-nto/main/0400___ID=create-new-journey-version.svg") url("/magick-flows/jb-test-run-nto/main/0500___ID=drag-new-message-to-canvas.svg") url("/magick-flows/jb-test-run-nto/main/0502___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0503___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0504___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0510___ID=message-successfully-dragged.svg") url("/magick-flows/jb-test-run-nto/main/0600___ID=canvas-with-full-drawer-analytics-scm.svg") url("/magick-flows/jb-test-run-nto/main/0700___ID=journey-analytics-full-page-over-journey-builder.svg") url("/magick-flows/jb-test-run-nto/main/9998___ID=the-end-is-near.svg") url("/magick-flows/jb-test-run-nto/main/9999___ID=this-is-the-end.svg");
+  content: url("/magick-flows/jb-test-run-nto/main/0000___marketing-cloud-dashboard___DATA=has-sticky-header__use-slide-transition__slide-transition_auto-advance__slide-transition-timing--slow___NOTES=menu-auto-shows.png") url("/magick-flows/jb-test-run-nto/main/0001___marketing-cloud-dashboard___DATA=has-sticky-header__use-slide-transition__slide-transition_auto-advance__slide-transition-timing--normal___NOTES=menu-fake-hover.png") url("/magick-flows/jb-test-run-nto/main/0002___marketing-cloud-dashboard___DATA=has-sticky-header___NOTES=menu-fully-showing-now.png") url("/magick-flows/jb-test-run-nto/main/0010___ID=journey-canvas-with-simple-journey.png") url("/magick-flows/jb-test-run-nto/main/0020___ID=review-journey-analytics.png") url("/magick-flows/jb-test-run-nto/main/0030___ID=journey-canvas-with-simple-journey.png") url("/magick-flows/jb-test-run-nto/main/0040___ID=review-email-analytics.png") url("/magick-flows/jb-test-run-nto/main/0050___ID=editable-journey-canvas.png") url("/magick-flows/jb-test-run-nto/main/0051___ID=update-header-default-journey-navigation.png") url("/magick-flows/jb-test-run-nto/main/0052___ID=open-builder-drawer.png") url("/magick-flows/jb-test-run-nto/main/0053___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.png") url("/magick-flows/jb-test-run-nto/main/0054___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.png") url("/magick-flows/jb-test-run-nto/main/0055___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.png") url("/magick-flows/jb-test-run-nto/main/0056___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.png") url("/magick-flows/jb-test-run-nto/main/0057___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.png") url("/magick-flows/jb-test-run-nto/main/0058___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.png") url("/magick-flows/jb-test-run-nto/main/0059___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.png") url("/magick-flows/jb-test-run-nto/main/0059___ID=message-is-dropped.png") url("/magick-flows/jb-test-run-nto/assets/marketing-cloud-dashboard___sticky-header.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -137,7 +137,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 18180px;
+  width: 23380px;
 }
 
 .app-switcher-one.shrink {
@@ -437,6 +437,78 @@ body, .container {
   top: 0;
   width: 1280px;
   left: 18200px;
+}
+
+.app-switcher-one.be-left-15 {
+  left: -19500px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-15 {
+  left: -19500px;
+}
+
+.magick-flows--slide-15 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 19500px;
+}
+
+.app-switcher-one.be-left-16 {
+  left: -20800px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-16 {
+  left: -20800px;
+}
+
+.magick-flows--slide-16 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 20800px;
+}
+
+.app-switcher-one.be-left-17 {
+  left: -22100px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-17 {
+  left: -22100px;
+}
+
+.magick-flows--slide-17 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 22100px;
+}
+
+.app-switcher-one.be-left-18 {
+  left: -23400px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-18 {
+  left: -23400px;
+}
+
+.magick-flows--slide-18 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 23400px;
 }
 
 footer.magick-flows-stickey-footer_container {

@@ -12,6 +12,8 @@ if (process.env.DEBUG === "true") {
 
 const getScreenTraits = (screenInfo) => {
 	// screens without IDs can't have data. Abort.
+	console.log(`[ config/magick-flows-util/get-screen-traits.js:15 ] screenInfo: `, util.inspect(screenInfo, { showHidden: true, depth: null, colors: true }));
+	console.log(`[ config/magick-flows-util/get-screen-traits.js:16 ] screenInfo.screenId: `, util.inspect(screenInfo.screenId, { showHidden: true, depth: null, colors: true }));
 	if ( !screenInfo.screenId ) return {};
 
 	let traitsData = {
@@ -25,6 +27,15 @@ const getScreenTraits = (screenInfo) => {
 		''
 	);
 	
+	console.log(`
+	[ config/magick-flows-util/get-screen-traits.js:29 ] possibleTraitIds: 
+		`, util.inspect(possibleTraitIds, { showHidden: true, depth: null, colors: true }));
+	console.log(`
+	[ config/magick-flows-util/get-screen-traits.js:30 ] screenInfo.fileName.
+		match(possibleTraitIds): `, util.inspect(screenInfo.fileName.match(possibleTraitIds), { showHidden: true, depth: null, colors: true }));
+	console.log(`
+	[ config/magick-flows-util/get-screen-traits.js:31 ] traitsData: 
+		`, util.inspect(traitsData, { showHidden: true, depth: null, colors: true }));
 	if ( !screenInfo.fileName.match(possibleTraitIds) ) return traitsData;
 
 	const relevantAssets = screenInfo.assetFiles.filter(asset => {

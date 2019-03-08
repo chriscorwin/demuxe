@@ -23,6 +23,10 @@ _%>
 	const assetsContentPath = `${webRootPath}/assets/`;
 
 
+	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
+		console.log(`[ engine/includes/magick-flows/magick-flows-contents.ejs:27 ] ${nodeIndex}: ${JSON.stringify(node)}`);
+	});
+
 
 	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
 

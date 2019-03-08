@@ -81,6 +81,9 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 				if (key === 'data' && typeof value === 'string') {
 					// make sure the stupid thing is in an array
 					screenDataAttributes[key] = [value];
+				} else if (key === 'notes' && typeof value === 'string') {
+					// make sure the stupid thing is in an array
+					screenDataAttributes[key] = [value];
 				} else {
 					screenDataAttributes[key] = value;
 				}
@@ -89,6 +92,11 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 			// first one is the sorter, store it as such
 			if ( index === 0 ) {
 				screenDataAttributes['sorter'] = node;
+			} else if ( index === 1 ) {
+				screenDataAttributes['id'] = node;
+			} else {
+				console.log(`[ config/magick-flows-util/get-flow-data.js:96 ] index: `, util.inspect(index, { showHidden: true, depth: null, colors: true }));
+				console.log(`[ config/magick-flows-util/get-flow-data.js:97 ] node: `, util.inspect(node, { showHidden: true, depth: null, colors: true }));
 			}
 
 		}
@@ -105,6 +113,8 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 	}
 
 	screenDataAttributes = getDataFromFilename(screenDataAttributes, fileName);
+
+	console.log(`[ config/magick-flows-util/get-flow-data.js:109 ] screenDataAttributes: `, util.inspect(screenDataAttributes, { showHidden: true, depth: null, colors: true }));
 
 	if ( fileName.endsWith('.ejs') === true ) {
 		screenDataAttributes.dimensions = {type: 'ejs'};

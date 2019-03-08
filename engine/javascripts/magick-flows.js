@@ -171,6 +171,7 @@ function locationHashChanged(event) {
 	let doAutoAdvanceTransition = false;
 
 	let delayTransition = 0;
+	let useSlideTransition = false;
 	let doDrawer = false;
 	let directionOfNavigation = 'forward';
 	let oldUrlHash = parseInt( event.oldURL.split('#')[event.oldURL.split('#').length - 1] ) || 0;
@@ -187,21 +188,30 @@ function locationHashChanged(event) {
 	}
 
 
-	if ( magickFlowConfig.metaData[stepToEvaluateForAppTransition].data !== undefined && magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[0] === 'use-slide-transition' && magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[1] === 'slide-transition_auto-advance' ) {
-		let timing = 1000;
+	console.log(`magickFlowConfig.metaData[stepToEvaluateForAppTransition].data: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].data);
+	// It is an array, and the order is unknown, so don't depend upon it.
 
-		if (magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[2] === 'slide-transition-timing--slow') {
-			timing = 5000;
+
+	if ( magickFlowConfig.metaData[stepToEvaluateForAppTransition].data !== undefined ) {
+		useSlideTransition =  magickFlowConfig.metaData[stepToEvaluateForAppTransition].data.find(k => k=='use-slide-transition') === 'use-slide-transition';
+		if ( useSlideTransition === true ) {
+			let timing = 1000;
+
+			if ( magickFlowConfig.metaData[stepToEvaluateForAppTransition].data.find(k => k=='slide-transition-timing--slow') === 'slide-transition-timing--slow') {
+				timing = 5000;
+			}
+			if ( magickFlowConfig.metaData[stepToEvaluateForAppTransition].data.find(k => k=='slide-transition-timing--fast') === 'slide-transition-timing--fast') {
+				timing = 500;
+			}
+			if (magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[2] === 'slide-transition-timing--fast') {
+			}
+			doAutoAdvanceTransition = true;
+			setTimeout(() => {
+				window.location.hash = `#${stepToEvaluateForAppTransition + 1}`;
+			}, timing);
+			
 		}
-		if (magickFlowConfig.metaData[stepToEvaluateForAppTransition].data[2] === 'slide-transition-timing--fast') {
-			timing = 500;
-		}
-		doAutoAdvanceTransition = true;
-		setTimeout(() => {
-			window.location.hash = `#${stepToEvaluateForAppTransition + 1}`;
-		}, timing);
 	}
-
 
 
 
