@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="1960px" viewBox="0 0 1280 1960" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>review-journey-analytics___drawer-from-left</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,85 C0,38.0557963 38.0557963,0 85,0 C131.944204,0 170,38.0557963 170,85 C170,131.944204 131.944204,170 85,170 C38.0557963,170 0,131.944204 0,85 Z M147.995327,85 C147.995327,50.2104677 119.792072,22.0079795 85.0015931,22.0079795 C50.2111145,22.0079795 22.0078592,50.2104677 22.0078592,85 C22.0078592,119.789532 50.2111145,147.992021 85.0015931,147.992021 C119.792072,147.992021 147.995327,119.789532 147.995327,85 Z" id="path-1"></path>
+        <path d="M0,85 C0,38.0557963 38.0557963,0 85,0 C131.944204,0 170,38.0557963 170,85 C170,131.944204 131.944204,170 85,170 C38.0557963,170 0,131.944204 0,85 Z M147.995327,85 C147.995327,50.2104677 119.792072,22.0079795 85.0015931,22.0079795 C50.2111145,22.0079795 22.0078592,50.2104677 22.0078592,85 C22.0078592,119.789532 50.2111145,147.992021 85.0015931,147.992021 C119.792072,147.992021 147.995327,119.789532 147.995327,85 Z" id="path-3"></path>
+        <path d="M4,0 L594,0 C596.209139,-4.05812251e-16 598,1.790861 598,4 L598,359 C598,361.209139 596.209139,363 594,363 L4,363 C1.790861,363 2.705415e-16,361.209139 0,359 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-5"></path>
+        <path d="M4,0 L594,0 C596.209139,-4.05812251e-16 598,1.790861 598,4 L598,359 C598,361.209139 596.209139,363 594,363 L4,363 C1.790861,363 2.705415e-16,361.209139 0,359 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-7"></path>
+    </defs>
+    <g id="review-journey-analytics___drawer-from-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5" transform="translate(14.000000, 132.000000)">
+            <rect id="Rectangle-27" stroke="#DDDBDA" fill="#FFFFFF" x="0.5" y="0.5" width="1252" height="2071"></rect>
+            <rect id="Rectangle" stroke="#DDDBDA" fill="#FAFAF9" x="0.5" y="134.5" width="1252" height="1739"></rect>
+            <g id="Group-4" transform="translate(25.000000, 22.000000)">
+                <rect id="Active-2" fill="#0070D2" x="0" y="110" width="78" height="2"></rect>
+                <text id="CONTENT" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                    <tspan x="110" y="96">CONTENT</tspan>
+                </text>
+                <text id="OVERVIEW" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                    <tspan x="8" y="96">OVERVIEW</tspan>
+                </text>
+                <g id="source-selector" transform="translate(0.000000, 37.000000)">
+                    <g id="picklist" transform="translate(182.000000, 0.000000)">
+                        <rect id="bkgd" stroke="#DDDBDA" fill="#FFFFFF" x="0.5" y="0.5" width="267" height="28" rx="4"></rect>
+                        <path d="M246.342743,11 L255.671277,11 C255.934795,11 256.119257,11.325 255.908443,11.55 L251.349583,16.85 C251.191473,17.05 250.848899,17.05 250.690789,16.85 L246.079225,11.55 C245.894763,11.325 246.052874,11 246.342743,11" id="down" fill="#061C3F"></path>
+                        <text id="Ticketmaster-Website" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="11" y="18">Ticketmaster Website - Master View</tspan>
+                        </text>
+                    </g>
+                    <text id="Google-Analytics-360" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#706E6B">
+                        <tspan x="0" y="18">Google Analytics 360 View:</tspan>
+                    </text>
+                </g>
+                <g id="date-range" transform="translate(957.000000, 37.000000)">
+                    <path d="M0.5,4.0042577 L0.5,27.9957423 C0.5,29.9336537 2.0647341,31.5 3.99755573,31.5 L195.002444,31.5 C196.939375,31.5 198.5,29.9344285 198.5,27.9957423 L198.5,4.0042577 C198.5,2.06634629 196.935266,0.5 195.002444,0.5 L3.99755573,0.5 C2.06062476,0.5 0.5,2.06557147 0.5,4.0042577 Z" id="Rectangle-2" stroke="#DDDBDA" fill="#FFFFFF"></path>
+                    <g id="event" transform="translate(177.000000, 10.000000)" fill="#706E6B" fill-rule="nonzero">
+                        <path d="M10.6071429,4.4 L0.392857143,4.4 C0.176785714,4.4 0,4.58 0,4.8 L0,10.8 C0,11.46 0.530357143,12 1.17857143,12 L9.82142857,12 C10.4696429,12 11,11.46 11,10.8 L11,4.8 C11,4.58 10.8232143,4.4 10.6071429,4.4 Z M3.53571429,10 C3.53571429,10.22 3.35892857,10.4 3.14285714,10.4 L2.35714286,10.4 C2.14107143,10.4 1.96428571,10.22 1.96428571,10 L1.96428571,9.2 C1.96428571,8.98 2.14107143,8.8 2.35714286,8.8 L3.14285714,8.8 C3.35892857,8.8 3.53571429,8.98 3.53571429,9.2 L3.53571429,10 Z M3.53571429,7.2 C3.53571429,7.42 3.35892857,7.6 3.14285714,7.6 L2.35714286,7.6 C2.14107143,7.6 1.96428571,7.42 1.96428571,7.2 L1.96428571,6.4 C1.96428571,6.18 2.14107143,6 2.35714286,6 L3.14285714,6 C3.35892857,6 3.53571429,6.18 3.53571429,6.4 L3.53571429,7.2 Z M6.28571429,10 C6.28571429,10.22 6.10892857,10.4 5.89285714,10.4 L5.10714286,10.4 C4.89107143,10.4 4.71428571,10.22 4.71428571,10 L4.71428571,9.2 C4.71428571,8.98 4.89107143,8.8 5.10714286,8.8 L5.89285714,8.8 C6.10892857,8.8 6.28571429,8.98 6.28571429,9.2 L6.28571429,10 Z M6.28571429,7.2 C6.28571429,7.42 6.10892857,7.6 5.89285714,7.6 L5.10714286,7.6 C4.89107143,7.6 4.71428571,7.42 4.71428571,7.2 L4.71428571,6.4 C4.71428571,6.18 4.89107143,6 5.10714286,6 L5.89285714,6 C6.10892857,6 6.28571429,6.18 6.28571429,6.4 L6.28571429,7.2 Z M9.03571429,10 C9.03571429,10.22 8.85892857,10.4 8.64285714,10.4 L7.85714286,10.4 C7.64107143,10.4 7.46428571,10.22 7.46428571,10 L7.46428571,9.2 C7.46428571,8.98 7.64107143,8.8 7.85714286,8.8 L8.64285714,8.8 C8.85892857,8.8 9.03571429,8.98 9.03571429,9.2 L9.03571429,10 Z M9.03571429,7.2 C9.03571429,7.42 8.85892857,7.6 8.64285714,7.6 L7.85714286,7.6 C7.64107143,7.6 7.46428571,7.42 7.46428571,7.2 L7.46428571,6.4 C7.46428571,6.18 7.64107143,6 7.85714286,6 L8.64285714,6 C8.85892857,6 9.03571429,6.18 9.03571429,6.4 L9.03571429,7.2 Z M9.82142857,1.2 L8.83928571,1.2 L8.83928571,0.8 C8.83928571,0.36 8.48571429,0 8.05357143,0 C7.62142857,0 7.26785714,0.36 7.26785714,0.8 L7.26785714,1.2 L3.73214286,1.2 L3.73214286,0.8 C3.73214286,0.36 3.37857143,0 2.94642857,0 C2.51428571,0 2.16071429,0.36 2.16071429,0.8 L2.16071429,1.2 L1.17857143,1.2 C0.530357143,1.2 0,1.74 0,2.4 L0,2.8 C0,3.02 0.176785714,3.2 0.392857143,3.2 L10.6071429,3.2 C10.8232143,3.2 11,3.02 11,2.8 L11,2.4 C11,1.74 10.4696429,1.2 9.82142857,1.2 Z" id="Shape"></path>
+                    </g>
+                    <text id="5/17/2018-6/15/2018" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#2B2826">
+                        <tspan x="12" y="20">5/17/2018-6/15/2018</tspan>
+                    </text>
+                </g>
+                <text id="Expand-All-|-Collaps" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal">
+                    <tspan x="787.768" y="58" fill="#0070D2">Expand All</tspan>
+                    <tspan x="856.732" y="58" fill="#706E6B"> | </tspan>
+                    <tspan x="868.856" y="58" fill="#0070D2">Collapse All</tspan>
+                </text>
+                <g id="Button-Neutral" transform="translate(1162.000000, 37.000000)">
+                    <g>
+                        <rect id="button" stroke="#DDDBDA" fill="#FFFFFF" x="0.5" y="0.5" width="53" height="31" rx="4"></rect>
+                        <text font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                            <tspan x="16.206" y="20">Edit</tspan>
+                        </text>
+                    </g>
+                </g>
+                <text id="Heading-large" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="22" font-weight="normal" fill="#2B2826">
+                    <tspan x="0" y="22">Journey Analytics</tspan>
+                </text>
+                <path d="M1191.44294,6.37252125 L1201.12429,6.37252125 C1201.3774,6.37252125 1201.50395,6.68413598 1201.31412,6.87110482 L1198.52994,9.61331445 C1198.34011,9.80028329 1198.34011,10.0495751 1198.52994,10.2365439 L1199.16271,10.8597734 C1199.35254,11.0467422 1199.60565,11.0467422 1199.79548,10.8597734 L1204.85763,5.81161473 C1205.04746,5.62464589 1205.04746,5.37535411 1204.85763,5.18838527 L1199.79548,0.140226629 C1199.60565,-0.0467422096 1199.35254,-0.0467422096 1199.16271,0.140226629 L1198.52994,0.763456091 C1198.40339,0.950424929 1198.40339,1.19971671 1198.52994,1.38668555 L1201.3774,4.12889518 C1201.50395,4.31586402 1201.44068,4.62747875 1201.12429,4.62747875 L1191.44294,4.62747875 C1191.18983,4.62747875 1191,4.81444759 1191,5.06373938 L1191,5.87393768 C1191,6.12322946 1191.18983,6.37252125 1191.44294,6.37252125 L1191.44294,6.37252125 Z" id="Shape" fill="#706E6B" transform="translate(1198.000000, 5.500000) rotate(-180.000000) translate(-1198.000000, -5.500000) "></path>
+            </g>
+            <g id="Journey-Performance" transform="translate(20.000000, 152.000000)">
+                <g id="Ecommerce">
+                    <g>
+                        <path d="M4,0.5 C2.06700338,0.5 0.5,2.06700338 0.5,4 L0.5,265 C0.5,266.932997 2.06700338,268.5 4,268.5 L1209,268.5 C1210.933,268.5 1212.5,266.932997 1212.5,265 L1212.5,4 C1212.5,2.06700338 1210.933,0.5 1209,0.5 L4,0.5 Z" id="Rectangle-17" stroke="#DDDBDA" fill="#FFFFFF"></path>
+                        <g id="Group-13" transform="translate(34.000000, 55.000000)">
+                            <path d="M775.5,6 L775.5,189.542289" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square"></path>
+                            <text id="Total-Attempts" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                                <tspan x="0" y="118">TOTAL ATTEMPTS</tspan>
+                            </text>
+                            <text id="202,823" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal" fill="#2B2826">
+                                <tspan x="274.206" y="120">202,823</tspan>
+                            </text>
+                            <text id="Total-Accepted" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                                <tspan x="0" y="149">TOTAL ACCEPTED</tspan>
+                            </text>
+                            <text id="177,551" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal" fill="#2B2826">
+                                <tspan x="274.206" y="151">177,551</tspan>
+                            </text>
+                            <text id="Current-Population" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                                <tspan x="0" y="180">CURRENT POPULATION</tspan>
+                            </text>
+                            <text id="34,120" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal" fill="#2B2826">
+                                <tspan x="285.186" y="182">34,120</tspan>
+                            </text>
+                            <text id="Acceptance-Rate" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                                <tspan x="0" y="20">ACCEPTANCE RATE</tspan>
+                            </text>
+                            <text id="87.54%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="22" font-weight="normal" fill="#2B2826">
+                                <tspan x="0" y="50">87.54%</tspan>
+                            </text>
+                            <g id="Flat-Gauge" transform="translate(0.000000, 64.000000)">
+                                <g id="Chart">
+                                    <rect id="Rectangle-7" fill="#F3F2F2" x="0" y="0" width="345" height="12" rx="6"></rect>
+                                    <rect id="Rectangle-7" stroke="#FFFFFF" stroke-width="2" fill="#3296ED" x="-1" y="-1" width="298" height="14" rx="7"></rect>
+                                </g>
+                            </g>
+                            <g id="Group-2" transform="translate(395.000000, 13.000000)">
+                                <g id="Donut">
+                                    <g id="Chart">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <use id="Combined-Shape" fill="#E6ECF2" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                        <polygon id="Path" fill="#9D53F2" mask="url(#mask-2)" points="-5.90532333 184.944075 85 85 176.987479 147.483647 134.500541 198.406033"></polygon>
+                                        <polygon id="Rectangle-442-Copy" fill="#C398F5" mask="url(#mask-2)" points="85 85 -10.1564681 190.627864 -16.1856073 183.007888 -26.207436 55.9614915"></polygon>
+                                        <polygon id="Rectangle-442-Copy-2" fill="#26ABA4" mask="url(#mask-2)" points="104.140645 0.967428867 85 85 -31.6578255 54.8489538 12.9997754 -43.4849436"></polygon>
+                                        <polygon id="Rectangle-442" fill="#3296ED" mask="url(#mask-2)" points="85 -14.9122807 187.298246 -14.9122807 195.079353 165.475258 85 85"></polygon>
+                                    </g>
+                                    <g id="Group-4" transform="translate(36.000000, 63.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-weight="normal">
+                                        <text id="25,272" font-size="22" fill="#2B2826">
+                                            <tspan x="12.447" y="22.183908">25,272</tspan>
+                                        </text>
+                                        <text id="TOTAL-REJECTED" font-size="12" fill="#706E6B">
+                                            <tspan x="1.42850575" y="40.6666667">TOTAL REJECTED</tspan>
+                                        </text>
+                                    </g>
+                                </g>
+                                <g id="Legend" transform="translate(191.000000, 1.000000)">
+                                    <circle id="Oval" fill="#3296ED" cx="154" cy="31" r="6"></circle>
+                                    <circle id="Oval" fill="#9D53F2" cx="154" cy="53" r="6"></circle>
+                                    <circle id="Oval" fill="#C398F5" cx="154" cy="75" r="6"></circle>
+                                    <circle id="Oval" fill="#26ABA4" cx="154" cy="97" r="6"></circle>
+                                    <text id="Cause-of-Rejection" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="63.751" y="11">Cause of Rejection</tspan>
+                                    </text>
+                                    <path d="M0.5,18.75 L164.5,18.75" id="Line" stroke="#D8DDE6" stroke-width="1.5" stroke-linecap="square"></path>
+                                    <text id="Falled-to-Meet-Entry" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="11.487" y="35">Falled to Meet Entry Cri…</tspan>
+                                    </text>
+                                    <text id="Currently-Waiting-in" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="13.665" y="57">Currently Waiting in So…</tspan>
+                                    </text>
+                                    <text id="Goal-Already-Met" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="51.901" y="79">Goal Already Met</tspan>
+                                    </text>
+                                    <text id="Contact-Not-Found" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="41.869" y="101">Contact Not Found</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                            <path d="M371.5,6 L371.5,189.542289" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square"></path>
+                            <g id="Group" transform="translate(799.000000, 13.000000)">
+                                <g id="Donut">
+                                    <g id="Chart">
+                                        <mask id="mask-4" fill="white">
+                                            <use xlink:href="#path-3"></use>
+                                        </mask>
+                                        <use id="Combined-Shape" fill="#E6ECF2" fill-rule="nonzero" xlink:href="#path-3"></use>
+                                        <polygon id="Path" fill="#C398F5" mask="url(#mask-4)" points="-5.90532333 184.944075 85 85 176.987479 147.483647 134.500541 198.406033"></polygon>
+                                        <polygon id="Path" fill="#9D53F2" mask="url(#mask-4)" points="99.553797 194.664322 85 85 176.987479 147.483647 134.500541 198.406033"></polygon>
+                                        <polygon id="Rectangle-442-Copy" fill="#26ABA4" mask="url(#mask-4)" points="85 85 -10.1564681 190.627864 -16.1856073 183.007888 -26.207436 55.9614915"></polygon>
+                                        <polygon id="Rectangle-442-Copy-2" fill="#4ED4CD" mask="url(#mask-4)" points="104.140645 0.967428867 85 85 -31.6578255 54.8489538 12.9997754 -43.4849436"></polygon>
+                                        <polygon id="Rectangle-442" fill="#3296ED" mask="url(#mask-4)" points="85 -14.9122807 187.298246 -14.9122807 195.079353 165.475258 85 85"></polygon>
+                                    </g>
+                                    <g id="Group-5" transform="translate(41.000000, 63.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-weight="normal">
+                                        <text id="187,823" font-size="22" fill="#2B2826">
+                                            <tspan x="1.22550575" y="22.183908">187,823</tspan>
+                                        </text>
+                                        <text id="TOTAL-EXIT" font-size="12" fill="#706E6B">
+                                            <tspan x="12.0165057" y="40.6666667">TOTAL EXIT</tspan>
+                                        </text>
+                                    </g>
+                                </g>
+                                <g id="Legend" transform="translate(211.000000, 1.000000)">
+                                    <path d="M0.5,18.75 L144.5,18.75" id="Line" stroke="#D8DDE6" stroke-width="1.5" stroke-linecap="square"></path>
+                                    <circle id="Oval" fill="#3296ED" cx="135" cy="31" r="6"></circle>
+                                    <circle id="Oval" fill="#9D53F2" cx="135" cy="53" r="6"></circle>
+                                    <circle id="Oval" fill="#C398F5" cx="135" cy="75" r="6"></circle>
+                                    <circle id="Oval" fill="#26ABA4" cx="135" cy="97" r="6"></circle>
+                                    <text id="Cause-of-Exit" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="72.967" y="11">Cause of Exit</tspan>
+                                    </text>
+                                    <text id="Completed-Journey" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="20.438" y="35">Completed Journey</tspan>
+                                    </text>
+                                    <text id="Goal-Met" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="74.107" y="57">Goal Met</tspan>
+                                    </text>
+                                    <text id="Exit-Criteria-Met" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="39.039" y="79">Exit Criteria Met</tspan>
+                                    </text>
+                                    <text id="Activity-Error" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="56.331" y="101">Activity Error</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#4ED4CD" cx="135" cy="119" r="6"></circle>
+                                    <text id="Contact-Not-Found" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" fill="#2B2826">
+                                        <tspan x="22.869" y="123">Contact Not Found</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                        <text id="Journey-Performance" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                            <tspan x="36" y="33">Journey Performance</tspan>
+                        </text>
+                        <path d="M27.8977853,26.3219761 L22.3100511,31.9642249 C22.1465077,32.1277683 21.8739353,32.1277683 21.7103918,31.9642249 L16.1226576,26.3219761 C15.9591141,26.1584327 15.9591141,25.8858603 16.1226576,25.7223169 L16.7223169,25.1226576 C16.8858603,24.9591141 17.1584327,24.9591141 17.3219761,25.1226576 L21.7103918,29.5655877 C21.8739353,29.7291312 22.1465077,29.7291312 22.3100511,29.5655877 L26.6984668,25.1499148 C26.8620102,24.9863714 27.1345826,24.9863714 27.2981261,25.1499148 L27.8977853,25.7495741 C28.0340716,25.9131175 28.0340716,26.1584327 27.8977853,26.3219761 Z" id="Shape" fill="#706E6B" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+            <g id="Top-Content-Block" transform="translate(634.000000, 437.000000)">
+                <rect id="Rectangle-17" stroke="#DDDBDA" fill="#FFFFFF" x="0.5" y="0.5" width="597" height="344" rx="4"></rect>
+                <text id="powered-by-Google-An" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <tspan x="377.592" y="24" fill="#706E6B">powered by </tspan>
+                    <tspan x="446.4" y="24" fill="#0072D6">Google Analytics 360</tspan>
+                </text>
+                <path d="M581.675,13 L576.9,13 C576.7,13 576.5,13.125 576.5,13.325 L576.5,14.075 C576.5,14.275 576.675,14.5 576.9,14.5 L578.875,14.5 C579.1,14.5 579.225,14.75 579.05,14.9 L574.8,19.15 C574.65,19.3 574.65,19.525 574.8,19.675 L575.325,20.2 C575.475,20.35 575.7,20.35 575.85,20.2 L580.1,15.95 C580.25,15.8 580.5,15.9 580.5,16.125 L580.5,18.1 C580.5,18.3 580.7,18.525 580.9,18.525 L581.625,18.525 C581.825,18.525 582,18.3 582,18.1 L582,13.35 C582,13.125 581.875,13 581.675,13 L581.675,13 Z M578.575,18.875 L577.725,19.75 C577.575,19.9 577.5,20.075 577.5,20.275 L577.5,23.125 C577.5,23.325 577.325,23.5 577.125,23.5 L571.875,23.5 C571.675,23.5 571.5,23.325 571.5,23.125 L571.5,17.875 C571.5,17.675 571.675,17.5 571.875,17.5 L574.75,17.5 C574.95,17.5 575.15,17.425 575.275,17.275 L576.125,16.425 C576.275,16.275 576.175,16 575.95,16 L571,16 C570.45,16 570,16.45 570,17 L570,24 C570,24.55 570.45,25 571,25 L578,25 C578.55,25 579,24.55 579,24 L579,19.05 C579,18.825 578.725,18.725 578.575,18.875 Z" id="Shape" fill="#706E6B" fill-rule="nonzero"></path>
+                <text id="Top-Content-Blocks" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                    <tspan x="16" y="32">Top Content Blocks</tspan>
+                </text>
+                <g id="List" transform="translate(16.000000, 129.000000)">
+                    <g id="row-5" transform="translate(0.000000, 153.000000)">
+                        <polygon id="Rectangle-2" fill="#F3F2F2" points="0 0 566 0 566 30 0 30"></polygon>
+                        <text id="Profile" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                            <tspan x="28.6805556" y="19">Profile</tspan>
+                        </text>
+                        <text id="22.78%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="217.025306" y="19">22.78%</tspan>
+                        </text>
+                        <text id="14.91%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="321.674611" y="19">14.91%</tspan>
+                        </text>
+                        <text id="3.12%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="500.685583" y="19">3.12%</tspan>
+                        </text>
+                        <text id="5." font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="8.93780556" y="19">5.</tspan>
+                        </text>
+                    </g>
+                    <g id="row-4" transform="translate(8.000000, 130.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                        <text id="Recommended-Block" fill="#0070D2">
+                            <tspan x="20.4753199" y="12">Recommended Block</tspan>
+                        </text>
+                        <text id="23.67%" fill="#2B2826">
+                            <tspan x="208.698669" y="12">23.67%</tspan>
+                        </text>
+                        <text id="15.68%" fill="#2B2826">
+                            <tspan x="313.289163" y="12">15.68%</tspan>
+                        </text>
+                        <text id="4.17%" fill="#2B2826">
+                            <tspan x="492.196" y="12">4.17%</tspan>
+                        </text>
+                        <text id="4." fill="#2B2826">
+                            <tspan x="0.73742596" y="12">4.</tspan>
+                        </text>
+                    </g>
+                    <g id="row-3" transform="translate(0.000000, 93.000000)">
+                        <polygon id="Rectangle-2" fill="#F3F2F2" points="0 0 566 0 566 30 0 30"></polygon>
+                        <text id="VIP-Splash" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                            <tspan x="28.6805556" y="19">VIP Splash</tspan>
+                        </text>
+                        <text id="30.96%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="217.025306" y="19">30.96%</tspan>
+                        </text>
+                        <text id="20.26%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="321.674611" y="19">20.26%</tspan>
+                        </text>
+                        <text id="4.88%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="500.685583" y="19">4.88%</tspan>
+                        </text>
+                        <text id="3." font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="8.93780556" y="19">3.</tspan>
+                        </text>
+                    </g>
+                    <g id="row-2" transform="translate(8.000000, 70.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                        <text id="Music-Package-Carous" fill="#0070D2">
+                            <tspan x="20.4753199" y="12">Music Package Carousel</tspan>
+                        </text>
+                        <text id="39.72%" fill="#2B2826">
+                            <tspan x="208.698669" y="12">39.72%</tspan>
+                        </text>
+                        <text id="26.28%" fill="#2B2826">
+                            <tspan x="313.289163" y="12">26.28%</tspan>
+                        </text>
+                        <text id="5.67%" fill="#2B2826">
+                            <tspan x="492.196" y="12">5.67%</tspan>
+                        </text>
+                        <text id="2." fill="#2B2826">
+                            <tspan x="0.73742596" y="12">2.</tspan>
+                        </text>
+                    </g>
+                    <g id="row-1" transform="translate(0.000000, 33.000000)">
+                        <polygon id="Rectangle-2" fill="#F3F2F2" points="0 0 566 0 566 30 0 30"></polygon>
+                        <text id="Homepage-Carousel" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                            <tspan x="28.6805556" y="19">Homepage Carousel</tspan>
+                        </text>
+                        <text id="1." font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="8.93780556" y="19">1.</tspan>
+                        </text>
+                        <text id="45.32%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="217.025306" y="19">45.32%</tspan>
+                        </text>
+                        <text id="36.71%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="321.674611" y="19">36.71%</tspan>
+                        </text>
+                        <text id="6.45%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="500.685583" y="19">6.45%</tspan>
+                        </text>
+                    </g>
+                    <g id="header">
+                        <path d="M0,1.5 L565.5,1.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <path d="M0,32.5 L565.5,32.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <rect id="Rectangle-10" fill="#00A1E0" x="410" y="1" width="156" height="32"></rect>
+                        <rect id="Rectangle-10" stroke="#00A1E0" x="409.5" y="1.5" width="156" height="182"></rect>
+                        <path d="M549.099653,14.7900153 L549.099653,21.0808966" id="Line-2" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                        <text id="CONTENT-BLOCK" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="28.6793761" y="22">CONTENT BLOCK</tspan>
+                        </text>
+                        <text id="OPEN-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="199.170648" y="22">OPEN RATE</tspan>
+                        </text>
+                        <text id="CLICK-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="302.879362" y="22">CLICK RATE</tspan>
+                        </text>
+                        <text id="CONVERSION-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#FFFFFF">
+                            <tspan x="429.024" y="22">CONVERSION RATE</tspan>
+                        </text>
+                        <polyline id="Path-2" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="546.522246 19.1936322 549.099653 21.7099847 551.677061 19.1936322"></polyline>
+                    </g>
+                </g>
+                <text id="38.81%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="24" font-weight="normal" fill="#2B2826">
+                    <tspan x="19" y="105">38.81%</tspan>
+                </text>
+                <text id="OPEN-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                    <tspan x="19" y="73">OPEN RATE</tspan>
+                </text>
+                <text id="21.42%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="24" font-weight="normal" fill="#2B2826">
+                    <tspan x="190" y="105">21.42%</tspan>
+                </text>
+                <text id="CLICK-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                    <tspan x="190" y="73">CLICK RATE</tspan>
+                </text>
+                <text id="5.41%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="24" font-weight="normal" fill="#2B2826">
+                    <tspan x="361" y="105">5.41%</tspan>
+                </text>
+                <text id="CONVERSION-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                    <tspan x="361" y="73">CONVERSION RATE</tspan>
+                </text>
+            </g>
+            <g id="Top-Active-Pages" transform="translate(20.000000, 437.000000)">
+                <rect id="Rectangle-17" stroke="#DDDBDA" fill="#FFFFFF" x="0.5" y="0.5" width="597" height="344" rx="4"></rect>
+                <text id="powered-by-Google-An" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <tspan x="377.592" y="24" fill="#706E6B">powered by </tspan>
+                    <tspan x="446.4" y="24" fill="#0072D6">Google Analytics 360</tspan>
+                </text>
+                <path d="M581.675,13 L576.9,13 C576.7,13 576.5,13.125 576.5,13.325 L576.5,14.075 C576.5,14.275 576.675,14.5 576.9,14.5 L578.875,14.5 C579.1,14.5 579.225,14.75 579.05,14.9 L574.8,19.15 C574.65,19.3 574.65,19.525 574.8,19.675 L575.325,20.2 C575.475,20.35 575.7,20.35 575.85,20.2 L580.1,15.95 C580.25,15.8 580.5,15.9 580.5,16.125 L580.5,18.1 C580.5,18.3 580.7,18.525 580.9,18.525 L581.625,18.525 C581.825,18.525 582,18.3 582,18.1 L582,13.35 C582,13.125 581.875,13 581.675,13 L581.675,13 Z M578.575,18.875 L577.725,19.75 C577.575,19.9 577.5,20.075 577.5,20.275 L577.5,23.125 C577.5,23.325 577.325,23.5 577.125,23.5 L571.875,23.5 C571.675,23.5 571.5,23.325 571.5,23.125 L571.5,17.875 C571.5,17.675 571.675,17.5 571.875,17.5 L574.75,17.5 C574.95,17.5 575.15,17.425 575.275,17.275 L576.125,16.425 C576.275,16.275 576.175,16 575.95,16 L571,16 C570.45,16 570,16.45 570,17 L570,24 C570,24.55 570.45,25 571,25 L578,25 C578.55,25 579,24.55 579,24 L579,19.05 C579,18.825 578.725,18.725 578.575,18.875 Z" id="Shape" fill="#706E6B" fill-rule="nonzero"></path>
+                <text font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                    <tspan x="16" y="32">Top Active Pages</tspan>
+                </text>
+                <g id="List" transform="translate(16.000000, 129.000000)">
+                    <g id="row-5" transform="translate(0.000000, 153.000000)">
+                        <polygon id="Rectangle-2" fill="#F3F2F2" points="0 0 566 0 566 30 0 30"></polygon>
+                        <text id="Sports" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                            <tspan x="28.7291667" y="19">Sports</tspan>
+                        </text>
+                        <text id="2.26%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="499.196" y="19">2.26%</tspan>
+                        </text>
+                        <text id="498,901" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="190.054" y="19">498,901</tspan>
+                        </text>
+                        <text id="00:01:47" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="352.750125" y="19">00:01:47</tspan>
+                        </text>
+                        <text id="5." font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="8.97079167" y="19">5.</tspan>
+                        </text>
+                    </g>
+                    <g id="row-4" transform="translate(8.000000, 130.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                        <text id="Deals" fill="#0070D2">
+                            <tspan x="20.5035971" y="12">Deals</tspan>
+                        </text>
+                        <text id="812,123" fill="#2B2826">
+                            <tspan x="182.012633" y="12">812,123</tspan>
+                        </text>
+                        <text id="2.38%" fill="#2B2826">
+                            <tspan x="490.196" y="12">2.38%</tspan>
+                        </text>
+                        <text id="00:01:46" fill="#2B2826">
+                            <tspan x="344.215165" y="12">00:01:46</tspan>
+                        </text>
+                        <text id="4." fill="#2B2826">
+                            <tspan x="0.752978417" y="12">4.</tspan>
+                        </text>
+                    </g>
+                    <g id="row-3" transform="translate(0.000000, 93.000000)">
+                        <polygon id="Rectangle-2" fill="#F3F2F2" points="0 0 566 0 566 30 0 30"></polygon>
+                        <text id="Music-Package" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                            <tspan x="28.7291667" y="19">Music Package</tspan>
+                        </text>
+                        <text id="827,423" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="190.054" y="19">827,423</tspan>
+                        </text>
+                        <text id="5.45%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="499.196" y="19">5.45%</tspan>
+                        </text>
+                        <text id="00:02:29" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="352.750125" y="19">00:02:29</tspan>
+                        </text>
+                        <text id="3." font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="8.97079167" y="19">3.</tspan>
+                        </text>
+                    </g>
+                    <g id="row-2" transform="translate(8.000000, 70.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                        <text id="VIP-Packages" fill="#0070D2">
+                            <tspan x="20.5035971" y="12">VIP Packages</tspan>
+                        </text>
+                        <text id="934,135" fill="#2B2826">
+                            <tspan x="182.012633" y="12">934,135</tspan>
+                        </text>
+                        <text id="3.98%" fill="#2B2826">
+                            <tspan x="491.196" y="12">3.98%</tspan>
+                        </text>
+                        <text id="00:06:58" fill="#2B2826">
+                            <tspan x="344.215165" y="12">00:06:58</tspan>
+                        </text>
+                        <text id="2." fill="#2B2826">
+                            <tspan x="0.752978417" y="12">2.</tspan>
+                        </text>
+                    </g>
+                    <g id="row-1" transform="translate(0.000000, 33.000000)">
+                        <polygon id="Rectangle-2" fill="#F3F2F2" points="0 0 566 0 566 30 0 30"></polygon>
+                        <text id="Music" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                            <tspan x="28.7291667" y="19">Music</tspan>
+                        </text>
+                        <text id="1,141,231" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="179.458" y="19">1,141,231</tspan>
+                        </text>
+                        <text id="1." font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="8.97079167" y="19">1.</tspan>
+                        </text>
+                        <text id="5.32%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="499.196" y="19">5.32%</tspan>
+                        </text>
+                        <text id="00:00:48" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                            <tspan x="352.750125" y="19">00:00:48</tspan>
+                        </text>
+                    </g>
+                    <g id="header">
+                        <path d="M0,1.5 L565.5,1.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <path d="M0,32.5 L565.5,32.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <rect id="Rectangle-10" fill="#00A1E0" x="149.744792" y="1" width="114" height="31"></rect>
+                        <rect id="Rectangle-10" stroke="#00A1E0" x="149.5" y="1.5" width="114" height="182"></rect>
+                        <path d="M247.747396,14.7900153 L247.747396,21.0808966" id="Line-2" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                        <text id="ACTIVE-PAGES" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="28.7291667" y="22">ACTIVE PAGES</tspan>
+                        </text>
+                        <text id="PAGEVIEWS" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#FFFFFF">
+                            <tspan x="168.648875" y="22">PAGEVIEWS</tspan>
+                        </text>
+                        <text id="CONVERSION-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="428.024" y="22">CONVERSION RATE</tspan>
+                        </text>
+                        <text id="AVG.-TIME-ON-PAGE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="286.384083" y="22">AVG. TIME ON PAGE</tspan>
+                        </text>
+                        <polyline id="Path-2" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="245.165513 19.1936322 247.747396 21.7099847 250.329278 19.1936322"></polyline>
+                    </g>
+                </g>
+                <text id="00:02:32" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="22" font-weight="normal" fill="#2B2826">
+                    <tspan x="190" y="103">00:02:32</tspan>
+                </text>
+                <text id="AVG.-TIME-ON-PAGE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                    <tspan x="190" y="73">AVG. TIME ON PAGE</tspan>
+                </text>
+                <text id="4.41%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="22" font-weight="normal" fill="#2B2826">
+                    <tspan x="361" y="103">4.41%</tspan>
+                </text>
+                <text id="CONVERSION-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                    <tspan x="361" y="73">CONVERSION RATE</tspan>
+                </text>
+                <text id="5,760,195" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="22" font-weight="normal" fill="#2B2826">
+                    <tspan x="19" y="103">5,760,195</tspan>
+                </text>
+                <text id="PAGEVIEWS" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                    <tspan x="19" y="73">PAGEVIEWS</tspan>
+                </text>
+            </g>
+            <g id="SFMC-Email-Metrics" transform="translate(20.000000, 798.000000)">
+                <g id="SFMC-DELIVERY">
+                    <rect id="Rectangle-17" stroke="#DDDBDA" fill="#FFFFFF" x="0.5" y="0.5" width="1212" height="217" rx="4"></rect>
+                    <text id="Email-Performance" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                        <tspan x="36" y="32">Email Performance</tspan>
+                    </text>
+                    <path d="M27.8977853,25.3219761 L22.3100511,30.9642249 C22.1465077,31.1277683 21.8739353,31.1277683 21.7103918,30.9642249 L16.1226576,25.3219761 C15.9591141,25.1584327 15.9591141,24.8858603 16.1226576,24.7223169 L16.7223169,24.1226576 C16.8858603,23.9591141 17.1584327,23.9591141 17.3219761,24.1226576 L21.7103918,28.5655877 C21.8739353,28.7291312 22.1465077,28.7291312 22.3100511,28.5655877 L26.6984668,24.1499148 C26.8620102,23.9863714 27.1345826,23.9863714 27.2981261,24.1499148 L27.8977853,24.7495741 C28.0340716,24.9131175 28.0340716,25.1584327 27.8977853,25.3219761 Z" id="Shape" fill="#706E6B" fill-rule="nonzero"></path>
+                    <path d="M303,49 L303,199" id="Line-2" stroke="#DDDBDA" stroke-linecap="square"></path>
+                    <path d="M607,49 L607,199" id="Line-2" stroke="#DDDBDA" stroke-linecap="square"></path>
+                    <path d="M911,49 L911,199" id="Line-2" stroke="#DDDBDA" stroke-linecap="square"></path>
+                    <g id="Flat-Gauge" transform="translate(24.000000, 81.000000)"></g>
+                    <text id="2,497,709" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                        <tspan x="167" y="103">2,497,709</tspan>
+                    </text>
+                    <text id="2,472,732" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                        <tspan x="167" y="176">2,472,732</tspan>
+                    </text>
+                    <text id="TOTAL-SENT" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                        <tspan x="167" y="76">TOTAL SENT</tspan>
+                    </text>
+                    <text id="DELIVERED" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                        <tspan x="167" y="149">DELIVERED</tspan>
+                    </text>
+                    <g id="Goal-Tracker" transform="translate(30.000000, 53.000000)">
+                        <text id="DELIVERY-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" line-spacing="20" fill="#706E6B">
+                            <tspan x="14.3505" y="11">DELIVERY RATE</tspan>
+                        </text>
+                        <text id="99.02%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal" line-spacing="40" fill="#2B2826">
+                            <tspan x="21.157" y="81">99.02%</tspan>
+                        </text>
+                        <g id="Polar-Gauge" transform="translate(0.000000, 29.000000)" stroke-width="9">
+                            <circle id="Oval-3" stroke="#E6ECF2" cx="54" cy="54" r="54"></circle>
+                            <path d="M54,108 C83.8233765,108 108,83.8233765 108,54 C108,24.1766235 83.8233765,0 54,0 C24.1766235,0 0,24.1766235 0,54 C0,79.3232307 17.4309175,100.575252 40.9489337,106.412246" id="Oval-3" stroke="#3296ED" stroke-linecap="round" transform="translate(54.000000, 54.000000) scale(1, -1) translate(-54.000000, -54.000000) "></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="SFMC-UNSUBS" transform="translate(334.000000, 53.000000)">
+                    <text id="619,432" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                        <tspan x="137" y="50">619,432</tspan>
+                    </text>
+                    <text id="486,476" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                        <tspan x="137" y="123">486,476</tspan>
+                    </text>
+                    <text id="OPENS" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                        <tspan x="137" y="23">OPENS</tspan>
+                    </text>
+                    <text id="UNIQUE-OPENS" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                        <tspan x="137" y="96">UNIQUE OPENS</tspan>
+                    </text>
+                    <g id="Goal-Tracker">
+                        <g id="Goal">
+                            <text id="OPEN-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" line-spacing="20" fill="#706E6B">
+                                <tspan x="24.223" y="11">OPEN RATE</tspan>
+                            </text>
+                            <text id="24.81%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal" line-spacing="40" fill="#2B2826">
+                                <tspan x="22.157" y="81">24.81%</tspan>
+                            </text>
+                            <g id="Polar-Gauge" transform="translate(0.000000, 29.000000)" stroke-width="9">
+                                <circle id="Oval-3" stroke="#E6ECF2" cx="54" cy="54" r="54"></circle>
+                                <path d="M54,0 C84.7724254,1.39524755e-14 107.940218,27.3552308 107.509091,47.6181818" id="Oval-2" stroke="#9D53F2" stroke-linecap="round"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="SFMC-OPENS" transform="translate(638.000000, 53.000000)">
+                    <text id="104,654" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                        <tspan x="137" y="50">104,654</tspan>
+                    </text>
+                    <text id="84,512" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                        <tspan x="137" y="123">84,512</tspan>
+                    </text>
+                    <text id="CLICKS" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                        <tspan x="137" y="23">CLICKS </tspan>
+                    </text>
+                    <text id="UNIQUE-CLICKS" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                        <tspan x="137" y="96">UNIQUE CLICKS </tspan>
+                    </text>
+                    <g id="Goal-Tracker">
+                        <g id="Goal">
+                            <text id="CLICK-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" line-spacing="20" fill="#706E6B">
+                                <tspan x="23.794" y="11">CLICK RATE</tspan>
+                            </text>
+                            <text id="4.19%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal" line-spacing="40" fill="#2B2826">
+                                <tspan x="24.647" y="81">4.19%</tspan>
+                            </text>
+                            <g id="Polar-Gauge" transform="translate(0.000000, 29.000000)" stroke-width="9">
+                                <circle id="Oval-3" stroke="#E6ECF2" cx="54" cy="54" r="54"></circle>
+                                <path d="M53.9012803,0.145738636 C58.0736498,0.145738636 62.1354006,0.619127176 66.035704,1.51510016" id="Oval-2" stroke="#26ABA4" stroke-linecap="round"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="SFMC-OPENS" transform="translate(942.000000, 53.000000)">
+                    <text id="2,997" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                        <tspan x="136" y="50">2,997</tspan>
+                    </text>
+                    <text id="1,822" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                        <tspan x="136" y="123">1,822</tspan>
+                    </text>
+                    <text id="UNSUBSCRIBES" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                        <tspan x="136" y="23">UNSUBSCRIBES</tspan>
+                    </text>
+                    <text id="UNIQUE-UNSUBSCRIBES" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                        <tspan x="136" y="81">UNIQUE</tspan>
+                        <tspan x="136" y="96">UNSUBSCRIBES </tspan>
+                    </text>
+                    <g id="Goal-Tracker">
+                        <g id="Goal">
+                            <text id="UNSUBSCRIBE-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" line-spacing="20" fill="#706E6B">
+                                <tspan x="1.2335" y="11">UNSUBSCRIBE RATE</tspan>
+                            </text>
+                            <text id="0.12%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal" line-spacing="40" fill="#2B2826">
+                                <tspan x="26.647" y="81">0.12%</tspan>
+                            </text>
+                            <g id="Polar-Gauge" transform="translate(0.000000, 29.000000)" stroke-width="9">
+                                <circle id="Oval-3" stroke="#E6ECF2" cx="54" cy="54" r="54"></circle>
+                                <path d="M53.9012803,0.145738636 C54.7865685,0.145738636 55.6668767,0.167050507 56.5417193,0.209188954" id="Oval-2" stroke="#F7A452" stroke-linecap="round"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g id="Ecommerce" transform="translate(634.000000, 1032.000000)">
+                <g id="Rectangle-17-+-Group-13-+-Chart-ConversionRate-+-Bottom-border-+-Bottom-border-+-Ecommerce-+-Shape-Mask">
+                    <g>
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <use id="Mask" fill="#FFFFFF" xlink:href="#path-5"></use>
+                        <path d="M4,0.5 C2.06700338,0.5 0.5,2.06700338 0.5,4 L0.5,359 C0.5,360.932997 2.06700338,362.5 4,362.5 L594,362.5 C595.932997,362.5 597.5,360.932997 597.5,359 L597.5,4 C597.5,2.06700338 595.932997,0.5 594,0.5 L4,0.5 Z" id="Rectangle-17" stroke="#DDDBDA" fill="#FFFFFF" mask="url(#mask-6)"></path>
+                        <text id="powered-by-Google-An" mask="url(#mask-6)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="379.592" y="24" fill="#706E6B">powered by </tspan>
+                            <tspan x="448.4" y="24" fill="#0072D6">Google Analytics 360</tspan>
+                        </text>
+                        <path d="M583.675,13 L578.9,13 C578.7,13 578.5,13.125 578.5,13.325 L578.5,14.075 C578.5,14.275 578.675,14.5 578.9,14.5 L580.875,14.5 C581.1,14.5 581.225,14.75 581.05,14.9 L576.8,19.15 C576.65,19.3 576.65,19.525 576.8,19.675 L577.325,20.2 C577.475,20.35 577.7,20.35 577.85,20.2 L582.1,15.95 C582.25,15.8 582.5,15.9 582.5,16.125 L582.5,18.1 C582.5,18.3 582.7,18.525 582.9,18.525 L583.625,18.525 C583.825,18.525 584,18.3 584,18.1 L584,13.35 C584,13.125 583.875,13 583.675,13 L583.675,13 Z M580.575,18.875 L579.725,19.75 C579.575,19.9 579.5,20.075 579.5,20.275 L579.5,23.125 C579.5,23.325 579.325,23.5 579.125,23.5 L573.875,23.5 C573.675,23.5 573.5,23.325 573.5,23.125 L573.5,17.875 C573.5,17.675 573.675,17.5 573.875,17.5 L576.75,17.5 C576.95,17.5 577.15,17.425 577.275,17.275 L578.125,16.425 C578.275,16.275 578.175,16 577.95,16 L573,16 C572.45,16 572,16.45 572,17 L572,24 C572,24.55 572.45,25 573,25 L580,25 C580.55,25 581,24.55 581,24 L581,19.05 C581,18.825 580.725,18.725 580.575,18.875 Z" id="Shape" fill="#706E6B" fill-rule="nonzero" mask="url(#mask-6)"></path>
+                        <g id="Group-13" mask="url(#mask-6)">
+                            <g transform="translate(20.000000, 54.000000)">
+                                <path d="M210.5,1 L210.5,82" id="Bottom-border" stroke="#DDDBDA" stroke-width="1" fill="none" stroke-linecap="square"></path>
+                                <path d="M332.5,1 L332.5,82" id="Bottom-border" stroke="#DDDBDA" stroke-width="1" fill="none" stroke-linecap="square"></path>
+                                <path d="M466.5,1 L466.5,82" id="Bottom-border" stroke="#DDDBDA" stroke-width="1" fill="none" stroke-linecap="square"></path>
+                                <text id="AVERAGE-ORDER-VALUE" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                    <tspan x="488" y="29" fill="#706E6B">AVERAGE ORDER VALUE</tspan>
+                                </text>
+                                <text id="$89.42" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal">
+                                    <tspan x="488" y="56" fill="#2B2826">$89.42</tspan>
+                                </text>
+                                <text id="TRANSACTIONS" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                    <tspan x="354" y="29" fill="#706E6B">TRANSACTIONS</tspan>
+                                </text>
+                                <text id="452,178" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal">
+                                    <tspan x="354" y="56" fill="#2B2826">452,178</tspan>
+                                </text>
+                                <text id="REVENUE" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                    <tspan x="232" y="29" fill="#706E6B">REVENUE</tspan>
+                                </text>
+                                <text id="$38,823" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal">
+                                    <tspan x="232" y="56" fill="#2B2826">$38,823</tspan>
+                                </text>
+                                <text id="Ecommerce-Conversion" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                    <tspan x="0" y="29" fill="#706E6B">ECOMMERCE CONVERSION RATE</tspan>
+                                </text>
+                                <text id="12.54%" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal">
+                                    <tspan x="0" y="56" fill="#2B2826">12.54%</tspan>
+                                </text>
+                                <rect id="Rectangle-13" stroke="none" fill="#3296ED" fill-rule="evenodd" x="211" y="79" width="121" height="3"></rect>
+                            </g>
+                        </g>
+                        <g id="Chart-ConversionRate" mask="url(#mask-6)">
+                            <g transform="translate(16.000000, 132.000000)">
+                                <g>
+                                    <g id="Group">
+                                        <g id="Line" transform="translate(0.000000, 34.000000)">
+                                            <text id="Date-(MM/DD)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#888888">
+                                                <tspan x="270.272" y="174">Date (MM/DD)</tspan>
+                                            </text>
+                                            <text id="Revenue" transform="translate(7.500000, 71.500000) rotate(-90.000000) translate(-7.500000, -71.500000) " font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#888888">
+                                                <tspan x="-16.746" y="76">Revenue</tspan>
+                                            </text>
+                                            <g id="GridLines" transform="translate(36.000000, 0.000000)">
+                                                <g id="gridline5" transform="translate(0.328833, 0.000000)">
+                                                    <path d="M28.6711671,7 L523.671167,7" id="ygridlin5" stroke="#CCCCCC" opacity="0.5" stroke-linecap="square"></path>
+                                                    <text id="20k" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#B0B0B0">
+                                                        <tspan x="0.012" y="12">20k</tspan>
+                                                    </text>
+                                                </g>
+                                                <g id="gridline4" transform="translate(28.836449, 34.890909)" opacity="0.25" stroke="#CCCCCC" stroke-linecap="square">
+                                                    <path d="M0.163551041,2.75930945 L495.162967,1.99923" id="ygridlin4"></path>
+                                                </g>
+                                                <g id="gridline3" transform="translate(0.328833, 64.945455)">
+                                                    <path d="M28.6711671,5 L523.671167,5" id="ygridlin3" stroke="#CCCCCC" opacity="0.5" stroke-linecap="square"></path>
+                                                    <text id="10k" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#B0B0B0">
+                                                        <tspan x="0.012" y="12">10k</tspan>
+                                                    </text>
+                                                </g>
+                                                <g id="gridline2" transform="translate(28.836449, 99.836364)" opacity="0.25" stroke="#CCCCCC" stroke-linecap="square">
+                                                    <path d="M0.163551041,1.5 L495.163551,1.5" id="ygridlin2"></path>
+                                                </g>
+                                                <g id="gridline1" transform="translate(11.906910, 128.181818)">
+                                                    <text id="0" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#B0B0B0">
+                                                        <tspan x="0.68" y="12">0</tspan>
+                                                    </text>
+                                                    <path d="M17.0930903,6.5 L512.09309,6.5" id="ygridlin1" stroke="#CCCCCC" opacity="0.5" stroke-linecap="square"></path>
+                                                </g>
+                                            </g>
+                                            <g id="Chart" transform="translate(59.000000, 24.000000)">
+                                                <g id="vCol9" transform="translate(0.000000, 60.000000)">
+                                                    <text id="5/17" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="0.816" y="67">5/17</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="14.5599976" cy="3.28698084" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol8" transform="translate(27.000000, 54.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.35106392" cy="2.58116447" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol7" transform="translate(27.000000, 67.000000)">
+                                                    <text id="5/19" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="8.13742857" y="60">5/19</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="19.1395721" cy="3.11596313" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol6" transform="translate(61.000000, 70.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.92808034" cy="2.58512418" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol5" transform="translate(58.000000, 33.000000)">
+                                                    <text id="5/21" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="11.4588571" y="94">5/21</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="21.7165885" cy="2.96153846" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol4" transform="translate(93.000000, 65.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.50509675" cy="3.21690954" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol3" transform="translate(92.000000, 65.000000)">
+                                                    <text id="5/23" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="11.7802857" y="62">5/23</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="20.293605" cy="3.19764282" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol2" transform="translate(125.000000, 51.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.08211316" cy="2.66166899" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol1" transform="translate(126.000000, 24.000000)">
+                                                    <text id="5/25" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="12.1017143" y="103">5/25</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="18.8706214" cy="2.62391071" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol0" transform="translate(158.000000, 52.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.65912958" cy="2.74745312" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol9" transform="translate(160.000000, 17.000000)">
+                                                    <text id="5/27" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="12.4231429" y="110">5/27</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="17.4476378" cy="3.28698084" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol8" transform="translate(190.000000, 27.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.23614599" cy="2.58116447" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol7" transform="translate(194.000000, 44.000000)">
+                                                    <text id="5/29" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="12.7445714" y="83">5/29</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="16.0246542" cy="3.11596313" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol6" transform="translate(224.000000, 10.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.8131624" cy="2.58512418" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol5" transform="translate(229.000000, 0.000000)">
+                                                    <text id="5/31" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="12.066" y="127">5/31</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="13.6016706" cy="2.96153846" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol4" transform="translate(256.000000, 48.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.39017882" cy="3.21690954" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol3" transform="translate(266.000000, 63.000000)">
+                                                    <text id="6/2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="9.54742857" y="64">6/2</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="10.178687" cy="3.19764282" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol2" transform="translate(289.000000, 42.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.96719523" cy="2.66166899" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol1" transform="translate(300.000000, 34.000000)">
+                                                    <text id="6/4" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="2.86885714" y="93">6/4</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="7.75570344" cy="2.62391071" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol0" transform="translate(322.000000, 59.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.54421164" cy="2.74745312" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol9" transform="translate(338.000000, 60.000000)">
+                                                    <text id="6/6" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="-7.33371429" y="67">6/6</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="3.33271985" cy="3.28698084" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol8" transform="translate(354.000000, 80.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.12122806" cy="2.58116447" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol7" transform="translate(371.000000, 42.000000)">
+                                                    <text id="8/29" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="-13.0122857" y="85">6/8</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="2.90973626" cy="3.11596313" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol6" transform="translate(388.000000, 53.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.69824447" cy="2.58512418" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol5" transform="translate(399.000000, 49.000000)">
+                                                    <text id="6/10" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="-14.0108571" y="78">6/10</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="7.48675268" cy="2.96153846" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol4" transform="translate(419.000000, 32.000000)">
+                                                    <text id="6/12" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="0.310571429" y="95">6/12</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="3.15347827" cy="3.11085757" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol3" transform="translate(436.000000, 57.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.06376909" cy="3.30665337" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol2" transform="translate(453.000000, 58.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.8522773" cy="2.66166899" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol1" transform="translate(453.000000, 24.000000)">
+                                                    <text id="6/14" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="0.632" y="103">6/14</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="19.6407855" cy="2.62391071" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol0" transform="translate(485.000000, 10.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.42999268" cy="2.74745312" r="2.5"></circle>
+                                                </g>
+                                                <g id="line" transform="translate(14.000000, 2.000000)">
+                                                    <polyline fill-opacity="0.2" fill="#3296ED" points="0.152971892 60.439788 5.58732893 58.5403538 16.7453003 54.6403834 33.0151361 69.8900126 49.7855204 71.4392631 65.6030533 34.4541283 82.0266721 67.2625427 98.459163 66.7015501 114.782444 52.356987 130.996998 25.5118988 146.948212 52.1104317 163.597982 19.1364204 180.158297 29.4991028 196.286411 44.6272943 212.476373 11.5804989 229.105505 0.819569687 245.354234 50.8482157 261.662264 65.4685769 277.783878 42.994563 294.162736 34.4357287 310.923069 59.7334063 326.898405 61.2513774 343.522043 80.203016 359.751674 44.1065843 375.905921 54.0074355 391.892314 51.5216429 408.432526 33.9812573 425.11647 59.0728589 440.925962 60.3497945 457.55161 25.6848555 474.623925 12.1647934 474.623925 109.289308 0.0175290765 109.289308"></polyline>
+                                                    <polyline stroke="#3296ED" stroke-width="2" points="0.152971892 60.439788 5.58732893 58.5403538 16.7453003 54.6403834 33.0151361 69.8900126 49.7855204 71.4392631 65.6030533 34.4541283 82.0266721 67.2625427 98.459163 66.7015501 114.782444 52.356987 130.996998 25.5118988 146.948212 52.1104317 163.597982 19.1364204 180.158297 29.4991028 196.286411 44.6272943 212.476373 11.5804989 229.105505 0.819569687 245.354234 50.8482157 261.662264 65.4685769 277.783878 42.994563 294.162736 34.4357287 310.923069 59.7334063 326.898405 61.2513774 343.522043 80.203016 359.751674 44.1065843 375.905921 54.0074355 391.892314 51.5216429 408.432526 33.9812573 425.11647 59.0728589 440.925962 60.3497945 457.55161 25.6848555 473.648565 12.1647934"></polyline>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <path d="M1,53.5 L606.75,53.5" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square" mask="url(#mask-6)"></path>
+                        <path d="M1,135.5 L606.75,135.5" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square" mask="url(#mask-6)"></path>
+                        <text id="Ecommerce" mask="url(#mask-6)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                            <tspan x="36" y="32">Ecommerce</tspan>
+                        </text>
+                        <path d="M27.8977853,25.3219761 L22.3100511,30.9642249 C22.1465077,31.1277683 21.8739353,31.1277683 21.7103918,30.9642249 L16.1226576,25.3219761 C15.9591141,25.1584327 15.9591141,24.8858603 16.1226576,24.7223169 L16.7223169,24.1226576 C16.8858603,23.9591141 17.1584327,23.9591141 17.3219761,24.1226576 L21.7103918,28.5655877 C21.8739353,28.7291312 22.1465077,28.7291312 22.3100511,28.5655877 L26.6984668,24.1499148 C26.8620102,23.9863714 27.1345826,23.9863714 27.2981261,24.1499148 L27.8977853,24.7495741 C28.0340716,24.9131175 28.0340716,25.1584327 27.8977853,25.3219761 Z" id="Shape" fill="#706E6B" fill-rule="nonzero" mask="url(#mask-6)"></path>
+                        <rect id="Rectangle-4" stroke="#DDDBDA" fill="#FFFFFF" mask="url(#mask-6)" x="578.5" y="53.5" width="19" height="82"></rect>
+                        <path d="M584.308469,92 L592.704149,92 C592.941315,92 593.107331,92.2708333 592.917598,92.4583333 L588.814625,96.875 C588.672325,97.0416667 588.364009,97.0416667 588.22171,96.875 L584.071303,92.4583333 C583.905287,92.2708333 584.047586,92 584.308469,92" id="down" fill="#706E6B" mask="url(#mask-6)" transform="translate(588.500000, 94.500000) rotate(-90.000000) translate(-588.500000, -94.500000) "></path>
+                    </g>
+                </g>
+            </g>
+            <g id="Goals" transform="translate(20.000000, 1032.000000)">
+                <g id="Goal-Overview">
+                    <g id="Rectangle-17-+-Group-13-+-Chart-ConversionRate-+-Bottom-border-+-Bottom-border-+-Goals-+-Shape-+-Mask-Mask">
+                        <g>
+                            <mask id="mask-8" fill="white">
+                                <use xlink:href="#path-7"></use>
+                            </mask>
+                            <use id="Mask" fill="#FFFFFF" xlink:href="#path-7"></use>
+                            <path d="M4,0.5 C2.06700338,0.5 0.5,2.06700338 0.5,4 L0.5,359 C0.5,360.932997 2.06700338,362.5 4,362.5 L594,362.5 C595.932997,362.5 597.5,360.932997 597.5,359 L597.5,4 C597.5,2.06700338 595.932997,0.5 594,0.5 L4,0.5 Z" id="Rectangle-17" stroke="#DDDBDA" fill="#FFFFFF" mask="url(#mask-8)"></path>
+                            <text id="powered-by-Google-An" mask="url(#mask-8)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                <tspan x="377.592" y="24" fill="#706E6B">powered by </tspan>
+                                <tspan x="446.4" y="24" fill="#0072D6">Google Analytics 360</tspan>
+                            </text>
+                            <path d="M581.675,13 L576.9,13 C576.7,13 576.5,13.125 576.5,13.325 L576.5,14.075 C576.5,14.275 576.675,14.5 576.9,14.5 L578.875,14.5 C579.1,14.5 579.225,14.75 579.05,14.9 L574.8,19.15 C574.65,19.3 574.65,19.525 574.8,19.675 L575.325,20.2 C575.475,20.35 575.7,20.35 575.85,20.2 L580.1,15.95 C580.25,15.8 580.5,15.9 580.5,16.125 L580.5,18.1 C580.5,18.3 580.7,18.525 580.9,18.525 L581.625,18.525 C581.825,18.525 582,18.3 582,18.1 L582,13.35 C582,13.125 581.875,13 581.675,13 L581.675,13 Z M578.575,18.875 L577.725,19.75 C577.575,19.9 577.5,20.075 577.5,20.275 L577.5,23.125 C577.5,23.325 577.325,23.5 577.125,23.5 L571.875,23.5 C571.675,23.5 571.5,23.325 571.5,23.125 L571.5,17.875 C571.5,17.675 571.675,17.5 571.875,17.5 L574.75,17.5 C574.95,17.5 575.15,17.425 575.275,17.275 L576.125,16.425 C576.275,16.275 576.175,16 575.95,16 L571,16 C570.45,16 570,16.45 570,17 L570,24 C570,24.55 570.45,25 571,25 L578,25 C578.55,25 579,24.55 579,24 L579,19.05 C579,18.825 578.725,18.725 578.575,18.875 Z" id="Shape" fill="#706E6B" fill-rule="nonzero" mask="url(#mask-8)"></path>
+                            <g id="Group-13" mask="url(#mask-8)">
+                                <g transform="translate(1.000000, 54.000000)">
+                                    <path d="M161.5,1 L161.5,81" id="Bottom-border" stroke="#DDDBDA" stroke-width="1" fill="none" stroke-linecap="square"></path>
+                                    <path d="M325.5,1 L325.5,81" id="Bottom-border" stroke="#DDDBDA" stroke-width="1" fill="none" stroke-linecap="square"></path>
+                                    <path d="M515.5,1 L515.5,81" id="Bottom-border" stroke="#DDDBDA" stroke-width="1" fill="none" stroke-linecap="square"></path>
+                                    <path d="M625.5,1 L625.5,81" id="Bottom-border" stroke="#D8DDE6" stroke-width="1" fill="none" stroke-linecap="square"></path>
+                                    <text id="Abandonment-Rate" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                        <tspan x="537" y="30" fill="#706E6B">ABANDONMENT RATE</tspan>
+                                    </text>
+                                    <text id="4.18%" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal">
+                                        <tspan x="537" y="56" fill="#2B2826">4.18%</tspan>
+                                    </text>
+                                    <text id="Goal-COnversion-Rate" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                        <tspan x="347" y="30" fill="#706E6B">GOAL CONVERSION RATE</tspan>
+                                    </text>
+                                    <text id="16.31%" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal">
+                                        <tspan x="347" y="56" fill="#2B2826">16.31%</tspan>
+                                    </text>
+                                    <text id="Goal-Value" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                        <tspan x="183" y="30" fill="#706E6B">GOAL VALUE</tspan>
+                                    </text>
+                                    <text id="$23,912,133" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal">
+                                        <tspan x="183" y="56" fill="#2B2826">$23,912,133</tspan>
+                                    </text>
+                                    <text id="Goal-Completions" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                                        <tspan x="19" y="30" fill="#706E6B">GOAL COMPLETIONS</tspan>
+                                    </text>
+                                    <text id="122,871" stroke="none" fill="none" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal">
+                                        <tspan x="19" y="56" fill="#2B2826">122,871</tspan>
+                                    </text>
+                                    <rect id="Rectangle-13" stroke="none" fill="#3296ED" fill-rule="evenodd" x="0" y="79" width="161" height="3"></rect>
+                                </g>
+                            </g>
+                            <g id="Chart-ConversionRate" mask="url(#mask-8)">
+                                <g transform="translate(16.000000, 142.000000)" id="Group">
+                                    <g>
+                                        <g id="Line" transform="translate(0.000000, 24.000000)">
+                                            <g id="GridLines" transform="translate(42.000000, 0.000000)">
+                                                <g id="gridline5" transform="translate(0.328833, 0.000000)">
+                                                    <path d="M22.6711671,7 L517.671167,7" id="ygridlin5" stroke="#CCCCCC" opacity="0.5" stroke-linecap="square"></path>
+                                                    <text id="2K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#B0B0B0">
+                                                        <tspan x="0.252" y="12">2K</tspan>
+                                                    </text>
+                                                </g>
+                                                <g id="gridline4" transform="translate(22.836449, 35.890909)" opacity="0.25" stroke="#CCCCCC" stroke-linecap="square">
+                                                    <path d="M0.163551041,1.75930945 L495.163435,1.4203654" id="ygridlin4"></path>
+                                                </g>
+                                                <g id="gridline3" transform="translate(0.328833, 64.945455)">
+                                                    <path d="M22.6711671,5 L517.671167,5" id="ygridlin3" stroke="#CCCCCC" opacity="0.5" stroke-linecap="square"></path>
+                                                    <text id="1K" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#B0B0B0">
+                                                        <tspan x="0.252" y="12">1K</tspan>
+                                                    </text>
+                                                </g>
+                                                <g id="gridline2" transform="translate(22.836449, 99.836364)" opacity="0.25" stroke="#CCCCCC" stroke-linecap="square">
+                                                    <path d="M0.163551041,1.85454545 L495.163551,1.85454545" id="ygridlin2"></path>
+                                                </g>
+                                                <g id="gridline1" transform="translate(5.906910, 128.181818)">
+                                                    <text id="0" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#B0B0B0">
+                                                        <tspan x="0.68" y="12">0</tspan>
+                                                    </text>
+                                                    <path d="M17.0930903,7 L512.09309,7" id="ygridlin1" stroke="#CCCCCC" opacity="0.5" stroke-linecap="square"></path>
+                                                </g>
+                                            </g>
+                                            <text id="Date-(MM/DD)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#888888">
+                                                <tspan x="267.272" y="174">Date (MM/DD)</tspan>
+                                            </text>
+                                            <text id="Goal-Completions" transform="translate(7.500000, 71.500000) rotate(-90.000000) translate(-7.500000, -71.500000) " font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#888888">
+                                                <tspan x="-42.78" y="76">Goal Completions</tspan>
+                                            </text>
+                                            <g id="Chart" transform="translate(60.000000, 29.000000)">
+                                                <g id="vCol9" transform="translate(0.000000, 64.000000)">
+                                                    <text id="5/17" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="0.316" y="58">5/17</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="12.5599976" cy="3.28698084" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol8" transform="translate(25.000000, 40.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.34861808" cy="2.58116447" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol7" transform="translate(26.000000, 27.000000)">
+                                                    <text id="5/19" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="8.74457143" y="95">5/19</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="19.1372386" cy="3.11596313" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol6" transform="translate(59.000000, 31.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.92585912" cy="2.58512418" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol5" transform="translate(57.000000, 38.000000)">
+                                                    <text id="5/21" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="12.1731429" y="84">5/21</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="20.7144796" cy="2.96153846" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol4" transform="translate(92.000000, 88.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.50310017" cy="3.21690954" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol3" transform="translate(91.000000, 69.000000)">
+                                                    <text id="5/23" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="12.6017143" y="53">5/23</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="20.2917207" cy="3.19764282" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol2" transform="translate(124.000000, 43.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.08034121" cy="2.66166899" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol1" transform="translate(125.000000, 30.000000)">
+                                                    <text id="5/25" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="13.0302857" y="92">5/25</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="18.8689617" cy="2.62391071" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol0" transform="translate(157.000000, 25.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.65758225" cy="2.74745312" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol9" transform="translate(159.000000, 42.000000)">
+                                                    <text id="5/27" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="13.4588571" y="80">5/27</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="17.4462028" cy="3.28698084" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol8" transform="translate(189.000000, 87.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.23482329" cy="2.58116447" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol7" transform="translate(193.000000, 77.000000)">
+                                                    <text id="5/29" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="13.8874286" y="45">5/29</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="16.0234438" cy="3.11596313" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol6" transform="translate(223.000000, 35.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.81206434" cy="2.58512418" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol5" transform="translate(227.000000, 4.000000)">
+                                                    <text id="5/31" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="14.316" y="118">5/31</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="14.6006849" cy="2.96153846" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol4" transform="translate(255.000000, 34.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.38930538" cy="3.21690954" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol3" transform="translate(265.000000, 26.000000)">
+                                                    <text id="6/2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="10.9045714" y="96">6/2</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="10.1779259" cy="3.19764282" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol2" transform="translate(288.000000, 47.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.96654642" cy="2.66166899" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol1" transform="translate(299.000000, 38.000000)">
+                                                    <text id="6/4" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="4.33314286" y="84">6/4</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="8.75516694" cy="2.62391071" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol0" transform="translate(321.000000, 63.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.54378746" cy="2.74745312" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol9" transform="translate(337.000000, 44.000000)">
+                                                    <text id="6/6" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="-5.76228571" y="78">6/6</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="3.33240798" cy="3.28698084" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol8" transform="translate(353.000000, 84.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.12102851" cy="2.58116447" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol7" transform="translate(370.000000, 33.000000)">
+                                                    <text id="8/29" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="-11.3337143" y="89">6/8</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="2.90964903" cy="3.11596313" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol6" transform="translate(387.000000, 28.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.69826955" cy="2.58512418" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol5" transform="translate(398.000000, 45.000000)">
+                                                    <text id="6/10" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="-12.2251429" y="77">6/10</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="7.48689007" cy="2.96153846" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol4" transform="translate(419.000000, 67.000000)">
+                                                    <text id="6/12" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="1.20342857" y="55">6/12</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="3.15371993" cy="3.11085757" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol3" transform="translate(435.000000, 62.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.06413111" cy="3.30665337" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol2" transform="translate(452.000000, 24.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="2.85275163" cy="2.66166899" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol1" transform="translate(454.000000, 0.000000)">
+                                                    <text id="6/14" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                                        <tspan x="0.632" y="122">6/14</tspan>
+                                                    </text>
+                                                    <circle id="Oval" fill="#3296ED" cx="17.6413722" cy="2.62391071" r="2.5"></circle>
+                                                </g>
+                                                <g id="vCol0" transform="translate(484.000000, 16.000000)" fill="#3296ED">
+                                                    <circle id="Oval" cx="3.42999268" cy="2.74745312" r="2.5"></circle>
+                                                </g>
+                                                <g id="line" transform="translate(12.000000, 3.000000)">
+                                                    <polygon fill-opacity="0.15" fill="#3296ED" points="0.153609358 64.439788 16.8447222 39.988077 33.0902131 27.4637458 49.5365861 30.9243667 65.8764349 38.4541283 82.3379193 88.0459729 98.8694629 70.7015501 114.944578 43.5630467 131.54289 29.5118988 148.064727 24.6804215 164.239119 41.9294929 180.801732 87.6413542 197.074308 77.8789854 213.652722 35.2067908 230.060236 4.81956969 246.026334 34.7870931 262.439979 26.67964 278.941461 46.994563 295.388573 38.4357287 312.21875 63.7334063 328.273999 44.4200341 344.95357 84.203016 360.8863 34.2718954 377.597882 27.9902528 393.950021 45.1413109 410.396958 67.8162941 426.888019 63.0728589 442.834334 24.5673293 459.285221 0.172088344 475.881699 16.7135125 475.881699 103.76567 0.278648462 103.76567"></polygon>
+                                                    <polyline stroke="#3296ED" stroke-width="2" points="0.153609358 64.439788 16.8447222 39.988077 33.0902131 27.4637458 49.5365861 30.9243667 65.8764349 38.4541283 82.3379193 88.0459729 98.8694629 70.7015501 114.944578 43.5630467 131.54289 29.5118988 148.064727 24.6804215 164.239119 41.9294929 180.801732 87.6413542 197.074308 77.8789854 213.652722 35.2067908 230.060236 4.81956969 246.026334 34.7870931 262.439979 26.67964 278.941461 46.994563 295.388573 38.4357287 312.21875 63.7334063 328.273999 44.4200341 344.95357 84.203016 360.8863 34.2718954 377.597882 27.9902528 393.950021 45.1413109 410.396958 67.8162941 426.888019 63.0728589 442.834334 24.5673293 459.285221 0.172088344 475.622357 16.1647934"></polyline>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <path d="M1,53.5 L608.753046,53.5" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square" mask="url(#mask-8)"></path>
+                            <path d="M1,135.5 L608.753046,135.5" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square" mask="url(#mask-8)"></path>
+                            <text id="Goals" mask="url(#mask-8)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                                <tspan x="36" y="32">Goals</tspan>
+                            </text>
+                            <path d="M27.8977853,25.3219761 L22.3100511,30.9642249 C22.1465077,31.1277683 21.8739353,31.1277683 21.7103918,30.9642249 L16.1226576,25.3219761 C15.9591141,25.1584327 15.9591141,24.8858603 16.1226576,24.7223169 L16.7223169,24.1226576 C16.8858603,23.9591141 17.1584327,23.9591141 17.3219761,24.1226576 L21.7103918,28.5655877 C21.8739353,28.7291312 22.1465077,28.7291312 22.3100511,28.5655877 L26.6984668,24.1499148 C26.8620102,23.9863714 27.1345826,23.9863714 27.2981261,24.1499148 L27.8977853,24.7495741 C28.0340716,24.9131175 28.0340716,25.1584327 27.8977853,25.3219761 Z" id="Shape" fill="#706E6B" fill-rule="nonzero" mask="url(#mask-8)"></path>
+                            <path d="M89.4615385,21 C85.8807692,21 83,23.8800834 83,27.46 C83,31.0399167 85.8807692,33.9200001 89.4615385,33.9200001 C93.0423077,33.9200001 95.9230769,31.0399167 95.9230769,27.46 C95.9230769,23.8800834 93.0423077,21 89.4615385,21 Z M89.4615385,24.2569167 C89.9192308,24.2569167 90.2692308,24.6068334 90.2692308,25.0644167 C90.2692308,25.522 89.9192308,25.8719167 89.4615385,25.8719167 C89.0038462,25.8719167 88.6538462,25.522 88.6538462,25.0644167 C88.6538462,24.6068334 89.0038462,24.2569167 89.4615385,24.2569167 L89.4615385,24.2569167 Z M90.8076923,29.9094167 C90.8076923,30.0440001 90.7,30.1516667 90.5384615,30.1516667 L88.3846154,30.1516667 C88.25,30.1516667 88.1153846,30.0709167 88.1153846,29.9094167 L88.1153846,29.3710834 C88.1153846,29.2365 88.2230769,29.075 88.3846154,29.075 C88.5192308,29.075 88.6538462,28.99425 88.6538462,28.83275 L88.6538462,27.7560834 C88.6538462,27.6215 88.5461538,27.46 88.3846154,27.46 C88.25,27.46 88.1153846,27.37925 88.1153846,27.21775 L88.1153846,26.6794167 C88.1153846,26.5448334 88.2230769,26.3833334 88.3846154,26.3833334 L90,26.3833334 C90.1346154,26.3833334 90.2692308,26.5179167 90.2692308,26.6794167 L90.2692308,28.83275 C90.2692308,28.9673334 90.3769231,29.075 90.5384615,29.075 C90.6730769,29.075 90.8076923,29.2095834 90.8076923,29.3710834 L90.8076923,29.9094167 Z" id="Mask" fill="#706E6B" mask="url(#mask-8)"></path>
+                            <path d="M111.5,16.0042577 L111.5,39.9957423 C111.5,41.9338014 113.062519,43.5 114.992273,43.5 L294.007727,43.5 C295.933937,43.5 297.5,41.9301694 297.5,39.9957423 L297.5,16.0042577 C297.5,14.0661986 295.937481,12.5 294.007727,12.5 L114.992273,12.5 C113.066063,12.5 111.5,14.0698306 111.5,16.0042577 Z" id="bkgd" stroke="#DDDBDA" fill="#FFFFFF" mask="url(#mask-8)"></path>
+                            <path d="M275.342743,25 L284.671277,25 C284.934795,25 285.119257,25.325 284.908443,25.55 L280.349583,30.85 C280.191473,31.05 279.848899,31.05 279.690789,30.85 L275.079225,25.55 C274.894763,25.325 275.052874,25 275.342743,25" id="down" fill="#706E6B" mask="url(#mask-8)"></path>
+                            <text id="All-Goals" mask="url(#mask-8)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#2B2826">
+                                <tspan x="128" y="32">All Goals</tspan>
+                            </text>
+                            <rect id="Rectangle-4" stroke="#DDDBDA" fill="#FFFFFF" mask="url(#mask-8)" x="578.5" y="53.5" width="19" height="82"></rect>
+                            <path d="M583.342743,92 L592.671277,92 C592.934795,92 593.119257,92.325 592.908443,92.55 L588.349583,97.85 C588.191473,98.05 587.848899,98.05 587.690789,97.85 L583.079225,92.55 C582.894763,92.325 583.052874,92 583.342743,92" id="down" fill="#706E6B" mask="url(#mask-8)" transform="translate(588.000000, 95.000000) rotate(-90.000000) translate(-588.000000, -95.000000) "></path>
+                        </g>
+                    </g>
+                    <g id="Group-3" transform="translate(128.000000, 20.000000)"></g>
+                </g>
+            </g>
+            <g id="Site-Usage" transform="translate(20.000000, 1411.000000)">
+                <g>
+                    <path d="M4,0.5 C2.06700338,0.5 0.5,2.06700338 0.5,4 L0.5,359 C0.5,360.932997 2.06700338,362.5 4,362.5 L594,362.5 C595.932997,362.5 597.5,360.932997 597.5,359 L597.5,4 C597.5,2.06700338 595.932997,0.5 594,0.5 L4,0.5 Z" id="Rectangle-17" stroke="#DDDBDA" fill="#FFFFFF"></path>
+                    <g id="Group-13" transform="translate(22.000000, 54.000000)">
+                        <path d="M88.5,0 L88.5,81" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <path d="M210.5,1 L210.5,82" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <path d="M341.5,1 L341.5,82" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <path d="M467.5,0 L467.5,81" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <text id="BOUNCE-RATE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="363" y="29">BOUNCE RATE</tspan>
+                        </text>
+                        <text id="45.09%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                            <tspan x="363" y="56">45.09%</tspan>
+                        </text>
+                        <text id="PAGE/SESSION" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="232" y="29">PAGE/SESSION</tspan>
+                        </text>
+                        <text id="3.5" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                            <tspan x="232" y="56">3.5</tspan>
+                        </text>
+                        <text id="SESSIONS" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="110" y="29">SESSIONS</tspan>
+                        </text>
+                        <text id="787,125" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                            <tspan x="110" y="56">787,125</tspan>
+                        </text>
+                        <text id="PAGEVIEWS" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                            <tspan x="0" y="29">PAGEVIEWS</tspan>
+                        </text>
+                        <text id="84,920" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                            <tspan x="0" y="56">84,920</tspan>
+                        </text>
+                    </g>
+                    <rect id="Rectangle-13" fill="#3296ED" x="364" y="133" width="125" height="3"></rect>
+                    <g id="Group" transform="translate(16.000000, 166.000000)">
+                        <g id="Line">
+                            <text id="Date-(MM/DD)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#888888">
+                                <tspan x="270.272" y="174">Date (MM/DD)</tspan>
+                            </text>
+                            <text id="Bounce-Rate" transform="translate(7.500000, 71.500000) rotate(-90.000000) translate(-7.500000, -71.500000) " font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#888888">
+                                <tspan x="-27.84" y="76">Bounce Rate</tspan>
+                            </text>
+                            <g id="GridLines" transform="translate(20.000000, 0.000000)">
+                                <g id="gridline5" transform="translate(0.328833, 0.000000)">
+                                    <path d="M44.6711671,7 L539.671167,7" id="ygridlin5" stroke="#CCCCCC" opacity="0.5" stroke-linecap="square"></path>
+                                    <text id="100%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#B0B0B0">
+                                        <tspan x="0.4" y="12">100%</tspan>
+                                    </text>
+                                </g>
+                                <g id="gridline4" transform="translate(44.836449, 35.890909)" opacity="0.25" stroke="#CCCCCC" stroke-linecap="square">
+                                    <path d="M0.163551041,1.75930945 L495.163432,1.41669241" id="ygridlin4"></path>
+                                </g>
+                                <g id="gridline3" transform="translate(7.328833, 64.945455)">
+                                    <path d="M37.6711671,5 L532.671167,5" id="ygridlin3" stroke="#CCCCCC" opacity="0.5" stroke-linecap="square"></path>
+                                    <text id="50%" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#B0B0B0">
+                                        <tspan x="0.72" y="12">50%</tspan>
+                                    </text>
+                                </g>
+                                <g id="gridline2" transform="translate(44.836449, 99.836364)" opacity="0.25" stroke="#CCCCCC" stroke-linecap="square">
+                                    <path d="M0.163551041,1.85454545 L495.163551,1.85454545" id="ygridlin2"></path>
+                                </g>
+                                <g id="gridline1" transform="translate(27.906910, 128.181818)">
+                                    <text id="0" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#B0B0B0">
+                                        <tspan x="0.68" y="12">0</tspan>
+                                    </text>
+                                    <path d="M17.0930903,7 L512.09309,7" id="ygridlin1" stroke="#CCCCCC" opacity="0.5" stroke-linecap="square"></path>
+                                </g>
+                            </g>
+                            <g id="Chart" transform="translate(59.000000, 27.000000)">
+                                <g id="vCol9" transform="translate(0.000000, 16.000000)">
+                                    <text id="5/17" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="0.816" y="108">5/17</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="14.5599976" cy="3.28698084" r="2.5"></circle>
+                                </g>
+                                <g id="vCol8" transform="translate(27.000000, 50.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="3.34861808" cy="2.58116447" r="2.5"></circle>
+                                </g>
+                                <g id="vCol7" transform="translate(27.000000, 45.000000)">
+                                    <text id="5/19" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="8.566" y="79">5/19</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="20.1372386" cy="3.11596313" r="2.5"></circle>
+                                </g>
+                                <g id="vCol6" transform="translate(61.000000, 27.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="2.92585912" cy="2.58512418" r="2.5"></circle>
+                                </g>
+                                <g id="vCol5" transform="translate(58.000000, 1.000000)">
+                                    <text id="5/21" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="12.316" y="123">5/21</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="22.7144796" cy="2.96153846" r="2.5"></circle>
+                                </g>
+                                <g id="vCol4" transform="translate(94.000000, 4.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="2.50310017" cy="3.21690954" r="2.5"></circle>
+                                </g>
+                                <g id="vCol3" transform="translate(92.000000, 60.000000)">
+                                    <text id="5/23" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="13.066" y="64">5/23</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="21.2917207" cy="3.19764282" r="2.5"></circle>
+                                </g>
+                                <g id="vCol2" transform="translate(126.000000, 44.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="3.08034121" cy="2.66166899" r="2.5"></circle>
+                                </g>
+                                <g id="vCol1" transform="translate(127.000000, 62.000000)">
+                                    <text id="5/25" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="12.816" y="62">5/25</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="18.8689617" cy="2.62391071" r="2.5"></circle>
+                                </g>
+                                <g id="vCol0" transform="translate(159.000000, 27.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="2.65758225" cy="2.74745312" r="2.5"></circle>
+                                </g>
+                                <g id="vCol9" transform="translate(161.000000, 14.000000)">
+                                    <text id="5/27" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="13.566" y="110">5/27</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="17.4462028" cy="3.28698084" r="2.5"></circle>
+                                </g>
+                                <g id="vCol8" transform="translate(192.000000, 9.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="3.23482329" cy="2.58116447" r="2.5"></circle>
+                                </g>
+                                <g id="vCol7" transform="translate(195.000000, 19.000000)">
+                                    <text id="5/29" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="14.316" y="105">5/29</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="17.0234438" cy="3.11596313" r="2.5"></circle>
+                                </g>
+                                <g id="vCol6" transform="translate(225.000000, 18.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="2.81206434" cy="2.58512418" r="2.5"></circle>
+                                </g>
+                                <g id="vCol5" transform="translate(229.000000, 27.000000)">
+                                    <text id="5/31" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="15.066" y="97">5/31</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="14.6006849" cy="2.96153846" r="2.5"></circle>
+                                </g>
+                                <g id="vCol4" transform="translate(257.000000, 0.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="3.38930538" cy="3.21690954" r="2.5"></circle>
+                                </g>
+                                <g id="vCol3" transform="translate(266.000000, 51.000000)">
+                                    <text id="6/2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="12.976" y="73">6/2</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="11.1779259" cy="3.19764282" r="2.5"></circle>
+                                </g>
+                                <g id="vCol2" transform="translate(291.000000, 69.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="2.96654642" cy="2.66166899" r="2.5"></circle>
+                                </g>
+                                <g id="vCol1" transform="translate(300.000000, 52.000000)">
+                                    <text id="6/4" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="6.726" y="72">6/4</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="9.75516694" cy="2.62391071" r="2.5"></circle>
+                                </g>
+                                <g id="vCol0" transform="translate(324.000000, 55.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="2.54378746" cy="2.74745312" r="2.5"></circle>
+                                </g>
+                                <g id="vCol9" transform="translate(338.000000, 56.000000)">
+                                    <text id="6/6" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="-3.048" y="68">6/6</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="5.33240798" cy="3.28698084" r="2.5"></circle>
+                                </g>
+                                <g id="vCol8" transform="translate(356.000000, 45.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="3.12102851" cy="2.58116447" r="2.5"></circle>
+                                </g>
+                                <g id="vCol7" transform="translate(372.000000, 0.000000)">
+                                    <text id="8/29" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="-9.298" y="124">6/8</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="2.90964903" cy="3.11596313" r="2.5"></circle>
+                                </g>
+                                <g id="vCol6" transform="translate(389.000000, 29.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="2.69826955" cy="2.58512418" r="2.5"></circle>
+                                </g>
+                                <g id="vCol5" transform="translate(400.000000, 8.000000)">
+                                    <text id="6/10" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="-9.868" y="116">6/10</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="7.48689007" cy="2.96153846" r="2.5"></circle>
+                                </g>
+                                <g id="vCol4" transform="translate(422.000000, 49.000000)">
+                                    <text id="6/12" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="2.882" y="75">6/12</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="3.15371993" cy="3.11085757" r="2.5"></circle>
+                                </g>
+                                <g id="vCol3" transform="translate(438.000000, 55.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="3.06413111" cy="3.30665337" r="2.5"></circle>
+                                </g>
+                                <g id="vCol2" transform="translate(455.000000, 57.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="2.85275163" cy="2.66166899" r="2.5"></circle>
+                                </g>
+                                <g id="vCol1" transform="translate(459.000000, 51.000000)">
+                                    <text id="6/14" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#333333">
+                                        <tspan x="0.632" y="73">6/14</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3296ED" cx="14.6413722" cy="2.62391071" r="2.5"></circle>
+                                </g>
+                                <g id="vCol0" transform="translate(487.000000, 28.000000)" fill="#3296ED">
+                                    <circle id="Oval" cx="3.42999268" cy="2.74745312" r="2.5"></circle>
+                                </g>
+                                <g id="line" transform="translate(14.000000, 2.000000)">
+                                    <polyline fill-opacity="0.15" fill="#3296ED" points="0.042907627 16.9615385 17.2364158 51.6403834 33.8929787 45.4615385 49.8092373 28.4615385 65.9496685 1.64038341 82.3142724 4.96153846 98.903049 61.6403834 115.491826 44.4615385 131.408084 61.6403834 147.996861 27.439788 164.137292 15.4615385 180.950241 10.4541283 197.314845 21.4615385 213.471816 18.5804989 229.595707 28.4615385 245.511966 0.961538462 262.773261 52.5118988 278.947596 69.994563 295.278296 52.4685769 312.315418 55.4615385 327.783331 57.5112928 344.59628 44.9615385 361.126593 1.10658428 377.322464 31.0074355 393.690092 8.46153846 410.054696 51.1065843 426.195127 57.203016 442.783903 58.4392631 458.924335 52.4615385 476.064766 28.8195697 476.064766 106.368851 0.211160897 106.368851"></polyline>
+                                    <polyline stroke="#3296ED" stroke-width="2" points="0.042907627 16.9615385 17.2364158 51.6403834 33.8929787 45.4615385 49.8092373 28.4615385 65.9496685 1.64038341 82.3142724 4.96153846 98.903049 61.6403834 115.491826 44.4615385 131.408084 61.6403834 147.996861 27.439788 164.137292 15.4615385 180.950241 10.4541283 197.314845 21.4615385 213.471816 18.5804989 229.595707 28.4615385 245.511966 0.961538462 262.773261 52.5118988 278.947596 69.994563 295.278296 52.4685769 312.315418 55.4615385 327.783331 57.5112928 344.59628 44.9615385 361.126593 1.10658428 377.322464 31.0074355 393.690092 8.46153846 410.054696 51.1065843 426.195127 57.203016 442.783903 58.4392631 458.924335 52.4615385 475.064766 28.8195697"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <path d="M1,53.5 L596.76,53.5" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square"></path>
+                    <path d="M1,135.5 L596.76,135.5" id="Bottom-border" stroke="#DDDBDA" stroke-linecap="square"></path>
+                    <text font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                        <tspan x="36" y="32">Site Usage</tspan>
+                    </text>
+                    <text id="powered-by-Google-An" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                        <tspan x="377.592" y="24" fill="#706E6B">powered by </tspan>
+                        <tspan x="446.4" y="24" fill="#0072D6">Google Analytics 360</tspan>
+                    </text>
+                    <path d="M581.675,13 L576.9,13 C576.7,13 576.5,13.125 576.5,13.325 L576.5,14.075 C576.5,14.275 576.675,14.5 576.9,14.5 L578.875,14.5 C579.1,14.5 579.225,14.75 579.05,14.9 L574.8,19.15 C574.65,19.3 574.65,19.525 574.8,19.675 L575.325,20.2 C575.475,20.35 575.7,20.35 575.85,20.2 L580.1,15.95 C580.25,15.8 580.5,15.9 580.5,16.125 L580.5,18.1 C580.5,18.3 580.7,18.525 580.9,18.525 L581.625,18.525 C581.825,18.525 582,18.3 582,18.1 L582,13.35 C582,13.125 581.875,13 581.675,13 L581.675,13 Z M578.575,18.875 L577.725,19.75 C577.575,19.9 577.5,20.075 577.5,20.275 L577.5,23.125 C577.5,23.325 577.325,23.5 577.125,23.5 L571.875,23.5 C571.675,23.5 571.5,23.325 571.5,23.125 L571.5,17.875 C571.5,17.675 571.675,17.5 571.875,17.5 L574.75,17.5 C574.95,17.5 575.15,17.425 575.275,17.275 L576.125,16.425 C576.275,16.275 576.175,16 575.95,16 L571,16 C570.45,16 570,16.45 570,17 L570,24 C570,24.55 570.45,25 571,25 L578,25 C578.55,25 579,24.55 579,24 L579,19.05 C579,18.825 578.725,18.725 578.575,18.875 Z" id="Shape" fill="#706E6B" fill-rule="nonzero"></path>
+                    <path d="M27.8977853,25.3219761 L22.3100511,30.9642249 C22.1465077,31.1277683 21.8739353,31.1277683 21.7103918,30.9642249 L16.1226576,25.3219761 C15.9591141,25.1584327 15.9591141,24.8858603 16.1226576,24.7223169 L16.7223169,24.1226576 C16.8858603,23.9591141 17.1584327,23.9591141 17.3219761,24.1226576 L21.7103918,28.5655877 C21.8739353,28.7291312 22.1465077,28.7291312 22.3100511,28.5655877 L26.6984668,24.1499148 C26.8620102,23.9863714 27.1345826,23.9863714 27.2981261,24.1499148 L27.8977853,24.7495741 C28.0340716,24.9131175 28.0340716,25.1584327 27.8977853,25.3219761 Z" id="Shape" fill="#706E6B" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

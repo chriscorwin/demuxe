@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="54px" viewBox="0 0 1280 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>review-journey-analytics___sticky-header</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="32" height="32" rx="16"></rect>
+        <polygon id="path-3" points="0 0 158 0 158 39 0 39"></polygon>
+        <polygon id="path-5" points="0 0 160 0 160 44 0 44"></polygon>
+        <path d="M13.3896353,2.43767313 C14.4337812,1.40166205 15.8464491,0.731301939 17.4433781,0.731301939 C19.5316699,0.731301939 21.3742802,1.88919668 22.3570058,3.59556787 C23.2168906,3.2299169 24.1381958,2.98614958 25.1209213,2.98614958 C28.9289827,2.98614958 32,6.033241 32,9.81163435 C32,13.5900277 28.9289827,16.6371191 25.1209213,16.6371191 C24.6295585,16.6371191 24.1996161,16.5761773 23.7696737,16.5152355 C22.9097889,18.0387812 21.2514395,19.0747922 19.3474088,19.0747922 C18.5489443,19.0747922 17.8119002,18.8919668 17.1362764,18.5872576 C16.2763916,20.598338 14.2495202,22 11.8541267,22 C9.39731286,22 7.24760077,20.4764543 6.44913628,18.2825485 C6.0806142,18.3434903 5.71209213,18.4044321 5.34357006,18.4044321 C2.39539347,18.4044321 0,16.0277008 0,13.1024931 C0,11.1523546 1.04414587,9.44598338 2.64107486,8.53185596 C2.33397313,7.80055402 2.14971209,6.94736842 2.14971209,6.09418283 C2.14971209,2.74238227 4.91362764,0 8.35316699,0 C10.5028791,0.0609418283 12.2840691,0.975069252 13.3896353,2.43767313" id="path-7"></path>
+    </defs>
+    <g id="review-journey-analytics___sticky-header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="JB-Global-Nav">
+            <rect id="Rectangle" stroke="#D8DDE6" fill="#FFFFFF" x="0.5" y="0.5" width="1282" height="49"></rect>
+            <rect id="Rectangle-3" fill="#F48B00" x="0" y="49" width="1283" height="5"></rect>
+            <g id="Identity" transform="translate(1164.000000, 9.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#B8E986" xlink:href="#path-1"></use>
+                <g id="circle-image-small" mask="url(#mask-2)">
+                    <g transform="translate(-2.000000, -2.000000)">
+                        <rect id="bkgd" fill="#62B7ED" x="0" y="0" width="36" height="36" rx="18"></rect>
+                        <g id="avatar" stroke-width="1" fill="none" transform="translate(10.000000, 10.000000)">
+                            <path d="M16,13.6533333 L16,14.4 C16,15.28 15.28,16 14.4,16 L1.6,16 C0.72,16 0,15.28 0,14.4 L0,13.6533333 C0,11.7066667 2.26666667,10.5333333 4.4,9.6 C4.48,9.57333333 4.53333333,9.54666667 4.61333333,9.49333333 C4.77333333,9.41333333 4.96,9.41333333 5.12,9.52 C5.97333333,10.08 6.96,10.4 8,10.4 C9.04,10.4 10.0266667,10.08 10.88,9.54666667 C11.04,9.44 11.2266667,9.44 11.3866667,9.52 C11.4666667,9.54666667 11.52,9.57333333 11.6,9.62666667 C13.7333333,10.5333333 16,11.7066667 16,13.6533333" id="Fill-1" fill="#FFFFFF"></path>
+                            <path d="M8,0 C10.1944,0 11.9733333,1.96986667 11.9733333,4.4 C11.9733333,6.83013333 10.1944,8.8 8,8.8 C5.8056,8.8 4.02666667,6.83013333 4.02666667,4.4 C4.02666667,1.96986667 5.8056,0 8,0" id="Fill-3" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <text id="Journeys" font-family="SalesforceSans-Light, Salesforce Sans" font-size="13" font-weight="300" fill="#16325C">
+                <tspan x="281.2795" y="30">Journeys</tspan>
+            </text>
+            <text id="Entry-Sources" font-family="SalesforceSans-Light, Salesforce Sans" font-size="13" font-weight="300" fill="#16325C">
+                <tspan x="402.2205" y="30">Entry Sources</tspan>
+            </text>
+            <text id="History" font-family="SalesforceSans-Light, Salesforce Sans" font-size="13" font-weight="300" fill="#16325C">
+                <tspan x="531.194" y="30">History</tspan>
+            </text>
+            <text id="Templates" font-family="SalesforceSans-Light, Salesforce Sans" font-size="13" font-weight="300" fill="#16325C">
+                <tspan x="629.4765" y="30">Templates</tspan>
+            </text>
+            <g id="Button-Neutral" transform="translate(869.000000, 17.000000)" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                <text>
+                    <tspan x="12.566" y="12">Feedback</tspan>
+                </text>
+            </g>
+            <text id="Northern-Trail-Outfi" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                <tspan x="962.1745" y="30">Northern Trail Outfitters</tspan>
+            </text>
+            <text id="Karen" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#16325C">
+                <tspan x="1206.0865" y="30">Karen</tspan>
+            </text>
+            <path d="M1247.34274,22 L1256.67128,22 C1256.93479,22 1257.11926,22.325 1256.90844,22.55 L1252.34958,27.85 C1252.19147,28.05 1251.8489,28.05 1251.69079,27.85 L1247.07923,22.55 C1246.89476,22.325 1247.05287,22 1247.34274,22 L1247.34274,22 Z" id="Shape" fill="#9FAAB6"></path>
+            <path d="M1117.34274,22 L1126.67128,22 C1126.93479,22 1127.11926,22.325 1126.90844,22.55 L1122.34958,27.85 C1122.19147,28.05 1121.8489,28.05 1121.69079,27.85 L1117.07923,22.55 C1116.89476,22.325 1117.05287,22 1117.34274,22 L1117.34274,22 Z" id="Shape" fill="#9FAAB6"></path>
+            <path d="M1146.5,0.5 L1146.5,48.5" id="Line-2" stroke="#D8DDE6" stroke-linecap="square"></path>
+            <g id="Untitled-presentation-(2)" transform="translate(18.000000, 5.000000)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Shape"></g>
+                <g id="Group" mask="url(#mask-4)">
+                    <g transform="translate(0.000000, -1.000000)">
+                        <polygon id="Shape" fill="#FFFFFF" points="0 1 278 1 278 157 0 157"></polygon>
+                        <polygon id="Shape" fill-opacity="0" fill="#000000" points="-1.57332672e-05 0.999912272 161 0.999912272 161 39.5426965 -1.57332672e-05 39.5426965"></polygon>
+                        <g id="Group" stroke-width="1" fill="none" transform="translate(343.999984, -0.000088)">
+                            <g id="Clipped" transform="translate(0.000000, 0.000000)">
+                                <mask id="mask-6" fill="white">
+                                    <use xlink:href="#path-5"></use>
+                                </mask>
+                                <g id="Shape"></g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <rect id="Rectangle-4" fill="#FFFFFF" x="5" y="4" width="38" height="45"></rect>
+            <g id="icons/utility/salesforce1" transform="translate(11.000000, 14.000000)">
+                <mask id="mask-8" fill="white">
+                    <use xlink:href="#path-7"></use>
+                </mask>
+                <use id="Mask" fill="#00A1E0" xlink:href="#path-7"></use>
+            </g>
+            <text id="Journey-Builder" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal" fill="#00396B">
+                <tspan x="52.074" y="31">Journey Builder</tspan>
+            </text>
+            <g id="Journeys-Active" transform="translate(244.000000, 0.000000)">
+                <path d="M1.5,0.5 L1.5,48.5104155" id="Line-2" stroke="#D8DDE6" stroke-linecap="square"></path>
+                <path d="M124.5,0.5 L124.5,48.5104155" id="Line-2" stroke="#D8DDE6" stroke-linecap="square"></path>
+                <rect id="Rectangle-5" fill="#923100" x="1" y="0" width="124" height="4"></rect>
+                <rect id="Rectangle-5" fill="#FFFFFF" x="2" y="46" width="122" height="9"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

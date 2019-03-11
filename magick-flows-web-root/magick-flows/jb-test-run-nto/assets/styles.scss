@@ -3,8 +3,8 @@
 $numberOfSlides: 1 !default;
 $preloadImagesData: "url('/fake.png')" !default;
 
-$heightOfSlideValue: 812;
-$widthOfSlideValue: 375;
+$heightOfSlideValue: 720;
+$widthOfSlideValue: 1280;
 $widthOfGutterValue: 20;
 
 $widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
@@ -28,10 +28,6 @@ body::after {
 	width: 0;
 	z-index: -1;
 }
-
-$widthOfSlideValue: 1280;
-$heightOfSlideValue: 720;
-$widthOfGutterValue: 20;
 
 $widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
 $heightOfAppSwitcher: $heightOfSlideValue + 0px;
