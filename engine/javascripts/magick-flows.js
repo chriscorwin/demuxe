@@ -188,7 +188,6 @@ function locationHashChanged(event) {
 	}
 
 
-	console.log(`magickFlowConfig.metaData[stepToEvaluateForAppTransition].data: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].data);
 	// It is an array, and the order is unknown, so don't depend upon it.
 
 
@@ -356,6 +355,10 @@ function locationHashChanged(event) {
 			}
 		}
 	}
+
+	console.log(`magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
+	console.log(`magickFlowConfig.metaData[stepToEvaluateForAppTransition].id: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
+
 	console.groupEnd();
 }
 
