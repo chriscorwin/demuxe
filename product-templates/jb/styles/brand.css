@@ -13,9 +13,19 @@
 .slds-icon_container.slds-icon-standard-opportunity {
   padding: .5rem;
 }
+
 .slds-page-header__icon {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.slds-breadcrumb .slds-list__item > a, .slds-breadcrumb .slds-list__item > span, .slds-breadcrumb__item > a, .slds-breadcrumb__item > span {
+  display: block;
+  padding: 0 0.5rem;
+}
+
+.slds-breadcrumb .slds-list__item:first-child > a, .slds-breadcrumb .slds-list__item:first-child > span, .slds-breadcrumb__item:first-child > a, .slds-breadcrumb__item:first-child > span {
+  padding-left: 0;
 }
 
 #subheader-wrapper {
@@ -26,10 +36,32 @@
   border-radius: 4px 4px 0 0;
 }
 
+.slds-page-header {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.slds-page-header__title {
+  margin-right: 6px;
+}
+
+.slds-page-header__name-title .slds-icon_container {
+  position: relative;
+  top: -5px;
+  margin-left: 4px;
+}
+
+.slds-page-header__name-title .slds-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.slds-page-header__control .slds-combobox_container {
+  display: inline-flex;
+}
+
 #content-wrapper {
   margin-left: 1rem;
   margin-right: 1rem;
-  padding-top: 1rem;
   background-color: white;
 }
 

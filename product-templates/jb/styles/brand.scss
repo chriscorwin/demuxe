@@ -1,0 +1,83 @@
+.slds-brand-band.slds-brand-band_medium {
+	background-image: linear-gradient(to bottom, rgba(27, 95, 158, 0), #b0c4df 200px), url(/images/banner-brand-default.png);
+    background-repeat: repeat-x;
+    background-position: 0 90px;
+    background-color: rgba(27, 95, 158, 1);
+
+	&:after {
+		top: auto;
+		bottom: 0;
+	}
+}
+
+.slds-icon_container.slds-icon-standard-opportunity {
+  padding: .5rem;
+}
+.slds-page-header__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+
+.slds-breadcrumb .slds-list__item, .slds-breadcrumb__item {
+	> a, > span {
+	    display: block;
+	    padding: 0 0.5rem;
+	}
+
+	&:first-child > a, &:first-child > span {
+    	padding-left: 0;
+	}
+}
+
+#subheader-wrapper {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-top: 110px;
+	margin-bottom: 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.slds-page-header {
+	border-radius: 0.25rem 0.25rem 0 0;
+
+	&__title {
+		margin-right: 6px;
+	}
+
+	&__name-title {
+		.slds-icon_container {
+			position: relative;
+			top: -5px;
+			margin-left: 4px;
+		}
+
+		.slds-icon {
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+
+	&__control .slds-combobox_container {
+		display: inline-flex;
+	}
+}
+
+#content-wrapper {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	background-color: white;
+}
+
+.slds-container_large, .slds-container--large {
+	max-width: unset;
+}
+
+#subheader-wrapper {
+	&.einstein #subheader {
+		h1 {
+			padding-left: 1rem;
+			padding-top: 1rem;
+		}
+	}
+}

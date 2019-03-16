@@ -1,0 +1,245 @@
+<% const localization = locals.localization;
+
+const button = (data) => {
+	let html = '';
+
+	let selected = (data.isSelected) ? ' slds-is-selected' : '';
+	const disabled = (data.isDisabled) ? ' disabled=""' : '';
+	let variant = (data.variant) ? `slds-button_${data.variant}` : 'slds-button_neutral';
+
+	if (data.iconPath || data.imgPath) {
+		html += `<button class="slds-button slds-button_icon slds-button_icon-more slds-button_icon-border-filled${selected}"${disabled} title="${data.title}" aria-pressed="false">`
+
+		if (data.iconPath) {
+			html += `<svg class="slds-button__icon" aria-hidden="true">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="${data.iconPath}" />
+					</svg>`;
+		} else {
+			html += `<img src="${data.imgPath}" style="${data.style}"/>`
+		}
+
+		if (data.hasOverflow) {
+			html += `<svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#down"></use>
+					</svg>`;
+		}
+
+		html += `<span class="slds-assistive-text">${data.title}></span>
+				</button>`;
+	} else {
+		html += `<button class="slds-button ${variant} ${selected}"${disabled}>${data.text}</button>`
+	}
+
+	return html;
+}
+
+const combobox = (data) => {
+	const disabled = (data.isDisabled) ? ' disabled=""' : '';
+	let html = `
+		<div class="slds-combobox_container slds-size_x-small"${disabled}>
+			<div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+				<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+					<input class="slds-input slds-combobox__input" id="versionName" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" type="text" placeholder="${data.versionName}" readonly="" value="" />
+					<span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="choose">
+						<svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#down" />
+						</svg>
+						<span class="slds-assistive-text">choose</span>
+					</span>
+				</div>
+				<div id="listbox-unique-id" role="listbox" class="slds-dropdown slds-dropdown_fluid">
+					<ul class="slds-listbox slds-listbox_vertical" role="presentation">`;
+
+	data.versions.forEach((option) => {
+		html += `<li role="presentation" class="slds-listbox__item">
+							<div id="${option.id}" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+								<span class="slds-media__figure">
+									<svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="${option.iconPath}" />
+									</svg>
+								</span>
+								<span class="slds-media__body">
+								<span class="slds-truncate" title="${option.name}"> ${option.name}</span>
+								</span>
+							</div>
+						</li>`;
+	});
+
+	html += `		</ul>
+				</div>
+			</div>
+		</div>
+	`;
+
+	return html;
+}
+
+%>
+
+<header class="slds-global-header_container">
+	<div class="slds-global-header slds-grid slds-grid_align-spread" style="box-shadow: none;">
+		<div class="slds-global-header__item">
+			<div class="fake-header">
+				<a href="/">
+					<img src="/images/sf-logo.svg" />
+				</a>
+			</div>
+		</div>
+		 <div class="slds-global-header__item">
+			<ul class="slds-global-actions">
+				<% if (localization.header && localization.header.favorites) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-global-actions__favorites slds-dropdown-trigger slds-dropdown-trigger_click">
+						<div class="slds-button-group">
+							<button class="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small" aria-pressed="false" title="Toggle Favorites">
+								<svg class="slds-button__icon" aria-hidden="true">
+									<use xlink:href="/icons/utility-sprite/svg/symbols.svg#favorite"></use>
+								</svg>
+								<span class="slds-assistive-text">Toggle Favorite</span>
+							</button>
+							<button class="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small" title="View Favorites">
+								<svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+									<use xlink:href="/icons/utility-sprite/svg/symbols.svg#down"></use>
+								</svg>
+								<span class="slds-assistive-text">View Favorites</span>
+							</button>
+						</div>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.global_actions) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action" aria-haspopup="true" title="Global Actions">
+							<svg class="slds-button__icon" aria-hidden="true">
+								<use xlink:href="/icons/utility-sprite/svg/symbols.svg#add"></use>
+							</svg>
+							<span class="slds-assistive-text">Global Actions</span>
+						</button>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.help) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action" aria-haspopup="true" title="Help and Training">
+							<svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+								<use xlink:href="/icons/utility-sprite/svg/symbols.svg#question"></use>
+							</svg>
+							<span class="slds-assistive-text">Help and Training</span>
+						</button>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.setup) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action" aria-haspopup="true" title="Setup">
+							<svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+								<use xlink:href="/icons/utility-sprite/svg/symbols.svg#setup"></use>
+							</svg>
+							<span class="slds-assistive-text">Setup</span>
+						</button>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.notifications) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action" title="no new notifications" aria-live="assertive" aria-atomic="true">
+							<svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+								<use xlink:href="/icons/utility-sprite/svg/symbols.svg#notification"></use>
+							</svg>
+							<span class="slds-assistive-text">no new notifications</span>
+						</button>
+						<span aria-hidden="true" class="slds-notification-badge">0</span>
+					</div>
+				</li>
+				<% } %>
+				<% if (localization.header && localization.header.avatar) { %>
+				<li class="slds-global-actions__item">
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+						<button class="slds-button slds-global-actions__avatar slds-global-actions__item-action" title="person name" aria-haspopup="true">
+							<span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+								<img alt="Person name" src="<%= localization.header.avatar %>" title="User avatar" />
+							</span>
+						</button>
+					</div>
+				</li>
+				<% } %>
+			</ul>
+		</div>
+	</div>
+	<div class="slds-context-bar slds-p-left_medium" id="primaryNav">
+		<%- include('includes/global/global-nav'); %>
+	</div>
+</header>
+
+<div id="subheader-wrapper" class="slds-m-bottom_small">
+	<div class="slds-page-header">
+		<div class="slds-page-header__row">
+			<div class="slds-page-header__col-title">
+				<div class="slds-media">
+					<div class="slds-media__figure">
+						<span class="slds-icon_container slds-icon-standard-opportunity" title="checkin">
+						<svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#checkin" />
+						</svg>
+						<span class="slds-assistive-text">checkin</span>
+						</span>
+					</div>
+					<div class="slds-media__body">
+						<% if (locals.breadcrumbs) { %>
+						<nav class="slds-page-header__name-meta" role="navigation" aria-label="Breadcrumbs">
+							<ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
+								<% locals.breadcrumbs.forEach(function(crumb) { %>
+									<li class="slds-breadcrumb__item slds-text-title_caps">
+										<%- crumb.a ? `<a href="${crumb.a}">${crumb.text}</a>` : `<span>${crumb}</span>` %>
+									</li>
+								<% }) %>
+							</ol>
+						</nav>
+						<% } %>
+						<div class="slds-page-header__name">
+							<div class="slds-page-header__name-title">
+								<h1>
+									<span class="slds-page-header__title slds-truncate" title="<%= localization.journeyName %>"><%= localization.journeyName %></span>
+									<span class="slds-icon_container slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true"><use xlink:href="/icons/utility-sprite/svg/symbols.svg#edit"></use></svg></span>
+									<span class="slds-icon_container slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true"><use xlink:href="/icons/utility-sprite/svg/symbols.svg#chevronright"></use></svg></span>
+								</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slds-page-header__col-actions">
+				<div class="slds-page-header__controls">
+					<div class="slds-page-header__control">
+						<% localization.controls.states[locals.state].forEach((control) => {
+								switch(control.type) {
+									case 'button-group': %>
+									<div class="slds-button-group" role="group">
+									<% control.items.forEach((data) => { %>
+										<%- button(data) %>
+									<% }) %>
+									</div>
+									<% break;
+									case 'combobox': %>
+										<div class="slds-button">
+											<%- combobox(control) %>
+										</div>
+									<% break;
+									case 'button': %>
+										<% if (control.hasOverflow) {%><div class="slds-button"><% } %>
+											<%- button(control) %>
+										<% if (control.hasOverflow) {%></div><% } %>
+									<% break;
+								}
+							});
+						%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

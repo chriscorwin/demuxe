@@ -48,7 +48,7 @@ console.groupEnd();
 const appViews = config.appViews;
 // if (config.productTemplate) {
 // 	appViews.push(path.join(__dirname, 'product-templates', config.productTemplate));
-// } 
+// }
 // appViews.push(path.join(__dirname, 'engine'));
 app.set('views', appViews);
 
@@ -58,43 +58,14 @@ app.set('view options', {compileDebug: true});
 app.set('view options', {compileDebug: true, outputFunctionName: 'echo'});
 
 // https://expressjs.com/en/4x/api.html#app.use
+// Paths looked up in sequential order to which they are added, earlier takes precedence over later
 const appUse = [
 	// logger('dev'),
 	express.json(),
 	express.urlencoded({ extended: false }),
 	expressSanitizer(),
 	cookieParser(),
-	// files are looked up in reverse order they occur in the array (later takes precedence over earlier here --cascade flows like CSS)
-	sassMiddleware({
-		debug: false,
-		outputStyle: 'expanded',
-		src: path.join(__dirname, 'engine')
-	}),
-	express.static(path.join(__dirname, 'engine'))
 ];
-
-if (config.brandTheme) {
-	appUse.push(  
-		sassMiddleware({
-			debug: false,
-			outputStyle: 'expanded',
-			src: path.join(__dirname, 'brand-themes', config.brandTheme)
-		}),
-		express.static(path.join(__dirname, 'brand-themes', config.brandTheme))
-	);
-}
-
-
-appUse.push(
-	sassMiddleware({
-		debug: false,
-		outputStyle: 'expanded',
-		src: path.join(__dirname, 'magick-flows-web-root')
-	}),
-	express.static(path.join(__dirname, 'magick-flows-web-root'))
-);
-
-
 if (config.productTemplate) {
 	appUse.push(
 		sassMiddleware({
@@ -117,29 +88,57 @@ if (config.productTemplate) {
 		);
 	}
 }
+if (config.brandTheme) {
+	appUse.push(
+		sassMiddleware({
+			debug: false,
+			outputStyle: 'expanded',
+			src: path.join(__dirname, 'brand-themes', config.brandTheme)
+		}),
+		express.static(path.join(__dirname, 'brand-themes', config.brandTheme))
+	);
+}
 
+
+appUse.push(
+	sassMiddleware({
+		debug: false,
+		outputStyle: 'expanded',
+		src: path.join(__dirname, 'magick-flows-web-root')
+	}),
+	express.static(path.join(__dirname, 'magick-flows-web-root'))
+);
 
 
 appUse.push(
 	express.static(path.join(__dirname, 'slides'))
 );
 
+appUse.push(
+	sassMiddleware({
+		debug: false,
+		outputStyle: 'expanded',
+		src: path.join(__dirname, 'engine')
+	}),
+	express.static(path.join(__dirname, 'engine'))
+)
+
 app.use(appUse);
 
 const router = express.Router();
 
-/** 
+/**
  * Serve up the .ejs files
- * 
- * This dynamically routes to any .ejs file that exists, otherwise it routes to 
+ *
+ * This dynamically routes to any .ejs file that exists, otherwise it routes to
  * the /404.ejs file.
- * 
+ *
  * eg: http://your.site.com/kidney/beans, serves the ejs file /demo-overrides/kidney/beans.ejs
  * or serves /demo-overrides/404.ejs if that file does not exist.
- * 
+ *
  * If a non-existent static (js/css/html/svg/png/etc) file is requested, it will fall through the
  * express.static middleware into this. This will handle it and serve an appropriate 404 error.
- * 
+ *
  * All user input will be sanitized. If you have a URL or Query param that is getting mutated unexpectedly, this is why.
  */
 router.get('/*', (req, res) => {
@@ -167,7 +166,7 @@ router.get('/*', (req, res) => {
 	fs.access(path.join(__dirname, 'demo-overrides', (config.productTemplate) ? config.productTemplate : '', (config.demoVenue) ? config.demoVenue : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 
 		// console.log(`${path.join(__dirname, 'app.js')}:164 ] err: `, util.inspect(err, { showHidden: true, depth: null, colors: true }));
-		
+
 		if (!err) error = false;
 		fs.access(path.join(__dirname, 'product-templates', (config.productTemplate) ? config.productTemplate : '', fileName), fs.constants.F_OK | fs.constants.R_OK, (err) => {
 
@@ -200,7 +199,7 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 						`);
 						res.render('wrapper-for-magick-flows', { ...config, siteSection: 'magick-flows', sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util });
 						console.groupEnd();
-						
+
 					} else {
 
 						// For CSS and images we bypass the 404.ejs file entirely and just serve up the error from here.
