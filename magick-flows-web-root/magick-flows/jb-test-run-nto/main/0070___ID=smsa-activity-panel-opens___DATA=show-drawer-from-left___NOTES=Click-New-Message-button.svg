@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1279px" height="720px" viewBox="0 0 1279 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>0070___ID=smsa-activity-panel-opens___DATA=show-drawer-from-left</title>
+    <title>0070___ID=smsa-activity-panel-opens___DATA=show-drawer-from-left___NOTES=Click-New-Message-button</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="68.0507812%" x2="50%" y2="100%" id="linearGradient-1">
@@ -49,7 +49,7 @@
             <stop stop-color="#2B190C" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="0070___ID=smsa-activity-panel-opens___DATA=show-drawer-from-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="0070___ID=smsa-activity-panel-opens___DATA=show-drawer-from-left___NOTES=Click-New-Message-button" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="This-stuff-does-not-drag..." transform="translate(-1.000000, 0.000000)">
             <g id="Background" transform="translate(0.000000, 54.000000)">
                 <rect id="BG" fill="#B0C4DF" x="0" y="0" width="1280" height="2097"></rect>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1280px" height="720px" viewBox="0 0 1280 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1280px" height="713px" viewBox="0 0 1280 713" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>0010___ID=journey-canvas-with-simple-journey</title>
+    <title>0020___ID=review-journey-analytics___DATA=show-drawer-from-left___NOTES=close-this-thang</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="68.0507812%" x2="50%" y2="100%" id="linearGradient-1">
@@ -23,7 +23,7 @@
         <path d="M1,4.00001915 C1,2.34315432 2.34731857,1 4.00001915,1 L31,1 L31,31 L4.00001915,31 C2.34315432,31 1,29.6526814 1,27.9999809 L1,4.00001915 Z" id="path-19"></path>
         <path d="M12.2582624,6.25952402 L6.7390316,9.30183171 C6.36210853,9.49029325 5.93133929,9.22106248 5.93133929,8.81721633 L5.93133929,2.22106248 C5.93133929,1.95183171 5.66210853,1.7364471 5.41980083,1.81721633 C2.72749314,2.57106248 0.789031602,5.18260094 1.11210853,8.17106248 C1.40826237,10.8902933 3.5890316,13.0979856 6.33518545,13.3941394 C9.91595468,13.7710625 12.9313393,10.9979856 12.9313393,7.49798556 C12.9313393,7.17490863 12.9044162,6.85183171 12.8505701,6.52875479 C12.7967239,6.25952402 12.5005701,6.12490863 12.2582624,6.25952402 L12.2582624,6.25952402 Z M7.46595468,7.49798556 L12.7698008,4.67106248 C13.0928778,4.50952402 13.2005701,4.07875479 12.9851854,3.78260094 C11.773647,2.11337017 9.8890316,0.901831712 7.73518545,0.551831712 C7.35826237,0.471062481 7.00826237,0.767216327 7.00826237,1.1441394 L7.00826237,7.22875479 C7.00826237,7.47106248 7.25057006,7.60567787 7.46595468,7.49798556 L7.46595468,7.49798556 Z" id="path-21"></path>
     </defs>
-    <g id="0010___ID=journey-canvas-with-simple-journey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="0020___ID=review-journey-analytics___DATA=show-drawer-from-left___NOTES=close-this-thang" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Background" transform="translate(0.000000, 54.000000)">
             <rect id="BG" fill="#B0C4DF" x="0" y="0" width="1280" height="2097"></rect>
             <g id="working-page-brand-band">

@@ -188,9 +188,6 @@ function locationHashChanged(event) {
 	}
 
 
-	// It is an array, and the order is unknown, so don't depend upon it.
-
-
 	if ( magickFlowConfig.metaData[stepToEvaluateForAppTransition].data !== undefined ) {
 		useSlideTransition =  magickFlowConfig.metaData[stepToEvaluateForAppTransition].data.find(k => k=='use-slide-transition') === 'use-slide-transition';
 		if ( useSlideTransition === true ) {
@@ -356,8 +353,9 @@ function locationHashChanged(event) {
 		}
 	}
 
-	console.log(`magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
-	console.log(`magickFlowConfig.metaData[stepToEvaluateForAppTransition].id: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
+	console.log(`Sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
+	console.log(`Step ID: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
+	console.log(`Notes: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes);
 
 	console.groupEnd();
 }
