@@ -1815,7 +1815,7 @@
                     <tspan x="102.786" y="20" font-size="12">Duration: 1 day</tspan>
                 </text>
             </g>
-            <g id="Nav-/-Journey-/-Draft" transform="translate(15.000000, 66.000000)">
+            <g id="Nav-/-Journey-/-Draft-(corrected)" transform="translate(15.000000, 66.000000)">
                 <g id="Non-overridables" stroke-width="1" fill-rule="evenodd">
                     <path d="M0,4.00348663 C0,1.79242202 1.78825175,0 3.99365885,0 L1249.00634,0 C1251.21198,0 1253,1.79537646 1253,4.00348663 L1253,64 L0,64 L0,4.00348663 Z" id="Background" fill="#F3F2F2"></path>
                     <text id="Breadcrumb" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
@@ -1832,8 +1832,8 @@
                 </g>
                 <g id="Desktop-Components-/-Button-/-Brand" transform="translate(1167.000000, 16.000000)">
                     <rect id="Button-State---Change-the-layer-style-below" fill="#0070D2" fill-rule="evenodd" x="0" y="0" width="72" height="32" rx="4"></rect>
-                    <text id="Background-State" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="30" fill="#FFFFFF">
-                        <tspan x="11.729" y="14">Activate</tspan>
+                    <text id="Background-State" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="11.729" y="21">Activate</tspan>
                     </text>
                 </g>
                 <g id="Save-Button-Group" stroke-width="1" fill-rule="evenodd" transform="translate(923.000000, 16.000000)">
@@ -2923,18 +2923,18 @@
                     <g id="Concat-+-Highlight-non-GSM" transform="translate(25.315259, 233.483225)">
                         <g id="Desktop/Button/Neutral" transform="translate(205.443067, 0.000000)">
                             <rect id="button-[0-16]" stroke="#DDDBDA" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="141" height="31" rx="4"></rect>
-                            <text id="label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="32" fill="#0070D2">
-                                <tspan x="12.4805" y="13">Highlight Non-GSM</tspan>
+                            <text id="label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                                <tspan x="12.4805" y="21">Highlight Non-GSM</tspan>
                             </text>
                         </g>
-                        <g id="concat" transform="translate(0.000000, 7.782774)">
-                            <g id="Forms/Checkbox/Unselected" fill="#FFFFFF" stroke="#D8DDE6">
+                        <g id="concat" transform="translate(0.000000, 6.782774)">
+                            <g id="Forms/Checkbox/Unselected" transform="translate(0.000000, 1.000000)" fill="#FFFFFF" stroke="#D8DDE6">
                                 <rect id="Rectangle-439" x="0.5" y="0.5" width="15" height="15" rx="2"></rect>
                             </g>
-                            <text id="Concatenate-Message" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="10" fill="#706E6B">
-                                <tspan x="20.4206042" y="15.7835422">Concatenate Message</tspan>
+                            <text id="Concatenate-Message" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#706E6B">
+                                <tspan x="20.4206042" y="13.7835422">Concatenate Message</tspan>
                             </text>
-                            <g id="icon---info" transform="translate(156.816927, 1.512473)" fill="#706E6B">
+                            <g id="icon---info" transform="translate(156.816927, 2.512473)" fill="#706E6B">
                                 <path d="M9.66666667,11.0366667 C9.66666667,11.219 9.519,11.3333333 9.33666667,11.3333333 L8.33333333,11.3333333 L7.33333333,11.3333333 L6.66333333,11.3333333 C6.481,11.3333333 6.33333333,11.219 6.33333333,11.0366667 L6.33333333,10.3633333 C6.33333333,10.181 6.481,10 6.66333333,10 L6.67,10 C6.85233333,10 7,9.88566667 7,9.70333333 L7,8.36333333 C7,8.181 6.85233333,8 6.67,8 L6.66333333,8 C6.481,8 6.33333333,7.88566667 6.33333333,7.70333333 L6.33333333,7.03 C6.33333333,6.84766667 6.481,6.66666667 6.66333333,6.66666667 L8.67,6.66666667 C8.85133333,6.66666667 9,6.84866667 9,7.03 L9,9.70333333 C9,9.88566667 9.14766667,10 9.33,10 L9.33666667,10 C9.518,10 9.66666667,10.182 9.66666667,10.3633333 L9.66666667,11.0366667 Z M8,4.03333333 C8.55233333,4.03333333 9,4.481 9,5.03333333 C9,5.58566667 8.55233333,6.03333333 8,6.03333333 C7.44766667,6.03333333 7,5.58566667 7,5.03333333 C7,4.481 7.44766667,4.03333333 8,4.03333333 L8,4.03333333 Z M8,0 C3.58166667,0 0,3.58166667 0,8 C0,12.4183333 3.58166667,16 8,16 C12.4183333,16 16,12.4183333 16,8 C16,3.58166667 12.4183333,0 8,0 L8,0 Z"></path>
                             </g>
                         </g>

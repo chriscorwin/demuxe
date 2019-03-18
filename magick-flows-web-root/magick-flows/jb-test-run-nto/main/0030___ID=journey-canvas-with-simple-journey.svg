@@ -1923,8 +1923,8 @@
             </g>
             <g id="Desktop-Components-/-Button-/-Neutral" transform="translate(1146.000000, 15.000000)">
                 <rect id="Background-State" stroke="#DDDBDA" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="94" height="31" rx="4"></rect>
-                <text id="Button-Text-and-Style" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="30" fill="#0070D2">
-                    <tspan x="9.4035" y="14">New Version</tspan>
+                <text id="Button-Text-and-Style" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                    <tspan x="9.4035" y="21">New Version</tspan>
                 </text>
             </g>
             <g id="Desktop-Components-/-Button-Icon-/-Bordered-More" transform="translate(1096.000000, 15.000000)" fill-rule="evenodd" stroke-width="1">

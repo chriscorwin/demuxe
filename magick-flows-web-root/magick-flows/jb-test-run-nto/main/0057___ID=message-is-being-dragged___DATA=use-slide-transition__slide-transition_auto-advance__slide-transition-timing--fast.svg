@@ -1816,7 +1816,7 @@
                     <tspan x="102.786" y="20" font-size="12">Duration: 1 day</tspan>
                 </text>
             </g>
-            <g id="Nav-/-Journey-/-Draft" transform="translate(15.000000, 66.000000)">
+            <g id="Nav-/-Journey-/-Draft-(corrected)" transform="translate(15.000000, 66.000000)">
                 <g id="Non-overridables" stroke-width="1" fill-rule="evenodd">
                     <path d="M0,4.00348663 C0,1.79242202 1.78825175,0 3.99365885,0 L1249.00634,0 C1251.21198,0 1253,1.79537646 1253,4.00348663 L1253,64 L0,64 L0,4.00348663 Z" id="Background" fill="#F3F2F2"></path>
                     <text id="Breadcrumb" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
@@ -1833,8 +1833,8 @@
                 </g>
                 <g id="Desktop-Components-/-Button-/-Brand" transform="translate(1167.000000, 16.000000)">
                     <rect id="Button-State---Change-the-layer-style-below" fill="#0070D2" fill-rule="evenodd" x="0" y="0" width="72" height="32" rx="4"></rect>
-                    <text id="Background-State" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="30" fill="#FFFFFF">
-                        <tspan x="11.729" y="14">Activate</tspan>
+                    <text id="Background-State" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="11.729" y="21">Activate</tspan>
                     </text>
                 </g>
                 <g id="Save-Button-Group" stroke-width="1" fill-rule="evenodd" transform="translate(923.000000, 16.000000)">
