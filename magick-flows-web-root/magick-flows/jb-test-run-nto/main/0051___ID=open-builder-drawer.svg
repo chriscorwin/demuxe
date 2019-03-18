@@ -1838,8 +1838,8 @@
                             <rect id="Rectangle" x="0" y="0" width="57" height="32"></rect>
                         </g>
                     </g>
-                    <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="30" fill="#0070D2">
-                        <tspan x="16.0915" y="14">Test</tspan>
+                    <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                        <tspan x="16.0915" y="21">Test</tspan>
                     </text>
                 </g>
                 <g id="Desktop-Components-/-Button-Group-/-Text-/-Center" transform="translate(93.000000, 0.000000)">
@@ -1852,8 +1852,8 @@
                             <rect id="Rectangle" x="0" y="0" width="82" height="32"></rect>
                         </g>
                     </g>
-                    <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="30" fill="#0070D2">
-                        <tspan x="16.3975" y="14">Validate</tspan>
+                    <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                        <tspan x="16.3975" y="21">Validate</tspan>
                     </text>
                 </g>
                 <g id="Desktop-Components-/-Button-Group-/-Icon-/-Center" transform="translate(62.000000, 0.000000)">
@@ -1888,8 +1888,8 @@
                             <rect id="Rectangle" x="0" y="0" width="63" height="32"></rect>
                         </g>
                     </g>
-                    <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="30" fill="#0070D2">
-                        <tspan x="17.473" y="14">Save</tspan>
+                    <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                        <tspan x="17.473" y="21">Save</tspan>
                     </text>
                 </g>
             </g>

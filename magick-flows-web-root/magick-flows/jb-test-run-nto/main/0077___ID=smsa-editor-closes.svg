@@ -1854,8 +1854,8 @@
                                 <rect id="Rectangle" x="0" y="0" width="57" height="32"></rect>
                             </g>
                         </g>
-                        <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="30" fill="#0070D2">
-                            <tspan x="16.0915" y="14">Test</tspan>
+                        <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                            <tspan x="16.0915" y="21">Test</tspan>
                         </text>
                     </g>
                     <g id="Desktop-Components-/-Button-Group-/-Text-/-Center" transform="translate(93.000000, 0.000000)">
@@ -1868,8 +1868,8 @@
                                 <rect id="Rectangle" x="0" y="0" width="82" height="32"></rect>
                             </g>
                         </g>
-                        <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="30" fill="#0070D2">
-                            <tspan x="16.3975" y="14">Validate</tspan>
+                        <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                            <tspan x="16.3975" y="21">Validate</tspan>
                         </text>
                     </g>
                     <g id="Desktop-Components-/-Button-Group-/-Icon-/-Center" transform="translate(62.000000, 0.000000)">
@@ -1904,8 +1904,8 @@
                                 <rect id="Rectangle" x="0" y="0" width="63" height="32"></rect>
                             </g>
                         </g>
-                        <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="30" fill="#0070D2">
-                            <tspan x="17.473" y="14">Save</tspan>
+                        <text id="Label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                            <tspan x="17.473" y="21">Save</tspan>
                         </text>
                     </g>
                 </g>
@@ -2746,14 +2746,14 @@
                         <g id="Button-Brand-">
                             <rect id="brand-blue" fill="#0070D2" x="0" y="0" width="70" height="32" rx="4"></rect>
                             <text id="Button-Brand" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#FFFFFF">
-                                <tspan x="19.868" y="20">Done</tspan>
+                                <tspan x="17.868" y="20">Done</tspan>
                             </text>
                         </g>
                     </g>
                     <g id="Desktop/Button/Neutral" transform="translate(552.000000, 16.000000)">
                         <rect id="button-[0-16]" stroke="#DDDBDA" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="121" height="31" rx="4"></rect>
-                        <text id="label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="32" fill="#0070D2">
-                            <tspan x="19.4585" y="13">Detailed View</tspan>
+                        <text id="label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                            <tspan x="19.4585" y="21">Detailed View</tspan>
                         </text>
                     </g>
                 </g>
