@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1279px" height="720px" viewBox="0 0 1279 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>0053___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast</title>
+    <title>0052___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="68.0507812%" x2="50%" y2="100%" id="linearGradient-1">
@@ -58,7 +58,7 @@
             </feMerge>
         </filter>
     </defs>
-    <g id="0053___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="0052___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="This-stuff-does-not-drag..." transform="translate(-1.000000, 0.000000)">
             <g id="Background" transform="translate(0.000000, 54.000000)">
                 <rect id="BG" fill="#B0C4DF" x="0" y="0" width="1280" height="2097"></rect>
@@ -2724,7 +2724,7 @@
                 </g>
             </g>
         </g>
-        <g id="DRAGGY-ICON" filter="url(#filter-56)" transform="translate(100.000000, 500.000000)">
+        <g id="DRAGGY-ICON" filter="url(#filter-56)" transform="translate(47.000000, 545.000000)">
             <path d="M0,10.394875 C0,4.65394404 4.66007686,0 10.394875,0 L51.605125,0 C57.346056,0 62,4.66007686 62,10.394875 L62,51.605125 C62,57.346056 57.3399231,62 51.605125,62 L10.394875,62 C4.65394404,62 0,57.3399231 0,51.605125 L0,10.394875 Z" id="Rectangle" stroke="#2C716C" stroke-width="3.89999986" fill-opacity="0.659364073" fill="#4DC6BD" stroke-linejoin="bevel" stroke-dasharray="7.799999713897705,1.299999952316284"></path>
             <g id="icon---send-sms" transform="translate(21.958333, 15.500000)" fill="#FFFFFF">
                 <path d="M16.0908664,26.0048828 C16.0908664,26.2188151 15.9543377,26.3614366 15.7501826,26.3614366 L2.11389839,26.3614366 C1.90974329,26.3614366 1.77321458,26.2188151 1.77321458,26.0048828 L1.77321458,4.57263455 C1.77321458,4.35870226 1.90974329,4.14342448 2.11389839,4.14342448 L15.7501826,4.14342448 C15.9543377,4.14342448 16.0908664,4.35870226 16.0908664,4.57263455 L16.0908664,26.0048828 Z M10.6360975,30.005013 C10.6360975,30.14898 10.4995688,30.2916016 10.2954137,30.2916016 L7.49976492,30.2916016 C7.36323621,30.2916016 7.22670749,30.14898 7.22670749,30.005013 L7.22670749,28.648763 C7.22670749,28.504796 7.36323621,28.2908637 7.49976492,28.2908637 L10.2954137,28.2908637 C10.4995688,28.2908637 10.6360975,28.504796 10.6360975,28.648763 L10.6360975,30.005013 Z M6.74949496,1.85744358 L11.1133101,1.85744358 C11.2498388,1.85744358 11.3863675,2.0000651 11.3863675,2.14268663 C11.3863675,2.28665365 11.2498388,2.42927517 11.1133101,2.42927517 L6.74949496,2.42927517 C6.61424221,2.42927517 6.47771349,2.28665365 6.47771349,2.14268663 C6.47771349,2.0000651 6.61424221,1.85744358 6.74949496,1.85744358 L6.74949496,1.85744358 Z M14.7957575,0.000672743056 L3.06832344,0.000672743056 C1.36362842,0.000672743056 -0.000382790799,1.42957899 -0.000382790799,3.21503906 L-0.000382790799,29.0053168 C-0.000382790799,30.7921224 1.36362842,32.2923394 3.06832344,32.2923394 L14.7957575,32.2923394 C16.5004526,32.2923394 17.8631878,30.7921224 17.8631878,29.0053168 L17.8631878,3.21503906 C17.8631878,1.42957899 16.5004526,0.000672743056 14.7957575,0.000672743056 L14.7957575,0.000672743056 Z" id="Fill-1"></path>

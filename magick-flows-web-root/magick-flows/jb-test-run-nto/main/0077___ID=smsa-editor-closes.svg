@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1279px" height="720px" viewBox="0 0 1279 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>0053___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast</title>
+    <title>0077___ID=smsa-editor-closes</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="68.0507812%" x2="50%" y2="100%" id="linearGradient-1">
@@ -48,17 +48,23 @@
             <stop stop-color="#3A2713" offset="0%"></stop>
             <stop stop-color="#2B190C" offset="100%"></stop>
         </linearGradient>
-        <filter x="-75.0%" y="-75.0%" width="250.0%" height="250.0%" filterUnits="objectBoundingBox" id="filter-56">
-            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
+        <rect id="path-56" x="0" y="0" width="774" height="654"></rect>
+        <filter x="-1.6%" y="-1.8%" width="103.1%" height="103.7%" filterUnits="objectBoundingBox" id="filter-57">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
+        <path d="M0,40.9940984 C0,38.7882187 1.78709405,37 3.99289933,37 L734.007101,37 C736.212318,37 738,38.7881132 738,40.9940984 L738,212.205899 C738,214.411778 736.212906,216.199997 734.007101,216.199997 L3.99289933,216.199997 C1.78768192,216.199997 0,214.411884 0,212.205899 L0,40.9940984 Z" id="path-58"></path>
+        <filter x="-0.5%" y="-1.1%" width="101.1%" height="104.5%" filterUnits="objectBoundingBox" id="filter-59">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-60" x="0" y="0" width="189" height="114"></rect>
     </defs>
-    <g id="0053___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="0077___ID=smsa-editor-closes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="This-stuff-does-not-drag..." transform="translate(-1.000000, 0.000000)">
             <g id="Background" transform="translate(0.000000, 54.000000)">
                 <rect id="BG" fill="#B0C4DF" x="0" y="0" width="1280" height="2097"></rect>
@@ -2724,13 +2730,220 @@
                 </g>
             </g>
         </g>
-        <g id="DRAGGY-ICON" filter="url(#filter-56)" transform="translate(100.000000, 500.000000)">
-            <path d="M0,10.394875 C0,4.65394404 4.66007686,0 10.394875,0 L51.605125,0 C57.346056,0 62,4.66007686 62,10.394875 L62,51.605125 C62,57.346056 57.3399231,62 51.605125,62 L10.394875,62 C4.65394404,62 0,57.3399231 0,51.605125 L0,10.394875 Z" id="Rectangle" stroke="#2C716C" stroke-width="3.89999986" fill-opacity="0.659364073" fill="#4DC6BD" stroke-linejoin="bevel" stroke-dasharray="7.799999713897705,1.299999952316284"></path>
-            <g id="icon---send-sms" transform="translate(21.958333, 15.500000)" fill="#FFFFFF">
-                <path d="M16.0908664,26.0048828 C16.0908664,26.2188151 15.9543377,26.3614366 15.7501826,26.3614366 L2.11389839,26.3614366 C1.90974329,26.3614366 1.77321458,26.2188151 1.77321458,26.0048828 L1.77321458,4.57263455 C1.77321458,4.35870226 1.90974329,4.14342448 2.11389839,4.14342448 L15.7501826,4.14342448 C15.9543377,4.14342448 16.0908664,4.35870226 16.0908664,4.57263455 L16.0908664,26.0048828 Z M10.6360975,30.005013 C10.6360975,30.14898 10.4995688,30.2916016 10.2954137,30.2916016 L7.49976492,30.2916016 C7.36323621,30.2916016 7.22670749,30.14898 7.22670749,30.005013 L7.22670749,28.648763 C7.22670749,28.504796 7.36323621,28.2908637 7.49976492,28.2908637 L10.2954137,28.2908637 C10.4995688,28.2908637 10.6360975,28.504796 10.6360975,28.648763 L10.6360975,30.005013 Z M6.74949496,1.85744358 L11.1133101,1.85744358 C11.2498388,1.85744358 11.3863675,2.0000651 11.3863675,2.14268663 C11.3863675,2.28665365 11.2498388,2.42927517 11.1133101,2.42927517 L6.74949496,2.42927517 C6.61424221,2.42927517 6.47771349,2.28665365 6.47771349,2.14268663 C6.47771349,2.0000651 6.61424221,1.85744358 6.74949496,1.85744358 L6.74949496,1.85744358 Z M14.7957575,0.000672743056 L3.06832344,0.000672743056 C1.36362842,0.000672743056 -0.000382790799,1.42957899 -0.000382790799,3.21503906 L-0.000382790799,29.0053168 C-0.000382790799,30.7921224 1.36362842,32.2923394 3.06832344,32.2923394 L14.7957575,32.2923394 C16.5004526,32.2923394 17.8631878,30.7921224 17.8631878,29.0053168 L17.8631878,3.21503906 C17.8631878,1.42957899 16.5004526,0.000672743056 14.7957575,0.000672743056 L14.7957575,0.000672743056 Z" id="Fill-1"></path>
-                <path d="M14.0356626,16.8370095 C14.0356626,17.1989453 13.771537,17.4909158 13.4448888,17.4909158 L4.41868179,17.4909158 C4.09203364,17.4909158 3.82790799,17.1989453 3.82790799,16.8370095 L3.82790799,14.1097092 C3.82790799,13.7477734 4.09203364,13.4544575 4.41868179,13.4544575 L13.4448888,13.4544575 C13.771537,13.4544575 14.0356626,13.7477734 14.0356626,14.1097092 L14.0356626,16.8370095 Z" id="Fill-4"></path>
-                <path d="M14.0356626,11.3824089 C14.0356626,11.7833637 13.771537,12.1089714 13.4448888,12.1089714 L4.41868179,12.1089714 C4.09203364,12.1089714 3.82790799,11.7833637 3.82790799,11.3824089 L3.82790799,7.4549349 C3.82790799,7.05263455 4.09203364,6.72702691 4.41868179,6.72702691 L13.4448888,6.72702691 C13.771537,6.72702691 14.0356626,7.05263455 14.0356626,7.4549349 L14.0356626,11.3824089 Z" id="Fill-6"></path>
+        <g id="Configured-HUB" transform="translate(14.000000, 66.000000)">
+            <g id="Empty-Hub">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-57)" xlink:href="#path-56"></use>
+                    <rect stroke="#DDDBDA" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="773" height="653"></rect>
+                </g>
+                <g id="footer" transform="translate(1.000000, 592.000000)">
+                    <polygon id="Rectangle-4" fill="#F3F2F2" points="0 2 772 2 772 62 0 62"></polygon>
+                    <text id="Cancel" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                        <tspan x="22" y="36">Cancel</tspan>
+                    </text>
+                    <path d="M0.5,1.5 L771.5,1.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                    <g id="Desktop/Button/Brand-" transform="translate(686.000000, 16.000000)">
+                        <g id="Button-Brand-">
+                            <rect id="brand-blue" fill="#0070D2" x="0" y="0" width="70" height="32" rx="4"></rect>
+                            <text id="Button-Brand" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="19.868" y="20">Done</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="Desktop/Button/Neutral" transform="translate(552.000000, 16.000000)">
+                        <rect id="button-[0-16]" stroke="#DDDBDA" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="121" height="31" rx="4"></rect>
+                        <text id="label" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="32" fill="#0070D2">
+                            <tspan x="19.4585" y="13">Detailed View</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Spoke-3" transform="translate(105.000000, 512.000000)">
+                    <g id="Spoke-Title"></g>
+                </g>
+                <g id="Spoke" transform="translate(24.000000, 350.000000)">
+                    <path d="M0,1.5 L726,1.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                    <path d="M0,120.5 L726,120.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                    <g id="Spoke-Title" transform="translate(0.000000, 22.000000)">
+                        <text id="Subscriber-Opt-In:-S" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="20">
+                            <tspan x="196" y="19" fill="#706E6B">Subscriber Opt-In: </tspan>
+                            <tspan x="310.088" y="19" fill="#2B2826">Send to current subscribers </tspan>
+                            <tspan x="478.828" y="19" font-family="SalesforceSans-Italic, Salesforce Sans" font-style="italic" fill="#2B2826">(default)</tspan>
+                            <tspan x="196" y="49" fill="#706E6B">Blackout Window: </tspan>
+                            <tspan x="308.931" y="49" fill="#2B2826">Do not use </tspan>
+                            <tspan x="378.104" y="49" font-family="SalesforceSans-Italic, Salesforce Sans" font-style="italic" fill="#2B2826">(default) </tspan>
+                            <tspan x="433.224" y="49" fill="#706E6B"></tspan>
+                            <tspan x="196" y="79" fill="#706E6B">Google Analytics Tracking:  </tspan>
+                        </text>
+                        <g id="Edit-Button" transform="translate(666.000000, 0.000000)">
+                            <path d="M4.0065556,0.5 C2.06850889,0.5 0.5,2.06659802 0.5,4.0042577 L0.5,27.9957423 C0.5,29.9303394 2.07107172,31.5 4.0065556,31.5 L55.9934444,31.5 C57.9314911,31.5 59.5,29.933402 59.5,27.9957423 L59.5,4.0042577 C59.5,2.06966061 57.9289283,0.5 55.9934444,0.5 L4.0065556,0.5 Z" id="Rectangle-18" stroke="#DDDBDA" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" transform="translate(30.000000, 16.000000) scale(-1, 1) translate(-30.000000, -16.000000) "></path>
+                            <text id="Edit" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#006DD5">
+                                <tspan x="19.326" y="21">Edit</tspan>
+                            </text>
+                        </g>
+                        <text id="Delivery-Options" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                            <tspan x="0" y="21">Delivery Options</tspan>
+                        </text>
+                    </g>
+                    <g id="Spoke-Title" transform="translate(0.000000, 141.000000)">
+                        <text id="MobileConnect-Report" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="20">
+                            <tspan x="196" y="19" fill="#706E6B">MobileConnect Reporting Name: </tspan>
+                            <tspan x="399.125" y="19" fill="#2B2826">WeekendSale-Apr…</tspan>
+                            <tspan x="518.01" y="19" fill="#706E6B"> </tspan>
+                            <tspan x="521.364" y="19" fill="#54698D"></tspan>
+                            <tspan x="196" y="49" fill="#706E6B">Next Keyword: </tspan>
+                            <tspan x="287.455" y="49" fill="#2B2826">BIGSAVINGS</tspan>
+                        </text>
+                        <g id="Edit-Button" transform="translate(666.000000, 0.000000)">
+                            <path d="M4.0065556,0.5 C2.06850889,0.5 0.5,2.06659802 0.5,4.0042577 L0.5,27.9957423 C0.5,29.9303394 2.07107172,31.5 4.0065556,31.5 L55.9934444,31.5 C57.9314911,31.5 59.5,29.933402 59.5,27.9957423 L59.5,4.0042577 C59.5,2.06966061 57.9289283,0.5 55.9934444,0.5 L4.0065556,0.5 Z" id="Rectangle-18" stroke="#DDDBDA" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" transform="translate(30.000000, 16.000000) scale(-1, 1) translate(-30.000000, -16.000000) "></path>
+                            <text id="Edit" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#006DD5">
+                                <tspan x="19.326" y="21">Edit</tspan>
+                            </text>
+                        </g>
+                        <text id="Advanced-Options" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                            <tspan x="2" y="21">Advanced Options</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Spoke" transform="translate(24.000000, 285.000000)">
+                    <text id="Short/Long-Code:-858" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="20">
+                        <tspan x="196" y="37" fill="#706E6B">Short/Long Code: </tspan>
+                        <tspan x="307.501" y="37" fill="#2B2826">85866</tspan>
+                        <tspan x="347.151" y="37" fill="#54698D"> </tspan>
+                    </text>
+                    <g id="Edit-Button" transform="translate(666.000000, 18.000000)">
+                        <path d="M4.0065556,0.5 C2.06850889,0.5 0.5,2.06659802 0.5,4.0042577 L0.5,27.9957423 C0.5,29.9303394 2.07107172,31.5 4.0065556,31.5 L55.9934444,31.5 C57.9314911,31.5 59.5,29.933402 59.5,27.9957423 L59.5,4.0042577 C59.5,2.06966061 57.9289283,0.5 55.9934444,0.5 L4.0065556,0.5 Z" id="Rectangle-18" stroke="#DDDBDA" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" transform="translate(30.000000, 16.000000) scale(-1, 1) translate(-30.000000, -16.000000) "></path>
+                        <text id="Edit" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#006DD5">
+                            <tspan x="19.326" y="21">Edit</tspan>
+                        </text>
+                    </g>
+                    <g id="Spoke-Title" transform="translate(0.000000, 23.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-weight="normal">
+                        <text id="Message-Configuratio" font-size="16" fill="#2B2826">
+                            <tspan x="0" y="16">Message Configuration</tspan>
+                        </text>
+                        <text id="*" font-size="13" fill="#C23934">
+                            <tspan x="169" y="13">*</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Hub-Header" transform="translate(14.000000, 16.000000)">
+                    <text id="Title" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="20" font-weight="normal" fill="#2B2826">
+                        <tspan x="42" y="22">SMS Activity Summary</tspan>
+                    </text>
+                    <g id="Activity-Icon">
+                        <g id="Group-3">
+                            <g id="BG---messages" fill="#4DC6BD">
+                                <rect id="Rectangle" x="0" y="0" width="32" height="32" rx="8"></rect>
+                            </g>
+                            <g id="icon---send-sms" transform="translate(11.000000, 7.000000)" fill="#FFFFFF">
+                                <path d="M9.50806746,14.5723214 C9.50806746,14.6922024 9.42739286,14.772123 9.30675794,14.772123 L1.24909921,14.772123 C1.12846429,14.772123 1.04778968,14.6922024 1.04778968,14.5723214 L1.04778968,2.56236111 C1.04778968,2.44248016 1.12846429,2.32184524 1.24909921,2.32184524 L9.30675794,2.32184524 C9.42739286,2.32184524 9.50806746,2.44248016 9.50806746,2.56236111 L9.50806746,14.5723214 Z M6.28485317,16.813869 C6.28485317,16.8945437 6.20417857,16.9744643 6.08354365,16.9744643 L4.43159921,16.9744643 C4.3509246,16.9744643 4.27025,16.8945437 4.27025,16.813869 L4.27025,16.053869 C4.27025,15.9731944 4.3509246,15.8533135 4.43159921,15.8533135 L6.08354365,15.8533135 C6.20417857,15.8533135 6.28485317,15.9731944 6.28485317,16.053869 L6.28485317,16.813869 Z M3.98826587,1.04085317 L6.5668373,1.04085317 C6.6475119,1.04085317 6.72818651,1.12077381 6.72818651,1.20069444 C6.72818651,1.28136905 6.6475119,1.36128968 6.5668373,1.36128968 L3.98826587,1.36128968 C3.90834524,1.36128968 3.82767063,1.28136905 3.82767063,1.20069444 C3.82767063,1.12077381 3.90834524,1.04085317 3.98826587,1.04085317 L3.98826587,1.04085317 Z M8.74278968,0.000376984127 L1.81306746,0.000376984127 C0.805765873,0.000376984127 -0.000226190476,0.80109127 -0.000226190476,1.80160714 L-0.000226190476,16.2536706 C-0.000226190476,17.2549405 0.805765873,18.0956151 1.81306746,18.0956151 L8.74278968,18.0956151 C9.75009127,18.0956151 10.5553294,17.2549405 10.5553294,16.2536706 L10.5553294,1.80160714 C10.5553294,0.80109127 9.75009127,0.000376984127 8.74278968,0.000376984127 L8.74278968,0.000376984127 Z" id="Fill-1"></path>
+                                <path d="M8.29365079,9.43493254 C8.29365079,9.63775 8.13757937,9.80136111 7.94456349,9.80136111 L2.61099206,9.80136111 C2.41797619,9.80136111 2.26190476,9.63775 2.26190476,9.43493254 L2.26190476,7.90663889 C2.26190476,7.70382143 2.41797619,7.53945635 2.61099206,7.53945635 L7.94456349,7.53945635 C8.13757937,7.53945635 8.29365079,7.70382143 8.29365079,7.90663889 L8.29365079,9.43493254 Z" id="Fill-4"></path>
+                                <path d="M8.29365079,6.37834524 C8.29365079,6.60302778 8.13757937,6.7854881 7.94456349,6.7854881 L2.61099206,6.7854881 C2.41797619,6.7854881 2.26190476,6.60302778 2.26190476,6.37834524 L2.26190476,4.1775119 C2.26190476,3.9520754 2.41797619,3.76961508 2.61099206,3.76961508 L7.94456349,3.76961508 C8.13757937,3.76961508 8.29365079,3.9520754 8.29365079,4.1775119 L8.29365079,6.37834524 Z" id="Fill-6"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <path d="M729.52346,15.2360704 L734.802053,9.95747801 C735.065982,9.69354839 735.065982,9.34164223 734.802053,9.07771261 L734.010264,8.19794721 C733.746334,8.02199413 733.394428,8.02199413 733.130499,8.19794721 L727.851906,13.5645161 C727.675953,13.7404692 727.412023,13.7404692 727.23607,13.5645161 L721.957478,8.19794721 C721.693548,7.9340176 721.341642,7.9340176 721.077713,8.19794721 L720.197947,9.07771261 C720.021994,9.25366569 720.021994,9.69354839 720.197947,9.86950147 L725.564516,15.2360704 C725.740469,15.4120235 725.740469,15.5879765 725.564516,15.7639296 L720.197947,21.1304985 C719.934018,21.3944282 719.934018,21.7463343 720.197947,22.0102639 L721.077713,22.8900293 C721.253666,23.0659824 721.693548,23.0659824 721.869501,22.8900293 L727.23607,17.5234604 C727.412023,17.3475073 727.587977,17.3475073 727.76393,17.5234604 L733.130499,22.8900293 C733.306452,23.0659824 733.746334,23.0659824 733.922287,22.8900293 L734.802053,22.0102639 C735.065982,21.7463343 735.065982,21.3944282 734.802053,21.1304985 L729.52346,15.8519062 C729.347507,15.6759531 729.347507,15.4120235 729.52346,15.2360704 L729.52346,15.2360704 Z" id="Shape" fill="#B0ADAB"></path>
+                </g>
             </g>
+            <g id="Primary-Spoke" transform="translate(18.000000, 70.000000)">
+                <g id="Spoke-Title" transform="translate(3.000000, 0.000000)" font-family="SalesforceSans-Regular, Salesforce Sans" font-weight="normal">
+                    <text id="Source:" font-size="16" fill="#2B2826">
+                        <tspan x="0" y="16">Message Definition</tspan>
+                    </text>
+                    <text id="*" font-size="13" fill="#C23934">
+                        <tspan x="142" y="13">*</tspan>
+                    </text>
+                </g>
+                <g id="Rectangle-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-59)" xlink:href="#path-58"></use>
+                    <path stroke="#DDDBDA" stroke-width="1" d="M0.5,40.9940984 L0.5,212.205899 C0.5,214.135736 2.06381944,215.699997 3.99289933,215.699997 L734.007101,215.699997 C735.936516,215.699997 737.5,214.135884 737.5,212.205899 L737.5,40.9940984 C737.5,39.0642605 735.936181,37.5 734.007101,37.5 L3.99289933,37.5 C2.06348446,37.5 0.5,39.064113 0.5,40.9940984 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                </g>
+                <text id="SpringSale-April18" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="16" font-weight="bold" fill="#2B2826">
+                    <tspan x="34" y="68.9795918">SpringSale-April18</tspan>
+                </text>
+                <g id="icon---send-sms" transform="translate(16.000000, 55.000000)" fill="#000000">
+                    <path d="M9.00764286,13.8053571 C9.00764286,13.9189286 8.93121429,13.9946429 8.81692857,13.9946429 L1.18335714,13.9946429 C1.06907143,13.9946429 0.992642857,13.9189286 0.992642857,13.8053571 L0.992642857,2.4275 C0.992642857,2.31392857 1.06907143,2.19964286 1.18335714,2.19964286 L8.81692857,2.19964286 C8.93121429,2.19964286 9.00764286,2.31392857 9.00764286,2.4275 L9.00764286,13.8053571 Z M5.95407143,15.9289286 C5.95407143,16.0053571 5.87764286,16.0810714 5.76335714,16.0810714 L4.19835714,16.0810714 C4.12192857,16.0810714 4.0455,16.0053571 4.0455,15.9289286 L4.0455,15.2089286 C4.0455,15.1325 4.12192857,15.0189286 4.19835714,15.0189286 L5.76335714,15.0189286 C5.87764286,15.0189286 5.95407143,15.1325 5.95407143,15.2089286 L5.95407143,15.9289286 Z M3.77835714,0.986071429 L6.22121429,0.986071429 C6.29764286,0.986071429 6.37407143,1.06178571 6.37407143,1.1375 C6.37407143,1.21392857 6.29764286,1.28964286 6.22121429,1.28964286 L3.77835714,1.28964286 C3.70264286,1.28964286 3.62621429,1.21392857 3.62621429,1.1375 C3.62621429,1.06178571 3.70264286,0.986071429 3.77835714,0.986071429 L3.77835714,0.986071429 Z M8.28264286,0.000357142857 L1.71764286,0.000357142857 C0.763357143,0.000357142857 -0.000214285714,0.758928571 -0.000214285714,1.70678571 L-0.000214285714,15.3982143 C-0.000214285714,16.3467857 0.763357143,17.1432143 1.71764286,17.1432143 L8.28264286,17.1432143 C9.23692857,17.1432143 9.99978571,16.3467857 9.99978571,15.3982143 L9.99978571,1.70678571 C9.99978571,0.758928571 9.23692857,0.000357142857 8.28264286,0.000357142857 L8.28264286,0.000357142857 Z" id="Fill-1"></path>
+                    <path d="M7.85714286,8.93835714 C7.85714286,9.1305 7.70928571,9.2855 7.52642857,9.2855 L2.47357143,9.2855 C2.29071429,9.2855 2.14285714,9.1305 2.14285714,8.93835714 L2.14285714,7.4905 C2.14285714,7.29835714 2.29071429,7.14264286 2.47357143,7.14264286 L7.52642857,7.14264286 C7.70928571,7.14264286 7.85714286,7.29835714 7.85714286,7.4905 L7.85714286,8.93835714 Z" id="Fill-4"></path>
+                    <path d="M7.85714286,6.04264286 C7.85714286,6.2555 7.70928571,6.42835714 7.52642857,6.42835714 L2.47357143,6.42835714 C2.29071429,6.42835714 2.14285714,6.2555 2.14285714,6.04264286 L2.14285714,3.95764286 C2.14285714,3.74407143 2.29071429,3.57121429 2.47357143,3.57121429 L7.52642857,3.57121429 C7.70928571,3.57121429 7.85714286,3.74407143 7.85714286,3.95764286 L7.85714286,6.04264286 Z" id="Fill-6"></path>
+                </g>
+                <path d="M690.351675,84.5 L690.351675,53.5 L591.857785,53.5 C589.917652,53.5 588.351675,55.0668311 588.351675,57.0042577 L588.351675,80.9957423 C588.351675,82.9334144 589.919997,84.5 591.857785,84.5 L690.351675,84.5 Z" id="button" stroke="#DDDBDA" fill="#FFFFFF"></path>
+                <path d="M690.351675,53.5 L690.351675,84.5 L717.997582,84.5 C719.932414,84.5 721.504785,82.9297326 721.504785,80.9957423 L721.504785,57.0042577 C721.504785,55.0666161 719.936004,53.5 717.997582,53.5 L690.351675,53.5 Z" id="button" stroke="#DDDBDA" fill="#FFFFFF"></path>
+                <text id="Edit-Message" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#0070D2">
+                    <tspan x="603.948" y="73">Edit Message</tspan>
+                </text>
+                <path d="M702.184597,67 L709.683131,67 C709.894954,67 710.043231,67.2708333 709.873772,67.4583333 L706.209234,71.875 C706.082141,72.0416667 705.806771,72.0416667 705.679677,71.875 L701.972774,67.4583333 C701.824498,67.2708333 701.951592,67 702.184597,67" id="down" fill="#706E6B"></path>
+                <g id="Phone-Preview" transform="translate(17.000000, 86.000000)">
+                    <mask id="mask-61" fill="white">
+                        <use xlink:href="#path-60"></use>
+                    </mask>
+                    <use id="Mask" fill="#D8D8D8" xlink:href="#path-60"></use>
+                    <g mask="url(#mask-61)">
+                        <g transform="translate(0.000000, 1.000000)">
+                            <g id="Phone">
+                                <rect id="Phone-Background" stroke="#DEDBDA" fill="#ECEBEA" x="-0.5" y="-0.5" width="190" height="323.982877"></rect>
+                                <g id="Footer" transform="translate(5.825342, 316.510274)"></g>
+                                <g id="Header">
+                                    <polygon id="Rectangle-3" fill="#16325C" points="0 0 189 0 189 40.130137 0 40.130137"></polygon>
+                                    <text id="[FROM-NAME]" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="6" font-weight="normal" fill="#FFFFFF">
+                                        <tspan x="71.9623288" y="33.9503425">[FROM NAME]</tspan>
+                                    </text>
+                                </g>
+                                <g id="Profile-Icon" transform="translate(85.438356, 6.472603)">
+                                    <circle id="Oval" fill="#215CA0" cx="7.11986301" cy="7.11986301" r="7.11986301"></circle>
+                                    <path d="M10.5250149,9.53184559 L10.5250149,9.84398451 C10.5250149,10.212876 10.212876,10.5250149 9.84398451,10.5250149 L4.39574151,10.5250149 C4.02685006,10.5250149 3.71471114,10.212876 3.71471114,9.84398451 L3.71471114,9.53184559 C3.71471114,8.70893389 4.67950417,8.19816111 5.58754467,7.80089339 L5.67267347,7.75832899 C5.74361413,7.72995272 5.81455479,7.72995272 5.88549546,7.77251712 C6.25438691,8.01371538 6.66584276,8.14140858 7.10567488,8.14140858 C7.545507,8.14140858 7.97115098,7.99952725 8.3258543,7.77251712 C8.39679497,7.72995272 8.46773563,7.72995272 8.5386763,7.75832899 L8.62380509,7.80089339 C9.56022186,8.19816111 10.5250149,8.69474576 10.5250149,9.53184559 L10.5250149,9.53184559 Z M7.11986301,3.71471114 C8.05627978,3.71471114 8.80825082,4.55181097 8.80825082,5.58754467 C8.80825082,6.62327837 8.05627978,7.4603782 7.11986301,7.4603782 C6.18344625,7.4603782 5.43147521,6.62327837 5.43147521,5.58754467 C5.43147521,4.55181097 6.18344625,3.71471114 7.11986301,3.71471114 Z" id="Mask" fill="#FFFFFF"></path>
+                                </g>
+                            </g>
+                            <g id="SMS" transform="translate(6.472603, 55.664384)">
+                                <g id="Group-2" fill="#FFFFFF">
+                                    <path d="M2.5890411,9.99498455 C2.5890411,4.47490701 7.06023422,0 12.5923827,0 L131.099398,0 C136.624091,0 141.10274,4.48674668 141.10274,9.99498455 L141.10274,34.6659743 C141.10274,40.1860519 136.631547,44.6609589 131.099398,44.6609589 L12.5923827,44.6609589 C7.06768969,44.6609589 2.5890411,40.1742122 2.5890411,34.6659743 L2.5890411,9.99498455 Z" id="Rectangle-2"></path>
+                                    <path d="M2.55009974,37.5410959 C2.55009974,37.5410959 2.61475436,41.6041508 2.29320657,43.4144315 C1.97165878,45.2247122 0.247014586,46.1258278 0.247014586,46.1258278 C0.0146016716,46.2722604 0.0406211494,46.3872304 0.32513492,46.373853 C0.32513492,46.373853 3.27420544,46.4264783 6.04566565,44.6371953 C8.81712586,42.8479124 2.55009974,37.5410959 2.55009974,37.5410959 Z" id="Pointer"></path>
+                                </g>
+                                <g id="Bubble-#4" transform="translate(9.061644, 4.825342)" fill="#000000" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal" letter-spacing="-0.1218462">
+                                    <text id="Welcome-to-NTO!-Star">
+                                        <tspan x="0.171992567" y="9.00570805">Welcome to NTO! Start your </tspan>
+                                        <tspan x="0.171992567" y="21.005708">season with a band during our </tspan>
+                                        <tspan x="0.171992567" y="33.005708">20% Spring Sale.</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                            <g id="SMS" transform="translate(6.472603, 108.092466)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal" letter-spacing="-0.1218462">
+                                <g id="Bubble-#4" transform="translate(9.061644, 3.178082)" fill="#000000">
+                                    <text id="l,-summer-sale.-Shop">
+                                        <tspan x="0.171992567" y="9.00570805">l, summer sale. Shop in store </tspan>
+                                        <tspan x="0.171992567" y="21.005708">or visit www.nto.com. Open </tspan>
+                                        <tspan x="0.171992567" y="33.005708">late 9pm Thur</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                            <g id="SMS-Copy" transform="translate(6.472603, 158.578767)">
+                                <g id="Group-2" fill="#FFFFFF">
+                                    <rect id="Rectangle-2" x="2.5890411" y="0" width="138.513699" height="23.3013699" rx="11.6506849"></rect>
+                                    <path d="M2.55009974,16.1815068 C2.55009974,16.1815068 2.61475436,20.2445618 2.29320657,22.0548425 C1.97165878,23.8651231 0.247014586,24.7662388 0.247014586,24.7662388 C0.0146016716,24.9126713 0.0406211494,25.0276413 0.32513492,25.014264 C0.32513492,25.014264 3.27420544,25.0668893 6.04566565,23.2776063 C8.81712586,21.4883233 2.55009974,16.1815068 2.55009974,16.1815068 Z" id="Pointer"></path>
+                                </g>
+                                <g id="Bubble-#4" transform="translate(9.061644, 5.178082)" fill="#000000" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal" letter-spacing="-0.1218462">
+                                    <text id="sday.-To-opt-out,-Re">
+                                        <tspan x="0.171992567" y="9.00570805">sday. To opt out, Reply STOP </tspan>
+                                        <tspan x="116.698453" y="9.00570805" font-family="LucidaGrande, Lucida Grande">ф</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <path d="M248,157 L248,269" id="Divider" stroke="#DDDBDA" stroke-linecap="square"></path>
+            <text id="MESSAGE-PROPERTIES" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" letter-spacing="1" fill="#706E6B">
+                <tspan x="275" y="174">MESSAGE PROPERTIES</tspan>
+            </text>
+            <text id="Show-More" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="21" fill="#006DD5">
+                <tspan x="276" y="233">Show More</tspan>
+            </text>
+            <text id="Last-Modified:-April" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="10">
+                <tspan x="275" y="201" fill="#706E6B">Last Modified: </tspan>
+                <tspan x="363.673" y="201" fill="#2B2826">April 15, 2019</tspan>
+                <tspan x="275" y="221" fill="#706E6B">Created by: </tspan>
+                <tspan x="347.423" y="221" fill="#2B2826">Penny Tselikis</tspan>
+                <tspan x="432.911" y="223.687973" fill="#706E6B"></tspan>
+            </text>
         </g>
     </g>
 </svg>

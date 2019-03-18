@@ -218,18 +218,18 @@ function locationHashChanged(event) {
 
 		drawerDirectionOptions.forEach(direction => {
 
+			console.log(`direction: `, direction);
+
 			// Direction is just the direction, capitalied, so that the camelCase stuff is correct.
 			const Direction = direction.charAt(0).toUpperCase() + direction.substring(1);
 
 			// First we will hide any previous screen's drawer.
 			if (document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`) !== null) {
 				if ( magickFlowConfig.metaData[previousClick][`showDrawerFrom${Direction}`] === true ) {
+					document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.remove('slide-in');
 					setTimeout(() => {
-						document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.remove('slide-in');
-						setTimeout(() => {
-							document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.add('slds-hide');
-						}, 250);
-					}, 0);
+						document.querySelector(`.drawer-from-${direction}--slide-${previousClick}`).classList.add('slds-hide');
+					}, 125);
 					delayTransition = 250;
 				}
 			}
@@ -240,19 +240,19 @@ function locationHashChanged(event) {
 				document.querySelector(`.drawer-from-${direction}--slide-${clicks}`).classList.remove('slds-hide');
 				window.setTimeout(() => {
 					document.querySelector(`.drawer-from-${direction}--slide-${clicks}`).classList.add('slide-in');
-				}, 250);
+				}, 125);
 			}
 
 			// Finally, we will hide the _next_ screen's drawer, too -- this is in case we're going backwards.
 			if (document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`) !== null) {
 				if ( magickFlowConfig.metaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
+					document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.remove('slide-in');
 					setTimeout(() => {
-						document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.remove('slide-in');
-						setTimeout(() => {
-							document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.add('slds-hide');
-						}, 250);
+						document.querySelector(`.drawer-from-${direction}--slide-${nextClick}`).classList.add('slds-hide');
+					}, 250);
+					setTimeout(() => {
 					}, 0);
-					delayTransition = 250;
+					delayTransition = 125;
 				}
 			}
 		});

@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/jb-test-run-nto/main/0000___marketing-cloud-dashboard___DATA=has-sticky-header__use-slide-transition__slide-transition_auto-advance__slide-transition-timing--slow___NOTES=menu-auto-shows.svg") url("/magick-flows/jb-test-run-nto/main/0001___marketing-cloud-dashboard___DATA=has-sticky-header__use-slide-transition__slide-transition_auto-advance__slide-transition-timing--normal___NOTES=menu-fake-hover.svg") url("/magick-flows/jb-test-run-nto/main/0002___marketing-cloud-dashboard___DATA=has-sticky-header___NOTES=menu-fully-showing-now.svg") url("/magick-flows/jb-test-run-nto/main/0010___ID=journey-canvas-with-simple-journey.svg") url("/magick-flows/jb-test-run-nto/main/0020___ID=review-journey-analytics___DATA=has-sticky-header__show-drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/main/0030___ID=journey-canvas-with-simple-journey.svg") url("/magick-flows/jb-test-run-nto/main/0040___ID=review-email-analytics___DATA=show-drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/main/0041___ID=review-email-analytics-details___DATA=show-drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/main/0042___ID=review-email-analytics___DATA=show-drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/main/0045___ID=editable-journey-canvas.svg") url("/magick-flows/jb-test-run-nto/main/0046___ID=update-header-default-journey-navigation___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0047___ID=update-header-default-journey-navigation___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0048___ID=update-header-default-journey-navigation___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0049___ID=update-header-default-journey-navigation___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0050___ID=update-header-default-journey-navigation.svg") url("/magick-flows/jb-test-run-nto/main/0052___ID=open-builder-drawer.svg") url("/magick-flows/jb-test-run-nto/main/0053___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0054___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0055___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0056___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0057___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0058___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0059___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0060___ID=message-is-dropped___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0070___ID=smsa-builder-drawer-opens.svg") url("/magick-flows/jb-test-run-nto/main/0071___ID=smsa-editor-slides-out.svg") url("/magick-flows/jb-test-run-nto/main/0075___ID=add-smsa-message.svg") url("/magick-flows/jb-test-run-nto/main/0080___ID=return-to-smsa-activity.svg") url("/magick-flows/jb-test-run-nto/assets/builder-drawer-opens___drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/assets/marketing-cloud-dashboard___sticky-header.svg") url("/magick-flows/jb-test-run-nto/assets/review-email-analytics___drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/assets/review-email-analytics-details___drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/assets/review-journey-analytics___drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/assets/review-journey-analytics___sticky-header.svg");
+  content: url("/magick-flows/jb-test-run-nto/main/0000___marketing-cloud-dashboard___DATA=has-sticky-header__use-slide-transition__slide-transition_auto-advance__slide-transition-timing--slow___NOTES=menu-auto-shows.svg") url("/magick-flows/jb-test-run-nto/main/0001___marketing-cloud-dashboard___DATA=has-sticky-header__use-slide-transition__slide-transition_auto-advance__slide-transition-timing--normal___NOTES=menu-fake-hover.svg") url("/magick-flows/jb-test-run-nto/main/0002___marketing-cloud-dashboard___DATA=has-sticky-header___NOTES=menu-fully-showing-now.svg") url("/magick-flows/jb-test-run-nto/main/0005___ID=journey-dashboard___NOTES=Select-existing-Journey-from-the-current-folder.png") url("/magick-flows/jb-test-run-nto/main/0010___ID=journey-canvas-with-simple-journey.svg") url("/magick-flows/jb-test-run-nto/main/0020___ID=review-journey-analytics___DATA=show-drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/main/0030___ID=journey-canvas-with-simple-journey.svg") url("/magick-flows/jb-test-run-nto/main/0040___ID=review-email-analytics-summary___DATA=show-drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/main/0041___ID=review-email-analytics-details___DATA=show-drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/main/0042___ID=review-email-analytics-summary___DATA=show-drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/main/0050___ID=new-version-clicked-with-draft-navigation.svg") url("/magick-flows/jb-test-run-nto/main/0051___ID=open-builder-drawer.svg") url("/magick-flows/jb-test-run-nto/main/0052___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0053___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0054___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0055___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0056___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0057___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0058___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0059___ID=message-is-dropped___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0070___ID=smsa-activity-panel-opens___DATA=show-drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/main/0071___ID=smsa-editor-slides-out___DATA=show-drawer-from-left__use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/jb-test-run-nto/main/0073___ID=smsa-editor-1.svg") url("/magick-flows/jb-test-run-nto/main/0075___ID=smsa-editor-2.svg") url("/magick-flows/jb-test-run-nto/main/0077___ID=smsa-editor-closes.svg") url("/magick-flows/jb-test-run-nto/assets/marketing-cloud-dashboard___sticky-header.svg") url("/magick-flows/jb-test-run-nto/assets/review-email-analytics-details___drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/assets/review-email-analytics-summary___drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/assets/review-journey-analytics___drawer-from-left.svg") url("/magick-flows/jb-test-run-nto/assets/review-journey-analytics___sticky-header.svg") url("/magick-flows/jb-test-run-nto/assets/smsa-activity-panel-opens___drawer-from-left.svg");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -41,43 +41,43 @@ body, .container {
 .ios-notification {
   margin: 0 auto;
   position: absolute;
-  transition: 250ms top ease-in-out;
+  transition: 500ms top ease-in-out;
   width: 1280px;
   background-color: transparent;
   height: 720px;
   top: -720px;
-  transition: 250ms top ease-in-out;
+  transition: 500ms top ease-in-out;
   will-change: top;
 }
 
 .ios-notification.slide-in {
   top: 0px;
-  transition: 250ms top ease-in-out;
+  transition: 500ms top ease-in-out;
   will-change: top;
 }
 
 .drawer-from-top {
   margin: 0 auto;
   position: absolute;
-  transition: 250ms top ease-in-out;
+  transition: 500ms top ease-in-out;
   width: 1280px;
   background-color: transparent;
   height: 720px;
   top: -720px;
-  transition: 250ms top ease-in-out;
+  transition: 500ms top ease-in-out;
   will-change: top;
 }
 
 .drawer-from-top.slide-in {
   top: 0px;
-  transition: 250ms top ease-in-out;
+  transition: 500ms top ease-in-out;
   will-change: top;
 }
 
 .drawer-from-left {
   margin: 0 auto;
   position: absolute;
-  transition: 250ms left ease-in-out;
+  transition: 500ms left ease-in-out;
   width: 1280px;
   background-color: transparent;
   height: 720px;
@@ -88,14 +88,14 @@ body, .container {
 
 .drawer-from-left.slide-in {
   left: 0px;
-  transition: 250ms left ease-in-out;
+  transition: 500ms left ease-in-out;
   will-change: left;
 }
 
 .drawer-from-right {
   margin: 0 auto;
   position: absolute;
-  transition: 250ms right ease-in-out;
+  transition: 500ms right ease-in-out;
   width: 1280px;
   background-color: transparent;
   height: 720px;
@@ -106,14 +106,14 @@ body, .container {
 
 .drawer-from-right.slide-in {
   right: 0px;
-  transition: 250ms right ease-in-out;
+  transition: 500ms right ease-in-out;
   will-change: right;
 }
 
 .drawer-from-bottom {
   margin: 0 auto;
   position: absolute;
-  transition: 250ms bottom ease-in-out;
+  transition: 500ms bottom ease-in-out;
   width: 1280px;
   background-color: transparent;
   height: 720px;
@@ -123,7 +123,7 @@ body, .container {
 
 .drawer-from-bottom.slide-in {
   bottom: 0px;
-  transition: 250ms bottom ease-in-out;
+  transition: 500ms bottom ease-in-out;
   will-change: bottom;
 }
 
@@ -137,7 +137,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 36380px;
+  width: 62720px;
 }
 
 .app-switcher-one.shrink {
@@ -166,7 +166,7 @@ body, .container {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: -1250px;
+  left: 640px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -188,13 +188,13 @@ body, .container {
 }
 
 .app-switcher-one.be-left-1 {
-  left: -1300px;
+  left: -2560px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -1300px;
+  left: -2560px;
 }
 
 .magick-flows--slide-1 {
@@ -202,17 +202,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 1300px;
+  left: 2560px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -2600px;
+  left: -5120px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -2600px;
+  left: -5120px;
 }
 
 .magick-flows--slide-2 {
@@ -220,17 +220,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 2600px;
+  left: 5120px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -3900px;
+  left: -7680px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -3900px;
+  left: -7680px;
 }
 
 .magick-flows--slide-3 {
@@ -238,17 +238,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 3900px;
+  left: 7680px;
 }
 
 .app-switcher-one.be-left-4 {
-  left: -5200px;
+  left: -10240px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-4 {
-  left: -5200px;
+  left: -10240px;
 }
 
 .magick-flows--slide-4 {
@@ -256,17 +256,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 5200px;
+  left: 10240px;
 }
 
 .app-switcher-one.be-left-5 {
-  left: -6500px;
+  left: -12800px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-5 {
-  left: -6500px;
+  left: -12800px;
 }
 
 .magick-flows--slide-5 {
@@ -274,17 +274,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 6500px;
+  left: 12800px;
 }
 
 .app-switcher-one.be-left-6 {
-  left: -7800px;
+  left: -15360px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-6 {
-  left: -7800px;
+  left: -15360px;
 }
 
 .magick-flows--slide-6 {
@@ -292,17 +292,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 7800px;
+  left: 15360px;
 }
 
 .app-switcher-one.be-left-7 {
-  left: -9100px;
+  left: -17920px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-7 {
-  left: -9100px;
+  left: -17920px;
 }
 
 .magick-flows--slide-7 {
@@ -310,17 +310,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 9100px;
+  left: 17920px;
 }
 
 .app-switcher-one.be-left-8 {
-  left: -10400px;
+  left: -20480px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-8 {
-  left: -10400px;
+  left: -20480px;
 }
 
 .magick-flows--slide-8 {
@@ -328,17 +328,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 10400px;
+  left: 20480px;
 }
 
 .app-switcher-one.be-left-9 {
-  left: -11700px;
+  left: -23040px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-9 {
-  left: -11700px;
+  left: -23040px;
 }
 
 .magick-flows--slide-9 {
@@ -346,17 +346,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 11700px;
+  left: 23040px;
 }
 
 .app-switcher-one.be-left-10 {
-  left: -13000px;
+  left: -25600px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-10 {
-  left: -13000px;
+  left: -25600px;
 }
 
 .magick-flows--slide-10 {
@@ -364,17 +364,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 13000px;
+  left: 25600px;
 }
 
 .app-switcher-one.be-left-11 {
-  left: -14300px;
+  left: -28160px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-11 {
-  left: -14300px;
+  left: -28160px;
 }
 
 .magick-flows--slide-11 {
@@ -382,17 +382,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 14300px;
+  left: 28160px;
 }
 
 .app-switcher-one.be-left-12 {
-  left: -15600px;
+  left: -30720px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-12 {
-  left: -15600px;
+  left: -30720px;
 }
 
 .magick-flows--slide-12 {
@@ -400,17 +400,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 15600px;
+  left: 30720px;
 }
 
 .app-switcher-one.be-left-13 {
-  left: -16900px;
+  left: -33280px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-13 {
-  left: -16900px;
+  left: -33280px;
 }
 
 .magick-flows--slide-13 {
@@ -418,17 +418,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 16900px;
+  left: 33280px;
 }
 
 .app-switcher-one.be-left-14 {
-  left: -18200px;
+  left: -35840px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-14 {
-  left: -18200px;
+  left: -35840px;
 }
 
 .magick-flows--slide-14 {
@@ -436,17 +436,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 18200px;
+  left: 35840px;
 }
 
 .app-switcher-one.be-left-15 {
-  left: -19500px;
+  left: -38400px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-15 {
-  left: -19500px;
+  left: -38400px;
 }
 
 .magick-flows--slide-15 {
@@ -454,17 +454,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 19500px;
+  left: 38400px;
 }
 
 .app-switcher-one.be-left-16 {
-  left: -20800px;
+  left: -40960px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-16 {
-  left: -20800px;
+  left: -40960px;
 }
 
 .magick-flows--slide-16 {
@@ -472,17 +472,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 20800px;
+  left: 40960px;
 }
 
 .app-switcher-one.be-left-17 {
-  left: -22100px;
+  left: -43520px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-17 {
-  left: -22100px;
+  left: -43520px;
 }
 
 .magick-flows--slide-17 {
@@ -490,17 +490,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 22100px;
+  left: 43520px;
 }
 
 .app-switcher-one.be-left-18 {
-  left: -23400px;
+  left: -46080px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-18 {
-  left: -23400px;
+  left: -46080px;
 }
 
 .magick-flows--slide-18 {
@@ -508,17 +508,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 23400px;
+  left: 46080px;
 }
 
 .app-switcher-one.be-left-19 {
-  left: -24700px;
+  left: -48640px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-19 {
-  left: -24700px;
+  left: -48640px;
 }
 
 .magick-flows--slide-19 {
@@ -526,17 +526,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 24700px;
+  left: 48640px;
 }
 
 .app-switcher-one.be-left-20 {
-  left: -26000px;
+  left: -51200px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-20 {
-  left: -26000px;
+  left: -51200px;
 }
 
 .magick-flows--slide-20 {
@@ -544,17 +544,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 26000px;
+  left: 51200px;
 }
 
 .app-switcher-one.be-left-21 {
-  left: -27300px;
+  left: -53760px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-21 {
-  left: -27300px;
+  left: -53760px;
 }
 
 .magick-flows--slide-21 {
@@ -562,17 +562,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 27300px;
+  left: 53760px;
 }
 
 .app-switcher-one.be-left-22 {
-  left: -28600px;
+  left: -56320px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-22 {
-  left: -28600px;
+  left: -56320px;
 }
 
 .magick-flows--slide-22 {
@@ -580,17 +580,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 28600px;
+  left: 56320px;
 }
 
 .app-switcher-one.be-left-23 {
-  left: -29900px;
+  left: -58880px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-23 {
-  left: -29900px;
+  left: -58880px;
 }
 
 .magick-flows--slide-23 {
@@ -598,17 +598,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 29900px;
+  left: 58880px;
 }
 
 .app-switcher-one.be-left-24 {
-  left: -31200px;
+  left: -61440px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-24 {
-  left: -31200px;
+  left: -61440px;
 }
 
 .magick-flows--slide-24 {
@@ -616,17 +616,17 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 31200px;
+  left: 61440px;
 }
 
 .app-switcher-one.be-left-25 {
-  left: -32500px;
+  left: -64000px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-25 {
-  left: -32500px;
+  left: -64000px;
 }
 
 .magick-flows--slide-25 {
@@ -634,61 +634,7 @@ body, .container {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 32500px;
-}
-
-.app-switcher-one.be-left-26 {
-  left: -33800px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-26 {
-  left: -33800px;
-}
-
-.magick-flows--slide-26 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 33800px;
-}
-
-.app-switcher-one.be-left-27 {
-  left: -35100px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-27 {
-  left: -35100px;
-}
-
-.magick-flows--slide-27 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 35100px;
-}
-
-.app-switcher-one.be-left-28 {
-  left: -36400px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-28 {
-  left: -36400px;
-}
-
-.magick-flows--slide-28 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 36400px;
+  left: 64000px;
 }
 
 footer.magick-flows-stickey-footer_container {
