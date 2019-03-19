@@ -60,6 +60,16 @@
 
 	&__control .slds-combobox_container {
 		display: inline-flex;
+
+		&[disabled] {
+		    .slds-input, .slds-input::placeholder {
+		    	color: #dddbda;
+	    	}
+
+			.slds-icon {
+			    fill: #dddbda;
+			}
+		}
 	}
 }
 

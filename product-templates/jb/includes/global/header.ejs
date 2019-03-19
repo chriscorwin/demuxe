@@ -3,9 +3,11 @@
 const button = (data) => {
 	let html = '';
 
-	let selected = (data.isSelected) ? ' slds-is-selected' : '';
-	const disabled = (data.isDisabled) ? ' disabled=""' : '';
-	let variant = (data.variant) ? `slds-button_${data.variant}` : 'slds-button_neutral';
+	console.log('data', data);
+
+	const selected = (data.isSelected && data.isSelected === true) ? ' slds-is-selected' : '';
+	const disabled = (data.isDisabled && data.isDisabled === true) ? ' disabled=""' : '';
+	const variant = (data.variant) ? `slds-button_${data.variant}` : 'slds-button_neutral';
 
 	if (data.iconPath || data.imgPath) {
 		html += `<button class="slds-button slds-button_icon slds-button_icon-more slds-button_icon-border-filled${selected}"${disabled} title="${data.title}" aria-pressed="false">`
@@ -87,7 +89,7 @@ const combobox = (data) => {
 		</div>
 		 <div class="slds-global-header__item">
 			<ul class="slds-global-actions">
-				<% if (localization.header && localization.header.favorites) { %>
+				<% if (localization.states[locals.state].header && localization.states[locals.state].header.favorites) { %>
 				<li class="slds-global-actions__item">
 					<div class="slds-global-actions__favorites slds-dropdown-trigger slds-dropdown-trigger_click">
 						<div class="slds-button-group">
@@ -107,7 +109,7 @@ const combobox = (data) => {
 					</div>
 				</li>
 				<% } %>
-				<% if (localization.header && localization.header.global_actions) { %>
+				<% if (localization.states[locals.state].header && localization.states[locals.state].header.global_actions) { %>
 				<li class="slds-global-actions__item">
 					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
 						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action" aria-haspopup="true" title="Global Actions">
@@ -119,7 +121,7 @@ const combobox = (data) => {
 					</div>
 				</li>
 				<% } %>
-				<% if (localization.header && localization.header.help) { %>
+				<% if (localization.states[locals.state].header && localization.states[locals.state].header.help) { %>
 				<li class="slds-global-actions__item">
 					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
 						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action" aria-haspopup="true" title="Help and Training">
@@ -131,7 +133,7 @@ const combobox = (data) => {
 					</div>
 				</li>
 				<% } %>
-				<% if (localization.header && localization.header.setup) { %>
+				<% if (localization.states[locals.state].header && localization.states[locals.state].header.setup) { %>
 				<li class="slds-global-actions__item">
 					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
 						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action" aria-haspopup="true" title="Setup">
@@ -143,7 +145,7 @@ const combobox = (data) => {
 					</div>
 				</li>
 				<% } %>
-				<% if (localization.header && localization.header.notifications) { %>
+				<% if (localization.states[locals.state].header && localization.states[locals.state].header.notifications) { %>
 				<li class="slds-global-actions__item">
 					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
 						<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action" title="no new notifications" aria-live="assertive" aria-atomic="true">
@@ -156,12 +158,12 @@ const combobox = (data) => {
 					</div>
 				</li>
 				<% } %>
-				<% if (localization.header && localization.header.avatar) { %>
+				<% if (localization.states[locals.state].header && localization.states[locals.state].header.avatar) { %>
 				<li class="slds-global-actions__item">
 					<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
 						<button class="slds-button slds-global-actions__avatar slds-global-actions__item-action" title="person name" aria-haspopup="true">
 							<span class="slds-avatar slds-avatar_circle slds-avatar_medium">
-								<img alt="Person name" src="<%= localization.header.avatar %>" title="User avatar" />
+								<img alt="Person name" src="<%= localization.states[locals.state].header.avatar %>" title="User avatar" />
 							</span>
 						</button>
 					</div>
@@ -203,7 +205,7 @@ const combobox = (data) => {
 						<div class="slds-page-header__name">
 							<div class="slds-page-header__name-title">
 								<h1>
-									<span class="slds-page-header__title slds-truncate" title="<%= localization.journeyName %>"><%= localization.journeyName %></span>
+									<span class="slds-page-header__title slds-truncate" title="<%= localization.states[locals.state].journeyName %>"><%= localization.states[locals.state].journeyName %></span>
 									<span class="slds-icon_container slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true"><use xlink:href="/icons/utility-sprite/svg/symbols.svg#edit"></use></svg></span>
 									<span class="slds-icon_container slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true"><use xlink:href="/icons/utility-sprite/svg/symbols.svg#chevronright"></use></svg></span>
 								</h1>
@@ -215,7 +217,7 @@ const combobox = (data) => {
 			<div class="slds-page-header__col-actions">
 				<div class="slds-page-header__controls">
 					<div class="slds-page-header__control">
-						<% localization.controls.states[locals.state].forEach((control) => {
+						<% localization.states[locals.state].controls.forEach((control) => {
 								switch(control.type) {
 									case 'button-group': %>
 									<div class="slds-button-group" role="group">

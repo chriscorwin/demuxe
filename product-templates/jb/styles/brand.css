@@ -59,6 +59,14 @@
   display: inline-flex;
 }
 
+.slds-page-header__control .slds-combobox_container[disabled] .slds-input, .slds-page-header__control .slds-combobox_container[disabled] .slds-input::placeholder {
+  color: #dddbda;
+}
+
+.slds-page-header__control .slds-combobox_container[disabled] .slds-icon {
+  fill: #dddbda;
+}
+
 #content-wrapper {
   margin-left: 1rem;
   margin-right: 1rem;

@@ -3,7 +3,7 @@
 	    <defs>
 	        <path d="M12.5384615,0.615384615 L4.53846154,0.615384615 C3.86153846,0.615384615 3.30769231,1.16923077 3.30769231,1.84615385 L3.30769231,2.46153846 L10.6923077,2.46153846 C11.3692308,2.46153846 11.9230769,3.01538462 11.9230769,3.69230769 L11.9230769,12.3076923 L12.5384615,12.3076923 C13.2153846,12.3076923 13.7692308,11.7538462 13.7692308,11.0769231 L13.7692308,1.84615385 C13.7692308,1.16923077 13.2153846,0.615384615 12.5384615,0.615384615 Z M10.6923077,4.92307692 C10.6923077,4.24615385 10.1384615,3.69230769 9.46153846,3.69230769 L1.46153846,3.69230769 C0.784615385,3.69230769 0.230769231,4.24615385 0.230769231,4.92307692 L0.230769231,14.1538462 C0.230769231,14.8307692 0.784615385,15.3846154 1.46153846,15.3846154 L9.46153846,15.3846154 C10.1384615,15.3846154 10.6923077,14.8307692 10.6923077,14.1538462 L10.6923077,4.92307692 Z M5.15384615,7.07692308 C5.15384615,7.26153846 5.03076923,7.38461538 4.84615385,7.38461538 L2.38461538,7.38461538 C2.2,7.38461538 2.07692308,7.26153846 2.07692308,7.07692308 L2.07692308,6.46153846 C2.07692308,6.27692308 2.2,6.15384615 2.38461538,6.15384615 L4.84615385,6.15384615 C5.03076923,6.15384615 5.15384615,6.27692308 5.15384615,6.46153846 L5.15384615,7.07692308 Z M7.61538462,12 C7.61538462,12.1846154 7.49230769,12.3076923 7.30769231,12.3076923 L2.38461538,12.3076923 C2.2,12.3076923 2.07692308,12.1846154 2.07692308,12 L2.07692308,11.3846154 C2.07692308,11.2 2.2,11.0769231 2.38461538,11.0769231 L7.30769231,11.0769231 C7.49230769,11.0769231 7.61538462,11.2 7.61538462,11.3846154 L7.61538462,12 Z M8.84615385,9.53846154 C8.84615385,9.72307692 8.72307692,9.84615385 8.53846154,9.84615385 L2.38461538,9.84615385 C2.2,9.84615385 2.07692308,9.72307692 2.07692308,9.53846154 L2.07692308,8.92307692 C2.07692308,8.73846154 2.2,8.61538462 2.38461538,8.61538462 L8.53846154,8.61538462 C8.72307692,8.61538462 8.84615385,8.73846154 8.84615385,8.92307692 L8.84615385,9.53846154 Z" id="path-1"></path>
 	    </defs>
-	    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+	    <g id="Symbols" stroke="none" stroke-width="1">
 	        <g id="Nav/Draft-Journey" transform="translate(-796.000000, -23.000000)">
 	            <g id="Nav:-Draft-Journey">
 	                <g id="Right" transform="translate(577.000000, 16.000000)">
@@ -11,13 +11,13 @@
 	                        <g id="Inactive">
 	                            <g id="Group-2" transform="translate(56.000000, 7.000000)">
 	                                <g id="icons/utility/copy" transform="translate(4.000000, 0.000000)">
-	                                    <mask id="mask-2" fill="white">
+	                                    <mask id="mask-2">
 	                                        <use xlink:href="#path-1"></use>
 	                                    </mask>
-	                                    <use id="Mask" fill="#6F6E6B" xlink:href="#path-1"></use>
+	                                    <use id="Mask" xlink:href="#path-1"></use>
 	                                </g>
-	                                <rect id="Rectangle-6" fill="#6F6E6B" transform="translate(5.410534, 15.410534) rotate(-45.000000) translate(-5.410534, -15.410534) " x="1.875" y="11.875" width="7.07106781" height="7.07106781" rx="1"></rect>
-	                                <rect id="Rectangle-6" stroke="#FFFFFF" fill="#6F6E6B" transform="translate(5.500000, 15.500000) rotate(-45.000000) translate(-5.500000, -15.500000) " x="1.5" y="11.5" width="8" height="8" rx="1"></rect>
+	                                <rect id="Rectangle-6" transform="translate(5.410534, 15.410534) rotate(-45.000000) translate(-5.410534, -15.410534) " x="1.875" y="11.875" width="7.07106781" height="7.07106781" rx="1"></rect>
+	                                <rect id="Rectangle-6" stroke="#FFFFFF" transform="translate(5.500000, 15.500000) rotate(-45.000000) translate(-5.500000, -15.500000) " x="1.5" y="11.5" width="8" height="8" rx="1"></rect>
 	                            </g>
 	                        </g>
 	                    </g>
@@ -27,8 +27,8 @@
 	    </g>
 	</symbol>
 	<symbol id="trophy" viewBox="0 0 15 15">
-	    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-	        <g id="Nav/Running-Journey" transform="translate(-1046.000000, -24.000000)" fill="#706E6B" fill-rule="nonzero">
+	    <g id="Symbols" stroke="none" stroke-width="1">
+	        <g id="Nav/Running-Journey" transform="translate(-1046.000000, -24.000000)">
 	            <g id="Nav:-Running-Journey">
 	                <g id="Right" transform="translate(899.000000, 14.000000)">
 	                    <g id="Goal/Exit-Button" transform="translate(109.000000, 1.000000)">
@@ -40,8 +40,8 @@
 	    </g>
 	</symbol>
 	<symbol id="upload-right" viewBox="0 0 14 14">
-	    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-	        <g id="Nav/Running-Journey" transform="translate(-1078.000000, -24.000000)" fill="#706E6B" fill-rule="nonzero">
+	    <g id="Symbols" stroke="none" stroke-width="1">
+	        <g id="Nav/Running-Journey" transform="translate(-1078.000000, -24.000000)">
 	            <g id="Nav:-Running-Journey">
 	                <g id="Right" transform="translate(899.000000, 14.000000)">
 	                    <g id="Goal/Exit-Button" transform="translate(109.000000, 1.000000)">
