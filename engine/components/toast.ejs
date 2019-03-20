@@ -30,8 +30,7 @@ const toastId = locals.id || locals.theme+'Toast';
 <script>
 	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the 
 	// flow, which we need to do in order to keep global nav dropdowns working.
-	let toastElement =  document.getElementById('<%= toastId %>');
-	if (typeof(toastElement) != 'undefined' && toastElement != null) {
+	if (typeof(document.getElementById('<%= toastId %>')) != 'undefined' && document.getElementById('<%= toastId %>') != null) {
 		window.setTimeout(() => {
 			document.querySelector('#<%= toastId %>').classList.add('slds-transition-hide');
 			document.querySelector('#<%= toastId %>').classList.remove('slds-hide');

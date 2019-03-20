@@ -215,8 +215,6 @@ function locationHashChanged(event) {
 
 		drawerDirectionOptions.forEach(direction => {
 
-			console.log(`direction: `, direction);
-
 			// Direction is just the direction, capitalied, so that the camelCase stuff is correct.
 			const Direction = direction.charAt(0).toUpperCase() + direction.substring(1);
 

@@ -35,6 +35,7 @@ _%>
 		const showHeader = node.hasStickyHeader === true || false;
 		const showFooter = node.hasStickyFooter === true || false;
 		const nodeData = node.data;
+		const nodeNotes = node.notes;
 
 
 		let headerHeight = node.stickyHeaderHeight | 0;
@@ -223,6 +224,7 @@ _%>
 		echo(`</div>`)
 	
 
+
 %>
 
 
@@ -242,6 +244,13 @@ _%>
 	<%- iosNotificationHtmlOut %>
 
 </div>
+
+<%- include('components/toast', {
+	id: `${node.id}-toast`,
+	contents: `${JSON.stringify(node.notes)}`,
+	title: 'Notes',
+	theme: 'success'
+}) %>
 
 
 <%_ }); _%>
