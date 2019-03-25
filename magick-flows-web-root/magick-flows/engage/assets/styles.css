@@ -1,0 +1,508 @@
+/* This is done to preload images and reduce load flicker */
+body::after {
+  backface-visibility: visible;
+  content: url("/magick-flows/know/main/0000___ID=mc-homepage___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/0500___ID=mc-homepage-social-hover___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/1000___ID=social-analyze-dashboard___NOTES=Click-publish-to-go-to-calendar.png") url("/magick-flows/know/main/1500___ID=social-publish-calendar___NOTES=Click-Thursday-1pm-to-show-social-network-menu.png") url("/magick-flows/know/main/2000___ID=social-publish-post___NOTES=Choose-Facebook.png") url("/magick-flows/know/main/2500___ID=social-facebook-post___NOTES=Click-Post-to-input-field.png") url("/magick-flows/know/main/3000___ID=social-facebook-post___NOTES=Click-Facebook-from-dropdown.png") url("/magick-flows/know/main/3500___ID=social-facebook-post___NOTES=Click-into-main-text-area__Fake-content-will-appear.png") url("/magick-flows/know/main/3510___ID=social-facebook-post___NOTES=Click-Upload-Images.png") url("/magick-flows/know/main/4000___ID=social-facebook-post___DATA=show-drawer-from-top___NOTES=Choosing-an-image.png") url("/magick-flows/know/main/4500___ID=social-facebook-post-image-selected___NOTES=Click-Engage-from-blue-navbar.png") url("/magick-flows/know/main/5000___ID=social-engage___NOTES=Notes-go-here__Select-community-tab-in-footer.png") url("/magick-flows/know/main/5500___ID=social-engage-community___NOTES=Click-top-left-card__A-drawer-will-open.png") url("/magick-flows/know/main/6000___ID=social-engage-inspect___DATA=show-drawer-from-right___NOTES=Choose-Create-Case-in-Service-Cloud.png") url("/magick-flows/know/main/6500___ID=social-engage-macros___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/assets/social-engage-inspect___drawer-from-right.png") url("/magick-flows/know/assets/social-facebook-post___drawer-from-top.png") url("/magick-flows/know/assets/social-facebook-post-image-to-choose.jpg");
+  outline: 1px solid red;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* prevent tap highlight color / shadow */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+}
+
+body {
+  background: white;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body, .container {
+  background: url("/images/home-background.jpg") no-repeat top left;
+  background-size: 100% 100%;
+  height: 720px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+}
+
+.ios-notification {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms top ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: -720px;
+  transition: 500ms top ease-in-out;
+  will-change: top;
+}
+
+.ios-notification.slide-in {
+  top: 0px;
+  transition: 500ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms top ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: -720px;
+  transition: 500ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-top.slide-in {
+  top: 0px;
+  transition: 500ms top ease-in-out;
+  will-change: top;
+}
+
+.drawer-from-left {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms left ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: 0;
+  left: -1280px;
+  will-change: left;
+}
+
+.drawer-from-left.slide-in {
+  left: 0px;
+  transition: 500ms left ease-in-out;
+  will-change: left;
+}
+
+.drawer-from-right {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms right ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: 0;
+  right: -1280px;
+  will-change: right;
+}
+
+.drawer-from-right.slide-in {
+  right: 0px;
+  transition: 500ms right ease-in-out;
+  will-change: right;
+}
+
+.drawer-from-bottom {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms bottom ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  bottom: -720px;
+  will-change: bottom;
+}
+
+.drawer-from-bottom.slide-in {
+  bottom: 0px;
+  transition: 500ms bottom ease-in-out;
+  will-change: bottom;
+}
+
+.magick-flows-slide {
+  background-color: transparent;
+}
+
+.app-switcher-one {
+  height: 720px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 400ms transform, 800ms left;
+  width: 37120px;
+}
+
+.app-switcher-one.shrink {
+  transform: scale(0.95);
+  will-change: transform;
+}
+
+.app-switcher-one.shrink .magick-flows--slide {
+  background-color: white;
+}
+
+.app-switcher-one.rounded-corners .magick-flows-slide {
+  border-radius: 2rem;
+  background-clip: border-box;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
+}
+
+.app-switcher-one.rounded-corners .magick-flows-slide .slds-scrollable {
+  max-height: 720px;
+  height: 720px;
+}
+
+.app-switcher-one.rounded-corners .magick-flows-slide.notification {
+  background-color: transparent;
+}
+
+.app-switcher-one.slide-left-0 {
+  left: 640px;
+}
+
+.app-switcher-one.be-left-0 {
+  left: 0px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-0 {
+  left: 0px;
+}
+
+.magick-flows--slide-0 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 0px;
+}
+
+.app-switcher-one.be-left-1 {
+  left: -2560px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-1 {
+  left: -2560px;
+}
+
+.magick-flows--slide-1 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 2560px;
+}
+
+.app-switcher-one.be-left-2 {
+  left: -5120px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-2 {
+  left: -5120px;
+}
+
+.magick-flows--slide-2 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 5120px;
+}
+
+.app-switcher-one.be-left-3 {
+  left: -7680px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-3 {
+  left: -7680px;
+}
+
+.magick-flows--slide-3 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 7680px;
+}
+
+.app-switcher-one.be-left-4 {
+  left: -10240px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-4 {
+  left: -10240px;
+}
+
+.magick-flows--slide-4 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 10240px;
+}
+
+.app-switcher-one.be-left-5 {
+  left: -12800px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-5 {
+  left: -12800px;
+}
+
+.magick-flows--slide-5 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 12800px;
+}
+
+.app-switcher-one.be-left-6 {
+  left: -15360px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-6 {
+  left: -15360px;
+}
+
+.magick-flows--slide-6 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 15360px;
+}
+
+.app-switcher-one.be-left-7 {
+  left: -17920px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-7 {
+  left: -17920px;
+}
+
+.magick-flows--slide-7 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 17920px;
+}
+
+.app-switcher-one.be-left-8 {
+  left: -20480px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-8 {
+  left: -20480px;
+}
+
+.magick-flows--slide-8 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 20480px;
+}
+
+.app-switcher-one.be-left-9 {
+  left: -23040px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-9 {
+  left: -23040px;
+}
+
+.magick-flows--slide-9 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 23040px;
+}
+
+.app-switcher-one.be-left-10 {
+  left: -25600px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-10 {
+  left: -25600px;
+}
+
+.magick-flows--slide-10 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 25600px;
+}
+
+.app-switcher-one.be-left-11 {
+  left: -28160px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-11 {
+  left: -28160px;
+}
+
+.magick-flows--slide-11 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 28160px;
+}
+
+.app-switcher-one.be-left-12 {
+  left: -30720px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-12 {
+  left: -30720px;
+}
+
+.magick-flows--slide-12 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 30720px;
+}
+
+.app-switcher-one.be-left-13 {
+  left: -33280px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-13 {
+  left: -33280px;
+}
+
+.magick-flows--slide-13 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 33280px;
+}
+
+.app-switcher-one.be-left-14 {
+  left: -35840px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-14 {
+  left: -35840px;
+}
+
+.magick-flows--slide-14 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 35840px;
+}
+
+.app-switcher-one.be-left-15 {
+  left: -38400px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-15 {
+  left: -38400px;
+}
+
+.magick-flows--slide-15 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 38400px;
+}
+
+footer.magick-flows-stickey-footer_container {
+  position: absolute;
+  bottom: 0;
+}
+
+/**
+ * @summary Hides an element from the page by setting the opacity property set to `0`
+ *
+ * @selector .transition-hide
+ * @notes This works like the `.slds-hidden` class and reserves the space but allows you to add the `transition` property to transition the speed that it is shown or hidden.
+ * @modifier
+ */
+.slds-transition-hide {
+  transition: opacity 300ms ease-in-out;
+  will-change: opacity;
+  opacity: 0;
+}
+
+/**
+ * @summary Shows the element using the opacity property set to `1`
+ *
+ * @selector .transition-show
+ * @notes This is toggled on the element. `.slds-transition-hide` class is removed and `.slds-transition-show` is added.
+ * @modifier
+ */
+.slds-transition-show {
+  transition: opacity 300ms ease-in-out;
+  will-change: opacity;
+  opacity: 1;
+}
+
+.preload-images {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+#content.app-switcher-one.be-left-0 {
+  opacity: 1;
+  transition: transform 500ms, opacity 600ms, left 0ms;
+}
+
+#content.app-switcher-one.be-left-0.fake-the-dock {
+  transform: scale(0.1, 0.2) rotatex(68deg) translateY(612%) translateX(-465%);
+  background: rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
+  transition: transform 500ms, opacity 600ms, left 125ms !important;
+  opacity: 1;
+}
