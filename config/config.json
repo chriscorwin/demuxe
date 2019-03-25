@@ -1,8 +1,8 @@
 {
 	"demoName": "DMB BBVA DF 18 Keynote",
-	"brandTheme": "bbva",
+	"brandTheme": "ducati",
 	"productTemplate": "dmp",
-	"demoVenue": "df18keynote",
+	"demoVenue": "cnx18keynote",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
