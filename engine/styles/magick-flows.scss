@@ -263,11 +263,11 @@ footer.magick-flows-stickey-footer_container {
 	transition: transform 500ms, opacity 600ms, left 0ms;
 }
 #content.app-switcher-one.be-left-0.fake-the-dock {
-	transform: scale(0.2, 0.2) rotatex(68deg) translateY(713%) translateX(-199.7%);
-	background: rgba(0, 0, 0, 0.34);
-	box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
-	transition: transform 500ms, opacity 600ms, left 125ms !important;
-	opacity: 0;
+  transform: scale(0.1, 0.2) rotatex(68deg) translateY(612%) translateX(-465%);
+  background: rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
+  transition: transform 500ms, opacity 600ms, left 125ms !important;
+  opacity: 1;
 }
 
 

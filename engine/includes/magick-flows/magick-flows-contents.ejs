@@ -23,15 +23,16 @@ _%>
 	const assetsContentPath = `${webRootPath}/assets/`;
 
 
-	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
-		console.log(`[ engine/includes/magick-flows/magick-flows-contents.ejs:27 ] ${nodeIndex}: ${JSON.stringify(node)}`);
-	});
+	// thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
+	// 	console.log(`[ engine/includes/magick-flows/magick-flows-contents.ejs:27 ] ${nodeIndex}: ${JSON.stringify(node)}`);
+	// });
 
 
 	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
 
 
 		const mainContentWebRootUrl = `${mainContentPath}${node.fileName}`;
+		const clickHintsAssetWebRootUrl = `${assetsContentPath}${node.id}___click-hint.png`;
 		const showHeader = node.hasStickyHeader === true || false;
 		const showFooter = node.hasStickyFooter === true || false;
 		const nodeData = node.data;

@@ -14,8 +14,9 @@ const drawerContentChangingClasses = 'section payment confirmation';
 const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+window.location.hash = `#reset`;
 
-console.log(`[clicks:] `, clicks);
+
 
 if ( clicks >= magickFlowConfig.numberOfScreens ) {
 	clicks = 0;
@@ -31,18 +32,37 @@ if ( previousClick <= 0 ) {
 	previousClick = magickFlowConfig.numberOfScreens
 }
 
-window.location.hash = `#${clicks}`;
+// window.location.hash = `#${clicks}`;
 
 const $ss = document.querySelector(`.screenshot.auto-replace[data-slide="${clicks}"]`);
 const $contentWrapper = document.querySelector( '#content-wrapper' );
 
+
+String.prototype.toTitleCase = function() {
+	return this.replace(/([\w&`'ÔÕ"Ò.@:\/\{\(\[<>_]+-? *)/g,
+	function(match, p1, index, title) {
+		if (index > 0 && title.charAt(index - 2) !== ":" && match.search(/^(a(nd?|s|t)?|b(ut|y)|en|for|i[fn]|o[fnr]|t(he|o)|vs?\.?|via)[ \-]/i) > -1) return match.toLowerCase();
+		if (title.substring(index - 1, index + 1).search(/['"_{(\[]/) > -1) return match.charAt(0) + match.charAt(1).toUpperCase() + match.substr(2);
+		if (match.substr(1).search(/[A-Z]+|&|[\w]+[._][\w]+/) > -1 || title.substring(index - 1, index + 1).search(/[\])}]/) > -1) return match;
+		return match.charAt(0).toUpperCase() + match.substr(1);
+	});
+};
 
 $contentWrapper.onclick = ( ) => {
 	clicks++;
 	if ( clicks >= magickFlowConfig.numberOfScreens ) {
 		clicks = magickFlowConfig.numberOfScreens - 1;
 	}
-	window.location.hash = `#${clicks}`;
+
+	// Now is the chance to run onBeforeHashChange stuff
+	// In the future, we may wish to catch that it should change and do stuff first.
+	// For now, we just do it.
+	let hashChangeTiming = 0;
+	// console.log("It was clicked, we will change the hash in four seconds...");
+	setTimeout(() => {
+		window.location.hash = `#${clicks}`;
+	}, hashChangeTiming);
+
 };
 
 
@@ -215,6 +235,8 @@ function locationHashChanged(event) {
 
 		drawerDirectionOptions.forEach(direction => {
 
+			console.log(`direction: `, direction);
+
 			// Direction is just the direction, capitalied, so that the camelCase stuff is correct.
 			const Direction = direction.charAt(0).toUpperCase() + direction.substring(1);
 
@@ -351,9 +373,21 @@ function locationHashChanged(event) {
 		}
 	}
 
+	console.group(`[ Speaker Notes ]`)
+	console.log(`Current Step: `, clicks);
 	console.log(`Sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
 	console.log(`Step ID: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
-	console.log(`Notes: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes);
+	if ( typeof magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes !== 'undefined' ) {
+		console.group(`Hints`)
+		magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes.forEach((note, noteIndex) => {
+			note = note.replace(/-/g, ' ').toLowerCase();
+			console.log(`${noteIndex}: ${note}`)
+		});
+		console.groupEnd();
+		// console.log(`Notes: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes);
+	}
+	console.groupEnd();
+
 
 	console.groupEnd();
 }
@@ -378,7 +412,7 @@ document.ontouchstart = function() {
 // Why? WE DON'T KNOW!! 
 // ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
 window.setTimeout(() => {
-	window.location.hash = `#reset`;
+	// window.location.hash = `#reset`;
 	window.location.hash = `#${clicks}`;
 }, (150));
 

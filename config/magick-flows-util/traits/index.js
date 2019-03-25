@@ -47,6 +47,7 @@
  to the module.exports in this file. Once you have done that, it will be magically
  taken into consideration by magick-flows.
 */
+const clickHints    = require('./click-hints');
 const drawerFromTop    = require('./drawer-from-top');
 const drawerFromBottom = require('./drawer-from-bottom');
 const drawerFromLeft   = require('./drawer-from-left');
@@ -56,6 +57,7 @@ const stickyHeader     = require('./sticky-header');
 const stickyFooter     = require('./sticky-footer');
 
 module.exports = [
+	clickHints,
 	drawerFromTop,
 	drawerFromBottom,
 	drawerFromLeft,
