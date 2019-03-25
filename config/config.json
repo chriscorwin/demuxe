@@ -1,8 +1,8 @@
 {
-	"demoName": "DMB BBVA DF 18 Keynote",
-	"brandTheme": "ducati",
+	"demoName": "DMP NTO Roadshow 2019",
+	"brandTheme": "nto",
 	"productTemplate": "dmp",
-	"demoVenue": "cnx18keynote",
+	"demoVenue": "roadshow19",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -13,13 +13,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://dmp-dreamforce-2018.herokuapp.com/"
+		"host": "https://roadshow19-dmp-nto.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://dmp-dreamforce-2018-qa.herokuapp.com/"
+		"host": "https://roadshow19-dmp-nto-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://dmp-dreamforce-2018-dev.herokuapp.com/"
+		"host": "https://roadshow19-dmp-nto-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
@@ -30,5 +30,5 @@
 		"mismatchThreshold": 0.01,
 		"timeout": 30000
 	},
-	"gapixelid": "UA-133829434-2"
+	"gapixelid": "UA-133829434-3"
 }
