@@ -48,15 +48,23 @@ module.exports = {
 			waitFor: 2000,
 			name: '0201.consumer-rights-management-page'
 		},
+		// SEGMENTS - MANAGE SEGMENTS
+		{
+			click: `#segments-global-nav-link`,
+			waitFor: 'body',
+			name: '0300.manage-segments'
+		},
 		// SEGMENTS - MANAGE SEGMENTS - NEW SEGMENT - RULES
 		{
-			goto: `${testhost}segments/manage-segments/rules`,
+			click: `#new-segment`,
+			// goto: `${testhost}segments/manage-segments/rules`,
 			waitFor: 'body',
-			name: '0300.manage-segments.rules'
+			name: '0310.manage-segments.rules'
 		},
 		// SEGMENTS - MANAGE SEGMENTS - NEW SEGMENT - DETAILS & ACTIVATION
 		{
-			goto: `${testhost}segments/manage-segments/details-and-activation`,
+			click: `#continue-and-edit`,
+			// goto: `${testhost}segments/manage-segments/details-and-activation`,
 			waitFor: 'body',
 			name: '0400.manage-segments.details-and-activation'
 		},
@@ -73,20 +81,17 @@ module.exports = {
 			name: '0412.manage-segments.details-and-activation'
 		},
 		// CLICK "SAVE"
-		{
-			click: '#saveButton',
-			waitFor: 'body',
-			name: '0414.manage-segments.details-and-activation'
-		},
 		// SEGMENTS - MANAGE SEGMENTS
 		{
-			goto: `${testhost}segments/manage-segments`,
+			click: '#saveButton',
+			// goto: `${testhost}segments/manage-segments`,
 			waitFor: 'body',
 			name: '0500.manage-segments'
 		},
 
 		// DATA STUDIO - AUDIENCE DISCOVERY
 		{
+			click: '#data-studio',
 			goto: `${testhost}data-studio/audience-discovery`,
 			waitFor: 'body',
 			name: '0600.data-studio.audience-discovery'
@@ -95,7 +100,8 @@ module.exports = {
 		// HOVER INSIGHTS NAV LINK
 		// CLICK EINSTEIN SEGMENTATION LINK
 		{
-			goto: `${testhost}insights/einstein-segmentation`,
+			click: '#einstein-segmentation-link',
+			// goto: `${testhost}insights/einstein-segmentation`,
 			waitFor: 'body',
 			name: '0700.einstein-segmentation'
 		}
