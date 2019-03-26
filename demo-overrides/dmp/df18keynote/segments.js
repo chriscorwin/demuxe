@@ -117,8 +117,19 @@ const lookalikes = {
 const controls = [
 	{
 		type: 'button',
-		text: 'New Segment',
-		variant: 'brand'
+		text: 'A New Segment',
+		variant: 'brand',
+		iconPath: '/icons/utility-sprite/svg/symbols.svg#add'
+	},
+	{
+		type: 'button',
+		iconPath: '/icons/utility-sprite/svg/symbols.svg#download',
+		title: 'Download'
+	},
+	{
+		type: 'button',
+		iconPath: '/icons/utility-sprite/svg/symbols.svg#multi_select_checkbox',
+		title: 'Check'
 	}
 ];
 

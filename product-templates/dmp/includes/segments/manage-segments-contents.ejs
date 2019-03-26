@@ -1,38 +1,48 @@
-<% const localization = locals.localization; %>
-
 <%
-
-const segments = locals.localization.segments.states[locals.state].segments;
-const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
-
+	const controls = locals.localization.segments.states[locals.state].controls;
+	const segments = locals.localization.segments.states[locals.state].segments;
+	const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
 %>
 
-<div class="slds-grid slds-grid_pull-padded-medium slds-p-vertical_small">
-	<!--img class="slds-p-horizontal_medium" src="/images/slices/segments.manage-segments.menu-a-left.svg" style="height: 33px;" />
-	<img class="slds-p-horizontal_medium slds-col_bump-left" src="/images/slices/segments.manage-segments.menu-a-right.svg" style="height: 33px;" /-->
-	<%
-		localization.segments.states[locals.state].controls.forEach((control) => {
-			switch(control.type) {
-				case 'button-group': %>
-				<div class="slds-button-group" role="group">
-				<% control.items.forEach((data) => { %>
-					<%- include('components/button', data) %>
-				<% }) %>
+<div class="slds-page-header">
+	<div class="slds-page-header__row">
+		<div class="slds-page-header__col-title">
+			<div class="slds-media">
+				<div class="slds-media__body">
+					<img class="" src="/images/slices/segments.manage-segments.menu-a-left.svg" style="height: 33px;" />
 				</div>
-				<% break;
-				case 'combobox': %>
-					<div class="slds-button">
-						<%- include('components/combobox', control) %>
-					</div>
-				<% break;
-				case 'button': %>
-					<% if (control.hasOverflow) {%><div class="slds-button"><% } %>
-						<%- include('components/button', control) %>
-					<% if (control.hasOverflow) {%></div><% } %>
-				<% break;
-			}
-		});
-	%>
+			</div>
+		</div>
+		<div class="slds-page-header__col-actions">
+			<div class="slds-page-header__controls">
+				<div class="slds-page-header__control">
+					<%
+						controls.forEach((control) => {
+							switch(control.type) {
+								case 'button-group': %>
+								<div class="slds-button-group" role="group">
+								<% control.items.forEach((data) => { %>
+									<%- include('components/button', data) %>
+								<% }) %>
+								</div>
+								<% break;
+								case 'combobox': %>
+									<div class="slds-button">
+										<%- include('components/combobox', control) %>
+									</div>
+								<% break;
+								case 'button': %>
+									<% if (control.hasOverflow) {%><div class="slds-button"><% } %>
+										<%- include('components/button', control) %>
+									<% if (control.hasOverflow) {%></div><% } %>
+								<% break;
+							}
+						});
+					%>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <%
