@@ -1,0 +1,35 @@
+<%
+	const disabled = (locals.isDisabled) ? ' disabled=""' : '';
+%>
+
+<div class="slds-combobox_container slds-size_x-small"<%= disabled %>>
+	<div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+		<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+			<input class="slds-input slds-combobox__input" id="versionName" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" type="text" placeholder="<%= locals.versionName %>" readonly="" value="" />
+			<span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="choose">
+				<svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#down" />
+				</svg>
+				<span class="slds-assistive-text">choose</span>
+			</span>
+		</div>
+		<div id="listbox-unique-id" role="listbox" class="slds-dropdown slds-dropdown_fluid">
+			<ul class="slds-listbox slds-listbox_vertical" role="presentation">
+<% locals.versions.forEach((option) => { %>
+				<li role="presentation" class="slds-listbox__item">
+					<div id="<%= option.id %>" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+						<span class="slds-media__figure">
+							<svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%= option.iconPath %>" />
+							</svg>
+						</span>
+						<span class="slds-media__body">
+						<span class="slds-truncate" title="<%= option.name %>"> <%= option.name %></span>
+						</span>
+					</div>
+				</li>
+<% }); %>
+			</ul>
+		</div>
+	</div>
+</div>

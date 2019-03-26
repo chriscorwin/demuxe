@@ -1,0 +1,27 @@
+<%
+	const selected = (locals.isSelected && locals.isSelected === true) ? ' slds-is-selected' : '';
+	const disabled = (locals.isDisabled && locals.isDisabled === true) ? ' disabled=""' : '';
+	const variant = (locals.variant) ? `slds-button_${locals.variant}` : 'slds-button_neutral';
+
+	if (locals.iconPath || locals.imgPath) { %>
+		<button class="slds-button slds-button_icon slds-button_icon-more slds-button_icon-border-filled<%=selected%>"<%=disabled%> title="<%=locals.title%>" aria-pressed="false">`
+
+		<% if (locals.iconPath) { %>
+			<svg class="slds-button__icon" aria-hidden="true">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%=locals.iconPath%>" />
+			</svg>
+		<% } else { %>
+			<img src="<%=locals.imgPath%>" style="<%=locals.style%>"/>
+		<% }
+
+			if (locals.hasOverflow) { %>
+				<svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+					<use xlink:href="/icons/utility-sprite/svg/symbols.svg#down"></use>
+				</svg>
+		<% 	} %>
+
+			<span class="slds-assistive-text"><%=locals.title%>></span>
+		</button>
+	<% } else { %>
+		<button class="slds-button <%=variant%> <%=selected%>"<%=disabled%>><%=locals.text%></button>
+	<% } %>

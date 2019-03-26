@@ -114,15 +114,25 @@ const lookalikes = {
 	}
 };
 
+const controls = [
+	{
+		type: 'button',
+		text: 'New Segment',
+		variant: 'brand'
+	}
+];
+
 module.exports = {
 	states: {
 		initial: {
 			segments: [...baseSegments],
-			lookalikes
+			lookalikes,
+			controls
 		},
 		addHighValue: {
 			segments: [...highValueLookalikeSegment, ...baseSegments],
-			lookalikes
+			lookalikes,
+			controls
 		}
 	}
 };

@@ -1,82 +1,4 @@
-<% const localization = locals.localization;
-
-const button = (data) => {
-	let html = '';
-
-	console.log('data', data);
-
-	const selected = (data.isSelected && data.isSelected === true) ? ' slds-is-selected' : '';
-	const disabled = (data.isDisabled && data.isDisabled === true) ? ' disabled=""' : '';
-	const variant = (data.variant) ? `slds-button_${data.variant}` : 'slds-button_neutral';
-
-	if (data.iconPath || data.imgPath) {
-		html += `<button class="slds-button slds-button_icon slds-button_icon-more slds-button_icon-border-filled${selected}"${disabled} title="${data.title}" aria-pressed="false">`
-
-		if (data.iconPath) {
-			html += `<svg class="slds-button__icon" aria-hidden="true">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="${data.iconPath}" />
-					</svg>`;
-		} else {
-			html += `<img src="${data.imgPath}" style="${data.style}"/>`
-		}
-
-		if (data.hasOverflow) {
-			html += `<svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
-						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#down"></use>
-					</svg>`;
-		}
-
-		html += `<span class="slds-assistive-text">${data.title}></span>
-				</button>`;
-	} else {
-		html += `<button class="slds-button ${variant} ${selected}"${disabled}>${data.text}</button>`
-	}
-
-	return html;
-}
-
-const combobox = (data) => {
-	const disabled = (data.isDisabled) ? ' disabled=""' : '';
-	let html = `
-		<div class="slds-combobox_container slds-size_x-small"${disabled}>
-			<div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-				<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-					<input class="slds-input slds-combobox__input" id="versionName" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" type="text" placeholder="${data.versionName}" readonly="" value="" />
-					<span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="choose">
-						<svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#down" />
-						</svg>
-						<span class="slds-assistive-text">choose</span>
-					</span>
-				</div>
-				<div id="listbox-unique-id" role="listbox" class="slds-dropdown slds-dropdown_fluid">
-					<ul class="slds-listbox slds-listbox_vertical" role="presentation">`;
-
-	data.versions.forEach((option) => {
-		html += `<li role="presentation" class="slds-listbox__item">
-							<div id="${option.id}" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-								<span class="slds-media__figure">
-									<svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="${option.iconPath}" />
-									</svg>
-								</span>
-								<span class="slds-media__body">
-								<span class="slds-truncate" title="${option.name}"> ${option.name}</span>
-								</span>
-							</div>
-						</li>`;
-	});
-
-	html += `		</ul>
-				</div>
-			</div>
-		</div>
-	`;
-
-	return html;
-}
-
-%>
+<% const localization = locals.localization; %>
 
 <header class="slds-global-header_container">
 	<div class="slds-global-header slds-grid slds-grid_align-spread" style="box-shadow: none;">
@@ -222,18 +144,18 @@ const combobox = (data) => {
 									case 'button-group': %>
 									<div class="slds-button-group" role="group">
 									<% control.items.forEach((data) => { %>
-										<%- button(data) %>
+										<%- include('components/button', data) %>
 									<% }) %>
 									</div>
 									<% break;
 									case 'combobox': %>
 										<div class="slds-button">
-											<%- combobox(control) %>
+											<%- include('components/combobox', control) %>
 										</div>
 									<% break;
 									case 'button': %>
 										<% if (control.hasOverflow) {%><div class="slds-button"><% } %>
-											<%- button(control) %>
+											<%- include('components/button', control) %>
 										<% if (control.hasOverflow) {%></div><% } %>
 									<% break;
 								}
