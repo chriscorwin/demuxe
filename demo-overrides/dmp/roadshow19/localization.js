@@ -13,6 +13,7 @@ overview.panels.dcm.view_all_buttons.push({
 });
 
 module.exports = {
+	appName: 'Audience Studio',
 	body_class: 'slds-brand-band slds-brand-band_medium',
 	consumer_rights_management,
 	einstein_segmentation,

@@ -40,19 +40,20 @@ console.group(includeDebugInfoStart);
 <% if (locals.siteSection && locals.siteSection !== 'magick-flows') { %>
 <link rel="stylesheet" href="/styles/style.css">
 <link rel="stylesheet" href="/styles/global.css">
+<link rel="stylesheet" href="/styles/venue.css">
 <link rel="stylesheet" href="/styles/brand.css">
 <link rel="stylesheet" href="/styles/<%=locals.siteSection%>.css">
 <% } %>
 
-<% 
-if (locals.pageStylesheets) { 
-	locals.pageStylesheets.forEach(function(stylesheet) { 
+<%
+if (locals.pageStylesheets) {
+	locals.pageStylesheets.forEach(function(stylesheet) {
 		echo(`<link rel="stylesheet" href="/styles/${stylesheet}">`);
 	});
-} 
+}
 %>
 
-<% 
+<%
 	const { trigger } = locals.sanitizedQueryParams;
 %>
 
@@ -96,7 +97,7 @@ Demuxe: setting client-side javascript variables from Demuxe \`locals\`
 
 
 			> See this Stack Exchange for more information:
-			> 
+			>
 			> https://stackoverflow.com/questions/10392293/stringify-convert-to-json-a-javascript-object-with-circular-reference
 
 			Anyhoooooo...  What we're doing _here_ is iterating through the keys of
@@ -134,10 +135,10 @@ Demuxe: setting client-side javascript variables from Demuxe \`locals\`
 	});
 
 
-	
+
 	console.groupEnd();
 	// server-side output above ---^
-	// 
+	//
 	// back to client-side output now ---V
 %>
 	console.group(`Demuxe: server-side \`locals\`:
