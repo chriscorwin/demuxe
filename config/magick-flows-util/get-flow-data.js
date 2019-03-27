@@ -72,6 +72,10 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 		if ( node.includes('=') === true ) {
 			// we have some data, split on the equals sign to get keys and values
 			const [ rawKey, valueWithExt ] = node.split('=');
+
+			console.log(`[ config/magick-flows-util/get-flow-data.js:75 ] rawKey: `, util.inspect(rawKey, { showHidden: true, depth: null, colors: true }));
+			console.log(`[ config/magick-flows-util/get-flow-data.js:76 ] valueWithExt: `, util.inspect(valueWithExt, { showHidden: true, depth: null, colors: true }));
+			
 			const value = valueWithExt.split('.')[0];
 			const key = rawKey.toLowerCase();
 
