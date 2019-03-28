@@ -1,12 +1,3 @@
-<style>
-.slds-global-header {
-	padding: 0;
-}
-
-.slds-global-header__item {
-	padding: 0;
-}
-</style>
 <header class="slds-global-header_container">
 	<div class="slds-global-header slds-grid slds-grid_align-spread" style="box-shadow: none;">
 		<div class="slds-global-header__item">
@@ -33,14 +24,14 @@
 	<div id="subheader" class="slds-container_large">
 		<div class="slds-grid slds-grid_vertical-align-center">
 			<div>
-				<h1 class="slds-text-heading_medium"><%= locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text) 
-				|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text) 
+				<h1 class="slds-text-heading_medium"><%= locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
+				|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text)
 				|| locals.sub_header_text
 				|| '' %></h1>
 			</div>
 
 
-			<% if (locals.subHeaderVariant === 'hasButton') { 
+			<% if (locals.subHeaderVariant === 'hasButton') {
 				// console.log('customizable button in sub-header please');
 			%>
 				<div class="slds-col_bump-left slds-p-right_medium">
@@ -48,20 +39,20 @@
 				</div>
 			<% } else if (locals.subHeaderVariant === 'hasText') { %>
 				<div class="slds-col_bump-left slds-p-right_medium">
-					<%= (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text) 
-					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text) 
+					<%= (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
+					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text)
 					|| locals.sub_header_text
 					|| '' %>
 				</div>
 			<% } %>
 
-				
+
 		</div>
 		<% if (locals.subHeaderVariant === 'hasCustomSubheader')  {
 			// console.log('customizable sub-header please');
 		%>
-			<%- (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents) 
-					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents) 
+			<%- (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents)
+					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents)
 					|| locals.subHeaderContents
 					|| '' %>
 		<% } %>
