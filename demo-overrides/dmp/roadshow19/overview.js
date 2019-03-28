@@ -24,7 +24,10 @@ module.exports = {
 		today,
 		firstOfMonth,
 		firstOfLastMonth,
-		lastOfLastMonth
+		lastOfLastMonth,
+		todayTerse,
+		twoWeeksAgoTerse,
+		oneMonthAgoTerse
 	},
 	panels: {
 		audience_population: {

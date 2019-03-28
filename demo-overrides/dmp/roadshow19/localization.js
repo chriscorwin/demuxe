@@ -12,6 +12,8 @@ overview.panels.dcm.view_all_buttons.push({
 	onclick: "navigatePage('/consumer-rights-management');"
 });
 
+consumer_rights_management.last_updated = overview.dates.today;
+
 module.exports = {
 	appName: 'Audience Studio',
 	body_class: 'slds-brand-band slds-brand-band_medium',
