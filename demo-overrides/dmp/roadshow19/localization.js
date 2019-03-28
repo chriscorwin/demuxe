@@ -18,6 +18,13 @@ consumer_rights_management.subHeaderContents = `<div class="slds-grid">
 						<div class="slds-col_bump-left">As of ${overview.dates.today}</div>
 					</div>`
 
+manage_segments.details_and_activation.segment_name = 'Camping and tents explorers';
+manage_segments.details_and_activation.segment_description = 'Engaged with rich content on Facebook and explored NTO tents';
+manage_segments.details_and_activation.save_action = () => {
+	navigatePage('/segments/manage-segments/');
+}
+manage_segments.details_and_activation.activate_by_default = false;
+
 module.exports = {
 	appName: 'Audience Studio',
 	body_class: 'slds-brand-band slds-brand-band_medium',
