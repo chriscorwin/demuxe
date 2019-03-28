@@ -45,11 +45,11 @@ module.exports = {
 				'IMPRESSIONS'
 			],
 			segments: [
-				{label: 'Mortgage Applicants 2018', number: '5.2M', width: 362},
-				{label: 'Corporate Customers - Risk Management', number: '4.7M', width: 308},
-				{label: 'Loan Expert Seekers', number: '4M', width: 290},
-				{label: 'Mortgage Aspirants', number: '3.7M', width: 270},
-				{label: 'Credit Card Members - Optimizer Card', number: '2.3M', width: 186}
+				{label: 'Nature Lovers', number: '5.2M', width: 362},
+				{label: 'Corporate Customers - Offsite Vision Quests', number: '4.7M', width: 308},
+				{label: 'Animal Encounter Seekers', number: '4M', width: 290},
+				{label: 'Camping Aspirants', number: '3.7M', width: 270},
+				{label: 'Zoo and Parks Members', number: '2.3M', width: 186}
 			],
 			title: 'Activated Segments',
 			view_all: {
