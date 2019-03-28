@@ -8,11 +8,16 @@ const lastDayLastMonth = new Date(y, m, 0);
 
 const monthDay = { month: 'short', day: 'numeric' };
 const monthDayYear = { year: 'numeric', month: 'short', day: 'numeric' };
+const terse = { month: 'numeric', day: 'numeric' };
 
 const today = date.toLocaleDateString("en-US", monthDayYear)
 const firstOfMonth = firstDay.toLocaleDateString("en-US", monthDay);
 const firstOfLastMonth = firstDayLastMonth.toLocaleDateString("en-US", monthDay);
 const lastOfLastMonth = lastDayLastMonth.toLocaleDateString("en-US", monthDayYear);
+
+const todayTerse = date.toLocaleDateString("en-US", terse);
+const twoWeeksAgoTerse = new Date(Date.now() - 12096e5).toLocaleDateString("en-US", terse);
+const oneMonthAgoTerse = new Date(Date.now() - 12096e5 - 12096e5).toLocaleDateString("en-US", terse);
 
 module.exports = {
 	dates: {
@@ -59,9 +64,9 @@ module.exports = {
 			explanation: 'Displaying data collection events across 1st party data sources only.',
 			graph: {
 				date_labels: [
-					'8/27',
-					'9/12',
-					'9/27'
+					oneMonthAgoTerse,
+					twoWeeksAgoTerse,
+					todayTerse
 				],
 				device_data: [
 					450,
@@ -201,7 +206,7 @@ module.exports = {
 			buttons: [
 				{ label: 'Top 5' },
 				{ label: 'By Devices Sent' },
-				{ label: 'Sep 26, 2018' }
+				{ label: today }
 			],
 			table_rows: [
 				{partner: 'ACTIVATION PARTNERS', type: 'REFRESH TYPE', sent: 'DEVICES SENT'},
