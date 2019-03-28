@@ -117,9 +117,10 @@ const lookalikes = {
 const controls = [
 	{
 		type: 'button',
-		text: 'A New Segment',
+		text: 'New Segment',
 		variant: 'brand',
-		iconPath: '/icons/utility-sprite/svg/symbols.svg#add'
+		iconPath: '/icons/utility-sprite/svg/symbols.svg#add',
+		onClick: `navigatePage('/segments/manage-segments/rules')`
 	},
 	{
 		type: 'button',

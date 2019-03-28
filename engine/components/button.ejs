@@ -4,8 +4,9 @@
 	const variant = (locals.variant) ? ` slds-button_${locals.variant}` : ' slds-button_neutral';
 	const button_icon = (!locals.text && (locals.iconPath || locals.imgPath)) ? ` slds-button_icon slds-button_icon-more slds-button_icon-border-filled` : '';
 	const svg_class = (locals.text) ? ` slds-button__icon_left` : '';
+	const onClick = (locals.onClick) ? ` onclick=${locals.onClick}` : '';
 %>
-	<button class="slds-button<%=button_icon%><%=variant%><%=selected%>"<%=disabled%> title="<%=locals.title%>" aria-pressed="false">
+	<button<%=onClick%> class="slds-button<%=button_icon%><%=variant%><%=selected%>"<%=disabled%> title="<%=locals.title%>" aria-pressed="false">
 
 	<%= (locals.iconOnRight) ? locals.text : '' %>
 
