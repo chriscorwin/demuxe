@@ -120,7 +120,8 @@ const controls = [
 		text: 'New Segment',
 		variant: 'brand',
 		iconPath: '/icons/utility-sprite/svg/symbols.svg#add',
-		onClick: `navigatePage('/segments/manage-segments/rules')`
+		onClick: `navigatePage('/segments/manage-segments/rules')`,
+		id: 'new-segment'
 	},
 	{
 		type: 'button',

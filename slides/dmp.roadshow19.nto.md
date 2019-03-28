@@ -16,7 +16,11 @@
 
 ---
 
-![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0300.manage-segments.rules.slide.png){.background}
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0300.manage-segments.slide.png){.background}
+
+---
+
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0310.manage-segments.rules.slide.png){.background}
 
 ---
 
@@ -29,10 +33,6 @@
 ---
 
 ![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0412.manage-segments.details-and-activation.slide.png){.background}
-
----
-
-![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0414.manage-segments.details-and-activation.slide.png){.background}
 
 ---
 
