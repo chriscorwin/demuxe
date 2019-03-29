@@ -1,6 +1,6 @@
 const consumer_rights_management = require('../df18keynote/consumer-rights-management');
 const data_capture_sources = require('../df18keynote/data-capture-sources');
-const einstein_segmentation = require('../df18keynote/einstein-segmentation');
+const einstein_segmentation = require('./einstein-segmentation');
 const overview = require('./overview');
 const manage_segments = require('../df18keynote/manage-segments');
 const segments = require('../df18keynote/segments');
