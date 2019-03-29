@@ -106,8 +106,8 @@ module.exports = {
 		// HOVER INSIGHTS NAV LINK
 		// CLICK EINSTEIN SEGMENTATION LINK
 		{
-			click: '#einstein-segmentation-link',
-			// goto: `${testhost}insights/einstein-segmentation`,
+			// click: '#einstein-segmentation-link',
+			goto: `${testhost}insights/einstein-segmentation`,
 			waitFor: 'body',
 			name: '0700.einstein-segmentation'
 		}
