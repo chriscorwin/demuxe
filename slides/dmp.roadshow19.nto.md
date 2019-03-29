@@ -36,6 +36,10 @@
 
 ---
 
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0413.manage-segments.details-and-activation.slide.png){.background}
+
+---
+
 ![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0500.manage-segments.slide.png){.background}
 
 ---

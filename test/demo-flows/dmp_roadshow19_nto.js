@@ -71,14 +71,20 @@ module.exports = {
 		// CLICK "SEGMENT NAME" TO FILL
 		{
 			click: '#segment-name',
-			waitFor: 'body',
+			waitFor: 200,
 			name: '0411.manage-segments.details-and-activation'
+		},
+		// CLICK ACTIVATE TOGGLE
+		{
+			click: '#activate-toggle',
+			waitFor: 200,
+			name: '0412.manage-segments.details-and-activation'
 		},
 		// SELECT "MARKETING CLOUD" IN ACTIVATION
 		{
 			click: '#checkbox7wrapper',
 			waitFor: 'body',
-			name: '0412.manage-segments.details-and-activation'
+			name: '0413.manage-segments.details-and-activation'
 		},
 		// CLICK "SAVE"
 		// SEGMENTS - MANAGE SEGMENTS
