@@ -19,7 +19,7 @@ consumer_rights_management.subHeaderContents = `<div class="slds-grid">
 					</div>`
 
 manage_segments.details_and_activation.segment_name = 'Camping and tents explorers';
-manage_segments.details_and_activation.segment_description = 'Engaged with rich content on Facebook and explored NTO tents';
+manage_segments.details_and_activation.segment_description = '';
 manage_segments.details_and_activation.save_action = () => {
 	navigatePage('/segments/manage-segments/');
 }
