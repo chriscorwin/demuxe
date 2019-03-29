@@ -14,7 +14,7 @@ const drawerContentChangingClasses = 'section payment confirmation';
 const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
-window.location.hash = `#reset`;
+// window.location.hash = `#reset`;
 
 
 
@@ -32,7 +32,7 @@ if ( previousClick <= 0 ) {
 	previousClick = magickFlowConfig.numberOfScreens
 }
 
-// window.location.hash = `#${clicks}`;
+window.location.hash = `#${clicks}`;
 
 const $ss = document.querySelector(`.screenshot.auto-replace[data-slide="${clicks}"]`);
 const $contentWrapper = document.querySelector( '#content-wrapper' );
