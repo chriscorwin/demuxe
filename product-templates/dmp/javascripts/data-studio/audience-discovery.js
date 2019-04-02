@@ -1,6 +1,6 @@
 const navigateDiscovery = () => {
-	const base = window.location.pathname.split('/').slice(0, 3).join('/');
-	window.location = `${base}/audience-discovery-segments.html`;
+	//const base = window.location.pathname.split('/').slice(0, 3).join('/');
+	window.location = `/insights/einstein-segmentation`;
 };
 
 const $grid = document.querySelector('#grid');

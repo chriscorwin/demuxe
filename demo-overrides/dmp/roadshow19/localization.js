@@ -21,9 +21,24 @@ consumer_rights_management.subHeaderContents = `<div class="slds-grid">
 manage_segments.details_and_activation.segment_name = 'Camping and tents explorers';
 manage_segments.details_and_activation.segment_description = '';
 manage_segments.details_and_activation.save_action = () => {
-	navigatePage('/segments/manage-segments/');
+	navigatePage('/segments/manage-segments/?state=addHighValue');
 }
 manage_segments.details_and_activation.activate_by_default = false;
+
+const highValueSegment = [
+	{
+		title: '<img src="/images/logo-noname.svg" height=10 /> Camping and tents explorers',
+		subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
+		devices: '13.8M',
+		audience: '2.8M',
+		modified: overview.dates.today,
+		type: 'Standard',
+		category: 'Behavioral',
+		subCategory: 'Loyalty'
+	}
+];
+
+segments.states.addHighValue.segments = [...highValueSegment, ...segments.states.initial.segments];
 
 module.exports = {
 	appName: 'Audience Studio',
