@@ -26,7 +26,6 @@
     <g id="Storyboard---5/31" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Segment-Builder---5-Copy-2" transform="translate(-40.000000, -205.000000)">
             <g id="segment-builder.details-and-activation.wizard-step-2" transform="translate(40.000000, 205.000000)">
-                <rect id="Rectangle-25" stroke="#E0E5EE" fill="#FFFFFF" x="0.5" y="0.5" width="1199" height="99" rx="4"></rect>
                 <text id="Rules" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#536D95">
                     <tspan x="44" y="89">Rules</tspan>
                 </text>
