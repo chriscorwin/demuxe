@@ -30,19 +30,19 @@ body, .container {
 .ios-notification {
 	margin: 0 auto;
 	position: absolute;
-	transition: 250ms top ease-in-out;
+	transition: 500ms top ease-in-out;
 	width: $widthOfSlide;
 	background-color: transparent;
 	height: $heightOfAppSwitcher;
 	top: $heightOfSlideNegative;
-	transition: 250ms top ease-in-out;
+	transition: 500ms top ease-in-out;
 	will-change: top;
 
 }
 
 .ios-notification.slide-in {
 	top: 0px;
-	transition: 250ms top ease-in-out;
+	transition: 500ms top ease-in-out;
 	will-change: top;
 	// transition-delay: 1000ms;
 }
@@ -51,19 +51,19 @@ body, .container {
 .drawer-from-top {
 	margin: 0 auto;
 	position: absolute;
-	transition: 250ms top ease-in-out;
+	transition: 500ms top ease-in-out;
 	width: $widthOfSlide;
 	background-color: transparent;
 	height: $heightOfAppSwitcher;
 	top: $heightOfSlideNegative;
-	transition: 250ms top ease-in-out;
+	transition: 500ms top ease-in-out;
 	will-change: top;
 
 }
 
 .drawer-from-top.slide-in {
 	top: 0px;
-	transition: 250ms top ease-in-out;
+	transition: 500ms top ease-in-out;
 	will-change: top;
 	// transition-delay: 1000ms;
 }
@@ -73,7 +73,7 @@ body, .container {
 .drawer-from-left {
 	margin: 0 auto;
 	position: absolute;
-	transition: 250ms left ease-in-out;
+	transition: 500ms left ease-in-out;
 	width: $widthOfSlide;
 	background-color: transparent;
 	height: $heightOfAppSwitcher;
@@ -84,7 +84,7 @@ body, .container {
 
 .drawer-from-left.slide-in {
 	left: 0px;
-	transition: 250ms left ease-in-out;
+	transition: 500ms left ease-in-out;
 	will-change: left;
 }
 
@@ -93,7 +93,7 @@ body, .container {
 .drawer-from-right {
 	margin: 0 auto;
 	position: absolute;
-	transition: 250ms right ease-in-out;
+	transition: 500ms right ease-in-out;
 	width: $widthOfSlide;
 	background-color: transparent;
 	height: $heightOfAppSwitcher;
@@ -104,7 +104,7 @@ body, .container {
 
 .drawer-from-right.slide-in {
 	right: 0px;
-	transition: 250ms right ease-in-out;
+	transition: 500ms right ease-in-out;
 	will-change: right;
 }
 
@@ -114,7 +114,7 @@ body, .container {
 .drawer-from-bottom {
 	margin: 0 auto;
 	position: absolute;
-	transition: 250ms bottom ease-in-out;
+	transition: 500ms bottom ease-in-out;
 	width: $widthOfSlide;
 	background-color: transparent;
 	height: $heightOfAppSwitcher;
@@ -124,7 +124,7 @@ body, .container {
 
 .drawer-from-bottom.slide-in {
 	bottom: 0px;
-	transition: 250ms bottom ease-in-out;
+	transition: 500ms bottom ease-in-out;
 	will-change: bottom;
 }
 
@@ -263,11 +263,11 @@ footer.magick-flows-stickey-footer_container {
 	transition: transform 500ms, opacity 600ms, left 0ms;
 }
 #content.app-switcher-one.be-left-0.fake-the-dock {
-	transform: scale(0.2, 0.2) rotatex(68deg) translateY(713%) translateX(-199.7%);
-	background: rgba(0, 0, 0, 0.34);
-	box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
-	transition: transform 500ms, opacity 600ms, left 125ms !important;
-	opacity: 0;
+  transform: scale(0.1, 0.2) rotatex(68deg) translateY(612%) translateX(-465%);
+  background: rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
+  transition: transform 500ms, opacity 600ms, left 125ms !important;
+  opacity: 1;
 }
 
 
