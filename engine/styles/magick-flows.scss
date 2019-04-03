@@ -48,7 +48,7 @@ body, .container {
 }
 
 
-.drawer-from-top {
+.magick-flows-drawer--from-top {
 	margin: 0 auto;
 	position: absolute;
 	transition: 500ms top ease-in-out;
@@ -61,16 +61,22 @@ body, .container {
 
 }
 
-.drawer-from-top.slide-in {
+.magick-flows-drawer--from-top.slide-in {
 	top: 0px;
 	transition: 500ms top ease-in-out;
+	will-change: top;
+	// transition-delay: 1000ms;
+}
+.magick-flows-drawer--from-top.be-in {
+	top: 0px;
+	transition: 0ms top;
 	will-change: top;
 	// transition-delay: 1000ms;
 }
 
 
 
-.drawer-from-left {
+.magick-flows-drawer--from-left {
 	margin: 0 auto;
 	position: absolute;
 	transition: 500ms left ease-in-out;
@@ -82,15 +88,20 @@ body, .container {
 	will-change: left;
 }
 
-.drawer-from-left.slide-in {
+.magick-flows-drawer--from-left.slide-in {
 	left: 0px;
 	transition: 500ms left ease-in-out;
+	will-change: left;
+}
+.magick-flows-drawer--from-left.be-in {
+	left: 0px;
+	transition: 0ms left;
 	will-change: left;
 }
 
 
 
-.drawer-from-right {
+.magick-flows-drawer--from-right {
 	margin: 0 auto;
 	position: absolute;
 	transition: 500ms right ease-in-out;
@@ -102,16 +113,21 @@ body, .container {
 	will-change: right;
 }
 
-.drawer-from-right.slide-in {
+.magick-flows-drawer--from-right.slide-in {
 	right: 0px;
 	transition: 500ms right ease-in-out;
+	will-change: right;
+}
+.magick-flows-drawer--from-right.be-in {
+	right: 0px;
+	transition: 0ms right;
 	will-change: right;
 }
 
 
 
 
-.drawer-from-bottom {
+.magick-flows-drawer--from-bottom {
 	margin: 0 auto;
 	position: absolute;
 	transition: 500ms bottom ease-in-out;
@@ -122,9 +138,14 @@ body, .container {
 	will-change: bottom;
 }
 
-.drawer-from-bottom.slide-in {
+.magick-flows-drawer--from-bottom.slide-in {
 	bottom: 0px;
 	transition: 500ms bottom ease-in-out;
+	will-change: bottom;
+}
+.magick-flows-drawer--from-bottom.be-in {
+	bottom: 0px;
+	transition: 0ms bottom;
 	will-change: bottom;
 }
 
@@ -133,7 +154,7 @@ body, .container {
 
 
 .magick-flows {
-	&-slide {
+	&--step {
 		background-color: transparent;
 	}
 }
@@ -150,15 +171,15 @@ body, .container {
 	&.shrink {
 		transform: scale(0.95);
 		will-change: transform;
-		.magick-flows--slide {
+		.magick-flows--step {
 			// I'm pretty sure this gets overridden later, but, in the meantime... is this what we want? It seems way too generic.
-			// In fact, I went and looked and this class is not used _at all_, though, it may be what `.magick-flows-slide` _should_ be?
+			// In fact, I went and looked and this class is not used _at all_, though, it may be what `.magick-flows-step` _should_ be?
 			background-color: white;
 		}
 	}
 
 	&.rounded-corners {
-		.magick-flows-slide {
+		.magick-flows-step {
 			border-radius: 2rem;
 			background-clip: border-box;
 			overflow: hidden;
@@ -199,7 +220,21 @@ body, .container {
 
 
 
-	.magick-flows--slide-#{$i} {
+	div#drawer-from-top--step-#{$i}::before {
+	  content: 'Drawer ##{$i}';
+	  display: block;
+	  width: 100vw;
+	  height: 3rem;
+	  position: absolute;
+	  bottom: 0rem;
+	  background: rgba(0, 0, 0, 0.16);
+	  text-align: center;
+	  color: black;
+	  margin: auto;
+	  font-size: 2rem;
+	}
+
+	.magick-flows--step-#{$i} {
 		height: $heightOfSlideValue + 0px;
 		position: absolute;
 		top: 0;

@@ -70,7 +70,7 @@ _%>
 		const isGif = node.dimensions.type === 'gif';
 		const isJpeg = node.dimensions.type === 'jpg';
 		let thisMagickFlowsSlideClassnames = {
-			'magick-flows-slide': true
+			'magick-flows-step': true
 		};
 
 		preLoadImages += `<img
@@ -89,8 +89,8 @@ _%>
 			const iosNotificationWebRootUrl = `${assetsContentPath}${node.iosNotificationFileName}`;
 			iosNotificationHtmlOut = `
 				<div
-					id="ios-notification--slide-${node.screensIndex}"
-					class="ios-notification ios-notification--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="ios-notification--step-${node.screensIndex}"
+					class="ios-notification ios-notification--step-${node.screensIndex}  magick-flows-step-asset"
 				><img src="${iosNotificationWebRootUrl}" /></div>
 			`
 		}
@@ -104,8 +104,8 @@ _%>
 			const drawerFromTopWebRootUrl = `${assetsContentPath}${node.drawerFromTopFileName}`;
 			drawerFromTopHtmlOut = `
 				<div
-					id="drawer-from-top--slide-${node.screensIndex}"
-					class="drawer drawer-from-top drawer-from-top--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="drawer-from-top--step-${node.screensIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-top magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
 				><img src="${drawerFromTopWebRootUrl}" /></div>
 			`
 		}
@@ -118,8 +118,8 @@ _%>
 			const drawerFromLeftWebRootUrl = `${assetsContentPath}${node.drawerFromLeftFileName}`;
 			drawerFromLeftHtmlOut = `
 				<div
-					id="drawer-from-left--slide-${node.screensIndex}"
-					class="drawer drawer-from-left drawer-from-left--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="drawer-from-left--step-${node.screensIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-left magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
 				><img src="${drawerFromLeftWebRootUrl}" /></div>
 			`
 		}
@@ -131,8 +131,8 @@ _%>
 			const drawerFromBottomWebRootUrl = `${assetsContentPath}${node.drawerFromBottomFileName}`;
 			drawerFromBottomHtmlOut = `
 				<div
-					id="drawer-from-bottom--slide-${node.screensIndex}"
-					class="drawer drawer-from-bottom drawer-from-bottom--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="drawer-from-bottom--step-${node.screensIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-bottom magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
 				><img src="${drawerFromBottomWebRootUrl}" /></div>
 			`
 		}
@@ -144,8 +144,8 @@ _%>
 			const drawerFromRightWebRootUrl = `${assetsContentPath}${node.drawerFromRightFileName}`;
 			drawerFromRightHtmlOut = `
 				<div
-					id="drawer-from-right--slide-${node.screensIndex}"
-					class="drawer drawer-from-right drawer-from-right--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="drawer-from-right--step-${node.screensIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-right magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
 				><img src="${drawerFromRightWebRootUrl}" /></div>
 			`
 		}
@@ -154,15 +154,15 @@ _%>
 _%>
 
 <div
-	class="slds-grid slds-grid_vertical magick-flows--slide-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
-	data-slide="<%=nodeIndex%>"
-	id="magick-flows--slide-<%=nodeIndex%>"
+	class="slds-grid slds-grid_vertical magick-flows--step-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	data-step="<%=nodeIndex%>"
+	id="magick-flows--step-<%=nodeIndex%>"
 >
 <%_ if (showHeader) { _%>
 	<header class="slds-col">
 		<div class="magick-flows-stickey-header_container">
 			<img
-				id="sticky-header--slide-<%=nodeIndex%>"
+				id="sticky-header--step-<%=nodeIndex%>"
 				class="sticky-header "
 				src="<%=headerWebRootUrl%>"
 			/>
@@ -186,7 +186,7 @@ _%>
 				>
 					<img
 						class="screenshot auto-replace is-image "
-						id="screenshot--slide-${nodeIndex}"
+						id="screenshot--step-${nodeIndex}"
 						src="${mainContentWebRootUrl}"
 					>
 				</div>
@@ -206,12 +206,12 @@ _%>
 				<video
 					autoplay
 					class="auto-replace is-video "
-					id="screenshot-wrapper--slide-${nodeIndex}"
+					id="screenshot-wrapper--step-${nodeIndex}"
 					playsinline
 				>
 					<source
 						class="screenshot auto-replace "
-						id="screenshot--slide-${nodeIndex}"
+						id="screenshot--step-${nodeIndex}"
 						src="${mainContentWebRootUrl}"
 						type="video/mp4"
 					>
@@ -232,7 +232,7 @@ _%>
 <%_ if (showFooter) { _%>
 	<footer class="magick-flows-stickey-footer_container slds-col">
 		<img
-			id="sticky-footer--slide-<%=nodeIndex%>"
+			id="sticky-footer--step-<%=nodeIndex%>"
 			class="sticky-footer "
 			src="<%=footerWebRootUrl%>"
 		/>
