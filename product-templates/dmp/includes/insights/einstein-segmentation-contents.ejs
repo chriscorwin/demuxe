@@ -4,7 +4,7 @@
     <div class="slds-panel-box">
         <div class="slds-panel-box__header slds-p-around_small">Data included in the analysis <img src="/images/icons/chevronup.svg" style="float: right;" /></div>
         <div class="slds-panel-box__body">
-            <img id="insights.einstein-segmentation.top" src="/images/slices/insights.einstein-segmentation.top.svg" />
+            <%- include('includes/insights/einstein-segmentation.top.svg.ejs') %>
         </div>
     </div>
 </div>
@@ -71,11 +71,11 @@
 
 <script>
 const actionButtons = `<%- locals.localization.einstein_segmentation.actions.reduce((html, action) => html + `<div class="slds-p-horizontal_xx-small" style="margin: 0 auto; width: 276px;">
-        <button 
+        <button
             ${action.onclick ? `onclick="navigatePage('${action.onclick}')" ` : ''}
-            id="confirm" 
-            type="submit" 
-            class="slds-button slds-button_brand" 
+            id="confirm"
+            type="submit"
+            class="slds-button slds-button_brand"
             value="${action.text}">${action.text}</button>
     </div>`, ''); %>`;
 

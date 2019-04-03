@@ -1,3 +1,7 @@
+const monthDayYear = { year: 'numeric', month: 'short', day: 'numeric' };
+
+const Today = new Date(Date.now()).toLocaleDateString("en-US", monthDayYear);
+
 module.exports = {
 	actions: [
 		{
@@ -125,5 +129,5 @@ module.exports = {
 			{ source: 'p3', target: 'p2', overlap: 13 }
 		]
 	},
-	sub_header_text: 'Analysis Summary as of Sep 27, 2018 11:00 AM UTC'
+	sub_header_text: `Analysis Summary as of ${Today} 6:00 AM UTC`
 };
