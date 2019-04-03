@@ -3,9 +3,15 @@ const {
 	firstOfMonth,
 	firstOfLastMonth,
 	lastOfLastMonth,
+	aboutOneMonthAgo,
+	aboutTwoMonthsAgo,
+	aboutThreeMonthsAgo,
+	aboutFourMonthsAgo,
 	todayTerse,
 	twoWeeksAgoTerse,
-	oneMonthAgoTerse
+	oneMonthAgoTerse,
+	DATES,
+	FORMATS
 } = require('../../dates');
 
 const baseSegments = [
@@ -14,7 +20,7 @@ const baseSegments = [
 		subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
 		devices: '6.3M',
 		audience: '1.7M',
-		modified: 'August 06, 2018',
+		modified: aboutOneMonthAgo,
 		type: 'Standard',
 		category: 'Behavioral',
 		subCategory: 'Loyalty'
@@ -24,7 +30,7 @@ const baseSegments = [
 		subTitle: 'Transaction Segment / ID: <b>rsdqtbya</b>',
 		devices: '9.3M',
 		audience: '2.1M',
-		modified: 'Mar 13, 2018',
+		modified: aboutTwoMonthsAgo,
 		type: 'Demographic',
 		category: 'Demographic',
 		subCategory: 'Gender'
@@ -34,7 +40,7 @@ const baseSegments = [
 		subTitle: 'Standard Segment / ID: <b>rsdqtah9w</b>',
 		devices: '45.3M',
 		audience: '14.2M',
-		modified: 'Mar 9, 2018',
+		modified: aboutThreeMonthsAgo,
 		type: 'Target',
 		category: 'Behavioral',
 		subCategory: 'Attributes'
@@ -44,7 +50,7 @@ const baseSegments = [
 		subTitle: 'Composite Segment / ID: <b>rsdqtbasi</b>',
 		devices: '57.89M',
 		audience: '19.2M',
-		modified: 'Feb 27, 2018',
+		modified: aboutFourMonthsAgo,
 		type: 'Demographic',
 		category: 'Demographic',
 		subCategory: 'Age'
