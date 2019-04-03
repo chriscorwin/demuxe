@@ -6,7 +6,7 @@ const {
 	todayTerse,
 	twoWeeksAgoTerse,
 	oneMonthAgoTerse
-} = require('../../dates');
+} = require('../../../engine/javascripts/dates');
 
 module.exports = {
 	dates: {

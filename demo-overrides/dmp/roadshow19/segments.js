@@ -12,7 +12,7 @@ const {
 	oneMonthAgoTerse,
 	DATES,
 	FORMATS
-} = require('../../dates');
+} = require('../../../engine/javascripts/dates');
 
 const baseSegments = [
 	{
