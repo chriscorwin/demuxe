@@ -94,7 +94,7 @@ var fillForm = function fillForm(d) {
 
 	// get unique parties.
 	// Filter each of the attributes, searching the attributes array to find the index of the
-	// very first instance of an attribute with the party matching focusAttribute's party to see if 
+	// very first instance of an attribute with the party matching focusAttribute's party to see if
 	// focusAttribute is the first attribute with that party. If so, it gets added to the filtered
 	// parties array, otherwise it is ignored. Reduce the results further to extract just the party number
 	// and then sort the final array so that it displays in an intelligent order
@@ -331,14 +331,14 @@ var link = svg
 	.attr('stroke-width', function getLinkStrength(d) {
 		return d.overlap / 3;
 	})
-	.on('mouseover', function(d) {
-		d.isHovered = true;
-		lineTip.show(d);
-	})
-	.on('mouseout', function(d) {
-		d.isHovered = false;
-		lineTip.hide(d);
-	});
+	// .on('mouseover', function(d) {
+	// 	d.isHovered = true;
+	// 	lineTip.show(d);
+	// })
+	// .on('mouseout', function(d) {
+	// 	d.isHovered = false;
+	// 	lineTip.hide(d);
+	// });
 
 var node = svg
 	.append('g')
@@ -360,24 +360,24 @@ var node = svg
 			.on('drag', dragged)
 			.on('end', dragended)
 	)
-	.on('mouseover', function(d) {
-		d.isHovered = true;
-		d3.select('#' + d.id + 'label').style('opacity', '0');
-		tip.show(d);
-		d3
-			.select(this)
-			.attr('fill', getNodeFillColor(d))
-			.attr('opacity', getNodeOpacity(d));
-	})
-	.on('mouseout', function(d) {
-		d.isHovered = false;
-		d3.select('#' + d.id + 'label').style('opacity', '1');
-		tip.hide(d);
-		d3
-			.select(this)
-			.attr('fill', getNodeFillColor(d))
-			.attr('opacity', getNodeOpacity(d));
-	});
+	// .on('mouseover', function(d) {
+	// 	d.isHovered = true;
+	// 	d3.select('#' + d.id + 'label').style('opacity', '0');
+	// 	tip.show(d);
+	// 	d3
+	// 		.select(this)
+	// 		.attr('fill', getNodeFillColor(d))
+	// 		.attr('opacity', getNodeOpacity(d));
+	// })
+	// .on('mouseout', function(d) {
+	// 	d.isHovered = false;
+	// 	d3.select('#' + d.id + 'label').style('opacity', '1');
+	// 	tip.hide(d);
+	// 	d3
+	// 		.select(this)
+	// 		.attr('fill', getNodeFillColor(d))
+	// 		.attr('opacity', getNodeOpacity(d));
+	// });
 
 var titleBox = d3
 	.select('#topPersonas')
