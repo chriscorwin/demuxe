@@ -2,7 +2,6 @@
 	margin: 0 auto;
 }
 
-
 /* HACK */
 .slds-context-bar__dropdown-trigger .slds-dropdown:before {
     content: '';
@@ -157,7 +156,7 @@ HEADER AREA
 		background-size: 1990px;
 		background-position-y: 36px;
 		height: 96px;
-	
+
 		#subheader {
 			&:before {
 				content: "";
@@ -370,16 +369,16 @@ HEADER AREA
 		&.slds-is-active:before {
 			background: #B75D0D;
 		}
-	
+
 		&:not(.slds-no-hover):hover,
 		&.slds-is-active {
 			background-color: rgba(183, 93, 13, 0.1);
 		}
-	
+
 		&.slds-is-active {
 			animation: unset;
 		}
-	
+
 		&_tab,
 		&--tab {
 			border-right: 0 none;
