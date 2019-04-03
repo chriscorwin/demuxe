@@ -487,3 +487,8 @@ body {
 .slds-brand-band:before {
   background-image: none;
 }
+
+.slds-form-element__label:empty {
+  margin: 0;
+  padding: 0;
+}
