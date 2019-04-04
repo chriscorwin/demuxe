@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/analyze/main/0000___ID=datorama-intelligence-dashboard___DATA=unset___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0100___ID=datorama-mix-and-connect___DATA=unset___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard___DATA=unset___NOTES=Notes-go-here.png");
+  content: url("/magick-flows/analyze/main/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.svg") url("/magick-flows/analyze/main/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.svg") url("/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.svg") url("/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard-2___DATA=has-sticky-header___NOTES=Notes-go-here.svg") url("/magick-flows/analyze/assets/datorama-intelligence-dashboard___sticky-header.svg") url("/magick-flows/analyze/assets/datorama-intelligence-dashboard-2___sticky-header.svg") url("/magick-flows/analyze/assets/datorama-mix-and-connect___sticky-header.svg");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -56,7 +56,7 @@ body, .container {
   will-change: top;
 }
 
-.drawer-from-top {
+.magick-flows-drawer--from-top {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
@@ -68,13 +68,19 @@ body, .container {
   will-change: top;
 }
 
-.drawer-from-top.slide-in {
+.magick-flows-drawer--from-top.slide-in {
   top: 0px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
 
-.drawer-from-left {
+.magick-flows-drawer--from-top.be-in {
+  top: 0px;
+  transition: 0ms top;
+  will-change: top;
+}
+
+.magick-flows-drawer--from-left {
   margin: 0 auto;
   position: absolute;
   transition: 500ms left ease-in-out;
@@ -86,13 +92,19 @@ body, .container {
   will-change: left;
 }
 
-.drawer-from-left.slide-in {
+.magick-flows-drawer--from-left.slide-in {
   left: 0px;
   transition: 500ms left ease-in-out;
   will-change: left;
 }
 
-.drawer-from-right {
+.magick-flows-drawer--from-left.be-in {
+  left: 0px;
+  transition: 0ms left;
+  will-change: left;
+}
+
+.magick-flows-drawer--from-right {
   margin: 0 auto;
   position: absolute;
   transition: 500ms right ease-in-out;
@@ -104,13 +116,19 @@ body, .container {
   will-change: right;
 }
 
-.drawer-from-right.slide-in {
+.magick-flows-drawer--from-right.slide-in {
   right: 0px;
   transition: 500ms right ease-in-out;
   will-change: right;
 }
 
-.drawer-from-bottom {
+.magick-flows-drawer--from-right.be-in {
+  right: 0px;
+  transition: 0ms right;
+  will-change: right;
+}
+
+.magick-flows-drawer--from-bottom {
   margin: 0 auto;
   position: absolute;
   transition: 500ms bottom ease-in-out;
@@ -121,13 +139,19 @@ body, .container {
   will-change: bottom;
 }
 
-.drawer-from-bottom.slide-in {
+.magick-flows-drawer--from-bottom.slide-in {
   bottom: 0px;
   transition: 500ms bottom ease-in-out;
   will-change: bottom;
 }
 
-.magick-flows-slide {
+.magick-flows-drawer--from-bottom.be-in {
+  bottom: 0px;
+  transition: 0ms bottom;
+  will-change: bottom;
+}
+
+.magick-flows--step {
   background-color: transparent;
 }
 
@@ -137,7 +161,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 6400px;
+  width: 8960px;
 }
 
 .app-switcher-one.shrink {
@@ -145,23 +169,23 @@ body, .container {
   will-change: transform;
 }
 
-.app-switcher-one.shrink .magick-flows--slide {
+.app-switcher-one.shrink .magick-flows--step {
   background-color: white;
 }
 
-.app-switcher-one.rounded-corners .magick-flows-slide {
+.app-switcher-one.rounded-corners .magick-flows-step {
   border-radius: 2rem;
   background-clip: border-box;
   overflow: hidden;
   box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
 }
 
-.app-switcher-one.rounded-corners .magick-flows-slide .slds-scrollable {
+.app-switcher-one.rounded-corners .magick-flows-step .slds-scrollable {
   max-height: 720px;
   height: 720px;
 }
 
-.app-switcher-one.rounded-corners .magick-flows-slide.notification {
+.app-switcher-one.rounded-corners .magick-flows-step.notification {
   background-color: transparent;
 }
 
@@ -179,7 +203,21 @@ body, .container {
   left: 0px;
 }
 
-.magick-flows--slide-0 {
+div#drawer-from-top--step-0::before {
+  content: "Drawer #0";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-0 {
   height: 720px;
   position: absolute;
   top: 0;
@@ -197,7 +235,21 @@ body, .container {
   left: -2560px;
 }
 
-.magick-flows--slide-1 {
+div#drawer-from-top--step-1::before {
+  content: "Drawer #1";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-1 {
   height: 720px;
   position: absolute;
   top: 0;
@@ -215,7 +267,21 @@ body, .container {
   left: -5120px;
 }
 
-.magick-flows--slide-2 {
+div#drawer-from-top--step-2::before {
+  content: "Drawer #2";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-2 {
   height: 720px;
   position: absolute;
   top: 0;
@@ -233,12 +299,58 @@ body, .container {
   left: -7680px;
 }
 
-.magick-flows--slide-3 {
+div#drawer-from-top--step-3::before {
+  content: "Drawer #3";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-3 {
   height: 720px;
   position: absolute;
   top: 0;
   width: 1280px;
   left: 7680px;
+}
+
+.app-switcher-one.be-left-4 {
+  left: -10240px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-4 {
+  left: -10240px;
+}
+
+div#drawer-from-top--step-4::before {
+  content: "Drawer #4";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-4 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 10240px;
 }
 
 footer.magick-flows-stickey-footer_container {
@@ -289,4 +401,38 @@ footer.magick-flows-stickey-footer_container {
   box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
   transition: transform 500ms, opacity 600ms, left 125ms !important;
   opacity: 1;
+}
+
+html {
+  font-family: "Salesforce Sans", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  background: #514f4d;
+  color: #080707;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  background: url(/images/home-background.jpg) no-repeat top left;
+  background-size: 100% 100%;
+  height: 720px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1280;
+}
+
+body.magick-flow {
+  background: transparent !important;
+  overflow: hidden;
+  width: 100vw;
+}
+
+div#content-wrapper {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
+  border-radius: 0.25rem;
+  position: relative;
+  left: auto;
+  margin: 0px auto;
 }

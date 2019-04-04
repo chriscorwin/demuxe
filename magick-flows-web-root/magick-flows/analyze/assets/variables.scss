@@ -1,4 +1,8 @@
-$numberOfSlides: 3;
-$preloadImagesData: url('/magick-flows/analyze/main/0000___ID=datorama-intelligence-dashboard___DATA=unset___NOTES=Notes-go-here.png')
-		url('/magick-flows/analyze/main/0100___ID=datorama-mix-and-connect___DATA=unset___NOTES=Notes-go-here.png')
-		url('/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard___DATA=unset___NOTES=Notes-go-here.png');
+$numberOfSlides: 4;
+$preloadImagesData: url('/magick-flows/analyze/main/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.svg')
+		url('/magick-flows/analyze/main/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.svg')
+		url('/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.svg')
+		url('/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard-2___DATA=has-sticky-header___NOTES=Notes-go-here.svg')
+		url('/magick-flows/analyze/assets/datorama-intelligence-dashboard___sticky-header.svg')
+		url('/magick-flows/analyze/assets/datorama-intelligence-dashboard-2___sticky-header.svg')
+		url('/magick-flows/analyze/assets/datorama-mix-and-connect___sticky-header.svg');
