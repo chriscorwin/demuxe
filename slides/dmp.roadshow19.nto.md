@@ -54,3 +54,7 @@
 
 ![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0700.einstein-segmentation.slide.png){.background}
 
+---
+
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0800.web-ad.slide.png){.background}
+
