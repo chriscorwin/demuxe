@@ -220,7 +220,7 @@ body, .container {
 
 
 
-	div#drawer-from-top--step-#{$i}::before {
+	body.debug div#drawer-from-top--step-#{$i}::before {
 	  content: 'Drawer ##{$i}';
 	  display: block;
 	  width: 100vw;
