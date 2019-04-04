@@ -48,5 +48,9 @@
 
 ---
 
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0610.data-studio.audience-discovery.click-fifa.slide.png){.background}
+
+---
+
 ![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0700.einstein-segmentation.slide.png){.background}
 

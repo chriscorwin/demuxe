@@ -102,15 +102,15 @@ module.exports = {
 			waitFor: 'body',
 			name: '0600.data-studio.audience-discovery'
 		},
-
-		// HOVER INSIGHTS NAV LINK
-		// CLICK EINSTEIN SEGMENTATION LINK
 		{
-			// click: '#einstein-segmentation-link',
-			goto: `${testhost}insights/einstein-segmentation`,
+			click: '#grid .slds-col:nth-of-type(2) img',
+			waitFor: 200,
+			name: '0610.data-studio.audience-discovery.click-fifa'
+		},
+		{
+			click: '#card1 a:nth-of-type(2)',
 			waitFor: 'body',
 			name: '0700.einstein-segmentation'
 		}
-
 	]
 };
