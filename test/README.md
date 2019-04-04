@@ -26,12 +26,12 @@ If you want to skip capturing a step as a slide, add `skipSlideCapture: true` to
 
 If you would like to skip slide capturing for the entire demo, add `skipSlideCapture: true` to the root of the demo flow definition.
 
-After you run the tests and the markdown file is created, if you would like to create an actual Google Slide deck, you must:
+*After you run the tests and the markdown file is created*, if you would like to create an actual Google Slide deck, you must:
 
 1. Upload the slides to heroku-dev (eg, commit and then push: `git push heroku your-branch:master`)
-2. `md2gslides slides/[product].[venue].[brand].md` (eg: `md2gslides slides/dmp.df18keynote.bbva.md`)
+2.`npm run slides` is an alias for `md2gslides slides/[product].[venue].[brand].md` (eg: `md2gslides slides/dmp.df18keynote.bbva.md`)
 
-A new slide deck will be generated and you will be given the URL which you can share with whomever you would like.
+A new slide deck will be generated and you will be given the URL which you can share with whomever you would like. Once that slide deck is generated, take the ID from the URL for the slide deck (eg the url `https://docs.google.com/presentation/d/1EzinU2nh2RXITiLawG4BGzbdVYekOlhHPg9VxsKZ7_A/` has the id `1EzinU2nh2RXITiLawG4BGzbdVYekOlhHPg9VxsKZ7_A`) and put it in `config/config.json` as the value for `presentationid`. Once you do that, the slide deck you generated will be _updated_ each time you run `npm run slides` instead of a new one being generated each time.
 
 ### Full Page Visual Regression Testing
 

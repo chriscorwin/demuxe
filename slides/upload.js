@@ -4,9 +4,9 @@ const { exec } = require('child_process');
 
 const slides_id = config.presentationid ? `-a ${config.presentationid} -e` : '';
 
-console.log(`md2gslides slides/dmp.roadshow19.nto.md ${slides_id}`);
+console.log(`md2gslides slides/${config.productTemplate}.${config.demoVenue}.${brandTheme}.md ${slides_id}`);
 
-exec(`md2gslides slides/dmp.roadshow19.nto.md ${slides_id}`, (err, stdout, stderr) => {
+exec(`md2gslides slides/${config.productTemplate}.${config.demoVenue}.${brandTheme}.md ${slides_id}`, (err, stdout, stderr) => {
 	if (err) {
 		console.error(`error ${err}`);
 		return;
