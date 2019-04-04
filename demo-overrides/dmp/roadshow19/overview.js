@@ -38,10 +38,10 @@ module.exports = {
 			],
 			segments: [
 				{label: 'Nature Lovers', number: '5.2M', width: 362},
-				{label: 'Corporate Customers - Offsite Vision Quests', number: '4.7M', width: 308},
-				{label: 'Animal Encounter Seekers', number: '4M', width: 290},
-				{label: 'Camping Aspirants', number: '3.7M', width: 270},
-				{label: 'Zoo and Parks Members', number: '2.3M', width: 186}
+				{label: 'Zoo and Parks Members', number: '4.7M', width: 308},
+				{label: 'Camping & Hiking Enthusiasts', number: '4M', width: 290},
+				{label: 'Animal Encounter Seekers', number: '3.7M', width: 270},
+				{label: 'Corporate Customers - Offsite Excursions', number: '2.3M', width: 186}
 			],
 			title: 'Activated Segments',
 			view_all: {
