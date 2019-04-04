@@ -203,7 +203,7 @@ body, .container {
   left: 0px;
 }
 
-div#drawer-from-top--step-0::before {
+body.debug div#drawer-from-top--step-0::before {
   content: "Drawer #0";
   display: block;
   width: 100vw;
@@ -235,7 +235,7 @@ div#drawer-from-top--step-0::before {
   left: -2560px;
 }
 
-div#drawer-from-top--step-1::before {
+body.debug div#drawer-from-top--step-1::before {
   content: "Drawer #1";
   display: block;
   width: 100vw;
@@ -267,7 +267,7 @@ div#drawer-from-top--step-1::before {
   left: -5120px;
 }
 
-div#drawer-from-top--step-2::before {
+body.debug div#drawer-from-top--step-2::before {
   content: "Drawer #2";
   display: block;
   width: 100vw;
@@ -299,7 +299,7 @@ div#drawer-from-top--step-2::before {
   left: -7680px;
 }
 
-div#drawer-from-top--step-3::before {
+body.debug div#drawer-from-top--step-3::before {
   content: "Drawer #3";
   display: block;
   width: 100vw;
@@ -331,7 +331,7 @@ div#drawer-from-top--step-3::before {
   left: -10240px;
 }
 
-div#drawer-from-top--step-4::before {
+body.debug div#drawer-from-top--step-4::before {
   content: "Drawer #4";
   display: block;
   width: 100vw;
