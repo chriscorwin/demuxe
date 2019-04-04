@@ -18,7 +18,7 @@ module.exports = {
 	steps: [
 		{
 			goto: testhost,
-			waitFor: 'body',
+			waitFor: 2000,
 			name: '0001.overview'
 		},
 		{
