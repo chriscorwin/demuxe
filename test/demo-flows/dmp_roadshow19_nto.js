@@ -111,6 +111,12 @@ module.exports = {
 			click: '#card1 a:nth-of-type(2)',
 			waitFor: 'body',
 			name: '0700.einstein-segmentation'
+		},
+		// Show web ad
+		{
+			click: '#confirm',
+			waitFor: 'body',
+			name: '0800.web-ad'
 		}
 	]
 };

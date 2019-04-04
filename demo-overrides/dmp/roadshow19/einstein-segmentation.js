@@ -5,7 +5,7 @@ const Today = new Date(Date.now()).toLocaleDateString("en-US", monthDayYear);
 module.exports = {
 	actions: [
 		{
-			onclick: '/segments/manage-segments/details-and-activation',
+			onclick: '/webad',
 			text: 'Create a new segment using this persona'
 		}
 	],
