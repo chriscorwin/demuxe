@@ -117,7 +117,6 @@
 
 .slds-brand-band.slds-brand-band_medium:before {
   background-color: #F7F9FB;
-  height: 15.2rem;
+  height: 14rem;
   background-image: url(/styles/header-bg.png);
-  background-position: left 0 top 18px;
 }

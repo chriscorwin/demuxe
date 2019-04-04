@@ -1,3 +1,9 @@
+.slds-text-heading_medium, .slds-text-heading--medium {
+    font-weight: 400;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
 #key .green {
 	display: none;
 }
@@ -193,7 +199,7 @@ body {
 	border: 0 none;
 	// border-bottom: 1px solid #D8DDE6;
 
-	&:focus, 
+	&:focus,
 	&:active {
 		border: 0 none;
 		// border-bottom: 1px solid #0070D2;
@@ -230,7 +236,7 @@ body {
 	> ul {
 		min-height: 110px;
 		width: 31.8rem;
-	
+
 		li {
 			padding-left: 24px;
 		}
@@ -252,15 +258,15 @@ body {
 		padding-left: 18px;
 		float: left;
 		margin-right: 24px;
-	
+
 		&.purple {
 			background: url('/images/icons/purple.svg') no-repeat left center / 10px;
 		}
-	
+
 		&.blue {
 			background: url('/images/icons/blue.svg') no-repeat left center / 10px;
 		}
-	
+
 		&.green {
 			background: url('/images/icons/green.svg') no-repeat left center / 10px;
 		}
