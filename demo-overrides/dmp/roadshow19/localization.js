@@ -31,9 +31,7 @@ const new_asset = {
 	license: {
 		date_range: `${dates.oneMonthAgo} - ${dates.today}`,
 		save_text: 'Save and Provision',
-		save_action: () => {
-			navigatePage('/segments/manage-segments/?state=provisioned');
-		}
+		save_action: `navigatePage('/segments/manage-segments/?state=provisioned&trigger=successToast')`
 	}
 };
 

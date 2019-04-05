@@ -163,6 +163,15 @@ module.exports = {
 			segments: [...highValueSegment, ...baseSegments],
 			lookalikes,
 			controls
+		},
+		provisioned: {
+			segments: [...highValueSegment, ...baseSegments],
+			lookalikes,
+			controls,
+			toast: {
+				title: "'Camping and tents explorers' segment provisioned successfully.",
+				contents: "Will be available only under 'Northern Trail Outfitters - Apparel' account as 'Camping and tents explorers'"
+			}
 		}
 	}
 };

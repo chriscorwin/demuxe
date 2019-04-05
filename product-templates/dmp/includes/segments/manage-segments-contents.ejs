@@ -267,6 +267,15 @@
 	theme: 'success'
 }) %>
 
+<% if (locals.localization.segments.states[locals.state].toast) {
+	const toast = locals.localization.segments.states[locals.state].toast; %>
+	<%- include('components/toast', {
+		contents: toast.contents,
+		title: toast.title,
+		theme: (toast.theme) ? toast.theme : 'success',
+		id: (toast.id) ? toast.id : 'successToast'
+	}) %>
+<% } %>
 
 <%- include('components/toast', {
 	contents: 'The segment will be available once processing completes.',
