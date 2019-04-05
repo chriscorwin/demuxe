@@ -6,8 +6,8 @@ module.exports = {
 		accountNavItems: [],
 		navItems: [ {
 				label: 'Overview',
-				href: `/`,
-				isActive: (activePage) => activePage === 'index'
+				href: `/overview`,
+				isActive: (activePage) => activePage === 'overview'
 			},
 			{
 				label: 'Segments',
