@@ -9,7 +9,7 @@ In the simplest possible case, one need only place one or more media files into 
 
 But they can be powerful, too.
 
-Merely by naming your assets in a way the system understands, you can craft a demo with fake hovers, fake drag and drop, fake drawers that fake slide in and out, fake sticky headers, fake sticky footers, fake auto-advance, fake everything!
+Merely by naming your assets in a way the system understands, you can craft a demo with fake hovers, fake drag and drop, fake drawers that fake step in and out, fake sticky headers, fake sticky footers, fake auto-advance, fake everything!
 
 The only thing about a Magick Flow demo that is not fake is the feeling of accomplishment you'll have from nailing your flow down and being able to look at it in a browser three minutes later.
 
@@ -97,7 +97,7 @@ Step Identifier
 
 Take the following filename as an example.
 
-0052___ID=message-is-being-dragged___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast___NOTES=Do-not-forget-to-move-your-mouse-too.svg
+0052___ID=message-is-being-dragged___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Do-not-forget-to-move-your-mouse-too.svg
 
 We break that file name down into three parts: sorter, step identifier, meta data.
 
@@ -125,13 +125,13 @@ It will find the header at ../assets/google-search-results___sticky-header.png.
 
 Side transition example
 
-0500___ID=valora-home___DATA=use-slide-transition__slide-transition_app-switch.png
+0500___ID=valora-home___DATA=use-step-transition__step-transition_app-switch.png
 
 
 
 * The sorter is 0500.
 * The step identifier is valora-home.
-* The meta data is: use-slide-transition__slide-transition_app-switch
+* The meta data is: use-step-transition__step-transition_app-switch
 
 Given that meta data, the system will do a nice little animation to go between that file and the one before it.
 
@@ -148,7 +148,7 @@ Drawer example
 
 * The sorter is 0020.
 * The step identifier is valora-home.
-* The meta data is: use-slide-transition__slide-transition_app-switch
+* The meta data is: use-step-transition__step-transition_app-switch
 
 Given that meta data, the system will do a nice little animation to go between that file and the one before it.
 

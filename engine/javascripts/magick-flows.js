@@ -145,6 +145,15 @@ function locationHashChanged(event) {
 	console.log(`event.oldURL: `, event.oldURL);
 	console.log(`event.newURL: `, event.newURL);
 
+
+	// let scrollTimeout = setTimeout(() => {
+	// 	window.scroll(0,0);
+	// 	document.querySelectorAll( '.slds-scrollable')[nextClick].scroll(0,0);
+	// 	document.querySelectorAll( '.slds-scrollable')[clicks].scroll(0,0);
+	// 	document.querySelectorAll( '.slds-scrollable')[previousClick].scroll(0,0);
+	// }, 1500);
+	// clearTimeout(scrollTimeout);
+
 	// get the non-string version of the hash -- that is the number of clicks so far
 	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
@@ -180,10 +189,8 @@ function locationHashChanged(event) {
 
 	// Scroll the window, and scrollable areas, up, because the user could have scrolled down and then hit "back" and normally a demo runner will want to load every step in its fresh, unscrolled, state.
 	// this may eventaully prove problematic, and may have to be re-thought, or, over-ridable, at least.
-	window.scroll(0,0);
-	document.querySelectorAll( '.slds-scrollable')[nextClick].scroll(0,0);
-	document.querySelectorAll( '.slds-scrollable')[clicks].scroll(0,0);
-	document.querySelectorAll( '.slds-scrollable')[previousClick].scroll(0,0);
+
+
 
 
 	// we assume that we will not do an app transition nor show a notificaiton
