@@ -17,7 +17,7 @@ module.exports = {
 			},
 			{
 				label: 'Insights',
-				ID: 'insights-global-nav-link',
+				id: 'insights-global-nav-link',
 				href: `/insights/einstein-segmentation`,
 				isActive: (activePage) => activePage === 'insights',
 				dropdownItems: [

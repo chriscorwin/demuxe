@@ -1,0 +1,15 @@
+.audience-discovery-tab-nav:before {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 120px;
+  z-index: 3;
+}
+
+#subheader-wrapper {
+  padding-bottom: 0;
+}
