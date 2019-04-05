@@ -1,3 +1,5 @@
+const dates = require('../../../engine/javascripts/dates');
+
 const consumer_rights_management = require('../df18keynote/consumer-rights-management');
 const data_capture_sources = require('../df18keynote/data-capture-sources');
 const einstein_segmentation = require('./einstein-segmentation');
@@ -25,6 +27,16 @@ manage_segments.details_and_activation.save_action = () => {
 }
 manage_segments.details_and_activation.activate_by_default = false;
 
+const new_asset = {
+	license: {
+		date_range: `${dates.oneMonthAgo} - ${dates.today}`,
+		save_text: 'Save and Provision',
+		save_action: () => {
+			navigatePage('/segments/manage-segments/?state=provisioned');
+		}
+	}
+};
+
 module.exports = {
 	appName: 'Audience Studio',
 	body_class: 'slds-brand-band slds-brand-band_medium',
@@ -32,6 +44,7 @@ module.exports = {
 	einstein_segmentation,
 	data_capture_sources,
 	manage_segments,
+	new_asset,
 	overview,
 	segments
 };
