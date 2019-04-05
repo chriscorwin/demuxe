@@ -18,7 +18,7 @@ module.exports = {
 			{
 				label: 'Insights',
 				ID: 'insights-global-nav-link',
-				href: ``,
+				href: `/insights/einstein-segmentation`,
 				isActive: (activePage) => activePage === 'insights',
 				dropdownItems: [
 					[ {
@@ -102,16 +102,143 @@ module.exports = {
 			{
 				label: 'Manage',
 				href: ``,
-				lookLikeDropdown: true,
 				isActive: (activePage) => activePage === 'manage',
-				dropdownItems: []
+				dropdownItems: [
+					[ {
+							separator: true,
+							label: 'Capture'
+						},
+						{
+							label: 'Consumer Rights',
+							href: `/consumer-rights-management`,
+							id: 'consumer-rights-tab-link'
+						},
+						{
+							label: 'Data Capture Sources',
+							href: '/manage/data-capture/sources',
+							id: 'data-capture-sources-tab-link'
+						},
+						{
+							label: 'Manage Attributes'
+						},
+						{
+							label: 'Attributes Report'
+						},
+						{
+							label: 'Events'
+						},
+						{
+							label: 'Sites'
+						},
+						{
+							label: 'Context Terms'
+						},
+						{
+							label: 'Onboarding'
+						},
+						{
+							label: 'Upload & Export Tool'
+						},
+						{
+							label: 'User Match'
+						},
+						{
+							label: 'File Based Data Capture'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Super Tag'
+						},
+						{
+							label: 'Supertags'
+						},
+						{
+							label: 'Supertag Rules'
+						},
+						{
+							label: 'Library Tags'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Diagnostics'
+						},
+						{
+							label: 'Deleted Segments'
+						},
+						{
+							label: 'Data Sentry IRIS'
+						},
+						{
+							label: 'Tag Summary'
+						},
+						{
+							label: 'Tag Inspector'
+						},
+						{
+							label: 'Site Speed'
+						},
+						{
+							label: 'Control Tag Helper'
+						}
+					]
+				]
 			},
 			{
 				label: 'Data Studio',
 				id: 'data-studio',
 				href: `/data-studio/audience-discovery`,
-				lookLikeDropdown: true,
-				isActive: (activePage) => activePage === 'audience-discovery' || activePage === 'data-studio'
+				isActive: (activePage) => activePage === 'audience-discovery' || activePage === 'data-studio',
+				dropdownItems: [
+					[ {
+							separator: true,
+							label: 'Discover'
+						},
+						{
+							label: 'Audience Discovery',
+							href: `/data-studio/audience-discovery`,
+							id: 'audience-discovery-tab-link'
+						},
+						{
+							label: 'Manage Orders'
+						},
+						{
+							label: 'Cart'
+						},
+						{
+							label: 'Settings'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Provision'
+						},
+						{
+							label: 'Manage Assets'
+						},
+						{
+							label: 'Manage Licenses'
+						},
+						{
+							label: 'Manage Orders'
+						},
+						{
+							label: 'Manage License Templates'
+						},
+						{
+							label: 'Settings'
+						}
+					],
+					[ {
+							separator: true,
+							label: 'Reports'
+						},
+						{
+							label: 'Seller Revenue Report'
+						}
+					]
+				]
 			}
 		]
 	}
