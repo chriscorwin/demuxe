@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/know/main/0000___ID=mc-homepage___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/0500___ID=mc-homepage-social-hover___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/1000___ID=social-analyze-dashboard___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/1500___ID=social-publish-calendar___NOTES=Click-Thursday-1pm-to-show-social-network-menu.png") url("/magick-flows/know/main/2000___ID=social-publish-post___NOTES=Choose-Facebook.png") url("/magick-flows/know/main/2500___ID=social-facebook-post___NOTES=Click-Post-to-input-field.png") url("/magick-flows/know/main/3000___ID=social-facebook-post___NOTES=Click-Facebook-from-dropdown.png") url("/magick-flows/know/main/3500___ID=social-facebook-post___NOTES=Click-into-main-text-area__Fake-content-will-appear.png") url("/magick-flows/know/main/4000___ID=social-facebook-post___DATA=show-drawer-from-top--on-arrival__hide-drawer-from-top--on-leave___NOTES=Now-we-need-to-choose-an-image.png") url("/magick-flows/know/main/4500___ID=social-facebook-post-image-selected___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/5000___ID=social-engage___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/5500___ID=social-engage-community___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/6000___ID=social-engage-inspect___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--on-leave___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/6500___ID=social-engage-inspect-macros___NOTES=Notes-go-here__Separate-with-two-underscores__Do-not-use-spaces.png") url("/magick-flows/know/main/7000___Facebook-mobile.png") url("/magick-flows/know/main/7500___Nto-mobile.png") url("/magick-flows/know/assets/social-engage-inspect___drawer-from-right.png") url("/magick-flows/know/assets/social-facebook-post___drawer-from-top.png") url("/magick-flows/know/assets/social-facebook-post-image-to-choose.jpg") url("/magick-flows/know/assets/social-facebook-post-image-to-choose.png");
+  content: url("/magick-flows/know/main/0000___ID=mc-homepage___DATA=has-sticky-header___NOTES=Click-Social-Studio-in-Global-Nav.png") url("/magick-flows/know/main/0500___ID=mc-homepage-social-hover___DATA=has-sticky-header__show-drawer-from-top--on-arrival__hide-drawer-from-top--on-leave___NOTES=Click-the-Social-Studio-hover.png") url("/magick-flows/know/main/1000___ID=social-analyze-dashboard___DATA=has-sticky-header___NOTES=Click-Post-Volume-dropdown-triange-from-top-middle-card__A-dropdown-menu-will-appear.png") url("/magick-flows/know/main/1010___ID=social-analyze-dashboard___DATA=has-sticky-header___NOTES=Click-Create-Focus-Group-link.png") url("/magick-flows/know/main/2000___ID=focus-group-summary___DATA=has-sticky-header___NOTES=Click-top-right-disclose-triangle.png") url("/magick-flows/know/main/2010___ID=focus-group-summary--menu-disclosed___DATA=has-sticky-header__show-drawer-from-top--on-arrival__hide-drawer-from-top--on-leave___NOTES=Click-Edit-Sources__A_drawer-from-the-right-shows-on-next-screen.png") url("/magick-flows/know/main/2020___ID=open-cases-drawer___DATA=has-sticky-header__show-drawer-from-right--on-arrival__hide-drawer-from-right--never___NOTES=Click-Open-Cases-button.png") url("/magick-flows/know/main/2030___ID=open-cases-drawer-selected___DATA=has-sticky-header__show-drawer-from-right--instantly__hide-drawer-from-right--on-leave___NOTES=Click-Apply-button__Drawer-will-close.png") url("/magick-flows/know/main/2040___ID=open-cases-dashboard___DATA=has-sticky-header___NOTES=Click-top-right-disclose-triangle-again.png") url("/magick-flows/know/main/2070___ID=open-cases-dashboard-menu-open___DATA=has-sticky-header__show-drawer-from-top--on-arrival__hide-drawer-from-top--on-click___NOTES=Click-Export-Focus-Group__A-modal-will-open.png") url("/magick-flows/know/main/2080___ID=open-cases-dashboard-modal-open___DATA=has-sticky-header__show-drawer-from-top--on-arrival__hide-drawer-from-top--on-leave___NOTES=Click-X_button-to-close-modal.png") url("/magick-flows/know/main/2090___ID=open-cases-dashboard___DATA=has-sticky-header___NOTES=Click-publish-from-blue-navbar.png") url("/magick-flows/know/main/3000___ID=publish-calendar-view___NOTES=Click-cell-May-7-at-10-am__A-menu-will-show.png") url("/magick-flows/know/main/3010___ID=publish-calendar-menu-showing___NOTES=Click-Facebook-Post.png") url("/magick-flows/know/main/4000___ID=social-facebook-post___NOTES=Click-into-the-Post-To-input-field.png") url("/magick-flows/know/main/4008___ID=social-facebook-post___NOTES=Click-Facebook-from-dropdown.png") url("/magick-flows/know/main/4010___ID=social-facebook-post___NOTES=Click-into-text-area.png") url("/magick-flows/know/main/4030___ID=social-facebook-post___DATA=show-drawer-from-top--on-arrival__hide-drawer-from-top--on-leave___NOTES=Click-the-Upload-Images-link.png") url("/magick-flows/know/main/4040___ID=social-facebook-post-image-selected___NOTES=Click-Engage-in-blue-navbar-at-top.png") url("/magick-flows/know/main/5000___ID=social-engage___NOTES=In-the-footer-are-some-grey-tabs__Click-the-Community-one.png") url("/magick-flows/know/main/5010___ID=social-engage-community___DATA=has-sticky-header___NOTES=Click-top-middle-card__It-will-highlight-and-a-drawer-will-appear.png") url("/magick-flows/know/main/5020___ID=social-engage-community-inspect-pete-mitchel___DATA=has-sticky-header__show-drawer-from-right--on-arrival__hide-drawer-from-right--on-leave_____NOTES=It-is-unclear-where-to-click__The-next-step-show-a-Facebook-mobile-screenshot.png") url("/magick-flows/know/main/7000___ID=Facebook-mobile___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/know/main/7500___ID=NTO-mobile___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/know/assets/0000___ID=mc-homepage___sticky-header.png") url("/magick-flows/know/assets/0500___ID=mc-homepage-social-hover___drawer-from-top.png") url("/magick-flows/know/assets/0500___ID=mc-homepage-social-hover___sticky-header.png") url("/magick-flows/know/assets/1000___ID=social-analyze-dashboard___DATA=has-sticky-header___NOTES=Click-Post-Volume-dropdown-triange-from-top-middle-card__A-dropdown-menu-will-appear.png") url("/magick-flows/know/assets/2000___ID=focus-group-summary___DATA=has-sticky-header___NOTES=Click-top-right-disclose-triangle.png") url("/magick-flows/know/assets/2010___ID=focus-group-summary--menu-disclosed___drawer-from-top.png") url("/magick-flows/know/assets/2010___ID=focus-group-summary--menu-disclosed___sticky-header.png") url("/magick-flows/know/assets/2020___ID=open-cases-drawer___drawer-from-right.png") url("/magick-flows/know/assets/2020___ID=open-cases-drawer___sticky-header.png") url("/magick-flows/know/assets/2030___ID=open-cases-drawer-selected___drawer-from-right.png") url("/magick-flows/know/assets/2030___ID=open-cases-drawer-selected___sticky-header.png") url("/magick-flows/know/assets/2040___ID=open-cases-dashboard___DATA=has-sticky-header___NOTES=Click-top-right-disclose-triangle-again.png") url("/magick-flows/know/assets/2070___ID=open-cases-dashboard-menu-open___drawer-from-top.png") url("/magick-flows/know/assets/2070___ID=open-cases-dashboard-menu-open___sticky-header.png") url("/magick-flows/know/assets/2080___ID=open-cases-dashboard-modal-open___DATA=has-sticky-header.png") url("/magick-flows/know/assets/2080___ID=open-cases-dashboard-modal-open___drawer-from-top.png") url("/magick-flows/know/assets/2090___ID=open-cases-dashboard___DATA=has-sticky-header___NOTES=Click-publish-from-blue-navbar.png") url("/magick-flows/know/assets/4030___ID=social-facebook-post___DATA=show-drawer-from-top--on-arrival__hide-drawer-from-top--on-leave___NOTES=Click-the-Upload-Images-link Copy.png") url("/magick-flows/know/assets/5010___ID=social-engage-community___DATA=has-sticky-header___NOTES=Click-top-middle-card__It-will-highlight-and-a-drawer-will-appear.png") url("/magick-flows/know/assets/5020___ID=social-engage-community-inspect-pete-mitchel___DATA=has-sticky-header.png") url("/magick-flows/know/assets/5020___ID=social-engage-community-inspect-pete-mitchel___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--on-leave_____NOTES=It-is-unclear-where-to-click__The-next-step-show-a-Facebook-mobile-screenshot.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -161,7 +161,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 39680px;
+  width: 60160px;
 }
 
 .app-switcher-one.shrink {
@@ -737,6 +737,262 @@ body.debug div#drawer-from-top--step-16::before {
   left: 40960px;
 }
 
+.app-switcher-one.be-left-17 {
+  left: -43520px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-17 {
+  left: -43520px;
+}
+
+body.debug div#drawer-from-top--step-17::before {
+  content: "Drawer #17";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-17 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 43520px;
+}
+
+.app-switcher-one.be-left-18 {
+  left: -46080px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-18 {
+  left: -46080px;
+}
+
+body.debug div#drawer-from-top--step-18::before {
+  content: "Drawer #18";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-18 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 46080px;
+}
+
+.app-switcher-one.be-left-19 {
+  left: -48640px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-19 {
+  left: -48640px;
+}
+
+body.debug div#drawer-from-top--step-19::before {
+  content: "Drawer #19";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-19 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 48640px;
+}
+
+.app-switcher-one.be-left-20 {
+  left: -51200px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-20 {
+  left: -51200px;
+}
+
+body.debug div#drawer-from-top--step-20::before {
+  content: "Drawer #20";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-20 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 51200px;
+}
+
+.app-switcher-one.be-left-21 {
+  left: -53760px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-21 {
+  left: -53760px;
+}
+
+body.debug div#drawer-from-top--step-21::before {
+  content: "Drawer #21";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-21 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 53760px;
+}
+
+.app-switcher-one.be-left-22 {
+  left: -56320px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-22 {
+  left: -56320px;
+}
+
+body.debug div#drawer-from-top--step-22::before {
+  content: "Drawer #22";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-22 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 56320px;
+}
+
+.app-switcher-one.be-left-23 {
+  left: -58880px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-23 {
+  left: -58880px;
+}
+
+body.debug div#drawer-from-top--step-23::before {
+  content: "Drawer #23";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-23 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 58880px;
+}
+
+.app-switcher-one.be-left-24 {
+  left: -61440px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-24 {
+  left: -61440px;
+}
+
+body.debug div#drawer-from-top--step-24::before {
+  content: "Drawer #24";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-24 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 61440px;
+}
+
 footer.magick-flows-stickey-footer_container {
   position: absolute;
   bottom: 0;
@@ -819,4 +1075,17 @@ div#content-wrapper {
   position: relative;
   left: auto;
   margin: 0px auto;
+}
+
+.app-switcher-one {
+  transition: 400ms transform, 800ms left !important;
+  width: 75200px;
+}
+
+.app-switcher-one.shrink {
+  transform: scale(0.98) !important;
+}
+
+.app-switcher-one.rounded-corners .magick-flows-step {
+  box-shadow: none !important;
 }

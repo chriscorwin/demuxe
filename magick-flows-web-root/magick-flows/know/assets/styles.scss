@@ -8,6 +8,8 @@ $widthOfSlideValue: 1280;
 $widthOfGutterValue: 1280;
 
 $widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
+$widthOfAppSwitcherShrunk: ((($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) * 1.25) + 0px;
+
 $heightOfAppSwitcher: $heightOfSlideValue + 0px;
 $heightOfSlide: $heightOfSlideValue + 0px;
 $widthOfSlide: $widthOfSlideValue + 0px;
@@ -70,4 +72,21 @@ div#content-wrapper {
   position: relative;
   left: auto;
   margin: 0px auto;
+}
+
+.app-switcher-one {
+  transition: 400ms transform, 800ms left !important;
+  width: $widthOfAppSwitcherShrunk ;
+
+  &.shrink {
+    transform: scale(0.98) !important;
+  }
+
+  &.rounded-corners {
+    .magick-flows-step {
+      box-shadow: none !important;
+
+    }
+  }
+
 }

@@ -90,13 +90,14 @@ So, 0000.png will come before 0015.png.
 
 Beyond that there are some conventions you can follow in order to take advantage of Magick Flows', uh, magickalness.
 
-
+use-step-transition__step-transition_app-switch
 
 
 Step Identifier
 
 Take the following filename as an example.
 
+0052___ID=message-is-being-dragged___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=Do-not-forget-to-move-your-mouse-too.svg
 0052___ID=message-is-being-dragged___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Do-not-forget-to-move-your-mouse-too.svg
 
 We break that file name down into three parts: sorter, step identifier, meta data.
