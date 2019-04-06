@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/analyze/main/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.svg") url("/magick-flows/analyze/main/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.svg") url("/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.svg") url("/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard-2___DATA=has-sticky-header___NOTES=Notes-go-here.svg") url("/magick-flows/analyze/assets/datorama-intelligence-dashboard___sticky-header.svg") url("/magick-flows/analyze/assets/datorama-intelligence-dashboard-2___sticky-header.svg") url("/magick-flows/analyze/assets/datorama-mix-and-connect___sticky-header.svg");
+  content: url("/magick-flows/analyze/main/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard-2___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/assets/datorama-intelligence-dashboard___sticky-header.png") url("/magick-flows/analyze/assets/datorama-intelligence-dashboard-2___sticky-header.png") url("/magick-flows/analyze/assets/datorama-mix-and-connect___sticky-header.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -161,7 +161,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 8960px;
+  width: 6400px;
 }
 
 .app-switcher-one.shrink {
@@ -319,38 +319,6 @@ body.debug div#drawer-from-top--step-3::before {
   top: 0;
   width: 1280px;
   left: 7680px;
-}
-
-.app-switcher-one.be-left-4 {
-  left: -10240px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-4 {
-  left: -10240px;
-}
-
-body.debug div#drawer-from-top--step-4::before {
-  content: "Drawer #4";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-4 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 10240px;
 }
 
 footer.magick-flows-stickey-footer_container {
