@@ -215,7 +215,9 @@ module.exports = {
 							label: 'Provision'
 						},
 						{
-							label: 'Manage Assets'
+							label: 'Manage Assets',
+							href: '/data-studio/provisioning/new-asset.define-asset',
+							id: 'manage-assets-tab-link'
 						},
 						{
 							label: 'Manage Licenses'
