@@ -340,7 +340,7 @@ function locationHashChanged(event) {
 					// setTimeout(() => {
 					// }, 125);
 					// console.log(`delayTransition: `, delayTransition);
-					// delayTransition = (delayTransition < 250 ? 250 : delayTransition);
+					delayTransition = 0;
 				}
 				// if ( currentStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
 				// 	document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slide-in');
@@ -368,8 +368,6 @@ function locationHashChanged(event) {
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.add('slds-hide');
 					}, 250);
-					setTimeout(() => {
-					}, 0);
 					console.log(`delayTransition: `, delayTransition);
 					delayTransition = (delayTransition < 250 ? 250 : delayTransition);
 				}
