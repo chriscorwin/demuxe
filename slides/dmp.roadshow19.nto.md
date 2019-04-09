@@ -1,14 +1,10 @@
 ---
 
-![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0001.overview.slide.png){.background}
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0001.index.slide.png){.background}
 
 ---
 
-![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0002.overview.slide.png){.background}
-
----
-
-![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0003.overview.slide.png){.background}
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0010.index.hover-manage.slide.png){.background}
 
 ---
 
@@ -41,6 +37,14 @@
 ---
 
 ![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0500.manage-segments.slide.png){.background}
+
+---
+
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0510.manage-segments.settings.slide.png){.background}
+
+---
+
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0550.provisioning.slide.png){.background}
 
 ---
 

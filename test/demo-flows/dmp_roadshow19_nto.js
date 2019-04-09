@@ -19,34 +19,18 @@ module.exports = {
 		{
 			goto: testhost,
 			waitFor: 2000,
-			name: '0001.overview'
+			name: '0001.index'
 		},
 		{
-			evaluate: () => {
-				window.scrollBy(0, window.innerHeight);
-			},
-			waitFor: 2000,
-			name: '0002.overview',
-			skipTestCapture: true
-		},
-		{
-			evaluate: () => {
-				window.scrollBy(0, window.innerHeight * 2);
-			},
-			waitFor: 2000,
-			name: '0003.overview',
-			skipTestCapture: true
-		},
-		{
-			click: '#manage-consumer-rights',
-			waitFor: 'body',
-			name: '0100.manage-consumer-rights',
-			skipSlideCapture: true
+			hover: 'nav .slds-context-bar__dropdown-trigger:nth-of-type(5)',
+			waitFor: 1000,
+			name: '0010.index.hover-manage'
 		},
 		// GOTO CONSUMER RIGHTS MANAGEMENT PAGE
 		{
+			click: '#consumer-rights-tab-link',
 			waitFor: 2000,
-			name: '0201.consumer-rights-management-page'
+			name: '0201.consumer-rights-management-page',
 		},
 		// SEGMENTS - MANAGE SEGMENTS
 		{
@@ -94,6 +78,20 @@ module.exports = {
 			waitFor: 'body',
 			name: '0500.manage-segments'
 		},
+		{
+			click: '.slds-panel-box__header-settings',
+			waitFor: 'body',
+			name: '0510.manage-segments.settings'
+		},
+
+
+		// PROVISIONING
+		{
+			click: '#content .slds-dropdown__item:last-of-type a',
+			waitFor: 'body',
+			name: '0550.provisioning'
+		},
+
 
 		// DATA STUDIO - AUDIENCE DISCOVERY
 		{
