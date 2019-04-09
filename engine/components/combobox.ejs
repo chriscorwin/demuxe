@@ -1,4 +1,23 @@
 <%
+/**
+ * This file, when included, will create an slds button in-place.
+
+	include('components/combobox', data)
+
+	Options for data:
+
+	{
+		isDisabled: false, // whether the button appears disabled
+		versionName: '', // placeholder text for combobox
+		versions: [
+			{
+				iconPath: '', // svg icon path for option
+				id: '', // id for listbox item div
+				name: '' // displayed text for option
+			}
+		]
+	}
+ */
 	const disabled = (locals.isDisabled) ? ' disabled=""' : '';
 %>
 

@@ -1,4 +1,27 @@
 <%
+/**
+ * This file, when included, will create an slds button in-place.
+
+	include('components/button', data)
+
+	Options for data:
+
+	{
+		iconOnRight: false, // whether the button icon shows to the right or left of the button text
+		iconPath: '', // path to SVG icon. Takes precedence over imgPath
+		id: '', // an html ID for the button
+		imgPath: '', // path to img asset
+		isDisabled: false, // whether the button appears disabled
+		isSelected: false, // whether the button appears selected
+		onClick: '', // code for the `onclick=""` DOM attribute for `<button />`
+		imgStyle: '', // used for the img tag if `imgPath` passed, or svg tag if iconPath passed
+		text: '', // text to appear on the button. If not present, button will assume that it is an icon button
+		title: '', // assistive button text
+		variant: 'neutral', // any of the button variations listed here: https://latest-220.lightningdesignsystem.com/components/buttons/
+	}
+ */
+
+
 	const selected = (locals.isSelected && locals.isSelected === true) ? ' slds-is-selected' : '';
 	const disabled = (locals.isDisabled && locals.isDisabled === true) ? ' disabled=""' : '';
 	const variant = (locals.variant) ? ` slds-button_${locals.variant}` : ' slds-button_neutral';
@@ -6,17 +29,18 @@
 	const svg_class = (locals.text) ? ` slds-button__icon_left` : '';
 	const onClick = (locals.onClick) ? ` onclick=${locals.onClick}` : '';
 	const id = (locals.id) ? ` id=${locals.id}` : '';
+	const imgStyle = (locals.imgStyle) ? ` style="${locals.imgStyle}"` : '';
 %>
 	<button<%=id%><%=onClick%> class="slds-button<%=button_icon%><%=variant%><%=selected%>"<%=disabled%> title="<%=locals.title%>" aria-pressed="false">
 
 	<%= (locals.iconOnRight) ? locals.text : '' %>
 
 	<% if (locals.iconPath) { %>
-		<svg class="slds-button__icon<%=svg_class%>" aria-hidden="true">
+		<svg class="slds-button__icon<%=svg_class%>" aria-hidden="true"<%=imgStyle%>>
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%=locals.iconPath%>" />
 		</svg>
 	<% } else if (locals.imgPath) { %>
-		<img class="slds-button__icon<%=svg_class%>" src="<%=locals.imgPath%>" style="<%=locals.style%>"/>
+		<img class="slds-button__icon<%=svg_class%>" src="<%=locals.imgPath%>"<%=imgStyle%>/>
 	<% } %>
 
 	<%= (!locals.iconOnRight) ? locals.text : '' %>
