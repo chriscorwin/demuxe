@@ -359,152 +359,7 @@ function locationHashChanged(event) {
 		console.debug(`nextStepNumber: `, nextStepNumber);
 		console.debug(nextStepDrawersData);
 
-		// console.log(`yo: `, currentStepDrawersData['top'].find(k => k=='show-on-arrival') === 'show-on-arrival');
-
-		
-
-		// // Going forward
-
-		// // Previous step
-		// if (document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`) !== null) {
-		// 	if ( previousStepDrawersData['top'].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
-		// 		// document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slds-hide');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slide-in');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
-		// 		console.log('should delay and then slide back up...');
-		// 		setTimeout(() => {
-		// 			document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousClick}`).classList.add('slds-hide');
-		// 		}, 125);
-		// 		delayTransition = 250;
-
-
-		// 	} else if ( previousStepDrawersData['top'].find(k => k=='hide-instantly') === 'hide-instantly' ) {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
-		// 	}
-		// }
-
-
-
-
-
-		// // Current step
-		// if (document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`) !== null) {
-		// 	if ( currentStepDrawersData['top'].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
-		// 	} else if ( currentStepDrawersData['top'].find(k => k=='show-instantly') === 'show-instantly' ) {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('be-in');
-		// 	}
-		// 	if ( currentStepDrawersData['top'].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
-		// 		// document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
-		// 		// document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slide-in');
-		// 		delayTransition = 250;
-		// 		console.log('should delay and then slide back up...');
-
-		// 	} else if ( currentStepDrawersData['top'].find(k => k=='hide-instantly') === 'hide-instantly' ) {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slds-hide');
-		// 	}
-		// }
-
-
-		// // Next step
-		// if (document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`) !== null) {
-		// 	if ( nextStepDrawersData['top'].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('slds-hide');
-		// 	} else if ( nextStepDrawersData['top'].find(k => k=='show-instantly') === 'show-instantly' ) {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('slds-hide');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.add('be-in');
-		// 	} else {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.add('slds-hide');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('be-in');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('slide-in');
-		// 	}
-		// }
-
-		// // Previous step
-		// if (document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousClick}`) !== null) {
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
-
-		// 	// if ( previousStepDrawersData['top'].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
-		// 	// } else if ( previousStepDrawersData['top'].find(k => k=='show-instantly') === 'show-instantly' ) {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
-		// 	// }
-		// 	// setTimeout(() => {
-		// 	// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
-		// 	// }, 125);
-		// }
-		// 	// delayTransition = 250;
-
-
-
-
-
-
-
-
-
-		// if ( previousStepDrawersData['top'].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
-
-
-		// 	if (document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`) !== null) {
-
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slide-in');
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
-
-		// 		window.setTimeout(() => {
-		// 			document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
-		// 		}, 10);
-		// 		window.setTimeout(() => {
-		// 			document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
-		// 		}, 500);
-		// 		delayTransition = 250;
-		// 	}
-
-		// }
-
-		// if ( currentStepDrawersData['top'].find(k => k=='show-instantly') === 'show-instantly' ) {
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slide-in');
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('be-in');
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
-		// 	window.setTimeout(() => {
-		// 	}, 125);
-		// }
-
-		// // Hide previous top drawer
-		// if (document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`) !== null) {
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
-		// 	setTimeout(() => {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
-		// 	}, 125);
-		// 	delayTransition = 250;
-		// }
-		// // Hide next top drawer
-		// if (document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`) !== null) {
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('slide-in');
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('be-in');
-		// 	setTimeout(() => {
-		// 		document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.add('slds-hide');
-		// 	}, 125);
-		// 	delayTransition = 250;
-		// }
-
-
-		// if ( nextStepDrawersData['top'].find(k => k=='show-instantly') === 'show-instantly' ) {
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('slds-hide');
-		// 	document.querySelector(`.magick-flows-drawer--from-top.magick-flows-step-asset--step-${nextStepNumber}`).classList.add('be-in');
-		// 	window.setTimeout(() => {
-		// 	}, 125);
-		// }
-		// nextStepDrawersData['top']['hide-never'] === true
-
-
+	
 	}
 
 
@@ -524,11 +379,6 @@ function locationHashChanged(event) {
 				delayTransition = 500;
 			}
 		}
-
-		// currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition')
-		// console.log(`magickFlowConfig.metaData: `, magickFlowConfig.metaData);
-		// console.log(`magickFlowConfig.metaData[clicks]: `, magickFlowConfig.metaData[clicks]);
-		// console.log(`currentStepMetaData: `, currentStepMetaData);
 		// Now we will show this step's ios-notification, if it exists.
 		if ( magickFlowConfig.metaData[clicks][`showIosNotification`] === true ) {
 			doDrawer = true;
@@ -644,11 +494,6 @@ if(!window.HashChangeEvent)(function(){
 window.onhashchange = locationHashChanged;
 
 
-// document.ontouchstart = function() {
-// 	const theScreenshot = document.querySelector(`#magick-flows--step-${nextClick} .auto-replace`);
-// 	theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
-// }
-
 // The very first time the URL for this Magick Flow is loaded in the browser we run a "reset" on it 
 // Why? WE DON'T KNOW!! 
 // ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
@@ -676,14 +521,18 @@ document.onkeyup = function(e) {
 		console.log("H key was pressed, go to the first slide.");
 		window.location.hash = `#0`;
 	} else if (e.which == 73) {
-
+		// This is the `i` key
+		// Shows current click hint for a short while.
+		// "i" for "information", I guess? ¯\_(ツ)_/¯
 		document.querySelector(`#magick-flows-click-hints--step-${clicks}`).classList.toggle('slide-in');
 		window.setTimeout(() => {
 			document.querySelector(`#magick-flows-click-hints--step-${clicks}`).classList.toggle('slide-in');
 		}, (1000));
 
-		// window.location.hash = `#${nextClick}`;
 	} else if (e.which == 84) {
+		// This is the `t` key
+		// "t" for "toggle"
+		// Toggles the click hints on all slides.
 		const nodes = document.querySelectorAll(`.magick-flows-click-hints`);
 		nodes.forEach(function(node, nodeIndex) {
 			node.classList.toggle('slide-in');
