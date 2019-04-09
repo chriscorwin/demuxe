@@ -1398,14 +1398,15 @@ footer.magick-flows-stickey-footer_container {
 .magick-flows-click-hints {
   position: absolute;
   display: block;
-  margin: 0 10%;
   width: 80vw;
+  left: 10vw;
   border-radius: 0.65rem;
   color: white;
   text-align: center;
   padding: 1rem;
   vertical-align: middle;
   font-size: 1rem;
+  text-shadow: 0px 2px 2px black;
   transition: 125ms top ease-in-out;
   background-color: rgba(0, 0, 0, 0.57);
   height: 3rem;
