@@ -83,7 +83,11 @@ module.exports = {
 			waitFor: 'body',
 			name: '0510.manage-segments.settings'
 		},
-
+		{
+			hover: '#content .slds-dropdown__item:last-of-type a',
+			waitFor: 500,
+			name: '0520.manage-segments.settings.hover-provisioning'
+		},
 
 		// PROVISIONING
 		{

@@ -44,6 +44,10 @@
 
 ---
 
+![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0520.manage-segments.settings.hover-provisioning.slide.png){.background}
+
+---
+
 ![](https://roadshow19-dmp-nto-dev.herokuapp.com/screenshots/dmp.roadshow19.nto.0550.provisioning.slide.png){.background}
 
 ---
