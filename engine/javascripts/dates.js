@@ -1,4 +1,4 @@
-const fortnight = 12096e5;
+const FORTNIGHT = 12096e5;
 
 const FORMATS = {
 	monthDayFormat: { month: 'short', day: 'numeric' },
@@ -12,8 +12,8 @@ const m = date.getMonth();
 const d = date.getDay();
 const DATES = {
 	now: date,
-	twoWeeksAgo: new Date(Date.now() - fortnight),
-	fourWeeksAgo: new Date(Date.now() - fortnight - fortnight),
+	twoWeeksAgo: new Date(Date.now() - FORTNIGHT),
+	fourWeeksAgo: new Date(Date.now() - FORTNIGHT - FORTNIGHT),
 	oneMonthAgo: new Date(y, m - 1, d),
 	twoMonthsAgo: new Date(y, m - 2, d),
 	threeMonthsAgo: new Date(y, m - 3, d),
