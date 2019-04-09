@@ -153,7 +153,10 @@ _%>
 
 
 		let clickHintsHtmlOut = '';
-		const hasNotes = node.notes.length > 0 ? true : false;
+		let hasNotes = node.notes.length > 0 ? true : false;
+		if ( node.notes.length === 1 && node.notes[0] === 'unset' ) {
+			hasNotes = false;
+		}
 		if ( hasNotes === true ) {
 
 

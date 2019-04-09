@@ -105,7 +105,9 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 
 		}
 	});
-
+	if (typeof screenDataAttributes.notes === 'undefined' ) {
+		screenDataAttributes.notes = ['unset'];
+	}
 	return screenDataAttributes;
 }
 

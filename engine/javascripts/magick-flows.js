@@ -219,7 +219,7 @@ function locationHashChanged(event) {
 			autoAdvanceTransitionTiming = 5000;
 		}
 		if ( currentStepMetaData.find(k => k=='step-transition-timing--fast') === 'step-transition-timing--fast') {
-			autoAdvanceTransitionTiming = 500;
+			autoAdvanceTransitionTiming = 100;
 		}
 
 		let autoAdvanceTransitionStepNumber = stepToEvaluateForAppTransition;
@@ -524,19 +524,26 @@ document.onkeyup = function(e) {
 		// This is the `i` key
 		// Shows current click hint for a short while.
 		// "i" for "information", I guess? ¯\_(ツ)_/¯
-		document.querySelector(`#magick-flows-click-hints--step-${clicks}`).classList.toggle('slide-in');
-		window.setTimeout(() => {
+
+		let node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
+		if (typeof node != null) {
 			document.querySelector(`#magick-flows-click-hints--step-${clicks}`).classList.toggle('slide-in');
-		}, (1000));
+			window.setTimeout(() => {
+				document.querySelector(`#magick-flows-click-hints--step-${clicks}`).classList.toggle('slide-in');
+			}, (1000));
+		}
+
 
 	} else if (e.which == 84) {
 		// This is the `t` key
 		// "t" for "toggle"
 		// Toggles the click hints on all slides.
 		const nodes = document.querySelectorAll(`.magick-flows-click-hints`);
-		nodes.forEach(function(node, nodeIndex) {
-			node.classList.toggle('slide-in');
-		});
+		if ( nodes.length > 0 ) {
+			nodes.forEach(function(node, nodeIndex) {
+				node.classList.toggle('slide-in');
+			});
+		}
 	} else if (e.which == 39) {
 		console.log("Right arrow key was pressed, go to next...");
 		window.location.hash = `#${nextClick}`;
