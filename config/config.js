@@ -50,6 +50,12 @@ module.exports = function() {
         envConfigData = require(`./config.overrides.${process.env.NODE_ENV}.json`) || {};
     }
 
+
+    if (process.env.DEBUG === "true") {
+        envConfigData.DEBUG = true;
+    } else {
+        envConfigData.DEBUG = false;
+    }
     // merge default with env config, overwriting defaults
     configData = { ...defaultConfigData, ...envConfigData };
 

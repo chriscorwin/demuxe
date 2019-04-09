@@ -73,8 +73,8 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 			// we have some data, split on the equals sign to get keys and values
 			const [ rawKey, valueWithExt ] = node.split('=');
 
-			console.log(`[ config/magick-flows-util/get-flow-data.js:75 ] rawKey: `, util.inspect(rawKey, { showHidden: true, depth: null, colors: true }));
-			console.log(`[ config/magick-flows-util/get-flow-data.js:76 ] valueWithExt: `, util.inspect(valueWithExt, { showHidden: true, depth: null, colors: true }));
+			console.debug(`[ config/magick-flows-util/get-flow-data.js:75 ] rawKey: `, util.inspect(rawKey, { showHidden: true, depth: null, colors: true }));
+			console.debug(`[ config/magick-flows-util/get-flow-data.js:76 ] valueWithExt: `, util.inspect(valueWithExt, { showHidden: true, depth: null, colors: true }));
 			
 			const value = valueWithExt.split('.')[0];
 			const key = rawKey.toLowerCase();
@@ -99,8 +99,8 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 			} else if ( index === 1 ) {
 				screenDataAttributes['id'] = node;
 			} else {
-				console.log(`[ config/magick-flows-util/get-flow-data.js:96 ] index: `, util.inspect(index, { showHidden: true, depth: null, colors: true }));
-				console.log(`[ config/magick-flows-util/get-flow-data.js:97 ] node: `, util.inspect(node, { showHidden: true, depth: null, colors: true }));
+				console.debug(`[ config/magick-flows-util/get-flow-data.js:96 ] index: `, util.inspect(index, { showHidden: true, depth: null, colors: true }));
+				console.debug(`[ config/magick-flows-util/get-flow-data.js:97 ] node: `, util.inspect(node, { showHidden: true, depth: null, colors: true }));
 			}
 
 		}
@@ -118,7 +118,7 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 
 	screenDataAttributes = getDataFromFilename(screenDataAttributes, fileName);
 
-	console.log(`[ config/magick-flows-util/get-flow-data.js:109 ] screenDataAttributes: `, util.inspect(screenDataAttributes, { showHidden: true, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:109 ] screenDataAttributes: `, util.inspect(screenDataAttributes, { showHidden: true, depth: null, colors: true }));
 
 	if ( fileName.endsWith('.ejs') === true ) {
 		screenDataAttributes.dimensions = {type: 'ejs'};

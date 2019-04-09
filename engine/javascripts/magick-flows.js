@@ -14,9 +14,6 @@ const drawerContentChangingClasses = 'section payment confirmation';
 const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
-// window.location.hash = `#reset`;
-
-
 
 if ( clicks >= magickFlowConfig.numberOfScreens ) {
 	clicks = 0;
@@ -58,7 +55,6 @@ $contentWrapper.onclick = ( ) => {
 	// In the future, we may wish to catch that it should change and do stuff first.
 	// For now, we just do it.
 	let hashChangeTiming = 0;
-	// console.log("It was clicked, we will change the hash in four seconds...");
 	setTimeout(() => {
 		window.location.hash = `#${clicks}`;
 	}, hashChangeTiming);
@@ -67,26 +63,19 @@ $contentWrapper.onclick = ( ) => {
 
 
 function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition = false, delayTransition = 0) {
-	console.group(`[Magick Flows: normalTransition() ](${pathToIncludeForLogging}:50) running...`);
+	if (locals.DEBUG === true) {
+		console.group(`[Magick Flows: normalTransition() ](${pathToIncludeForLogging}:50) running...`);
+	}
 
 	let nextStepNumber = thisStepNumber + 1;
 
-	console.log(`delayTransition: `, delayTransition);
-
 	if (document.querySelector('.container') !== null) {
-		// document.querySelector('.container').dataset.next = `magick-flows--step-${nextStepNumber}`;
 		document.querySelector('.container').dataset.next = `magick-flows--step-${nextClick}`;
 		document.querySelector('.container').dataset.previous = `magick-flows--step-${previousClick}`;
 	}
 
-	console.log(`[Magick Flows: normalTransition() ] thisStepNumber: `, thisStepNumber);
+	console.debug(`[Magick Flows: normalTransition() ] thisStepNumber: `, thisStepNumber);
 	
-
-	// if (document.querySelector(`.drawer`) !== null) {
-	// 	document.querySelector(`.drawer`).classList.remove(drawerContentChangingClasses.split(' ').join(',') + ',slide-in');
-	// }
-
-
 	if (document.querySelector(`.app-switcher-two`) !== null) {
 		document.querySelector(`.app-switcher-two`).classList.remove(`show`);
 	}
@@ -123,7 +112,11 @@ function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition
 
 
 	}
-	console.groupEnd();
+
+	if (locals.DEBUG === true) {
+		console.groupEnd();
+	}
+
 }
 
 
@@ -140,19 +133,6 @@ function getAppSwitcherClassNames () {
 
 
 function locationHashChanged(event) {
-	console.group(`[ locationHashChanged() ](${pathToIncludeForLogging}:142)  running...`);
-	console.log(`window.location.hash (before manipulation): `, window.location.hash);
-	console.log(`event.oldURL: `, event.oldURL);
-	console.log(`event.newURL: `, event.newURL);
-
-
-	// let scrollTimeout = setTimeout(() => {
-	// 	window.scroll(0,0);
-	// 	document.querySelectorAll( '.slds-scrollable')[nextClick].scroll(0,0);
-	// 	document.querySelectorAll( '.slds-scrollable')[clicks].scroll(0,0);
-	// 	document.querySelectorAll( '.slds-scrollable')[previousClick].scroll(0,0);
-	// }, 1500);
-	// clearTimeout(scrollTimeout);
 
 	// get the non-string version of the hash -- that is the number of clicks so far
 	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
@@ -177,22 +157,6 @@ function locationHashChanged(event) {
 		previousClick = 0
 	}
 
-
-
-	console.log(`clicks: `, clicks);
-	console.log(`previousClick: `, previousClick);
-	console.log(`nextClick: `, nextClick);
-
-
-
-	
-
-	// Scroll the window, and scrollable areas, up, because the user could have scrolled down and then hit "back" and normally a demo runner will want to load every step in its fresh, unscrolled, state.
-	// this may eventaully prove problematic, and may have to be re-thought, or, over-ridable, at least.
-
-
-
-
 	// we assume that we will not do an app transition nor show a notificaiton
 	// eventually we'll assume we aren't showing a drawer, or sliding in a wizard, or anything else.
 	let doApplicationSwitchStepTransition = false;
@@ -208,7 +172,6 @@ function locationHashChanged(event) {
 	if (newUrlHash <= oldUrlHash) {
 		directionOfNavigation = 'back';
 	}
-	console.log(`directionOfNavigation: `, directionOfNavigation);
 
 	let stepToEvaluateForAppTransition = directionOfNavigation === 'forward' ? newUrlHash : oldUrlHash;
 	let previousStepNumber = previousClick;
@@ -218,19 +181,31 @@ function locationHashChanged(event) {
 	const previousStepMetaData = magickFlowConfig.metaData[previousStepNumber].data || ['unset'];
 	const currentStepMetaData = magickFlowConfig.metaData[currentStepNumber].data || ['unset'];
 	const nextStepMetaData = magickFlowConfig.metaData[nextStepNumber].data || ['unset'];
-	console.log(`currentStepMetaData: `, currentStepMetaData);
-	console.log(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
 
 	useStepTransition = currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition';
 	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch';
 	doAutoAdvanceStepTransition =  currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
 
 
+	console.group(`[ ${magickFlowConfig.urlSlug} ☞ #${previousStepNumber} location hash changed to: #${currentStepNumber} ]`);
+
+	console.debug(`window.location.hash (before manipulation): `, window.location.hash);
+	console.debug(`event.oldURL: `, event.oldURL);
+	console.debug(`event.newURL: `, event.newURL);
+	console.debug(`clicks: `, clicks);
+	console.debug(`previousClick: `, previousClick);
+	console.debug(`nextClick: `, nextClick);
+	console.debug(`directionOfNavigation: `, directionOfNavigation);
+	console.debug(`currentStepMetaData: `, currentStepMetaData);
+	console.debug(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
+
+
+
 	if ( useStepTransition && currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch' ) {
-		console.log(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
-		console.log(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
+		console.debug(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
+		console.debug(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
 		doApplicationSwitchStepTransition = true;
-		console.log(`doApplicationSwitchStepTransition: `, doApplicationSwitchStepTransition);
+		console.debug(`doApplicationSwitchStepTransition: `, doApplicationSwitchStepTransition);
 	}
 
 
@@ -238,7 +213,7 @@ function locationHashChanged(event) {
 	
 
 	if ( doAutoAdvanceStepTransition === true ) {
-		console.log(`doAutoAdvanceStepTransition: `, doAutoAdvanceStepTransition);
+		console.debug(`doAutoAdvanceStepTransition: `, doAutoAdvanceStepTransition);
 
 		if ( currentStepMetaData.find(k => k=='step-transition-timing--slow') === 'step-transition-timing--slow') {
 			autoAdvanceTransitionTiming = 5000;
@@ -254,7 +229,7 @@ function locationHashChanged(event) {
 			autoAdvanceTransitionStepNumber = stepToEvaluateForAppTransition - 1;
 		}
 
-		console.log(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
+		console.debug(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
 		setTimeout(() => {
 			window.location.hash = `#${autoAdvanceTransitionStepNumber}`;
 		}, autoAdvanceTransitionTiming);
@@ -311,7 +286,7 @@ function locationHashChanged(event) {
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
 					}, 1500);
-					console.log(`delayTransition: `, delayTransition);
+					console.debug(`delayTransition: `, delayTransition);
 					delayTransition = (delayTransition < 500 ? 500 : delayTransition);
 				}
 				if ( previousStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
@@ -331,7 +306,7 @@ function locationHashChanged(event) {
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
 					}, 125);
-					console.log(`delayTransition: `, delayTransition);
+					console.debug(`delayTransition: `, delayTransition);
 					delayTransition = (delayTransition < 250 ? 250 : delayTransition);
 				}
 				if ( currentStepDrawersData[direction].find(k => k=='show-instantly') === 'show-instantly' ) {
@@ -368,7 +343,7 @@ function locationHashChanged(event) {
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.add('slds-hide');
 					}, 250);
-					console.log(`delayTransition: `, delayTransition);
+					console.debug(`delayTransition: `, delayTransition);
 					delayTransition = (delayTransition < 250 ? 250 : delayTransition);
 				}
 			}
@@ -376,15 +351,13 @@ function locationHashChanged(event) {
 
 		});
 
-		console.log(`previousClick: `, previousClick);
-		console.log(`previousStepNumber: `, previousStepNumber);
-		console.dir(previousStepDrawersData);
-
-		console.log(`currentStepNumber: `, currentStepNumber);
-		console.dir(currentStepDrawersData);
-
-		console.log(`nextStepNumber: `, nextStepNumber);
-		console.dir(nextStepDrawersData);
+		console.debug(`previousClick: `, previousClick);
+		console.debug(`previousStepNumber: `, previousStepNumber);
+		console.debug(previousStepDrawersData);
+		console.debug(`currentStepNumber: `, currentStepNumber);
+		console.debug(currentStepDrawersData);
+		console.debug(`nextStepNumber: `, nextStepNumber);
+		console.debug(nextStepDrawersData);
 
 		// console.log(`yo: `, currentStepDrawersData['top'].find(k => k=='show-on-arrival') === 'show-on-arrival');
 
@@ -636,15 +609,18 @@ function locationHashChanged(event) {
 	}
 
 	console.group(`[ Speaker Notes ]`)
-	console.log(`Current Step: `, clicks);
-	console.dir(magickFlowConfig.metaData[stepToEvaluateForAppTransition]);
+	console.group(`Current Step: `, clicks);
+	console.debug(magickFlowConfig.metaData[stepToEvaluateForAppTransition]);
+	console.groupEnd();
 	console.log(`Sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
 	console.log(`Step ID: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
 	if ( typeof magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes !== 'undefined' ) {
 		console.group(`Hints`)
 		magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes.forEach((note, noteIndex) => {
-			note = note.replace(/-/g, ' ').toLowerCase();
-			console.log(`${noteIndex}: ${note}`)
+			// note = note.replace(/-/g, ' ').toLowerCase();
+			note = note.replace(/-/g, ' ');
+			// console.log(`${noteIndex}: ${note}`);
+			console.log(`${note}`);
 		});
 		console.groupEnd();
 		// console.log(`Notes: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes);
@@ -699,6 +675,19 @@ document.onkeyup = function(e) {
 	if (e.which == 72) {
 		console.log("H key was pressed, go to the first slide.");
 		window.location.hash = `#0`;
+	} else if (e.which == 73) {
+
+		document.querySelector(`#magick-flows-click-hints--step-${clicks}`).classList.toggle('slide-in');
+		window.setTimeout(() => {
+			document.querySelector(`#magick-flows-click-hints--step-${clicks}`).classList.toggle('slide-in');
+		}, (1000));
+
+		// window.location.hash = `#${nextClick}`;
+	} else if (e.which == 84) {
+		const nodes = document.querySelectorAll(`.magick-flows-click-hints`);
+		nodes.forEach(function(node, nodeIndex) {
+			node.classList.toggle('slide-in');
+		});
 	} else if (e.which == 39) {
 		console.log("Right arrow key was pressed, go to next...");
 		window.location.hash = `#${nextClick}`;

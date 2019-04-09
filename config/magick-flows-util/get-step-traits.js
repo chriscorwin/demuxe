@@ -6,10 +6,6 @@ Demuxe: Running \`config/magick-flows-util/get-step-traits.js\` now...
 const util = require('util');
 const possibleTraits = require('./traits/index');
 
-if (process.env.DEBUG === "true") {
-	console.debug = console.log;
-}
-
 const getStepTraits = (stepInfo) => {
 	// steps without IDs can't have data. Abort.
 	console.log(`

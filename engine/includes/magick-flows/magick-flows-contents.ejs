@@ -152,6 +152,33 @@ _%>
 		}
 
 
+		let clickHintsHtmlOut = '';
+		const hasNotes = node.notes.length > 0 ? true : false;
+		if ( hasNotes === true ) {
+
+
+			clickHintsHtmlOut += `
+				<div
+					id="magick-flows-click-hints--step-${node.screensIndex}"
+					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.screensIndex} "
+				>
+			`
+
+			node.notes.forEach((note, noteIndex) => {
+				// note = note.replace(/-/g, ' ').toLowerCase();
+				note = note.replace(/-/g, ' ');
+
+				clickHintsHtmlOut += `${note}. `
+				// console.log(`${note}`);
+			});
+
+
+			clickHintsHtmlOut += `
+				</div>
+			`
+		}
+
+
 _%>
 
 <div
@@ -230,6 +257,8 @@ _%>
 %>
 
 
+
+
 <%_ if (showFooter) { _%>
 	<footer class="magick-flows-stickey-footer_container slds-col">
 		<img
@@ -244,6 +273,8 @@ _%>
 	<%- drawerFromBottomHtmlOut %>
 	<%- drawerFromLeftHtmlOut %>
 	<%- iosNotificationHtmlOut %>
+
+	<%- clickHintsHtmlOut %>
 
 </div>
 

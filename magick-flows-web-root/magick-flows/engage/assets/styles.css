@@ -1395,6 +1395,30 @@ footer.magick-flows-stickey-footer_container {
   opacity: 1;
 }
 
+.magick-flows-click-hints {
+  position: absolute;
+  display: block;
+  margin: 0 10%;
+  width: 80vw;
+  border-radius: 0.65rem;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  vertical-align: middle;
+  font-size: 1rem;
+  transition: 125ms top ease-in-out;
+  background-color: rgba(0, 0, 0, 0.57);
+  height: 3rem;
+  top: -10rem;
+  will-change: top;
+}
+
+.magick-flows-click-hints.slide-in {
+  top: 1.25rem;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
 html {
   font-family: "Salesforce Sans", Arial, sans-serif;
   font-size: 100%;

@@ -8,10 +8,6 @@ const fs = require('fs');
 const getFlowData = require('./magick-flows-util/get-flow-data.js');
 const sortAlphaNum = require('./magick-flows-util/sort-alpha-num.js');
 
-if (process.env.DEBUG === "true") {
-	console.debug = console.log;
-}
-
 // Creates config data objects for the magick flows based on provided directory.
 const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), recursionMax = 1000, retryCount = 0) => {
 	// console.debug(`looking in ${dir}`);

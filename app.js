@@ -21,9 +21,16 @@ const config = require('./config/config.js')();
 const app = express();
 
 
-if (process.env.DEBUG === "true") {
-	console.debug = console.log;
-}
+// if (process.env.DEBUG === "true") {
+// 	console.debug = console.log;
+// }
+
+
+console.debug = function() {
+	if( config.debug === false ) return;
+	console.log.apply(this, arguments);
+};
+
 
 console.group(`
 ============================================================
