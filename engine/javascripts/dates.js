@@ -18,6 +18,7 @@ const DATES = {
 	twoMonthsAgo: new Date(y, m - 2, d),
 	threeMonthsAgo: new Date(y, m - 3, d),
 	fourMonthsAgo: new Date(y, m - 4, d),
+	oneYearAgo: new Date(y - 1, m, d),
 	aboutOneMonthAgo: new Date(y, m - 1, '5'),
 	aboutTwoMonthsAgo: new Date(y, m - 2, '17'),
 	aboutThreeMonthsAgo: new Date(y, m - 3, '12'),
@@ -36,6 +37,7 @@ const oneMonthAgo = DATES.oneMonthAgo.toLocaleDateString("en-US", FORMATS.monthD
 const twoMonthsAgo = DATES.twoMonthsAgo.toLocaleDateString("en-US", FORMATS.monthDayYear);
 const threeMonthsAgo = DATES.threeMonthsAgo.toLocaleDateString("en-US", FORMATS.monthDayYear);
 const fourMonthsAgo = DATES.fourMonthsAgo.toLocaleDateString("en-US", FORMATS.monthDayYear);
+const oneYearAgo = DATES.oneYearAgo.toLocaleDateString("en-US", FORMATS.monthDayYear);
 
 const aboutOneMonthAgo = DATES.aboutOneMonthAgo.toLocaleDateString("en-US", FORMATS.monthDayYear);
 const aboutTwoMonthsAgo = DATES.aboutTwoMonthsAgo.toLocaleDateString("en-US", FORMATS.monthDayYear);
@@ -56,6 +58,7 @@ module.exports = {
 	twoMonthsAgo,
 	threeMonthsAgo,
 	fourMonthsAgo,
+	oneYearAgo,
 	aboutOneMonthAgo,
 	aboutTwoMonthsAgo,
 	aboutThreeMonthsAgo,

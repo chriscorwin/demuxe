@@ -14,10 +14,10 @@ overview.panels.dcm.view_all_buttons.push({
 	onclick: "navigatePage('/consumer-rights-management');"
 });
 
-consumer_rights_management.last_updated = overview.dates.lastOfLastMonth;
+consumer_rights_management.last_updated = dates.lastOfLastMonth;
 consumer_rights_management.subHeaderContents = `<div class="slds-grid">
 						<div>Define your consent collection settings, as well as manage consent changes, raise data deletion and portability requests.</div>
-						<div class="slds-col_bump-left">As of ${overview.dates.today}</div>
+						<div class="slds-col_bump-left">As of ${dates.today}</div>
 					</div>`
 
 manage_segments.details_and_activation.segment_name = 'Camping and tents explorers';

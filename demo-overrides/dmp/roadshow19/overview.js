@@ -9,15 +9,6 @@ const {
 } = require('../../../engine/javascripts/dates');
 
 module.exports = {
-	dates: {
-		today,
-		firstOfMonth,
-		firstOfLastMonth,
-		lastOfLastMonth,
-		todayTerse,
-		twoWeeksAgoTerse,
-		oneMonthAgoTerse
-	},
 	panels: {
 		audience_population: {
 			title: 'Audience Population',
