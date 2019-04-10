@@ -1,3 +1,8 @@
+.slds-tabs_default__nav.audience-discovery-tab-nav,
+.slds-tabs--default__nav.audience-discovery-tab-nav {
+  border-bottom: 2px solid transparent;
+}
+
 .audience-discovery-tab-nav:before {
   background: #fff;
   content: "";

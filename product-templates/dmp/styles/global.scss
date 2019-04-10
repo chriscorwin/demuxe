@@ -2,55 +2,8 @@
 	margin: 0 auto;
 }
 
-/* HACK */
-.slds-context-bar__dropdown-trigger .slds-dropdown:before {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    width: 100%;
-    height: 3px;
-    opacity: 0;
-}
-
-.menu-item.menu-item_has-badge:before {
-    display: block;
-    content: '';
-    color: white;
-    font-size: 0.25rem;
-    text-align: center;
-    background: red;
-    height: 0.65rem;
-    width: 0.65rem;
-    border-radius: 1.5rem;
-    right: 0.5rem;
-    top: 0.25rem;
-    position: absolute;
-}
-
-.slds-little-blue-pill:before {
-    display: block;
-    content: '';
-    color: white;
-    font-size: 0.25rem;
-    text-align: center;
-    background: #1589ee;
-    height: 0.75rem;
-    width: 0.75rem;
-    border-radius: 1.5rem;
-    margin-right: 0.25rem;
-}
-
-
-
 .click-target {
 	cursor: pointer;
-}
-
-.slds-context-bar__item.slds-context-bar__dropdown-trigger.slds-dropdown-trigger.slds-dropdown-trigger_click.slds-no-hover {
-	min-width: 150px;
-	max-width: 200px;
-	width: 200px;
-	border-right: 1px solid #CFD7E6;
 }
 
 #screenshot-topper, #screenshot, #screenshot-footer {
@@ -289,41 +242,6 @@ HEADER AREA
 	margin: 0 auto;
 }
 
-
-.slds-tabs_default__nav,
-.slds-tabs--default__nav {
-	border-bottom: 2px solid #FFF;
-}
-
-.slds-tabs_default__nav.audience-discovery-tab-nav,
-.slds-tabs--default__nav.audience-discovery-tab-nav {
-	border-bottom: 2px solid transparent;
-}
-
-
-
-.slds-tabs_default__item,
-.slds-tabs--default__item {
-	border-bottom: 2px solid #FFF;
-	border-radius: 2px 2px 0 0;
-	background-color: #E0E5EE;
-	margin-right: 8px;
-}
-
-.slds-tabs_default__item.slds-active,
-.slds-tabs_default__item.slds-is-active,
-.slds-tabs--default__item.slds-active,
-.slds-tabs--default__item.slds-is-active {
-	background-color: #fff;
-}
-
-.slds-tabs_default__item.slds-active:after,
-.slds-tabs_default__item.slds-is-active:after,
-.slds-tabs--default__item.slds-active:after,
-.slds-tabs--default__item.slds-is-active:after {
-	background-color: #FFF;
-}
-
 #bar-thing {
 	background-color: #F7F9FB;
 	padding-left: 100px;
@@ -360,34 +278,6 @@ HEADER AREA
 		}
 	}
 }
-
-
-.slds-context-bar {
-	border-bottom: 3px solid #F28B00;
-
-	&__item {
-		&.slds-is-active:before {
-			background: #B75D0D;
-		}
-
-		&:not(.slds-no-hover):hover,
-		&.slds-is-active {
-			background-color: rgba(183, 93, 13, 0.1);
-		}
-
-		&.slds-is-active {
-			animation: unset;
-		}
-
-		&_tab,
-		&--tab {
-			border-right: 0 none;
-			border-left: 1px solid #dddbda;
-		}
-	}
-}
-
-
 
 #content .slds-context-bar__label-action {
 	color: #0070D2;
