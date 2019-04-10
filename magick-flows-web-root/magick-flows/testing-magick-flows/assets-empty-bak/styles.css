@@ -11,6 +11,10 @@ body::after {
   z-index: -1;
 }
 
+body {
+  color: purple;
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -31,22 +35,22 @@ body {
 body, .container {
   background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
-  height: 720px;
+  height: 812px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 332px;
+  width: 375px;
 }
 
 .ios-notification {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 332px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 812px;
+  top: -812px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -61,10 +65,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 332px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 812px;
+  top: -812px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -85,11 +89,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms left ease-in-out;
-  width: 332px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
+  height: 812px;
   top: 0;
-  left: -332px;
+  left: -375px;
   will-change: left;
 }
 
@@ -109,11 +113,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms right ease-in-out;
-  width: 332px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
+  height: 812px;
   top: 0;
-  right: -332px;
+  right: -375px;
   will-change: right;
 }
 
@@ -133,10 +137,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms bottom ease-in-out;
-  width: 332px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
-  bottom: -720px;
+  height: 812px;
+  bottom: -812px;
   will-change: bottom;
 }
 
@@ -157,12 +161,12 @@ body, .container {
 }
 
 .app-switcher-one {
-  height: 720px;
+  height: 812px;
   left: 0;
   position: absolute;
   top: 0;
   transition: 400ms transform, 800ms left;
-  width: 24236px;
+  width: 14595px;
 }
 
 .app-switcher-one.shrink {
@@ -182,8 +186,8 @@ body, .container {
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step .slds-scrollable {
-  max-height: 720px;
-  height: 720px;
+  max-height: 812px;
+  height: 812px;
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step.notification {
@@ -191,7 +195,7 @@ body, .container {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: 166px;
+  left: -345px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -219,21 +223,21 @@ body.debug div#drawer-from-top--step-0::before {
 }
 
 .magick-flows--step-0 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
+  width: 375px;
   left: 0px;
 }
 
 .app-switcher-one.be-left-1 {
-  left: -664px;
+  left: -395px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -664px;
+  left: -395px;
 }
 
 body.debug div#drawer-from-top--step-1::before {
@@ -251,21 +255,21 @@ body.debug div#drawer-from-top--step-1::before {
 }
 
 .magick-flows--step-1 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 664px;
+  width: 375px;
+  left: 395px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -1328px;
+  left: -790px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -1328px;
+  left: -790px;
 }
 
 body.debug div#drawer-from-top--step-2::before {
@@ -283,21 +287,21 @@ body.debug div#drawer-from-top--step-2::before {
 }
 
 .magick-flows--step-2 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 1328px;
+  width: 375px;
+  left: 790px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -1992px;
+  left: -1185px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -1992px;
+  left: -1185px;
 }
 
 body.debug div#drawer-from-top--step-3::before {
@@ -315,21 +319,21 @@ body.debug div#drawer-from-top--step-3::before {
 }
 
 .magick-flows--step-3 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 1992px;
+  width: 375px;
+  left: 1185px;
 }
 
 .app-switcher-one.be-left-4 {
-  left: -2656px;
+  left: -1580px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-4 {
-  left: -2656px;
+  left: -1580px;
 }
 
 body.debug div#drawer-from-top--step-4::before {
@@ -347,21 +351,21 @@ body.debug div#drawer-from-top--step-4::before {
 }
 
 .magick-flows--step-4 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 2656px;
+  width: 375px;
+  left: 1580px;
 }
 
 .app-switcher-one.be-left-5 {
-  left: -3320px;
+  left: -1975px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-5 {
-  left: -3320px;
+  left: -1975px;
 }
 
 body.debug div#drawer-from-top--step-5::before {
@@ -379,21 +383,21 @@ body.debug div#drawer-from-top--step-5::before {
 }
 
 .magick-flows--step-5 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 3320px;
+  width: 375px;
+  left: 1975px;
 }
 
 .app-switcher-one.be-left-6 {
-  left: -3984px;
+  left: -2370px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-6 {
-  left: -3984px;
+  left: -2370px;
 }
 
 body.debug div#drawer-from-top--step-6::before {
@@ -411,21 +415,21 @@ body.debug div#drawer-from-top--step-6::before {
 }
 
 .magick-flows--step-6 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 3984px;
+  width: 375px;
+  left: 2370px;
 }
 
 .app-switcher-one.be-left-7 {
-  left: -4648px;
+  left: -2765px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-7 {
-  left: -4648px;
+  left: -2765px;
 }
 
 body.debug div#drawer-from-top--step-7::before {
@@ -443,21 +447,21 @@ body.debug div#drawer-from-top--step-7::before {
 }
 
 .magick-flows--step-7 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 4648px;
+  width: 375px;
+  left: 2765px;
 }
 
 .app-switcher-one.be-left-8 {
-  left: -5312px;
+  left: -3160px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-8 {
-  left: -5312px;
+  left: -3160px;
 }
 
 body.debug div#drawer-from-top--step-8::before {
@@ -475,21 +479,21 @@ body.debug div#drawer-from-top--step-8::before {
 }
 
 .magick-flows--step-8 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 5312px;
+  width: 375px;
+  left: 3160px;
 }
 
 .app-switcher-one.be-left-9 {
-  left: -5976px;
+  left: -3555px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-9 {
-  left: -5976px;
+  left: -3555px;
 }
 
 body.debug div#drawer-from-top--step-9::before {
@@ -507,21 +511,21 @@ body.debug div#drawer-from-top--step-9::before {
 }
 
 .magick-flows--step-9 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 5976px;
+  width: 375px;
+  left: 3555px;
 }
 
 .app-switcher-one.be-left-10 {
-  left: -6640px;
+  left: -3950px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-10 {
-  left: -6640px;
+  left: -3950px;
 }
 
 body.debug div#drawer-from-top--step-10::before {
@@ -539,21 +543,21 @@ body.debug div#drawer-from-top--step-10::before {
 }
 
 .magick-flows--step-10 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 6640px;
+  width: 375px;
+  left: 3950px;
 }
 
 .app-switcher-one.be-left-11 {
-  left: -7304px;
+  left: -4345px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-11 {
-  left: -7304px;
+  left: -4345px;
 }
 
 body.debug div#drawer-from-top--step-11::before {
@@ -571,21 +575,21 @@ body.debug div#drawer-from-top--step-11::before {
 }
 
 .magick-flows--step-11 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 7304px;
+  width: 375px;
+  left: 4345px;
 }
 
 .app-switcher-one.be-left-12 {
-  left: -7968px;
+  left: -4740px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-12 {
-  left: -7968px;
+  left: -4740px;
 }
 
 body.debug div#drawer-from-top--step-12::before {
@@ -603,21 +607,21 @@ body.debug div#drawer-from-top--step-12::before {
 }
 
 .magick-flows--step-12 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 7968px;
+  width: 375px;
+  left: 4740px;
 }
 
 .app-switcher-one.be-left-13 {
-  left: -8632px;
+  left: -5135px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-13 {
-  left: -8632px;
+  left: -5135px;
 }
 
 body.debug div#drawer-from-top--step-13::before {
@@ -635,21 +639,21 @@ body.debug div#drawer-from-top--step-13::before {
 }
 
 .magick-flows--step-13 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 8632px;
+  width: 375px;
+  left: 5135px;
 }
 
 .app-switcher-one.be-left-14 {
-  left: -9296px;
+  left: -5530px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-14 {
-  left: -9296px;
+  left: -5530px;
 }
 
 body.debug div#drawer-from-top--step-14::before {
@@ -667,21 +671,21 @@ body.debug div#drawer-from-top--step-14::before {
 }
 
 .magick-flows--step-14 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 9296px;
+  width: 375px;
+  left: 5530px;
 }
 
 .app-switcher-one.be-left-15 {
-  left: -9960px;
+  left: -5925px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-15 {
-  left: -9960px;
+  left: -5925px;
 }
 
 body.debug div#drawer-from-top--step-15::before {
@@ -699,21 +703,21 @@ body.debug div#drawer-from-top--step-15::before {
 }
 
 .magick-flows--step-15 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 9960px;
+  width: 375px;
+  left: 5925px;
 }
 
 .app-switcher-one.be-left-16 {
-  left: -10624px;
+  left: -6320px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-16 {
-  left: -10624px;
+  left: -6320px;
 }
 
 body.debug div#drawer-from-top--step-16::before {
@@ -731,21 +735,21 @@ body.debug div#drawer-from-top--step-16::before {
 }
 
 .magick-flows--step-16 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 10624px;
+  width: 375px;
+  left: 6320px;
 }
 
 .app-switcher-one.be-left-17 {
-  left: -11288px;
+  left: -6715px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-17 {
-  left: -11288px;
+  left: -6715px;
 }
 
 body.debug div#drawer-from-top--step-17::before {
@@ -763,21 +767,21 @@ body.debug div#drawer-from-top--step-17::before {
 }
 
 .magick-flows--step-17 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 11288px;
+  width: 375px;
+  left: 6715px;
 }
 
 .app-switcher-one.be-left-18 {
-  left: -11952px;
+  left: -7110px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-18 {
-  left: -11952px;
+  left: -7110px;
 }
 
 body.debug div#drawer-from-top--step-18::before {
@@ -795,21 +799,21 @@ body.debug div#drawer-from-top--step-18::before {
 }
 
 .magick-flows--step-18 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 11952px;
+  width: 375px;
+  left: 7110px;
 }
 
 .app-switcher-one.be-left-19 {
-  left: -12616px;
+  left: -7505px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-19 {
-  left: -12616px;
+  left: -7505px;
 }
 
 body.debug div#drawer-from-top--step-19::before {
@@ -827,21 +831,21 @@ body.debug div#drawer-from-top--step-19::before {
 }
 
 .magick-flows--step-19 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 12616px;
+  width: 375px;
+  left: 7505px;
 }
 
 .app-switcher-one.be-left-20 {
-  left: -13280px;
+  left: -7900px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-20 {
-  left: -13280px;
+  left: -7900px;
 }
 
 body.debug div#drawer-from-top--step-20::before {
@@ -859,21 +863,21 @@ body.debug div#drawer-from-top--step-20::before {
 }
 
 .magick-flows--step-20 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 13280px;
+  width: 375px;
+  left: 7900px;
 }
 
 .app-switcher-one.be-left-21 {
-  left: -13944px;
+  left: -8295px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-21 {
-  left: -13944px;
+  left: -8295px;
 }
 
 body.debug div#drawer-from-top--step-21::before {
@@ -891,21 +895,21 @@ body.debug div#drawer-from-top--step-21::before {
 }
 
 .magick-flows--step-21 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 13944px;
+  width: 375px;
+  left: 8295px;
 }
 
 .app-switcher-one.be-left-22 {
-  left: -14608px;
+  left: -8690px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-22 {
-  left: -14608px;
+  left: -8690px;
 }
 
 body.debug div#drawer-from-top--step-22::before {
@@ -923,21 +927,21 @@ body.debug div#drawer-from-top--step-22::before {
 }
 
 .magick-flows--step-22 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 14608px;
+  width: 375px;
+  left: 8690px;
 }
 
 .app-switcher-one.be-left-23 {
-  left: -15272px;
+  left: -9085px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-23 {
-  left: -15272px;
+  left: -9085px;
 }
 
 body.debug div#drawer-from-top--step-23::before {
@@ -955,21 +959,21 @@ body.debug div#drawer-from-top--step-23::before {
 }
 
 .magick-flows--step-23 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 15272px;
+  width: 375px;
+  left: 9085px;
 }
 
 .app-switcher-one.be-left-24 {
-  left: -15936px;
+  left: -9480px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-24 {
-  left: -15936px;
+  left: -9480px;
 }
 
 body.debug div#drawer-from-top--step-24::before {
@@ -987,21 +991,21 @@ body.debug div#drawer-from-top--step-24::before {
 }
 
 .magick-flows--step-24 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 15936px;
+  width: 375px;
+  left: 9480px;
 }
 
 .app-switcher-one.be-left-25 {
-  left: -16600px;
+  left: -9875px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-25 {
-  left: -16600px;
+  left: -9875px;
 }
 
 body.debug div#drawer-from-top--step-25::before {
@@ -1019,21 +1023,21 @@ body.debug div#drawer-from-top--step-25::before {
 }
 
 .magick-flows--step-25 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 16600px;
+  width: 375px;
+  left: 9875px;
 }
 
 .app-switcher-one.be-left-26 {
-  left: -17264px;
+  left: -10270px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-26 {
-  left: -17264px;
+  left: -10270px;
 }
 
 body.debug div#drawer-from-top--step-26::before {
@@ -1051,21 +1055,21 @@ body.debug div#drawer-from-top--step-26::before {
 }
 
 .magick-flows--step-26 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 17264px;
+  width: 375px;
+  left: 10270px;
 }
 
 .app-switcher-one.be-left-27 {
-  left: -17928px;
+  left: -10665px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-27 {
-  left: -17928px;
+  left: -10665px;
 }
 
 body.debug div#drawer-from-top--step-27::before {
@@ -1083,21 +1087,21 @@ body.debug div#drawer-from-top--step-27::before {
 }
 
 .magick-flows--step-27 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 17928px;
+  width: 375px;
+  left: 10665px;
 }
 
 .app-switcher-one.be-left-28 {
-  left: -18592px;
+  left: -11060px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-28 {
-  left: -18592px;
+  left: -11060px;
 }
 
 body.debug div#drawer-from-top--step-28::before {
@@ -1115,21 +1119,21 @@ body.debug div#drawer-from-top--step-28::before {
 }
 
 .magick-flows--step-28 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 18592px;
+  width: 375px;
+  left: 11060px;
 }
 
 .app-switcher-one.be-left-29 {
-  left: -19256px;
+  left: -11455px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-29 {
-  left: -19256px;
+  left: -11455px;
 }
 
 body.debug div#drawer-from-top--step-29::before {
@@ -1147,21 +1151,21 @@ body.debug div#drawer-from-top--step-29::before {
 }
 
 .magick-flows--step-29 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 19256px;
+  width: 375px;
+  left: 11455px;
 }
 
 .app-switcher-one.be-left-30 {
-  left: -19920px;
+  left: -11850px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-30 {
-  left: -19920px;
+  left: -11850px;
 }
 
 body.debug div#drawer-from-top--step-30::before {
@@ -1179,21 +1183,21 @@ body.debug div#drawer-from-top--step-30::before {
 }
 
 .magick-flows--step-30 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 19920px;
+  width: 375px;
+  left: 11850px;
 }
 
 .app-switcher-one.be-left-31 {
-  left: -20584px;
+  left: -12245px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-31 {
-  left: -20584px;
+  left: -12245px;
 }
 
 body.debug div#drawer-from-top--step-31::before {
@@ -1211,21 +1215,21 @@ body.debug div#drawer-from-top--step-31::before {
 }
 
 .magick-flows--step-31 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 20584px;
+  width: 375px;
+  left: 12245px;
 }
 
 .app-switcher-one.be-left-32 {
-  left: -21248px;
+  left: -12640px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-32 {
-  left: -21248px;
+  left: -12640px;
 }
 
 body.debug div#drawer-from-top--step-32::before {
@@ -1243,21 +1247,21 @@ body.debug div#drawer-from-top--step-32::before {
 }
 
 .magick-flows--step-32 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 21248px;
+  width: 375px;
+  left: 12640px;
 }
 
 .app-switcher-one.be-left-33 {
-  left: -21912px;
+  left: -13035px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-33 {
-  left: -21912px;
+  left: -13035px;
 }
 
 body.debug div#drawer-from-top--step-33::before {
@@ -1275,21 +1279,21 @@ body.debug div#drawer-from-top--step-33::before {
 }
 
 .magick-flows--step-33 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 21912px;
+  width: 375px;
+  left: 13035px;
 }
 
 .app-switcher-one.be-left-34 {
-  left: -22576px;
+  left: -13430px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-34 {
-  left: -22576px;
+  left: -13430px;
 }
 
 body.debug div#drawer-from-top--step-34::before {
@@ -1307,21 +1311,21 @@ body.debug div#drawer-from-top--step-34::before {
 }
 
 .magick-flows--step-34 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 22576px;
+  width: 375px;
+  left: 13430px;
 }
 
 .app-switcher-one.be-left-35 {
-  left: -23240px;
+  left: -13825px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-35 {
-  left: -23240px;
+  left: -13825px;
 }
 
 body.debug div#drawer-from-top--step-35::before {
@@ -1339,21 +1343,21 @@ body.debug div#drawer-from-top--step-35::before {
 }
 
 .magick-flows--step-35 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 23240px;
+  width: 375px;
+  left: 13825px;
 }
 
 .app-switcher-one.be-left-36 {
-  left: -23904px;
+  left: -14220px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-36 {
-  left: -23904px;
+  left: -14220px;
 }
 
 body.debug div#drawer-from-top--step-36::before {
@@ -1371,21 +1375,21 @@ body.debug div#drawer-from-top--step-36::before {
 }
 
 .magick-flows--step-36 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 23904px;
+  width: 375px;
+  left: 14220px;
 }
 
 .app-switcher-one.be-left-37 {
-  left: -24568px;
+  left: -14615px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-37 {
-  left: -24568px;
+  left: -14615px;
 }
 
 body.debug div#drawer-from-top--step-37::before {
@@ -1403,11 +1407,11 @@ body.debug div#drawer-from-top--step-37::before {
 }
 
 .magick-flows--step-37 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 332px;
-  left: 24568px;
+  width: 375px;
+  left: 14615px;
 }
 
 footer.magick-flows-stickey-footer_container {
@@ -1485,36 +1489,6 @@ footer.magick-flows-stickey-footer_container {
   will-change: top;
 }
 
-html {
-  font-family: "Salesforce Sans", Arial, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
-  background: #514f4d;
-  color: #080707;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.container {
-  background: url(/images/home-background.jpg) no-repeat top left;
-  background-size: 100% 100%;
-  height: 720px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 332;
-}
-
-body.magick-flow {
-  background: transparent !important;
-  overflow: hidden;
-  width: 100vw;
-}
-
-div#content-wrapper {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
-  border-radius: 0.25rem;
-  position: relative;
-  left: auto;
-  margin: 0px auto;
+.magick-flows--step-5 {
+  background-color: #00366f;
 }
