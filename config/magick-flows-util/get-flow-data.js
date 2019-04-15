@@ -45,6 +45,20 @@ and footers feature.
 	}
 }
 
+
+
+
+String.prototype.toTitleCase = function() {
+	return this.replace(/([\w&`'ÔÕ"Ò.@:\/\{\(\[<>_]+-? *)/g,
+	function(match, p1, index, title) {
+		if (index > 0 && title.charAt(index - 2) !== ":" && match.search(/^(a(nd?|s|t)?|b(ut|y)|en|for|i[fn]|o[fnr]|t(he|o)|vs?\.?|via)[ \-]/i) > -1) return match.toLowerCase();
+		if (title.substring(index - 1, index + 1).search(/['"_{(\[]/) > -1) return match.charAt(0) + match.charAt(1).toUpperCase() + match.substr(2);
+		if (match.substr(1).search(/[A-Z]+|&|[\w]+[._][\w]+/) > -1 || title.substring(index - 1, index + 1).search(/[\])}]/) > -1) return match;
+		return match.charAt(0).toUpperCase() + match.substr(1);
+	});
+};
+
+
 // This gets files -- used to get the lists of screens for each magick flow.
 const getFiles = (dir, files_) => {
 	files_ = files_ || [];
@@ -79,19 +93,53 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 			const value = valueWithExt.split('.')[0];
 			const key = rawKey.toLowerCase();
 
-			if ( value.includes('__') === true ) {
-				screenDataAttributes[key] = value.split('__').map(val => val.toLowerCase());
-			} else {
-				if (key === 'data' && typeof value === 'string') {
-					// make sure the stupid thing is in an array
-					screenDataAttributes[key] = [value];
-				} else if (key === 'notes' && typeof value === 'string') {
-					// make sure the stupid thing is in an array
-					screenDataAttributes[key] = [value];
-				} else {
+
+
+
+			switch (key) {
+				case "id":
 					screenDataAttributes[key] = value;
-				}
+					break;
+
+				case "data":
+					if ( value.includes('__') === true ) {
+						screenDataAttributes[key] = value.split('__').map(val => val.toLowerCase());
+					} else if ( typeof value === 'string' ) {
+						screenDataAttributes[key] = [value];
+					} else {
+						screenDataAttributes[key] = value;
+					}
+					break;
+				case "notes": 
+					if ( value.includes('__') === true ) {
+						screenDataAttributes[key] = value.split('__').map(val => val.toTitleCase());
+					} else if ( typeof value === 'string' ) {
+						screenDataAttributes[key] = [value];
+					} else {
+						screenDataAttributes[key] = value;
+					}
+				break;
+				
+				default: 
+					screenDataAttributes[key] = value;
+
 			}
+
+
+
+			// if ( value.includes('__') === true ) {
+			// 	screenDataAttributes[key] = value.split('__').map(val => val.toLowerCase());
+			// } else {
+			// 	if (key === 'data' && typeof value === 'string') {
+			// 		// make sure the stupid thing is in an array
+			// 		screenDataAttributes[key] = [value];
+			// 	} else if (key === 'notes' && typeof value === 'string') {
+			// 		// make sure the stupid thing is in an array
+			// 		screenDataAttributes[key] = [value];
+			// 	} else {
+			// 		screenDataAttributes[key] = value;
+			// 	}
+			// }
 		} else {
 			// first one is the sorter, store it as such
 			if ( index === 0 ) {

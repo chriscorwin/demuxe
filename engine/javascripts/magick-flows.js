@@ -35,15 +35,6 @@ const $ss = document.querySelector(`.magick-flows--step-content.auto-replace[dat
 const $contentWrapper = document.querySelector( '#content-wrapper' );
 
 
-String.prototype.toTitleCase = function() {
-	return this.replace(/([\w&`'ÔÕ"Ò.@:\/\{\(\[<>_]+-? *)/g,
-	function(match, p1, index, title) {
-		if (index > 0 && title.charAt(index - 2) !== ":" && match.search(/^(a(nd?|s|t)?|b(ut|y)|en|for|i[fn]|o[fnr]|t(he|o)|vs?\.?|via)[ \-]/i) > -1) return match.toLowerCase();
-		if (title.substring(index - 1, index + 1).search(/['"_{(\[]/) > -1) return match.charAt(0) + match.charAt(1).toUpperCase() + match.substr(2);
-		if (match.substr(1).search(/[A-Z]+|&|[\w]+[._][\w]+/) > -1 || title.substring(index - 1, index + 1).search(/[\])}]/) > -1) return match;
-		return match.charAt(0).toUpperCase() + match.substr(1);
-	});
-};
 
 $contentWrapper.onclick = ( ) => {
 	clicks++;
@@ -511,9 +502,29 @@ window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
 	document.querySelector(`#content`).classList.remove('fake-the-dock');
 	document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
+	// if (locals.DEBUG === true) {
+		console.debug(`Click hints automatgickally showing because you are in DEBUG mode. Hit the "T" key to toggle.`);
+		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
+		if (typeof $node != null) {
+			$node.classList.add('slide-in');
+		}
+	// }
 }, (1000));
 
 
+document.addEventListener('keydown', function (evt) {
+	// This is the `i` key
+	// Shows current click hint for a short while.
+	// "i" for "information", I guess? ¯\_(ツ)_/¯
+	if (evt.keyCode === 73) {
+		console.log('The "i" key is being held down...?');
+		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
+		if (typeof $node != null) {
+			$node.classList.add('slide-in');
+		}
+	}
+
+});
 
 
 document.onkeyup = function(e) {
@@ -521,18 +532,10 @@ document.onkeyup = function(e) {
 		console.log("H key was pressed, go to the first slide.");
 		window.location.hash = `#0`;
 	} else if (e.which == 73) {
-		// This is the `i` key
-		// Shows current click hint for a short while.
-		// "i" for "information", I guess? ¯\_(ツ)_/¯
-
-		let node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
-		if (typeof node != null) {
-			document.querySelector(`#magick-flows-click-hints--step-${clicks}`).classList.toggle('slide-in');
-			window.setTimeout(() => {
-				document.querySelector(`#magick-flows-click-hints--step-${clicks}`).classList.toggle('slide-in');
-			}, (1000));
+		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
+		if (typeof $node != null) {
+			$node.classList.remove('slide-in');
 		}
-
 
 	} else if (e.which == 84) {
 		// This is the `t` key
