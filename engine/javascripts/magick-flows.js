@@ -502,13 +502,13 @@ window.setTimeout(() => {
 	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
 	document.querySelector(`#content`).classList.remove('fake-the-dock');
 	document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
-	// if (locals.DEBUG === true) {
+	if (locals.DEBUG === true) {
 		console.debug(`Click hints automatgickally showing because you are in DEBUG mode. Hit the "T" key to toggle.`);
 		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
 		if (typeof $node != null) {
 			$node.classList.add('slide-in');
 		}
-	// }
+	}
 }, (1000));
 
 

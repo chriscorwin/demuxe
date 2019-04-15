@@ -26,6 +26,8 @@ const app = express();
 // }
 
 
+console.log(`[ app.js:29 ] config.debug: `, util.inspect(config.debug, { showHidden: true, depth: null, colors: true }));
+
 console.debug = function() {
 	if( config.debug === false ) return;
 	console.log.apply(this, arguments);

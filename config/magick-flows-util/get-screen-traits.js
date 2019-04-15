@@ -11,6 +11,8 @@ const getScreenTraits = (screenInfo) => {
 	// screens without IDs can't have data. Abort.
 	console.debug(`[ config/magick-flows-util/get-screen-traits.js:15 ] screenInfo: `, util.inspect(screenInfo, { showHidden: true, depth: null, colors: true }));
 	console.debug(`[ config/magick-flows-util/get-screen-traits.js:16 ] screenInfo.screenId: `, util.inspect(screenInfo.screenId, { showHidden: true, depth: null, colors: true }));
+
+
 	if ( !screenInfo.screenId ) return {};
 
 	let traitsData = {
@@ -43,6 +45,10 @@ const getScreenTraits = (screenInfo) => {
 		return trait.isRequiredBy(screenInfo.fileName);
 	});
 
+
+	const magickFlowUrlSlugFormattedForForConsoleOutput = util.inspect(screenInfo.magickFlowUrlSlug, { showHidden: true, depth: null, colors: true });
+	const magickFlowPathFormattedForForConsoleOutput = util.inspect(screenInfo.magickFlowPath, { showHidden: true, depth: null, colors: true });
+
 	// Add trait data for each
 	requiredTraits.forEach(trait => {
 		const assetForTrait = relevantAssets.find(asset => trait.isAssetForTrait(asset));
@@ -51,13 +57,18 @@ const getScreenTraits = (screenInfo) => {
 		if (assetForTrait && assetFileIndex >= 0) {
 			traitsData = trait.addTraitData(traitsData, screenInfo, assetForTrait, assetFileIndex);
 		} else {
-			const requiredTraitNames = requiredTraits.reduce((traits, trait) => `${traits}\n ${trait.id}`, '');
+			const requiredTraitNames = requiredTraits.reduce((traits, trait) => `${traits}${traits.length ? '\n ' : ''}${trait.id}`, '');
+			
+			// This thing here -----V tells the terminal to ring its bell :)
 			console.error('\u0007');
 
 			const screenInfoFileNameFormattedForConsoleOutput = util.inspect(screenInfo.fileName, { showHidden: true, depth: null, colors: true });
 			const screenInfoFormattedForConsoleOutput = util.inspect(screenInfo, { showHidden: false, depth: 3, colors: true });
 			const traitIdFormattedForConsoleOutput = util.inspect(trait.id, { showHidden: false, depth: 3, colors: true });
 			const relevantAssetsFormattedForConsoleOutput = util.inspect(relevantAssets, { showHidden: false, depth: 3, colors: true });
+			const stepIdFormattedForConsoleOutput = util.inspect(screenInfo.screenId, { showHidden: false, depth: 3, colors: true });
+			const sorterFormattedForConsoleOutput = util.inspect(screenInfo.sorter, { showHidden: false, depth: 3, colors: true });
+			const requiredTraitNamesFormattedForConsoleOutput = util.inspect(requiredTraitNames, { showHidden: false, depth: 1, colors: true });
 
 			console.error(`
 
@@ -68,45 +79,49 @@ const getScreenTraits = (screenInfo) => {
 [ERROR] Your demo is broken!
 ============================================================
 
-The trait ${traitIdFormattedForConsoleOutput} is indicated as being 
-required by the file:
+Some deeper information about this screen: 
+	${screenInfoFormattedForConsoleOutput}
+------------------------------------------------------------
+
+The trait ${traitIdFormattedForConsoleOutput} is indicated as being required by the file:
 
 	${screenInfoFileNameFormattedForConsoleOutput}
 
-...however, no asset file was found among the possible 
-assets present in Demuxe.
+...however, no asset file was found among the possible assets present in Demuxe.
 `);
 
 if ( relevantAssets.length === 0 ) {
 	console.warn(`
-As a matter of fact, the systen found zero (0) assets 
-associated with this screen.
+As a matter of fact, the systen found zero (0) assets associated with this screen.
 ------------------------------------------------------------
-
-Some more information about this screen: 
-	${screenInfoFormattedForConsoleOutput}
 `);
 
 } else {
 	console.info(`
-The following asset files were found and determined to be 
-associated with this screen:
+The following asset files were found and determined to be associated with this screen:
 
 	${relevantAssetsFormattedForConsoleOutput}
 ------------------------------------------------------------
 
-Some more information about this screen: 
-	${screenInfoFormattedForConsoleOutput}
-
+Scroll back to see more detailed info, here's the summary:
 `);
 
 
 }
 console.warn(`
-The following traits were determined to be required by this 
-screen:
+Assets are missing, trait:
 
-	${requiredTraitNames}
+Magick Flow: ${magickFlowUrlSlugFormattedForForConsoleOutput}
+
+Path: ${magickFlowPathFormattedForForConsoleOutput}
+
+Trait: ${requiredTraitNamesFormattedForConsoleOutput}
+
+Sorter: ${sorterFormattedForConsoleOutput}
+
+Step ID: ${stepIdFormattedForConsoleOutput}
+
+
 `);
 
 

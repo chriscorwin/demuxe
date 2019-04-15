@@ -184,7 +184,11 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 			screenId: screenDataAttributes.id, 
 			fileName, 
 			fileIndex, 
-			fullAssetsPath: flowData.fullAssetsPath
+			sorter: screenDataAttributes.sorter, 
+			fullAssetsPath: flowData.fullAssetsPath,
+			magickFlowUrlSlug: flowData.urlSlug,
+			magickFlowPath: flowData.path,
+			screenDataAttributes,
 		};
 		const traitsData = getScreenTraits(screenInfo);
 		flowData.assetsMetaData = traitsData.assetsMetaData;
