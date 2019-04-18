@@ -50,12 +50,18 @@
 		</div>
 		<% if (locals.subHeaderVariant === 'hasCustomSubheader')  {
 			// console.log('customizable sub-header please');
-		%>
-			<%- (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents) && include(locals.localization[locals.page].subHeaderContents)
-					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents) && include(locals.localization[locals.site_section].subHeaderContents)
-					|| locals.subHeaderContents && include(locals.subHeaderContents)
-					|| locals.subHeaderContents
-					|| '' %>
-		<% } %>
+			const isFilePath = /([A-z0-9-_+]+\/)*([A-z0-9]+\.(ejs|js|md|svg))$/mg;
+
+			if (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents) { %>
+				<%- (locals.localization[locals.page].subHeaderContents.match(isFilePath) && include(locals.localization[locals.page].subHeaderContents)) || locals.localization[locals.page].subHeaderContents %>
+			<% } else if (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents) { %>
+				<%- (locals.localization[locals.site_section].subHeaderContents.match(isFilePath) && include(locals.localization[locals.site_section].subHeaderContents)) || locals.localization[locals.site_section].subHeaderContents %>
+			<% } else if (locals.subHeaderContents) { %>
+				<%- (locals.subHeaderContents.match(isFilePath) && include(locals.subHeaderContents)) || locals.subHeaderContents %>
+			<% } else {
+				console.log(`locals.subHeaderVariant === 'hasCustomSubheader' specified, but no subHeaderContents were specified.`); %>
+				<!-- output nothing -->
+			<% }
+		} %>
 	</div>
 </div>
