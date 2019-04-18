@@ -273,28 +273,10 @@
 		contents: toast.contents,
 		title: toast.title,
 		theme: (toast.theme) ? toast.theme : 'success',
-		id: (toast.id) ? toast.id : 'successToast'
+		id: (toast.id) ? toast.id : 'successToast',
+		triggerImmediately: toast.triggerImmediately
 	}) %>
 <% } %>
-
-<%- include('components/toast', {
-	contents: 'The segment will be available once processing completes.',
-	title: `‘${segments[0].title}’ segment created successfully.`,
-	theme: 'success',
-	id: 'successToast'
-}) %>
-
-<%- include('components/toast', {
-	title: `You are all set. Einstein Journey Insights Report is ready to run.`,
-	theme: 'success',
-	id: 'reportRunning'
-}) %>
-
-<%- include('components/toast', {
-	title: `Einstein Journey Insights Report is ready. <a href="javascript:void(0);" onclick="navigatePage('/insights/einstein-journey-insights')">Click to View</a>`,
-	theme: 'success',
-	id: 'reportReady'
-}) %>
 
 <script>
 const showLookalikeModal = (n) => {
@@ -329,20 +311,3 @@ document.querySelectorAll('.slds-panel-box__header-settings').forEach((elm) => e
 	}
 }));
 </script>
-
-<% if ( locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === `reportRunning`) { %>
-<script>
-	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the
-	// flow, which we need to do in order to keep global nav dropdowns working.
-	let reportReadyToastElement =  document.getElementById('reportReady');
-	if (typeof(reportReadyToastElement) != 'undefined' && reportReadyToastElement != null) {
-		window.setTimeout(() => {
-			document.querySelector('#reportReady').classList.add('slds-transition-hide');
-			document.querySelector('#reportReady').classList.remove('slds-hide');
-		}, 4201);
-		window.setTimeout(() => {
-			document.querySelector('#reportReady').classList.add('slds-transition-show');
-		}, 4300);
-	}
-</script>
-<% } %>

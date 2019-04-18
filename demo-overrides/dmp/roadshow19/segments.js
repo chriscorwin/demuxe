@@ -170,7 +170,8 @@ module.exports = {
 			controls,
 			toast: {
 				title: "'Camping and tents explorers' segment provisioned successfully.",
-				contents: "Will be available only under 'Northern Trail Outfitters - Apparel' account as 'Camping and tents explorers'"
+				contents: "Will be available only under 'Northern Trail Outfitters - Apparel' account as 'Camping and tents explorers'",
+				triggerImmediately: true
 			}
 		}
 	}
