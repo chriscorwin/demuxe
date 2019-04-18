@@ -116,11 +116,19 @@
 	color: #16325C;
 }
 
+// make sure fake header actions show above background (defined immediately after this)
+.slds-page-header__col-title {
+	z-index: 3;
+}
 
-.slds-brand-band.slds-brand-band_medium {
-	&:before {
-	    background-color: #F7F9FB;
-	    height: 14rem;
-	    background-image: url(/styles/header-bg.png);
-	}
+// Adds a grey background so there is a little tiny white stripe between the header actions and the page title
+#content-wrapper:before {
+	background: #f7f9fb;
+	content: "";
+	display: block;
+	height: 53px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 171px;
 }
