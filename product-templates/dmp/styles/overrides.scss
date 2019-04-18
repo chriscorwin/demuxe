@@ -30,6 +30,11 @@ body {
 	width: 16px;
 }
 
+.slds-panel-box__sub-header {
+	background-color: #F7F9FB;
+	border-top: 2px solid white;
+}
+
 .slds-text-heading_medium, .slds-text-heading--medium {
 	font-weight: 400;
 }
@@ -139,6 +144,11 @@ body {
 .slds-tabs--default__item.slds-active:after,
 .slds-tabs--default__item.slds-is-active:after {
 	background-color: #FFF;
+}
+
+.slds-button__icon.slds-button__icon_right {
+	width: 10px;
+	height: 6px;
 }
 
 
