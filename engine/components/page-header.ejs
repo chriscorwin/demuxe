@@ -5,7 +5,7 @@
 				<div class="slds-media__figure">
 					<span class="slds-icon_container slds-icon-standard-opportunity">
 						<svg class="slds-icon slds-page-header__icon" aria-hidden="true">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/standard-sprite/svg/symbols.svg#opportunity" />
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%- locals.svgIcon %>" />
 						</svg>
 					</span>
 				</div>
@@ -13,8 +13,8 @@
 					<div class="slds-page-header__name">
 						<div class="slds-page-header__name-title">
 							<h1>
-								<span>Opportunity</span>
-								<span class="slds-page-header__title slds-truncate" title="Acme - 1,200 Widgets">Acme - 1,200 Widgets</span>
+								<span><%= locals.subTitle %></span>
+								<span class="slds-page-header__title slds-truncate" title="<%= locals.title %>"><%= locals.title %></span>
 							</h1>
 						</div>
 					</div>
@@ -23,84 +23,45 @@
 		</div>
 		<div class="slds-page-header__col-actions">
 			<div class="slds-page-header__controls">
-				<div class="slds-page-header__control">
-					<button class="slds-button slds-button_neutral slds-button_stateful slds-not-selected" aria-live="assertive">
-						<span class="slds-text-not-selected">
-							<svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#add" />
-							</svg>
-							Follow
-						</span>
-						<span class="slds-text-selected">
-							<svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#check" />
-							</svg>
-							Following
-						</span>
-						<span class="slds-text-selected-focus">
-							<svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#close" />
-							</svg>
-							Unfollow
-						</span>
-					</button>
-				</div>
-				<div class="slds-page-header__control">
-					<ul class="slds-button-group-list">
-						<li>
-							<button class="slds-button slds-button_neutral">Edit</button>
-						</li>
-						<li>
-							<button class="slds-button slds-button_neutral">Delete</button>
-						</li>
-						<li>
-							<button class="slds-button slds-button_neutral">Clone</button>
-						</li>
-						<li>
-							<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
-								<button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
-									<svg class="slds-button__icon" aria-hidden="true">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#down" />
-									</svg>
-									<span class="slds-assistive-text">More Actions</span>
-								</button>
+				<% locals.controls && locals.controls.forEach((control) => { %>
+					<div class="slds-page-header__control">
+						<% switch(control.type) {
+							case 'button-group': %>
+							<div class="slds-button-group" role="group">
+							<% control.items.forEach((data) => { %>
+								<%- include('components/button', data) %>
+							<% }) %>
 							</div>
-						</li>
-					</ul>
-				</div>
+							<% break;
+							case 'combobox': %>
+								<div class="slds-button">
+									<%- include('components/combobox', control) %>
+								</div>
+							<% break;
+							case 'button': %>
+								<% if (control.hasOverflow) {%><div class="slds-button"><% } %>
+									<%- include('components/button', control) %>
+								<% if (control.hasOverflow) {%></div><% } %>
+							<% break;
+						} %>
+					</div>
+					<% });
+				%>
 			</div>
 		</div>
 	</div>
-	<div class="slds-page-header__row slds-page-header__row_gutters">
-		<div class="slds-page-header__col-details">
-			<ul class="slds-page-header__detail-row">
-				<li class="slds-page-header__detail-block">
-					<div class="slds-text-title slds-truncate" title="Field 1">Field 1</div>
-					<div class="slds-truncate" title="Description that demonstrates truncation with a long text field.">Description that demonstrates truncation with a long text field.</div>
-				</li>
-				<li class="slds-page-header__detail-block">
-					<div class="slds-text-title slds-truncate" title="Field 2 (3)">
-						Field 2 (3)
-						<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
-							<button class="slds-button slds-button_icon slds-button_icon" aria-haspopup="true" title="More Actions">
-								<svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#down" />
-								</svg>
-								<span class="slds-assistive-text">More Actions</span>
-							</button>
-						</div>
-					</div>
-					<div class="slds-truncate" title="Multiple Values">Multiple Values</div>
-				</li>
-				<li class="slds-page-header__detail-block">
-					<div class="slds-text-title slds-truncate" title="Field 3">Field 3</div>
-					<div class="slds-truncate" title="Hyperlink"><a href="javascript:void(0);">Hyperlink</a></div>
-				</li>
-				<li class="slds-page-header__detail-block">
-					<div class="slds-text-title slds-truncate" title="Field 4">Field 4</div>
-					<div class="slds-truncate" title="Description (2-line truncation—must use JS to truncate).">Description (2-line truncati...</div>
-				</li>
-			</ul>
+	<% if (locals.details) { %>
+		<div class="slds-page-header__row slds-page-header__row_gutters">
+			<div class="slds-page-header__col-details">
+				<ul class="slds-page-header__detail-row">
+					<% locals.details.forEach((detail) => { %>
+						<li class="slds-page-header__detail-block">
+							<div class="slds-text-title slds-truncate" title="<%= detail.titleAssistive ? detail.titleAssistive : detail.title %>"><%- detail.title %></div>
+							<div class="slds-truncate" title="<%= detail.descriptionAssistive ? detail.descriptionAssistive : detail.description %>"><%- detail.description %></div>
+						</li>
+					<% }); %>
+				</ul>
+			</div>
 		</div>
-	</div>
+	<% } %>
 </div>
