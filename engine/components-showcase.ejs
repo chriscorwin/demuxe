@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<title>
+				Components Showcase
+		</title>
+		<link rel='stylesheet' href='/styles/salesforce-lightning-design-system.min.css' />
+
+
+		<% if (locals) { %>
+				<script>
+			<% try { JSON.stringify(locals) %>
+					const clientSideLocals = <%- JSON.stringify(locals) %>;
+					console.group('Locals');
+					console.dir(<%- JSON.stringify(locals) %>);
+					console.groupEnd();
+			<% } catch (e) { %>
+					const clientSideLocals = {};
+					console.log('ERROR STRINGIFYING LOCALS');
+					console.log('<%= e %>');
+			<% } %>
+				</script>
+		<% } else { %>
+			<script>
+				const clientSideLocals = {};
+				console.log('No locals provided, for some reason...');
+			</script>
+		<% } %>
+</head>
+
+<body <%= locals.sanitizedQueryParams.debug==='true' ? 'class=has-debug' : '' %>>
+
+<section>
+	<%
+		const buttonData = {
+			iconOnRight: false, // whether the button icon shows to the right or left of the button text
+			iconPath: '/icons/utility-sprite/svg/symbols.svg#settings', // path to SVG icon. Takes precedence over imgPath
+			id: '', // an html ID for the button
+			imgPath: '', // path to img asset
+			isDisabled: false, // whether the button appears disabled
+			isSelected: false, // whether the button appears selected
+			onClick: '', // code for the `onclick=""` DOM attribute for `<button />`
+			imgStyle: '', // used for the img tag if `imgPath` passed, or svg tag if iconPath passed
+			text: 'Button Text', // text to appear on the button. If not present, button will assume that it is an icon button
+			title: 'Assistive Text', // assistive button text
+			variant: 'neutral', // any of the button variations listed here: https://latest-220.lightningdesignsystem.com/components/buttons/
+		};
+	%>
+	<%- include('components/button', buttonData) %>
+</section>
+
+<section>
+	<%
+		const comboboxData = {
+			isDisabled: false, // whether the button appears disabled
+			versionName: 'Placeholder', // placeholder text for combobox
+			versions: [
+				{
+					iconPath: '', // svg icon path for option
+					id: '', // id for listbox item div
+					name: 'test 1' // displayed text for option
+				},
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#settings', // svg icon path for option
+					id: '', // id for listbox item div
+					name: 'test 2' // displayed text for option
+				}
+			]
+		}
+	%>
+	<%- include('components/combobox', comboboxData) %>
+</section>
+
+<section>
+	<%
+		const pageHeaderData = {
+
+		}
+	%>
+	<%- include('components/page-header', pageHeaderData) %>
+</section>
+
+</body>
+
+</html>
