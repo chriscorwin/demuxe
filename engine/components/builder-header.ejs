@@ -1,0 +1,170 @@
+<%
+	const defaultToolbarControls = [
+		{
+			type: 'button-group',
+			label: 'Canvas Actions',
+			items: [
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#undo',
+					title: 'Undo'
+				},
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#redo',
+					title: 'Redo'
+				}
+			]
+		},
+		{
+			type: 'button-group',
+			label: 'Edit Actions',
+			items: [
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#cut',
+					title: 'Cut'
+				},
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#copy',
+					title: 'Copy'
+				},
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#paste',
+					title: 'Paste'
+				}
+			]
+		}
+	];
+	const toolbarControls = locals.toolbarControls || defaultToolbarControls;
+
+%>
+
+<div style="position:relative;height:100px">
+	<div class="slds-builder-header_container">
+		<header class="slds-builder-header">
+			<div class="slds-builder-header__item">
+				<div class="slds-builder-header__item-label slds-media slds-media_center">
+					<div class="slds-media__figure">
+						<span class="slds-icon_container slds-icon-utility-builder slds-current-color">
+							<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+								<use xlink:href="<%- locals.logo %>"></use>
+							</svg>
+						</span>
+					</div>
+					<div class="slds-media__body"><%- locals.appTitle %></div>
+				</div>
+			</div>
+			<nav class="slds-builder-header__item slds-builder-header__nav">
+				<ul class="slds-builder-header__nav-list">
+					<% locals.controls && locals.controls.forEach((control) => { %>
+						<li class="slds-builder-header__nav-item">
+							<% switch(control.type) {
+								case 'link': %>
+									<a onClick="<%- control.clickAction %>" href="<%- control.href %>" class="slds-builder-header__item-action slds-media slds-media_center">
+										<span class="slds-media__figure">
+											<span class="slds-icon_container slds-icon-utility-settings slds-current-color">
+												<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+													<use xlink:href="<%- control.icon %>"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="slds-media__body">
+											<span class="slds-truncate" title="<%- control.text %>"><%- control.text %></span>
+										</span>
+									</a>
+								<% break;
+								case 'dropdown': %>
+									<button class="slds-button slds-builder-header__item-action slds-media slds-media_center" aria-haspopup="true" title="Click to open menu">
+										<span class="slds-media__figure">
+											<span class="slds-icon_container slds-icon-utility-page slds-current-color">
+												<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+													<use xlink:href="<%- control.icon %>"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="slds-media__body">
+											<span class="slds-truncate" title="<%- control.text %>"><%- control.text %></span>
+											<span class="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small">
+												<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+													<use xlink:href="/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+												</svg>
+											</span>
+										</span>
+									</button>
+								<% break;
+							} %>
+						</li>
+					<% }); %>
+				</ul>
+			</nav>
+			<div class="slds-builder-header__item slds-has-flexi-truncate">
+				<h1 class="slds-builder-header__item-label">
+					<span class="slds-truncate" title="<%- locals.pageTitle %>"><%- locals.pageTitle %></span>
+				</h1>
+			</div>
+			<div class="slds-builder-header__item slds-builder-header__utilities">
+				<% if (!locals.hideBack) { %>
+					<div class="slds-builder-header__utilities-item">
+						<a onClick="<%- locals.backAction %>" href="<%- locals.backHref || 'javascript:void(0);' %>" class="slds-builder-header__item-action slds-media slds-media_center">
+							<div class="slds-media__figure">
+								<span class="slds-icon_container slds-icon-utility-back slds-current-color">
+									<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#back"></use>
+									</svg>
+								</span>
+							</div>
+							<div class="slds-media__body">Back</div>
+						</a>
+					</div>
+				<% } %>
+				<% if (!locals.hideHelp) { %>
+					<div class="slds-builder-header__utilities-item">
+						<a onClick="<%- locals.helpAction %>" href="<%- locals.helpHref || 'javascript:void(0);' %>" class="slds-builder-header__item-action slds-media slds-media_center">
+							<div class="slds-media__figure">
+								<span class="slds-icon_container slds-icon-utility-help slds-current-color">
+									<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#help"></use>
+									</svg>
+								</span>
+							</div>
+							<div class="slds-media__body">Help</div>
+						</a>
+					</div>
+				<% } %>
+			</div>
+		</header>
+		<div class="slds-builder-toolbar" role="toolbar">
+			<% toolbarControls.forEach((control) => { %>
+				<div class="slds-builder-toolbar__item-group" aria-label="<%- control.label %>">
+					<% switch(control.type) {
+						case 'button-group': %>
+						<div class="slds-button-group">
+						<% control.items.forEach((data) => { %>
+							<%- include('components/button', data) %>
+						<% }) %>
+						</div>
+						<% break;
+						case 'combobox': %>
+							<div class="slds-button">
+								<%- include('components/combobox', control) %>
+							</div>
+						<% break;
+						case 'button': %>
+							<% if (control.hasOverflow) {%><div class="slds-button"><% } %>
+								<%- include('components/button', control) %>
+							<% if (control.hasOverflow) {%></div><% } %>
+						<% break;
+					} %>
+				</div>
+			<% }); %>
+			<div class="slds-builder-toolbar__actions" aria-label="Document actions">
+				<button class="slds-button slds-button_neutral">
+					<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#right"></use>
+					</svg>
+					Run
+				</button>
+				<button class="slds-button slds-button_neutral">Save As</button>
+				<button class="slds-button slds-button_brand">Save</button>
+			</div>
+		</div>
+	</div>
+</div>

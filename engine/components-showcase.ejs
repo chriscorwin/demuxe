@@ -30,6 +30,66 @@
 </head>
 
 <body <%= locals.sanitizedQueryParams.debug==='true' ? 'class=has-debug' : '' %>>
+<section>
+	<%
+		const builderHeaderData = {
+			appTitle: 'App Name',
+			backAction: `console.log('clicked back');`,
+			controls: [
+				{
+					type: 'link',
+					href: 'javascript:void(0);',
+					clickAction: '',
+					icon: '/icons/utility-sprite/svg/symbols.svg#settings',
+					text: 'Link'
+				},
+				{
+					type: 'dropdown',
+					icon: '/icons/utility-sprite/svg/symbols.svg#page',
+					text: 'Dropdown'
+				}
+			],
+			toolbarControls: [
+				{
+					type: 'button-group',
+					label: 'Canvas Actions',
+					items: [
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#undo',
+							title: 'Undo'
+						},
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#redo',
+							title: 'Redo'
+						}
+					]
+				},
+				{
+					type: 'button-group',
+					label: 'Edit Actions',
+					items: [
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#cut',
+							title: 'Cut'
+						},
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#copy',
+							title: 'Copy'
+						},
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#paste',
+							title: 'Paste'
+						}
+					]
+				}
+			],
+			logo: '/icons/utility-sprite/svg/symbols.svg#builder',
+			pageTitle: 'Page Type'
+		};
+	%>
+	<%- include('components/builder-header', builderHeaderData) %>
+</section>
+
 
 <section>
 	<%
