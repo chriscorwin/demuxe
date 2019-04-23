@@ -1,0 +1,48 @@
+<%
+
+/*
+	This file, when included, will create an slds panel in-place.
+
+	This file functions as a wrapper.
+
+	include( 'components/panel',
+		{
+			height: '700px', // The panel's height (default 700px)
+			headerText: 'Panel Header', // Text for the panel's header
+			pageContents: 'includes/components-showcase-contents', // represents the path to the page's contents
+			panelContents: 'includes/components-showcase-panel' // represents the path to the panel's contents
+		}
+	)
+*/
+
+	const height = locals.height || '700px';
+	const dockedClass = locals.isRight ? 'slds-panel_docked-right' : 'slds-panel_docked-left';
+	const collapseIcon = locals.collapseIcon || '/icons/utility-sprite/svg/symbols.svg#close';
+%>
+
+<div style="display: flex; height: <%= height %>">
+	<% if (locals.isRight && locals.pageContents) { %>
+	<div class="slds-col slds-p-around_medium">
+		<%- include(`${locals.pageContents}`) %>
+	</div>
+	<% } %>
+	<div class="slds-panel slds-size_medium slds-panel_docked <%= dockedClass %> slds-panel_drawer slds-is-open" aria-hidden="false">
+		<div class="slds-panel__header">
+			<h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="<%= locals.headerText %>"><%= locals.headerText %></h2>
+			<button class="slds-button slds-button_icon slds-button_icon-small slds-panel__close" title="Collapse Panel Header">
+				<svg class="slds-button__icon" aria-hidden="true">
+					<use xlink:href="<%= collapseIcon %>"></use>
+				</svg>
+				<span class="slds-assistive-text">Collapse Panel Header</span>
+			</button>
+		</div>
+		<div class="slds-panel__body">
+			<%- include(`${locals.panelContents}`) %>
+		</div>
+	</div>
+	<% if (!locals.isRight && locals.pageContents) { %>
+	<div class="slds-col slds-p-around_medium">
+		<%- include(`${locals.pageContents}`) %>
+	</div>
+	<% } %>
+</div>
