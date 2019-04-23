@@ -165,7 +165,7 @@ body, .container {
 	left: 0;
 	position: absolute;
 	top: 0;
-	transition: 400ms transform, 800ms left;
+	transition: 2000ms transform, 800ms left;
 	width: $widthOfAppSwitcher;
 
 	&.shrink {
