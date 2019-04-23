@@ -33,6 +33,25 @@
 			]
 		}
 	];
+
+	const defaultToolbarActions = [
+		{
+			type: 'button',
+			iconPath: '/icons/utility-sprite/svg/symbols.svg#right',
+			text: 'Run'
+		},
+		{
+			type: 'button',
+			text: 'Save As'
+		},
+		{
+			type: 'button',
+			text: 'Save',
+			variant: 'brand'
+		}
+	];
+
+	const toolbarActions = locals.toolbarActions || defaultToolbarActions;
 	const toolbarControls = locals.toolbarControls || defaultToolbarControls;
 
 %>
@@ -156,14 +175,27 @@
 				</div>
 			<% }); %>
 			<div class="slds-builder-toolbar__actions" aria-label="Document actions">
-				<button class="slds-button slds-button_neutral">
-					<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
-						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#right"></use>
-					</svg>
-					Run
-				</button>
-				<button class="slds-button slds-button_neutral">Save As</button>
-				<button class="slds-button slds-button_brand">Save</button>
+				<% toolbarActions.forEach((control) => { %>
+					<% switch(control.type) {
+						case 'button-group': %>
+						<div class="slds-button-group">
+						<% control.items.forEach((data) => { %>
+							<%- include('components/button', data) %>
+						<% }) %>
+						</div>
+						<% break;
+						case 'combobox': %>
+							<div class="slds-button">
+								<%- include('components/combobox', control) %>
+							</div>
+						<% break;
+						case 'button': %>
+							<% if (control.hasOverflow) {%><button class="slds-button"><% } %>
+								<%- include('components/button', control) %>
+							<% if (control.hasOverflow) {%></button><% } %>
+						<% break;
+					} %>
+				<% }); %>
 			</div>
 		</div>
 	</div>
