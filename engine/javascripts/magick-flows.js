@@ -15,18 +15,18 @@ const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
 
 let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
-if ( clicks >= magickFlowConfig.numberOfScreens ) {
+if ( clicks >= magickFlowConfig.numberOfSteps ) {
 	clicks = 0;
 }
 
 let nextClick = clicks + 1;
-if ( nextClick >= magickFlowConfig.numberOfScreens ) {
+if ( nextClick >= magickFlowConfig.numberOfSteps ) {
 	nextClick = 0
 }
 
 let previousClick = clicks - 1;
 if ( previousClick <= 0 ) {
-	previousClick = magickFlowConfig.numberOfScreens
+	previousClick = magickFlowConfig.numberOfSteps
 }
 
 window.location.hash = `#${clicks}`;
@@ -38,8 +38,8 @@ const $contentWrapper = document.querySelector( '#content-wrapper' );
 
 $contentWrapper.onclick = ( ) => {
 	clicks++;
-	if ( clicks >= magickFlowConfig.numberOfScreens ) {
-		clicks = magickFlowConfig.numberOfScreens - 1;
+	if ( clicks >= magickFlowConfig.numberOfSteps ) {
+		clicks = magickFlowConfig.numberOfSteps - 1;
 	}
 
 	// Now is the chance to run onBeforeHashChange stuff
@@ -114,7 +114,7 @@ function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition
 
 function getAppSwitcherClassNames () {
 	let out = [];
-	for (step = 0; step < magickFlowConfig.numberOfScreens; step++) {
+	for (step = 0; step < magickFlowConfig.numberOfSteps; step++) {
 		out.push(`slide-left-${step}`);
 		out.push(`be-left-${step}`);
 	}
@@ -129,22 +129,22 @@ function locationHashChanged(event) {
 	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
 	// if the number of clicks is greater than our number of steps, we override that and set that thing back to zero
-	if ( clicks >= magickFlowConfig.numberOfScreens ) {
+	if ( clicks >= magickFlowConfig.numberOfSteps ) {
 		clicks = 0;
 		window.location.hash = `#${clicks}`;
 	}
 
 	// figure out which things come next and which things are backwards -- because it's a _loop_ we have to do some maths here
 	nextClick = clicks + 1;
-	if ( nextClick >= magickFlowConfig.numberOfScreens ) {
+	if ( nextClick >= magickFlowConfig.numberOfSteps ) {
 		nextClick = 0
 	}
 	previousClick = clicks - 1;
 
 	if ( previousClick < 0 ) {
-		previousClick = magickFlowConfig.numberOfScreens - 1
+		previousClick = magickFlowConfig.numberOfSteps - 1
 	}
-	if ( previousClick > magickFlowConfig.numberOfScreens ) {
+	if ( previousClick > magickFlowConfig.numberOfSteps ) {
 		previousClick = 0
 	}
 

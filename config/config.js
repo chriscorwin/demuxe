@@ -11,29 +11,6 @@ const sassGenerator = require('./magick-flows-util/sass-generator.js');
 // Satic data here, so that we do not have to generate the config data all for every environment unless we wanna
 let configData = null;
 
-function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleError) {
-    // Dynamically create "SASS variable declarations"
-    const dataString = sassGenerator.sassVariables(variables);
-
-    fs.writeFile(scssVariablesFilePath, dataString, function(err){
-        if(!err){
-            // console.log(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
-        } else {
-            console.error(`[ config/config.js:28 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
-
-        }
-    });
-}
-
-function dynamicSassHandleSuccess(data){
-    console.log(`[ dynamicSassHandleSuccess ]: `, data);
-}
-function dynamicSassHandleError(data){
-    console.log(`[ dynamicSassHandleError ]: `, data);
-}
-
-
-
 
 module.exports = function() {
     // if the static data was already set. return it
@@ -120,26 +97,42 @@ module.exports = function() {
             const thisMagickFlowObject = configData.magickFlows[magickFlowUrlSlug];
             const thisMagickFlowScreens = configData.magickFlows[magickFlowUrlSlug].screens;
             const thisMagickFlowAssets = configData.magickFlows[magickFlowUrlSlug].assets;
+            
 
+            // const thisMagickFlowHasTemplateSizingInfo = thisMagickFlowAssets.includes('all__viewport-size.png');
 
-            const thisMagickFlowMainImagesForScssVariables = thisMagickFlowScreens.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
-            const thisMagickFlowAssetsImagesForScssVariables = thisMagickFlowAssets.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
-            const thisMagickFlowBackgroundImageVariable = [];
+            // let templateSizingFileDimensions = {'height': 0, 'width': 0, 'type': ''};
 
-            // iterate through the main images, add url and path to it
-            thisMagickFlowMainImagesForScssVariables.forEach(function(item){
-                thisMagickFlowBackgroundImageVariable.push(`url('/magick-flows/${magickFlowUrlSlug}/main/${item}')`);
-            });
-            // iterate through the assets images, add url and path to it
-            thisMagickFlowAssetsImagesForScssVariables.forEach(function(item){
-                thisMagickFlowBackgroundImageVariable.push(`url('/magick-flows/${magickFlowUrlSlug}/assets/${item}')`);
-            });
+            // console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/config.js:128 ] thisMagickFlowHasTemplateSizingInfo: `, util.inspect(thisMagickFlowHasTemplateSizingInfo, { showHidden: true, depth: null, colors: true }));
+            // if ( thisMagickFlowHasTemplateSizingInfo === true ) {
 
-            const scssVariablesFilePath = path.join(thisMagickFlowObject.fullAssetsPath, 'variables.scss')
-            dynamicSass(scssVariablesFilePath, {
-                'numberOfSlides': thisMagickFlowObject.numberOfScreens,
-                'preloadImagesData': thisMagickFlowBackgroundImageVariable.join('\r\n\t\t')
-            }, dynamicSassHandleSuccess, dynamicSassHandleError);
+            //     const pathToTemplateSizingFile = path.join(thisMagickFlowObject.fullAssetsPath, 'all__viewport-size.png');
+            //     templateSizingFileDimensions = sizeOf(pathToTemplateSizingFile);
+            //     console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/config.js:131 ] templateSizingFileDimensions: `, util.inspect(templateSizingFileDimensions, { showHidden: true, depth: null, colors: true }));
+
+            // }
+
+            // const thisMagickFlowMainImagesForScssVariables = thisMagickFlowScreens.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+            // const thisMagickFlowAssetsImagesForScssVariables = thisMagickFlowAssets.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+            // const thisMagickFlowBackgroundImageVariable = [];
+
+            // // iterate through the main images, add url and path to it
+            // thisMagickFlowMainImagesForScssVariables.forEach(function(item){
+            //     thisMagickFlowBackgroundImageVariable.push(`url('/magick-flows/${magickFlowUrlSlug}/main/${item}')`);
+            // });
+            // // iterate through the assets images, add url and path to it
+            // thisMagickFlowAssetsImagesForScssVariables.forEach(function(item){
+            //     thisMagickFlowBackgroundImageVariable.push(`url('/magick-flows/${magickFlowUrlSlug}/assets/${item}')`);
+            // });
+
+            // const scssVariablesFilePath = path.join(thisMagickFlowObject.fullAssetsPath, 'variables.scss');
+            // dynamicSass(scssVariablesFilePath, {
+            //     'numberOfSlides': thisMagickFlowObject.numberOfSteps,
+            //     'preloadImagesData': thisMagickFlowBackgroundImageVariable.join('\r\n\t\t'),
+            //     'heightOfSlideValue': templateSizingFileDimensions.height,
+            //     'widthOfSlideValue': templateSizingFileDimensions.width,
+            //     'widthOfGutterValue': templateSizingFileDimensions.width
+            // }, dynamicSassHandleSuccess, dynamicSassHandleError);
         });
 
         console.group(`

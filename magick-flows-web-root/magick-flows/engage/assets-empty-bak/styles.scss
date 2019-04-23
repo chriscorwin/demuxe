@@ -3,9 +3,9 @@
 $numberOfSlides: 1 !default;
 $preloadImagesData: "url('/fake.png')" !default;
 
-$heightOfSlideValue: 720;
-$widthOfSlideValue: 1280;
-$widthOfGutterValue: 1280;
+$heightOfSlideValue: 720 !default;
+$widthOfSlideValue: 1280 !default;
+$widthOfGutterValue: 1280 !default;
 
 $widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
 $heightOfAppSwitcher: $heightOfSlideValue + 0px;

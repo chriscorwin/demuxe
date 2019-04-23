@@ -4,6 +4,31 @@ const util = require('util');
 const sizeOf = require('image-size');
 const sortAlphaNum = require('./sort-alpha-num.js');
 const getScreenTraits = require('./get-screen-traits.js');
+const sassGenerator = require('./sass-generator.js');
+
+function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleError) {
+	// Dynamically create "SASS variable declarations"
+	const dataString = sassGenerator.sassVariables(variables);
+
+	fs.writeFile(scssVariablesFilePath, dataString, function(err){
+		if(!err){
+			// console.log(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
+		} else {
+			console.error(`[ config/config.js:28 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
+
+		}
+	});
+}
+
+function dynamicSassHandleSuccess(data){
+	console.log(`[ dynamicSassHandleSuccess ]: `, data);
+}
+function dynamicSassHandleError(data){
+	console.log(`[ dynamicSassHandleError ]: `, data);
+}
+
+
+
 
 const noFileError = (error, name, fullContentPath) => {
 	if ( error.message.includes('ENOENT: no such file or directory')) {
@@ -200,9 +225,17 @@ const getScreenData = (flowData, fileName, fileIndex) => {
 };
 
 const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
+
+
+	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:205 ] configData: `, util.inspect(configData, { showHidden: false, depth: 1, colors: true }));
+	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:206 ] fileOrDirectoryPath: `, util.inspect(fileOrDirectoryPath, { showHidden: false, depth: null, colors: true }));
+	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:207 ] subFileOrDirectory: `, util.inspect(subFileOrDirectory, { showHidden: false, depth: null, colors: true }));
 	if(!fs.statSync(path.join(fileOrDirectoryPath, subFileOrDirectory)).isDirectory()) {
 		return configData;
 	}
+
+	let templateSizingFileDimensions = {'height': 720, 'width': 1280, 'type': ''};
+
 
 	const flowData = {
 		assets: [],
@@ -212,12 +245,13 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 		fullContentPath: path.join(fileOrDirectoryPath, subFileOrDirectory, 'main'),
 		fullAssetsPath: path.join(fileOrDirectoryPath, subFileOrDirectory, 'assets'),
 		urlSlug: subFileOrDirectory,
-		screens: []
+		screens: [],
+		templateSizingFileDimensions
 	};
 
 	try {
 		flowData.screens = getFiles(flowData.fullContentPath).sort(sortAlphaNum);
-		flowData.numberOfScreens = flowData.screens.length;
+		flowData.numberOfSteps = flowData.screens.length;
 	} catch(error) {
 		noFileError(error, flowData.name, flowData.fullContentPath);
 	}
@@ -232,10 +266,49 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 		getScreenData(flowData, fileName, fileIndex);
 	});
 
+
+	const thisMagickFlowHasTemplateSizingInfo = flowData.assets.includes('all__viewport-size.png');
+
+
+	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:245 ] thisMagickFlowHasTemplateSizingInfo: `, util.inspect(thisMagickFlowHasTemplateSizingInfo, { showHidden: true, depth: null, colors: true }));
+	if ( thisMagickFlowHasTemplateSizingInfo === true ) {
+
+		const pathToTemplateSizingFile = path.join(flowData.fullAssetsPath, 'all__viewport-size.png');
+		templateSizingFileDimensions = sizeOf(pathToTemplateSizingFile);
+		flowData.templateSizingFileDimensions = templateSizingFileDimensions;
+		console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:250 ] templateSizingFileDimensions: `, util.inspect(templateSizingFileDimensions, { showHidden: true, depth: null, colors: true }));
+	}
+
+	const thisMagickFlowMainImagesForScssVariables = flowData.screens.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+	const thisMagickFlowAssetsImagesForScssVariables = flowData.assets.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+	const thisMagickFlowBackgroundImageVariable = [];
+
+	// iterate through the main images, add url and path to it
+	thisMagickFlowMainImagesForScssVariables.forEach(function(item){
+		thisMagickFlowBackgroundImageVariable.push(`url('/magick-flows/${flowData.urlSlug}/main/${item}')`);
+	});
+	// iterate through the assets images, add url and path to it
+	thisMagickFlowAssetsImagesForScssVariables.forEach(function(item){
+		thisMagickFlowBackgroundImageVariable.push(`url('/magick-flows/${flowData.urlSlug}/assets/${item}')`);
+	});
+
+	const scssVariablesFilePath = path.join(flowData.fullAssetsPath, 'variables.scss');
+	dynamicSass(scssVariablesFilePath, {
+		'numberOfSlides': flowData.numberOfSteps,
+		'preloadImagesData': thisMagickFlowBackgroundImageVariable.join('\r\n\t\t'),
+		'heightOfSlideValue': templateSizingFileDimensions.height,
+		'widthOfSlideValue': templateSizingFileDimensions.width,
+		'widthOfGutterValue': templateSizingFileDimensions.width
+	}, dynamicSassHandleSuccess, dynamicSassHandleError);
+
+
 	configData.magickFlows[subFileOrDirectory] = flowData;
 	configData.magickFlows.urlSlugs.push(flowData.urlSlug);
 	configData.magickFlows.urlSlugsMapToFlowDirectories[flowData.urlSlug] = flowData.name;
 	configData.magickFlowDirectories.push(path.join(fileOrDirectoryPath, subFileOrDirectory));
+
+
+
 
 	return configData;
 }

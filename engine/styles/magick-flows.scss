@@ -250,6 +250,11 @@ footer.magick-flows-stickey-footer_container {
 	bottom: 0;
 }
 
+header.magick-flows-stickey-header_container {
+	position: absolute;
+	bottom: 0;
+}
+
 
 /**
  * @summary Hides an element from the page by setting the opacity property set to `0`
@@ -309,27 +314,26 @@ footer.magick-flows-stickey-footer_container {
 
 
 
+
 .magick-flows-click-hints {
 	position: absolute;
 	display: block;
-	width: 80vw;
-	left: 10vw;
 	border-radius: 0.65rem;
 	color: white;
 	text-align: center;
 	padding: 1rem;
 	vertical-align: middle;
 	font-size: 1rem;
-	text-shadow: 0px 2px 2px rgb(0, 0, 0);
+	text-shadow: 0px 2px 2px black;
 	transition: 125ms top ease-in-out;
 	background-color: rgba(0, 0, 0, 0.57);
-	height: 3rem;
-	top: -10rem;
+	top: -12rem;
 	will-change: top;
+	margin: 0.25rem;
 }
 
 .magick-flows-click-hints.slide-in {
-	top: 1.25rem;
+	top: 0rem;
 	transition: 125ms top ease-in-out;
 	will-change: top;
 }
