@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/analyze/main/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/assets/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/assets/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.png");
+  content: url("/magick-flows/analyze/main/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/assets/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/assets/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -160,7 +160,7 @@ body, .container {
   left: 0;
   position: absolute;
   top: 0;
-  transition: 400ms transform, 800ms left;
+  transition: 2000ms transform, 800ms left;
   width: 6400px;
 }
 
@@ -326,6 +326,11 @@ footer.magick-flows-stickey-footer_container {
   bottom: 0;
 }
 
+header.magick-flows-stickey-header_container {
+  position: absolute;
+  bottom: 0;
+}
+
 /**
  * @summary Hides an element from the page by setting the opacity property set to `0`
  *
@@ -374,8 +379,6 @@ footer.magick-flows-stickey-footer_container {
 .magick-flows-click-hints {
   position: absolute;
   display: block;
-  width: 80vw;
-  left: 10vw;
   border-radius: 0.65rem;
   color: white;
   text-align: center;
@@ -385,13 +388,13 @@ footer.magick-flows-stickey-footer_container {
   text-shadow: 0px 2px 2px black;
   transition: 125ms top ease-in-out;
   background-color: rgba(0, 0, 0, 0.57);
-  height: 3rem;
-  top: -10rem;
+  top: -12rem;
   will-change: top;
+  margin: 0.25rem;
 }
 
 .magick-flows-click-hints.slide-in {
-  top: 1.25rem;
+  top: 0rem;
   transition: 125ms top ease-in-out;
   will-change: top;
 }
