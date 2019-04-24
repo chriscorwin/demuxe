@@ -1,0 +1,52 @@
+{
+  "name": "demuxe",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "8.9.4"
+  },
+  "nodemonConfig": {
+    "ignore": ["test/*", "docs/*"],
+    "delay": "2500",
+    "events": {
+      "restart": "osascript -e 'display notification \"demuxe local restarted\" with title \"nodemon\"'"
+    }
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "start:local:debug": "DEBUG=true NODE_ENV=local node ./bin/www",
+    "start:local": "NODE_ENV=local node ./bin/www",
+    "start:dev": "DEBUG=true NODE_ENV=dev node ./bin/www",
+    "start:qa": "NODE_ENV=qa node ./bin/www",
+    "test": "NODE_ENV=local mocha",
+<<<<<<< HEAD
+    "livereload": "livereload . -w 200 --extraExts 'scss,ejs,png,svg,js' -d",
+    "test:update": "rm -rf test/screenshots/__different_snapshot__/ && NODE_ENV=local update=true mocha"
+=======
+    "livereload": "livereload . -w 200 --extraExts 'scss,ejs' -d",
+    "test:update": "rm -rf test/screenshots/__different_snapshot__/ && NODE_ENV=local update=true mocha",
+    "slides": "node ./slides/upload.js"
+>>>>>>> origin/master
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "https://github.com/cmcculloh/ejs.git",
+    "express": "~4.16.0",
+    "express-sanitizer": "^1.0.4",
+    "http-errors": "~1.6.2",
+    "image-size": "^0.6.3",
+    "livereload": "^0.7.0",
+    "morgan": "~1.9.0",
+    "node-sass-middleware": "^0.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "md2gslides": "^0.4.0",
+    "minimist": "^1.2.0",
+    "mocha": "^5.2.0",
+    "path": "^0.12.7",
+    "sf-differencify": "git+https://github.com/cormacmccarthy/sf-differencify.git"
+  }
+}

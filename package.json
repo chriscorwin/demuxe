@@ -12,7 +12,7 @@
     "start:dev": "DEBUG=true NODE_ENV=dev node ./bin/www",
     "start:qa": "NODE_ENV=qa node ./bin/www",
     "test": "NODE_ENV=local mocha",
-    "livereload": "livereload . -w 200 --extraExts 'scss,ejs' -d",
+    "livereload": "livereload . -w 200 --extraExts 'scss,ejs,png,svg,js' -d",
     "test:update": "rm -rf test/screenshots/__different_snapshot__/ && NODE_ENV=local update=true mocha",
     "slides": "node ./slides/upload.js"
   },

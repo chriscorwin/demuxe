@@ -23,39 +23,57 @@ _%>
 	const assetsContentPath = `${webRootPath}/assets/`;
 
 
+	/**
+	 * Conserve aspect ratio of the original region. Useful when shrinking/enlarging
+	 * images to fit into a certain area.
+	 *
+	 * @param {Number} srcWidth width of source image
+	 * @param {Number} srcHeight height of source image
+	 * @param {Number} maxWidth maximum available width
+	 * @param {Number} maxHeight maximum available height
+	 * @return {Object} { width, height }
+	 */
+	function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+
+		let ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+		let toReturn = { width: Math.floor((srcWidth * ratio) || 0), height: Math.floor((srcHeight * ratio) || 0) };
+		return toReturn;
+	 }
+
+
+	let maxWidth = thisMagickFlowConfig.templateSizingFileDimensions.width || 1280;
+	let maxHeight = thisMagickFlowConfig.templateSizingFileDimensions.height || 720;
+	
 
 	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
 
 
 		const mainContentWebRootUrl = `${mainContentPath}${node.fileName}`;
+		const clickHintsAssetWebRootUrl = `${assetsContentPath}${node.id}___click-hint.png`;
 		const showHeader = node.hasStickyHeader === true || false;
 		const showFooter = node.hasStickyFooter === true || false;
 		const nodeData = node.data;
+		const nodeNotes = node.notes;
 
 
-		let headerHeight = node.stickyHeaderHeight | 0;
-		let footerHeight = node.stickyFooterHeight | 0;
 
 		const headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
 		const footerWebRootUrl = `${assetsContentPath}${node.stickyFooterFileName}`;
 
-		// Calculate the height of our scrollable area - 20 magick number for padding ¯\_(ツ)_/¯
-		let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 20);
 
-			// mainContentScrollableAreaHeight = ((node.dimensions.height - (headerHeight + footerHeight)) + 20);
-		if (node.dimensions.height <= 812) {
-			// mainContentScrollableAreaHeight = ((node.dimensions.height - (headerHeight + footerHeight)) + 20);
-			mainContentScrollableAreaHeight = node.dimensions.height;
+
+		let srcWidthHeader = node.stickyHeaderWidth || 0;
+		let srcHeightHeader = node.stickyHeaderHeight || 0;
+		let srcWidthFooter = node.stickyFooterWidth || 0;
+		let srcHeightFooter = node.stickyFooterHeight || 0;
+		let renderSizeHeader = calculateAspectRatioFit(srcWidthHeader, srcHeightHeader, maxWidth, maxHeight);
+		let renderSizeFooter = calculateAspectRatioFit(srcWidthFooter, srcHeightFooter, maxWidth, maxHeight);
+		let renderSizeMainContent = calculateAspectRatioFit(node.dimensions.width, node.dimensions.height, maxWidth, node.dimensions.height);
+		let mainContentScrollableAreaHeight = ((maxHeight - (renderSizeHeader.height + renderSizeFooter.height)) + 0);
+
+		if (renderSizeMainContent.height < mainContentScrollableAreaHeight) {
+			mainContentScrollableAreaHeight = renderSizeMainContent.height;
 		}
-		// const mainContentScrollableAreaHeightMax = 812;
-		// const mainContentScrollableAreaHeightPossibilityOne = node.dimensions.height;
-
-
-
-
-		// let OMG_EFFING_PAD_SLIDES_2_AND_4 = 
-		// let mainContentScrollableAreaHeight = ((812 - (headerHeight + footerHeight)) + 0);
-
 
 		const isEjs = node.dimensions.type === 'ejs';
 		const isPng = node.dimensions.type === 'png';
@@ -64,7 +82,7 @@ _%>
 		const isGif = node.dimensions.type === 'gif';
 		const isJpeg = node.dimensions.type === 'jpg';
 		let thisMagickFlowsSlideClassnames = {
-			'magick-flows-slide': true
+			'magick-flows-step': true
 		};
 
 		preLoadImages += `<img
@@ -83,8 +101,8 @@ _%>
 			const iosNotificationWebRootUrl = `${assetsContentPath}${node.iosNotificationFileName}`;
 			iosNotificationHtmlOut = `
 				<div
-					id="ios-notification--slide-${node.screensIndex}"
-					class="ios-notification ios-notification--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="ios-notification--step-${node.screensIndex}"
+					class="ios-notification ios-notification--step-${node.screensIndex}  magick-flows-step-asset"
 				><img src="${iosNotificationWebRootUrl}" /></div>
 			`
 		}
@@ -98,8 +116,8 @@ _%>
 			const drawerFromTopWebRootUrl = `${assetsContentPath}${node.drawerFromTopFileName}`;
 			drawerFromTopHtmlOut = `
 				<div
-					id="drawer-from-top--slide-${node.screensIndex}"
-					class="drawer drawer-from-top drawer-from-top--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="drawer-from-top--step-${node.screensIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-top magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
 				><img src="${drawerFromTopWebRootUrl}" /></div>
 			`
 		}
@@ -112,8 +130,8 @@ _%>
 			const drawerFromLeftWebRootUrl = `${assetsContentPath}${node.drawerFromLeftFileName}`;
 			drawerFromLeftHtmlOut = `
 				<div
-					id="drawer-from-left--slide-${node.screensIndex}"
-					class="drawer drawer-from-left drawer-from-left--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="drawer-from-left--step-${node.screensIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-left magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
 				><img src="${drawerFromLeftWebRootUrl}" /></div>
 			`
 		}
@@ -125,8 +143,8 @@ _%>
 			const drawerFromBottomWebRootUrl = `${assetsContentPath}${node.drawerFromBottomFileName}`;
 			drawerFromBottomHtmlOut = `
 				<div
-					id="drawer-from-bottom--slide-${node.screensIndex}"
-					class="drawer drawer-from-bottom drawer-from-bottom--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="drawer-from-bottom--step-${node.screensIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-bottom magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
 				><img src="${drawerFromBottomWebRootUrl}" /></div>
 			`
 		}
@@ -138,9 +156,37 @@ _%>
 			const drawerFromRightWebRootUrl = `${assetsContentPath}${node.drawerFromRightFileName}`;
 			drawerFromRightHtmlOut = `
 				<div
-					id="drawer-from-right--slide-${node.screensIndex}"
-					class="drawer drawer-from-right drawer-from-right--slide-${node.screensIndex}  magick-flows-slide-asset"
+					id="drawer-from-right--step-${node.screensIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-right magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
 				><img src="${drawerFromRightWebRootUrl}" /></div>
+			`
+		}
+
+
+		let clickHintsHtmlOut = '';
+		let hasNotes = node.notes.length > 0 ? true : false;
+		if ( node.notes.length === 1 && node.notes[0] === 'unset' ) {
+			hasNotes = false;
+		}
+		if ( hasNotes === true ) {
+
+
+			clickHintsHtmlOut += `
+				<div
+					id="magick-flows-click-hints--step-${node.screensIndex}"
+					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.screensIndex} "
+				>
+			`
+
+			node.notes.forEach((note, noteIndex) => {
+				note = note.replace(/-/g, ' ');
+
+				clickHintsHtmlOut += `${note}. `
+			});
+
+
+			clickHintsHtmlOut += `
+				</div>
 			`
 		}
 
@@ -148,41 +194,30 @@ _%>
 _%>
 
 <div
-	class="slds-grid slds-grid_vertical magick-flows--slide-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
-	data-slide="<%=nodeIndex%>"
-	id="magick-flows--slide-<%=nodeIndex%>"
+	class="slds-grid slds-grid_vertical magick-flows--step-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	data-step="<%=nodeIndex%>"
+	id="magick-flows--step-<%=nodeIndex%>"
 >
 <%_ if (showHeader) { _%>
-	<header class="slds-col">
-		<div class="magick-flows-stickey-header_container">
-			<img
-				id="sticky-header--slide-<%=nodeIndex%>"
-				class="sticky-header "
-				src="<%=headerWebRootUrl%>"
-			/>
-		</div>
-	</header>
+	<header class="slds-colmagick-flows-stickey-header_container" style="background-image: url(<%=headerWebRootUrl%>); display: block; height: <%=renderSizeHeader.height%>px; width: <%=renderSizeHeader.width%>px; background-size: cover; background-color: transparent; z-index: 1;"></header>
 <%_ } _%>
 
 <%
 	
 		echo(`
 			<div
-				class="slds-col"
+				class="slds-col slds-scrollable"
+				style="height: ${mainContentScrollableAreaHeight}px; margin-bottom: ${renderSizeFooter.height}px;"
 			>
 		`);
 
 		if (isPng || isSvg || isGif || isJpeg) {
 			echo(`
 				<div
-					class="slds-scrollable"
-					style="height: ${mainContentScrollableAreaHeight}px; margin-bottom: ${footerHeight}px;"
+					class="screenshot auto-replace is-image "
+					style="height: ${renderSizeMainContent.height}px; width: ${renderSizeMainContent.width}px; background-size: cover; background-image: url(${mainContentWebRootUrl}); display: block;"
+					id="screenshot--step-${nodeIndex}"
 				>
-					<img
-						class="screenshot auto-replace is-image "
-						id="screenshot--slide-${nodeIndex}"
-						src="${mainContentWebRootUrl}"
-					>
 				</div>
 			`);
 		} else if (isEjs) {
@@ -200,12 +235,12 @@ _%>
 				<video
 					autoplay
 					class="auto-replace is-video "
-					id="screenshot-wrapper--slide-${nodeIndex}"
+					id="screenshot-wrapper--step-${nodeIndex}"
 					playsinline
 				>
 					<source
 						class="screenshot auto-replace "
-						id="screenshot--slide-${nodeIndex}"
+						id="screenshot--step-${nodeIndex}"
 						src="${mainContentWebRootUrl}"
 						type="video/mp4"
 					>
@@ -219,13 +254,16 @@ _%>
 		echo(`</div>`)
 	
 
+
 %>
+
+
 
 
 <%_ if (showFooter) { _%>
 	<footer class="magick-flows-stickey-footer_container slds-col">
 		<img
-			id="sticky-footer--slide-<%=nodeIndex%>"
+			id="sticky-footer--step-<%=nodeIndex%>"
 			class="sticky-footer "
 			src="<%=footerWebRootUrl%>"
 		/>
@@ -236,6 +274,8 @@ _%>
 	<%- drawerFromBottomHtmlOut %>
 	<%- drawerFromLeftHtmlOut %>
 	<%- iosNotificationHtmlOut %>
+
+	<%- clickHintsHtmlOut %>
 
 </div>
 

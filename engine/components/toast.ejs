@@ -43,23 +43,23 @@ const toastId = locals.id || locals.theme+'Toast';
 
 <% if ( locals.triggerImmediately ) { %>
 <script>
-	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the
+	var toastId = '<%= toastId %>';
+	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the 
 	// flow, which we need to do in order to keep global nav dropdowns working.
-	let toastElement =  document.getElementById('<%= toastId %>');
-	if (typeof(toastElement) != 'undefined' && toastElement != null) {
+	if (typeof(document.getElementById(toastId)) != 'undefined' && document.getElementById(toastId) != null) {
 		window.setTimeout(() => {
-			document.querySelector('#<%= toastId %>').classList.add('slds-transition-hide');
-			document.querySelector('#<%= toastId %>').classList.remove('slds-hide');
+			document.querySelector(`#${toastId}`).classList.add('slds-transition-hide');
+			document.querySelector(`#${toastId}`).classList.remove('slds-hide');
 		}, 1);
 		window.setTimeout(() => {
-			document.querySelector('#<%= toastId %>').classList.add('slds-transition-show');
+			document.querySelector(`#${toastId}`).classList.add('slds-transition-show');
 		}, 100);
 		window.setTimeout(() => {
-			document.querySelector('#<%= toastId %>').classList.remove('slds-transition-show');
+			document.querySelector(`#${toastId}`).classList.remove('slds-transition-show');
 		}, 4100);
 		window.setTimeout(() => {
-			document.querySelector('#<%= toastId %>').classList.remove('slds-transition-hide');
-			document.querySelector('#<%= toastId %>').classList.add('slds-hide');
+			document.querySelector(`#${toastId}`).classList.remove('slds-transition-hide');
+			document.querySelector(`#${toastId}`).classList.add('slds-hide');
 		}, 4200);
 	}
 </script>
