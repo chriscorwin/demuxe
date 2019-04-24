@@ -160,8 +160,8 @@ body, .container {
   left: 0;
   position: absolute;
   top: 0;
-  transition: 400ms transform, 800ms left;
-  width: 29280px;
+  transition: 2000ms transform, 800ms left;
+  width: 52480px;
 }
 
 .app-switcher-one.shrink {
@@ -190,7 +190,7 @@ body, .container {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: -1100px;
+  left: 640px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -226,13 +226,13 @@ body.debug div#drawer-from-top--step-0::before {
 }
 
 .app-switcher-one.be-left-1 {
-  left: -1400px;
+  left: -2560px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -1400px;
+  left: -2560px;
 }
 
 body.debug div#drawer-from-top--step-1::before {
@@ -254,17 +254,17 @@ body.debug div#drawer-from-top--step-1::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 1400px;
+  left: 2560px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -2800px;
+  left: -5120px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -2800px;
+  left: -5120px;
 }
 
 body.debug div#drawer-from-top--step-2::before {
@@ -286,17 +286,17 @@ body.debug div#drawer-from-top--step-2::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 2800px;
+  left: 5120px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -4200px;
+  left: -7680px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -4200px;
+  left: -7680px;
 }
 
 body.debug div#drawer-from-top--step-3::before {
@@ -318,17 +318,17 @@ body.debug div#drawer-from-top--step-3::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 4200px;
+  left: 7680px;
 }
 
 .app-switcher-one.be-left-4 {
-  left: -5600px;
+  left: -10240px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-4 {
-  left: -5600px;
+  left: -10240px;
 }
 
 body.debug div#drawer-from-top--step-4::before {
@@ -350,17 +350,17 @@ body.debug div#drawer-from-top--step-4::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 5600px;
+  left: 10240px;
 }
 
 .app-switcher-one.be-left-5 {
-  left: -7000px;
+  left: -12800px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-5 {
-  left: -7000px;
+  left: -12800px;
 }
 
 body.debug div#drawer-from-top--step-5::before {
@@ -382,17 +382,17 @@ body.debug div#drawer-from-top--step-5::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 7000px;
+  left: 12800px;
 }
 
 .app-switcher-one.be-left-6 {
-  left: -8400px;
+  left: -15360px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-6 {
-  left: -8400px;
+  left: -15360px;
 }
 
 body.debug div#drawer-from-top--step-6::before {
@@ -414,17 +414,17 @@ body.debug div#drawer-from-top--step-6::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 8400px;
+  left: 15360px;
 }
 
 .app-switcher-one.be-left-7 {
-  left: -9800px;
+  left: -17920px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-7 {
-  left: -9800px;
+  left: -17920px;
 }
 
 body.debug div#drawer-from-top--step-7::before {
@@ -446,17 +446,17 @@ body.debug div#drawer-from-top--step-7::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 9800px;
+  left: 17920px;
 }
 
 .app-switcher-one.be-left-8 {
-  left: -11200px;
+  left: -20480px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-8 {
-  left: -11200px;
+  left: -20480px;
 }
 
 body.debug div#drawer-from-top--step-8::before {
@@ -478,17 +478,17 @@ body.debug div#drawer-from-top--step-8::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 11200px;
+  left: 20480px;
 }
 
 .app-switcher-one.be-left-9 {
-  left: -12600px;
+  left: -23040px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-9 {
-  left: -12600px;
+  left: -23040px;
 }
 
 body.debug div#drawer-from-top--step-9::before {
@@ -510,17 +510,17 @@ body.debug div#drawer-from-top--step-9::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 12600px;
+  left: 23040px;
 }
 
 .app-switcher-one.be-left-10 {
-  left: -14000px;
+  left: -25600px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-10 {
-  left: -14000px;
+  left: -25600px;
 }
 
 body.debug div#drawer-from-top--step-10::before {
@@ -542,17 +542,17 @@ body.debug div#drawer-from-top--step-10::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 14000px;
+  left: 25600px;
 }
 
 .app-switcher-one.be-left-11 {
-  left: -15400px;
+  left: -28160px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-11 {
-  left: -15400px;
+  left: -28160px;
 }
 
 body.debug div#drawer-from-top--step-11::before {
@@ -574,17 +574,17 @@ body.debug div#drawer-from-top--step-11::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 15400px;
+  left: 28160px;
 }
 
 .app-switcher-one.be-left-12 {
-  left: -16800px;
+  left: -30720px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-12 {
-  left: -16800px;
+  left: -30720px;
 }
 
 body.debug div#drawer-from-top--step-12::before {
@@ -606,17 +606,17 @@ body.debug div#drawer-from-top--step-12::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 16800px;
+  left: 30720px;
 }
 
 .app-switcher-one.be-left-13 {
-  left: -18200px;
+  left: -33280px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-13 {
-  left: -18200px;
+  left: -33280px;
 }
 
 body.debug div#drawer-from-top--step-13::before {
@@ -638,17 +638,17 @@ body.debug div#drawer-from-top--step-13::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 18200px;
+  left: 33280px;
 }
 
 .app-switcher-one.be-left-14 {
-  left: -19600px;
+  left: -35840px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-14 {
-  left: -19600px;
+  left: -35840px;
 }
 
 body.debug div#drawer-from-top--step-14::before {
@@ -670,17 +670,17 @@ body.debug div#drawer-from-top--step-14::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 19600px;
+  left: 35840px;
 }
 
 .app-switcher-one.be-left-15 {
-  left: -21000px;
+  left: -38400px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-15 {
-  left: -21000px;
+  left: -38400px;
 }
 
 body.debug div#drawer-from-top--step-15::before {
@@ -702,17 +702,17 @@ body.debug div#drawer-from-top--step-15::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 21000px;
+  left: 38400px;
 }
 
 .app-switcher-one.be-left-16 {
-  left: -22400px;
+  left: -40960px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-16 {
-  left: -22400px;
+  left: -40960px;
 }
 
 body.debug div#drawer-from-top--step-16::before {
@@ -734,17 +734,17 @@ body.debug div#drawer-from-top--step-16::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 22400px;
+  left: 40960px;
 }
 
 .app-switcher-one.be-left-17 {
-  left: -23800px;
+  left: -43520px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-17 {
-  left: -23800px;
+  left: -43520px;
 }
 
 body.debug div#drawer-from-top--step-17::before {
@@ -766,17 +766,17 @@ body.debug div#drawer-from-top--step-17::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 23800px;
+  left: 43520px;
 }
 
 .app-switcher-one.be-left-18 {
-  left: -25200px;
+  left: -46080px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-18 {
-  left: -25200px;
+  left: -46080px;
 }
 
 body.debug div#drawer-from-top--step-18::before {
@@ -798,17 +798,17 @@ body.debug div#drawer-from-top--step-18::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 25200px;
+  left: 46080px;
 }
 
 .app-switcher-one.be-left-19 {
-  left: -26600px;
+  left: -48640px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-19 {
-  left: -26600px;
+  left: -48640px;
 }
 
 body.debug div#drawer-from-top--step-19::before {
@@ -830,17 +830,17 @@ body.debug div#drawer-from-top--step-19::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 26600px;
+  left: 48640px;
 }
 
 .app-switcher-one.be-left-20 {
-  left: -28000px;
+  left: -51200px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-20 {
-  left: -28000px;
+  left: -51200px;
 }
 
 body.debug div#drawer-from-top--step-20::before {
@@ -862,17 +862,17 @@ body.debug div#drawer-from-top--step-20::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 28000px;
+  left: 51200px;
 }
 
 .app-switcher-one.be-left-21 {
-  left: -29400px;
+  left: -53760px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-21 {
-  left: -29400px;
+  left: -53760px;
 }
 
 body.debug div#drawer-from-top--step-21::before {
@@ -894,10 +894,15 @@ body.debug div#drawer-from-top--step-21::before {
   position: absolute;
   top: 0;
   width: 1280px;
-  left: 29400px;
+  left: 53760px;
 }
 
 footer.magick-flows-stickey-footer_container {
+  position: absolute;
+  bottom: 0;
+}
+
+header.magick-flows-stickey-header_container {
   position: absolute;
   bottom: 0;
 }
@@ -945,6 +950,29 @@ footer.magick-flows-stickey-footer_container {
   box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
   transition: transform 500ms, opacity 600ms, left 125ms !important;
   opacity: 1;
+}
+
+.magick-flows-click-hints {
+  position: absolute;
+  display: block;
+  border-radius: 0.65rem;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  vertical-align: middle;
+  font-size: 1rem;
+  text-shadow: 0px 2px 2px black;
+  transition: 125ms top ease-in-out;
+  background-color: rgba(0, 0, 0, 0.57);
+  top: -12rem;
+  will-change: top;
+  margin: 0.25rem;
+}
+
+.magick-flows-click-hints.slide-in {
+  top: 0rem;
+  transition: 125ms top ease-in-out;
+  will-change: top;
 }
 
 html {
