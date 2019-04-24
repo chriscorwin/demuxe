@@ -1,0 +1,49 @@
+/engine/includes/components-showcase-panel.ejs
+
+<section>
+	<%
+		const verticalNavData = {
+			width: '320px',
+			sections: [
+				{
+					title: 'Reports',
+					id: 'entity-header',
+					links: [
+						{
+							text: 'Recent',
+							isActive: true
+						},
+						{
+							text: 'Created by Me'
+						},
+						{
+							text: 'Private Reports'
+						},
+						{
+							text: 'Public Reports'
+						},
+						{
+							text: 'All Reports'
+						},
+					]
+				},
+				{
+					title: 'Folders',
+					id: 'folder-header',
+					links: [
+						{
+							text: 'Created by Me'
+						},
+						{
+							text: 'Shared with Me'
+						},
+						{
+							text: 'All Reports'
+						}
+					]
+				}
+			]
+		}
+	%>
+	<%- include('components/vertical-nav', verticalNavData) %>
+</section>

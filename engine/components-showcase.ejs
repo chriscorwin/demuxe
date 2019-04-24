@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<title>
+				Components Showcase
+		</title>
+		<link rel='stylesheet' href='/styles/salesforce-lightning-design-system.min.css' />
+
+
+		<% if (locals) { %>
+				<script>
+			<% try { JSON.stringify(locals) %>
+					const clientSideLocals = <%- JSON.stringify(locals) %>;
+					console.group('Locals');
+					console.dir(<%- JSON.stringify(locals) %>);
+					console.groupEnd();
+			<% } catch (e) { %>
+					const clientSideLocals = {};
+					console.log('ERROR STRINGIFYING LOCALS');
+					console.log('<%= e %>');
+			<% } %>
+				</script>
+		<% } else { %>
+			<script>
+				const clientSideLocals = {};
+				console.log('No locals provided, for some reason...');
+			</script>
+		<% } %>
+</head>
+
+<body <%= locals.sanitizedQueryParams.debug==='true' ? 'class=has-debug' : '' %>>
+<section>
+	<%
+		const builderHeaderData = {
+			appTitle: 'App Name',
+			backAction: `console.log('clicked back');`,
+			controls: [
+				{
+					type: 'link',
+					href: 'javascript:void(0);',
+					clickAction: '',
+					icon: '/icons/utility-sprite/svg/symbols.svg#settings',
+					text: 'Link'
+				},
+				{
+					type: 'dropdown',
+					icon: '/icons/utility-sprite/svg/symbols.svg#page',
+					text: 'Dropdown'
+				}
+			],
+			toolbarControls: [
+				{
+					type: 'button-group',
+					label: 'Canvas Actions',
+					items: [
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#undo',
+							title: 'Undo'
+						},
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#redo',
+							title: 'Redo'
+						}
+					]
+				},
+				{
+					type: 'button-group',
+					label: 'Edit Actions',
+					items: [
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#cut',
+							title: 'Cut'
+						},
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#copy',
+							title: 'Copy'
+						},
+						{
+							iconPath: '/icons/utility-sprite/svg/symbols.svg#paste',
+							title: 'Paste'
+						}
+					]
+				}
+			],
+			toolbarActions: [
+				{
+					type: 'button',
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#right',
+					text: 'Run'
+				},
+				{
+					type: 'button',
+					text: 'Save As'
+				},
+				{
+					type: 'button',
+					text: 'Save',
+					variant: 'brand'
+				}
+			],
+			logo: '/icons/utility-sprite/svg/symbols.svg#builder',
+			pageTitle: 'Page Type'
+		};
+	%>
+	<%- include('components/builder-header', builderHeaderData) %>
+</section>
+
+<%- include( 'components/panel',
+	{
+		headerText: 'Panel Header',
+		pageContents: 'includes/components-showcase-contents',
+		panelContents: 'includes/components-showcase-panel'
+	})
+%>
+
+
+</body>
+
+</html>

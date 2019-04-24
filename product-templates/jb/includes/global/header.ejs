@@ -140,27 +140,24 @@
 				<div class="slds-page-header__controls">
 					<div class="slds-page-header__control">
 						<% localization.states[locals.state].controls.forEach((control) => {
-								switch(control.type) {
-									case 'button-group': %>
-									<div class="slds-button-group" role="group">
-									<% control.items.forEach((data) => {
-										echo(include('components/button', data))
-									}) %>
+							switch(control.type) {
+								case 'button-group': %>
+								<div class="slds-button-group" role="group">
+									<% control.items.forEach(data => echo(include('components/button', data))) %>
+								</div>
+								<% break;
+								case 'combobox': %>
+									<div class="slds-button">
+										<%- include('components/combobox', control) %>
 									</div>
-									<% break;
-									case 'combobox': %>
-										<div class="slds-button">
-											<%- include('components/combobox', control) %>
-										</div>
-									<% break;
-									case 'button':
-										if (control.hasOverflow) {%><div class="slds-button"><% }
-											echo(include('components/button', control))
-										if (control.hasOverflow) {%></div><% }
-									break;
-								}
-							});
-						%>
+								<% break;
+								case 'button':
+									if (control.hasOverflow) { %><div class="slds-button"><% }
+										echo(include('components/button', control))
+									if (control.hasOverflow) { %></div><% }
+								break;
+							}
+						}); %>
 					</div>
 				</div>
 			</div>

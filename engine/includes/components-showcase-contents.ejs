@@ -1,0 +1,181 @@
+<section>
+	<%
+		const undoRedo = {
+			type: 'button-group',
+			items: [
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#undo',
+					title: 'Undo'
+				},
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#redo',
+					title: 'Redo'
+				}
+			]
+		};
+
+		const version1ComboBox = {
+			type: 'combobox',
+			versionName: "Version 1",
+			versions: [
+				{
+					id: 'a',
+					name: 'version a',
+					icon: '/icons/utility-sprite/svg/symbols.svg#down'
+				}
+			]
+		};
+
+		const editCopy = {
+			type: 'button-group',
+			items: [
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#edit',
+					title: 'Edit',
+					isSelected: true
+				},
+				{
+					iconPath: '/icons/symbols.svg#copy-diamond',
+					imgStyle: 'padding: 6px 4px 0px 0; height: 26px;',
+					title: 'Copy'
+				}
+			]
+		};
+
+		const uploadTrophy = {
+			type: 'button-group',
+			items: [
+				{
+					iconPath: '/icons/symbols.svg#upload-right',
+					title: 'Share'
+				},
+				{
+					iconPath: '/icons/symbols.svg#trophy',
+					title: 'Win'
+				}
+			]
+		}
+
+		const settingsButton = {
+			type: 'button',
+			iconPath: '/icons/utility-sprite/svg/symbols.svg#settings',
+			hasOverflow: true
+		};
+
+		const saveValidateTest = {
+			type: 'button-group',
+			items: [
+				{
+					text: 'Save'
+				},
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#down',
+					title: 'More'
+				},
+				{
+					text: 'Validate'
+				},
+				{
+					text: 'Test'
+				}
+			]
+		};
+
+		const activateButton = {
+			type: 'button',
+			text: 'Activate',
+			variant: 'brand'
+		};
+
+		const controls = [
+			undoRedo,
+			version1ComboBox,
+			editCopy,
+			uploadTrophy,
+			settingsButton,
+			saveValidateTest,
+			activateButton
+		];
+
+		const pageHeaderData = {
+			controls,
+			details: [
+				{
+					title: 'Field 1',
+					description: 'Description that demonstrates truncation with a long text field.'
+				},
+				{
+					title: `Field 2 (3)
+						<div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+							<button class="slds-button slds-button_icon slds-button_icon" aria-haspopup="true" title="More Actions">
+								<svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#down" />
+								</svg>
+								<span class="slds-assistive-text">More Actions</span>
+							</button>
+						</div>`,
+					titleAssistive: 'Field 2 (3)',
+					description: 'Multiple Values'
+				},
+				{
+					title: 'Field 3',
+					description: '<a href="javascript:void(0);">Hyperlink</a>'
+				},
+				{
+					title: 'Field 4',
+					description: 'Description (2-line truncati...',
+					descriptionAssistive: 'Description (2-line truncation—must use JS to truncate).'
+				}
+			],
+			subTitle: 'Opportunity',
+			svgIcon: '/icons/standard-sprite/svg/symbols.svg#opportunity',
+			title: 'Acme - 1,200 Widgets'
+		}
+	%>
+	<%- include('components/page-header', pageHeaderData) %>
+</section>
+
+<section>
+	/engine/includes/components-showcase-contents.ejs
+</section>
+
+<section>
+	<%
+		const buttonData = {
+			iconOnRight: false, // whether the button icon shows to the right or left of the button text
+			iconPath: '/icons/utility-sprite/svg/symbols.svg#settings', // path to SVG icon. Takes precedence over imgPath
+			id: '', // an html ID for the button
+			imgPath: '', // path to img asset
+			isDisabled: false, // whether the button appears disabled
+			isSelected: false, // whether the button appears selected
+			onClick: '', // code for the `onclick=""` DOM attribute for `<button />`
+			imgStyle: '', // used for the img tag if `imgPath` passed, or svg tag if iconPath passed
+			text: 'Button Text', // text to appear on the button. If not present, button will assume that it is an icon button
+			title: 'Assistive Text', // assistive button text
+			variant: 'neutral', // any of the button variations listed here: https://latest-220.lightningdesignsystem.com/components/buttons/
+		};
+	%>
+	<%- include('components/button', buttonData) %>
+</section>
+
+<section>
+	<%
+		const comboboxData = {
+			isDisabled: false, // whether the button appears disabled
+			versionName: 'Placeholder', // placeholder text for combobox
+			versions: [
+				{
+					iconPath: '', // svg icon path for option
+					id: '', // id for listbox item div
+					name: 'test 1' // displayed text for option
+				},
+				{
+					iconPath: '/icons/utility-sprite/svg/symbols.svg#settings', // svg icon path for option
+					id: '', // id for listbox item div
+					name: 'test 2' // displayed text for option
+				}
+			]
+		}
+	%>
+	<%- include('components/combobox', comboboxData) %>
+</section>

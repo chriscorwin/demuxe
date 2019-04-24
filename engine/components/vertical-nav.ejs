@@ -1,0 +1,76 @@
+<%
+
+/*
+	This file, when included, will create an slds vertical nav in-place.
+
+	const verticalNavData = {
+		width: '320px',
+		sections: [
+			{
+				title: 'Reports',
+				id: 'entity-header',
+				links: [
+					{
+						text: 'Recent',
+						isActive: true
+					},
+					{
+						text: 'Created by Me'
+					},
+					{
+						text: 'Private Reports'
+					},
+					{
+						text: 'Public Reports'
+					},
+					{
+						text: 'All Reports'
+					},
+				]
+			},
+			{
+				title: 'Folders',
+				id: 'folder-header',
+				links: [
+					{
+						text: 'Created by Me'
+					},
+					{
+						text: 'Shared with Me'
+					},
+					{
+						text: 'All Reports'
+					}
+				]
+			}
+		]
+	}
+
+	include('components/vertical-nav', verticalNavData)
+
+*/
+
+
+
+	const width = locals.width || '320px';
+%>
+
+<div style="width: <%= width %>;">
+	<nav class="slds-nav-vertical" aria-label="Sub page">
+		<% locals.sections && locals.sections.forEach((section, i) => { %>
+			<div class="slds-nav-vertical__section">
+				<h2 id="<%= section.id ? section.id : `verticalNavSection${i}` %>" class="slds-nav-vertical__title"><%= section.title %></h2>
+				<ul aria-describedby="<%= section.id ? section.id : `verticalNavSection${i}` %>">
+					<% section.links && section.links.forEach((link) => { %>
+						<li class="slds-nav-vertical__item <%= link.isActive ? 'slds-is-active' : '' %>">
+							<a
+								onclick="<%- link.onclick ? link.onclick : '' %>"
+								href="<%= link.href ? link.href : 'javascript:void(0);' %>"
+								class="slds-nav-vertical__action" <%= link.isActive ? 'aria-current="page"' : '' %>><%= link.text %></a>
+						</li>
+					<% }); %>
+				</ul>
+			</div>
+		<% }); %>
+	</nav>
+</div>
