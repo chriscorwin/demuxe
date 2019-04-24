@@ -158,9 +158,7 @@
 					<% switch(control.type) {
 						case 'button-group': %>
 						<div class="slds-button-group">
-						<% control.items.forEach((data) => { %>
-							<%- include('components/button', data) %>
-						<% }) %>
+							<% control.items.forEach(data => echo(include('components/button', data))); %>
 						</div>
 						<% break;
 						case 'combobox': %>
@@ -168,22 +166,20 @@
 								<%- include('components/combobox', control) %>
 							</div>
 						<% break;
-						case 'button': %>
-							<% if (control.hasOverflow) {%><div class="slds-button"><% } %>
-								<%- include('components/button', control) %>
-							<% if (control.hasOverflow) {%></div><% } %>
-						<% break;
+						case 'button':
+							if (control.hasOverflow) {%><div class="slds-button"><% }
+								echo(include('components/button', control));
+							if (control.hasOverflow) {%></div><% }
+						break;
 					} %>
 				</div>
 			<% }); %>
 			<div class="slds-builder-toolbar__actions" aria-label="Document actions">
-				<% toolbarActions.forEach((control) => { %>
-					<% switch(control.type) {
+				<% toolbarActions.forEach((control) => {
+					switch(control.type) {
 						case 'button-group': %>
 						<div class="slds-button-group">
-						<% control.items.forEach((data) => { %>
-							<%- include('components/button', data) %>
-						<% }) %>
+							<% control.items.forEach(data => echo(include('components/button', data))) %>
 						</div>
 						<% break;
 						case 'combobox': %>
@@ -191,13 +187,13 @@
 								<%- include('components/combobox', control) %>
 							</div>
 						<% break;
-						case 'button': %>
-							<% if (control.hasOverflow) {%><button class="slds-button"><% } %>
-								<%- include('components/button', control) %>
-							<% if (control.hasOverflow) {%></button><% } %>
-						<% break;
-					} %>
-				<% }); %>
+						case 'button':
+							if (control.hasOverflow) {%><button class="slds-button"><% }
+								echo(include('components/button', control))
+							if (control.hasOverflow) {%></button><% }
+						break;
+					}
+				}); %>
 			</div>
 		</div>
 	</div>

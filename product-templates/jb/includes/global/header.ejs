@@ -143,9 +143,7 @@
 								switch(control.type) {
 									case 'button-group': %>
 									<div class="slds-button-group" role="group">
-									<% control.items.forEach((data) => {
-										echo(include('components/button', data))
-									}) %>
+										<% control.items.forEach(data => echo(include('components/button', data))) %>
 									</div>
 									<% break;
 									case 'combobox': %>
