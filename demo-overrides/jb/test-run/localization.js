@@ -43,7 +43,7 @@ const editCopy = {
 		},
 		{
 			iconPath: '/icons/symbols.svg#copy-diamond',
-			style: 'padding: 6px 4px 0px 0; height: 26px;',
+			imgStyle: 'padding: 6px 4px 0px 0; height: 26px;',
 			title: 'Copy'
 		}
 	]

@@ -12,6 +12,5 @@ module.exports = {
 	einstein_segmentation,
 	manage_segments,
 	NAME: 'NTO',
-	overview,
-	segments	
+	segments
 };

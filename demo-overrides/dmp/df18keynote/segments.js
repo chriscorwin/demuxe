@@ -114,15 +114,38 @@ const lookalikes = {
 	}
 };
 
+const controls = [
+	{
+		type: 'button',
+		text: 'New Segment',
+		variant: 'brand',
+		iconPath: '/icons/utility-sprite/svg/symbols.svg#add',
+		onClick: `navigatePage('/segments/manage-segments/rules')`,
+		id: 'new-segment'
+	},
+	{
+		type: 'button',
+		iconPath: '/icons/utility-sprite/svg/symbols.svg#download',
+		title: 'Download'
+	},
+	{
+		type: 'button',
+		iconPath: '/icons/utility-sprite/svg/symbols.svg#multi_select_checkbox',
+		title: 'Check'
+	}
+];
+
 module.exports = {
 	states: {
 		initial: {
 			segments: [...baseSegments],
-			lookalikes
+			lookalikes,
+			controls
 		},
 		addHighValue: {
 			segments: [...highValueLookalikeSegment, ...baseSegments],
-			lookalikes
+			lookalikes,
+			controls
 		}
 	}
 };

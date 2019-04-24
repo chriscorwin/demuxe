@@ -1,14 +1,13 @@
-<%- 
+<%-
 	include(
-		'wrapper.ejs', 
-		{ 
-			title: 'Overview', 
-			headerVariant: 'default', 
-			subHeaderVariant: 'hasButton', 
-			subHeaderButtonLabel: 'Customize', 
-			siteSection: 'index', 
-			pageContents: 'includes/index-contents',
-			pageStylesheets: ['index.brand.css']
+		'wrapper.ejs',
+		{
+			title:'Manage Segments',
+			headerVariant:'default',
+			siteSection: 'segments',
+			pageStylesheets: ['segments.manage-segments.css'],
+			pageContents: 'includes/segments/manage-segments-contents',
+			breadcrumbs: ['Segments']
 		}
-	) 
+	)
 %>

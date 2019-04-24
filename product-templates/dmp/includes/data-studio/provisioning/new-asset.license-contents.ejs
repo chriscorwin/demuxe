@@ -1,0 +1,142 @@
+<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-container_large">
+	<div class="slds-col slds-p-horizontal_medium slds-m-bottom_medium slds-size_1-of-1">
+		<img class="slds-panel-box" src="/images/slices/201.data-studio.new-asset.wizard-step-2.svg" />
+	</div>
+	<div class="slds-col slds-p-horizontal_medium slds-size_3-of-4">
+		<div class="slds-panel-box">
+			<div class="slds-panel-box__body">
+				<div id="details-contents" class="slds-grid slds-gutters_x-small slds-grid_align-spread slds-wrap slds-p-horizontal_medium slds-p-bottom_small">
+					<div class="slds-col slds-p-vertical_xx-small slds-size_1-of-1 slds-m-top_x-small slds-text-heading_medium">Provisioning Rules</div>
+					<div class="slds-col slds-p-vertical_xx-small slds-size_1-of-1 slds-m-top_x-small">Set of rules that govern the usage of assets.</div>
+					<div class="slds-panel-box slds-col slds-size_1-of-1 slds-m-top_x-small slds-p-around_none">
+						<div class="slds-panel-box__header slds-p-around_small">DMP Private <img src="/images/icons/down.dark-blue.svg" style="height: 6px;float: none;"/></div>
+						<div class="slds-panel-box__body">
+							<div class="slds-grid slds-gutters_x-small slds-grid_align-spread slds-wrap slds-p-horizontal_medium slds-p-bottom_large">
+								<div class="slds-col slds-p-vertical_xx-small slds-p-horizontal_small slds-size_1-of-3 segment-box slds-m-top_medium">
+									<div class="segment-box_label slds-p-vertical_xxx-small">Buyer</div>
+									<div class="segment-box_contents" style="font-size: 12px;">Northern Trail Outfitters - Apparel <img class="bottom-left" src="/images/icons/down.dark-blue.svg" height="6"/></div>
+								</div>
+								<div class="slds-col slds-p-vertical_xx-small slds-p-horizontal_small slds-size_1-of-3 segment-box slds-m-top_medium">
+									<div class="segment-box_label slds-p-vertical_xxx-small">Price</div>
+									<div class="segment-box_contents">$0.00</div>
+								</div>
+								<div class="slds-col slds-p-vertical_medium slds-size_1-of-3 slds-m-top_medium">
+									<span class="slds-radio">
+										<input type="radio" id="radio-7" value="radio-7" name="options" checked />
+										<label class="slds-radio__label" for="radio-7">
+											<span class="slds-radio_faux"></span>
+											<span class="slds-form-element__label">CPM</span>
+										</label>
+									</span>
+									<span class="slds-radio">
+										<input type="radio" id="radio-8" value="radio-8" name="options" />
+										<label class="slds-radio__label" for="radio-8">
+											<span class="slds-radio_faux"></span>
+											<span class="slds-form-element__label">Subscription</span>
+										</label>
+									</span>
+								</div>
+								<div class="slds-col slds-p-vertical_xx-small slds-p-horizontal_small slds-size_1-of-3 segment-box slds-m-top_medium">
+									<div class="segment-box_label slds-p-vertical_xxx-small"><img src="/images/icons/calendar.svg" style="margin-top: -3px;"/> Date Range</div>
+									<div class="segment-box_contents"><%- locals.localization.new_asset.license.date_range %></div>
+								</div>
+								<div id="approved-usages-dropdown-trigger" class="slds-col slds-p-vertical_xx-small slds-p-horizontal_small slds-size_1-of-3 segment-box slds-m-top_medium">
+									<div class="segment-box_label slds-p-vertical_xxx-small">Approved Usages</div>
+									<div class="segment-box_contents"><span id="numSelected">No features selected</span> <img class="bottom-left" src="/images/icons/down.dark-blue.svg" height="6"/></div>
+									<div id="approved-usages-dropdown" class="slds-panel-box__header-dropdown slds-dropdown slds-dropdown_left slds-dropdown_small slds-hide">
+										<ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+											<li class="slds-dropdown__item">
+												<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left slds-m-vertical_x-small slds-m-horizontal_small">
+													<svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#search"></use>
+													</svg>
+													<input type="text" id="text-input-id-1" class="slds-input" placeholder="Find Features">
+												</div>
+											</li>
+											<li class="slds-dropdown__item" role="presentation">
+												<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+													<span class="slds-checkbox">
+														<input type="checkbox" name="options" id="activation" value="activation" />
+														<label class="slds-checkbox__label" for="activation">
+															<span class="slds-checkbox_faux"></span>
+															<span class="slds-form-element__label">Activation</span>
+														</label>
+													</span>
+												</a>
+											</li>
+											<li class="slds-dropdown__item" role="presentation">
+												<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+													<span class="slds-checkbox">
+														<input type="checkbox" name="options" id="data-feeds" value="data-feeds" />
+														<label class="slds-checkbox__label" for="data-feeds">
+															<span class="slds-checkbox_faux"></span>
+															<span class="slds-form-element__label">Data Feeds</span>
+														</label>
+													</span>
+												</a>
+											</li>
+											<li class="slds-dropdown__item" role="presentation">
+												<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+													<span class="slds-checkbox">
+														<input type="checkbox" name="options" id="insights" value="insights" />
+														<label class="slds-checkbox__label" for="insights">
+															<span class="slds-checkbox_faux"></span>
+															<span class="slds-form-element__label">Insights</span>
+														</label>
+													</span>
+												</a>
+											</li>
+											<li class="slds-dropdown__item" role="presentation">
+												<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+													<span class="slds-checkbox">
+														<input type="checkbox" name="options" id="lookalike-features" value="lookalike-features" />
+														<label class="slds-checkbox__label" for="lookalike-features">
+															<span class="slds-checkbox_faux"></span>
+															<span class="slds-form-element__label">Lookalikes Features</span>
+														</label>
+													</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="slds-col slds-p-vertical_medium slds-size_1-of-3 slds-m-top_medium"></div>
+								<div class="slds-col slds-size_1-of-1 slds-m-top_medium"><a href="javascript:void(0);">Blocklist or Whitelist <img style="margin-top: -3px;" src="/images/icons/chevrondown-blue.svg" height="6"/></a></div>
+								<div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+									<button class="slds-button slds-button_neutral">Save</button>
+									<button class="slds-button">Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="activation-contents-controls" class="slds-col slds-m-bottom_x-large slds-p-horizontal_medium slds-size_1-of-1">
+					<button class="slds-button slds-button_neutral slds-p-vertical_medium">+ Add License</button>
+				</div>
+				<div id="activation-contents-controls" class="slds-col slds-m-vertical_large slds-p-horizontal_medium slds-size_1-of-1">
+					<button class="slds-button slds-button_neutral">Back</button>
+					<button id="saveButton" onclick="<%- locals.localization.new_asset.license.save_action %>" class="slds-button slds-button_brand"><%- locals.localization.new_asset.license.save_text %></button>
+					<button class="slds-button slds-button_neutral">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="slds-col slds-p-right_medium slds-size_1-of-4">
+		<div class="slds-panel-box" style="height: 100%;">
+			<div class="slds-panel-box__header slds-p-around_small">Selected Asset Summary</div>
+			<div class="slds-panel-box__body slds-p-around_medium">
+				<div class="segment-box_label slds-p-vertical_xxx-small">Segment</div>
+				<div class="segment-box_contents">Camping and tent explorers</div>
+
+				<div class="segment-box_label slds-m-top_medium slds-p-vertical_xxx-small">Devices</div>
+				<div class="segment-box_contents">7.3M</div>
+
+				<div class="segment-box_label slds-m-top_medium slds-p-vertical_xxx-small">Category</div>
+				<div class="segment-box_contents">Outdoors</div>
+
+				<div class="segment-box_label slds-m-top_medium slds-p-vertical_xxx-small">Sub-Category</div>
+				<div class="segment-box_contents">_</div>
+			</div>
+		</div>
+	</div>
+</div>

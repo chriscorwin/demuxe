@@ -1,3 +1,18 @@
+<%_
+const includeDebugInfoStart = `
+============================================================
+Demuxe: including product-templates/dmp/components/toast.ejs now...
+------------------------------------------------------------
+`;
+const includeDebugInfoEnd = `
+...end product-templates/dmp/components/toast.ejs
+------------------------------------------------------------
+`;
+console.group(includeDebugInfoStart);
+%>
+<script>
+	console.group(`<%=includeDebugInfoStart%>`);
+</script>
 <%
 
 const toastId = locals.id || locals.theme+'Toast';
@@ -26,7 +41,7 @@ const toastId = locals.id || locals.theme+'Toast';
 	</div>
 </div>
 
-<% if ( locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === `${toastId}`) { %>
+<% if ( locals.triggerImmediately ) { %>
 <script>
 	var toastId = '<%= toastId %>';
 	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the 
@@ -49,3 +64,12 @@ const toastId = locals.id || locals.theme+'Toast';
 	}
 </script>
 <% } %>
+<script>
+	console.log(`<%=includeDebugInfoEnd%>`);
+	console.groupEnd();
+</script>
+<%_
+console.log(includeDebugInfoEnd);
+console.groupEnd();
+%>
+

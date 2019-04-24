@@ -18,9 +18,6 @@ module.exports = {
 			'<span class="text">SAS Institute</span>',
 			'<img src="/images/slices/activation-tiles/activation-tile.commerce-cloud.svg" />'
 		],
-		save_action: () => {
-			window.location = `/segments/manage-segments?trigger=successToast`
-		},
 		segment_description: '',
 		segment_name: 'Outdoor Enthusiasts',
 		segment_type: 'Clusters',

@@ -103,30 +103,10 @@ const appUse = [
 	express.json(),
 	express.urlencoded({ extended: false }),
 	expressSanitizer(),
-	cookieParser(),
+	cookieParser()
 ];
-if (config.productTemplate) {
-	appUse.push(
-		sassMiddleware({
-			debug: false,
-			outputStyle: 'expanded',
-			src: path.join(__dirname, 'product-templates', config.productTemplate)
-		}),
-		express.static(path.join(__dirname, 'product-templates', config.productTemplate))
-	);
 
-
-	if (config.demoVenue) {
-		appUse.push(
-			sassMiddleware({
-				debug: false,
-				outputStyle: 'expanded',
-				src: path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue)
-			}),
-			express.static(path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue))
-		);
-	}
-}
+// SASS loads things in a first-found-in-array manner
 if (config.brandTheme) {
 	appUse.push(
 		sassMiddleware({
@@ -138,6 +118,36 @@ if (config.brandTheme) {
 	);
 }
 
+if (config.productTemplate) {
+	if (config.demoVenue) {
+		appUse.push(
+			sassMiddleware({
+				debug: false,
+				outputStyle: 'expanded',
+				src: path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue)
+			}),
+			express.static(path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue))
+		);
+	}
+
+	appUse.push(
+		sassMiddleware({
+			debug: false,
+			outputStyle: 'expanded',
+			src: path.join(__dirname, 'product-templates', config.productTemplate)
+		}),
+		express.static(path.join(__dirname, 'product-templates', config.productTemplate))
+	);
+}
+
+appUse.push(
+	sassMiddleware({
+		debug: false,
+		outputStyle: 'expanded',
+		src: path.join(__dirname, 'engine')
+	}),
+	express.static(path.join(__dirname, 'engine'))
+);
 
 appUse.push(
 	sassMiddleware({
@@ -152,15 +162,6 @@ appUse.push(
 appUse.push(
 	express.static(path.join(__dirname, 'slides'))
 );
-
-appUse.push(
-	sassMiddleware({
-		debug: false,
-		outputStyle: 'expanded',
-		src: path.join(__dirname, 'engine')
-	}),
-	express.static(path.join(__dirname, 'engine'))
-)
 
 app.use(appUse);
 

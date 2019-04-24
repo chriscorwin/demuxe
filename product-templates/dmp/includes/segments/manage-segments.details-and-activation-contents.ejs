@@ -44,7 +44,27 @@
 						</div>
 					</div>
 					<div class="slds-col slds-size_2-of-3 slds-m-top_medium"></div>
-					<div class="slds-col slds-size_1-of-3 slds-m-top_medium">
+					<div class="slds-col slds-size_3-of-3 slds-m-top_x-large slds-text-heading_small">
+						Audience Profile
+					</div>
+					<div class="slds-col slds-size_3-of-3 slds-m-top_xxx-small">
+						Enable the toggle in order for your audience profile to be generated on a weekly basis.
+					</div>
+					<div class="slds-col slds-size_1-of-3 slds-m-top_xxx-small">
+						<div class="slds-form-element">
+							<label class="slds-checkbox_toggle slds-grid">
+								<input type="checkbox" name="checkbox-toggle-2" value="checkbox-toggle-2" aria-describedby="checkbox-toggle-2" />
+								<span id="checkbox-toggle-2" class="slds-checkbox_faux_container slds-m-right_medium" aria-live="assertive">
+									<span class="slds-checkbox_faux"></span>
+									<span class="slds-checkbox_on"></span>
+									<span class="slds-checkbox_off"></span>
+								</span>
+								<span class="slds-form-element__label slds-m-bottom_none">Enable Audience Profile</span>
+							</label>
+						</div>
+					</div>
+					<div class="slds-col slds-size_2-of-3 slds-m-top_xxx-small"></div>
+					<div class="slds-col slds-size_1-of-3 slds-m-top_x-large">
 						<div class="slds-form-element">
 							<label class="slds-checkbox_toggle slds-grid">
 								<input type="checkbox" name="checkbox-toggle-2" value="checkbox-toggle-2" aria-describedby="checkbox-toggle-2" />
@@ -57,11 +77,11 @@
 							</label>
 						</div>
 					</div>
-					<div class="slds-col slds-size_2-of-3 slds-m-top_medium"></div>
-					<div class="slds-col slds-size_1-of-3 slds-m-top_medium">
+					<div class="slds-col slds-size_2-of-3 slds-m-top_x-large"></div>
+					<div class="slds-col slds-size_1-of-3 slds-m-top_xx-small">
 						<div class="slds-form-element">
-							<label class="slds-checkbox_toggle slds-grid">
-								<input id="activate-toggle" type="checkbox" name="checkbox-toggle-2" value="checkbox-toggle-2" aria-describedby="checkbox-toggle-2" checked="checked" />
+							<label id="activate-toggle" class="slds-checkbox_toggle slds-grid">
+								<input type="checkbox" name="checkbox-toggle-2" value="checkbox-toggle-2" aria-describedby="checkbox-toggle-2" <%= locals.localization.manage_segments.details_and_activation.activate_by_default ? 'checked="checked"' : '' %> />
 								<span id="checkbox-toggle-2" class="slds-checkbox_faux_container slds-m-right_medium" aria-live="assertive">
 									<span class="slds-checkbox_faux"></span>
 									<span class="slds-checkbox_on"></span>
@@ -71,7 +91,7 @@
 							</label>
 						</div>
 					</div>
-					<div class="slds-col slds-size_2-of-3 slds-m-top_medium"></div>
+					<div class="slds-col slds-size_2-of-3 slds-m-top_xx-small"></div>
 				</div>
 				<div id="activation-header" class="slds-panel-box__header slds-p-horizontal_small slds-hide slds-grid">
 					<div class="slds-col slds-size_1-of-3 slds-m-top_small">Activation</div>

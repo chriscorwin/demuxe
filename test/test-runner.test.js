@@ -16,6 +16,11 @@ const testStep = async (target, page, step) => {
 		await page.click(step.click);
 	}
 
+	if (typeof step.hover !== "undefined") {
+		console.log('hover', step.hover);
+		await page.hover(step.hover);
+	}
+
 	if (typeof step.evaluate !== "undefined") {
 		console.log('evaluate');
 		await page.evaluate(step.evaluate);
