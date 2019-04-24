@@ -1,3 +1,13 @@
-<script>
-	window.location = '/magick-flows-dashboard'
-</script>
+<%-
+	include(
+		'wrapper.ejs',
+		{
+			breadcrumbs: [{a: 'javascript:void(0)', text: 'Journeys Dashboard'}, "Journey Canvas"],
+			title: 'Marketing Cloud Homepage',
+			headerVariant: 'default',
+			siteSection: 'index',
+			pageContents: 'includes/index-contents',
+			pageStylesheets: ['']
+		}
+	)
+%>

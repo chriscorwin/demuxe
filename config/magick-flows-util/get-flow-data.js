@@ -119,7 +119,12 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 			const key = rawKey.toLowerCase();
 
 
-
+			// Might be nice to have a comment immediately above this switch
+			// statement that shows an example of both the input we are
+			// digesting and the output we are transforming it in to. Could
+			// make it easier to not muck it up in the future if someone is
+			// editing this portion (especially considering there are no Unit
+			// Tests, it would give a way to mentally unit test it)
 
 			switch (key) {
 				case "id":

@@ -75,12 +75,6 @@ _%>
 			mainContentScrollableAreaHeight = renderSizeMainContent.height;
 		}
 
-
-
-		// let OMG_EFFING_PAD_SLIDES_2_AND_4 = 
-		// let mainContentScrollableAreaHeight = ((maxHeight - (renderSizeHeader.height + renderSizeFooter.height)) + 0);
-
-
 		const isEjs = node.dimensions.type === 'ejs';
 		const isPng = node.dimensions.type === 'png';
 		const isSvg = node.dimensions.type === 'svg';
@@ -185,11 +179,9 @@ _%>
 			`
 
 			node.notes.forEach((note, noteIndex) => {
-				// note = note.replace(/-/g, ' ').toLowerCase();
 				note = note.replace(/-/g, ' ');
 
 				clickHintsHtmlOut += `${note}. `
-				// console.log(`${note}`);
 			});
 
 
