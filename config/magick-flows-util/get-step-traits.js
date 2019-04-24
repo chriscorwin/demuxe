@@ -6,6 +6,13 @@ Demuxe: Running \`config/magick-flows-util/get-step-traits.js\` now...
 const util = require('util');
 const possibleTraits = require('./traits/index');
 
+
+// shortcut to speed up the whole process.
+const possibleTraitIds = possibleTraits.reduce(
+	(ids, trait) => `${ids}|${trait.id}`,
+	''
+);
+
 const getStepTraits = (stepInfo) => {
 	// steps without IDs can't have data. Abort.
 	console.log(`
@@ -17,13 +24,6 @@ const getStepTraits = (stepInfo) => {
 		assetsMetaData: [],
 		stepDataAttributes: {}
 	};
-
-	// shortcut to speed up the whole process.
-	const possibleTraitIds = possibleTraits.reduce(
-		(ids, trait) => `${ids}|${trait.id}`,
-		''
-	);
-	
 	// console.log(`
 	// [ config/magick-flows-util/get-step-traits.js:31 ] possibleTraitIds: 
 	// 	`, util.inspect(possibleTraitIds, { showHidden: true, depth: null, colors: true }));

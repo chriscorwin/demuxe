@@ -150,21 +150,6 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 
 			}
 
-
-
-			// if ( value.includes('__') === true ) {
-			// 	screenDataAttributes[key] = value.split('__').map(val => val.toLowerCase());
-			// } else {
-			// 	if (key === 'data' && typeof value === 'string') {
-			// 		// make sure the stupid thing is in an array
-			// 		screenDataAttributes[key] = [value];
-			// 	} else if (key === 'notes' && typeof value === 'string') {
-			// 		// make sure the stupid thing is in an array
-			// 		screenDataAttributes[key] = [value];
-			// 	} else {
-			// 		screenDataAttributes[key] = value;
-			// 	}
-			// }
 		} else {
 			// first one is the sorter, store it as such
 			if ( index === 0 ) {
