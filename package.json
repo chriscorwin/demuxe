@@ -13,7 +13,8 @@
     "start:qa": "NODE_ENV=qa node ./bin/www",
     "test": "NODE_ENV=local mocha",
     "livereload": "livereload . -w 200 --extraExts 'scss,ejs' -d",
-    "test:update": "rm -rf test/screenshots/__different_snapshot__/ && NODE_ENV=local update=true mocha"
+    "test:update": "rm -rf test/screenshots/__different_snapshot__/ && NODE_ENV=local update=true mocha",
+    "slides": "node ./slides/upload.js"
   },
   "dependencies": {
     "classnames": "^2.2.6",

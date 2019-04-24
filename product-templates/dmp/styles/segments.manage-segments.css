@@ -114,3 +114,18 @@
   font-size: 14px;
   color: #16325C;
 }
+
+.slds-page-header__col-title {
+  z-index: 3;
+}
+
+#content-wrapper:before {
+  background: #f7f9fb;
+  content: "";
+  display: block;
+  height: 53px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 171px;
+}

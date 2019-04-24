@@ -6,7 +6,7 @@
 		<div class="slds-panel-box slds-p-around_medium">
 			<div class="slds-panel-box__body">
 				<%- include('includes/components/slds-ui/search', {
-					placeholder: 'Search Attributes'			
+					placeholder: 'Search Attributes'
 				}) %>
 				<%- include('components/folder-view.ejs', {
 					text: '1st Party',
@@ -29,7 +29,7 @@
 					text: 'Site Behavior'
 				}) %>
 				<%- include('components/folder-view.ejs', { text: 'Social Studio' }) %>
-				<%- include('components/folder-view.ejs', { 
+				<%- include('components/folder-view.ejs', {
 					text: 'Segments',
 					customIconClosed: '<img class="closed" src="/images/vines.png" />',
 					customIconOpened: '<img class="opened" src="/images/vines.png" />'
@@ -57,7 +57,7 @@
 		<div class="slds-panel-box">
 			<div class="slds-panel-box__header slds-p-around_small">Rules</div>
 			<div class="slds-panel-box__body">
-				<a href="/segments/manage-segments/details-and-activation">
+				<a id="continue-and-edit" href="/segments/manage-segments/details-and-activation">
 					<img src="/images/slices/segments.new-segment.rules.svg" />
 				</a>
 			</div>

@@ -9,6 +9,7 @@ You can pass params to an include, like this:
 <%- include('components/toast', {
 	contents: 'Will be available only under ‘Northern Trail Outfitters - Apparel&rsquo; account as &lsquo;Winter Jackets &ndash; New High Value&rsquo;',
 	title: '&lsquo;Winter Jackets Propensity Customers&rsquo; segment provisioned successfully.',
-	theme: 'success'			
+	theme: 'success',
+    triggerImmediately: true			
 }) %>
 ```

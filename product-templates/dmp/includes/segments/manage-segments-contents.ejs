@@ -1,16 +1,41 @@
 <%
-
-const segments = locals.localization.segments.states[locals.state].segments;
-const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
-
+	const controls = locals.localization.segments.states[locals.state].controls;
+	const segments = locals.localization.segments.states[locals.state].segments;
+	const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
 %>
 
-<div class="slds-grid slds-grid_pull-padded-medium slds-p-vertical_small">
-	<img class="slds-p-horizontal_medium" src="/images/slices/segments.manage-segments.menu-a-left.svg" style="height: 33px;" />
-	<img class="slds-p-horizontal_medium slds-col_bump-left" src="/images/slices/segments.manage-segments.menu-a-right.svg" style="height: 33px;" />
+<div class="slds-page-header__row">
+	<div class="slds-page-header__col-title">
+		<img class="" src="/images/slices/segments.manage-segments.menu-a-left.svg" style="height: 33px;" />
+	</div>
+	<div class="slds-page-header__col-actions">
+		<%
+			controls.forEach((control) => {
+				switch(control.type) {
+					case 'button-group': %>
+					<div class="slds-button-group" role="group">
+					<% control.items.forEach((data) => { %>
+						<%- include('components/button', data) %>
+					<% }) %>
+					</div>
+					<% break;
+					case 'combobox': %>
+						<div class="slds-button">
+							<%- include('components/combobox', control) %>
+						</div>
+					<% break;
+					case 'button': %>
+						<% if (control.hasOverflow) {%><div class="slds-button"><% } %>
+							<%- include('components/button', control) %>
+						<% if (control.hasOverflow) {%></div><% } %>
+					<% break;
+				}
+			});
+		%>
+	</div>
 </div>
 
-<% 
+<%
 	const tableData = lookalikes.tableData;
 
 	const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
@@ -52,7 +77,7 @@ const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
 		<div class="slds-panel-box slds-m-top_medium">
 			<div class="slds-panel-box__header slds-p-horizontal_small slds-grid ">
 				<div class="slds-col slds-size_3-of-5">${data.title}</div>
-				<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left">${data.subTitle}</div>
+				<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-text-align_right">${data.subTitle}</div>
 				<div class="slds-panel-box__header-settings"><img src="/images/icons/settings.svg" /></div>
 				<div class="slds-panel-box__header-dropdown slds-dropdown slds-dropdown_left slds-dropdown_small slds-hide">
 					<ul class="slds-dropdown__list" role="menu" aria-label="Show More">
@@ -121,12 +146,12 @@ const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
 							</a>
 						</li>
 						<li class="slds-dropdown__item" role="presentation">
-							<a href="javascript:void(0);" onclick="navigatePage('/segment-builder.details-and-activation.html')" role="menuitem" tabindex="-1">
+							<a href="javascript:void(0);" onclick="navigatePage('/segments/manage-segments/rules')" role="menuitem" tabindex="-1">
 								<span class="slds-truncate" title="Menu Item Two">Update Partners</span>
 							</a>
 						</li>
 						<li class="slds-dropdown__item" role="presentation">
-							<a href="javascript:void(0);" onclick="navigatePage('/data-studio.new-asset.define.html')" role="menuitem" tabindex="-1">
+							<a href="javascript:void(0);" onclick="navigatePage('/data-studio/provisioning/new-asset.define-asset')" role="menuitem" tabindex="-1">
 								<span class="slds-truncate" title="Menu Item Two">Provision Segment</span>
 							</a>
 						</li>
@@ -169,10 +194,10 @@ const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
 
 
 	const makeModalContentsChart = (data) => include(
-		'components/highcharts.lookalikes.ejs', 
-		{ 
-			...data, 
-			width: '510px', 
+		'components/highcharts.lookalikes.ejs',
+		{
+			...data,
+			width: '510px',
 			height: '268px',
 			selectCallback: (event) => {
 				document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
@@ -200,16 +225,16 @@ const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
 
 		<div class="slds-grid">
 			<div class="slds-col slds-size_3-of-5">
-				${makeModalContentsChart(data)} 
+				${makeModalContentsChart(data)}
 			</div>
 			<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-p-top_small">
-				${makeTable(data)} 
+				${makeTable(data)}
 			</div>
 		</div>
 	`);
 	const makeModalContentsFooter = (data) => (`
 		<button disabled class="slds-button slds-button_neutral">Cancel</button>
-		<button disabled onclick="navigatePage('/segments/manage-segments/?trigger=successToast');" class="slds-button slds-button_brand">Create a lookalike segment</button> 
+		<button disabled onclick="navigatePage('/segments/manage-segments/?trigger=successToast');" class="slds-button slds-button_brand">Create a lookalike segment</button>
 	`);
 
 	const panels = segments;
@@ -223,7 +248,7 @@ const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
 <img id="lookalike2" src="/images/lookalike2.png" class="slds-hide lookalike" onclick="showLookalike(3);" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
 <img id="lookalike3" src="/images/lookalike3.png" class="slds-hide lookalike" onclick="hideLookalikes();" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
 
-<% 
+<%
 	const modalId = `dmp-manage-segments-modal`;
 	const modalBackdropId = `${modalId}-backdrop`;
 %>
@@ -242,25 +267,16 @@ const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
 	theme: 'success'
 }) %>
 
-
-<%- include('components/toast', {
-	contents: 'The segment will be available once processing completes.',
-	title: `‘${segments[0].title}’ segment created successfully.`,
-	theme: 'success',
-	id: 'successToast'			
-}) %>
-
-<%- include('components/toast', {
-	title: `You are all set. Einstein Journey Insights Report is ready to run.`,
-	theme: 'success',
-	id: 'reportRunning'			
-}) %>
-
-<%- include('components/toast', {
-	title: `Einstein Journey Insights Report is ready. <a href="javascript:void(0);" onclick="navigatePage('/insights/einstein-journey-insights')">Click to View</a>`,
-	theme: 'success',
-	id: 'reportReady'			
-}) %>
+<% if (locals.localization.segments.states[locals.state].toast) {
+	const toast = locals.localization.segments.states[locals.state].toast; %>
+	<%- include('components/toast', {
+		contents: toast.contents,
+		title: toast.title,
+		theme: (toast.theme) ? toast.theme : 'success',
+		id: (toast.id) ? toast.id : 'successToast',
+		triggerImmediately: toast.triggerImmediately
+	}) %>
+<% } %>
 
 <script>
 const showLookalikeModal = (n) => {
@@ -295,20 +311,3 @@ document.querySelectorAll('.slds-panel-box__header-settings').forEach((elm) => e
 	}
 }));
 </script>
-
-<% if ( locals.sanitizedQueryParams.trigger && locals.sanitizedQueryParams.trigger === `reportRunning`) { %>
-<script>
-	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the 
-	// flow, which we need to do in order to keep global nav dropdowns working.
-	let reportReadyToastElement =  document.getElementById('reportReady');
-	if (typeof(reportReadyToastElement) != 'undefined' && reportReadyToastElement != null) {
-		window.setTimeout(() => {
-			document.querySelector('#reportReady').classList.add('slds-transition-hide');
-			document.querySelector('#reportReady').classList.remove('slds-hide');
-		}, 4201);
-		window.setTimeout(() => {
-			document.querySelector('#reportReady').classList.add('slds-transition-show');
-		}, 4300);
-	}
-</script>
-<% } %>
