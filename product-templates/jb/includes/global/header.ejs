@@ -144,7 +144,7 @@
 									case 'button-group': %>
 									<div class="slds-button-group" role="group">
 									<% control.items.forEach((data) => {
-										__append(include('components/button', data))
+										echo(include('components/button', data))
 									}) %>
 									</div>
 									<% break;
@@ -155,7 +155,7 @@
 									<% break;
 									case 'button':
 										if (control.hasOverflow) {%><div class="slds-button"><% }
-											__append(include('components/button', control))
+											echo(include('components/button', control))
 										if (control.hasOverflow) {%></div><% }
 									break;
 								}
