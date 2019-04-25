@@ -8,13 +8,14 @@
 				<% row && row.forEach(element => {
 					const canvasElementClasses = classnames('builder-canvas-element',
 					{
+						'builder-canvas-element-connection': element.isConnection,
 						'builder-canvas-element_unconfigured': element.unconfigured,
 						'builder-canvas-element_end': element.connector && element.connector.direction && element.connector.direction === 'stop'
 					});
 
 					%>
 					<div class="<%= canvasElementClasses %>">
-						<% if (element.name) { %>
+						<% if (Object.keys(element).length) { %>
 							<div class="builder-canvas-element-connector">
 								<span>
 									<svg aria-hidden="true" class="slds-icon slds-icon_x-small slds-icon-text-default">
@@ -22,13 +23,16 @@
 									</svg>
 								</span>
 								<% if (element.connector.label) { %><span class="builder-canvas-element-connector-label"><%= element.connector.label %></span><% } %>
+								<% if (element.isConnection) { %><div class="builder-canvas-element-vertical-connector" style="height: 62px;"></div><% } %>
 							</div>
 							<div class="builder-canvas-element-node">
+								<% if (element.icon) { %>
 								<span>
 									<svg aria-hidden="true" class="builder-element-icon builder-element-<%= element.icon.nodeType %>-icon slds-icon slds-icon_large slds-icon-text-default">
 										<use xlink:href="<%= element.icon.path %>"></use>
 									</svg>
 								</span>
+								<% } %>
 								<strong class="builder-element-name"><%= element.name %></strong><% if (element.stats) {%><span class="builder-element-stats"><%= element.stats %></span><% } %>
 							</div>
 						<% } %>
