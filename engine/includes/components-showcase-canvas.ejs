@@ -1,0 +1,40 @@
+<%
+
+const canvasData = {
+	rows: [
+		[
+			{
+				connector: { direction: 'right' },
+				icon: { path: '/icons/utility-sprite/svg/symbols.svg#people', nodeType: 'start' },
+				name: 'Audience',
+				stats: '17,226 Contacts'
+			},
+			{
+				connector: { direction: 'right' },
+				icon: { path: '/icons/utility-sprite/svg/symbols.svg#email', nodeType: 'direct' },
+				name: 'Send Email',
+				stats: 'Suite Promo'
+			},
+			{
+				connector: { direction: 'right' },
+				icon: { path: '/icons/utility-sprite/svg/symbols.svg#clock', nodeType: 'branching' },
+				name: 'Wait'
+			},
+			{
+				connector: { direction: 'right', label: 'Clicked' },
+				icon: { path: '/icons/utility-sprite/svg/symbols.svg#signpost', nodeType: 'branching' },
+				name: 'Decision Split',
+				stats: 'Level of Engagement'
+			}
+		],
+		[
+			{},
+			{}
+		]
+
+	]
+}
+
+%>
+
+<%- include('components/canvas', canvasData ) %>

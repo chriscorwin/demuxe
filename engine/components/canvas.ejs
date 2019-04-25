@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="styles/canvas.css" />
+
+<div class="layout-builder layout-builder_logic">
+	<div class="builder-canvas slds-p-vertical_large slds-p-horizontal_xx-large">
+		<div class="builder-canvas-flow">
+			<% locals.rows && locals.rows.forEach(row => { %>
+				<div class="builder-canvas-row">
+				<% row && row.forEach(element => {
+					const canvasElementClasses = classnames('builder-canvas-element',
+					{
+						'builder-canvas-element_unconfigured': element.unconfigured,
+						'builder-canvas-element_end': element.connector && element.connector.direction && element.connector.direction === 'stop'
+					});
+
+					%>
+					<div class="<%= canvasElementClasses %>">
+						<% if (element.name) { %>
+							<div class="builder-canvas-element-connector">
+								<span>
+									<svg aria-hidden="true" class="slds-icon slds-icon_x-small slds-icon-text-default">
+										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#<%= element.connector.direction %>"></use>
+									</svg>
+								</span>
+								<% if (element.connector.label) { %><span class="builder-canvas-element-connector-label"><%= element.connector.label %></span><% } %>
+							</div>
+							<div class="builder-canvas-element-node">
+								<span>
+									<svg aria-hidden="true" class="builder-element-icon builder-element-<%= element.icon.nodeType %>-icon slds-icon slds-icon_large slds-icon-text-default">
+										<use xlink:href="<%= element.icon.path %>"></use>
+									</svg>
+								</span>
+								<strong class="builder-element-name"><%= element.name %></strong><% if (element.stats) {%><span class="builder-element-stats"><%= element.stats %></span><% } %>
+							</div>
+						<% } %>
+					</div>
+				<% }) %>
+				</div>
+			<% }) %>
+		</div>
+	</div>
+</div>
