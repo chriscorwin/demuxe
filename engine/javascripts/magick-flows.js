@@ -153,6 +153,8 @@ function locationHashChanged(event) {
 	let doApplicationSwitchStepTransition = false;
 	let doAutoAdvanceStepTransition = false;
 
+
+	let newDelayTransition = 0;
 	let delayTransition = 0;
 	let useStepTransition = false;
 	let autoAdvanceTransitionTiming = 1000;
@@ -267,6 +269,10 @@ function locationHashChanged(event) {
 
 			// First we will hide any previous step's drawer.
 			if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`) !== null) {
+				console.log(`previousStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave': `, previousStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave');
+				console.log('document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`)', document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`));
+
+
 				if ( previousStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
 					setTimeout(() => {
@@ -274,7 +280,10 @@ function locationHashChanged(event) {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
 					}, 2900);
-					delayTransition = (delayTransition < 751 ? 750 : delayTransition);
+
+					newDelayTransition = 750;
+					console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+					delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 				} else if ( previousStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
@@ -286,11 +295,16 @@ function locationHashChanged(event) {
 
 
 			if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`) !== null) {
+
+				console.log('document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`)', document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`));
+
 				if ( currentStepDrawersData[direction].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
-					delayTransition = (delayTransition < 2 ? 1 : delayTransition);
+					newDelayTransition = 1;
+					console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}`)
+					delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 				} else if ( currentStepDrawersData[direction].find(k => k=='show-instantly') === 'show-instantly' ) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('be-in');
@@ -298,9 +312,14 @@ function locationHashChanged(event) {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('your-mom-was-here');
-						delayTransition = (delayTransition < 501 ? 500 : delayTransition);
+						newDelayTransition = 500;
+						console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+						delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
+
 					} else if ( currentStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
-						delayTransition = 0;
+						newDelayTransition = 3;
+						console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+						delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 					}
 				}
 			}
@@ -352,7 +371,9 @@ function locationHashChanged(event) {
 						document.querySelector(`.ios-notification--step-${previousClick}`).classList.add('slds-hide');
 					}, 250);
 				}, 0);
-				delayTransition = 500;
+				newDelayTransition = 500;
+				console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+				delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 			}
 		}
 		// Now we will show this step's ios-notification, if it exists.
@@ -373,7 +394,9 @@ function locationHashChanged(event) {
 						document.querySelector(`.ios-notification--step-${nextClick}`).classList.add('slds-hide');
 					}, 250);
 				}, 0);
-				delayTransition = 250;
+				newDelayTransition = 250;
+				console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+				delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 			}
 		}
 		
