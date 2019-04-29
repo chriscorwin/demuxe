@@ -266,27 +266,21 @@ function locationHashChanged(event) {
 
 
 			// First we will hide any previous step's drawer.
-			// console.log(`magickFlowConfig.metaData[clicks]: `, magickFlowConfig.metaData[clicks]);
 			if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`) !== null) {
 				if ( previousStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
-					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slide-in');
-					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
+					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
-					}, 250);
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
+					}, 2900);
+					delayTransition = (delayTransition < 751 ? 750 : delayTransition);
+				} else if ( previousStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
 					setTimeout(() => {
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
 					}, 1500);
-					console.debug(`delayTransition: `, delayTransition);
-					delayTransition = (delayTransition < 500 ? 500 : delayTransition);
-				}
-				if ( previousStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
-					// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
-					setTimeout(() => {
-						// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
-					}, 250);
-					// console.log(`delayTransition: `, delayTransition);
-					// delayTransition = (delayTransition < 250 ? 250 : delayTransition);
 				}
 			}
 
@@ -294,62 +288,53 @@ function locationHashChanged(event) {
 			if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`) !== null) {
 				if ( currentStepDrawersData[direction].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
-					setTimeout(() => {
-						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
-					}, 250);
-					console.debug(`delayTransition: `, delayTransition);
-					delayTransition = (delayTransition < 250 ? 250 : delayTransition);
-				}
-				if ( currentStepDrawersData[direction].find(k => k=='show-instantly') === 'show-instantly' ) {
+					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
+					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
+					delayTransition = (delayTransition < 2 ? 1 : delayTransition);
+				} else if ( currentStepDrawersData[direction].find(k => k=='show-instantly') === 'show-instantly' ) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('be-in');
-					// setTimeout(() => {
-					// }, 250);
-					// console.log(`delayTransition: `, delayTransition);
-					delayTransition = 0;
+					if ( currentStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('your-mom-was-here');
+						delayTransition = (delayTransition < 501 ? 500 : delayTransition);
+					} else if ( currentStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
+						delayTransition = 0;
+					}
 				}
-				// if ( currentStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
-				// 	document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slide-in');
-				// 	setTimeout(() => {
-				// 		document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slds-hide');
-				// 	}, 500);
-				// 	delayTransition = 250;
-				// }
+			}
+			if ( nextStepDrawersData[direction].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
+				document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('slds-hide');
+				console.log('document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`)', document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`));
 			}
 
-			// // Now we will show this step's drawer, if it exists.
-			// if ( magickFlowConfig.metaData[clicks][`showDrawerFrom${Direction}`] === true ) {
-			// 	document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${clicks}`).classList.remove('slds-hide');
-			// 	window.setTimeout(() => {
-			// 		document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${clicks}`).classList.add('slide-in');
-			// 	}, 250);
+
+
+
+			// // Finally, we will hide the _next_ step's drawer, too -- this is in case we're going backwards.
+			// if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`) !== null) {
+			// 	if ( magickFlowConfig.metaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
+			// 		document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.remove('slide-in');
+			// 		setTimeout(() => {
+			// 			document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.add('slds-hide');
+			// 		}, 250);
+			// 		console.debug(`delayTransition: `, delayTransition);
+			// 		// delayTransition = (delayTransition < 250 ? 250 : delayTransition);
+			// 	}
 			// }
-
-
-
-			// Finally, we will hide the _next_ step's drawer, too -- this is in case we're going backwards.
-			if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`) !== null) {
-				if ( magickFlowConfig.metaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
-					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.remove('slide-in');
-					setTimeout(() => {
-						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.add('slds-hide');
-					}, 250);
-					console.debug(`delayTransition: `, delayTransition);
-					delayTransition = (delayTransition < 250 ? 250 : delayTransition);
-				}
-			}
 
 
 		});
 
-		console.debug(`previousClick: `, previousClick);
+	
 		console.debug(`previousStepNumber: `, previousStepNumber);
 		console.debug(previousStepDrawersData);
 		console.debug(`currentStepNumber: `, currentStepNumber);
 		console.debug(currentStepDrawersData);
 		console.debug(`nextStepNumber: `, nextStepNumber);
 		console.debug(nextStepDrawersData);
-
+		console.debug(`delayTransition: `, delayTransition);
 	
 	}
 
@@ -450,9 +435,16 @@ function locationHashChanged(event) {
 	}
 
 	console.group(`[ Speaker Notes ]`)
-	console.group(`Current Step: `, clicks);
+	console.group('(verbose level info here)');
+	console.log(`-------------------------`);
 	console.debug(magickFlowConfig.metaData[stepToEvaluateForAppTransition]);
+	console.debug(`previousStepDrawersData: `, previousStepDrawersData);
+	console.debug(`currentStepDrawersData: `, currentStepDrawersData);
+	console.debug(`nextStepDrawersData: `, nextStepDrawersData);
+	console.debug(`delayTransition: `, delayTransition);
+	console.log(`-------------------------`);
 	console.groupEnd();
+	console.log(`Current Step: `, clicks);
 	console.log(`Sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
 	console.log(`Step ID: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
 	if ( typeof magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes !== 'undefined' ) {

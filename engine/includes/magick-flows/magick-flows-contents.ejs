@@ -1,4 +1,4 @@
-<%_
+<%
 console.group(`
 ============================================================
 Demuxe: including \`engine/includes/magick-flows/magick-flows-contents.ejs\` now...
@@ -14,7 +14,7 @@ _%>
 	console.dir(thisMagickFlowConfig);
 	console.groupEnd();
 </script>
-<%_
+<%
 	let showMetaDataMissingError = true;
 	let thisMagickFlowMetaData = thisMagickFlowConfig.metaData;
 
@@ -164,6 +164,7 @@ _%>
 
 
 		let clickHintsHtmlOut = '';
+		let htmlCommentsHtmlOut = '';
 		let hasNotes = node.notes.length > 0 ? true : false;
 		if ( node.notes.length === 1 && node.notes[0] === 'unset' ) {
 			hasNotes = false;
@@ -185,6 +186,8 @@ _%>
 				note = note.replace(/-/g, ' ');
 
 				clickHintsHtmlOut += `<p data="Click hint number ${noteIndex} (${node.notes.length})" class="${thisParagraphClassName}">${note}.</p>`
+				htmlCommentsHtmlOut += `${note}
+`;
 			});
 
 
@@ -192,10 +195,25 @@ _%>
 				</div>
 			`
 		}
+%>
 
 
-_%>
 
+
+
+
+
+<!--  
+
+
+
+
+#<%= nodeIndex %>====================================== 
+
+<%= node.id %>
+--------------------------------------
+<%= htmlCommentsHtmlOut %>
+-->
 <div
 	class="slds-grid slds-grid_vertical magick-flows--step-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
 	data-step="<%=nodeIndex%>"
@@ -283,13 +301,17 @@ _%>
 </div>
 
 
-<%_ }); _%>
+<% }); %>
+
+
+
+
 
 <div class="preload-images">
 <%- preLoadImages %>
 </div>
 
-<%_
+<%
 console.log(`...end \`engine/includes/magick-flows/magick-flows-contents.ejs\`
 ------------------------------------------------------------
 `);
