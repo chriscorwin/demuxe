@@ -177,11 +177,14 @@ _%>
 					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.screensIndex} "
 				>
 			`
-
+			let thisParagraphClassName = `slds-p-bottom_medium`;
 			node.notes.forEach((note, noteIndex) => {
+				if (noteIndex === node.notes.length - 1) {
+					thisParagraphClassName = `slds-p-bottom_none`
+				}
 				note = note.replace(/-/g, ' ');
 
-				clickHintsHtmlOut += `${note}. `
+				clickHintsHtmlOut += `<p data="Click hint number ${noteIndex} (${node.notes.length})" class="${thisParagraphClassName}">${note}.</p>`
 			});
 
 

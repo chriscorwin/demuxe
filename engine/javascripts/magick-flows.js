@@ -273,7 +273,7 @@ function locationHashChanged(event) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
-					}, 125);
+					}, 250);
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
 					}, 1500);
@@ -284,7 +284,7 @@ function locationHashChanged(event) {
 					// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
 					setTimeout(() => {
 						// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
-					}, 125);
+					}, 250);
 					// console.log(`delayTransition: `, delayTransition);
 					// delayTransition = (delayTransition < 250 ? 250 : delayTransition);
 				}
@@ -296,7 +296,7 @@ function locationHashChanged(event) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
-					}, 125);
+					}, 250);
 					console.debug(`delayTransition: `, delayTransition);
 					delayTransition = (delayTransition < 250 ? 250 : delayTransition);
 				}
@@ -304,7 +304,7 @@ function locationHashChanged(event) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('be-in');
 					// setTimeout(() => {
-					// }, 125);
+					// }, 250);
 					// console.log(`delayTransition: `, delayTransition);
 					delayTransition = 0;
 				}
@@ -322,7 +322,7 @@ function locationHashChanged(event) {
 			// 	document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${clicks}`).classList.remove('slds-hide');
 			// 	window.setTimeout(() => {
 			// 		document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${clicks}`).classList.add('slide-in');
-			// 	}, 125);
+			// 	}, 250);
 			// }
 
 
