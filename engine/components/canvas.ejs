@@ -13,28 +13,43 @@
 						'builder-canvas-element_end': element.connector && element.connector.direction && element.connector.direction === 'stop'
 					});
 
+					const connectorClasses = classnames('builder-canvas-element-connector',
+					{
+						'builder-canvas-element-connector-with-join': element.isJoin
+					})
+
 					%>
 					<div class="<%= canvasElementClasses %>">
 						<% if (Object.keys(element).length) { %>
-							<div class="builder-canvas-element-connector">
+							<div class="<%= connectorClasses %>">
+								<% if (element.isJoin) { %>
+								<div class="builder-canvas-element-join-connector" style="height: 142px;"></div>
+								<% } else { %>
 								<span>
 									<svg aria-hidden="true" class="slds-icon slds-icon_x-small slds-icon-text-default">
 										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#<%= element.connector.direction %>"></use>
 									</svg>
 								</span>
 								<% if (element.connector.label) { %><span class="builder-canvas-element-connector-label"><%= element.connector.label %></span><% } %>
-								<% if (element.isConnection) { %><div class="builder-canvas-element-vertical-connector" style="height: 62px;"></div><% } %>
-							</div>
-							<div class="builder-canvas-element-node">
-								<% if (element.icon) { %>
-								<span>
-									<svg aria-hidden="true" class="builder-element-icon builder-element-<%= element.icon.nodeType %>-icon slds-icon slds-icon_large slds-icon-text-default">
-										<use xlink:href="<%= element.icon.path %>"></use>
-									</svg>
-								</span>
+								<% if (element.isConnection) { %><div class="builder-canvas-element-vertical-connector spans-<%= element.rowsSpanned ? element.rowsSpanned : 2 %>-rows"></div><% } %>
 								<% } %>
+							</div>
+							<% if (element.icon || element.name) { %>
+							<div class="builder-canvas-element-node">
+								<% if (element.icon) {
+									if (element.icon.nodeType === 'custom') { %>
+										<img alt="Wait Until" class="builder-element-custom-icon builder-element-rotate-custom-icon" src="<%= element.icon.path %>">
+									<% } else { %>
+										<span>
+											<svg aria-hidden="true" class="builder-element-icon builder-element-<%= element.icon.nodeType %>-icon slds-icon slds-icon_large slds-icon-text-default">
+												<use xlink:href="<%= element.icon.path %>"></use>
+											</svg>
+										</span>
+									<% }
+								} %>
 								<strong class="builder-element-name"><%= element.name %></strong><% if (element.stats) {%><span class="builder-element-stats"><%= element.stats %></span><% } %>
 							</div>
+							<% } %>
 						<% } %>
 					</div>
 				<% }) %>

@@ -482,6 +482,18 @@
   width: 2px;
 }
 
+.builder-canvas-element-vertical-connector.spans-2-rows {
+  height: 62px;
+}
+
+.builder-canvas-element-vertical-connector.spans-3-rows {
+  height: 142px;
+}
+
+.builder-canvas-element-vertical-connector.spans-4-rows {
+  height: 325px;
+}
+
 .builder-canvas-element-connection .builder-canvas-element-connector {
   padding-left: 35px;
   margin-left: 32px;

@@ -457,6 +457,18 @@
 	left: 0px;
 	position: absolute;
 	width: 2px;
+
+	&.spans-2-rows {
+		height: 62px;
+	}
+
+	&.spans-3-rows {
+		height: 142px;
+	}
+
+	&.spans-4-rows {
+		height: 325px;
+	}
 }
 
 .builder-canvas-element-connection .builder-canvas-element-connector {
