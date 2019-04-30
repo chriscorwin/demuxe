@@ -21,10 +21,10 @@
 					%>
 					<div class="<%= canvasElementClasses %>">
 						<% if (Object.keys(element).length) { %>
-							<% if (element.connector) { %>
+							<% if (element.connector || element.isJoin) { %>
 							<div class="<%= connectorClasses %>">
 								<% if (element.isJoin) { %>
-								<div class="builder-canvas-element-join-connector" style="height: 142px;"></div>
+								<div class="builder-canvas-element-join-connector spans-<%= element.rowsSpanned ? element.rowsSpanned : 2 %>-rows"></div>
 								<% } else { %>
 								<span>
 									<svg aria-hidden="true" class="slds-icon slds-icon_x-small slds-icon-text-default">

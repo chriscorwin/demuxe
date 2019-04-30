@@ -474,6 +474,18 @@
   width: 2px;
 }
 
+.builder-canvas-element-join-connector.spans-2-rows {
+  height: 142px;
+}
+
+.builder-canvas-element-join-connector.spans-3-rows {
+  height: 325px;
+}
+
+.builder-canvas-element-join-connector.spans-4-rows {
+  height: 508px;
+}
+
 .builder-canvas-element-vertical-connector {
   background: var(--builder-canvas-connector-color);
   bottom: 0;
