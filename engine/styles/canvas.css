@@ -509,7 +509,7 @@
 .builder-canvas-element-connection .builder-canvas-element-connector {
   padding-left: 35px;
   margin-left: 32px;
-  width: calc(var(--journey-connecter-width) + 35px);
+  width: calc(var(--journey-connecter-width) + 43px);
 }
 
 .builder-canvas-element-connector-passthrough {
@@ -524,6 +524,7 @@
 }
 
 .builder-canvas-element-connector-label {
+  left: -12px;
   background: #fff;
   border: 1px solid #dddbda;
   border-radius: 16px;
@@ -534,6 +535,7 @@
   position: relative;
   text-transform: uppercase;
   top: -9px;
+  float: right;
 }
 
 .builder-canvas-element-connector-label.builder-canvas-element-connector-label-highlight {
