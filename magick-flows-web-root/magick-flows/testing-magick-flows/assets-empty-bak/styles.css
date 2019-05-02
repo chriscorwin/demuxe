@@ -2,13 +2,17 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/engage/main/0000___ID=homepage___DATA=has-sticky-header___NOTES=Scroll-all-the-way-down__Click-the-Welcome-Series-journey-in-the-second-column.png") url("/magick-flows/engage/main/0100___ID=journey-canvas___DATA=unset___NOTES=Click-the-Unconfigured-Data-Extension-icon-on-the-Journey-Canvas__A-drawer-will-slide-out.png") url("/magick-flows/engage/main/0200___ID=entry-source-empty-hub___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never___NOTES=Click-the-“Select-Data-Extension”-button.png") url("/magick-flows/engage/main/0210___ID=entry-source-data-extension-configure___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never___NOTES=Click-the-first-row-in-the-data-table__It-is-called-“NTO-Welcome-Series”.png") url("/magick-flows/engage/main/0220___ID=entry-source-data-extension-configure-with-row-highlight___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=Click-the-“Summary”-button-at-the-bottom-of-the-drawer.png") url("/magick-flows/engage/main/0230___ID=entry-source-data-extension-summary___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=Click-the-“Done”-button__We-will-configure-email-next.png") url("/magick-flows/engage/main/0300___ID=journey-canvas___DATA=unset___NOTES=Click-unconfigured-email-icon-on-canvas__A-hub-and-spoke-drawer-will-slide-open.png") url("/magick-flows/engage/main/0400___ID=email-config-activity-summary___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never___NOTES=Click-the-“Select-Message”-button__Message-selection-drawer-will-slide-out.png") url("/magick-flows/engage/main/0410___ID=email-config-select-an-email___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never___NOTES=Click-on-the-“NTO-Welcome”-email__Top-row-in-the-middle.png") url("/magick-flows/engage/main/0420___ID=email-config-select-an-email-selected___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=Click-Summary-button.png") url("/magick-flows/engage/main/0430___ID=email-config-activity-summary-configured___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--never___NOTES=Click-Edit-message-button.png") url("/magick-flows/engage/main/0440___ID=email-config-edit-content___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never___NOTES=Click-Einstein-block.png") url("/magick-flows/engage/main/0450___ID=email-config-edit-content-image-chosen___DATA=unset___NOTES=Click-Preview-and-Test-tab.png") url("/magick-flows/engage/main/0460___ID=email-config-preview-and-test___DATA=unset___NOTES=Click-right-hand-triangle-to-preview-next-email.png") url("/magick-flows/engage/main/0462___ID=email-config-preview-and-test___DATA=unset___NOTES=Again__Click-right-hand-triangle-to-preview-next-email.png") url("/magick-flows/engage/main/0464___ID=email-config-preview-and-test___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=Click-the-blue-“Save”-button.png") url("/magick-flows/engage/main/0466___ID=email-config-activity-summary-configured-2___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--never___NOTES=Click-“Show-More”-under-Delivery-Options--NTO-Einstein-Frequency.png") url("/magick-flows/engage/main/0468___ID=einstein-frequency___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-anywhere-to-go-back-to-Journey-Builder.png") url("/magick-flows/engage/main/0469___ID=email-config-activity-summary-configured-2___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave__use-step-transition__step-transition_app-switch___NOTES=Click-the-“Done”-button.png") url("/magick-flows/engage/main/0500___ID=journey-canvas___DATA=unset___NOTES=Click-Push-Notificaiton-icon-on-canvas.png") url("/magick-flows/engage/main/0600___ID=push-message-config-activity-summary___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--on-leave___NOTES=Click-Select-Message-button.png") url("/magick-flows/engage/main/0610___ID=push-message-config-select-a-message___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never___NOTES=Click-NTO-Welcome-Notification.png") url("/magick-flows/engage/main/0630___ID=push-message-config-mesage-configuration___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=Click-the-”back”-arrow__It-is-near-the-top-righthand-side-of-the-drawer.png") url("/magick-flows/engage/main/0638___ID=push-message-config-mesage-configuration-select-app___DATA=unset___NOTES=Click-on-the-“Select-App”-dropdown.png") url("/magick-flows/engage/main/0640___ID=push-message-config-mesage-configuration-select-app___DATA=unset___NOTES=Select-Northern-Trails-Outfitters.png") url("/magick-flows/engage/main/0650___ID=push-message-config-mesage-configuration-app-selected___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=Click-the-“Summary”-button.png") url("/magick-flows/engage/main/0660___ID=push-message-config-configured___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=Click-the-“Done”-button.png") url("/magick-flows/engage/main/0700___ID=journey-canvas___DATA=unset___NOTES=Click-the-Activate-button.png") url("/magick-flows/engage/main/0710___ID=journey-analytics-performance-dashboard___DATA=unset___NOTES=Click-Pie-icon.png") url("/magick-flows/engage/main/0712___ID=journey-analytics-performance-dashboard___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=Slides-in-from-the-left.png") url("/magick-flows/engage/main/0720___ID=scrollable-journey-analytics-performance-dashboard___DATA=has-sticky-header___NOTES=Click-Journey-Dashboard-in-the-breadcrumb.png") url("/magick-flows/engage/main/0730___ID=scrollable-journey-analytics-performance-dashboard___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-anywhere.png") url("/magick-flows/engage/main/0740___ID=journey-folders___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-second-row__That-is-the-targeted-one.png") url("/magick-flows/engage/main/0760___ID=entry-source-g360-empty-hub-pre___DATA=unset___NOTES=Click-G360-icon-on-canvas.png") url("/magick-flows/engage/main/0800___ID=entry-source-g360-empty-hub___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never___NOTES=Click-Select-an-Audience_button.png") url("/magick-flows/engage/main/0820___ID=entry-source-g360-data-extension-configure___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--on-leave___NOTES=Click-first-row.png") url("/magick-flows/engage/main/0830___ID=entry-source-data-extension-configured-for-real___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=Click-real-fast.png") url("/magick-flows/engage/main/0900___ID=journey-canvas___DATA=unset___NOTES=End.png") url("/magick-flows/engage/assets/all__viewport-size.png") url("/magick-flows/engage/assets/email-config-activity-summary___drawer-from-left.png") url("/magick-flows/engage/assets/email-config-activity-summary-configured___drawer-from-left.png") url("/magick-flows/engage/assets/email-config-activity-summary-configured-2___drawer-from-left.png") url("/magick-flows/engage/assets/email-config-edit-content___drawer-from-left.png") url("/magick-flows/engage/assets/email-config-preview-and-test___drawer-from-left.png") url("/magick-flows/engage/assets/email-config-select-an-email___drawer-from-left.png") url("/magick-flows/engage/assets/email-config-select-an-email-selected___drawer-from-left.png") url("/magick-flows/engage/assets/entry-source___drawer-from-left.png") url("/magick-flows/engage/assets/entry-source-data-extension-configure___drawer-from-left.png") url("/magick-flows/engage/assets/entry-source-data-extension-configure-with-row-highlight___drawer-from-left.png") url("/magick-flows/engage/assets/entry-source-data-extension-configured-for-real___drawer-from-left.png") url("/magick-flows/engage/assets/entry-source-data-extension-summary___drawer-from-left.png") url("/magick-flows/engage/assets/entry-source-empty-hub___drawer-from-left.png") url("/magick-flows/engage/assets/entry-source-g360-configured-hub___drawer-from-left.png") url("/magick-flows/engage/assets/entry-source-g360-data-extension-configure___drawer-from-left.png") url("/magick-flows/engage/assets/entry-source-g360-empty-hub___drawer-from-left.png") url("/magick-flows/engage/assets/homepage___sticky-header.png") url("/magick-flows/engage/assets/journey-analytics-performance-dashboard___drawer-from-left.png") url("/magick-flows/engage/assets/push-message-config-activity-summary___drawer-from-left.png") url("/magick-flows/engage/assets/push-message-config-configured___drawer-from-left.png") url("/magick-flows/engage/assets/push-message-config-mesage-configuration___drawer-from-left.png") url("/magick-flows/engage/assets/push-message-config-mesage-configuration-app-selected___drawer-from-left.png") url("/magick-flows/engage/assets/push-message-config-select-a-message___drawer-from-left.png") url("/magick-flows/engage/assets/scrollable-journey-analytics-performance-dashboard___sticky-header.png");
+  content: url("/magick-flows/testing-magick-flows/main/0000___start-here-0.svg") url("/magick-flows/testing-magick-flows/main/0100___ID=drawers.svg") url("/magick-flows/testing-magick-flows/main/0102___ID=drawers--from-top___DATA=show-drawer-from-top--on-arrival__hide-drawer-from-top--on-leave.svg") url("/magick-flows/testing-magick-flows/main/0103___ID=drawers--from-top--clear___NOTES=clears-drawer.svg") url("/magick-flows/testing-magick-flows/main/0104___ID=drawers--from-right___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--on-leave.svg") url("/magick-flows/testing-magick-flows/main/0105___ID=drawers--from-right--clear.svg") url("/magick-flows/testing-magick-flows/main/0106___ID=drawers--from-bottom___DATA=show-drawer-from-bottom--on-arrival__hide-drawer-from-bottom—on-leave.svg") url("/magick-flows/testing-magick-flows/main/0107___ID=drawers--from-bottom--clear.svg") url("/magick-flows/testing-magick-flows/main/0108___ID=drawers--from-left___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--on-leave.svg") url("/magick-flows/testing-magick-flows/main/0109___ID=drawers--from-left--clear.svg") url("/magick-flows/testing-magick-flows/main/0200___ID=ios-notifications.svg") url("/magick-flows/testing-magick-flows/main/0201___ID=ios-notifications___DATA=show-ios-notification.svg") url("/magick-flows/testing-magick-flows/main/0202___ID=ios-notifications___NOTES=clears-notification.svg") url("/magick-flows/testing-magick-flows/main/0300___ID=headers-and-footers.svg") url("/magick-flows/testing-magick-flows/main/0301___ID=headers-and-footers___DATA=has-sticky-header__has-sticky-footer.svg") url("/magick-flows/testing-magick-flows/main/0400___ID=transitions.svg") url("/magick-flows/testing-magick-flows/main/0411___ID=transitions--application-switch.svg") url("/magick-flows/testing-magick-flows/main/0412___ID=transitions--application-switch___DATA=use-slide-transition__slide-transition_app-switch.svg") url("/magick-flows/testing-magick-flows/main/0420___ID=transitions--auto-advance.svg") url("/magick-flows/testing-magick-flows/main/0421___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--slow.svg") url("/magick-flows/testing-magick-flows/main/0422___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--slow.svg") url("/magick-flows/testing-magick-flows/main/0423___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--slow.svg") url("/magick-flows/testing-magick-flows/main/0424___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/testing-magick-flows/main/0425___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/testing-magick-flows/main/0426___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--fast.svg") url("/magick-flows/testing-magick-flows/main/0427___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--normal.svg") url("/magick-flows/testing-magick-flows/main/0428___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--normal.svg") url("/magick-flows/testing-magick-flows/main/0429___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--normal.svg") url("/magick-flows/testing-magick-flows/main/0430___ID=transitions--auto-advance___DATA=use-slide-transition__slide-transition_auto-advance__slide-transition-timing--normal.svg") url("/magick-flows/testing-magick-flows/main/0431___ID=transitions--auto-advance--end--introduce-fade.svg") url("/magick-flows/testing-magick-flows/main/0440___ID=transitions--fade___DATA=use-slide-transition__slide-transition_fade__slide-transition-timing--slow.svg") url("/magick-flows/testing-magick-flows/main/0441___ID=transitions--fade___DATA=use-slide-transition__slide-transition_fade__slide-transition-timing--fast.svg") url("/magick-flows/testing-magick-flows/main/0442___ID=transitions--fade___DATA=use-slide-transition__slide-transition_fade__slide-transition-timing--normal.svg") url("/magick-flows/testing-magick-flows/main/0442___ID=transitions--fade--end___DATA=use-slide-transition__slide-transition_fade__slide-transition-timing--normal.svg") url("/magick-flows/testing-magick-flows/main/0500___ID=transitions--end___DATA=use-slide-transition__slide-transition_app-switch.svg") url("/magick-flows/testing-magick-flows/main/9998___ID=the-end-is-near.svg") url("/magick-flows/testing-magick-flows/main/9999___ID=this-is-the-end.svg") url("/magick-flows/testing-magick-flows/assets/drawers--from-bottom___drawer-from-bottom.svg") url("/magick-flows/testing-magick-flows/assets/drawers--from-left___drawer-from-left.svg") url("/magick-flows/testing-magick-flows/assets/drawers--from-right___drawer-from-right.svg") url("/magick-flows/testing-magick-flows/assets/drawers--from-top___drawer-from-top.svg") url("/magick-flows/testing-magick-flows/assets/headers-and-footers___sticky-footer.svg") url("/magick-flows/testing-magick-flows/assets/headers-and-footers___sticky-header.svg") url("/magick-flows/testing-magick-flows/assets/ios-notifications___ios-notification.svg");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
   position: absolute;
   width: 0;
   z-index: -1;
+}
+
+body {
+  color: purple;
 }
 
 * {
@@ -31,22 +35,22 @@ body {
 body, .container {
   background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
-  height: 720px;
+  height: 812px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 1280px;
+  width: 375px;
 }
 
 .ios-notification {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 1280px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 812px;
+  top: -812px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -61,10 +65,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 1280px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 812px;
+  top: -812px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -85,11 +89,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms left ease-in-out;
-  width: 1280px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
+  height: 812px;
   top: 0;
-  left: -1280px;
+  left: -375px;
   will-change: left;
 }
 
@@ -109,11 +113,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms right ease-in-out;
-  width: 1280px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
+  height: 812px;
   top: 0;
-  right: -1280px;
+  right: -375px;
   will-change: right;
 }
 
@@ -133,10 +137,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms bottom ease-in-out;
-  width: 1280px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
-  bottom: -720px;
+  height: 812px;
+  bottom: -812px;
   will-change: bottom;
 }
 
@@ -156,17 +160,13 @@ body, .container {
   background-color: transparent;
 }
 
-div#content-wrapper {
-  margin-top: 1.25rem !important;
-}
-
 .app-switcher-one {
-  height: 720px;
+  height: 812px;
   left: 0;
   position: absolute;
   top: 0;
-  transition: 2000ms transform, 800ms left;
-  width: 96000px;
+  transition: 400ms transform, 800ms left;
+  width: 14595px;
 }
 
 .app-switcher-one.shrink {
@@ -186,8 +186,8 @@ div#content-wrapper {
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step .slds-scrollable {
-  max-height: 720px;
-  height: 720px;
+  max-height: 812px;
+  height: 812px;
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step.notification {
@@ -195,7 +195,7 @@ div#content-wrapper {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: 640px;
+  left: -345px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -223,21 +223,21 @@ body.debug div#drawer-from-top--step-0::before {
 }
 
 .magick-flows--step-0 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
+  width: 375px;
   left: 0px;
 }
 
 .app-switcher-one.be-left-1 {
-  left: -2560px;
+  left: -395px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -2560px;
+  left: -395px;
 }
 
 body.debug div#drawer-from-top--step-1::before {
@@ -255,21 +255,21 @@ body.debug div#drawer-from-top--step-1::before {
 }
 
 .magick-flows--step-1 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 2560px;
+  width: 375px;
+  left: 395px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -5120px;
+  left: -790px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -5120px;
+  left: -790px;
 }
 
 body.debug div#drawer-from-top--step-2::before {
@@ -287,21 +287,21 @@ body.debug div#drawer-from-top--step-2::before {
 }
 
 .magick-flows--step-2 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 5120px;
+  width: 375px;
+  left: 790px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -7680px;
+  left: -1185px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -7680px;
+  left: -1185px;
 }
 
 body.debug div#drawer-from-top--step-3::before {
@@ -319,21 +319,21 @@ body.debug div#drawer-from-top--step-3::before {
 }
 
 .magick-flows--step-3 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 7680px;
+  width: 375px;
+  left: 1185px;
 }
 
 .app-switcher-one.be-left-4 {
-  left: -10240px;
+  left: -1580px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-4 {
-  left: -10240px;
+  left: -1580px;
 }
 
 body.debug div#drawer-from-top--step-4::before {
@@ -351,21 +351,21 @@ body.debug div#drawer-from-top--step-4::before {
 }
 
 .magick-flows--step-4 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 10240px;
+  width: 375px;
+  left: 1580px;
 }
 
 .app-switcher-one.be-left-5 {
-  left: -12800px;
+  left: -1975px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-5 {
-  left: -12800px;
+  left: -1975px;
 }
 
 body.debug div#drawer-from-top--step-5::before {
@@ -383,21 +383,21 @@ body.debug div#drawer-from-top--step-5::before {
 }
 
 .magick-flows--step-5 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 12800px;
+  width: 375px;
+  left: 1975px;
 }
 
 .app-switcher-one.be-left-6 {
-  left: -15360px;
+  left: -2370px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-6 {
-  left: -15360px;
+  left: -2370px;
 }
 
 body.debug div#drawer-from-top--step-6::before {
@@ -415,21 +415,21 @@ body.debug div#drawer-from-top--step-6::before {
 }
 
 .magick-flows--step-6 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 15360px;
+  width: 375px;
+  left: 2370px;
 }
 
 .app-switcher-one.be-left-7 {
-  left: -17920px;
+  left: -2765px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-7 {
-  left: -17920px;
+  left: -2765px;
 }
 
 body.debug div#drawer-from-top--step-7::before {
@@ -447,21 +447,21 @@ body.debug div#drawer-from-top--step-7::before {
 }
 
 .magick-flows--step-7 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 17920px;
+  width: 375px;
+  left: 2765px;
 }
 
 .app-switcher-one.be-left-8 {
-  left: -20480px;
+  left: -3160px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-8 {
-  left: -20480px;
+  left: -3160px;
 }
 
 body.debug div#drawer-from-top--step-8::before {
@@ -479,21 +479,21 @@ body.debug div#drawer-from-top--step-8::before {
 }
 
 .magick-flows--step-8 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 20480px;
+  width: 375px;
+  left: 3160px;
 }
 
 .app-switcher-one.be-left-9 {
-  left: -23040px;
+  left: -3555px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-9 {
-  left: -23040px;
+  left: -3555px;
 }
 
 body.debug div#drawer-from-top--step-9::before {
@@ -511,21 +511,21 @@ body.debug div#drawer-from-top--step-9::before {
 }
 
 .magick-flows--step-9 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 23040px;
+  width: 375px;
+  left: 3555px;
 }
 
 .app-switcher-one.be-left-10 {
-  left: -25600px;
+  left: -3950px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-10 {
-  left: -25600px;
+  left: -3950px;
 }
 
 body.debug div#drawer-from-top--step-10::before {
@@ -543,21 +543,21 @@ body.debug div#drawer-from-top--step-10::before {
 }
 
 .magick-flows--step-10 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 25600px;
+  width: 375px;
+  left: 3950px;
 }
 
 .app-switcher-one.be-left-11 {
-  left: -28160px;
+  left: -4345px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-11 {
-  left: -28160px;
+  left: -4345px;
 }
 
 body.debug div#drawer-from-top--step-11::before {
@@ -575,21 +575,21 @@ body.debug div#drawer-from-top--step-11::before {
 }
 
 .magick-flows--step-11 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 28160px;
+  width: 375px;
+  left: 4345px;
 }
 
 .app-switcher-one.be-left-12 {
-  left: -30720px;
+  left: -4740px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-12 {
-  left: -30720px;
+  left: -4740px;
 }
 
 body.debug div#drawer-from-top--step-12::before {
@@ -607,21 +607,21 @@ body.debug div#drawer-from-top--step-12::before {
 }
 
 .magick-flows--step-12 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 30720px;
+  width: 375px;
+  left: 4740px;
 }
 
 .app-switcher-one.be-left-13 {
-  left: -33280px;
+  left: -5135px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-13 {
-  left: -33280px;
+  left: -5135px;
 }
 
 body.debug div#drawer-from-top--step-13::before {
@@ -639,21 +639,21 @@ body.debug div#drawer-from-top--step-13::before {
 }
 
 .magick-flows--step-13 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 33280px;
+  width: 375px;
+  left: 5135px;
 }
 
 .app-switcher-one.be-left-14 {
-  left: -35840px;
+  left: -5530px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-14 {
-  left: -35840px;
+  left: -5530px;
 }
 
 body.debug div#drawer-from-top--step-14::before {
@@ -671,21 +671,21 @@ body.debug div#drawer-from-top--step-14::before {
 }
 
 .magick-flows--step-14 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 35840px;
+  width: 375px;
+  left: 5530px;
 }
 
 .app-switcher-one.be-left-15 {
-  left: -38400px;
+  left: -5925px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-15 {
-  left: -38400px;
+  left: -5925px;
 }
 
 body.debug div#drawer-from-top--step-15::before {
@@ -703,21 +703,21 @@ body.debug div#drawer-from-top--step-15::before {
 }
 
 .magick-flows--step-15 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 38400px;
+  width: 375px;
+  left: 5925px;
 }
 
 .app-switcher-one.be-left-16 {
-  left: -40960px;
+  left: -6320px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-16 {
-  left: -40960px;
+  left: -6320px;
 }
 
 body.debug div#drawer-from-top--step-16::before {
@@ -735,21 +735,21 @@ body.debug div#drawer-from-top--step-16::before {
 }
 
 .magick-flows--step-16 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 40960px;
+  width: 375px;
+  left: 6320px;
 }
 
 .app-switcher-one.be-left-17 {
-  left: -43520px;
+  left: -6715px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-17 {
-  left: -43520px;
+  left: -6715px;
 }
 
 body.debug div#drawer-from-top--step-17::before {
@@ -767,21 +767,21 @@ body.debug div#drawer-from-top--step-17::before {
 }
 
 .magick-flows--step-17 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 43520px;
+  width: 375px;
+  left: 6715px;
 }
 
 .app-switcher-one.be-left-18 {
-  left: -46080px;
+  left: -7110px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-18 {
-  left: -46080px;
+  left: -7110px;
 }
 
 body.debug div#drawer-from-top--step-18::before {
@@ -799,21 +799,21 @@ body.debug div#drawer-from-top--step-18::before {
 }
 
 .magick-flows--step-18 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 46080px;
+  width: 375px;
+  left: 7110px;
 }
 
 .app-switcher-one.be-left-19 {
-  left: -48640px;
+  left: -7505px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-19 {
-  left: -48640px;
+  left: -7505px;
 }
 
 body.debug div#drawer-from-top--step-19::before {
@@ -831,21 +831,21 @@ body.debug div#drawer-from-top--step-19::before {
 }
 
 .magick-flows--step-19 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 48640px;
+  width: 375px;
+  left: 7505px;
 }
 
 .app-switcher-one.be-left-20 {
-  left: -51200px;
+  left: -7900px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-20 {
-  left: -51200px;
+  left: -7900px;
 }
 
 body.debug div#drawer-from-top--step-20::before {
@@ -863,21 +863,21 @@ body.debug div#drawer-from-top--step-20::before {
 }
 
 .magick-flows--step-20 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 51200px;
+  width: 375px;
+  left: 7900px;
 }
 
 .app-switcher-one.be-left-21 {
-  left: -53760px;
+  left: -8295px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-21 {
-  left: -53760px;
+  left: -8295px;
 }
 
 body.debug div#drawer-from-top--step-21::before {
@@ -895,21 +895,21 @@ body.debug div#drawer-from-top--step-21::before {
 }
 
 .magick-flows--step-21 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 53760px;
+  width: 375px;
+  left: 8295px;
 }
 
 .app-switcher-one.be-left-22 {
-  left: -56320px;
+  left: -8690px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-22 {
-  left: -56320px;
+  left: -8690px;
 }
 
 body.debug div#drawer-from-top--step-22::before {
@@ -927,21 +927,21 @@ body.debug div#drawer-from-top--step-22::before {
 }
 
 .magick-flows--step-22 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 56320px;
+  width: 375px;
+  left: 8690px;
 }
 
 .app-switcher-one.be-left-23 {
-  left: -58880px;
+  left: -9085px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-23 {
-  left: -58880px;
+  left: -9085px;
 }
 
 body.debug div#drawer-from-top--step-23::before {
@@ -959,21 +959,21 @@ body.debug div#drawer-from-top--step-23::before {
 }
 
 .magick-flows--step-23 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 58880px;
+  width: 375px;
+  left: 9085px;
 }
 
 .app-switcher-one.be-left-24 {
-  left: -61440px;
+  left: -9480px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-24 {
-  left: -61440px;
+  left: -9480px;
 }
 
 body.debug div#drawer-from-top--step-24::before {
@@ -991,21 +991,21 @@ body.debug div#drawer-from-top--step-24::before {
 }
 
 .magick-flows--step-24 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 61440px;
+  width: 375px;
+  left: 9480px;
 }
 
 .app-switcher-one.be-left-25 {
-  left: -64000px;
+  left: -9875px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-25 {
-  left: -64000px;
+  left: -9875px;
 }
 
 body.debug div#drawer-from-top--step-25::before {
@@ -1023,21 +1023,21 @@ body.debug div#drawer-from-top--step-25::before {
 }
 
 .magick-flows--step-25 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 64000px;
+  width: 375px;
+  left: 9875px;
 }
 
 .app-switcher-one.be-left-26 {
-  left: -66560px;
+  left: -10270px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-26 {
-  left: -66560px;
+  left: -10270px;
 }
 
 body.debug div#drawer-from-top--step-26::before {
@@ -1055,21 +1055,21 @@ body.debug div#drawer-from-top--step-26::before {
 }
 
 .magick-flows--step-26 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 66560px;
+  width: 375px;
+  left: 10270px;
 }
 
 .app-switcher-one.be-left-27 {
-  left: -69120px;
+  left: -10665px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-27 {
-  left: -69120px;
+  left: -10665px;
 }
 
 body.debug div#drawer-from-top--step-27::before {
@@ -1087,21 +1087,21 @@ body.debug div#drawer-from-top--step-27::before {
 }
 
 .magick-flows--step-27 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 69120px;
+  width: 375px;
+  left: 10665px;
 }
 
 .app-switcher-one.be-left-28 {
-  left: -71680px;
+  left: -11060px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-28 {
-  left: -71680px;
+  left: -11060px;
 }
 
 body.debug div#drawer-from-top--step-28::before {
@@ -1119,21 +1119,21 @@ body.debug div#drawer-from-top--step-28::before {
 }
 
 .magick-flows--step-28 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 71680px;
+  width: 375px;
+  left: 11060px;
 }
 
 .app-switcher-one.be-left-29 {
-  left: -74240px;
+  left: -11455px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-29 {
-  left: -74240px;
+  left: -11455px;
 }
 
 body.debug div#drawer-from-top--step-29::before {
@@ -1151,21 +1151,21 @@ body.debug div#drawer-from-top--step-29::before {
 }
 
 .magick-flows--step-29 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 74240px;
+  width: 375px;
+  left: 11455px;
 }
 
 .app-switcher-one.be-left-30 {
-  left: -76800px;
+  left: -11850px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-30 {
-  left: -76800px;
+  left: -11850px;
 }
 
 body.debug div#drawer-from-top--step-30::before {
@@ -1183,21 +1183,21 @@ body.debug div#drawer-from-top--step-30::before {
 }
 
 .magick-flows--step-30 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 76800px;
+  width: 375px;
+  left: 11850px;
 }
 
 .app-switcher-one.be-left-31 {
-  left: -79360px;
+  left: -12245px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-31 {
-  left: -79360px;
+  left: -12245px;
 }
 
 body.debug div#drawer-from-top--step-31::before {
@@ -1215,21 +1215,21 @@ body.debug div#drawer-from-top--step-31::before {
 }
 
 .magick-flows--step-31 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 79360px;
+  width: 375px;
+  left: 12245px;
 }
 
 .app-switcher-one.be-left-32 {
-  left: -81920px;
+  left: -12640px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-32 {
-  left: -81920px;
+  left: -12640px;
 }
 
 body.debug div#drawer-from-top--step-32::before {
@@ -1247,21 +1247,21 @@ body.debug div#drawer-from-top--step-32::before {
 }
 
 .magick-flows--step-32 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 81920px;
+  width: 375px;
+  left: 12640px;
 }
 
 .app-switcher-one.be-left-33 {
-  left: -84480px;
+  left: -13035px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-33 {
-  left: -84480px;
+  left: -13035px;
 }
 
 body.debug div#drawer-from-top--step-33::before {
@@ -1279,21 +1279,21 @@ body.debug div#drawer-from-top--step-33::before {
 }
 
 .magick-flows--step-33 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 84480px;
+  width: 375px;
+  left: 13035px;
 }
 
 .app-switcher-one.be-left-34 {
-  left: -87040px;
+  left: -13430px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-34 {
-  left: -87040px;
+  left: -13430px;
 }
 
 body.debug div#drawer-from-top--step-34::before {
@@ -1311,21 +1311,21 @@ body.debug div#drawer-from-top--step-34::before {
 }
 
 .magick-flows--step-34 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 87040px;
+  width: 375px;
+  left: 13430px;
 }
 
 .app-switcher-one.be-left-35 {
-  left: -89600px;
+  left: -13825px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-35 {
-  left: -89600px;
+  left: -13825px;
 }
 
 body.debug div#drawer-from-top--step-35::before {
@@ -1343,21 +1343,21 @@ body.debug div#drawer-from-top--step-35::before {
 }
 
 .magick-flows--step-35 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 89600px;
+  width: 375px;
+  left: 13825px;
 }
 
 .app-switcher-one.be-left-36 {
-  left: -92160px;
+  left: -14220px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-36 {
-  left: -92160px;
+  left: -14220px;
 }
 
 body.debug div#drawer-from-top--step-36::before {
@@ -1375,21 +1375,21 @@ body.debug div#drawer-from-top--step-36::before {
 }
 
 .magick-flows--step-36 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 92160px;
+  width: 375px;
+  left: 14220px;
 }
 
 .app-switcher-one.be-left-37 {
-  left: -94720px;
+  left: -14615px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-37 {
-  left: -94720px;
+  left: -14615px;
 }
 
 body.debug div#drawer-from-top--step-37::before {
@@ -1407,51 +1407,14 @@ body.debug div#drawer-from-top--step-37::before {
 }
 
 .magick-flows--step-37 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 94720px;
-}
-
-.app-switcher-one.be-left-38 {
-  left: -97280px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-38 {
-  left: -97280px;
-}
-
-body.debug div#drawer-from-top--step-38::before {
-  content: "Drawer #38";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-38 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 97280px;
+  width: 375px;
+  left: 14615px;
 }
 
 footer.magick-flows-stickey-footer_container {
-  position: absolute;
-  bottom: 0;
-}
-
-header.magick-flows-stickey-header_container {
   position: absolute;
   bottom: 0;
 }
@@ -1504,60 +1467,28 @@ header.magick-flows-stickey-header_container {
 .magick-flows-click-hints {
   position: absolute;
   display: block;
+  width: 80vw;
+  left: 10vw;
   border-radius: 0.65rem;
   color: white;
   text-align: center;
   padding: 1rem;
   vertical-align: middle;
-  font-size: 1.7rem;
+  font-size: 1rem;
   text-shadow: 0px 2px 2px black;
-  transition: 250ms all ease-in-out;
+  transition: 125ms top ease-in-out;
   background-color: rgba(0, 0, 0, 0.57);
-  top: -6rem;
-  will-change: all;
-  margin: 0.25rem;
-  opacity: 0;
-  z-index: 2;
-  font-weight: 300;
+  height: 3rem;
+  top: -10rem;
+  will-change: top;
 }
 
 .magick-flows-click-hints.slide-in {
-  top: 0rem;
-  opacity: 1;
-  transition: 250ms all ease-in-out;
-  will-change: all;
+  top: 1.25rem;
+  transition: 125ms top ease-in-out;
+  will-change: top;
 }
 
-html {
-  font-family: "Salesforce Sans", Arial, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
-  background: #514f4d;
-  color: #080707;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.container {
-  background: url(/images/home-background.jpg) no-repeat top left;
-  background-size: 100% 100%;
-  height: 720px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 1280;
-}
-
-body.magick-flow {
-  background: transparent !important;
-  overflow: hidden;
-  width: 100vw;
-}
-
-div#content-wrapper {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
-  border-radius: 0.25rem;
-  position: relative;
-  left: auto;
-  margin: 0px auto;
+.magick-flows--step-5 {
+  background-color: #00366f;
 }
