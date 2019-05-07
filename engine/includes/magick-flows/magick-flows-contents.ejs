@@ -50,14 +50,13 @@ _%>
 
 		const mainContentWebRootUrl = `${mainContentPath}${node.fileName}`;
 		const clickHintsAssetWebRootUrl = `${assetsContentPath}${node.id}___click-hint.png`;
-		const showHeader = node.hasStickyHeader === true || false;
+		let showHeader = node.hasStickyHeader === true || false;
 		const showFooter = node.hasStickyFooter === true || false;
-		const nodeData = node.data;
+		const nodeData = node.data || ['unset'];
 		const nodeNotes = node.notes;
 
 
-
-		const headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
+		let headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
 		const footerWebRootUrl = `${assetsContentPath}${node.stickyFooterFileName}`;
 
 
@@ -84,6 +83,24 @@ _%>
 		let thisMagickFlowsSlideClassnames = {
 			'magick-flows-step': true
 		};
+
+
+
+
+		if ( nodeData.find(k => k=='is-own-header') === 'is-own-header') {
+			thisMagickFlowsSlideClassnames['is-own-header'] = true;
+			nodeData.forEach(function(dataNode, dataNodeIndex){
+				if (dataNode !== 'is-own-header') {
+					if (dataNode.startsWith('own-header-height--')) {
+						renderSizeHeader['height'] = dataNode.split('--')[dataNode.split('--').length - 1];
+						renderSizeHeader['width'] = renderSizeMainContent.width;
+						thisMagickFlowsSlideClassnames['own-header-height--90'] = true;
+					}
+				}
+			});
+			showHeader = true;
+			headerWebRootUrl = mainContentWebRootUrl;
+		}
 
 		preLoadImages += `<img
 			class=""
@@ -220,7 +237,7 @@ _%>
 	id="magick-flows--step-<%=nodeIndex%>"
 >
 <%_ if (showHeader) { _%>
-	<header class="slds-colmagick-flows-stickey-header_container" style="background-image: url(<%=headerWebRootUrl%>); display: block; height: <%=renderSizeHeader.height%>px; width: <%=renderSizeHeader.width%>px; background-size: cover; background-color: transparent; z-index: 1;"></header>
+	<header class="slds-col magick-flows-stickey-header_container" style="background-image: url(<%=headerWebRootUrl%>); display: block; height: <%=renderSizeHeader.height%>px; width: <%=renderSizeHeader.width%>px; background-size: cover; background-color: transparent; z-index: 1;"></header>
 <%_ } _%>
 
 <%

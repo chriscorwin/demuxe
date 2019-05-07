@@ -54,6 +54,7 @@ const drawerFromLeft   = require('./drawer-from-left');
 const drawerFromRight  = require('./drawer-from-right');
 const iosNotification  = require('./ios-notification');
 const stickyHeader     = require('./sticky-header');
+const ownHeader        = require('./own-header');
 const stickyFooter     = require('./sticky-footer');
 
 module.exports = [
@@ -64,5 +65,6 @@ module.exports = [
 	drawerFromRight,
 	iosNotification,
 	stickyHeader,
+	ownHeader,
 	stickyFooter
 ];

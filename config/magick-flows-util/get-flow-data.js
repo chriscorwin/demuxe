@@ -3,7 +3,7 @@ const fs = require('fs');
 const util = require('util');
 const sizeOf = require('image-size');
 const sortAlphaNum = require('./sort-alpha-num.js');
-const getScreenTraits = require('./get-screen-traits.js');
+const getScreenTraits = require('./get-step-traits.js');
 const sassGenerator = require('./sass-generator.js');
 
 function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleError) {
