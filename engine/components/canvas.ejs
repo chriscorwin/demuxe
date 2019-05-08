@@ -1,3 +1,24 @@
+<%/*
+
+	This file, when included, will create a builder canvas in-place.
+
+	include('components/canvas', data)
+
+	Options for data:
+
+	rows: [
+		[
+			{
+				connector: { // optional. Connector arrows between objects. 'connector' must at least be an empty object to show.
+					direction: 'right', // optional. Defaults to 'right'.
+					label: 'Clicked' // optional. Defaults to nothing. Creates a little pill-box label on the connector arrow.
+				},
+				isConnection: true,
+				isJoin: true,
+				isUnconfigured: false
+
+*/%>
+
 <link rel="stylesheet" href="styles/canvas.css" />
 
 <div class="layout-builder layout-builder_logic">
@@ -9,7 +30,7 @@
 					const canvasElementClasses = classnames('builder-canvas-element',
 					{
 						'builder-canvas-element-connection': element.isConnection,
-						'builder-canvas-element_unconfigured': element.unconfigured,
+						'builder-canvas-element_isUnconfigured': element.isUnconfigured,
 						'builder-canvas-element_end': element.connector && element.connector.direction && element.connector.direction === 'stop'
 					});
 
@@ -28,7 +49,7 @@
 								<% } else { %>
 								<span>
 									<svg aria-hidden="true" class="slds-icon slds-icon_x-small slds-icon-text-default">
-										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#<%= element.connector.direction %>"></use>
+										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#<%= element.connector.direction || 'right' %>"></use>
 									</svg>
 								</span>
 								<% if (element.connector.label) { %><span class="builder-canvas-element-connector-label"><%= element.connector.label %></span><% } %>
