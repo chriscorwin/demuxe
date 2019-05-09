@@ -118,8 +118,8 @@ _%>
 			const iosNotificationWebRootUrl = `${assetsContentPath}${node.iosNotificationFileName}`;
 			iosNotificationHtmlOut = `
 				<div
-					id="ios-notification--step-${node.screensIndex}"
-					class="ios-notification ios-notification--step-${node.screensIndex}  magick-flows-step-asset"
+					id="ios-notification--step-${node.stepsIndex}"
+					class="ios-notification ios-notification--step-${node.stepsIndex}  magick-flows-step-asset"
 				><img src="${iosNotificationWebRootUrl}" /></div>
 			`
 		}
@@ -133,8 +133,8 @@ _%>
 			const drawerFromTopWebRootUrl = `${assetsContentPath}${node.drawerFromTopFileName}`;
 			drawerFromTopHtmlOut = `
 				<div
-					id="drawer-from-top--step-${node.screensIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-top magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
+					id="drawer-from-top--step-${node.stepsIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-top magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
 				><img src="${drawerFromTopWebRootUrl}" /></div>
 			`
 		}
@@ -147,8 +147,8 @@ _%>
 			const drawerFromLeftWebRootUrl = `${assetsContentPath}${node.drawerFromLeftFileName}`;
 			drawerFromLeftHtmlOut = `
 				<div
-					id="drawer-from-left--step-${node.screensIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-left magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
+					id="drawer-from-left--step-${node.stepsIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-left magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
 				><img src="${drawerFromLeftWebRootUrl}" /></div>
 			`
 		}
@@ -160,8 +160,8 @@ _%>
 			const drawerFromBottomWebRootUrl = `${assetsContentPath}${node.drawerFromBottomFileName}`;
 			drawerFromBottomHtmlOut = `
 				<div
-					id="drawer-from-bottom--step-${node.screensIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-bottom magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
+					id="drawer-from-bottom--step-${node.stepsIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-bottom magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
 				><img src="${drawerFromBottomWebRootUrl}" /></div>
 			`
 		}
@@ -173,8 +173,8 @@ _%>
 			const drawerFromRightWebRootUrl = `${assetsContentPath}${node.drawerFromRightFileName}`;
 			drawerFromRightHtmlOut = `
 				<div
-					id="drawer-from-right--step-${node.screensIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-right magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
+					id="drawer-from-right--step-${node.stepsIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-right magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
 				><img src="${drawerFromRightWebRootUrl}" /></div>
 			`
 		}
@@ -191,8 +191,8 @@ _%>
 
 			clickHintsHtmlOut += `
 				<div
-					id="magick-flows-click-hints--step-${node.screensIndex}"
-					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.screensIndex} "
+					id="magick-flows-click-hints--step-${node.stepsIndex}"
+					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.stepsIndex} "
 				>
 			`
 			let thisParagraphClassName = `slds-p-bottom_medium`;
@@ -252,9 +252,9 @@ _%>
 		if (isPng || isSvg || isGif || isJpeg) {
 			echo(`
 				<div
-					class="screenshot auto-replace is-image "
+					class="magick-flows--main-content auto-replace is-image "
 					style="height: ${renderSizeMainContent.height}px; width: ${renderSizeMainContent.width}px; background-size: cover; background-image: url(${mainContentWebRootUrl}); display: block;"
-					id="screenshot--step-${nodeIndex}"
+					id="magick-flows--main-content--step-${nodeIndex}"
 				>
 				</div>
 			`);
@@ -273,12 +273,12 @@ _%>
 				<video
 					autoplay
 					class="auto-replace is-video "
-					id="screenshot-wrapper--step-${nodeIndex}"
+					id="magick-flows--main-content-wrapper--step-${nodeIndex}"
 					playsinline
 				>
 					<source
-						class="screenshot auto-replace "
-						id="screenshot--step-${nodeIndex}"
+						class="magick-flows--main-content auto-replace "
+						id="magick-flows--main-content--step-${nodeIndex}"
 						src="${mainContentWebRootUrl}"
 						type="video/mp4"
 					>

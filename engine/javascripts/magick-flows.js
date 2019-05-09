@@ -413,17 +413,17 @@ function locationHashChanged(event) {
 
 			if (parseInt(item.dataset.slide) == clicks) {
 
-				const thisMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[clicks]}`;
-				const nextMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[nextClick]}`;
-				const theOneAfterNextMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[nextClick + 1]}`;
-				const previousMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[previousClick]}`;
+				const thisMagickFlowMainContentUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[clicks]}`;
+				const nextMagickFlowMainContentUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[nextClick]}`;
+				const theOneAfterNextMagickFlowMainContentUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[nextClick + 1]}`;
+				const previousMagickFlowMainContentUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[previousClick]}`;
 
 				// this is where we wanna also sense .esj or even maybe .html and do _other_ stuff
-				const isPng = thisMagickFlowScreenshotUrl.endsWith('.png');
-				const isSvg = thisMagickFlowScreenshotUrl.endsWith('.svg');
-				const isMp4 = thisMagickFlowScreenshotUrl.endsWith('.mp4');
-				const isGif = thisMagickFlowScreenshotUrl.endsWith('.gif');
-				const isJpeg = thisMagickFlowScreenshotUrl.endsWith('.jpg');
+				const isPng = thisMagickFlowMainContentUrl.endsWith('.png');
+				const isSvg = thisMagickFlowMainContentUrl.endsWith('.svg');
+				const isMp4 = thisMagickFlowMainContentUrl.endsWith('.mp4');
+				const isGif = thisMagickFlowMainContentUrl.endsWith('.gif');
+				const isJpeg = thisMagickFlowMainContentUrl.endsWith('.jpg');
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-next');
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-previous');
 				document.querySelector(`#${itemId}`).classList.add('slds-is-active');
@@ -570,9 +570,9 @@ document.onkeyup = function(e) {
 		window.location.hash = `#${previousClick}`;
 	} else if (e.which == 71) {
 		console.log("GIF...");
-		const theScreenshot = document.querySelector(`#magick-flows--step-${clicks} .auto-replace`);
-		console.log(`item img: `, theScreenshot.src);
-		theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
+		const theMainContent = document.queryselector(`#magick-flows--step-${clicks} .auto-replace`);
+		console.log(`item img: `, theMainContent.src);
+		theMainContent.src = theMainContent.src.replace(/\?.*$/,"")+"?x="+Math.random();
 	} else if (e.ctrlKey && e.altKey && e.which == 89) {
 		// these are here to remind us how to do combos, not cause we want these combos
 		// alert("Ctrl + Alt + Y shortcut combination was pressed");

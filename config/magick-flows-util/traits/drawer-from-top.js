@@ -5,29 +5,29 @@ const drawerFromTop = {
 	id: 'drawer-from-top',
 	isRequiredBy: (fileName) => fileName.match(drawerFromTop.id),
 	isAssetForTrait: (assetFileName) => assetFileName.match(drawerFromTop.id),
-	addTraitData: (traitsData, screenInfo, assetFileName, assetFileIndex) => {
-		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
+	addTraitData: (traitsData, stepInfo, assetFileName, assetFileIndex) => {
+		let pathToAssetFile = path.join(stepInfo.fullAssetsPath, assetFileName);
 		const dimensions = sizeOf(pathToAssetFile);
 		const dataToTrack = {
 			"drawerFromTopPathToAssetFile": pathToAssetFile,
 			"drawerFromTopHeight": dimensions.height,
 			"drawerFromTopWidth": dimensions.width,
-			"drawerFromTopScreensIndex": screenInfo.fileIndex,
+			"drawerFromTopStepsIndex": stepInfo.fileIndex,
 			"drawerFromTopAssetFileIndex": assetFileIndex,
 			"drawerFromTopFileName": assetFileName,
 			"drawerFromTopFileName": assetFileName,
 			"drawerFromTopFilePath": pathToAssetFile,
 		};
 		traitsData.assetsMetaData.push(dataToTrack);
-		traitsData.screenDataAttributes['showDrawerFromTop'] = true;
-		traitsData.screenDataAttributes['drawerFromTopPathToAssetFile'] = pathToAssetFile;
-		traitsData.screenDataAttributes['drawerFromTopHeight'] = dimensions.height;
-		traitsData.screenDataAttributes['drawerFromTopWidth'] = dimensions.width;
-		traitsData.screenDataAttributes['drawerFromTopScreensIndex'] = screenInfo.fileIndex;
-		traitsData.screenDataAttributes['drawerFromTopAssetFileIndex'] = assetFileIndex;
-		traitsData.screenDataAttributes['drawerFromTopFileName'] = assetFileName;
-		traitsData.screenDataAttributes['drawerFromTopFileName'] = assetFileName;
-		traitsData.screenDataAttributes['drawerFromTopFilePath'] = pathToAssetFile;
+		traitsData.stepDataAttributes['showDrawerFromTop'] = true;
+		traitsData.stepDataAttributes['drawerFromTopPathToAssetFile'] = pathToAssetFile;
+		traitsData.stepDataAttributes['drawerFromTopHeight'] = dimensions.height;
+		traitsData.stepDataAttributes['drawerFromTopWidth'] = dimensions.width;
+		traitsData.stepDataAttributes['drawerFromTopStepsIndex'] = stepInfo.fileIndex;
+		traitsData.stepDataAttributes['drawerFromTopAssetFileIndex'] = assetFileIndex;
+		traitsData.stepDataAttributes['drawerFromTopFileName'] = assetFileName;
+		traitsData.stepDataAttributes['drawerFromTopFileName'] = assetFileName;
+		traitsData.stepDataAttributes['drawerFromTopFilePath'] = pathToAssetFile;
 
 		return traitsData;
 	}

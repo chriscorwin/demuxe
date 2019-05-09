@@ -95,7 +95,7 @@ module.exports = function() {
         // use it to programaticallly prepare some SCSS variables for each one.
         configData.magickFlows.urlSlugs.forEach(magickFlowUrlSlug => {
             const thisMagickFlowObject = configData.magickFlows[magickFlowUrlSlug];
-            const thisMagickFlowScreens = configData.magickFlows[magickFlowUrlSlug].screens;
+            const thisMagickFlowSteps = configData.magickFlows[magickFlowUrlSlug].steps;
             const thisMagickFlowAssets = configData.magickFlows[magickFlowUrlSlug].assets;
             
 
@@ -112,7 +112,7 @@ module.exports = function() {
 
             // }
 
-            // const thisMagickFlowMainImagesForScssVariables = thisMagickFlowScreens.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+            // const thisMagickFlowMainImagesForScssVariables = thisMagickFlowSteps.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
             // const thisMagickFlowAssetsImagesForScssVariables = thisMagickFlowAssets.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
             // const thisMagickFlowBackgroundImageVariable = [];
 

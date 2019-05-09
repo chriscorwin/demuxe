@@ -3,31 +3,31 @@ const sizeOf = require('image-size');
 
 const ownHeader = {
 	id: 'own-header',
-	isrequiredby: (fileName) => fileName.match(ownHeader.id),
+	isRequiredBy: () => false,
 	isAssetForTrait: (assetFileName) => assetFileName.match(ownHeader.id),
-	addTraitData: (traitsData, screenInfo, assetFileName, assetFileIndex) => {
-		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
+	addTraitData: (traitsData, stepInfo, assetFileName, assetFileIndex) => {
+		let pathToAssetFile = path.join(stepInfo.fullAssetsPath, assetFileName);
 		const dimensions = sizeOf(pathToAssetFile);
 		const dataToTrack = {
 			"ownHeaderPathToAssetFile": pathToAssetFile,
 			"ownHeaderHeight": dimensions.height,
 			"ownHeaderWidth": dimensions.width,
-			"ownHeaderScreensIndex": screenInfo.fileIndex,
+			"ownHeaderStepsIndex": stepInfo.fileIndex,
 			"ownHeaderAssetFileIndex": assetFileIndex,
 			"ownHeaderFileName": assetFileName,
 			"ownHeaderFileName": assetFileName,
 			"ownHeaderFilePath": pathToAssetFile,
 		};
 		traitsData.assetsMetaData.push(dataToTrack);
-		traitsData.screenDataAttributes['hasStickyHeader'] = true;
-		traitsData.screenDataAttributes['ownHeaderPathToAssetFile'] = pathToAssetFile;
-		traitsData.screenDataAttributes['ownHeaderHeight'] = dimensions.height;
-		traitsData.screenDataAttributes['ownHeaderWidth'] = dimensions.width;
-		traitsData.screenDataAttributes['ownHeaderScreensIndex'] = screenInfo.fileIndex;
-		traitsData.screenDataAttributes['ownHeaderAssetFileIndex'] = assetFileIndex;
-		traitsData.screenDataAttributes['ownHeaderFileName'] = assetFileName;
-		traitsData.screenDataAttributes['ownHeaderFileName'] = assetFileName;
-		traitsData.screenDataAttributes['ownHeaderFilePath'] = pathToAssetFile;
+		traitsData.stepDataAttributes['hasStickyHeader'] = true;
+		traitsData.stepDataAttributes['ownHeaderPathToAssetFile'] = pathToAssetFile;
+		traitsData.stepDataAttributes['ownHeaderHeight'] = dimensions.height;
+		traitsData.stepDataAttributes['ownHeaderWidth'] = dimensions.width;
+		traitsData.stepDataAttributes['ownHeaderStepsIndex'] = stepInfo.fileIndex;
+		traitsData.stepDataAttributes['ownHeaderAssetFileIndex'] = assetFileIndex;
+		traitsData.stepDataAttributes['ownHeaderFileName'] = assetFileName;
+		traitsData.stepDataAttributes['ownHeaderFileName'] = assetFileName;
+		traitsData.stepDataAttributes['ownHeaderFilePath'] = pathToAssetFile;
 
 		return traitsData;
 	}
