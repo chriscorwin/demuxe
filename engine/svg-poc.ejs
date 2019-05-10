@@ -141,7 +141,7 @@ circle.volume-active, circle.volume-inactive {
   animation-delay: 2000ms;
 }
 
-.set5 circle {
+.set5 circle, .set6 rect {
   animation-delay: 2400ms;
 }
 
@@ -271,48 +271,39 @@ rect {
       
       <!-- the discs -->
       <g>
-        <g class="set0" transform="translate(70,0)">
-          <circle class="volume-active" r="100" clip-path="url(#clip-active)"/>
-          <circle class="volume-active" r="26.07632567416318" clip-path="url(#clip-active)"/>
-          <circle class="volume-inactive" r="62.05115586174366" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+      <% 
+      const stops = [
+        70,
+        210,
+        350,
+        490,
+        630,
+        770
+      ];
+
+      const discs = [
+        [{ type: 'active', r: 100 }, { type: 'active', r: 26 }, { type: 'inactive', r: 62 }],
+        [{ type: 'active', r: 47 }, { type: 'active', r: 28 }, { type: 'inactive', r: 36 }, {type: 'inactive', r: 23}],
+        [{ type: 'active', r: 90 }, { type: 'active', r: 10 }, { type: 'inactive', r: 50 }, {type: 'inactive', r: 5}],
+        [{ type: 'active', r: 40 }, { type: 'active', r: 5 }, { type: 'inactive', r: 70 }, {type: 'inactive', r: 10}],
+        [{ type: 'active', r: 10 }, { type: 'active', r: 30 }, { type: 'inactive', r: 40 }, {type: 'inactive', r: 15}],
+        [{ type: 'active', r: 70 }, { type: 'active', r: 50 }, { type: 'inactive', r: 90 }, {type: 'inactive', r: 50}]
+      ];
+
+      discs.forEach((disc, i) => { %>
+        <g class="set<%= i %>" transform="translate(<%= stops[i] %>,0)">
+          <% disc.forEach(circle => {
+            echo(`<circle class="volume-${circle.type}" r="${circle.r}" clip-path="url(#clip-${circle.type})"/>`);
+          }); %>
         </g>
-        <g class="set1" transform="translate(210,0)">
-          <circle class="volume-active" r="47.94781712301041" clip-path="url(#clip-active)"/>
-          <circle class="volume-active" r="28.68397462050092" clip-path="url(#clip-active)"/>
-          <circle class="volume-inactive" r="36.059213215855685" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-inactive" r="23.7108246512718" clip-path="url(#clip-inactive)"/>
-        </g>
-        <g class="set2" transform="translate(350,0)">
-          <circle class="volume-active" r="90" clip-path="url(#clip-active)"/>
-          <circle class="volume-active" r="50" clip-path="url(#clip-active)"/>
-          <circle class="volume-inactive" r="90" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-inactive" r="50" clip-path="url(#clip-inactive)"/>
-        </g>
-        <g class="set3" transform="translate(490,0)">
-          <circle class="volume-active" r="90" clip-path="url(#clip-active)"/>
-          <circle class="volume-active" r="50" clip-path="url(#clip-active)"/>
-          <circle class="volume-inactive" r="90" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-inactive" r="50" clip-path="url(#clip-inactive)"/>
-        </g>
-        <g class="set4" transform="translate(630,0)">
-          <circle class="volume-active" r="90" clip-path="url(#clip-active)"/>
-          <circle class="volume-active" r="50" clip-path="url(#clip-active)"/>
-          <circle class="volume-inactive" r="90" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-inactive" r="50" clip-path="url(#clip-inactive)"/>
-        </g>
-        <g class="set5" transform="translate(770,0)">
-          <circle class="volume-active" r="90" clip-path="url(#clip-active)"/>
-          <circle class="volume-active" r="50" clip-path="url(#clip-active)"/>
-          <circle class="volume-inactive" r="90" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-inactive" r="50" clip-path="url(#clip-inactive)"/>
-        </g>
+      <% }); %>
       </g>
       
 
-      <!-- the arcs -->
+      <!-- the arcs & rectangles -->
       <g class="flow-container">
         
+        <!-- the rectangles -->
         <g class="flow set0" transform="translate(70,0)">
           <rect width="20" x="-10" y="-160" class="flow-dropin" fill="url(#gradient-dropin)"/>
         </g>
@@ -331,10 +322,32 @@ rect {
           <rect width="4.89447530589677" x="-2.447237652948385" y="0" class="flow-dropoff flow-thin" fill="url(#gradient-dropoff)"/>
         </g>
 
+        <g class="flow set3" transform="translate(490,0)">
+          <rect width="1.7823580658587197" x="-0.8911790329293598" y="-160" class="flow-dropin flow-thin" fill="url(#gradient-dropin)"/>
+        </g>
         <g class="flow set3" transform="translate(350,0)">
-          <rect width="5.939678948550235" x="-2.9698394742751173" y="0" class="flow-dropoff flow-thin" fill="url(#gradient-dropoff)"/>
+          <rect width="4.89447530589677" x="-2.447237652948385" y="0" class="flow-dropoff flow-thin" fill="url(#gradient-dropoff)"/>
         </g>
 
+        <g class="flow set4" transform="translate(630,0)">
+          <rect width="1.7823580658587197" x="-0.8911790329293598" y="-160" class="flow-dropin flow-thin" fill="url(#gradient-dropin)"/>
+        </g>
+        <g class="flow set4" transform="translate(490,0)">
+          <rect width="4.89447530589677" x="-2.447237652948385" y="0" class="flow-dropoff flow-thin" fill="url(#gradient-dropoff)"/>
+        </g>
+
+        <g class="flow set5" transform="translate(770,0)">
+          <rect width="1.7823580658587197" x="-0.8911790329293598" y="-160" class="flow-dropin flow-thin" fill="url(#gradient-dropin)"/>
+        </g>
+        <g class="flow set5" transform="translate(630,0)">
+          <rect width="4.89447530589677" x="-2.447237652948385" y="0" class="flow-dropoff flow-thin" fill="url(#gradient-dropoff)"/>
+        </g>
+
+        <g class="flow set6" transform="translate(770,0)">
+          <rect width="4.89447530589677" x="-2.447237652948385" y="0" class="flow-dropoff flow-thin" fill="url(#gradient-dropoff)"/>
+        </g>
+
+        <!-- the arcs -->
         <g class="flow" transform="translate(70,0)">
           <path class="flow-forward" style="animation-delay: 400ms;" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="9.312916295412949"/>
         </g>
