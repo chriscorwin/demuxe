@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="812px" viewBox="0 0 375 812" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>9998___ID=the-end-is-near</title>
+    <desc>Created with Sketch.</desc>
+    <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="9998___ID=the-end-is-near">
+            <rect id="Background" fill="#F3F2F2" x="0" y="0" width="375" height="812"></rect>
+            <g id="Magick-Flows-Tutorial-Texts" transform="translate(20.000000, 107.000000)">
+                <g id="Group" stroke-width="1" fill-rule="evenodd"></g>
+                <text id="Magick-Flows-are-gen" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal"></text>
+                <text id="Click-or-Key" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="18" font-weight="bold"></text>
+                <text id="This-Magick-Flow-ser" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="20" fill="#080707">
+                    <tspan x="0" y="59">The next step is the last step.</tspan>
+                    <tspan x="0" y="79"></tspan>
+                    <tspan x="0" y="99">Click to go there now.</tspan>
+                </text>
+                <text id="Testing-Magick-Flows" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="22" font-weight="bold" line-spacing="27" fill="#080707">
+                    <tspan x="0" y="22">The End is Near</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
