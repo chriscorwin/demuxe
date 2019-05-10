@@ -42,6 +42,11 @@ _%>
 	 }
 
 
+	function testForEscapeHatch(node) {
+		return node.includes('is-escape-hatch');
+	}
+
+
 	let maxWidth = thisMagickFlowConfig.templateSizingFileDimensions.width || 1280;
 	let maxHeight = thisMagickFlowConfig.templateSizingFileDimensions.height || 720;
 	
@@ -84,6 +89,26 @@ _%>
 		let thisMagickFlowsSlideClassnames = {
 			'magick-flows-step': true
 		};
+
+
+
+		let hasEscapeHatch = nodeData.some(testForEscapeHatch);
+		let indexOfEscapeHatch = nodeData.findIndex(testForEscapeHatch);
+		let newUrlSlugForEscapeHatch = '';
+		let escapeHatchContentHtmlOut = '';
+		if ( hasEscapeHatch === true ) {
+			newUrlSlugForEscapeHatch = nodeData[indexOfEscapeHatch].split('--')[1];
+			escapeHatchContentHtmlOut += `
+<iframe id="magick-flows-iframe--${node.stepsIndex}"
+    title="Inline Frame Example"
+    width="${renderSizeMainContent.width}"
+    height="${mainContentScrollableAreaHeight}"
+    src="/${newUrlSlugForEscapeHatch}">
+</iframe>
+`
+		}
+
+
 
 
 
@@ -250,6 +275,9 @@ _%>
 			>
 		`);
 
+		if (hasEscapeHatch === true) {
+			echo(`${escapeHatchContentHtmlOut}`);
+		} 
 		if (isPng || isSvg || isGif || isJpeg) {
 			echo(`
 				<div

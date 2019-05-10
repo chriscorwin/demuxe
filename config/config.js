@@ -85,9 +85,13 @@ module.exports = function() {
 
     configData = addMagickFlowsToConfig(configData);
 
+
+
     if (!configData.magickFlowURLS.length) {
         console.warn(`WARNING: No Magick Flows were discovered. This is pretty rare, since, the system comes with at least _one_ to show you how they work. Y'all okay?`);
     } else {
+
+        configData['urlSlug'] = configData.magickFlows.urlSlugs[0];
 
         appViews.push(path.join(__dirname, '../', 'product-templates', 'magick-flows'));
 
