@@ -77,9 +77,72 @@ circle {
     transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
 }
 
+circle.volume-active, circle.volume-inactive {
+  animation: grow-circle 400ms linear backwards;
+}
+
+@keyframes grow-circle {
+  from {
+    r: 0;
+  }
+}
+
 .flow line, .flow path, .flow rect {
     -webkit-transition: opacity .5s,visibility .5s;
     transition: opacity .5s,visibility .5s;
+}
+
+.flow rect {
+  animation: grow 400ms linear forwards;
+}
+
+@keyframes grow {
+  from {
+    height: 0px;
+  }
+
+  to {
+    height: 160px;
+  }
+}
+
+.flow path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 1s linear forwards;
+  fill: none;
+}
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.set0 circle, .set1 rect {
+  animation-delay: 400ms;
+}
+
+.set1 circle, .set2 rect {
+  animation-delay: 800ms;
+}
+
+.set2 circle, .set3 rect {
+  animation-delay: 1200ms;
+}
+
+.set3 circle, .set4 rect {
+  animation-delay: 1600ms;
+}
+
+.set4 circle, .set5 rect {
+  animation-delay: 2000ms;
+}
+
+.set5 circle {
+  animation-delay: 2400ms;
 }
 
 .flow-dropin {
@@ -196,115 +259,173 @@ rect {
     </clipPath>
   </defs>
   <g class="graph-data" transform="translate(0,331.5)">
+
+    <!-- The center line -->
     <g class="graph-marks">
       <rect class="axis" width="1012" fill="url(#gradient-axis)" x="80" y="-1" height="2"> </rect>
       <line class="separator separator-row separator-graph" x1="0" y1="0" x2="100%" y2="0"> </line>
     </g>
+
+
     <g class="graph-elements-svg" transform="translate(166,0)">
-      <g class="volume-container" thx-volume="journeysStateGraph.lifecycleData.volumes" thx-volume-is-update="journeys.isAggregateUpdate">
-        <g class="volume state-default" transform="translate(70,0)" data-id="MzEyMTQ" data-journeys-id="Awareness">
-          <circle class="volume-shape volume-all volume-active" r="97.02840460768113" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-helped volume-active" r="26.07632567416318" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-all volume-inactive" r="62.05115586174366" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+      
+      <!-- the discs -->
+      <g>
+        <g class="set0" transform="translate(70,0)">
+          <circle class="volume-active" r="100" clip-path="url(#clip-active)"/>
+          <circle class="volume-active" r="26.07632567416318" clip-path="url(#clip-active)"/>
+          <circle class="volume-inactive" r="62.05115586174366" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
         </g>
-        <g class="volume state-default" transform="translate(210,0)" data-id="MzEyMTU" data-journeys-id="Research">
-          <circle class="volume-shape volume-all volume-active" r="47.94781712301041" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-helped volume-active" r="28.68397462050092" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-all volume-inactive" r="36.059213215855685" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-shape volume-helped volume-inactive" r="23.7108246512718" clip-path="url(#clip-inactive)"/>
+        <g class="set1" transform="translate(210,0)">
+          <circle class="volume-active" r="47.94781712301041" clip-path="url(#clip-active)"/>
+          <circle class="volume-active" r="28.68397462050092" clip-path="url(#clip-active)"/>
+          <circle class="volume-inactive" r="36.059213215855685" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-inactive" r="23.7108246512718" clip-path="url(#clip-inactive)"/>
         </g>
-        <g class="volume state-default" transform="translate(350,0)" data-id="MzAyNDg" data-journeys-id="Purchase">
-          <circle class="volume-shape volume-all volume-active" r="0" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-helped volume-active" r="0" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-all volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+        <g class="set2" transform="translate(350,0)">
+          <circle class="volume-active" r="90" clip-path="url(#clip-active)"/>
+          <circle class="volume-active" r="50" clip-path="url(#clip-active)"/>
+          <circle class="volume-inactive" r="90" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-inactive" r="50" clip-path="url(#clip-inactive)"/>
         </g>
-        <g class="volume state-default" transform="translate(490,0)" data-id="MzAyNDk" data-journeys-id="Service">
-          <circle class="volume-shape volume-all volume-active" r="0" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-helped volume-active" r="0" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-all volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+        <g class="set3" transform="translate(490,0)">
+          <circle class="volume-active" r="90" clip-path="url(#clip-active)"/>
+          <circle class="volume-active" r="50" clip-path="url(#clip-active)"/>
+          <circle class="volume-inactive" r="90" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-inactive" r="50" clip-path="url(#clip-inactive)"/>
         </g>
-        <g class="volume state-default" transform="translate(630,0)" data-id="MzAyNTA" data-journeys-id="Advocate">
-          <circle class="volume-shape volume-all volume-active" r="0" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-helped volume-active" r="0" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-all volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+        <g class="set4" transform="translate(630,0)">
+          <circle class="volume-active" r="90" clip-path="url(#clip-active)"/>
+          <circle class="volume-active" r="50" clip-path="url(#clip-active)"/>
+          <circle class="volume-inactive" r="90" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-inactive" r="50" clip-path="url(#clip-inactive)"/>
         </g>
-        <g class="volume state-default" transform="translate(770,0)" data-id="NzY4NDI" data-journeys-id="Use">
-          <circle class="volume-shape volume-all volume-active" r="0" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-helped volume-active" r="0" clip-path="url(#clip-active)"/>
-          <circle class="volume-shape volume-all volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
-          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
-        </g>
-      </g>
-      <g class="flow-container" thx-flow="journeysStateGraph.lifecycleData.flows" thx-flow-is-update="journeys.isAggregateUpdate" thx-flow-type="lifecycle">
-        <g class="flow flow-lifecycle state-default" transform="translate(70,0)" data-id="to[MzEyMTQ]" data-journeys-id="to[Awareness]" data-journeys-id-to="Awareness" data-value="1342">
-          <rect width="20" height="160" x="-10" y="-160" class="flow-dropin flow-type-drop flow-normal flow-shape" fill="url(#gradient-dropin)"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(70,0)" data-id="from[MzEyMTQ]" data-journeys-id="from[Awareness]" data-journeys-id-from="Awareness" data-value="661">
-          <rect width="14.664891734700591" height="160" x="-7.3324458673502955" y="0" class="flow-dropoff flow-type-drop flow-normal flow-shape" fill="url(#gradient-dropoff)"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(70,0)" data-id="from[MzEyMTQ]:to[MzEyMTU]" data-journeys-id="from[Awareness]:to[Research]" data-journeys-id-from="Awareness" data-journeys-id-to="Research" data-value="261">
-          <path class="flow-forward flow-type-directional flow-normal flow-shape" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="9.312916295412949" stroke-dasharray=" " stroke-dashoffset="0"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(210,0)" data-id="from[MzEyMTU]:to[MzEyMTQ]" data-journeys-id="from[Research]:to[Awareness]" data-journeys-id-from="Research" data-journeys-id-to="Awareness" data-value="173">
-          <path class="flow-backward flow-type-directional flow-normal flow-shape" fill="none" d="M0,0 A70,70 0 0 1 -140,0" stroke="url(#gradient-backward)" stroke-width="7.420354178076197" stroke-dasharray=" " stroke-dashoffset="0"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(70,0)" data-id="from[MzEyMTQ]:to[MzAyNDg]" data-journeys-id="from[Awareness]:to[Purchase]" data-journeys-id-from="Awareness" data-journeys-id-to="Purchase" data-value="151">
-          <path class="flow-forward flow-type-directional flow-normal flow-shape" fill="none" d="M0,0 A140,140 0 0 1 280,0" stroke="url(#gradient-forward)" stroke-width="6.848833656406428" stroke-dasharray=" " stroke-dashoffset="0"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(350,0)" data-id="from[MzAyNDg]:to[MzEyMTQ]" data-journeys-id="from[Purchase]:to[Awareness]" data-journeys-id-from="Purchase" data-journeys-id-to="Awareness" data-value="146">
-          <path class="flow-backward flow-type-directional flow-normal flow-shape" fill="none" d="M0,0 A140,140 0 0 1 -280,0" stroke="url(#gradient-backward)" stroke-width="6.7112564915517865" stroke-dasharray=" " stroke-dashoffset="0"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(350,0)" data-id="from[MzAyNDg]" data-journeys-id="from[Purchase]" data-journeys-id-from="Purchase" data-value="120">
-          <rect width="5.939678948550235" height="160" x="-2.9698394742751173" y="0" class="flow-dropoff flow-type-drop flow-thin flow-shape" fill="url(#gradient-dropoff)"/>
-          <rect width="6" height="160" x="-3" y="0" class="flow-dropoff flow-type-drop flow-thin flow-tooltip-helper" fill="transparent"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(210,0)" data-id="from[MzEyMTU]" data-journeys-id="from[Research]" data-journeys-id-from="Research" data-value="90">
-          <rect width="4.89447530589677" height="160" x="-2.447237652948385" y="0" class="flow-dropoff flow-type-drop flow-thin flow-shape" fill="url(#gradient-dropoff)"/>
-          <rect width="6" height="160" x="-3" y="0" class="flow-dropoff flow-type-drop flow-thin flow-tooltip-helper" fill="transparent"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(210,0)" data-id="from[MzEyMTU]:to[MzAyNDg]" data-journeys-id="from[Research]:to[Purchase]" data-journeys-id-from="Research" data-journeys-id-to="Purchase" data-value="89">
-          <path class="flow-forward flow-type-directional flow-thin flow-shape" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="4.8558482851519305" stroke-dasharray=" " stroke-dashoffset="0"/>
-          <path class="flow-forward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="transparent" stroke-width="6" stroke-dasharray=" " stroke-dashoffset="0"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(210,0)" data-id="to[MzEyMTU]" data-journeys-id="to[Research]" data-journeys-id-to="Research" data-value="75">
-          <rect width="4.281632961555916" height="160" x="-2.140816480777958" y="-160" class="flow-dropin flow-type-drop flow-thin flow-shape" fill="url(#gradient-dropin)"/>
-          <rect width="6" height="160" x="-3" y="-160" class="flow-dropin flow-type-drop flow-thin flow-tooltip-helper" fill="transparent"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(350,0)" data-id="to[MzAyNDg]" data-journeys-id="to[Purchase]" data-journeys-id-to="Purchase" data-value="31">
-          <rect width="1.7823580658587197" height="160" x="-0.8911790329293598" y="-160" class="flow-dropin flow-type-drop flow-thin flow-shape" fill="url(#gradient-dropin)"/>
-          <rect width="6" height="160" x="-3" y="-160" class="flow-dropin flow-type-drop flow-thin flow-tooltip-helper" fill="transparent"/>
-        </g>
-        <g class="flow flow-lifecycle state-default" transform="translate(350,0)" data-id="from[MzAyNDg]:to[MzEyMTU]" data-journeys-id="from[Purchase]:to[Research]" data-journeys-id-from="Purchase" data-journeys-id-to="Research" data-value="24">
-          <path class="flow-backward flow-type-directional flow-thin flow-shape" fill="none" d="M0,0 A70,70 0 0 1 -140,0" stroke="url(#gradient-backward)" stroke-width="1.1843932284798677" stroke-dasharray=" " stroke-dashoffset="0"/>
-          <path class="flow-backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="M0,0 A70,70 0 0 1 -140,0" stroke="transparent" stroke-width="6" stroke-dasharray=" " stroke-dashoffset="0"/>
+        <g class="set5" transform="translate(770,0)">
+          <circle class="volume-active" r="90" clip-path="url(#clip-active)"/>
+          <circle class="volume-active" r="50" clip-path="url(#clip-active)"/>
+          <circle class="volume-inactive" r="90" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-inactive" r="50" clip-path="url(#clip-inactive)"/>
         </g>
       </g>
-      <g class="node-container" thx-node="journeysStateGraph.lifecycleData.volumes" thx-node-is-update="journeys.isAggregateUpdate" thx-node-type="lifecycle">
-        <g opacity="1" class="node state-default node-focusable" transform="translate(70,0)" data-id="MzEyMTQ" data-journeys-id="Awareness">
+      
+
+      <!-- the arcs -->
+      <g class="flow-container">
+        
+        <g class="flow set0" transform="translate(70,0)">
+          <rect width="20" x="-10" y="-160" class="flow-dropin" fill="url(#gradient-dropin)"/>
+        </g>
+
+        <g class="flow set1" transform="translate(70,0)">
+          <rect width="14.664891734700591" x="-7.3324458673502955" y="0" class="flow-dropoff" fill="url(#gradient-dropoff)"/>
+        </g>
+        <g class="flow set1" transform="translate(210,0)">
+          <rect width="4.281632961555916" x="-2.140816480777958" y="-160" class="flow-dropin flow-thin" fill="url(#gradient-dropin)"/>
+        </g>
+
+        <g class="flow set2" transform="translate(350,0)">
+          <rect width="1.7823580658587197" x="-0.8911790329293598" y="-160" class="flow-dropin flow-thin" fill="url(#gradient-dropin)"/>
+        </g>
+        <g class="flow set2" transform="translate(210,0)">
+          <rect width="4.89447530589677" x="-2.447237652948385" y="0" class="flow-dropoff flow-thin" fill="url(#gradient-dropoff)"/>
+        </g>
+
+        <g class="flow set3" transform="translate(350,0)">
+          <rect width="5.939678948550235" x="-2.9698394742751173" y="0" class="flow-dropoff flow-thin" fill="url(#gradient-dropoff)"/>
+        </g>
+
+        <g class="flow" transform="translate(70,0)">
+          <path class="flow-forward" style="animation-delay: 400ms;" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="9.312916295412949"/>
+        </g>
+        <g class="flow" transform="translate(70,0)">
+          <path class="flow-forward" style="animation-delay: 400ms;" fill="none" d="M0,0 A140,140 0 0 1 280,0" stroke="url(#gradient-forward)" stroke-width="6.848833656406428"/>
+        </g>
+
+        <g class="flow" transform="translate(210,0)">
+          <path class="flow-forward flow-thin" style="animation-delay: 800ms;" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="4.8558482851519305"/>
+        </g>
+        <g class="flow" transform="translate(210,0)">
+          <path class="flow-forward flow-thin" style="animation-delay: 800ms;" fill="none" d="M0,0 A70,70 0 0 1 280,0" stroke="url(#gradient-forward)" stroke-width="4.8558482851519305"/>
+        </g>
+
+        <g class="flow" transform="translate(350,0)">
+          <path class="flow-forward flow-thin" style="animation-delay: 1200ms;" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="4.8558482851519305"/>
+        </g>
+        <g class="flow" transform="translate(350,0)">
+          <path class="flow-forward flow-thin" style="animation-delay: 1200ms;" fill="none" d="M0,0 A70,70 0 0 1 280,0" stroke="url(#gradient-forward)" stroke-width="4.8558482851519305"/>
+        </g>
+
+        <g class="flow" transform="translate(490,0)">
+          <path class="flow-forward flow-thin" style="animation-delay: 1600ms;" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="4.8558482851519305"/>
+        </g>
+        <g class="flow" transform="translate(490,0)">
+          <path class="flow-forward flow-thin" style="animation-delay: 1600ms;" fill="none" d="M0,0 A70,70 0 0 1 280,0" stroke="url(#gradient-forward)" stroke-width="4.8558482851519305"/>
+        </g>
+
+        <g class="flow" transform="translate(630,0)">
+          <path class="flow-forward flow-thin" style="animation-delay: 2000ms;" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="4.8558482851519305"/>
+        </g>
+
+
+        <g class="flow" transform="translate(210,0)">
+          <path class="flow-backward" style="animation-delay: 800ms;" d="M0,0 A70,70 0 0 1 -140,0" stroke="url(#gradient-backward)" stroke-width="7.420354178076197"/>
+        </g>
+
+
+        <g class="flow" transform="translate(350,0)">
+          <path class="flow-backward" style="animation-delay: 1200ms;" d="M0,0 A140,140 0 0 1 -280,0" stroke="url(#gradient-backward)" stroke-width="6.7112564915517865"/>
+        </g>
+        <g class="flow" transform="translate(350,0)">
+          <path class="flow-backward flow-thin" style="animation-delay: 1200ms;" d="M0,0 A70,70 0 0 1 -140,0" stroke="url(#gradient-backward)" stroke-width="1.1843932284798677"/>
+        </g>
+
+        <g class="flow" transform="translate(490,0)">
+          <path class="flow-backward" style="animation-delay: 1600ms;" d="M0,0 A140,140 0 0 1 -280,0" stroke="url(#gradient-backward)" stroke-width="6.7112564915517865"/>
+        </g>
+        <g class="flow" transform="translate(490,0)">
+          <path class="flow-backward flow-thin" style="animation-delay: 1600ms;" d="M0,0 A70,70 0 0 1 -140,0" stroke="url(#gradient-backward)" stroke-width="1.1843932284798677"/>
+        </g>
+
+        <g class="flow" transform="translate(630,0)">
+          <path class="flow-backward" style="animation-delay: 2000ms;" d="M0,0 A140,140 0 0 1 -280,0" stroke="url(#gradient-backward)" stroke-width="6.7112564915517865"/>
+        </g>
+        <g class="flow" transform="translate(630,0)">
+          <path class="flow-backward flow-thin" style="animation-delay: 2000ms;" d="M0,0 A70,70 0 0 1 -140,0" stroke="url(#gradient-backward)" stroke-width="1.1843932284798677"/>
+        </g>
+
+        <g class="flow" transform="translate(770,0)">
+          <path class="flow-backward" style="animation-delay: 2400ms;" d="M0,0 A140,140 0 0 1 -280,0" stroke="url(#gradient-backward)" stroke-width="6.7112564915517865"/>
+        </g>
+        <g class="flow" transform="translate(770,0)">
+          <path class="flow-backward flow-thin" style="animation-delay: 2400ms;" d="M0,0 A70,70 0 0 1 -140,0" stroke="url(#gradient-backward)" stroke-width="1.1843932284798677"/>
+        </g>
+      </g>
+
+
+      <!-- the circles on the lines -->
+      <g class="node-container">
+        <g opacity="1" class="node node-focusable" transform="translate(70,0)">
           <circle r="15" class="tick-outer"/>
           <circle r="10" class="tick"/>
         </g>
-        <g opacity="1" class="node state-default node-focusable" transform="translate(210,0)" data-id="MzEyMTU" data-journeys-id="Research">
+        <g opacity="1" class="node node-focusable" transform="translate(210,0)">
           <circle r="15" class="tick-outer"/>
           <circle r="10" class="tick"/>
         </g>
-        <g opacity="1" class="node state-default node-focusable" transform="translate(350,0)" data-id="MzAyNDg" data-journeys-id="Purchase">
+        <g opacity="1" class="node node-focusable" transform="translate(350,0)">
           <circle r="15" class="tick-outer"/>
           <circle r="10" class="tick"/>
         </g>
-        <g opacity="1" class="node state-default" transform="translate(490,0)" data-id="MzAyNDk" data-journeys-id="Service">
+        <g opacity="1" class="node" transform="translate(490,0)">
           <circle r="15" class="tick-outer"/>
           <circle r="10" class="tick"/>
         </g>
-        <g opacity="1" class="node state-default" transform="translate(630,0)" data-id="MzAyNTA" data-journeys-id="Advocate">
+        <g opacity="1" class="node" transform="translate(630,0)">
           <circle r="15" class="tick-outer"/>
           <circle r="10" class="tick"/>
         </g>
-        <g opacity="1" class="node state-default" transform="translate(770,0)" data-id="NzY4NDI" data-journeys-id="Use">
+        <g opacity="1" class="node" transform="translate(770,0)">
           <circle r="15" class="tick-outer"/>
           <circle r="10" class="tick"/>
         </g>
