@@ -72,7 +72,7 @@ function closeIFrame(){
 		window.location.hash = `#${clicks}`;
 	}, hashChangeTiming);
 
-	document.querySelector( '#magick-flows-iframe--1' ).remove();
+	document.querySelector( '#magick-flows-iframe--1' ).classList.toggle('slds-hide');
 }
 
 
