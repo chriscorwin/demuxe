@@ -160,7 +160,7 @@ body, .container {
   left: 0;
   position: absolute;
   top: 0;
-  transition: 400ms transform, 800ms left;
+  transition: 2000ms transform, 800ms left;
   width: 37629px;
 }
 
@@ -2056,7 +2056,7 @@ footer.magick-flows-stickey-footer_container {
 
 header.magick-flows-stickey-header_container {
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
 
 /**
@@ -2112,19 +2112,23 @@ header.magick-flows-stickey-header_container {
   text-align: center;
   padding: 1rem;
   vertical-align: middle;
-  font-size: 1rem;
+  font-size: 1.7rem;
   text-shadow: 0px 2px 2px black;
-  transition: 125ms top ease-in-out;
+  transition: 250ms all ease-in-out;
   background-color: rgba(0, 0, 0, 0.57);
-  top: -12rem;
-  will-change: top;
+  top: -6rem;
+  will-change: all;
   margin: 0.25rem;
+  opacity: 0;
+  z-index: 2;
+  font-weight: 300;
 }
 
 .magick-flows-click-hints.slide-in {
   top: 0rem;
-  transition: 125ms top ease-in-out;
-  will-change: top;
+  opacity: 1;
+  transition: 250ms all ease-in-out;
+  will-change: all;
 }
 
 html {
