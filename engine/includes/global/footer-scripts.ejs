@@ -3,6 +3,38 @@
 <script src="/javascripts/<%=locals.siteSection%>.js"></script>
 <% } %>
 <%
+
+let thisMagickFlowConfig = locals.magickFlows[locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]];
+let hasCustomClientSideScript = false;
+let customClientSideScriptHtmlOut = ``;
+
+console.log(`typeof thisMagickFlowConfig: `, typeof thisMagickFlowConfig);
+
+if (typeof thisMagickFlowConfig === 'undefined') {
+	// we got nothing from magick flows here...
+} else {
+
+
+	if (thisMagickFlowConfig.assets.length) {
+		console.log('we have assets');
+
+
+		const webRootPath = `/${locals.magickFlows.directoryName}/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}`;
+		const mainContentPath = `${webRootPath}/main/`;
+		const assetsContentPath = `${webRootPath}/assets/`;
+
+		console.log(`assetsContentPath: `, assetsContentPath);
+
+
+		hasCustomClientSideScript = thisMagickFlowConfig.assets.find(k => k=='magick-flows-custom.js') === 'magick-flows-custom.js';
+		if ( hasCustomClientSideScript === true ) {
+			customClientSideScriptHtmlOut += `<script src="${assetsContentPath}magick-flows-custom.js"></script>`;
+		}
+
+	}
+	console.log(`hasCustomClientSideScript: `, hasCustomClientSideScript);
+}
+
 if (locals.pageScripts) {
 	locals.pageScripts.forEach(function(script) {
 %>
@@ -11,6 +43,9 @@ if (locals.pageScripts) {
 	});
 }
 %>
+
+<%- customClientSideScriptHtmlOut %>
+
 <script type="text/javascript">
 	const navigatePage = ( url ) => {
 		window.location.href = url;

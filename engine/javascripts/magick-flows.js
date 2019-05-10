@@ -1,14 +1,14 @@
-const pathToIncludeForLogging = `engine/javascripts/magick-flows.js`;
-const includeDebugInfoStart = `
+let thisPathToIncludeForLogging = `engine/javascripts/magick-flows.js`;
+let thisIncludeDebugInfoStart = `
 ============================================================
-Demuxe: including ${pathToIncludeForLogging} now...
+Demuxe: including ${thisPathToIncludeForLogging} now...
 ------------------------------------------------------------
 `;
-const includeDebugInfoEnd = `
-...end ${pathToIncludeForLogging}
+let thisIncludeDebugInfoEnd = `
+...end ${thisPathToIncludeForLogging}
 ------------------------------------------------------------
 `;
-console.group(includeDebugInfoStart);
+console.group(thisIncludeDebugInfoStart);
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
 const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
@@ -55,7 +55,7 @@ $contentWrapper.onclick = ( ) => {
 
 function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition = false, delayTransition = 0) {
 	if (locals.DEBUG === true) {
-		console.group(`[Magick Flows: normalTransition() ](${pathToIncludeForLogging}:50) running...`);
+		console.group(`[Magick Flows: normalTransition() ](${thisPathToIncludeForLogging}:50) running...`);
 	}
 
 	let nextStepNumber = thisStepNumber + 1;
@@ -533,10 +533,15 @@ document.addEventListener('keydown', function (evt) {
 	// "i" for "information", I guess? ¯\_(ツ)_/¯
 	if (evt.keyCode === 73) {
 		console.log('The "i" key is being held down...?');
-		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
-		if (typeof $node != null) {
-			$node.classList.add('slide-in');
+
+		let theseNodes = document.querySelectorAll(`#magick-flows-click-hints--step-${clicks}`);
+		if ( theseNodes.length > 0 ) {
+			theseNodes.forEach(function(node, nodeIndex) {
+				node.classList.add('slide-in');
+			});
 		}
+
+
 	}
 
 });
@@ -546,19 +551,25 @@ document.onkeyup = function(e) {
 	if (e.which == 72) {
 		console.log("H key was pressed, go to the first slide.");
 		window.location.hash = `#0`;
+
 	} else if (e.which == 73) {
-		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
-		if (typeof $node != null) {
-			$node.classList.remove('slide-in');
+
+
+		let theseNodes = document.querySelectorAll(`#magick-flows-click-hints--step-${clicks}`);
+		if ( theseNodes.length > 0 ) {
+			theseNodes.forEach(function(node, nodeIndex) {
+				node.classList.remove('slide-in');
+			});
 		}
+
 
 	} else if (e.which == 84) {
 		// This is the `t` key
 		// "t" for "toggle"
 		// Toggles the click hints on all slides.
-		const nodes = document.querySelectorAll(`.magick-flows-click-hints`);
-		if ( nodes.length > 0 ) {
-			nodes.forEach(function(node, nodeIndex) {
+		let theseNodes = document.querySelectorAll(`.magick-flows-click-hints`);
+		if ( theseNodes.length > 0 ) {
+			theseNodes.forEach(function(node, nodeIndex) {
 				node.classList.toggle('slide-in');
 			});
 		}
@@ -575,13 +586,13 @@ document.onkeyup = function(e) {
 		theMainContent.src = theMainContent.src.replace(/\?.*$/,"")+"?x="+Math.random();
 	} else if (e.ctrlKey && e.altKey && e.which == 89) {
 		// these are here to remind us how to do combos, not cause we want these combos
-		// alert("Ctrl + Alt + Y shortcut combination was pressed");
+		console.log(`Ctrl + Alt + Y shortcut combination was pressed, from ${thisPathToIncludeForLogging}`);
 	} else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
 		// these are here to remind us how to do combos, not cause we want these combos
 		// alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
   }
 };
 
-console.log(includeDebugInfoEnd);
+console.log(thisIncludeDebugInfoEnd);
 console.groupEnd();
 
