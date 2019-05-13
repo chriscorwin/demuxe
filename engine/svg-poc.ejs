@@ -2,6 +2,104 @@
 
 <svg class="graph lifecycle-graph" height="1000" width="1000">
 <style>
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-Regular.woff2) format('woff2'),url(fonts/SalesforceSans-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-Italic.woff2) format('woff2'),url(fonts/SalesforceSans-Italic.woff) format('woff');
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-BoldItalic.woff2) format('woff2'),url(fonts/SalesforceSans-BoldItalic.woff) format('woff');
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-Light.woff2) format('woff2'),url(fonts/SalesforceSans-Light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-LightItalic.woff2) format('woff2'),url(fonts/SalesforceSans-LightItalic.woff) format('woff');
+    font-weight: 300;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Salesforce Icons";
+    src: url(fonts/sf-icons.woff) format('woff'),url(fonts/sf-icons.svg#sf-icons) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+body {
+    font-family: 'Salesforce Sans',Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #16325c;
+    background-color: #fafaf9;
+}
+
+label {
+    font-family: 'Salesforce Sans',Arial,sans-serif;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    color: #5d686f;
+}
+
+.dynamic-placement {
+    will-change: transform;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.journeys-label-container {
+    width: 160px;
+    text-align: center;
+}
+
+.journeys-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'Salesforce Sans',Arial,sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    -webkit-transition: max-width .5s cubic-bezier(.215,.61,.355,1);
+    transition: max-width .5s cubic-bezier(.215,.61,.355,1);
+    color: #2b2826;
+    margin-bottom: 0;
+    text-transform: none;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.lifecycle-stage-label {
+    font-family: 'Salesforce Sans',Arial,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 19px;
+    max-width: 105px;
+    height: 19px;
+}
+
 .graph {
     width: 100%
 }
@@ -284,9 +382,9 @@ rect {
       const discs = [
         [{ type: 'active', r: 100 }, { type: 'active', r: 26 }, { type: 'inactive', r: 62 }],
         [{ type: 'active', r: 47 }, { type: 'active', r: 28 }, { type: 'inactive', r: 36 }, {type: 'inactive', r: 23}],
-        [{ type: 'active', r: 90 }, { type: 'active', r: 10 }, { type: 'inactive', r: 50 }, {type: 'inactive', r: 5}],
-        [{ type: 'active', r: 40 }, { type: 'active', r: 5 }, { type: 'inactive', r: 70 }, {type: 'inactive', r: 10}],
-        [{ type: 'active', r: 10 }, { type: 'active', r: 30 }, { type: 'inactive', r: 40 }, {type: 'inactive', r: 15}],
+        [{ type: 'active', r: 90 }, { type: 'active', r: 100 }, { type: 'inactive', r: 50 }, {type: 'inactive', r: 25}],
+        [{ type: 'active', r: 40 }, { type: 'active', r: 50 }, { type: 'inactive', r: 70 }, {type: 'inactive', r: 10}],
+        [{ type: 'active', r: 100 }, { type: 'active', r: 30 }, { type: 'inactive', r: 40 }, {type: 'inactive', r: 15}],
         [{ type: 'active', r: 70 }, { type: 'active', r: 50 }, { type: 'inactive', r: 90 }, {type: 'inactive', r: 50}]
       ];
 
@@ -446,3 +544,14 @@ rect {
     </g>
   </g>
 </svg>
+<div class="lifecycle-label-container dynamic-placement" style="transform: translate(176px, 320.5px)">
+  <div class="lifecycle-stage-labels" style="transform: translate(0px, -64px);">
+    <div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column" style="opacity: 1; transform: translateX(70px) translateX(-50%);"><label class="journeys-label lifecycle-stage-label"><span class="journeys-label-content lifecycle-stage-label-content">Awareness</span></label></div>
+    <div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column" style="opacity: 1; transform: translateX(210px) translateX(-50%);"><label class="journeys-label lifecycle-stage-label"><span class="journeys-label-content lifecycle-stage-label-content">Research</span></label></div>
+    <div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column" style="opacity: 1; transform: translateX(350px) translateX(-50%);"><label class="journeys-label lifecycle-stage-label"><span class="journeys-label-content lifecycle-stage-label-content">Purchase</span></label></div>
+    <div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column is-disabled" style="opacity: 1; transform: translateX(490px) translateX(-50%);"><label class="journeys-label lifecycle-stage-label"><span class="journeys-label-content lifecycle-stage-label-content">Service</span></label></div>
+    <div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column is-disabled" style="opacity: 1; transform: translateX(630px) translateX(-50%);"><label class="journeys-label lifecycle-stage-label"><span class="journeys-label-content lifecycle-stage-label-content">Advocate</span></label></div>
+    <div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column is-disabled" style="opacity: 1; transform: translateX(770px) translateX(-50%);"><label class="journeys-label lifecycle-stage-label"><span class="journeys-label-content lifecycle-stage-label-content">Use</span></label></div>
+  </div>
+  <div class="node-labels"> </div>
+</div>
