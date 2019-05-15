@@ -238,27 +238,27 @@ circle.volume-active, circle.volume-inactive {
 }
 
 
-.set0 circle, .set1 rect {
+.set0 circle, .set0 rect.flow-dropoff, .set1 rect.flow-dropin {
 	animation-delay: 400ms;
 }
 
-.set1 circle, .set2 rect {
+.set1 circle, .set1 rect.flow-dropoff, .set2 rect.flow-dropin {
 	animation-delay: 800ms;
 }
 
-.set2 circle, .set3 rect {
+.set2 circle, .set2 rect.flow-dropoff, .set3 rect.flow-dropin {
 	animation-delay: 1200ms;
 }
 
-.set3 circle, .set4 rect {
+.set3 circle, .set3 rect.flow-dropoff, .set4 rect.flow-dropin {
 	animation-delay: 1600ms;
 }
 
-.set4 circle, .set5 rect {
+.set4 circle, .set4 rect.flow-dropoff, .set5 rect.flow-dropin {
 	animation-delay: 2000ms;
 }
 
-.set5 circle, .set6 rect {
+.set5 circle, .set5 rect.flow-dropoff, .set6 rect.flow-dropin {
 	animation-delay: 2400ms;
 }
 
@@ -383,58 +383,114 @@ rect {
 			<line class="separator separator-row separator-graph" x1="0" y1="0" x2="100%" y2="0"> </line>
 		</g>
 
+		<% 
+			const stops = (i) => 70 + (i * 140);
+			const arcShape = (span, direction) => `M0,0 A${span*70},${span*70} 0 0 1 ${direction === 'forward' ? '' : '-'}${span*140},0`;
+
+			const stages = [
+				{
+					label: 'Awareness',
+					discs: [{ type: 'active', r: 100 }, { type: 'active', r: 26 }, { type: 'inactive', r: 62 }],
+					arcs: [
+						{ direction: 'forward', width: 19.31, span: 1 }, 
+						{ direction: 'forward', width: 16.85, span: 2 },
+						{ direction: 'forward', width: 12.31, span: 3 }, 
+						{ direction: 'forward', width: 9.85, span: 4 },
+						{ direction: 'forward', width: 6.31, span: 5 }
+					],
+					joinAndLeaveFlows: [{ type: 'in', width: 20 }, { type: 'off', width: 15 }]
+				},
+				{
+					label: 'Research',
+					discs: [{ type: 'active', r: 47 }, { type: 'active', r: 28 }, { type: 'inactive', r: 36 }, {type: 'inactive', r: 23}],
+					arcs: [
+						{ direction: 'forward', width: 19.31, span: 1 }, 
+						{ direction: 'forward', width: 16.85, span: 2 },
+						{ direction: 'forward', width: 12.31, span: 3 }, 
+						{ direction: 'forward', width: 9.85, span: 4 },
+						{ direction: 'backward', width: 19.31, span: 1 }
+					],
+					joinAndLeaveFlows: [{ type: 'in', width: 4 }, { type: 'off', width: 5 }]
+				},
+				{
+					label: 'Purchase',
+					discs: [{ type: 'active', r: 90 }, { type: 'active', r: 100 }, { type: 'inactive', r: 50 }, {type: 'inactive', r: 25}],
+					arcs: [
+						{ direction: 'forward', width: 19.31, span: 1 }, 
+						{ direction: 'forward', width: 16.85, span: 2 },
+						{ direction: 'forward', width: 12.31, span: 3 },
+						{ direction: 'backward', width: 19.31, span: 1 }, 
+						{ direction: 'backward', width: 16.85, span: 2 }
+					],
+					joinAndLeaveFlows: [{ type: 'in', width: 12 }, { type: 'off', width: 25 }]
+				},
+				{
+					label: 'Service',
+					discs: [{ type: 'active', r: 40 }, { type: 'active', r: 50 }, { type: 'inactive', r: 70 }, {type: 'inactive', r: 10}],
+					arcs: [
+						{ direction: 'forward', width: 19.31, span: 1 }, 
+						{ direction: 'forward', width: 16.85, span: 2 },
+						{ direction: 'backward', width: 19.31, span: 1 }, 
+						{ direction: 'backward', width: 16.85, span: 2 },
+						{ direction: 'backward', width: 12.31, span: 3 }
+					],
+					joinAndLeaveFlows: [{ type: 'in', width: 25 }, { type: 'off', width: 12 }]
+				},
+				{
+					label: 'Advocate',
+					discs: [{ type: 'active', r: 100 }, { type: 'active', r: 30 }, { type: 'inactive', r: 40 }, {type: 'inactive', r: 15}],
+					arcs: [
+						{ direction: 'forward', width: 19.31, span: 1 },
+						{ direction: 'backward', width: 19.31, span: 1 }, 
+						{ direction: 'backward', width: 16.85, span: 2 },
+						{ direction: 'backward', width: 12.31, span: 3 }, 
+						{ direction: 'backward', width: 9.85, span: 4 }
+					],
+					joinAndLeaveFlows: [{ type: 'in', width: 4 }, { type: 'off', width: 5 }]
+				},
+				{
+					label: 'Use',
+					discs: [{ type: 'active', r: 70 }, { type: 'active', r: 50 }, { type: 'inactive', r: 90 }, {type: 'inactive', r: 50}],
+					arcs: [
+						{ direction: 'backward', width: 19.31, span: 1 }, 
+						{ direction: 'backward', width: 16.85, span: 2 },
+						{ direction: 'backward', width: 12.31, span: 3 }, 
+						{ direction: 'backward', width: 9.85, span: 4 },
+						{ direction: 'backward', width: 6.31, span: 5 }
+					],
+					joinAndLeaveFlows: [{ type: 'in', width: 2 }, { type: 'off', width: 5 }]
+				}
+			];
+		%>
 
 		<g class="graph-elements-svg" transform="translate(166,0)">
 			
 			<!-- the discs -->
 			<g>
 			<% 
-			const stops = (i) => 70 + (i * 140);
-
-			const discs = [
-				[{ type: 'active', r: 100 }, { type: 'active', r: 26 }, { type: 'inactive', r: 62 }],
-				[{ type: 'active', r: 47 }, { type: 'active', r: 28 }, { type: 'inactive', r: 36 }, {type: 'inactive', r: 23}],
-				[{ type: 'active', r: 90 }, { type: 'active', r: 100 }, { type: 'inactive', r: 50 }, {type: 'inactive', r: 25}],
-				[{ type: 'active', r: 40 }, { type: 'active', r: 50 }, { type: 'inactive', r: 70 }, {type: 'inactive', r: 10}],
-				[{ type: 'active', r: 100 }, { type: 'active', r: 30 }, { type: 'inactive', r: 40 }, {type: 'inactive', r: 15}],
-				[{ type: 'active', r: 70 }, { type: 'active', r: 50 }, { type: 'inactive', r: 90 }, {type: 'inactive', r: 50}]
-			];
-
-			discs.forEach((disc, i) => { %>
-				<g class="set<%= i %>" transform="translate(<%= stops(i) %>,0)">
-					<% disc.forEach(circle => {
-						echo(`<circle class="volume-${circle.type}" r="${circle.r}" clip-path="url(#clip-${circle.type})"/>`);
-					}); %>
-				</g>
-			<% }); %>
+				stages.forEach((stage, i) => {
+					echo(`<g class="set${i}" transform="translate(${stops(i)},0)">`);
+					stage.discs.forEach((disc, i) => {
+						echo(`<circle class="volume-${disc.type}" r="${disc.r}" clip-path="url(#clip-${disc.type})"/>`);
+					});
+					echo('</g>');
+				});
+			%>
 			</g>
-			
-
+		
 			<!-- the arcs & rectangles -->
 			<g class="flow-container">
-				
 				<!-- the rectangles -->
 				<% 
-					const rectangleColumns = [
-						[{ type: 'in', width: 20 }],
-						[{ type: 'in', width: 4 }, { type: 'off', width: 15 }],
-						[{ type: 'in', width: 12 }, { type: 'off', width: 5 }],
-						[{ type: 'in', width: 25 }, { type: 'off', width: 25 }],
-						[{ type: 'in', width: 4 }, { type: 'off', width: 12 }],
-						[{ type: 'in', width: 2 }, { type: 'off', width: 5 }],
-						[{ type: 'off', width: 5 }]
-					];
-
-					rectangleColumns.forEach((rectangles, i) => { 
-						rectangles.forEach(rect => {
+					stages.forEach((stage, i) => { 
+						stage.joinAndLeaveFlows.forEach(rect => {
 							const x = (rect.width / 2) * -1;
 							const y = rect.type === 'in' ? '-160' : '0';
-							const translate = rect.type === 'in' ? stops(i) : stops(i-1);
 							const classes = classnames(`flow-drop${rect.type}`, {
 								'flow-thin': rect.width < 10
 							})
 
-							echo(`<g class="flow set${i}"" transform="translate(${translate},0)">
+							echo(`<g class="flow set${i}" transform="translate(${stops(i)},0)">
 								<rect 
 									class="${classes}" 
 									width="${rect.width}" 
@@ -446,72 +502,10 @@ rect {
 					}); 
 				%>
 
-
- 
-
 				<!-- the arcs -->
 				<%
-
-					const arcShapes = {
-						forward1: 'M0,0 A70,70 0 0 1 140,0',
-						forward2: 'M0,0 A140,140 0 0 1 280,0',
-						forward3: 'M0,0 A210,210 0 0 1 420,0',
-						forward4: 'M0,0 A280,280 0 0 1 560,0',
-						forward5: 'M0,0 A350,350 0 0 1 700,0',
-						backward1: 'M0,0 A70,70 0 0 1 -140,0',
-						backward2: 'M0,0 A140,140 0 0 1 -280,0',
-						backward3: 'M0,0 A210,210 0 0 1 -420,0',
-						backward4: 'M0,0 A280,280 0 0 1 -560,0',
-						backward5: 'M0,0 A350,350 0 0 1 -700,0'
-					};
-
-					const arcs = [
-						[
-							{ direction: 'forward', width: 19.31, span: 1 }, 
-							{ direction: 'forward', width: 16.85, span: 2 },
-							{ direction: 'forward', width: 12.31, span: 3 }, 
-							{ direction: 'forward', width: 9.85, span: 4 },
-							{ direction: 'forward', width: 6.31, span: 5 }
-						],
-						[
-							{ direction: 'forward', width: 19.31, span: 1 }, 
-							{ direction: 'forward', width: 16.85, span: 2 },
-							{ direction: 'forward', width: 12.31, span: 3 }, 
-							{ direction: 'forward', width: 9.85, span: 4 },
-							{ direction: 'backward', width: 19.31, span: 1 }
-						],
-						[
-							{ direction: 'forward', width: 19.31, span: 1 }, 
-							{ direction: 'forward', width: 16.85, span: 2 },
-							{ direction: 'forward', width: 12.31, span: 3 },
-							{ direction: 'backward', width: 19.31, span: 1 }, 
-							{ direction: 'backward', width: 16.85, span: 2 }
-						],
-						[
-							{ direction: 'forward', width: 19.31, span: 1 }, 
-							{ direction: 'forward', width: 16.85, span: 2 },
-							{ direction: 'backward', width: 19.31, span: 1 }, 
-							{ direction: 'backward', width: 16.85, span: 2 },
-							{ direction: 'backward', width: 12.31, span: 3 }
-						],
-						[
-							{ direction: 'forward', width: 19.31, span: 1 },
-							{ direction: 'backward', width: 19.31, span: 1 }, 
-							{ direction: 'backward', width: 16.85, span: 2 },
-							{ direction: 'backward', width: 12.31, span: 3 }, 
-							{ direction: 'backward', width: 9.85, span: 4 }
-						],
-						[
-							{ direction: 'backward', width: 19.31, span: 1 }, 
-							{ direction: 'backward', width: 16.85, span: 2 },
-							{ direction: 'backward', width: 12.31, span: 3 }, 
-							{ direction: 'backward', width: 9.85, span: 4 },
-							{ direction: 'backward', width: 6.31, span: 5 }
-						]
-					];
-
-					arcs.forEach((arcStop, i) => { 
-						arcStop.forEach(arc => {
+					stages.forEach((stage, i) => { 
+						stage.arcs.forEach(arc => {
 							const classes = classnames(
 								`flow-${arc.direction}`,
 								`flow-span${arc.span}`,
@@ -523,27 +517,22 @@ rect {
 									class="${classes}" 
 									style="animation-delay: ${(i+1) * 400}ms;" 
 									fill="none" 
-									d="${arcShapes[arc.direction + arc.span]}" 
+									d="${arcShape(arc.span, arc.direction)}" 
 									stroke="url(#gradient-${arc.direction})" 
 									stroke-width="${arc.width}"/>
 							</g>`);
 						});
 					}); 
-
 				%>
 			</g>
 
 			<!-- the circles on the lines -->
 			<g class="node-container">
 				<%
-					const defaultNumberOfCircles = Math.max(arcs.length, discs.length, (rectangleColumns.length - 1));
-					const defaultCircles = Array(defaultNumberOfCircles).fill({ r: 10, rOuter: 15 });
-					const circles = locals.circles || defaultCircles;
-
-					circles.forEach((circle, i) => { 
+					stages.forEach((stage, i) => { 
 						echo(`<g opacity="1" class="node node-focusable" transform="translate(${stops(i)},0)">
-							<circle r="${circle.rOuter}" class="tick-outer"/>
-							<circle r="${circle.r}" class="tick"/>
+							<circle r="${stage.circle && stage.circle.rOuter || 15}" class="tick-outer"/>
+							<circle r="${stage.circle && stage.circle.r || 10}" class="tick"/>
 						</g>`);
 					}); 
 				%>
@@ -554,13 +543,11 @@ rect {
 <div class="lifecycle-label-container dynamic-placement" style="transform: translate(176px, 320.5px)">
 	<div class="lifecycle-stage-labels" style="transform: translate(0px, -64px);">
 		<%
-			const labels = ['Awareness', 'Research', 'Purchase', 'Service', 'Advocate', 'Use'];
-
-			labels.forEach((label, i) => {
+			stages.forEach((stage, i) => {
 				echo(`
 					<div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column" style="opacity: 1; transform: translateX(${stops(i)}px) translateX(-50%);">
 						<label class="journeys-label lifecycle-stage-label">
-							<span class="journeys-label-content lifecycle-stage-label-content">${label}</span>
+							<span class="journeys-label-content lifecycle-stage-label-content">${stage.label}</span>
 						</label>
 					</div>
 				`);
