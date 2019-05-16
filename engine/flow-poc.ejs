@@ -533,8 +533,12 @@ const curves = {
 	northEast: 'q0,-20 20,-20'
 }
 
+const E = 'e', N = 'n', S = 's', W = 'w';
 
-const pathD1 = `m0,0 ${stroke('e', .5)} ${curves.eastNorth} ${stroke('n', .5)} ${curves.northWest} ${stroke('w', 3)} ${curves.westNorth} ${stroke('n', 2.5)} ${curves.northEast} ${stroke('e', .5)}`;
+// Make  pathD1 be something like this instead:
+// pathD1 = [[E, .5], [N, .5], [W, 3], [N, 2.5], [E, .5]];
+
+const pathD1 = `m0,0 ${stroke(E, .5)} ${curves.eastNorth} ${stroke(N, .5)} ${curves.northWest} ${stroke(W, 3)} ${curves.westNorth} ${stroke(N, 2.5)} ${curves.northEast} ${stroke(E, .5)}`;
 
 const pathD2 = 'm0,0 h70 q 0,0  0,0    v0.001 q 0,0   0,0     h0    q 0,0   0,0     v0.001 q 0,0   0,0    h0    q 0,0   0,0     v0.001 q 0,0   0,0    h70';
 %>
