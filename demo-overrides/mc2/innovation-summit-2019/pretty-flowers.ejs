@@ -1,16 +1,19 @@
-<%_
-console.group(`
-============================================================
-Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
-------------------------------------------------------------
-`);
-%>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<%- include('includes/global/head') _%>
-		<% if (locals.siteSection) { %>
-			<%- include(`includes/${locals.siteSection}/${locals.siteSection}-head`) _%>
+		<% if (locals.siteSection) {
+
+			try {
+		%>
+				<%- include(`includes/${locals.siteSection}/${locals.siteSection}-head`) %>
+		<%
+			}
+			catch(error) {
+				console.error('ERROR ERROR ERROR', error);
+			}
+		%>
 		<% } %>
 		<% if (locals.urlSlug && (locals.urlSlug != 'bbva-atm' || locals.urlSlug != 'ga360')) { %>
 			<%- include(`includes/mobile/mobile-meta-attributes-for-ios-webapp`) _%>
@@ -21,9 +24,22 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 	<body class="magick-flow">
 
 		<% if (locals.siteSection) { %>
-		<div id="content-wrapper"  class="container magick-flow_content-wrapper   ">
+		<div id="content-wrapper"  class="container magick-flow_content-wrapper ">
 			<div id="content" class="app-switcher-one magick-flow_content ">
-				<%- include(`includes/${locals.siteSection}/${locals.siteSection}-contents`) _%>
+			<% if (locals.siteSection) {
+
+				try {
+			%>
+					<%- include(`includes/${locals.siteSection}/${locals.siteSection}-contents`) _%>
+			<%
+				}
+				catch(error) {
+					console.error('ERROR ERROR ERROR', error);
+				}
+			%>
+			<% } %>
+
+
 			</div>
 		</div>
 		<% } %>
@@ -40,7 +56,7 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 	</body>
 </html>
 <%_
-console.log(`...end \`engine/wrapper-for-magick-flows.ejs\`
+console.log(`...end \`demo-overrides/mc2/innovation-summit-2019/pretty-flowers.ejs\`
 ------------------------------------------------------------
 `);
 console.groupEnd();
