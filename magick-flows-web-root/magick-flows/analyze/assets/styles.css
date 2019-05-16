@@ -1,0 +1,434 @@
+/* This is done to preload images and reduce load flicker */
+body::after {
+  backface-visibility: visible;
+  content: url("/magick-flows/analyze/main/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/main/0200___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/assets/0000___ID=datorama-intelligence-dashboard___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/assets/0100___ID=datorama-mix-and-connect___DATA=has-sticky-header___NOTES=Notes-go-here.png") url("/magick-flows/analyze/assets/all__viewport-size.png");
+  outline: 1px solid red;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* prevent tap highlight color / shadow */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+}
+
+body {
+  background: white;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body, .container {
+  background: url("/images/home-background.jpg") no-repeat top left;
+  background-size: 100% 100%;
+  height: 720px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+}
+
+.ios-notification {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms top ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: -720px;
+  transition: 500ms top ease-in-out;
+  will-change: top;
+}
+
+.ios-notification.slide-in {
+  top: 0px;
+  transition: 500ms top ease-in-out;
+  will-change: top;
+}
+
+.magick-flows-drawer--from-top {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms top ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: -720px;
+  transition: 500ms top ease-in-out;
+  will-change: top;
+}
+
+.magick-flows-drawer--from-top.slide-in {
+  top: 0px;
+  transition: 500ms top ease-in-out;
+  will-change: top;
+}
+
+.magick-flows-drawer--from-top.be-in {
+  top: 0px;
+  transition: 0ms top;
+  will-change: top;
+}
+
+.magick-flows-drawer--from-left {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms left ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: 0;
+  left: -1280px;
+  will-change: left;
+}
+
+.magick-flows-drawer--from-left.slide-in {
+  left: 0px;
+  transition: 500ms left ease-in-out;
+  will-change: left;
+}
+
+.magick-flows-drawer--from-left.be-in {
+  left: 0px;
+  transition: 0ms left;
+  will-change: left;
+}
+
+.magick-flows-drawer--from-right {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms right ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  top: 0;
+  right: -1280px;
+  will-change: right;
+}
+
+.magick-flows-drawer--from-right.slide-in {
+  right: 0px;
+  transition: 500ms right ease-in-out;
+  will-change: right;
+}
+
+.magick-flows-drawer--from-right.be-in {
+  right: 0px;
+  transition: 0ms right;
+  will-change: right;
+}
+
+.magick-flows-drawer--from-bottom {
+  margin: 0 auto;
+  position: absolute;
+  transition: 500ms bottom ease-in-out;
+  width: 1280px;
+  background-color: transparent;
+  height: 720px;
+  bottom: -720px;
+  will-change: bottom;
+}
+
+.magick-flows-drawer--from-bottom.slide-in {
+  bottom: 0px;
+  transition: 500ms bottom ease-in-out;
+  will-change: bottom;
+}
+
+.magick-flows-drawer--from-bottom.be-in {
+  bottom: 0px;
+  transition: 0ms bottom;
+  will-change: bottom;
+}
+
+.magick-flows--step {
+  background-color: transparent;
+}
+
+.app-switcher-one {
+  height: 720px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 2000ms transform, 800ms left;
+  width: 6400px;
+}
+
+.app-switcher-one.shrink {
+  transform: scale(0.95);
+  will-change: transform;
+}
+
+.app-switcher-one.shrink .magick-flows--step {
+  background-color: white;
+}
+
+.app-switcher-one.rounded-corners .magick-flows-step {
+  border-radius: 2rem;
+  background-clip: border-box;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.2rem 0.3rem rgba(0, 0, 0, 0.6);
+}
+
+.app-switcher-one.rounded-corners .magick-flows-step .slds-scrollable {
+  max-height: 720px;
+  height: 720px;
+}
+
+.app-switcher-one.rounded-corners .magick-flows-step.notification {
+  background-color: transparent;
+}
+
+.app-switcher-one.slide-left-0 {
+  left: 640px;
+}
+
+.app-switcher-one.be-left-0 {
+  left: 0px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-0 {
+  left: 0px;
+}
+
+body.debug div#drawer-from-top--step-0::before {
+  content: "Drawer #0";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-0 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 0px;
+}
+
+.app-switcher-one.be-left-1 {
+  left: -2560px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-1 {
+  left: -2560px;
+}
+
+body.debug div#drawer-from-top--step-1::before {
+  content: "Drawer #1";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-1 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 2560px;
+}
+
+.app-switcher-one.be-left-2 {
+  left: -5120px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-2 {
+  left: -5120px;
+}
+
+body.debug div#drawer-from-top--step-2::before {
+  content: "Drawer #2";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-2 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 5120px;
+}
+
+.app-switcher-one.be-left-3 {
+  left: -7680px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-3 {
+  left: -7680px;
+}
+
+body.debug div#drawer-from-top--step-3::before {
+  content: "Drawer #3";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-3 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 7680px;
+}
+
+footer.magick-flows-stickey-footer_container {
+  position: absolute;
+  bottom: 0;
+}
+
+header.magick-flows-stickey-header_container {
+  position: absolute;
+  bottom: 0;
+}
+
+/**
+ * @summary Hides an element from the page by setting the opacity property set to `0`
+ *
+ * @selector .transition-hide
+ * @notes This works like the `.slds-hidden` class and reserves the space but allows you to add the `transition` property to transition the speed that it is shown or hidden.
+ * @modifier
+ */
+.slds-transition-hide {
+  transition: opacity 300ms ease-in-out;
+  will-change: opacity;
+  opacity: 0;
+}
+
+/**
+ * @summary Shows the element using the opacity property set to `1`
+ *
+ * @selector .transition-show
+ * @notes This is toggled on the element. `.slds-transition-hide` class is removed and `.slds-transition-show` is added.
+ * @modifier
+ */
+.slds-transition-show {
+  transition: opacity 300ms ease-in-out;
+  will-change: opacity;
+  opacity: 1;
+}
+
+.preload-images {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+#content.app-switcher-one.be-left-0 {
+  opacity: 1;
+  transition: transform 500ms, opacity 600ms, left 0ms;
+}
+
+#content.app-switcher-one.be-left-0.fake-the-dock {
+  transform: scale(0.1, 0.2) rotatex(68deg) translateY(612%) translateX(-465%);
+  background: rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.34);
+  transition: transform 500ms, opacity 600ms, left 125ms !important;
+  opacity: 1;
+}
+
+.magick-flows-click-hints {
+  position: absolute;
+  display: block;
+  border-radius: 0.65rem;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  vertical-align: middle;
+  font-size: 1rem;
+  text-shadow: 0px 2px 2px black;
+  transition: 125ms top ease-in-out;
+  background-color: rgba(0, 0, 0, 0.57);
+  top: -12rem;
+  will-change: top;
+  margin: 0.25rem;
+}
+
+.magick-flows-click-hints.slide-in {
+  top: 0rem;
+  transition: 125ms top ease-in-out;
+  will-change: top;
+}
+
+html {
+  font-family: "Salesforce Sans", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  background: #514f4d;
+  color: #080707;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  background: url(/images/home-background.jpg) no-repeat top left;
+  background-size: 100% 100%;
+  height: 720px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1280;
+}
+
+body.magick-flow {
+  background: transparent !important;
+  overflow: hidden;
+  width: 100vw;
+}
+
+div#content-wrapper {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
+  border-radius: 0.25rem;
+  position: relative;
+  left: auto;
+  margin: 0px auto;
+}

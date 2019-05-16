@@ -60,6 +60,8 @@ _%>
 		const showFooter = node.hasStickyFooter === true || false;
 		const nodeData = node.data || ['unset'];
 		const nodeNotes = node.notes;
+		let showHeaderPaddingOnMain = false;
+		let headerPaddingforMain = 0;
 
 
 		let headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
@@ -75,6 +77,9 @@ _%>
 		let renderSizeFooter = calculateAspectRatioFit(srcWidthFooter, srcHeightFooter, maxWidth, maxHeight);
 		let renderSizeMainContent = calculateAspectRatioFit(node.dimensions.width, node.dimensions.height, maxWidth, node.dimensions.height);
 		let mainContentScrollableAreaHeight = ((maxHeight - (renderSizeHeader.height + renderSizeFooter.height)) + 0);
+
+		headerPaddingforMain = renderSizeHeader['height'];
+
 
 		if (renderSizeMainContent.height < mainContentScrollableAreaHeight) {
 			mainContentScrollableAreaHeight = renderSizeMainContent.height;
@@ -120,11 +125,13 @@ _%>
 					if (dataNode.startsWith('own-header-height--')) {
 						renderSizeHeader['height'] = dataNode.split('--')[dataNode.split('--').length - 1];
 						renderSizeHeader['width'] = renderSizeMainContent.width;
-						thisMagickFlowsSlideClassnames['own-header-height--90'] = true;
+						thisMagickFlowsSlideClassnames[`own-header-height--${renderSizeHeader['height']}`] = true;
 					}
 				}
 			});
 			showHeader = true;
+			showHeaderPaddingOnMain = true;
+			headerPaddingforMain = 0;
 			headerWebRootUrl = mainContentWebRootUrl;
 		}
 
@@ -271,7 +278,7 @@ _%>
 		echo(`
 			<div
 				class="slds-col slds-scrollable"
-				style="height: ${mainContentScrollableAreaHeight}px; margin-bottom: ${renderSizeFooter.height}px;"
+				style="height: ${mainContentScrollableAreaHeight}px; margin-bottom: ${renderSizeFooter.height}px; margin-top: ${headerPaddingforMain}px;"
 			>
 		`);
 
