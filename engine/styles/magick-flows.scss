@@ -47,6 +47,11 @@ body, .container {
 	// transition-delay: 1000ms;
 }
 
+// Allows scrolling of the main content when a drawer is "open"
+.magick-flows-drawer {
+	pointer-events: none;
+}
+
 
 .magick-flows-drawer--from-top {
 	margin: 0 auto;
