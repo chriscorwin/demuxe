@@ -16,6 +16,7 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 			<%- include(`includes/mobile/mobile-meta-attributes-for-ios-webapp`) _%>
 		<% } %>
 
+		<link rel="stylesheet" href="/styles/confetti.css">
 	</head>
 
 	<body class="magick-flow">
@@ -47,7 +48,47 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 				// txt.innerText = 'Window: ' + w + 'px X ' + h + 'px';
 				// document.body.appendChild(txt);
 			}
+
+			let currentConfetti;
+			const startConfetti = () => {
+				if (!currentConfetti) {
+					currentConfetti = new Confettiful(document.body);
+				}
+			};
+			const stopConfetti = () => {
+				currentConfetti.remove();
+				currentConfetti = null;
+			}
+
+			// A map of paths and hashes in window.location to trigger stuff in the handler below
+			const pathHashHandlerMap = {
+				'/mc2-inov8-summit-2019': {
+					'#53': {
+						in: startConfetti,
+						out: stopConfetti
+					}
+				},
+				'/b2b-flow': {
+					'#29': {
+						in: startConfetti,
+						out: stopConfetti
+					}
+				}
+			}
+			window.addEventListener('hashchange', (event) => {
+				const path = location.pathname;
+				const oldHash = '#' + event.oldURL.split('#')[1];
+				const newHash = '#' + event.newURL.split('#')[1];
+				const pathMap = pathHashHandlerMap[path];
+				const oldHashHandlers = pathMap && pathMap[oldHash];
+				const newHashHandlers = pathMap && pathMap[newHash];
+
+				if (oldHashHandlers) oldHashHandlers.out();
+				if (newHashHandlers) newHashHandlers.in();
+			}, false)
+
 		</script>
+		<script src="/javascripts/confetti.js"></script>
 	</body>
 </html>
 <%_
