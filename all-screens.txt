@@ -1,6 +1,3 @@
-0000___ID=southwest-routes-map.png
-0001___ID=route-map-intro.png
-0005___ID=trail-slide.png
 0010___ID=login-empty___DATA=use-step-transition__step-transition_app-switch.png
 0015___ID=login-filled.png
 0020___ID=sales-home___DATA=is-own-header__own-header-height--90.png
@@ -55,4 +52,3 @@
 0240___ID=contact-record-home___DATA=is-own-header__own-header-height--90.png
 0250___ID=business-dashboard___DATA=is-own-header__own-header-height--90.png
 0260___ID=route-map-complete___DATA=use-step-transition__step-transition_app-switch.png
-0270___ID=trail-slide.png

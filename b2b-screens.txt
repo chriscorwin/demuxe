@@ -28,4 +28,3 @@
 0240___ID=contact-record-home___DATA=is-own-header__own-header-height--90.png
 0250___ID=business-dashboard___DATA=is-own-header__own-header-height--90.png
 0260___ID=route-map-complete___DATA=use-step-transition__step-transition_app-switch.png
-0270___ID=trail-slide.png

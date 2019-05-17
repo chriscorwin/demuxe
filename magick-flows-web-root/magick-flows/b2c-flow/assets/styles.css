@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/b2c-flow/main/0000___ID=southwest-routes-map.png") url("/magick-flows/b2c-flow/main/0001___ID=route-map-intro.png") url("/magick-flows/b2c-flow/main/0005___ID=trail-slide.png") url("/magick-flows/b2c-flow/main/0010___ID=login-empty___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/b2c-flow/main/0015___ID=login-filled.png") url("/magick-flows/b2c-flow/main/0020___ID=sales-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2c-flow/main/0030___ID=app-launcher.png") url("/magick-flows/b2c-flow/main/0040___ID=marketing-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2c-flow/main/0050___ID=b2c-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2c-flow/main/0051___ID=a360-show-segment.png") url("/magick-flows/b2c-flow/main/0052___ID=a360-edit-segment-1.png") url("/magick-flows/b2c-flow/main/0053___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0054___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0055___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0056___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0057___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0058___ID=a360-edit-segment-2.png") url("/magick-flows/b2c-flow/main/0059___ID=b2c-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2c-flow/main/0060___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0061___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0062___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0063___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0064___ID=campaign-events.png") url("/magick-flows/b2c-flow/main/0070___ID=b2c-journey-intro___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/b2c-flow/main/0080___ID=b2c-bots___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/b2c-flow/main/0090___ID=b2c-journey-bot-preview.png") url("/magick-flows/b2c-flow/main/0100___ID=b2c-journey-add-bot-done.png") url("/magick-flows/b2c-flow/assets/all__viewport-size.png") url("/magick-flows/b2c-flow/assets/b2b-jb-email___drawer-from-right.png") url("/magick-flows/b2c-flow/assets/b2b-jb-isv___drawer-from-left.png") url("/magick-flows/b2c-flow/assets/b2c-bots___drawer-from-right.png");
+  content: url("/magick-flows/b2c-flow/main/0010___ID=login-empty.png") url("/magick-flows/b2c-flow/main/0015___ID=login-filled.png") url("/magick-flows/b2c-flow/main/0020___ID=sales-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2c-flow/main/0030___ID=app-launcher.png") url("/magick-flows/b2c-flow/main/0040___ID=marketing-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2c-flow/main/0050___ID=b2c-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2c-flow/main/0051___ID=a360-show-segment.png") url("/magick-flows/b2c-flow/main/0052___ID=a360-edit-segment-1.png") url("/magick-flows/b2c-flow/main/0053___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0054___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0055___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0056___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0057___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0058___ID=a360-edit-segment-2.png") url("/magick-flows/b2c-flow/main/0059___ID=b2c-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2c-flow/main/0060___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0061___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0062___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0063___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2c-flow/main/0064___ID=campaign-events.png") url("/magick-flows/b2c-flow/main/0070___ID=b2c-journey-intro___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/b2c-flow/main/0080___ID=b2c-bots___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/b2c-flow/main/0090___ID=b2c-journey-bot-preview.png") url("/magick-flows/b2c-flow/main/0100___ID=b2c-journey-add-bot-done.png") url("/magick-flows/b2c-flow/assets/all__viewport-size.png") url("/magick-flows/b2c-flow/assets/b2b-jb-email___drawer-from-right.png") url("/magick-flows/b2c-flow/assets/b2b-jb-isv___drawer-from-left.png") url("/magick-flows/b2c-flow/assets/b2c-bots___drawer-from-right.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 67840px;
+  width: 60160px;
 }
 
 .app-switcher-one.shrink {
@@ -995,102 +995,6 @@ body.debug div#drawer-from-top--step-24::before {
   top: 0;
   width: 1280px;
   left: 61440px;
-}
-
-.app-switcher-one.be-left-25 {
-  left: -64000px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-25 {
-  left: -64000px;
-}
-
-body.debug div#drawer-from-top--step-25::before {
-  content: "Drawer #25";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-25 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 64000px;
-}
-
-.app-switcher-one.be-left-26 {
-  left: -66560px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-26 {
-  left: -66560px;
-}
-
-body.debug div#drawer-from-top--step-26::before {
-  content: "Drawer #26";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-26 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 66560px;
-}
-
-.app-switcher-one.be-left-27 {
-  left: -69120px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-27 {
-  left: -69120px;
-}
-
-body.debug div#drawer-from-top--step-27::before {
-  content: "Drawer #27";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-27 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 69120px;
 }
 
 footer.magick-flows-stickey-footer_container {
