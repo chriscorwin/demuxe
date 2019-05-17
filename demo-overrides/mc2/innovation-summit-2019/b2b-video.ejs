@@ -24,24 +24,25 @@
 	<body class="magick-flow">
 
 		<% if (locals.siteSection) { %>
-		<div id="content-wrapper"  class="container magick-flow_content-wrapper ">
-			<div id="content" class="app-switcher-one magick-flow_content ">
-			<% if (locals.siteSection) {
+			<video width="1280" height="720" controls="false">
+				<source src="B2B-video.mp4" type="video/mp4">
+			</video>
 
-				try {
-			%>
-					<%- include(`includes/${locals.siteSection}/${locals.siteSection}-contents`) _%>
-			<%
-				}
-				catch(error) {
-					console.error('ERROR ERROR ERROR', error);
-				}
-			%>
-			<% } %>
+			<script>
+				setTimeout(() => {
+					const vid = document.getElementsByTagName('video')[0];
+					vid.removeAttribute('controls');
+					vid.style.cursor = 'none';
+					vid.ended = () => {
+						location.href = '/'
+					}
 
-
-			</div>
-		</div>
+					// Click to play the video
+					document.body.onclick = () => {
+						vid.play();
+					}
+				}, 1000)
+			</script>
 		<% } %>
 
 
@@ -56,7 +57,7 @@
 	</body>
 </html>
 <%_
-console.log(`...end \`demo-overrides/mc2/innovation-summit-2019/pretty-flowers.ejs\`
+console.log(`...end \`demo-overrides/mc2/innovation-summit-2019/b2b-video.ejs\`
 ------------------------------------------------------------
 `);
 console.groupEnd();
