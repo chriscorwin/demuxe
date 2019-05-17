@@ -1,4 +1,4 @@
-0010___ID=login-empty___DATA=use-step-transition__step-transition_app-switch.png
+0010___ID=login-empty.png
 0015___ID=login-filled.png
 0020___ID=sales-home___DATA=is-own-header__own-header-height--90.png
 0030___ID=app-launcher.png
