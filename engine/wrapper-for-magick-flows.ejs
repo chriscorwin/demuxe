@@ -37,6 +37,17 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 
 
 		<%- include('includes/global/footer-scripts') %>
+		<script>
+			if (location.pathname === '/iphone' ) {
+				var h = window.innerHeight;
+				var w = window.innerWidth;
+				var txt = document.createElement('div');
+				txt.style = "position: fixed; top: 5px; left: 5px; height: 40px; width; 200px; padding: 10px; background: #fff";
+				txt.innerText = 'Window: ' + w + 'px X ' + h + 'px';
+				document.body.appendChild(txt);
+				alert('hey')
+			}
+		</script>
 	</body>
 </html>
 <%_
