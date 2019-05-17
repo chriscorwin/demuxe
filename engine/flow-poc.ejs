@@ -523,31 +523,41 @@ const stroke = (dir, len) => {
 }
 
 const curves = {
-	westSouth: 'q20,0 20,20',
-	westNorth: 'q-20,0 -20,-20',
-	southEast: 'q0,20 20,20',
-	southWest: 'q0,20 -20,20',
-	eastNorth: 'q20,0 20,-20',
-	eastSouth: 'q 20,0 20,20',
-	northWest: 'q0,-20 -20,-20',
-	northEast: 'q0,-20 20,-20'
+	es: 'q20,0 20,20',
+	wn: 'q-20,0 -20,-20',
+	se: 'q0,20 20,20',
+	sw: 'q0,20 -20,20',
+	en: 'q20,0 20,-20',
+	es: 'q 20,0 20,20',
+	nw: 'q0,-20 -20,-20',
+	ne: 'q0,-20 20,-20'
 }
 
 const E = 'e', N = 'n', S = 's', W = 'w';
 
 // Make  pathD1 be something like this instead:
-// pathD1 = [[E, .5], [N, .5], [W, 3], [N, 2.5], [E, .5]];
+const pathD1Arr = [[E, .5], [N, .5], [W, 3], [N, 2.5], [E, .5]];
 
-const pathD1 = `m0,0 ${stroke(E, .5)} ${curves.eastNorth} ${stroke(N, .5)} ${curves.northWest} ${stroke(W, 3)} ${curves.westNorth} ${stroke(N, 2.5)} ${curves.northEast} ${stroke(E, .5)}`;
+const path = pathD1Arr.reduce((segments, segment, i) => {
+	segments = `${segments} ${stroke(segment[0], segment[1])}`;
+
+	if (pathD1Arr[i + 1]) {
+		segments += ` ${curves[segment[0] + pathD1Arr[i + 1][0]]}`;
+	}
+
+	return segments;
+}, 'm0,0')
+
+const pathD1 = path;//`m0,0 ${stroke(E, .5)} ${curves.en} ${stroke(N, .5)} ${curves.nw} ${stroke(W, 3)} ${curves.wn} ${stroke(N, 2.5)} ${curves.ne} ${stroke(E, .5)}`;
 
 const pathD2 = 'm0,0 h70 q 0,0  0,0    v0.001 q 0,0   0,0     h0    q 0,0   0,0     v0.001 q 0,0   0,0    h0    q 0,0   0,0     v0.001 q 0,0   0,0    h70';
 %>
 				<g class="flow flow-grid state-default" transform="translate(350,388.5)">
 					<path class="flow-forward flow-type-directional flow-thin flow-shape" fill="none" d="<%=pathD1%>" stroke="url(#gradient-forward)" stroke-width="1" stroke-dasharray="800 800" stroke-dashoffset="0"></path>
 				</g>
-				<g class="flow flow-grid state-default" transform="translate(350,388.5)">
+				<!-- <g class="flow flow-grid state-default" transform="translate(350,388.5)">
 					<path class="flow-backward flow-type-directional flow-thin flow-shape" fill="none" d="<%=pathD2%>" stroke="url(#gradient-backward)" stroke-width="1" stroke-dasharray="800 800" stroke-dashoffset="0"></path>
-				</g>
+				</g> -->
 				
 			</g>
 
