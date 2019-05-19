@@ -1,10 +1,14 @@
-0105___ID=route-map-progress___DATA=use-step-transition__step-transition_app-switch.png
-0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90__use-step-transition__step-transition_app-switch.png
+0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90.png
 0120___ID=b2b-campaign-record-home___DATA=is-own-header__own-header-height--90.png
 0130___ID=b2b-journey-intro.png
 0135___ID=b2b-journey-intro.png
 0140___ID=b2b-journey-app-exchange.png
 0150___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98__show-drawer-from-left--instantly__hide-drawer-from-left--on-leave.png
+0151___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
+0152___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
+0153___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
+0154___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
+0155___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98.png
 0160___ID=b2b-jb-email___DATA=is-own-header__own-header-height--98__show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png
 0170___ID=b2b-journey-email-selected.png
 0180___ID=b2b-journey-email-select-edit.png

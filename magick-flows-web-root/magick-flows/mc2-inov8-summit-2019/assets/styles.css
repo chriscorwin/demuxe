@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/mc2-inov8-summit-2019/main/0010___ID=login-empty.png") url("/magick-flows/mc2-inov8-summit-2019/main/0015___ID=login-filled.png") url("/magick-flows/mc2-inov8-summit-2019/main/0020___ID=sales-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0030___ID=app-launcher.png") url("/magick-flows/mc2-inov8-summit-2019/main/0040___ID=marketing-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0050___ID=b2c-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0051___ID=a360-show-segment.png") url("/magick-flows/mc2-inov8-summit-2019/main/0052___ID=a360-edit-segment-1.png") url("/magick-flows/mc2-inov8-summit-2019/main/0053___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0054___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0055___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0056___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0057___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0058___ID=a360-edit-segment-2.png") url("/magick-flows/mc2-inov8-summit-2019/main/0059___ID=b2c-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0060___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0061___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0062___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0063___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0064___ID=campaign-events.png") url("/magick-flows/mc2-inov8-summit-2019/main/0070___ID=b2c-journey-intro___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/mc2-inov8-summit-2019/main/0080___ID=b2c-bots___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/mc2-inov8-summit-2019/main/0090___ID=b2c-journey-bot-preview.png") url("/magick-flows/mc2-inov8-summit-2019/main/0100___ID=b2c-journey-add-bot-done.png") url("/magick-flows/mc2-inov8-summit-2019/main/0105___ID=route-map-progress___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/mc2-inov8-summit-2019/main/0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90__use-step-transition__step-transition_app-switch.png") url("/magick-flows/mc2-inov8-summit-2019/main/0120___ID=b2b-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0130___ID=b2b-journey-intro.png") url("/magick-flows/mc2-inov8-summit-2019/main/0135___ID=b2b-journey-intro.png") url("/magick-flows/mc2-inov8-summit-2019/main/0140___ID=b2b-journey-app-exchange.png") url("/magick-flows/mc2-inov8-summit-2019/main/0150___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98__show-drawer-from-left--instantly__hide-drawer-from-left--on-leave.png") url("/magick-flows/mc2-inov8-summit-2019/main/0160___ID=b2b-jb-email___DATA=is-own-header__own-header-height--98__show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/mc2-inov8-summit-2019/main/0170___ID=b2b-journey-email-selected.png") url("/magick-flows/mc2-inov8-summit-2019/main/0180___ID=b2b-journey-email-select-edit.png") url("/magick-flows/mc2-inov8-summit-2019/main/0185___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/mc2-inov8-summit-2019/main/0186___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0187___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0188___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0189___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0190___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0191___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0192___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0193___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0194___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0195___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0196___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0197___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0198___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/mc2-inov8-summit-2019/main/0200___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/mc2-inov8-summit-2019/main/0220___ID=b2b-jb-done___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/mc2-inov8-summit-2019/main/0230___ID=b2b-campaign-record-analytics___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0240___ID=contact-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0250___ID=business-dashboard___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0260___ID=route-map-complete___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/mc2-inov8-summit-2019/assets/all__viewport-size.png") url("/magick-flows/mc2-inov8-summit-2019/assets/b2b-jb-email___drawer-from-right.png") url("/magick-flows/mc2-inov8-summit-2019/assets/b2b-jb-isv___drawer-from-left.png") url("/magick-flows/mc2-inov8-summit-2019/assets/b2c-bots___drawer-from-right.png");
+  content: url("/magick-flows/mc2-inov8-summit-2019/main/0010___ID=login-empty.png") url("/magick-flows/mc2-inov8-summit-2019/main/0015___ID=login-filled.png") url("/magick-flows/mc2-inov8-summit-2019/main/0020___ID=sales-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0030___ID=app-launcher.png") url("/magick-flows/mc2-inov8-summit-2019/main/0040___ID=marketing-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0050___ID=b2c-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0051___ID=a360-show-segment.png") url("/magick-flows/mc2-inov8-summit-2019/main/0052___ID=a360-edit-segment-1.png") url("/magick-flows/mc2-inov8-summit-2019/main/0053___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0054___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0055___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0056___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0057___ID=a360-counter___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0058___ID=a360-edit-segment-2.png") url("/magick-flows/mc2-inov8-summit-2019/main/0059___ID=b2c-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0060___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0061___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0062___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0063___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0064___ID=campaign-events.png") url("/magick-flows/mc2-inov8-summit-2019/main/0070___ID=b2c-journey-intro___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/mc2-inov8-summit-2019/main/0080___ID=b2c-bots___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/mc2-inov8-summit-2019/main/0090___ID=b2c-bots-selected___DATA=show-drawer-from-right--instantly__hide-drawer-from-right--on-leave.png") url("/magick-flows/mc2-inov8-summit-2019/main/0090___ID=b2c-journey-bot-preview.png") url("/magick-flows/mc2-inov8-summit-2019/main/0100___ID=b2c-journey-add-bot-done.png") url("/magick-flows/mc2-inov8-summit-2019/main/0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0120___ID=b2b-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0130___ID=b2b-journey-intro.png") url("/magick-flows/mc2-inov8-summit-2019/main/0135___ID=b2b-journey-intro.png") url("/magick-flows/mc2-inov8-summit-2019/main/0140___ID=b2b-journey-app-exchange.png") url("/magick-flows/mc2-inov8-summit-2019/main/0150___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98__show-drawer-from-left--instantly__hide-drawer-from-left--on-leave.png") url("/magick-flows/mc2-inov8-summit-2019/main/0151___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0152___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0153___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0154___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0155___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/mc2-inov8-summit-2019/main/0160___ID=b2b-jb-email___DATA=is-own-header__own-header-height--98__show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/mc2-inov8-summit-2019/main/0170___ID=b2b-journey-email-selected.png") url("/magick-flows/mc2-inov8-summit-2019/main/0180___ID=b2b-journey-email-select-edit.png") url("/magick-flows/mc2-inov8-summit-2019/main/0185___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/mc2-inov8-summit-2019/main/0186___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0187___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0188___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0189___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0190___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0191___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0192___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0193___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0194___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0195___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0196___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0197___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/mc2-inov8-summit-2019/main/0198___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/mc2-inov8-summit-2019/main/0200___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/mc2-inov8-summit-2019/main/0220___ID=b2b-jb-done___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/mc2-inov8-summit-2019/main/0230___ID=b2b-campaign-record-analytics___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0240___ID=contact-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0250___ID=business-dashboard___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/mc2-inov8-summit-2019/main/0260___ID=route-map-complete___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/mc2-inov8-summit-2019/assets/all__viewport-size.png") url("/magick-flows/mc2-inov8-summit-2019/assets/b2b-jb-email___drawer-from-right.png") url("/magick-flows/mc2-inov8-summit-2019/assets/b2b-jb-isv___drawer-from-left.png") url("/magick-flows/mc2-inov8-summit-2019/assets/b2c-bots___drawer-from-right.png") url("/magick-flows/mc2-inov8-summit-2019/assets/b2c-bots-selected___drawer-from-right.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 136960px;
+  width: 149760px;
 }
 
 .app-switcher-one.shrink {
@@ -1955,6 +1955,166 @@ body.debug div#drawer-from-top--step-54::before {
   top: 0;
   width: 1280px;
   left: 138240px;
+}
+
+.app-switcher-one.be-left-55 {
+  left: -140800px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-55 {
+  left: -140800px;
+}
+
+body.debug div#drawer-from-top--step-55::before {
+  content: "Drawer #55";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-55 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 140800px;
+}
+
+.app-switcher-one.be-left-56 {
+  left: -143360px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-56 {
+  left: -143360px;
+}
+
+body.debug div#drawer-from-top--step-56::before {
+  content: "Drawer #56";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-56 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 143360px;
+}
+
+.app-switcher-one.be-left-57 {
+  left: -145920px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-57 {
+  left: -145920px;
+}
+
+body.debug div#drawer-from-top--step-57::before {
+  content: "Drawer #57";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-57 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 145920px;
+}
+
+.app-switcher-one.be-left-58 {
+  left: -148480px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-58 {
+  left: -148480px;
+}
+
+body.debug div#drawer-from-top--step-58::before {
+  content: "Drawer #58";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-58 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 148480px;
+}
+
+.app-switcher-one.be-left-59 {
+  left: -151040px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-59 {
+  left: -151040px;
+}
+
+body.debug div#drawer-from-top--step-59::before {
+  content: "Drawer #59";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-59 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 151040px;
 }
 
 footer.magick-flows-stickey-footer_container {

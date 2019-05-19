@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/b2b-flow/main/0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0120___ID=b2b-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0130___ID=b2b-journey-intro.png") url("/magick-flows/b2b-flow/main/0135___ID=b2b-journey-intro.png") url("/magick-flows/b2b-flow/main/0140___ID=b2b-journey-app-exchange.png") url("/magick-flows/b2b-flow/main/0150___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98__show-drawer-from-left--instantly__hide-drawer-from-left--on-leave.png") url("/magick-flows/b2b-flow/main/0160___ID=b2b-jb-email___DATA=is-own-header__own-header-height--98__show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/b2b-flow/main/0170___ID=b2b-journey-email-selected.png") url("/magick-flows/b2b-flow/main/0180___ID=b2b-journey-email-select-edit.png") url("/magick-flows/b2b-flow/main/0185___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/b2b-flow/main/0186___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0187___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0188___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0189___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0190___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0191___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0192___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0193___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0194___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0195___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0196___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0197___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0198___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/b2b-flow/main/0200___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/b2b-flow/main/0220___ID=b2b-jb-done___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/b2b-flow/main/0230___ID=b2b-campaign-record-analytics___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0240___ID=contact-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0250___ID=business-dashboard___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0260___ID=route-map-complete___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/b2b-flow/assets/all__viewport-size.png") url("/magick-flows/b2b-flow/assets/b2b-jb-email___drawer-from-right.png") url("/magick-flows/b2b-flow/assets/b2b-jb-isv___drawer-from-left.png") url("/magick-flows/b2b-flow/assets/b2c-bots___drawer-from-right.png");
+  content: url("/magick-flows/b2b-flow/main/0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0120___ID=b2b-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0130___ID=b2b-journey-intro.png") url("/magick-flows/b2b-flow/main/0135___ID=b2b-journey-intro.png") url("/magick-flows/b2b-flow/main/0140___ID=b2b-journey-app-exchange.png") url("/magick-flows/b2b-flow/main/0150___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98__show-drawer-from-left--instantly__hide-drawer-from-left--on-leave.png") url("/magick-flows/b2b-flow/main/0151___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0152___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0153___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0154___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0155___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/b2b-flow/main/0160___ID=b2b-jb-email___DATA=is-own-header__own-header-height--98__show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/b2b-flow/main/0170___ID=b2b-journey-email-selected.png") url("/magick-flows/b2b-flow/main/0180___ID=b2b-journey-email-select-edit.png") url("/magick-flows/b2b-flow/main/0185___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/b2b-flow/main/0186___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0187___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0188___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0189___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0190___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0191___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0192___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0193___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0194___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0195___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0196___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0197___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0198___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/b2b-flow/main/0200___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/b2b-flow/main/0220___ID=b2b-jb-done___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/b2b-flow/main/0230___ID=b2b-campaign-record-analytics___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0240___ID=contact-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0250___ID=business-dashboard___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0260___ID=route-map-complete___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/b2b-flow/assets/all__viewport-size.png") url("/magick-flows/b2b-flow/assets/b2b-jb-email___drawer-from-right.png") url("/magick-flows/b2b-flow/assets/b2b-jb-isv___drawer-from-left.png") url("/magick-flows/b2b-flow/assets/b2c-bots___drawer-from-right.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 72960px;
+  width: 85760px;
 }
 
 .app-switcher-one.shrink {
@@ -1155,6 +1155,166 @@ body.debug div#drawer-from-top--step-29::before {
   top: 0;
   width: 1280px;
   left: 74240px;
+}
+
+.app-switcher-one.be-left-30 {
+  left: -76800px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-30 {
+  left: -76800px;
+}
+
+body.debug div#drawer-from-top--step-30::before {
+  content: "Drawer #30";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-30 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 76800px;
+}
+
+.app-switcher-one.be-left-31 {
+  left: -79360px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-31 {
+  left: -79360px;
+}
+
+body.debug div#drawer-from-top--step-31::before {
+  content: "Drawer #31";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-31 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 79360px;
+}
+
+.app-switcher-one.be-left-32 {
+  left: -81920px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-32 {
+  left: -81920px;
+}
+
+body.debug div#drawer-from-top--step-32::before {
+  content: "Drawer #32";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-32 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 81920px;
+}
+
+.app-switcher-one.be-left-33 {
+  left: -84480px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-33 {
+  left: -84480px;
+}
+
+body.debug div#drawer-from-top--step-33::before {
+  content: "Drawer #33";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-33 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 84480px;
+}
+
+.app-switcher-one.be-left-34 {
+  left: -87040px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-34 {
+  left: -87040px;
+}
+
+body.debug div#drawer-from-top--step-34::before {
+  content: "Drawer #34";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-34 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 87040px;
 }
 
 footer.magick-flows-stickey-footer_container {

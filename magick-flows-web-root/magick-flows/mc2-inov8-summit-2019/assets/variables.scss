@@ -1,4 +1,4 @@
-$numberOfSlides: 54;
+$numberOfSlides: 59;
 $preloadImagesData: url('/magick-flows/mc2-inov8-summit-2019/main/0010___ID=login-empty.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0015___ID=login-filled.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0020___ID=sales-home___DATA=is-own-header__own-header-height--90.png')
@@ -21,15 +21,20 @@ $preloadImagesData: url('/magick-flows/mc2-inov8-summit-2019/main/0010___ID=logi
 		url('/magick-flows/mc2-inov8-summit-2019/main/0064___ID=campaign-events.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0070___ID=b2c-journey-intro___DATA=is-own-header__own-header-height--98.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0080___ID=b2c-bots___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png')
+		url('/magick-flows/mc2-inov8-summit-2019/main/0090___ID=b2c-bots-selected___DATA=show-drawer-from-right--instantly__hide-drawer-from-right--on-leave.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0090___ID=b2c-journey-bot-preview.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0100___ID=b2c-journey-add-bot-done.png')
-		url('/magick-flows/mc2-inov8-summit-2019/main/0105___ID=route-map-progress___DATA=use-step-transition__step-transition_app-switch.png')
-		url('/magick-flows/mc2-inov8-summit-2019/main/0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90__use-step-transition__step-transition_app-switch.png')
+		url('/magick-flows/mc2-inov8-summit-2019/main/0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0120___ID=b2b-campaign-record-home___DATA=is-own-header__own-header-height--90.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0130___ID=b2b-journey-intro.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0135___ID=b2b-journey-intro.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0140___ID=b2b-journey-app-exchange.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0150___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98__show-drawer-from-left--instantly__hide-drawer-from-left--on-leave.png')
+		url('/magick-flows/mc2-inov8-summit-2019/main/0151___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png')
+		url('/magick-flows/mc2-inov8-summit-2019/main/0152___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png')
+		url('/magick-flows/mc2-inov8-summit-2019/main/0153___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png')
+		url('/magick-flows/mc2-inov8-summit-2019/main/0154___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png')
+		url('/magick-flows/mc2-inov8-summit-2019/main/0155___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0160___ID=b2b-jb-email___DATA=is-own-header__own-header-height--98__show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0170___ID=b2b-journey-email-selected.png')
 		url('/magick-flows/mc2-inov8-summit-2019/main/0180___ID=b2b-journey-email-select-edit.png')
@@ -56,7 +61,8 @@ $preloadImagesData: url('/magick-flows/mc2-inov8-summit-2019/main/0010___ID=logi
 		url('/magick-flows/mc2-inov8-summit-2019/assets/all__viewport-size.png')
 		url('/magick-flows/mc2-inov8-summit-2019/assets/b2b-jb-email___drawer-from-right.png')
 		url('/magick-flows/mc2-inov8-summit-2019/assets/b2b-jb-isv___drawer-from-left.png')
-		url('/magick-flows/mc2-inov8-summit-2019/assets/b2c-bots___drawer-from-right.png');
+		url('/magick-flows/mc2-inov8-summit-2019/assets/b2c-bots___drawer-from-right.png')
+		url('/magick-flows/mc2-inov8-summit-2019/assets/b2c-bots-selected___drawer-from-right.png');
 $heightOfSlideValue: 720;
 $widthOfSlideValue: 1280;
 $widthOfGutterValue: 1280;
