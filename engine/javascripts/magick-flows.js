@@ -318,7 +318,7 @@ function locationHashChanged(event) {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
 					}, 2900);
 
-					newDelayTransition = 750;
+					newDelayTransition = doAutoAdvanceStepTransition ? 0 : 750;
 					// console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
 					delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 				} else if ( previousStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
