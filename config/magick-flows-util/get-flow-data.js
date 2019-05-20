@@ -12,7 +12,7 @@ function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleErro
 
 	fs.writeFile(scssVariablesFilePath, dataString, function(err){
 		if(!err){
-			// console.log(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
+			// console.debug(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
 		} else {
 			console.error(`[ config/config.js:28 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
 
@@ -21,10 +21,10 @@ function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleErro
 }
 
 function dynamicSassHandleSuccess(data){
-	console.log(`[ dynamicSassHandleSuccess ]: `, data);
+	console.debug(`[ dynamicSassHandleSuccess ]: `, data);
 }
 function dynamicSassHandleError(data){
-	console.log(`[ dynamicSassHandleError ]: `, data);
+	console.debug(`[ dynamicSassHandleError ]: `, data);
 }
 
 
@@ -217,9 +217,10 @@ const getStepData = (flowData, fileName, fileIndex) => {
 const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 
 
-	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:205 ] configData: `, util.inspect(configData, { showHidden: false, depth: 1, colors: true }));
-	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:206 ] fileOrDirectoryPath: `, util.inspect(fileOrDirectoryPath, { showHidden: false, depth: null, colors: true }));
-	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:207 ] subFileOrDirectory: `, util.inspect(subFileOrDirectory, { showHidden: false, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:220 ] configData: `, util.inspect(configData, { showHidden: false, depth: 1, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:221 ] fileOrDirectoryPath: `, util.inspect(fileOrDirectoryPath, { showHidden: false, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:222 ] subFileOrDirectory: `, util.inspect(subFileOrDirectory, { showHidden: false, depth: null, colors: true }));
+
 	if(!fs.statSync(path.join(fileOrDirectoryPath, subFileOrDirectory)).isDirectory()) {
 		return configData;
 	}
@@ -260,13 +261,13 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 	const thisMagickFlowHasTemplateSizingInfo = flowData.assets.includes('all__viewport-size.png');
 
 
-	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:245 ] thisMagickFlowHasTemplateSizingInfo: `, util.inspect(thisMagickFlowHasTemplateSizingInfo, { showHidden: true, depth: null, colors: true }));
+	console.debug(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:245 ] thisMagickFlowHasTemplateSizingInfo: `, util.inspect(thisMagickFlowHasTemplateSizingInfo, { showHidden: true, depth: null, colors: true }));
 	if ( thisMagickFlowHasTemplateSizingInfo === true ) {
 
 		const pathToTemplateSizingFile = path.join(flowData.fullAssetsPath, 'all__viewport-size.png');
 		templateSizingFileDimensions = sizeOf(pathToTemplateSizingFile);
 		flowData.templateSizingFileDimensions = templateSizingFileDimensions;
-		console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:250 ] templateSizingFileDimensions: `, util.inspect(templateSizingFileDimensions, { showHidden: true, depth: null, colors: true }));
+		console.debug(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:250 ] templateSizingFileDimensions: `, util.inspect(templateSizingFileDimensions, { showHidden: true, depth: null, colors: true }));
 	}
 
 	const thisMagickFlowMainImagesForScssVariables = flowData.steps.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
