@@ -43,19 +43,46 @@ function testForEscapeHatch(node) {
 	return node.includes('is-escape-hatch');
 }
 
-$contentWrapper.onclick = ( ) => {
-	clicks++;
+function incrementLocationHashWithTiming ( hashChangeTiming = 0, directionOfNavigation = 'forward' ) {
+	if (directionOfNavigation === 'backwards') {
+		clicks --;
+	} else {
+		clicks++;
+	}
 	if ( clicks >= magickFlowConfig.numberOfSteps ) {
 		clicks = magickFlowConfig.numberOfSteps - 1;
+	}
+	if ( clicks < 0 ) {
+		clicks = 0;
 	}
 	// Now is the chance to run onBeforeHashChange stuff
 	// In the future, we may wish to catch that it should change and do stuff first.
 	// For now, we just do it.
-	let hashChangeTiming = 0;
+	console.log(`[ incrementLocationHashWithTiming ] A click has happened. That makes the total number of clicks: ${clicks}. Now we will wait ${hashChangeTiming} milliseconds and then update the hash.`);
 	setTimeout(() => {
 		window.location.hash = `#${clicks}`;
 	}, hashChangeTiming);
+}
 
+function setLocationHashWithTiming (newUrlHash = 0, hashChangeTiming = 0) {
+	clicks = newUrlHash;
+	if ( clicks >= magickFlowConfig.numberOfSteps ) {
+		clicks = magickFlowConfig.numberOfSteps - 1;
+	}
+	if ( clicks < 0 ) {
+		clicks = 0;
+	}
+	// Now is the chance to run onBeforeHashChange stuff
+	// In the future, we may wish to catch that it should change and do stuff first.
+	// For now, we just do it.
+	console.log(`[ setLocationHashWithTiming ] Making the total number of clicks: ${clicks}. Now we will wait ${hashChangeTiming} milliseconds and then update the hash.`);
+	setTimeout(() => {
+		window.location.hash = `#${clicks}`;
+	}, hashChangeTiming);
+}
+
+$contentWrapper.onclick = ( ) => {
+	incrementLocationHashWithTiming();
 };
 
 
@@ -542,7 +569,7 @@ window.onhashchange = locationHashChanged;
 // ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
 window.setTimeout(() => {
 	window.location.hash = `#reset`;
-	window.location.hash = `#${clicks}`;
+	setLocationHashWithTiming(0, 0);
 }, (0)); // 150 
 
 // Give the whole thing a chance to cache some assets before presenting the UI. This only runs once per page load, not every click.
@@ -585,12 +612,15 @@ document.addEventListener('keydown', function (evt) {
 
 
 document.onkeyup = function(e) {
+
 	if (e.which == 72) {
-		// console.log("H key was pressed, go to the first slide.");
-		window.location.hash = `#0`;
-
+		
+		// H
+		
+		console.debug("H key was pressed. Going to the first step.");
+		setLocationHashWithTiming(0, 0);
 	} else if (e.which == 73) {
-
+		// I
 
 		let theseNodes = document.querySelectorAll(`#magick-flows-click-hints--step-${clicks}`);
 		if ( theseNodes.length > 0 ) {
@@ -601,7 +631,9 @@ document.onkeyup = function(e) {
 
 
 	} else if (e.which == 84) {
-		// This is the `t` key
+		
+		// T
+
 		// "t" for "toggle"
 		// Toggles the click hints on all slides.
 		let theseNodes = document.querySelectorAll(`.magick-flows-click-hints`);
@@ -612,10 +644,12 @@ document.onkeyup = function(e) {
 		}
 	} else if (e.which == 39) {
 		// console.log("Right arrow key was pressed, go to next...");
-		window.location.hash = `#${nextClick}`;
+		incrementLocationHashWithTiming(null, 'forward');
+		// window.location.hash = `#${nextClick}`;
 	} else if (e.which == 37) {
 		// console.log("Left arrow key was pressed, go to previous...");
-		window.location.hash = `#${previousClick}`;
+		incrementLocationHashWithTiming(null, 'backwards');
+		// window.location.hash = `#${previousClick}`;
 	} else if (e.which == 71) {
 		// console.log("GIF...");
 		const theMainContent = document.queryselector(`#magick-flows--step-${clicks} .auto-replace`);
