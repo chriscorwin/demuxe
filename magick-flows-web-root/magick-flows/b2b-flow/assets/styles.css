@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/b2b-flow/main/0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0120___ID=b2b-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0130___ID=b2b-journey-intro.png") url("/magick-flows/b2b-flow/main/0135___ID=b2b-journey-intro.png") url("/magick-flows/b2b-flow/main/0140___ID=b2b-journey-app-exchange.png") url("/magick-flows/b2b-flow/main/0150___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98__show-drawer-from-left--instantly__hide-drawer-from-left--on-leave.png") url("/magick-flows/b2b-flow/main/0151___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0152___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0153___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0154___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0155___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/b2b-flow/main/0160___ID=b2b-jb-email___DATA=is-own-header__own-header-height--98__show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/b2b-flow/main/0170___ID=b2b-journey-email-selected.png") url("/magick-flows/b2b-flow/main/0180___ID=b2b-journey-email-select-edit.png") url("/magick-flows/b2b-flow/main/0185___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/b2b-flow/main/0186___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0187___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0188___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0189___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0190___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0191___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0192___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0193___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0194___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0195___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0196___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0197___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0198___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/b2b-flow/main/0200___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/b2b-flow/main/0220___ID=b2b-jb-done___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/b2b-flow/main/0230___ID=b2b-campaign-record-analytics___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0240___ID=contact-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0250___ID=business-dashboard___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0260___ID=route-map-complete___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/b2b-flow/assets/all__viewport-size.png") url("/magick-flows/b2b-flow/assets/b2b-jb-email___drawer-from-right.png") url("/magick-flows/b2b-flow/assets/b2b-jb-isv___drawer-from-left.png") url("/magick-flows/b2b-flow/assets/b2c-bots___drawer-from-right.png");
+  content: url("/magick-flows/b2b-flow/main/0110___ID=b2b-marketing-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0120___ID=b2b-campaign-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0130___ID=b2b-journey-intro.png") url("/magick-flows/b2b-flow/main/0135___ID=b2b-journey-intro.png") url("/magick-flows/b2b-flow/main/0140___ID=b2b-journey-app-exchange.png") url("/magick-flows/b2b-flow/main/0150___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98__show-drawer-from-left--instantly__hide-drawer-from-left--on-leave.png") url("/magick-flows/b2b-flow/main/0151___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0152___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0153___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0154___ID=b2b-jb-isv___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0155___ID=b2b-jb-isv___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/b2b-flow/main/0156___ID=b2b-jb-email___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0157___ID=b2b-jb-email___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0158___ID=b2b-jb-email___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0159___ID=b2b-jb-email___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0160___ID=b2b-jb-email___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0161___ID=b2b-jb-email___DATA=is-own-header__own-header-height--98__show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png") url("/magick-flows/b2b-flow/main/0170___ID=b2b-journey-email-selected.png") url("/magick-flows/b2b-flow/main/0180___ID=b2b-journey-email-select-edit.png") url("/magick-flows/b2b-flow/main/0185___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/b2b-flow/main/0186___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0187___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0188___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0189___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0190___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0191___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0192___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0193___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0194___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0195___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0196___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0197___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png") url("/magick-flows/b2b-flow/main/0198___ID=b2b-journey-email-rebel-mail___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/b2b-flow/main/0200___ID=b2b-journey-email-rebel-mail.png") url("/magick-flows/b2b-flow/main/0220___ID=b2b-jb-done___DATA=is-own-header__own-header-height--98.png") url("/magick-flows/b2b-flow/main/0230___ID=b2b-campaign-record-analytics___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0240___ID=contact-record-home___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0250___ID=business-dashboard___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/b2b-flow/main/0260___ID=route-map-complete___DATA=use-step-transition__step-transition_app-switch.png") url("/magick-flows/b2b-flow/assets/all__viewport-size.png") url("/magick-flows/b2b-flow/assets/b2b-jb-email___drawer-from-right.png") url("/magick-flows/b2b-flow/assets/b2b-jb-isv___drawer-from-left.png") url("/magick-flows/b2b-flow/assets/b2c-bots___drawer-from-right.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 85760px;
+  width: 98560px;
 }
 
 .app-switcher-one.shrink {
@@ -1315,6 +1315,166 @@ body.debug div#drawer-from-top--step-34::before {
   top: 0;
   width: 1280px;
   left: 87040px;
+}
+
+.app-switcher-one.be-left-35 {
+  left: -89600px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-35 {
+  left: -89600px;
+}
+
+body.debug div#drawer-from-top--step-35::before {
+  content: "Drawer #35";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-35 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 89600px;
+}
+
+.app-switcher-one.be-left-36 {
+  left: -92160px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-36 {
+  left: -92160px;
+}
+
+body.debug div#drawer-from-top--step-36::before {
+  content: "Drawer #36";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-36 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 92160px;
+}
+
+.app-switcher-one.be-left-37 {
+  left: -94720px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-37 {
+  left: -94720px;
+}
+
+body.debug div#drawer-from-top--step-37::before {
+  content: "Drawer #37";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-37 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 94720px;
+}
+
+.app-switcher-one.be-left-38 {
+  left: -97280px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-38 {
+  left: -97280px;
+}
+
+body.debug div#drawer-from-top--step-38::before {
+  content: "Drawer #38";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-38 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 97280px;
+}
+
+.app-switcher-one.be-left-39 {
+  left: -99840px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-39 {
+  left: -99840px;
+}
+
+body.debug div#drawer-from-top--step-39::before {
+  content: "Drawer #39";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-39 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 99840px;
 }
 
 footer.magick-flows-stickey-footer_container {
