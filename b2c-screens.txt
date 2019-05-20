@@ -1,3 +1,4 @@
+
 0010___ID=login-empty.png
 0015___ID=login-filled.png
 0020___ID=sales-home___DATA=is-own-header__own-header-height--90.png
@@ -19,7 +20,12 @@
 0063___ID=campaign-events___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
 0064___ID=campaign-events.png
 0070___ID=b2c-journey-intro___DATA=is-own-header__own-header-height--98.png
+0071___ID=b2c-journey-intro___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
+0072___ID=b2c-journey-intro___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
+0073___ID=b2c-journey-intro___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
 0080___ID=b2c-bots___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never.png
 0090___ID=b2c-bots-selected___DATA=show-drawer-from-right--instantly__hide-drawer-from-right--on-leave.png
-0090___ID=b2c-journey-bot-preview.png
+0091___ID=b2c-bots-selected___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
+0092___ID=b2c-bots-selected___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
+0093___ID=b2c-bots-selected___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast.png
 0100___ID=b2c-journey-add-bot-done.png
