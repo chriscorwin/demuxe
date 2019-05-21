@@ -29,7 +29,8 @@ if ( previousClick <= 0 ) {
 	previousClick = magickFlowConfig.numberOfSteps
 }
 
-window.location.hash = `#${clicks}`;
+setLocationHashWithTiming(0, 0);
+// window.location.hash = `#${clicks}`;
 
 const $ss = document.querySelector(`.magick-flows--step-content.auto-replace[data-step="${clicks}"]`);
 const $contentWrapper = document.querySelector( '#content-wrapper' );
@@ -270,7 +271,7 @@ function locationHashChanged(event) {
 	
 
 	if ( doAutoAdvanceStepTransition === true ) {
-		// console.debug(`doAutoAdvanceStepTransition: `, doAutoAdvanceStepTransition);
+		console.debug(`doAutoAdvanceStepTransition: `, doAutoAdvanceStepTransition);
 
 		if ( currentStepMetaData.find(k => k=='step-transition-timing--slow') === 'step-transition-timing--slow') {
 			autoAdvanceTransitionTiming = 5000;
@@ -286,10 +287,11 @@ function locationHashChanged(event) {
 			autoAdvanceTransitionStepNumber = stepToEvaluateForAppTransition - 1;
 		}
 
-		// console.debug(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
-		setTimeout(() => {
-			window.location.hash = `#${autoAdvanceTransitionStepNumber}`;
-		}, autoAdvanceTransitionTiming);
+		console.debug(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
+		setLocationHashWithTiming(autoAdvanceTransitionStepNumber, autoAdvanceTransitionTiming);
+		// setTimeout(() => {
+		// 	window.location.hash = `#${autoAdvanceTransitionStepNumber}`;
+		// }, autoAdvanceTransitionTiming);
 		
 	}
 
