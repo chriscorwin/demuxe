@@ -1,8 +1,8 @@
 {
 	"demoName": "DMB BBVA DF 18 Keynote",
 	"brandTheme": "nto",
-	"productTemplate": "jb",
-	"demoVenue": "test-run",
+	"productTemplate": "engine",
+	"demoVenue": "components-showcase",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
