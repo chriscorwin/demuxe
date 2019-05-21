@@ -1,0 +1,145 @@
+<%
+	const svgHeight = locals.svgHeight || 1000;
+	const svgWidth = locals.svgWidth || 1012;
+%>
+
+<svg class="graph lifecycle-graph" height="<%= svgHeight %>" width="<%= svgWidth %>">
+	<defs>
+		<linearGradient id="gradient-dropin" class="linear-gradient" x1="0%" x2="0%" y1="0%" y2="100%" spreadMethod="pad">
+			<stop offset="0%" class="linear-gradient-stop-dropin" stop-opacity="0"/>
+			<stop offset="50%" class="linear-gradient-stop-dropin" stop-opacity="0.8"/>
+		</linearGradient>
+		<linearGradient id="gradient-dropoff" class="linear-gradient" x1="0%" x2="0%" y1="100%" y2="0%" spreadMethod="pad">
+			<stop offset="0%" class="linear-gradient-stop-dropoff" stop-opacity="0"/>
+			<stop offset="50%" class="linear-gradient-stop-dropoff" stop-opacity="0.8"/>
+		</linearGradient>
+		<linearGradient id="gradient-forward" class="linear-gradient" x1="0%" x2="100%" y1="0%" y2="0%" spreadMethod="pad">
+			<stop offset="0%" class="linear-gradient-stop-forward" stop-opacity="0.2"/>
+			<stop offset="80%" class="linear-gradient-stop-forward" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="gradient-backward" class="linear-gradient" x1="100%" x2="0%" y1="0%" y2="0%" spreadMethod="pad">
+			<stop offset="0%" class="linear-gradient-stop-backward" stop-opacity="0.35"/>
+			<stop offset="80%" class="linear-gradient-stop-backward" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="gradient-axis" class="linear-gradient" x1="1%" x2="99%" y1="0%" y2="0%" spreadMethod="pad">
+			<stop offset="0%" class="linear-gradient-stop-axis" stop-opacity="0"/>
+			<stop offset="4%" class="linear-gradient-stop-axis" stop-opacity="1"/>
+			<stop offset="96%" class="linear-gradient-stop-axis" stop-opacity="1"/>
+			<stop offset="100%" class="linear-gradient-stop-axis" stop-opacity="0"/>
+		</linearGradient>
+		<clipPath id="clip-active">
+			<rect x="-115" y="-120" width="230" height="115"> </rect>
+		</clipPath>
+		<clipPath id="clip-inactive">
+			<rect x="-115" y="5" width="230" height="115"> </rect>
+		</clipPath>
+	</defs>
+	<g class="graph-data" transform="translate(0,331.5)">
+
+		<!-- The center line -->
+		<g class="graph-marks">
+			<rect class="axis" width="1012" fill="url(#gradient-axis)" x="80" y="-1" height="2"> </rect>
+			<line class="separator separator-row separator-graph" x1="0" y1="0" x2="100%" y2="0"> </line>
+		</g>
+
+		<% 
+			const STOP_SPACING = locals.STOP_SPACING || 140;
+			const stops = (i) => STOP_SPACING/2 + (i * STOP_SPACING);
+			const arcShape = (span, direction) => `M0,0 A${span*(STOP_SPACING/2)},${span*(STOP_SPACING/2)} 0 0 1 ${direction === 'forward' ? '' : '-'}${span*STOP_SPACING},0`;
+
+			const stages = locals.stages;
+		%>
+
+		<g class="graph-elements-svg" transform="translate(166,0)">
+			
+			<!-- the discs (blue/purple half circles) -->
+			<g>
+			<% 
+				stages.forEach((stage, i) => {
+					echo(`<g class="set${i}" transform="translate(${stops(i)},0)">`);
+					stage.discs.forEach((disc, i) => {
+						echo(`<circle class="volume-${disc.type}" r="${disc.r}" clip-path="url(#clip-${disc.type})"/>`);
+					});
+					echo('</g>');
+				});
+			%>
+			</g>
+		
+			<!-- the arcs & rectangles -->
+			<g class="flow-container">
+				<!-- the rectangles -->
+				<% 
+					stages.forEach((stage, i) => { 
+						stage.joinAndLeaveFlows.forEach(rect => {
+							const x = (rect.width / 2) * -1;
+							const y = rect.type === 'in' ? '-160' : '0';
+							const classes = classnames(`flow-drop${rect.type}`, {
+								'flow-thin': rect.width < 10
+							})
+
+							echo(`<g class="flow set${i}" transform="translate(${stops(i)},0)">
+								<rect 
+									class="${classes}" 
+									width="${rect.width}" 
+									x="${x}"
+									y="${y}"
+									fill="url(#gradient-drop${rect.type})"/>
+							</g>`);
+						});
+					}); 
+				%>
+
+				<!-- the arcs -->
+				<%
+					stages.forEach((stage, i) => { 
+						stage.arcs.forEach(arc => {
+							const classes = classnames(
+								`flow-${arc.direction}`,
+								`flow-span${arc.span}`,
+								{ 'flow-thin': arc.width < 10 }
+							);
+
+							echo(`<g class="flow" transform="translate(${stops(i)},0)">
+								<path 
+									class="${classes}" 
+									style="animation-delay: ${(i+1) * 400}ms;" 
+									fill="none" 
+									d="${arcShape(arc.span, arc.direction)}" 
+									stroke="url(#gradient-${arc.direction})" 
+									stroke-width="${arc.width}"/>
+							</g>`);
+						});
+					}); 
+				%>
+			</g>
+
+			<!-- the circles on the lines -->
+			<g class="node-container">
+				<%
+					stages.forEach((stage, i) => { 
+						echo(`<g opacity="1" class="node node-focusable" transform="translate(${stops(i)},0)">
+							<circle r="${stage.circle && stage.circle.rOuter || 15}" class="tick-outer"/>
+							<circle r="${stage.circle && stage.circle.r || 10}" class="tick"/>
+						</g>`);
+					}); 
+				%>
+			</g>
+		</g>
+	</g>
+</svg>
+<div class="lifecycle-label-container dynamic-placement" style="transform: translate(176px, 320.5px)">
+	<div class="lifecycle-stage-labels" style="transform: translate(0px, -64px);">
+		<%
+			stages.forEach((stage, i) => {
+				echo(`
+					<div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column" style="opacity: 1; transform: translateX(${stops(i)}px) translateX(-50%);">
+						<label class="journeys-label lifecycle-stage-label">
+							<span class="journeys-label-content lifecycle-stage-label-content">${stage.label}</span>
+						</label>
+					</div>
+				`);
+			});
+		%>
+	</div>
+	<div class="node-labels"> </div>
+</div>
