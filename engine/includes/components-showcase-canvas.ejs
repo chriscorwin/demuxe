@@ -4,52 +4,52 @@ const canvasData = {
 	rows: [
 		[
 			{
-				connector: { direction: 'right' },
+				connector: {},
 				icon: { path: '/icons/utility-sprite/svg/symbols.svg#people', nodeType: 'start' },
 				name: 'Audience',
 				stats: '17,226 Contacts'
 			},
 			{
-				connector: { direction: 'right' },
+				connector: {},
 				icon: { path: '/icons/utility-sprite/svg/symbols.svg#email', nodeType: 'direct' },
 				name: 'Send Email',
 				stats: 'Suite Promo'
 			},
 			{
-				connector: { direction: 'right' },
+				connector: {},
 				icon: { path: '/icons/utility-sprite/svg/symbols.svg#clock', nodeType: 'branching' },
 				name: 'Wait'
 			},
 			{
-				connector: { direction: 'right', label: 'Clicked' },
+				connector: { label: 'Clicked' },
 				icon: { path: '/icons/utility-sprite/svg/symbols.svg#signpost', nodeType: 'branching' },
 				name: 'Decision Split',
 				stats: 'Level of Engagement'
 			},
 			{
-				connector: { direction: 'right' },
+				connector: {},
 				icon: { path: '/icons/utility-sprite/svg/symbols.svg#email', nodeType: 'direct' },
 				name: 'Send Email',
 				stats: 'Customized Suite Promo Follow-Up'
 			},
 			{
-				connector: { direction: 'right', label: 'If < 30 Days' },
+				connector: { label: 'If < 30 Days' },
 				icon: { path: '/icons/wait-until-activity-icon-configured.png', nodeType: 'custom', rotate: true },
 				name: 'Wait Until',
 				stats: 'Lead Score 350+',
-				unconfigured: true
+				isUnconfigured: true
 			},
 			{
-				connector: { direction: 'right', label: 'Finance' },
+				connector: { label: 'Finance' },
 				icon: { path: '/icons/utility-sprite/svg/symbols.svg#signpost', nodeType: 'branching' },
 				name: 'Decision Split',
 				stats: 'Industry'
 			},
 			{
-				connector: { direction: 'right' },
+				connector: {},
 				icon: { path: '/icons/lead-activity-icon.svg', nodeType: 'custom' },
 				name: 'Assign Lead',
-				unconfigured: true
+				isUnconfigured: true
 			},
 			{
 				icon: { path: '/icons/utility-sprite/svg/symbols.svg#stop', nodeType: 'end' },
@@ -63,7 +63,7 @@ const canvasData = {
 			{},
 			{
 				isConnection: true,
-				connector: { direction: 'right', label: 'No Click' }
+				connector: { label: 'No Click' }
 			},
 			{
 				isJoin: true,
@@ -74,13 +74,13 @@ const canvasData = {
 			{},
 			{
 				isConnection: true,
-				connector: { direction: 'right', label: 'Insurance' }
+				connector: { label: 'Insurance' }
 			},
 			{
-				connector: { direction: 'right' },
+				connector: {},
 				icon: { path: '/icons/lead-activity-icon.svg', nodeType: 'custom' },
 				name: 'Assign Lead',
-				unconfigured: true
+				isUnconfigured: true
 			},
 			{
 				icon: { path: '/icons/utility-sprite/svg/symbols.svg#stop', nodeType: 'end' },
@@ -98,13 +98,13 @@ const canvasData = {
 			{
 				isConnection: true,
 				rowsSpanned: 3,
-				connector: { direction: 'right', label: 'Manufacturing' }
+				connector: { label: 'Manufacturing' }
 			},
 			{
-				connector: { direction: 'right' },
+				connector: {},
 				icon: { path: '/icons/lead-activity-icon.svg', nodeType: 'custom' },
 				name: 'Assign Lead',
-				unconfigured: true
+				isUnconfigured: true
 			},
 			{
 				icon: { path: '/icons/utility-sprite/svg/symbols.svg#stop', nodeType: 'end' },
@@ -122,10 +122,10 @@ const canvasData = {
 			{
 				isConnection: true,
 				rowsSpanned: 4,
-				connector: { direction: 'right', label: 'If < 30 Days' }
+				connector: { label: 'If < 30 Days' }
 			},
 			{
-				connector: { direction: 'right' },
+				connector: {},
 				icon: { path: '/icons/update-record.png', nodeType: 'custom' },
 				name: 'Update Record',
 				stats: 'Add to Audience'
