@@ -57,6 +57,10 @@ body, .container {
   will-change: top;
 }
 
+.magick-flows-drawer {
+  pointer-events: none;
+}
+
 .magick-flows-drawer--from-top {
   margin: 0 auto;
   position: absolute;
