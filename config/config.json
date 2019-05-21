@@ -1,8 +1,8 @@
 {
-	"demoName": "DMB BBVA DF 18 Keynote",
-	"brandTheme": "nto",
-	"productTemplate": "engine",
-	"demoVenue": "components-showcase",
+	"demoName": "IS Fever CNX 19 Keynote",
+	"brandTheme": "fever",
+	"productTemplate": "is",
+	"demoVenue": "cnx19keynote",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -13,13 +13,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://roadshow19-dmp-nto.herokuapp.com/"
+		"host": "https://cnx19keynote-is-fever.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://roadshow19-dmp-nto-qa.herokuapp.com/"
+		"host": "https://cnx19keynote-is-fever-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://roadshow19-dmp-nto-dev.herokuapp.com/"
+		"host": "https://cnx19keynote-is-fever-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
