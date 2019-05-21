@@ -12,6 +12,26 @@ _%>
 	const thisMagickFlowConfig =<%- JSON.stringify(thisMagickFlowConfig)%>;
 	console.group('[ includes/magick-flows/magick-flows-contents.ejs:14 ] thisMagickFlowConfig:');
 	console.dir(thisMagickFlowConfig);
+
+
+	var clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+
+	if ( clicks >= thisMagickFlowConfig.numberOfSteps ) {
+		clicks = 0;
+	}
+
+	var nextClick = clicks + 1;
+	if ( nextClick >= thisMagickFlowConfig.numberOfSteps ) {
+		nextClick = 0
+	}
+
+	var previousClick = clicks - 1;
+	if ( previousClick <= 0 ) {
+		previousClick = thisMagickFlowConfig.numberOfSteps
+	}
+
+
+
 	console.groupEnd();
 </script>
 <%

@@ -13,24 +13,22 @@ const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
 const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
 
-let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+var clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
 if ( clicks >= magickFlowConfig.numberOfSteps ) {
 	clicks = 0;
 }
 
-let nextClick = clicks + 1;
+var nextClick = clicks + 1;
 if ( nextClick >= magickFlowConfig.numberOfSteps ) {
 	nextClick = 0
 }
 
-let previousClick = clicks - 1;
+var previousClick = clicks - 1;
 if ( previousClick <= 0 ) {
 	previousClick = magickFlowConfig.numberOfSteps
 }
 
-setLocationHashWithTiming(0, 0);
-// window.location.hash = `#${clicks}`;
 
 const $ss = document.querySelector(`.magick-flows--step-content.auto-replace[data-step="${clicks}"]`);
 const $contentWrapper = document.querySelector( '#content-wrapper' );
@@ -66,19 +64,19 @@ function incrementLocationHashWithTiming ( hashChangeTiming = 0, directionOfNavi
 }
 
 function setLocationHashWithTiming (newUrlHash = 0, hashChangeTiming = 0) {
-	clicks = newUrlHash;
-	if ( clicks >= magickFlowConfig.numberOfSteps ) {
-		clicks = magickFlowConfig.numberOfSteps - 1;
+	// clicks = newUrlHash;
+	if ( newUrlHash >= magickFlowConfig.numberOfSteps ) {
+		newUrlHash = magickFlowConfig.numberOfSteps - 1;
 	}
-	if ( clicks < 0 ) {
-		clicks = 0;
+	if ( newUrlHash < 0 ) {
+		newUrlHash = 0;
 	}
 	// Now is the chance to run onBeforeHashChange stuff
 	// In the future, we may wish to catch that it should change and do stuff first.
 	// For now, we just do it.
-	console.log(`[ setLocationHashWithTiming ] Making the total number of clicks: ${clicks}. Now we will wait ${hashChangeTiming} milliseconds and then update the hash.`);
+	console.log(`[ setLocationHashWithTiming ] Making the total number of clicks: ${newUrlHash}. Now we will wait ${hashChangeTiming} milliseconds and then update the hash.`);
 	setTimeout(() => {
-		window.location.hash = `#${clicks}`;
+		window.location.hash = `#${newUrlHash}`;
 	}, hashChangeTiming);
 }
 
@@ -177,13 +175,17 @@ function getAppSwitcherClassNames () {
 
 function locationHashChanged(event) {
 
+	console.debug(`[locationHashChanged] running now...`);
+	console.debug(`clicks (before manipulation): `, clicks);
 	// get the non-string version of the hash -- that is the number of clicks so far
-	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+	let newClicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+
+	console.debug(`newClicks: `, newClicks);
+	clicks = newClicks;
 
 	// if the number of clicks is greater than our number of steps, we override that and set that thing back to zero
 	if ( clicks >= magickFlowConfig.numberOfSteps ) {
-		clicks = 0;
-		window.location.hash = `#${clicks}`;
+		setLocationHashWithTiming(0, 0);
 	}
 
 	// figure out which things come next and which things are backwards -- because it's a _loop_ we have to do some maths here
@@ -522,35 +524,41 @@ function locationHashChanged(event) {
 			}
 		}
 	}
-
-	// console.group(`[ Speaker Notes ]`)
-	// console.group('(verbose level info here)');
-	// console.log(`-------------------------`);
-	// console.debug(magickFlowConfig.metaData[stepToEvaluateForAppTransition]);
-	// console.debug(`previousStepDrawersData: `, previousStepDrawersData);
-	// console.debug(`currentStepDrawersData: `, currentStepDrawersData);
-	// console.debug(`nextStepDrawersData: `, nextStepDrawersData);
-	// console.debug(`delayTransition: `, delayTransition);
-	// console.log(`-------------------------`);
-	// console.groupEnd();
-	// console.log(`Current Step: `, clicks);
-	// console.log(`Sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
-	// console.log(`Step ID: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
+	if (locals.DEBUG === 'true') {
+		console.group(`[ Speaker Notes ]`)
+		console.group('(verbose level info here)');
+		console.log(`-------------------------`);
+		console.debug(magickFlowConfig.metaData[stepToEvaluateForAppTransition]);
+		console.debug(`previousStepDrawersData: `, previousStepDrawersData);
+		console.debug(`currentStepDrawersData: `, currentStepDrawersData);
+		console.debug(`nextStepDrawersData: `, nextStepDrawersData);
+		console.debug(`delayTransition: `, delayTransition);
+		console.log(`-------------------------`);
+		console.groupEnd();
+		console.log(`Current Step: `, clicks);
+		console.log(`Sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
+		console.log(`Step ID: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
+	}
 	if ( typeof magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes !== 'undefined' ) {
-		// console.group(`Hints`)
+		if (locals.DEBUG === 'true') {
+			console.group(`Hints`);
+		}
 		magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes.forEach((note, noteIndex) => {
 			// note = note.replace(/-/g, ' ').toLowerCase();
 			note = note.replace(/-/g, ' ');
-			console.log(`${noteIndex}: ${note}`);
+			console.debug(`${noteIndex}: ${note}`);
 			// console.log(`${note}`);
 		});
-		// console.groupEnd();
-		console.log(`Notes: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes);
+		if (locals.DEBUG === 'true') {
+			console.groupEnd();
+		}
+		// console.debug(`Notes: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes);
 	}
-	// console.groupEnd();
+	if (locals.DEBUG === 'true') {
+		console.groupEnd();
+		console.groupEnd();
+	}
 
-
-	// console.groupEnd();
 }
 
 // this gives our hash change event some history to poke at introspectively
@@ -564,34 +572,6 @@ if(!window.HashChangeEvent)(function(){
 }());
 
 window.onhashchange = locationHashChanged;
-
-
-// The very first time the URL for this Magick Flow is loaded in the browser we run a "reset" on it 
-// Why? WE DON'T KNOW!! 
-// ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
-window.setTimeout(() => {
-	window.location.hash = `#reset`;
-	setLocationHashWithTiming(0, 0);
-}, (0)); // 150 
-
-// Give the whole thing a chance to cache some assets before presenting the UI. This only runs once per page load, not every click.
-window.setTimeout(() => {
-	document.querySelector(`#content-wrapper`).classList.add('slds-transition-show');
-	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-hide');
-}, (1)); // 500
-window.setTimeout(() => {
-	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
-	document.querySelector(`#content`).classList.remove('fake-the-dock');
-	document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
-	if (locals.DEBUG === true) {
-		// console.debug(`Click hints automatgickally showing because you are in DEBUG mode. Hit the "T" key to toggle.`);
-		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
-		if (typeof $node != null) {
-			$node.classList.add('slide-in');
-		}
-	}
-}, (2)); // 1000
-
 
 document.addEventListener('keydown', function (evt) {
 	// This is the `i` key
@@ -665,6 +645,38 @@ document.onkeyup = function(e) {
 		// alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
   }
 };
+
+
+
+
+// The very first time the URL for this Magick Flow is loaded in the browser we run a "reset" on it 
+// Why? WE DON'T KNOW!! 
+// ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
+window.location.hash = `#reset`;
+// setLocationHashWithTiming(clicks, 0);
+
+if (locals.DEBUG === 'true') {
+	console.debug(`Click hints automatgickally showing because you are in DEBUG mode. Hit the "T" key to toggle.`);
+
+	let theseNodes = document.querySelectorAll(`.magick-flows-click-hints`);
+	if ( theseNodes.length > 0 ) {
+		theseNodes.forEach(function(node, nodeIndex) {
+			node.classList.add('slide-in');
+		});
+	}
+
+}
+
+setLocationHashWithTiming(clicks, 0);
+
+document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
+document.querySelector(`#content-wrapper`).classList.remove('slds-transition-hide');
+document.querySelector(`#content`).classList.remove('fake-the-dock');
+document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
+
+// setLocationHashWithTiming(clicks + 1, 5000);
+// window.location.hash = `#${clicks}`;
+
 
 // console.log(thisIncludeDebugInfoEnd);
 // console.groupEnd();
