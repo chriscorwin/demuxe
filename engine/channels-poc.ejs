@@ -166,6 +166,8 @@ circle.volume-active, circle.volume-inactive {
 }
 
 
+
+
 .set0 circle, .set1 rect {
   animation-delay: 400ms;
 }
@@ -525,6 +527,7 @@ rect {
 	<g class="graph-data">
 		<g class="graph-elements-svg" transform="translate(166,0)">
 			<%
+				const DELAY = 200;
 				const stopLocation = (vi, hi) => { return { v: 64.5 + (108 * vi), h: 70 + (140 * hi) }; };
 				const strokeDirections = {
 					e: ['h', 1],
@@ -550,12 +553,12 @@ rect {
 				}
 
 				const curves = {
-					es: 'q20,0 20,20',
+					ws: 'q-20,0 -20,20',
 					wn: 'q-20,0 -20,-20',
 					se: 'q0,20 20,20',
 					sw: 'q0,20 -20,20',
 					en: 'q20,0 20,-20',
-					es: 'q 20,0 20,20',
+					es: 'q20,0 20,20',
 					nw: 'q0,-20 -20,-20',
 					ne: 'q0,-20 20,-20'
 				}
@@ -596,7 +599,8 @@ rect {
 							{ type: 'forward', path: [[E, 1.2]], width: 4},
 							{ type: 'forward', path: [[E, .5], [N, .5], [E, 1], [S, .5], [E, .5]], width: 3},
 							{ type: 'forward', path: [[E, .5], [S, 2], [E, .5]], width: 3},
-							{ type: 'forward', path: [[E, .5], [S, 3], [E, .5]], width: 1}
+							{ type: 'forward', path: [[E, .5], [S, 4], [E, .5]], width: 1},
+							{ type: 'forward', path: [[E, .5], [S, 3.5], [E, 1], [S, .5], [E, .5]], width: 1}
 						]
 					},
 					research: {
@@ -608,14 +612,17 @@ rect {
 							{ type: 'in', width: 1 },
 							{ type: 'off', width: 6 },
 							{ type: 'forward', path: [[E, 1.2]], width: 2},
-							{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 3}
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 3},
+							{ type: 'forward', path: [[E, .5], [S, 4], [E, .5]], width: 1}
 						]
 					},
 					purchase: {
 						flows: [
 							{ type: 'in', width: 1 },
 							{ type: 'off', width: 6 },
-							{ type: 'backward', path: [[E, .5], [S, .5], [W, 3], [N, .5], [E, .5]], width: 3}
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 3], [N, .5], [E, .5]], width: 3},
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 1},
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [S, 3.5], [E, .5]], width: 1}
 						]
 					}		
 				}
@@ -638,7 +645,12 @@ rect {
 						flows: [
 							{ type: 'in', width: 3 },
 							{ type: 'off', width: 6 },
-							{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 1.5], [E, .5]], width: 2 }
+							{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 1.5], [E, .5]], width: 2 },
+							{ type: 'backward', path: [[W, .5], [N, 2], [E, .5]], width: 1 },
+							{ type: 'forward', path: [[E, .5], [S, 2], [W, .5]], width: 1 },
+							{ type: 'forward', path: [[E, .5], [N, 2], [W, .5]], width: 1 },
+							{ type: 'forward', path: [[E, .5], [N, 2], [E, .5]], width: 1 },
+							{ type: 'backward', path: [[W, .5], [N, 1.5], [E, 2], [N, .5], [W, .5]], width: 1 }
 						]
 					}
 				};
@@ -652,6 +664,8 @@ rect {
 							{ type: 'in', width: 3 },
 							{ type: 'off', width: 6 },
 							{ type: 'forward', path: [[E, 1.2]], width: 1},
+							{ type: 'forward', path: [[E, .5], [N, 4], [W, .5]], width: 1 },
+							{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 3.5], [E, .5]], width: 1 }
 						]
 					},
 					purchase: {
@@ -661,7 +675,10 @@ rect {
 						flows: [
 							{ type: 'in', width: 3 },
 							{ type: 'off', width: 6 },
-							{ type: 'backward', path: [[E, .5], [N, .5], [W, 3], [N, 3.5], [E, .5]], width: 1 }
+							{ type: 'backward', path: [[E, .5], [N, .5], [W, 3], [N, 3.5], [E, .5]], width: 1 },
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 1 },
+							{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 1.5], [E, .5]], width: 1 },
+							{ type: 'backward', path: [[W, .5], [N, 4], [E, .5]], width: 1 }
 						]
 					}
 				};
@@ -679,10 +696,13 @@ rect {
 				<%
 					points.forEach((row, vi) => {
 						row.forEach((point, hi) => {
-							const circles = point.discs && point.discs.reduce((discs, disc) => `${discs}<circle class="volume-shape volume-${disc.audience} volume-${disc.state}" r="${disc.r}" clip-path="url(#clip-${disc.state})"></circle>`, '');
+							if (Object.keys(points[vi][hi]).length <= 0) return;
+
+							const circles = point.discs && point.discs.reduce((discs, disc) => `${discs}<circle class="volume-shape volume-${disc.audience} volume-${disc.state}" r="${disc.r}" clip-path="url(#clip-${disc.state})" style="animation-delay: ${DELAY * (vi + hi)}ms;"></circle>`, '');
+
 							const stop = stopLocation(vi, hi);
 							echo(`
-								<g class="volume state-default" transform="translate(${stop.h},${stop.v})">
+								<g class="volume state-default row${vi}col${hi}" transform="translate(${stop.h},${stop.v})">
 									${circles}
 									<circle class="volume-outline" r="34"></circle>
 								</g>
@@ -707,109 +727,41 @@ rect {
 										'flow-shape',
 										{'flow-thin': flow.width < 10}
 									)
-									return `${flows}<rect width="${flow.width}" height="44" x="-${flow.width/2}" y="${flow.type === 'in' ? '-44' : 0}" class="${classes}" fill="url(#gradient-drop${flow.type})"></rect>`;
+									return `${flows}<rect width="${flow.width}" x="-${flow.width/2}" y="${flow.type === 'in' ? '-44' : 0}" class="${classes}" fill="url(#gradient-drop${flow.type})" style="animation: grow ${DELAY}ms linear forwards; animation-delay: ${(DELAY * (vi + hi)) - (flow.type === 'in' ? DELAY -10 : 0)}ms;"></rect>`;
 								}
 								const path = createPath(flow.path);
 								return `${flows}
-									<path class="flow-${flow.type} flow-type-directional flow-thin flow-shape" fill="none" d="${path.path}" stroke="url(#gradient-${flow.type})" stroke-width="${flow.width || 1}" stroke-dasharray="${path.length}" stroke-dashoffset="${path.length}"></path>
+									<path class="flow-${flow.type} flow-type-directional flow-thin flow-shape" fill="none" d="${path.path}" stroke="url(#gradient-${flow.type})" stroke-width="${flow.width || 1}" stroke-dasharray="${path.length}" stroke-dashoffset="${path.length}"
+										style="animation: dash ${Math.floor(path.length/100) * DELAY}ms linear forwards; animation-delay: ${DELAY * (vi + hi)}ms;"
+									></path>
 									<path class="flow-${flow.type} flow-type-directional flow-thin flow-shape flow-tooltip-helper" fill="none" d="${path.path}" stroke="transparent" stroke-width="6" stroke-dasharray="${path.length}" stroke-dashoffset="${path.length}"></path>
 								`;
 							}, '');
 							echo(`
-								<g class="flow flow-grid state-default" transform="translate(${stop.h},${stop.v})">
+								<g class="flow flow-grid state-default row${vi}col${hi}" transform="translate(${stop.h},${stop.v})">
 									${flows}
 								</g>
 							`);
 						});
 					});
-				%>
-
-				<!--
-				<g class="flow flow-grid state-default" transform="translate(210,280.5)">
-					<path class="flow-passive flow-passive--backward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h-50 q -20,0 -20,-20 v-176 q 0,-20 20,-20 h50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="url(#gradient-up)" stroke-width="1" stroke-dasharray="340.931 340.931" stroke-dashoffset="0"></path>
-					<path class="flow-passive flow-passive--backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h-50 q -20,0 -20,-20 v-176 q 0,-20 20,-20 h50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="transparent" stroke-width="6" stroke-dasharray="340.931 340.931" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(350,388.5)">
-					<rect width="1" height="44" x="-0.5" y="0" class="flow-dropoff flow-type-drop flow-thin flow-shape" fill="url(#gradient-dropoff)"></rect>
-					<rect width="6" height="44" x="-3" y="0" class="flow-dropoff flow-type-drop flow-thin flow-tooltip-helper" fill="transparent"></rect>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(210,280.5)">
-					<path class="flow-passive flow-passive--forward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h50 q 20,0 20,20 v68 q 0,20 -20,20 h-50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="url(#gradient-down)" stroke-width="1" stroke-dasharray="232.931 232.931" stroke-dashoffset="0"></path>
-					<path class="flow-passive flow-passive--forward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h50 q 20,0 20,20 v68 q 0,20 -20,20 h-50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="transparent" stroke-width="6" stroke-dasharray="232.931 232.931" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(210,64.5)">
-					<path class="flow-passive flow-passive--forward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h50 q 20,0 20,20 v176 q 0,20 -20,20 h-50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="url(#gradient-down)" stroke-width="1" stroke-dasharray="340.931 340.931" stroke-dashoffset="0"></path>
-					<path class="flow-passive flow-passive--forward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h50 q 20,0 20,20 v176 q 0,20 -20,20 h-50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="transparent" stroke-width="6" stroke-dasharray="340.931 340.931" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(210,64.5)">
-					<path class="flow-passive flow-passive--forward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h50 q 20,0 20,20 v284 q 0,20 -20,20 h-50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="url(#gradient-down)" stroke-width="1" stroke-dasharray="448.931 448.931" stroke-dashoffset="0"></path>
-					<path class="flow-passive flow-passive--forward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h50 q 20,0 20,20 v284 q 0,20 -20,20 h-50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="transparent" stroke-width="6" stroke-dasharray="448.931 448.931" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(350,64.5)">
-					<path class="flow-backward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h50 q 20,0 20,20 v14 q 0,20 -20,20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,20 v122 q 0,20 20,20 h50" stroke="url(#gradient-backward)" stroke-width="1" stroke-dasharray="605.859 605.859" stroke-dashoffset="0"></path>
-					<path class="flow-backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h50 q 20,0 20,20 v14 q 0,20 -20,20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,20 v122 q 0,20 20,20 h50" stroke="transparent" stroke-width="6" stroke-dasharray="605.859 605.859" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(210,280.5)">
-					<path class="flow-forward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h50 q 20,0 20,-20 v-142 q 0,0 0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h0 q 0,0 0,0 v-34 q 0,-20 20,-20 h50" stroke="url(#gradient-forward)" stroke-width="1" stroke-dasharray="340.93 340.93" stroke-dashoffset="0"></path>
-					<path class="flow-forward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h50 q 20,0 20,-20 v-142 q 0,0 0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h0 q 0,0 0,0 v-34 q 0,-20 20,-20 h50" stroke="transparent" stroke-width="6" stroke-dasharray="340.93 340.93" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(210,388.5)">
-					<path class="flow-backward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h50 q 20,0 20,-20 v-14 q 0,-20 -20,-20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,-20 v-230 q 0,-20 20,-20 h50" stroke="url(#gradient-backward)" stroke-width="1" stroke-dasharray="713.859 713.859" stroke-dashoffset="0"></path>
-					<path class="flow-backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h50 q 20,0 20,-20 v-14 q 0,-20 -20,-20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,-20 v-230 q 0,-20 20,-20 h50" stroke="transparent" stroke-width="6" stroke-dasharray="713.859 713.859" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(350,64.5)">
-					<path class="flow-backward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h50 q 20,0 20,20 v14 q 0,20 -20,20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,-20 v-14 q 0,-20 20,-20 h50" stroke="url(#gradient-backward)" stroke-width="1" stroke-dasharray="497.859 497.859" stroke-dashoffset="0"></path>
-					<path class="flow-backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h50 q 20,0 20,20 v14 q 0,20 -20,20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,-20 v-14 q 0,-20 20,-20 h50" stroke="transparent" stroke-width="6" stroke-dasharray="497.859 497.859" stroke-dashoffset="0"></path>
-				</g>
-				
-				<g class="flow flow-grid state-default" transform="translate(350,388.5)">
-					<path class="flow-backward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h50 q 20,0 20,20 v14 q 0,20 -20,20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,-20 v-14 q 0,-20 20,-20 h50" stroke="url(#gradient-backward)" stroke-width="1" stroke-dasharray="497.859 497.859" stroke-dashoffset="0"></path>
-					<path class="flow-backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h50 q 20,0 20,20 v14 q 0,20 -20,20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,-20 v-14 q 0,-20 20,-20 h50" stroke="transparent" stroke-width="6" stroke-dasharray="497.859 497.859" stroke-dashoffset="0"></path>
-				</g>
-				
-				<g class="flow flow-grid state-default" transform="translate(350,64.5)">
-					<path class="flow-backward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h50 q 20,0 20,20 v14 q 0,20 -20,20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,20 v230 q 0,20 20,20 h50" stroke="url(#gradient-backward)" stroke-width="1" stroke-dasharray="713.859 713.859" stroke-dashoffset="0"></path>
-					<path class="flow-backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h50 q 20,0 20,20 v14 q 0,20 -20,20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,20 v230 q 0,20 20,20 h50" stroke="transparent" stroke-width="6" stroke-dasharray="713.859 713.859" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(210,64.5)">
-					<path class="flow-forward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h50 q 20,0 20,20 v250 q 0,0 0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h0 q 0,0 0,0 v34 q 0,20 20,20 h50" stroke="url(#gradient-forward)" stroke-width="1" stroke-dasharray="448.92999999999995 448.92999999999995" stroke-dashoffset="0"></path>
-					<path class="flow-forward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h50 q 20,0 20,20 v250 q 0,0 0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h0 q 0,0 0,0 v34 q 0,20 20,20 h50" stroke="transparent" stroke-width="6" stroke-dasharray="448.92999999999995 448.92999999999995" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(350,388.5)">
-					<path class="flow-passive flow-passive--backward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h-50 q -20,0 -20,-20 v-284 q 0,-20 20,-20 h50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="url(#gradient-up)" stroke-width="1" stroke-dasharray="448.931 448.931" stroke-dashoffset="0"></path>
-					<path class="flow-passive flow-passive--backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h0 q 0,0 0,0 v0.001 q 0,0 0,0 h-50 q -20,0 -20,-20 v-284 q 0,-20 20,-20 h50 q 0,0 0,0 v0.001 q 0,0 0,0 h0" stroke="transparent" stroke-width="6" stroke-dasharray="448.931 448.931" stroke-dashoffset="0"></path>
-				</g>
-				<g class="flow flow-grid state-default" transform="translate(70,64.5)">
-					<path class="flow-forward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h50 q 20,0 20,20 v230 q 0,0 0,0 h0 q 0,0 0,0 v0.001 q 0,20 20,20 h100 q 20,0 20,20 v14 q 0,20 20,20 h50" stroke="url(#gradient-forward)" stroke-width="1" stroke-dasharray="573.8589999999999 573.8589999999999" stroke-dashoffset="0"></path>
-					<path class="flow-forward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h50 q 20,0 20,20 v230 q 0,0 0,0 h0 q 0,0 0,0 v0.001 q 0,20 20,20 h100 q 20,0 20,20 v14 q 0,20 20,20 h50" stroke="transparent" stroke-width="6" stroke-dasharray="573.8589999999999 573.8589999999999" stroke-dashoffset="0"></path>
-				</g>
-				
-				<g class="flow flow-grid state-default" transform="translate(350,388.5)">
-					<path class="flow-backward flow-type-directional flow-thin flow-shape" fill="none" d="m0,0 h50 q 20,0 20,-20 v-14 q 0,-20 -20,-20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,-20 v-14 q 0,-20 20,-20 h50" stroke="url(#gradient-backward)" stroke-width="1" stroke-dasharray="497.859 497.859" stroke-dashoffset="0"></path>
-					<path class="flow-backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="m0,0 h50 q 20,0 20,-20 v-14 q 0,-20 -20,-20 h-120 q 0,0 0,0 v0.001 q 0,0 0,0 h-120 q -20,0 -20,-20 v-14 q 0,-20 20,-20 h50" stroke="transparent" stroke-width="6" stroke-dasharray="497.859 497.859" stroke-dashoffset="0"></path>
-				</g> -->
-				
+				%>				
 			</g>
 
 			<!-- the circles on the lines -->
 			<g class="node-container">
 				<%
-					console.log('here')
-
 					points.forEach((row, vi) => {
 						row.forEach((point, hi) => {
 							const stop = stopLocation(vi, hi);
+							if (Object.keys(points[vi][hi]).length <= 0) return;
 							echo(`
-								<g opacity="1" class="node state-default node-focusable" transform="translate(${stop.h},${stop.v})">
-									<circle r="${point.rOuter || 15}" class="tick-outer"></circle>
-									<circle r="${point.r || 10}" class="tick"></circle>
+								<g opacity="1" class="node state-default node-focusable row${vi}col${hi}" transform="translate(${stop.h},${stop.v})">
+									<circle r="${point.rOuter || 15}" class="tick-outer" style="animation-delay: ${DELAY * (vi + hi)}ms;"></circle>
+									<circle r="${point.r || 10}" class="tick" style="animation-delay: ${DELAY * (vi + hi)}ms;"></circle>
 								</g>
 							`);
 						});
 					});
-
-					console.log('here2')
-
 				%>
 			</g>
 		</g>
