@@ -578,7 +578,7 @@ document.addEventListener('keydown', function (evt) {
 	// Shows current click hint for a short while.
 	// "i" for "information", I guess? ¯\_(ツ)_/¯
 	if (evt.keyCode === 73) {
-		// console.log('The "i" key is being held down...?');
+		// console.log('The "I" key is being held down.');
 
 		let theseNodes = document.querySelectorAll(`#magick-flows-click-hints--step-${clicks}`);
 		if ( theseNodes.length > 0 ) {
@@ -587,7 +587,12 @@ document.addEventListener('keydown', function (evt) {
 			});
 		}
 
+	} else if (evt.keyCode === 67) {
+		// console.log('The "C" key is being held down.');
 
+
+		let theNode = document.getElementsByTagName("body")[0];
+		theNode.style.cursor = "pointer";
 	}
 
 });
@@ -611,6 +616,12 @@ document.onkeyup = function(e) {
 			});
 		}
 
+	} else if (e.which == 67) {
+		// I
+
+
+		let theNode = document.getElementsByTagName("body")[0];
+		theNode.style.cursor = "initial";
 
 	} else if (e.which == 84) {
 		
