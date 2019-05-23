@@ -1,0 +1,302 @@
+<svg class="graph grid-graph" style="height: 853px;">
+	<defs>
+		<linearGradient id="gradient-up" class="linear-gradient" x1="0%" y1="100%" x2="0%" y2="0%" spreadMethod="pad">
+			<stop offset="0%" class="linear-gradient-stop-backward" stop-opacity="0.35"></stop>
+			<stop offset="80%" class="linear-gradient-stop-backward" stop-opacity="1"></stop>
+		</linearGradient>
+		<linearGradient id="gradient-down" class="linear-gradient" x1="0%" y1="0%" x2="0%" y2="100%" spreadMethod="pad">
+			<stop offset="0%" class="linear-gradient-stop-forward" stop-opacity="0.2"></stop>
+			<stop offset="80%" class="linear-gradient-stop-forward" stop-opacity="1"></stop>
+		</linearGradient>
+		<linearGradient id="gradient-dropin" class="linear-gradient" x1="0%" x2="0%" y1="0%" y2="100%" spreadMethod="pad">
+		  <stop offset="0%" class="linear-gradient-stop-dropin" stop-opacity="0"/>
+		  <stop offset="50%" class="linear-gradient-stop-dropin" stop-opacity="0.8"/>
+		</linearGradient>
+		<linearGradient id="gradient-dropoff" class="linear-gradient" x1="0%" x2="0%" y1="100%" y2="0%" spreadMethod="pad">
+		  <stop offset="0%" class="linear-gradient-stop-dropoff" stop-opacity="0"/>
+		  <stop offset="50%" class="linear-gradient-stop-dropoff" stop-opacity="0.8"/>
+		</linearGradient>
+		<linearGradient id="gradient-forward" class="linear-gradient" x1="0%" x2="100%" y1="0%" y2="0%" spreadMethod="pad">
+		  <stop offset="0%" class="linear-gradient-stop-forward" stop-opacity="0.2"/>
+		  <stop offset="80%" class="linear-gradient-stop-forward" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="gradient-backward" class="linear-gradient" x1="100%" x2="0%" y1="0%" y2="0%" spreadMethod="pad">
+		  <stop offset="0%" class="linear-gradient-stop-backward" stop-opacity="0.35"/>
+		  <stop offset="80%" class="linear-gradient-stop-backward" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="gradient-axis" class="linear-gradient" x1="1%" x2="99%" y1="0%" y2="0%" spreadMethod="pad">
+		  <stop offset="0%" class="linear-gradient-stop-axis" stop-opacity="0"/>
+		  <stop offset="4%" class="linear-gradient-stop-axis" stop-opacity="1"/>
+		  <stop offset="96%" class="linear-gradient-stop-axis" stop-opacity="1"/>
+		  <stop offset="100%" class="linear-gradient-stop-axis" stop-opacity="0"/>
+		</linearGradient>
+		<clipPath id="clip-active">
+		  <rect x="-115" y="-120" width="230" height="115"> </rect>
+		</clipPath>
+		<clipPath id="clip-inactive">
+		  <rect x="-115" y="5" width="230" height="115"> </rect>
+		</clipPath>
+	</defs>
+	<g class="graph-data">
+		<g class="graph-elements-svg" transform="translate(166,0)">
+			<%
+				const DELAY = 200;
+				const stopLocation = (vi, hi) => { return { v: 64.5 + (108 * vi), h: 70 + (140 * hi) }; };
+				const strokeDirections = {
+					e: ['h', 1],
+					w: ['h', -1],
+					n: ['v', -1],
+					s: ['v', 1]
+				}
+
+				const stroke = (dir, len) => {
+					const axis = strokeDirections[dir][0];
+					let length;
+
+					if (axis === 'h') {
+						length = ((len * 140) + (len >= 1 ? -40 : -20));
+					} else {
+						length = ((len * 108) -40);
+					}
+
+					return {
+						stroke: `${axis}${length * strokeDirections[dir][1]}`,
+						length
+					};
+				}
+
+				const curves = {
+					ws: 'q-20,0 -20,20',
+					wn: 'q-20,0 -20,-20',
+					se: 'q0,20 20,20',
+					sw: 'q0,20 -20,20',
+					en: 'q20,0 20,-20',
+					es: 'q20,0 20,20',
+					nw: 'q0,-20 -20,-20',
+					ne: 'q0,-20 20,-20'
+				}
+
+				const E = 'e', N = 'n', S = 's', W = 'w';
+
+				const createPath = (pathSegments) => {
+					let totalLength = 0;
+
+					const path = pathSegments.reduce((segments, segment, i) => {
+						let line = stroke(segment[0], segment[1]);
+						totalLength += line.length;
+
+						segments = `${segments} ${line.stroke}`;
+
+						if (pathSegments[i + 1]) {
+							segments += ` ${curves[segment[0] + pathSegments[i + 1][0]]}`;
+							totalLength += 40; // curves are approx 40 px long.
+						}
+
+						return segments;
+					}, 'm0,0 q 0,0 0,0 v0.001'); // These seed values ensure that the line shows up even if it is just one segment long (otherwise it sometimes doesn't)
+
+					return { path, length: totalLength };
+				}
+
+				const web = {
+					awareness: {
+						label: 'awareness',
+						discs: [
+							{ audience: 'all', state: 'active', r: 32.55 },
+							{ audience: 'helped', state: 'active', r: 19.4 },
+							{ audience: 'all', state: 'inactive', r: 22 }
+						],
+						flows: [
+							{ type: 'in', width: 10 },
+							{ type: 'off', width: 8 },
+							{ type: 'forward', path: [[E, 1.2]], width: 4},
+							{ type: 'forward', path: [[E, .5], [N, .5], [E, 1], [S, .5], [E, .5]], width: 3},
+							{ type: 'forward', path: [[E, .5], [S, 2], [E, .5]], width: 3},
+							{ type: 'forward', path: [[E, .5], [S, 4], [E, .5]], width: 1},
+							{ type: 'forward', path: [[E, .5], [S, 3.5], [E, 1], [S, .5], [E, .5]], width: 1}
+						]
+					},
+					research: {
+						discs: [
+							{ audience: 'all', state: 'active', r: 21 },
+							{ audience: 'all', state: 'inactive', r: 20 }
+						] ,
+						flows: [
+							{ type: 'in', width: 1 },
+							{ type: 'off', width: 6 },
+							{ type: 'forward', path: [[E, 1.2]], width: 2},
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 3},
+							{ type: 'forward', path: [[E, .5], [S, 4], [E, .5]], width: 1}
+						]
+					},
+					purchase: {
+						flows: [
+							{ type: 'in', width: 1 },
+							{ type: 'off', width: 6 },
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 3], [N, .5], [E, .5]], width: 3},
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 1},
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [S, 3.5], [E, .5]], width: 1}
+						]
+					}
+				}
+
+				const mobile = {
+					awareness: {
+						flows: [
+							{ type: 'in', width: 3 },
+							{ type: 'off', width: 6 }
+						]
+					}
+				};
+				const community = {
+					research: {
+						discs: [
+							{ audience: 'all', state: 'active', r: 22 },
+							{ audience: 'helped', state: 'active', r: 19 },
+							{ audience: 'all', state: 'inactive', r: 19 }
+						],
+						flows: [
+							{ type: 'in', width: 3 },
+							{ type: 'off', width: 6 },
+							{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 1.5], [E, .5]], width: 2 },
+							{ type: 'backward', path: [[W, .5], [N, 2], [E, .5]], width: 1 },
+							{ type: 'forward', path: [[E, .5], [S, 2], [W, .5]], width: 1 },
+							{ type: 'forward', path: [[E, .5], [N, 2], [W, .5]], width: 1 },
+							{ type: 'forward', path: [[E, .5], [N, 2], [E, .5]], width: 1 },
+							{ type: 'backward', path: [[W, .5], [N, 1.5], [E, 2], [N, .5], [W, .5]], width: 1 }
+						]
+					}
+				};
+				const kiosk = {};
+				const store = {
+					research: {
+						discs: [
+							{ audience: 'all', state: 'active', r: 18 }
+						],
+						flows: [
+							{ type: 'in', width: 3 },
+							{ type: 'off', width: 6 },
+							{ type: 'forward', path: [[E, 1.2]], width: 1},
+							{ type: 'forward', path: [[E, .5], [N, 4], [W, .5]], width: 1 },
+							{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 3.5], [E, .5]], width: 1 }
+						]
+					},
+					purchase: {
+						discs: [
+							{ audience: 'all', state: 'inactive', r: 19 }
+						],
+						flows: [
+							{ type: 'in', width: 3 },
+							{ type: 'off', width: 6 },
+							{ type: 'backward', path: [[E, .5], [N, .5], [W, 3], [N, 3.5], [E, .5]], width: 1 },
+							{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 1 },
+							{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 1.5], [E, .5]], width: 1 },
+							{ type: 'backward', path: [[W, .5], [N, 4], [E, .5]], width: 1 }
+						]
+					}
+				};
+
+				const points = [
+					[web.awareness, web.research, web.purchase],
+					[{}, {}, {}],
+					[{}, community.research, {}],
+					[{}, {}, {}],
+					[{}, store.research, store.purchase]
+				];
+			%>
+			<!-- the discs -->
+			<g class="volume-container">
+				<%
+					points.forEach((row, vi) => {
+						row.forEach((point, hi) => {
+							if (Object.keys(points[vi][hi]).length <= 0) return;
+
+							const circles = point.discs && point.discs.reduce((discs, disc) => `${discs}<circle class="volume-shape volume-${disc.audience} volume-${disc.state}" r="${disc.r}" clip-path="url(#clip-${disc.state})" style="animation-delay: ${DELAY * (vi + hi)}ms;"></circle>`, '');
+
+							const stop = stopLocation(vi, hi);
+							echo(`
+								<g class="volume state-default row${vi}col${hi}" transform="translate(${stop.h},${stop.v})">
+									${circles}
+									<circle class="volume-outline" r="34"></circle>
+								</g>
+							`);
+						});
+					});
+				%>
+			</g>
+
+			<!-- the lines -->
+			<g class="flow-container">
+				<%
+					points.forEach((row, vi) => {
+						row.forEach((point, hi) => {
+							const stop = stopLocation(vi, hi);
+							const flows = point.flows && point.flows.reduce((flows, flow) => {
+								if (flow.type.match('in|off')) {
+									const classes = classnames(
+										`flow-drop${flow.type}`,
+										'flow-type-drop',
+										'flow-normal',
+										'flow-shape',
+										{'flow-thin': flow.width < 10}
+									)
+									return `${flows}<rect width="${flow.width}" x="-${flow.width/2}" y="${flow.type === 'in' ? '-44' : 0}" class="${classes}" fill="url(#gradient-drop${flow.type})" style="animation: grow ${DELAY}ms linear forwards; animation-delay: ${(DELAY * (vi + hi)) - (flow.type === 'in' ? DELAY -10 : 0)}ms;"></rect>`;
+								}
+								const path = createPath(flow.path);
+								return `${flows}
+									<path class="flow-${flow.type} flow-type-directional flow-thin flow-shape" fill="none" d="${path.path}" stroke="url(#gradient-${flow.type})" stroke-width="${flow.width || 1}" stroke-dasharray="${path.length}" stroke-dashoffset="${path.length}"
+										style="animation: dash ${Math.floor(path.length/100) * DELAY}ms linear forwards; animation-delay: ${DELAY * (vi + hi)}ms;"
+									></path>
+									<path class="flow-${flow.type} flow-type-directional flow-thin flow-shape flow-tooltip-helper" fill="none" d="${path.path}" stroke="transparent" stroke-width="6" stroke-dasharray="${path.length}" stroke-dashoffset="${path.length}"></path>
+								`;
+							}, '');
+							echo(`
+								<g class="flow flow-grid state-default row${vi}col${hi}" transform="translate(${stop.h},${stop.v})">
+									${flows}
+								</g>
+							`);
+						});
+					});
+				%>
+			</g>
+
+			<!-- the circles on the lines -->
+			<g class="node-container">
+				<%
+					points.forEach((row, vi) => {
+						row.forEach((point, hi) => {
+							const stop = stopLocation(vi, hi);
+							if (Object.keys(points[vi][hi]).length <= 0) return;
+							echo(`
+								<g opacity="1" class="node state-default node-focusable row${vi}col${hi}" transform="translate(${stop.h},${stop.v})">
+									<circle r="${point.rOuter || 15}" class="tick-outer" style="animation-delay: ${DELAY * (vi + hi)}ms;"></circle>
+									<circle r="${point.r || 10}" class="tick" style="animation-delay: ${DELAY * (vi + hi)}ms;"></circle>
+								</g>
+							`);
+						});
+					});
+				%>
+			</g>
+		</g>
+	</g>
+	<g class="graph-marks">
+		<g></g>
+	</g>
+</svg>
+<div class="grid-label-container graph-elements-html dynamic-placement" style="transform: translate(166px, 0px);">
+	<div class="row-labels">
+		<div class="row-group-label-container">
+			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="WEB" style="opacity: 1; left: -90px; top: 64.5px;"><label class="journeys-label row-label row-label-centered"><span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-laptop"></span></label></div>
+		</div>
+		<div class="row-group-label-container">
+			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="MOBILE" style="opacity: 1; left: -90px; top: 172.5px;"><label class="journeys-label row-label row-label-centered"><span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-mobile"></span></label></div>
+		</div>
+		<div class="row-group-label-container">
+			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="SOCIAL" style="opacity: 1; left: -90px; top: 280.5px;"><label class="journeys-label row-label row-label-centered"><span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-social"></span></label></div>
+		</div>
+		<div class="row-group-label-container">
+			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="PHYSICAL" style="opacity: 1; left: -90px; top: 388.5px;"><label class="journeys-label row-label row-label-centered"><span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-physical"></span></label></div>
+		</div>
+	</div>
+	<div class="node-labels"> </div>
+</div>
