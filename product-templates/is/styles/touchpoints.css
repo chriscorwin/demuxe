@@ -40,61 +40,9 @@
   font-style: normal;
 }
 
-body {
-  font-family: 'Salesforce Sans',Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #16325c;
-  background-color: #fafaf9;
-}
-
-label {
-  font-family: 'Salesforce Sans',Arial,sans-serif;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 700;
-  color: #5d686f;
-}
-
-.dynamic-placement {
-  will-change: transform;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.journeys-label-container {
-  width: 160px;
-  text-align: center;
-}
-
-.journeys-label {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: 'Salesforce Sans',Arial,sans-serif;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 500;
-  -webkit-transition: max-width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: max-width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-  color: #2b2826;
-  margin-bottom: 0;
-  text-transform: none;
-  vertical-align: middle;
-  max-width: 100%;
-}
-
-.lifecycle-stage-label {
-  font-family: 'Salesforce Sans',Arial,sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 19px;
-  max-width: 105px;
-  height: 19px;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .graph {
@@ -196,33 +144,14 @@ circle.volume-active, circle.volume-inactive {
     height: 0px;
   }
   to {
-    height: 160px;
+    height: 44px;
   }
 }
 
-/*
-	The dashoffset and dasharray numbers are brute forced, which means they are messing up the animation delay (you have to get through all of the blank space in the offset before the animation appears to start). You could figure out the actual length of half of the circle's circumference and make that number the dasharray and dashoffset which would make the animation delay line up better and therefore probably make the animation length less random seeming and more programmable.
-
-	https://stackoverflow.com/questions/30355241/get-the-length-of-a-svg-line-rect-polygon-and-circle-tags
-*/
 .flow path {
-  stroke-dasharray: 500;
-  stroke-dashoffset: 500;
+  /*  stroke-dasharray: 700;
+  stroke-dashoffset: 700;*/
   animation: dash 1s linear forwards;
-  fill: none;
-}
-
-.flow path.flow-span3 {
-  stroke-dasharray: 800;
-  stroke-dashoffset: 800;
-  animation: dash 1430ms linear forwards;
-  fill: none;
-}
-
-.flow path.flow-span4, .flow path.flow-span5 {
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  animation: dash 2150ms linear forwards;
   fill: none;
 }
 
@@ -232,27 +161,27 @@ circle.volume-active, circle.volume-inactive {
   }
 }
 
-.set0 circle, .set0 rect.flow-dropoff, .set1 rect.flow-dropin {
+.set0 circle, .set1 rect {
   animation-delay: 400ms;
 }
 
-.set1 circle, .set1 rect.flow-dropoff, .set2 rect.flow-dropin {
+.set1 circle, .set2 rect {
   animation-delay: 800ms;
 }
 
-.set2 circle, .set2 rect.flow-dropoff, .set3 rect.flow-dropin {
+.set2 circle, .set3 rect {
   animation-delay: 1200ms;
 }
 
-.set3 circle, .set3 rect.flow-dropoff, .set4 rect.flow-dropin {
+.set3 circle, .set4 rect {
   animation-delay: 1600ms;
 }
 
-.set4 circle, .set4 rect.flow-dropoff, .set5 rect.flow-dropin {
+.set4 circle, .set5 rect {
   animation-delay: 2000ms;
 }
 
-.set5 circle, .set5 rect.flow-dropoff, .set6 rect.flow-dropin {
+.set5 circle, .set6 rect {
   animation-delay: 2400ms;
 }
 
@@ -334,4 +263,217 @@ rect {
 
 .linear-gradient-stop-separator {
   stop-color: #c9c7c5;
+}
+
+.graph {
+  width: 100%;
+}
+
+.node-labels {
+  -webkit-transform: translate(0, 12px);
+  transform: translate(0, 12px);
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.separator-graph {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.volume-active {
+  fill: #1589ee;
+  fill-opacity: .25;
+}
+
+.volume-inactive {
+  fill: #7874a3;
+  fill-opacity: .25;
+}
+
+.volume-outline {
+  fill: none;
+  stroke: #dddbda;
+  stroke-width: 1;
+}
+
+circle.tick {
+  fill: #b0adab;
+  fill-opacity: 1;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+
+circle.tick-outer {
+  fill: #000;
+  fill-opacity: .3;
+  pointer-events: none;
+}
+
+.no-volumes .volume-all {
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+.no-actions .volume-helped {
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+.state-background .flow-shape, .state-background .volume-shape, .state-connected .flow-shape, .state-connected .volume-shape {
+  opacity: .2;
+}
+
+.state-hidden .flow-count-container, .state-hidden .flow-shape, .state-hidden .volume-shape {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.volume.state-background .volume-all, .volume.state-connected .volume-all {
+  opacity: .2;
+}
+
+.flow line, .flow path, .flow rect {
+  -webkit-transition: opacity .5s,visibility .5s;
+  transition: opacity .5s,visibility .5s;
+}
+
+.flow:hover .flow-forward, .flow:hover .flow-passive--forward {
+  stroke: #1589ee;
+}
+
+.flow:hover .flow-backward, .flow:hover .flow-passive--backward {
+  stroke: #5e429b;
+}
+
+.flow:hover .flow-dropin {
+  fill: #1589ee;
+}
+
+.flow:hover .flow-dropoff {
+  fill: #5e429b;
+}
+
+.flow-count-background {
+  fill: rgba(0, 0, 0, 0.5);
+  shape-rendering: initial;
+}
+
+.flow-dropin.flow-thin, .flow-dropoff.flow-thin {
+  stroke: transparent;
+  stroke-width: 4px;
+}
+
+.flow-dropoff {
+  cursor: pointer;
+}
+
+.no-flow-backward .flow-backward, .no-flow-dropin .flow-dropin, .no-flow-dropoff .flow-dropoff, .no-flow-forward .flow-forward, .no-flow-passive .flow-passive {
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+.no-flows .flow-container {
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+circle {
+  -webkit-transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+  transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+}
+
+rect {
+  shape-rendering: crispEdges;
+}
+
+.flow line, .flow path, .flow rect {
+  -webkit-transition: opacity .5s,visibility .5s;
+  transition: opacity .5s,visibility .5s;
+}
+
+.flow:hover .flow-forward, .flow:hover .flow-passive--forward {
+  stroke: #1589ee;
+}
+
+.flow:hover .flow-backward, .flow:hover .flow-passive--backward {
+  stroke: #5e429b;
+}
+
+.flow:hover .flow-dropin {
+  fill: #1589ee;
+}
+
+.flow:hover .flow-dropoff {
+  fill: #5e429b;
+}
+
+.flow-count-background {
+  fill: rgba(0, 0, 0, 0.5);
+  shape-rendering: initial;
+}
+
+.flow-dropin.flow-thin, .flow-dropoff.flow-thin {
+  stroke: transparent;
+  stroke-width: 4px;
+}
+
+.flow-dropoff {
+  cursor: pointer;
+}
+
+.one-glyphicon, [class*=one-glyphicon-], [class^=one-glyphicon-] {
+  font-family: "Salesforce Icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top: 0;
+  display: inline-block;
+  min-width: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.one-glyphicon-lg {
+  font-size: 20px;
+}
+
+.one-glyphicon:before, [class*=one-glyphicon-]:before, [class^=one-glyphicon-]:before {
+  padding: 0 1px;
+}
+
+.one-glyphicon-mobile:before {
+  content: "\e60b";
+}
+
+.one-glyphicon-laptop:before {
+  content: "\e60c";
+}
+
+.one-glyphicon-physical:before {
+  content: "\e610";
+}
+
+.one-glyphicon-social:before {
+  content: "\e611";
+}
+
+.dynamic-placement {
+  will-change: transform;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
