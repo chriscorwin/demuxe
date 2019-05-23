@@ -1,8 +1,8 @@
 {
-	"demoName": "DMP NTO Roadshow 2019",
+	"demoName": "DMB BBVA DF 18 Keynote",
 	"brandTheme": "nto",
-	"productTemplate": "dmp",
-	"demoVenue": "roadshow19",
+	"productTemplate": "jb",
+	"demoVenue": "test-run",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",

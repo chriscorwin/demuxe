@@ -1,0 +1,853 @@
+:root {
+  --color-brand-dark: #0070d2;
+  --builder-background-color: #fff;
+  --builder-canvas-connector-color: #919297;
+  --builder-canvas-connector-highlight-color: #3296ed;
+  --builder-canvas-connector-faded-color: #d8d8d8;
+  --builder-canvas-transition: right 0.5s ease;
+  --builder-shape-color-start-unconfigured: #9faab5;
+  --builder-shape-color-start: #53b6b4;
+  --builder-shape-color-end: #d4504c;
+  --builder-shape-color-direct: #1589ee;
+  --builder-shape-color-direct-unconfigured: #eaedf1;
+  --builder-shape-color-subprocess: #54698d;
+  --builder-shape-color-branching: #ff9a3c;
+  --builder-shape-color-data: #eb7092;
+  --builder-shape-color-add-activity: #18335b;
+  --builder-panel-transition: width 0.5s ease, min-width 0.5s ease;
+  --builder-tools-width: 19rem;
+  --builder-icon-highlight-color: #0070d2;
+  --journey-connecter-width: 118px;
+  --journey-connecter-with-join-width: 59px;
+  --journey-element-width: calc(80px + var(--journey-connecter-width));
+  --journey-element-icon-width: 3rem;
+  --journey-campaign-card-height: calc(100vh - 328px);
+}
+
+.slds-builder-header__utilities-item {
+  flex-direction: column;
+}
+
+.slds-builder-header__campaign {
+  min-width: 16rem;
+}
+
+.layout-builder {
+  background-color: var(--builder-background-color);
+  bottom: 0;
+  left: 0;
+  overflow: visible;
+  position: absolute;
+  right: 0;
+  top: 99px;
+  width: auto;
+  z-index: 0;
+}
+
+.layout-builder .slds-panel_docked-left,
+.layout-builder .slds-panel_docked-right {
+  border-radius: 0;
+  min-height: 100%;
+  transition: var(--builder-panel-transition);
+  width: 0;
+}
+
+.layout-builder .slds-panel_docked-left {
+  min-width: 0;
+}
+
+.layout-builder .slds-panel_docked-left.slds-is-open {
+  min-width: var(--builder-tools-width);
+}
+
+.layout-builder .slds-panel_docked-right.slds-is-open {
+  width: 55%;
+}
+
+.layout-builder_layout .slds-panel_docked-right.slds-is-open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+}
+
+.layout-builder_layout
+.slds-panel_docked-right.slds-is-open
+.slds-modal__footer {
+  display: none;
+}
+
+.layout-builder .slds-panel_docked-left > div.slds-grow,
+.layout-builder .slds-panel_docked-right > div.slds-grow {
+  position: relative;
+}
+
+.layout-builder .slds-panel_docked-right .inspector-container {
+  bottom: 0;
+  left: 0;
+  min-width: calc(55vw);
+  /* same as above, prevents animation jank */
+  padding-bottom: 58px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.layout-builder_layout .slds-panel_docked-right .inspector-container {
+  min-width: 25%;
+}
+
+.layout-builder .slds-panel_docked-right .inspector-footer {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.inspector-content {
+  bottom: 57px;
+  left: 0;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 57px;
+}
+
+.inspector-image-content {
+  bottom: 57px;
+  left: 0;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.layout-builder .drawer-width__small.slds-panel_docked-right.slds-is-open {
+  width: 450px;
+}
+
+.layout-builder
+.drawer-width__small.slds-panel_docked-right
+.inspector-container {
+  min-width: 450px;
+  /* same as above, prevents animation jank */
+}
+
+.layout-builder .drawer-width__analytics.slds-panel_docked-right.slds-is-open {
+  width: 48%;
+}
+
+.layout-builder
+.drawer-width__analytics.slds-panel_docked-right
+.inspector-container {
+  min-width: 48%;
+  /* same as above, prevents animation jank */
+}
+
+.layout-builder .drawer-width__testing.slds-panel_docked-right.slds-is-open {
+  position: relative;
+  width: 38%;
+}
+
+.layout-builder
+.drawer-width__testing.slds-panel_docked-right
+.inspector-container {
+  min-width: 38%;
+  /* same as above, prevents animation jank */
+}
+
+/*
+ * Image Logic Builder (uses a static image with a logic-builder style header
+ */
+.builder-image-only img {
+  margin-top: 99px;
+}
+
+/*
+ * Builder Layout (like content builder)
+ */
+.builder-layout {
+  background: #e1e5ee;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin-right: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.builder-layout img,
+.builder-layout .content_text-block,
+.builder-layout .content-block_separator {
+  border-bottom: 1px solid #ccc;
+  flex-shrink: 0;
+  width: 625px;
+}
+
+.builder-layout .content_text-block {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.builder-layout .content_text-block h4 {
+  flex: 1;
+  font-weight: 700;
+}
+
+.builder-layout .content_text-block p {
+  flex: 1;
+  text-align: center;
+}
+
+.builder-layout .content_text-block button {
+  border: none;
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.builder-layout .content-block_drop-detector {
+  margin-top: -20px;
+  margin-bottom: -21px;
+  transition: margin-top 0.2s, margin-bottom 0.2s;
+}
+
+.builder-layout .content-block_drop-detector.dragging {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.builder-layout .content-block_drop-detector.dragging .content-block_separator {
+  opacity: 1;
+}
+
+.builder-layout .content-block_separator {
+  border: 1px solid #52be77;
+  background: #e7f4ea;
+  height: 40px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.builder-layout .content-block_separator-midpoint {
+  border-top: 1px solid #52be77;
+  height: 1px;
+  position: relative;
+  width: 624px;
+  top: 19px;
+  pointer-events: none;
+  /* Prevents children from firing the drag events */
+}
+
+/*
+ * Builder Canvas
+ */
+.builder-canvas {
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  scroll-behavior: smooth;
+  top: 0;
+  transition: var(--builder-canvas-transition);
+}
+
+/*
+ * use these for debugging
+ *
+.builder-canvas-row {
+	outline: 1px solid blue;
+}
+.builder-canvas-element {
+	outline: 1px solid green;
+}
+/* */
+.builder-minimap-flow,
+.builder-canvas-flow {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.builder-canvas-flow {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: scale(1);
+}
+
+/* Bot Builder demo specific animations */
+.builder-canvas .builder-canvas-flow:nth-child(2) {
+  left: -11%;
+  opacity: 0;
+  right: 55%;
+}
+
+.builder-canvas
+.builder-canvas-flow:nth-child(2)
+.builder-canvas-element:last-child {
+  transform: scale(4);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.screen-builder-animate .builder-canvas-flow:nth-child(1) {
+  top: -230px;
+  transform: scale(0);
+}
+
+.screen-builder-animate .builder-canvas-flow:nth-child(2) {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.screen-builder-animate
+.builder-canvas
+.builder-canvas-flow:nth-child(2)
+.builder-canvas-element:last-child {
+  transform: scale(1);
+}
+
+.builder-minimap {
+  background: #ffffffdd;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  bottom: 5rem;
+  height: 10rem;
+  opacity: 1;
+  position: fixed;
+  right: 2rem;
+  transition: opacity 0.5s;
+  width: 21.5rem;
+}
+
+.screen-builder-animate .builder-minimap {
+  opacity: 0;
+}
+
+.builder-minimap .builder-minimap-flow {
+  transform: scale(0.4);
+  margin: 0 0 0 -5.2rem;
+}
+
+.builder-minimap-controls {
+  margin-left: -1px;
+  margin-top: 3rem;
+  margin-right: -1px;
+}
+
+.builder-minimap-row,
+.builder-canvas-row {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.builder-canvas-element {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 98px;
+  min-width: var(--journey-element-width);
+  max-width: var(--journey-element-width);
+}
+
+.builder-canvas-element-node {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 4rem;
+  position: relative;
+}
+
+.builder-canvas-element_schedule {
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  height: 98px;
+  margin-right: 40px;
+  width: 170px;
+}
+
+.builder-canvas-element_schedule.builder-canvas-element_focused {
+  border-color: #0070d2;
+  box-shadow: #0070d2 0 0 4px 0;
+}
+
+.builder-element-name {
+  margin-top: 10px;
+  text-align: center;
+  width: 10rem;
+}
+
+.builder-element-stats {
+  text-align: center;
+  width: 10rem;
+}
+
+.builder-canvas-element_focused {
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px white, 0 0 1px 3px #0070d2;
+  height: var(--journey-element-icon-width);
+  margin-left: 8px;
+  /* This moves it "relatively" while still having it positioned absolutely to remove from flow */
+  position: absolute;
+  width: var(--journey-element-icon-width);
+}
+
+.builder-canvas-element_focused-start {
+  border-radius: 48px;
+}
+
+.builder-canvas-element_focused-rotated {
+  transform: rotate(45deg);
+}
+
+.builder-minimap-flow .builder-canvas-element_focused {
+  height: 8rem;
+  margin-left: -4rem;
+  margin-top: -2rem;
+  transition: height 0.5s, margin-left 0.5s, width 0.5s;
+  width: 12rem;
+}
+
+.screen-builder-animate .builder-minimap-flow .builder-canvas-element_focused {
+  height: 18rem;
+  margin-left: -40rem;
+  width: 46rem;
+}
+
+.builder-canvas-element_end {
+  min-width: calc( var(--journey-element-width) - var(--journey-connecter-width));
+  max-width: calc( var(--journey-element-width) - var(--journey-connecter-width));
+}
+
+.builder-tools-list {
+  min-width: var(--builder-tools-width);
+}
+
+.builder-canvas_tools-open,
+.builder-layout_tools-open {
+  left: var(--builder-tools-width);
+}
+
+.builder-layout_tools-open {
+  overflow-y: scroll;
+}
+
+.builder-canvas-element-connector {
+  background: var(--builder-canvas-connector-color);
+  float: left;
+  height: 2px;
+  margin-top: 26px;
+  /* Using margin positioning, because relative or absolute doesn't work well inside flexbox */
+  margin-bottom: -26px;
+  margin-left: 67px;
+  overflow: visible;
+  position: relative;
+  white-space: nowrap;
+  width: var(--journey-connecter-width);
+  text-align: center;
+}
+
+.builder-canvas-element-connector svg {
+  float: right;
+  margin-top: -7px;
+  margin-right: -5px;
+  fill: var(--builder-canvas-connector-color);
+}
+
+.builder-canvas-element-connector-with-join {
+  width: var(--journey-connecter-with-join-width);
+}
+
+.builder-canvas-element-join-connector {
+  background: var(--builder-canvas-connector-color);
+  bottom: 0;
+  right: -1px;
+  position: absolute;
+  width: 2px;
+}
+
+.builder-canvas-element-join-connector.spans-2-rows {
+  height: 142px;
+}
+
+.builder-canvas-element-join-connector.spans-3-rows {
+  height: 325px;
+}
+
+.builder-canvas-element-join-connector.spans-4-rows {
+  height: 508px;
+}
+
+.builder-canvas-element-vertical-connector {
+  background: var(--builder-canvas-connector-color);
+  bottom: 0;
+  left: 0px;
+  position: absolute;
+  width: 2px;
+}
+
+.builder-canvas-element-vertical-connector.spans-2-rows {
+  height: 62px;
+}
+
+.builder-canvas-element-vertical-connector.spans-3-rows {
+  height: 142px;
+}
+
+.builder-canvas-element-vertical-connector.spans-4-rows {
+  height: 325px;
+}
+
+.builder-canvas-element-connection .builder-canvas-element-connector {
+  padding-left: 35px;
+  margin-left: 32px;
+  width: calc(var(--journey-connecter-width) + 43px);
+}
+
+.builder-canvas-element-connector-passthrough {
+  width: calc(var(--journey-connecter-width) + 45px);
+}
+
+.builder-canvas-element-connection
+.builder-canvas-element-connector-passthrough {
+  margin-left: -15px;
+  padding-left: 0;
+  width: calc(var(--journey-connecter-width) + 127px);
+}
+
+.builder-canvas-element-connector-label {
+  left: -12px;
+  background: #fff;
+  border: 1px solid #dddbda;
+  border-radius: 16px;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1;
+  padding: 4px 8px;
+  position: relative;
+  text-transform: uppercase;
+  top: -9px;
+  float: right;
+}
+
+.builder-canvas-element-connector-label.builder-canvas-element-connector-label-highlight {
+  border: 1px solid var(--builder-icon-highlight-color);
+  box-shadow: 0 0 4px 1px var(--builder-icon-highlight-color);
+}
+
+.builder-canvas-element-connector.builder-canvas-element-connector-highlight,
+.builder-canvas-element-connector.builder-canvas-element-connector-highlight
+.builder-canvas-element-join-connector,
+.builder-canvas-element-connector.builder-canvas-element-connector-highlight
+.builder-canvas-element-vertical-connector {
+  background: var(--builder-canvas-connector-highlight-color);
+}
+
+.builder-canvas-element-connector.builder-canvas-element-connector-highlight
+svg {
+  fill: var(--builder-canvas-connector-highlight-color);
+}
+
+.builder-canvas-element-connector.builder-canvas-element-connector-faded,
+.builder-canvas-element-connector.builder-canvas-element-connector-faded
+.builder-canvas-element-join-connector,
+.builder-canvas-element-connector.builder-canvas-element-connector-faded
+.builder-canvas-element-vertical-connector {
+  background: var(--builder-canvas-connector-faded-color);
+}
+
+.builder-canvas-element-connector.builder-canvas-element-connector-faded svg {
+  fill: var(--builder-canvas-connector-faded-color);
+}
+
+/*
+	 * Journey Builder Tools panel & Builder Canvas Icons
+	 */
+.builder-tool-icon {
+  border-radius: 4px;
+  fill: #fff;
+  margin-right: 8px;
+  margin-top: -4px;
+  padding: 4px;
+}
+
+.builder-element-icon {
+  border-radius: 4px;
+  fill: #fff;
+  padding: 8px;
+}
+
+.builder-tool-start-icon,
+.builder-element-start-icon {
+  background: var(--builder-shape-color-start);
+  border-radius: 12px;
+}
+
+.builder-element-start-icon,
+.builder-element-end-icon {
+  border-radius: 24px;
+}
+
+.builder-tool-branching-icon,
+.builder-element-branching-icon {
+  background: var(--builder-shape-color-branching);
+  transform: rotate(45deg);
+}
+
+.builder-tool-branching-icon use,
+.builder-element-branching-icon use {
+  transform: rotate(-45deg) translate(-8px, 4px);
+}
+
+.builder-element-branching-icon use {
+  transform: rotate(-45deg) translate(-15.5px, 6px);
+}
+
+.builder-tool-direct-icon,
+.builder-element-direct-icon {
+  background: var(--builder-shape-color-direct);
+}
+
+.builder-tool-data-icon,
+.builder-element-data-icon {
+  background: var(--builder-shape-color-data);
+}
+
+.builder-element-end-icon {
+  background: var(--builder-shape-color-end);
+}
+
+.builder-canvas-element_unconfigured .builder-element-icon {
+  background: var(--builder-shape-color-direct-unconfigured);
+  border: 1px dashed #979797;
+}
+
+.builder-canvas-element_unconfigured .builder-element-start-icon {
+  background: var(--builder-shape-color-start-unconfigured);
+  border: none;
+}
+
+.builder-tool-layout-icon {
+  background: #49d6d9;
+}
+
+.builder-tool-blocks-icon {
+  background: var(--builder-shape-color-subprocess);
+}
+
+.builder-tool-advanced-icon {
+  background: #f2cf5b;
+}
+
+.builder-tool-appexchange-icon {
+  background: #04844b;
+}
+
+.builder-element-add-icon,
+.builder-canvas-element_unconfigured .builder-element-add-icon {
+  background: var(--builder-shape-color-add-activity);
+  border: none;
+  border-radius: 16px;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: 14px;
+}
+
+.builder-element-canvas-node-popover.slds-nubbin--top:before,
+.builder-element-canvas-node-popover.slds-nubbin_top:before {
+  left: 14%;
+}
+
+.builder-element-canvas-node-popover.slds-nubbin--top:after,
+.builder-element-canvas-node-popover.slds-nubbin_top:after {
+  left: 14%;
+}
+
+.builder-element-rotate-custom-icon {
+  transform: rotate(45deg);
+}
+
+.builder-element-icon.builder-element-icon-highlight {
+  border: 2px solid var(--builder-icon-highlight-color);
+  box-shadow: 0 0 4px 1px var(--builder-icon-highlight-color);
+}
+
+/*
+ * Campaign Inspector drawer
+ */
+.inspector-campaigns-search {
+  width: 16rem !important;
+}
+
+.inspector-audience-cards,
+.inspector-campaigns-cards,
+.inspector-sms-cards {
+  align-content: start;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: var(--journey-campaign-card-height);
+  min-height: var(--journey-campaign-card-height);
+  overflow-y: scroll;
+  padding-bottom: 16px;
+}
+
+.inspector-campaigns-card {
+  min-width: calc(25vw);
+}
+
+.inspector-audience-card .slds-media__body h2,
+.inspector-campaigns-card .slds-media__body h2 {
+  font-weight: 700;
+  text-align: left;
+}
+
+.inspector-audience-card:hover,
+.inspector-audience-card.selected,
+.inspector-campaigns-card:hover,
+.inspector-campaigns-card.selected,
+.inspector-sms-card:hover,
+.inspector-sms-card.selected {
+  border: 1px solid #1589ee;
+  box-shadow: 0 0 0 1px #1589ee inset;
+}
+
+.inspector-audience-card .check,
+.inspector-campaigns-card .check,
+.inspector-sms-card .check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 0rem;
+  border-width: 1.5rem;
+  border-right-color: #1589ee;
+  border-top-color: #1589ee;
+}
+
+.inspector-audience-card .check .slds-visual-picker__text-check,
+.inspector-campaigns-card .check .slds-visual-picker__text-check,
+.inspector-sms-card .check .slds-visual-picker__text-check {
+  top: -19px;
+  right: -6px;
+}
+
+.inspector-campaigns-card .slds-card__header svg {
+  fill: #f49756;
+}
+
+.inspector-audience-card,
+.inspector-sms-card {
+  text-align: left;
+  min-height: 8.5rem;
+  /* Optimized for 1280x800 screen */
+  max-width: calc(24.5vw);
+  min-width: calc(24.5vw);
+}
+
+.inspector-audience-card .inspector-audience-kind {
+  font-size: 0.5rem;
+}
+
+.inspector-sms-card .slds-card__body {
+  max-height: 8rem;
+  min-height: 8rem;
+  text-align: center;
+}
+
+.inspector-sms-card img {
+  width: 100%;
+}
+
+.inspector-sms-card-edit {
+  display: none;
+}
+
+.inspector-sms-card-edit svg {
+  margin: -3px 6px 0 0;
+}
+
+.inspector-sms-card.selected .inspector-sms-card-edit {
+  display: inherit;
+  margin-top: -6px;
+}
+
+/*
+ * Email Activity Summary Inspector Drawer
+ */
+.inspector-performance-chart {
+  position: relative;
+}
+
+.inspector-performance-chart:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.inspector-performance-percentage {
+  position: absolute;
+  text-align: center;
+  top: 73px;
+  width: 100%;
+}
+
+.inspector-performance-section {
+  height: 150px;
+}
+
+.inspector-performance-section > div.slds-grid {
+  height: 100%;
+}
+
+.inspector-performance-statistic {
+  width: 100%;
+}
+
+.inspector-performance-statistics {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.inspector-performance-visual {
+  position: relative;
+  width: 140px;
+}
+
+.slds-icon-standard-email.slds-icon-standard-email--darker {
+  background-color: #1173cf;
+}
+
+.slds-text_dark-blue {
+  color: #16325c;
+}
+
+.journey-modal {
+  align-items: center;
+  background: rgba(8, 7, 7, 0.6);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999999;
+}
