@@ -78,3 +78,30 @@ body.has-debug span.is-ssi-block {
   border-radius: 0.125rem;
   box-sizing: content-box;
 }
+
+.slds-panel-box {
+  border: 1px solid #E0E5EE;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.slds-panel-box__header {
+  border-radius: 4px 4px 0 0;
+  font-size: 16px;
+}
+
+.slds-panel-box__header span {
+  font-weight: bold;
+}
+
+.slds-panel-box__sub-header {
+  background-color: #F7F9FB;
+  border-top: 2px solid white;
+}
+
+.slds-panel-box__sub-footer {
+  border-top: 1px solid #D8DDE6;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
