@@ -1,6 +1,6 @@
 module.exports = {
 	account_name: 'NTO',
-	appName: 'Salesforce DMP',
+	appName: 'Audience Studio',
 	body_class: 'slds-brand-band slds-brand-band_medium',
 	navData: {
 		accountNavItems: [],
