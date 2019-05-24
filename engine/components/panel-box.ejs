@@ -1,0 +1,28 @@
+<div class="slds-panel-box">
+	<div class="slds-panel-box__header slds-p-around_x-small"><%- locals.title %>
+		<% if (!locals.hide_settings) { %><img class="icon slds-float_right" src="/images/settings.svg" /><% } %>
+	</div>
+	<div class="slds-panel-box__body">
+		<div class="slds-panel-box__sub-header slds-p-around_x-small slds-m-bottom_medium">
+			<% locals.header_buttons.forEach(button => {
+				const icon = button.icon ? `<img class="slds-button__icon slds-button__icon_right" src="${button.icon}" />` : '<img class="slds-button__icon slds-button__icon_right" src="/images/icons/down.dark-blue.svg" />';
+
+				echo(`
+					<button class="slds-button slds-button_neutral">${button.label}
+						${icon}
+					</button>
+				`);
+			}; %>
+		</div>
+		<div class="slds-grid slds-wrap slds-p-bottom_x-small slds-p-top_xxx-small">
+			<%- locals.contents %>
+		</div>
+		<div style="border-top: 1px solid #D8DDE6; width: 100%; margin: 0;text-align: center;" class="slds-p-around_x-small">
+			<% locals.footer_links.forEach(link => {
+				echo(`
+					<a href="javascript:void(0);" onclick="navigatePage('${link.href}')">${link.text}</a>
+				`)
+			}; %>
+		</div>
+	</div>
+</div>
