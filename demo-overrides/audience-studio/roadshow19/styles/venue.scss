@@ -11,3 +11,15 @@ html {
 #content-wrapper {
 	margin: initial;
 }
+
+// Adds a grey background so there is a little tiny white stripe between the header actions and the page title
+#content-wrapper:before {
+	background: #f7f9fb;
+	content: "";
+	display: block;
+	height: 53px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 171px;
+}
