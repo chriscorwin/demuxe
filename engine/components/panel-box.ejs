@@ -1,16 +1,25 @@
 <div class="slds-panel-box">
 	<% if (locals.title || locals.header_buttons) { %>
-		<div class="slds-panel-box__header slds-p-around_small">
+		<div class="slds-panel-box__header slds-p-around_small slds-clearfix">
 			<span><%- locals.title %></span>
 			<% locals.header_buttons && locals.header_buttons.forEach((button, i, buttons) => {
-				const icon = button.icon ? `<img class="slds-button__icon slds-button__icon_right" src="${button.icon}" />` : '<img class="slds-button__icon slds-button__icon_right" src="/icons/utility-sprite/svg/symbols.svg#down" />';
+				// const icon = button.icon ? `<img class="slds-button__icon slds-button__icon_right" src="${button.icon}" />` : '<img class="slds-button__icon slds-button__icon_right" src="/icons/utility-sprite/svg/symbols.svg#down" />';
 
-				const buttonClasses = classnames('slds-button slds-button_neutral',
+				const icon = `
+				<svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
+					<use xlink:href="${button.icon || '/icons/utility-sprite/svg/symbols.svg#down'}"></use>
+				</svg>
+				`;
+
+				const buttonClasses = classnames('slds-button',
 				{
-					'slds-float_right': (i === buttons.length - 1)
-				})
+					'slds-float_right': (i === buttons.length - 1),
+					'slds-button_neutral': button.label,
+					'slds-button_icon-container': !button.label
+				});
+				const label = button.label || ''
 
-				echo(button.label ? `<button class="${buttonClasses}">${button.label}${icon}</button>` : `<img class="icon slds-float_right" src="${button.icon}">`);
+				echo(`<button class="${buttonClasses}">${label}${icon}</button>`);
 			}); %>
 		</div>
 	<% } %>

@@ -3,9 +3,6 @@
         <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
             <%- include('components/panel-box.ejs', {
                 title: 'Audience Profile',
-                header_buttons: [
-                    { icon: 'icons/utility-sprite/svg/symbols.svg#einstein' }
-                ],
                 contents: '<img src="images/audience_profile.png" style="margin: 0 auto;" />',
                 footer_links: [{}]
             }) %>
@@ -13,14 +10,17 @@
         <div class="slds-col slds-p-horizontal_x-small slds-size_2-of-3">
             <%- include('components/panel-box.ejs', {
                 title: 'Audience Profile',
+                header_buttons: [
+                    { icon: 'icons/utility-sprite/svg/symbols.svg#einstein' }
+                ],
                 contents: '<img src="images/conversion_path_analysis.png" style="margin: 0 auto;" />',
                 footer_links: [{}]
             }) %>
         </div>
     </div>
 
-    <div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-horizontal_large">
-        <div class="slds-col slds-p-horizontal_medium slds-size_1-of-3">
+    <div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-m-top_medium slds-p-horizontal_large">
+        <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
             <%- include('components/panel-box.ejs', {
                 title: 'Top Segments',
                 header_buttons: [
@@ -30,14 +30,14 @@
                 footer_links: [{}]
             }) %>
         </div>
-        <div class="slds-col slds-p-horizontal_medium slds-size_1-of-3">
+        <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
             <%- include('components/panel-box.ejs', {
                 title: 'Consent Across Segments',
                 contents: '<img src="images/consent_across_segments.png" style="margin: 0 auto;" />',
                 footer_links: [{}]
             }) %>
         </div>
-        <div class="slds-col slds-p-horizontal_medium slds-size_1-of-3">
+        <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
             <%- include('components/panel-box.ejs', {
                 title: 'Engagement By Channel',
                 contents: '<img src="images/engagement_by_channel.png" style="margin: 0 auto;" />',
