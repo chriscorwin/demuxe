@@ -31,7 +31,7 @@
 }
 
 .slds-container_large, .slds-container--large {
-	max-width: unset;
+    max-width: 78.3rem;
 }
 
 #subheader-wrapper {
@@ -40,5 +40,34 @@
 			padding-left: 1rem;
 			padding-top: 1rem;
 		}
+	}
+}
+
+
+
+.slds-panel-box {
+    border: 1px solid #E0E5EE;
+    border-radius: 4px;
+    background-color: #fff;
+
+    &__header {
+        border-radius: 4px 4px 0 0;
+        font-size: 16px;
+
+        span {
+        	font-weight: bold;
+        }
+    }
+
+    &__sub-header {
+	    background-color: #F7F9FB;
+	    border-top: 2px solid white;
+	}
+
+	&__sub-footer {
+		border-top: 1px solid #D8DDE6;
+		width: 100%;
+		margin: 0;
+		text-align: center;
 	}
 }
