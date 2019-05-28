@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 6400px;
+  width: 8960px;
 }
 
 .app-switcher-one.shrink {
@@ -323,6 +323,38 @@ body.debug div#drawer-from-top--step-3::before {
   top: 0;
   width: 1280px;
   left: 7680px;
+}
+
+.app-switcher-one.be-left-4 {
+  left: -10240px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-4 {
+  left: -10240px;
+}
+
+body.debug div#drawer-from-top--step-4::before {
+  content: "Drawer #4";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-4 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 10240px;
 }
 
 footer.magick-flows-stickey-footer_container {

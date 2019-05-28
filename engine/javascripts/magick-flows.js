@@ -428,6 +428,15 @@ function locationHashChanged(event) {
 
 
 
+	if (document.querySelector(`.auto-replace.is-video`) !== null) {
+
+		var video = document.getElementById('magick-flows--main-content-wrapper--step-3');
+		// or video = $('.video-selector')[0];
+		video.pause();
+		video.currentTime = 0;
+		video.load();
+
+	}
 	if (document.querySelector(`.ios-notification`) !== null) {
 
 		// First we will hide any previous step's ios-notification.

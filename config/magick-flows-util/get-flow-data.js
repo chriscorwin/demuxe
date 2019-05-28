@@ -187,6 +187,10 @@ const getStepData = (flowData, fileName, fileIndex) => {
 
 	if ( fileName.endsWith('.ejs') === true ) {
 		stepDataAttributes.dimensions = {type: 'ejs'};
+	} else if ( fileName.endsWith('.mp4') === true ) {
+		stepDataAttributes.dimensions = {type: 'mp4'};
+	} else if ( fileName.endsWith('.mov') === true ) {
+		stepDataAttributes.dimensions = {type: 'mov'};
 	} else {
 		const pathToFile = path.join(flowData.fullContentPath, fileName);
 		stepDataAttributes.dimensions = sizeOf(pathToFile);
