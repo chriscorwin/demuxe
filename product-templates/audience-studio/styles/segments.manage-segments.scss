@@ -29,7 +29,6 @@
 	}
 
 	.slds-text-body_regular {
-		text-align: right;
 		padding-right: 38px;
 		padding-top: 3px;
 		color: #54698D;
@@ -42,7 +41,7 @@
 
 .slds-panel-box__header-settings {
 	width: 42px;
-	height: 36px;
+	height: 60px;
 	background: #fff;
 	position: absolute;
 	margin: -7px 0 0 1165px;
@@ -53,13 +52,13 @@
 	img {
 		margin: 9px 12px;
 		width: 16px;
-		height: 16px;
+		height: 41px;
 	}
 }
 
 .slds-panel-box__header-dropdown {
 	position: absolute;
-	margin: -7px 0 0 846px;
+	margin: -7px 0 0 926px;
 	border-radius: 4px 0 4px 4px;
 	transform: none;
 	left: auto;
