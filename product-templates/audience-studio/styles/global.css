@@ -228,7 +228,6 @@ HEADER AREA
 }
 
 #content-wrapper {
-  margin: 0 auto;
   color: #16325C;
 }
 
@@ -345,7 +344,7 @@ body {
 }
 
 .slds-container_large, .slds-container--large {
-  max-width: 71.3rem;
+  max-width: 76.3rem;
 }
 
 .slds-global-header__logo {

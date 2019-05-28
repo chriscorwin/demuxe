@@ -20,10 +20,6 @@
   height: 56px;
 }
 
-.slds-panel-box {
-  width: 1140px;
-}
-
 .slds-panel-box__header {
   padding-top: 6px;
   padding-bottom: 5px;
@@ -49,7 +45,7 @@
   height: 36px;
   background: #fff;
   position: absolute;
-  margin: -7px 0 0 1085px;
+  margin: -7px 0 0 1165px;
   border-radius: 0 4px 0 0;
   border: 1px solid #E0E5EE;
   cursor: pointer;
@@ -92,7 +88,7 @@
   height: 57px;
   background: #fff;
   position: absolute;
-  margin: -9px 0 0 1085px;
+  margin: -9px 0 0 1165px;
   /* left: 1170px; */
   border-radius: 0 0 4px 0;
   border: 1px solid #E0E5EE;
