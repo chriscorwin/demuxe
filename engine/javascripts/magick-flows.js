@@ -598,6 +598,15 @@ document.addEventListener('keydown', function (evt) {
 });
 
 
+document.onmousedown = function(e) {
+	let theNode = document.getElementsByTagName("body")[0];
+	theNode.style.cursor = "pointer";
+}
+document.onmouseup = function(e) {
+	let theNode = document.getElementsByTagName("body")[0];
+	theNode.style.cursor = "initial";
+}
+
 document.onkeyup = function(e) {
 
 	if (e.which == 72) {
