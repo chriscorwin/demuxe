@@ -428,14 +428,36 @@ function locationHashChanged(event) {
 
 
 
-	if (document.querySelector(`.auto-replace.is-video`) !== null) {
 
-		var video = document.getElementById('magick-flows--main-content-wrapper--step-3');
-		// or video = $('.video-selector')[0];
-		video.pause();
-		video.currentTime = 0;
-		video.load();
 
+	if (document.querySelectorAll('video').length !== 0) {
+		let theseVideoNodes = document.querySelectorAll(`video`);
+		theseVideoNodes.forEach(function(node, nodeIndex) {
+			
+			node.pause();
+			node.currentTime = 0;
+
+		});
+	}
+
+
+	if (document.querySelectorAll(`[data-step="${currentStepNumber}"] video`).length === 1) {
+		if (document.getElementById(`magick-flows--main-content-wrapper--step-${currentStepNumber}`) !== null) {
+			var video = document.getElementById(`magick-flows--main-content-wrapper--step-${currentStepNumber}`);
+			video.pause();
+			video.currentTime = 0;
+			video.load();
+		}
+	}
+
+
+	if (document.querySelectorAll(`[data-step="${currentStepNumber}"] video`).length === 1) {
+		if (document.getElementById(`magick-flows--main-content-wrapper--step-${currentStepNumber}`) !== null) {
+			var video = document.getElementById(`magick-flows--main-content-wrapper--step-${currentStepNumber}`);
+			video.pause();
+			video.currentTime = 0;
+			video.load();
+		}
 	}
 	if (document.querySelector(`.ios-notification`) !== null) {
 
