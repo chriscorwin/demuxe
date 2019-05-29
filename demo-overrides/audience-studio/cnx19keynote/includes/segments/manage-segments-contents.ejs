@@ -6,9 +6,12 @@
 
 <div class="slds-page-header__row" style="height: 184px; margin-bottom: 1rem;">
 	<div style="background-color: white; border-radius: 4px; width: 876px; padding: 30px">
-		<img src="/images/segments.top-left.svg" />
+		<!-- we include it here so that it re-animates consistently on page load (otherwise it gets cached and doesn't always animate) -->
+		<%- include('images/segments.top-left.svg') %>
 	</div>
-	<div style="background-color: white; border-radius: 4px; width: 364px; margin-left: 1rem;"></div>
+	<div style="background-color: white; border-radius: 4px; width: 364px; margin-left: 1rem; padding: 15px">
+		<%- include('images/segments.top-right.svg') %>
+	</div>
 </div>
 
 <div style="background-color: white; padding: 1rem; max-width: 78.3rem; border-radius: 4px;" class="slds-container_large">
