@@ -13,13 +13,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://cnx19keynote-audience-360-fever.herokuapp.com/"
+		"host": "https://cnx19-audience-360-fever.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19keynote-audience-360-fever-qa.herokuapp.com/"
+		"host": "https://cnx19-audience-360-fever-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://cnx19keynote-audience-360-fever-dev.herokuapp.com/"
+		"host": "https://cnx19-audience-360-fever-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
