@@ -17,19 +17,21 @@ const {
 const baseSegments = [
 	{
 		title: 'Family Prospect Targets',
-		titleBadges: [{ text: 'Daily Refresh', icon: { placement: 'right', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
 		subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
 		subTitleBadges: [{ text: 'Daily Refresh', icon: { placement: 'right', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
 		devices: '6.3M',
-		audience: '1.7M',
+		audience: '5M',
+		audienceFill: 80,
 		modified: aboutOneMonthAgo,
 		type: 'Standard',
 		category: 'Behavioral',
 		subCategory: 'Loyalty'
 	},
 	{
-		title: 'Abandon Cart High Value',
-		subTitle: 'Transaction Segment / ID: <b>rsdqtbya</b>',
+		title: 'Sport Magazine Subscribers',
+		titleBadges: [{ text: 'Base' }],
+		subTitle: 'Standard Segment / ID: <b>rsdqtbya</b>',
+		subTitleBadges: [{ text: 'Monthly Refresh', icon: { placement: 'right', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
 		devices: '9.3M',
 		audience: '2.1M',
 		audienceFill: 50,
@@ -39,7 +41,7 @@ const baseSegments = [
 		subCategory: 'Gender'
 	},
 	{
-		title: 'Clicked on Ad did not convert',
+		title: 'NBA Followers',
 		subTitle: 'Standard Segment / ID: <b>rsdqtah9w</b>',
 		devices: '45.3M',
 		audience: '14.2M',
