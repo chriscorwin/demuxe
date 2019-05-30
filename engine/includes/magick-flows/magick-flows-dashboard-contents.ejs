@@ -1,12 +1,29 @@
 <div class="magick-flows-dashboard slds-m-top_x-large slds-p-around_medium">
 	<h1>Magick Flows in this instance of Demuxe</h1>
-	<ul class="slds-has-dividers_bottom slds-has-block-links_space">
+	<ul class="slds-has-dividers_bottom slds-has-inline-block-links_space">
 	<%_
 		let magickFlowsUrlSlugs = locals.magickFlows.urlSlugs;
+		let magickFlows = locals.magickFlows;
 		// let magickFlowsUrls = magickFlowsConfigAll.urlSlugsMapToFlowDirectories;
 
+
+
 		magickFlowsUrlSlugs.forEach(function(node, nodeIndex) {
-			echo(`<li class="slds-item"><a href="/${node}">${node}</a></li>`);
+
+			let nodesHtmlOut = '';
+			if ( magickFlows[node]['hasGlobalNotes'] === true ) {
+
+				// let thisWebRootPath = `/magick-flows-web-root/${magickFlows.directoryName}/${magickFlows.urlSlugsMapToFlowDirectories[node]}`;
+				// let thisMainContentPath = `${thisWebRootPath}/main/`;
+				// let thisAssetsContentPath = `${thisWebRootPath}/assets/`;
+				nodesHtmlOut += include(magickFlows[node]['pathToGlobalNotesFile']);
+			}
+
+			echo(`
+				<li class="slds-item">
+					<a href="/${node}">${node}</a>${nodesHtmlOut.length ? ( ' ☞ ' + nodesHtmlOut) : ''}
+				</li>
+			`);
 		});
 	_%>
 	</ul>
