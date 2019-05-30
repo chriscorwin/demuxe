@@ -18,7 +18,7 @@ const baseSegments = [
 	{
 		title: 'Family Prospect Targets',
 		subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
-		subTitleBadges: [{ text: 'Daily Refresh', icon: { placement: 'right', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
+		subTitleBadges: [{ text: 'Daily Refresh', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
 		devices: '6.3M',
 		audience: '5M',
 		audienceFill: 80,
@@ -31,7 +31,7 @@ const baseSegments = [
 		title: 'Sport Magazine Subscribers',
 		titleBadges: [{ text: 'Base' }],
 		subTitle: 'Standard Segment / ID: <b>rsdqtbya</b>',
-		subTitleBadges: [{ text: 'Monthly Refresh', icon: { placement: 'right', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
+		subTitleBadges: [{ text: 'Monthly Refresh', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
 		devices: '9.3M',
 		audience: '2.1M',
 		audienceFill: 50,
@@ -97,12 +97,15 @@ const baseSegments = [
 	}
 ];
 
-const highValueSegment = [
+const lookalikeSegment = [
 	{
-		title: '<img src="/images/logo-noname.svg" height=10 /> Camping and tents explorers',
-		subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
-		devices: '13.8M',
-		audience: '2.8M',
+		title: 'Family Prospect Targets - Lookalike',
+		titleBadges: [{ text: 'Base', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#preview' }}],
+		subTitle: 'Standard Segment / ID: <b>rsdqtba67</b> <img src="/images/icons/sort.svg" />',
+		subTitleBadges: [{ text: 'Daily Refresh', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
+		devices: '2.7M',
+		audience: '1.2M',
+		audienceFill: 44,
 		modified: today,
 		type: 'Standard',
 		category: 'Behavioral',
@@ -110,36 +113,6 @@ const highValueSegment = [
 	}
 ];
 
-
-const lookalikes = {
-	cpm: '$1.20',
-	tableData: {
-		rows: [
-			{
-				reach: '500,234', similarity: '100%'
-			},
-			{
-				reach: '4,944,629', similarity: '98%'
-			},
-			{
-				reach: '7,265,488', similarity: '96%'
-			},
-			{
-				reach: '9,172,952', similarity: '94%'
-			},
-			{
-				reach: '10,890,862', similarity: '92%'
-			},
-			{
-				reach: '30,323,212', similarity: '90%'
-			},
-			{
-				reach: '70,223,384', similarity: '88%'
-			}
-		],
-		labels: ['Reach', 'Similarity']
-	}
-};
 
 const controls = [
 	{
@@ -167,23 +140,11 @@ module.exports = {
 	states: {
 		initial: {
 			segments: [...baseSegments],
-			lookalikes,
 			controls
 		},
-		addHighValue: {
-			segments: [...highValueSegment, ...baseSegments],
-			lookalikes,
+		addLookalike: {
+			segments: [...lookalikeSegment, ...baseSegments],
 			controls
-		},
-		provisioned: {
-			segments: [...highValueSegment, ...baseSegments],
-			lookalikes,
-			controls,
-			toast: {
-				title: "'Camping and tents explorers' segment provisioned successfully.",
-				contents: "Will be available only under 'Northern Trail Outfitters - Apparel' account as 'Camping and tents explorers'",
-				triggerImmediately: true
-			}
 		}
 	}
 };

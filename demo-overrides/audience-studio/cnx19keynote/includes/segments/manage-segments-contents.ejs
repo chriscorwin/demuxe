@@ -55,43 +55,6 @@
 	</div>
 
 <%
-	const tableData = lookalikes.tableData;
-
-	const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
-
-	const makeTable = (data) => (`
-	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
-		<thead>
-			<tr class="slds-text-title_caps">
-				<th scope="col">
-					<div class="slds-truncate" title="${data.labels[0]}">${data.labels[0]}</div>
-				</th>
-				<th scope="col">
-					<div class="slds-truncate " title="${data.labels[1]}">${data.labels[1]}</div>
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			${makeTableRows(data.rows)}
-		</tbody>
-	</table>
-
-	`);
-
-
-	const makeTableRow = (data) => (`
-		<tr">
-			${makeTableCell(data.reach)}
-			${makeTableCell(data.similarity)}
-		</tr>
-	`);
-
-	const makeTableCell = (data) => (`
-		<td>
-			<div class="slds-truncate " title="${data}">${data}</div>
-		</td>
-	`);
-
 	const makePanel = (data) => {
 		const badges = data.titleBadges && data.titleBadges.reduce((badges, badge) => include('components/badge', badge), '') || '';
 		const subTitleBadges = data.subTitleBadges && data.subTitleBadges.reduce((badges, badge) => include('components/badge', badge), '') || '';
@@ -292,19 +255,6 @@
 %>
 
 
-
-<%- include('components/modal', {
-	modalId,
-	modalBackdropId,
-	contentsHeader: 'Create a lookalike segment for High Value Customers - Salesforce 360',
-	contentsHeaderTagline: makeModalContentsHeaderTagline(),
-	contentsMain: makeModalContentsMain(tableData),
-	contentsFooter: makeModalContentsFooter(),
-	handleClose: 'hideLookalikes',
-	size: 'medium',
-	theme: 'success'
-}) %>
-
 <% if (locals.localization.segments.states[locals.state].toast) {
 	const toast = locals.localization.segments.states[locals.state].toast; %>
 	<%- include('components/toast', {
@@ -317,20 +267,6 @@
 <% } %>
 
 <script>
-const showLookalikeModal = (n) => {
-	document.querySelector(`.slds-modal`).classList.add('slds-fade-in-open');
-	document.querySelector(`.slds-backdrop`).classList.add('slds-backdrop_open');
-}
-const showLookalike = (n) => {
-	document.querySelector('.lookalike').classList.add('slds-hide');
-	document.querySelector(`#lookalike${n}`).classList.remove('slds-hide');
-}
-const hideLookalikes = () => {
-	document.querySelector(`.slds-modal`).classList.remove('slds-fade-in-open');
-	document.querySelector(`.slds-backdrop`).classList.remove('slds-backdrop_open');
-	document.querySelectorAll('.lookalike').forEach((elm) => elm.classList.add('slds-hide'));
-}
-
 document.querySelectorAll('.slds-panel-box__header-settings').forEach((elm) => elm.addEventListener('click', function () {
 	const img = this.querySelector('img');
 
