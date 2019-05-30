@@ -640,7 +640,12 @@ document.onmouseup = function(e) {
 
 document.onkeyup = function(e) {
 
-	if (e.which == 72) {
+	if (e.ctrlKey &&  e.which == 72) {
+		// these are here to remind us how to do combos, not cause we want these combos
+		let pathToDemoHome = '/magick-flows-dashboard';
+		console.log(`Ctrl + H shortcut combination was pressed, from ${thisPathToIncludeForLogging}. That means we should go to the ${pathToDemoHome}`);
+		window.location = `${pathToDemoHome}`;
+	} else if (e.which == 72) {
 		
 		// H
 		
@@ -690,7 +695,7 @@ document.onkeyup = function(e) {
 		theMainContent.src = theMainContent.src.replace(/\?.*$/,"")+"?x="+Math.random();
 	} else if (e.ctrlKey && e.altKey && e.which == 89) {
 		// these are here to remind us how to do combos, not cause we want these combos
-		// console.log(`Ctrl + Alt + Y shortcut combination was pressed, from ${thisPathToIncludeForLogging}`);
+		console.log(`Ctrl + Alt + Y shortcut combination was pressed, from ${thisPathToIncludeForLogging}`);
 	} else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
 		// these are here to remind us how to do combos, not cause we want these combos
 		// alert("Ctrl + Alt + Shift + U shortcut combination was pressed");

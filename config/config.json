@@ -1,8 +1,8 @@
 {
-	"demoName": "MC^2 Innovation Summit Demo 2019",
-	"brandTheme": "southwest-airlines",
-	"productTemplate": "mc2",
-	"demoVenue": "innovation-summit-2019",
+	"demoName": "Salesforce Marketing Cloud Connections 2019",
+	"brandTheme": "fever",
+	"productTemplate": "mc",
+	"demoVenue": "cnx19",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -13,13 +13,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://mc2-inov8-summit-2019.herokuapp.com/"
+		"host": "https://cnx19-mc-fever.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://mc2-inov8-summit-2019-qa.herokuapp.com/"
+		"host": "https://cnx19-mc-fever-dev-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://mc2-inov8-summit-2019-dev.herokuapp.com/"
+		"host": "https://cnx19-mc-fever-dev-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
@@ -31,5 +31,5 @@
 		"timeout": 30000
 	},
 	"gapixelid": "UA-133829434-3",
-	"presentationid": "1EzinU2nh2RXITiLawG4BGzbdVYekOlhHPg9VxsKZ7_A"
+	"presentationid": "unset"
 }
