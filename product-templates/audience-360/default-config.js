@@ -104,7 +104,17 @@ module.exports = {
 				id: 'data-studio',
 				href: `/data-studio/audience-discovery`,
 				lookLikeDropdown: true,
-				isActive: (activePage) => activePage === 'audience-discovery' || activePage === 'data-studio'
+				isActive: (activePage) => activePage === 'audience-discovery' || activePage === 'data-studio',
+				dropdownItems: [
+					[ 
+						{ label: '+ New Data Stream'},
+						{ label: 'Recent Streams', separator: true },
+						{ label: 'Marketing Cloud (Email)...' },
+						{ label: 'Marketing Cloud (Push)...' },
+						{ label: 'Audience Studio Standa...' },
+						{ label: 'Interaction Studio Stre...' },
+					]
+				]
 			}
 		]
 	}
