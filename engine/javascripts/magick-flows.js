@@ -708,7 +708,7 @@ document.onkeyup = function(e) {
 // The very first time the URL for this Magick Flow is loaded in the browser we run a "reset" on it 
 // Why? WE DON'T KNOW!! 
 // ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
-window.location.hash = `#reset`;
+// window.location.hash = `#reset`;
 // setLocationHashWithTiming(clicks, 0);
 
 if (locals.DEBUG === 'true') {
