@@ -1,8 +1,7 @@
-@charset "UTF-8";
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/audience-studio/main/0000___ID=dashboard-1___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“gear”-icon-in-the-first-row__A-dropdown-will-appear.png") url("/magick-flows/audience-studio/main/0010___ID=dashboard-2___DATA=is-own-header__own-header-height--90___NOTES=Choose-“Lookalikes”-from-the-dropdown.png") url("/magick-flows/audience-studio/main/0100___ID=lookalikes___DATA=is-own-header__own-header-height--90___NOTES=Click-in-the-chart-near-60—per-cent-at-4M.png") url("/magick-flows/audience-studio/main/0110___ID=lookalikes___DATA=is-own-header__own-header-height--90___NOTES=Click-the-primary-”Create-a-lookalike-segment”-button.png") url("/magick-flows/audience-studio/main/0200___ID=manage-segments___DATA=is-own-header__own-header-height--90___NOTES=Click-the-”Einstein”-icon-in-the-first-row.png") url("/magick-flows/audience-studio/main/0210___ID=manage-segments___DATA=is-own-header__own-header-height--90___NOTES=End-of-Magick-Flow__On-to-A360-to-find-other-lookalikes-now.png") url("/magick-flows/audience-studio/assets/all__viewport-size.png");
+  content: url("/magick-flows/audience-studio/main/0000___ID=LAL___DATA=unset___NOTES=unset.png") url("/magick-flows/audience-studio/main/0001___ID=LAL-hover___DATA=unset___NOTES=unset.png") url("/magick-flows/audience-studio/main/0010___ID=segments___DATA=unset___NOTES=unset.png") url("/magick-flows/audience-studio/main/0011___ID=segments-hover___DATA=unset___NOTES=unset.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -55,10 +54,6 @@ body, .container {
   top: 0px;
   transition: 500ms top ease-in-out;
   will-change: top;
-}
-
-.magick-flows-drawer {
-  pointer-events: none;
 }
 
 .magick-flows-drawer--from-top {
@@ -166,7 +161,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 14080px;
+  width: 8960px;
 }
 
 .app-switcher-one.shrink {
@@ -358,70 +353,6 @@ body.debug div#drawer-from-top--step-4::before {
   left: 10240px;
 }
 
-.app-switcher-one.be-left-5 {
-  left: -12800px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-5 {
-  left: -12800px;
-}
-
-body.debug div#drawer-from-top--step-5::before {
-  content: "Drawer #5";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-5 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 12800px;
-}
-
-.app-switcher-one.be-left-6 {
-  left: -15360px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-6 {
-  left: -15360px;
-}
-
-body.debug div#drawer-from-top--step-6::before {
-  content: "Drawer #6";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-6 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 15360px;
-}
-
 footer.magick-flows-stickey-footer_container {
   position: absolute;
   bottom: 0;
@@ -429,7 +360,7 @@ footer.magick-flows-stickey-footer_container {
 
 header.magick-flows-stickey-header_container {
   position: absolute;
-  top: 0;
+  bottom: 0;
 }
 
 /**
@@ -514,7 +445,7 @@ html {
 }
 
 .container {
-  background: url(/images/home-background.jpg) no-repeat top left;
+  background: url(/images/LAL1.png) no-repeat top left;
   background-size: 100% 100%;
   height: 720px;
   left: 0;

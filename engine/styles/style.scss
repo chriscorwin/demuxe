@@ -70,13 +70,13 @@
   transition: opacity 300ms ease-in-out;
   will-change: opacity;
   // transition-delay: 0s;
-  opacity: 0; 
+  opacity: 0;
 }
 
 // .slds-hide {
 // 	transition: opacity 0.25s ease-in-out;
 // 	will-change: opacity;
-// 	opacity: 0; 
+// 	opacity: 0;
 //   display: initial !important;
 // }
 	/**
@@ -89,7 +89,7 @@
 .slds-transition-show {
 	transition: opacity 300ms ease-in-out;
 	will-change: opacity;
-	opacity: 1; 
+	opacity: 1;
 }
 
 body.has-debug .is-ssi-block {
@@ -106,3 +106,6 @@ body.has-debug span.is-ssi-block {
 	border-radius: 0.125rem;
 	box-sizing: content-box;
 }
+
+
+@import 'slds-overrides';

@@ -1,8 +1,8 @@
 {
-	"demoName": "Salesforce Marketing Cloud Connections 2019",
+	"demoName": "Audience Studio Fever CNX 19 Keynote",
 	"brandTheme": "fever",
-	"productTemplate": "mc",
-	"demoVenue": "cnx19",
+	"productTemplate": "audience-studio",
+	"demoVenue": "cnx19keynote",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -13,13 +13,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://cnx19-mc-fever.herokuapp.com/"
+		"host": "https://cnx19keynote-audience-studio-fever.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19-mc-fever-dev-qa.herokuapp.com/"
+		"host": "https://cnx19keynote-audience-studio-fever-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://cnx19-mc-fever-dev-dev.herokuapp.com/"
+		"host": "https://cnx19keynote-audience-studio-fever-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
@@ -30,6 +30,6 @@
 		"mismatchThreshold": 0.01,
 		"timeout": 30000
 	},
-	"gapixelid": "UA-133829434-3",
-	"presentationid": "unset"
+	"gapixelid": "",
+	"presentationid": "1EzinU2nh2RXITiLawG4BGzbdVYekOlhHPg9VxsKZ7_A"
 }

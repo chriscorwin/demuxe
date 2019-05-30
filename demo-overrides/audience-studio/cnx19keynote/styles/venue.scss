@@ -1,0 +1,65 @@
+#subheader-wrapper {
+	border-radius: 4px;
+}
+
+#content, #content-wrapper {
+	background: transparent;
+	max-width: 100%;
+}
+
+.slds-page-header__col-actions {
+	margin-top: -275px;
+	margin-right: -36px;
+	z-index: 9;
+}
+
+
+.slds-badge {
+    padding: 2px 5px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.slds-icon-action-customers, .slds-icon-action-devices {
+    background-color: #67CCD4;
+    padding: 0;
+    margin-right: 11px;
+    display: block;
+    float: left;
+
+    .slds-icon {
+    	fill: #FFF;
+    }
+}
+
+.slds-icon-action-devices {
+	background-color: #5AA7EA;
+}
+
+.slds-icon-action-customers {
+	height: 32px;
+	width: 32px;
+}
+
+.slds-icon_ring {
+	display: block;
+	margin-top: -2px;
+	margin-bottom: -37px;
+	margin-left: -4px;
+	height: 40px;
+	float: left;
+
+	&-customers {
+		margin-bottom: -36px;
+	}
+}
+
+.slds-icon_ring circle {
+	animation: grow-circle 400ms linear backwards;
+}
+
+@keyframes grow-circle {
+	from {
+		stroke-dashoffset: 113;
+	}
+}

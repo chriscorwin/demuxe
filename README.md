@@ -30,22 +30,22 @@ Demos _must_:
 Demos _shall_:
 
 - Be as "real" as practical, given the time restraints.
-	- Every effort shall be made for elements of demos to be "real" (vs click-able screenshots). 
+	- Every effort shall be made for elements of demos to be "real" (vs click-able screenshots).
 	- Click-able screenshots are first priority and will be replaced piecemeal as time permits.
-- Be served by Heroku. 
-	
+- Be served by Heroku.
+
 	- Utilizing a Heroku pipeline is strongly recommended.
 
-Demos _may_: 
+Demos _may_:
 
 - Consist merely of "click-able screenshots", where appropriate.
 - Use SCSS, since that is the tool used by our very own [SLDS](https://www.lightningdesignsystem.com) team.
-- Make strategic use of JavaScript libraries as-needed to best fulfill the needs of a given demo. 
-	
+- Make strategic use of JavaScript libraries as-needed to best fulfill the needs of a given demo.
+
 	Keep in mind that such tools are a per-demo decision and need not necessarily be included in all demos.
 
 	It _is_ entirely appropriate for some libraries to be so commonly utilized so as to justify their inclusion in this repository.
-	
+
 	Examples [D3](https://github.com/d3/d3/wiki/Gallery) and [Highcharts](https://www.highcharts.com/demo), which have been used in nearly every demo we've created thus far to generate interactive graphs where SVGs alone do not suite our purposes.
 
 
@@ -77,7 +77,7 @@ Demuxe utilizes:
 
 	`npm install`
 
-- Edit `/config/config.json` (and other config files). 
+- Edit `/config/config.json` (and other config files).
 	- Specify
 		+ `brandTheme`
 		+ `productTemplate`
@@ -99,7 +99,7 @@ Demuxe utilizes:
 	+ Create `demo-overrides/{productTemplate}/{demoVenue}/localization.js`
 		* Entry point for all venue related localization data
 	+ Create `product-templates/{productTemplate}/index.ejs`
-		* The index page for your product template. See DMP for an example of using a `wrapper.ejs` file to help manage the includes/architecture of your demo.
+		* The index page for your product template. See Audience Studio for an example of using a `wrapper.ejs` file to help manage the includes/architecture of your demo.
 - Get coding, you are under deadline, kiddo.
 
 
@@ -128,9 +128,9 @@ Demuxe utilizes:
 	- There is only ever _one_ state at a time.
 	- See `/brand-themes/bbva/segments.js` for a good D.R.Y. example of how to re-use data across multiple states without repeating lines of code (defining the same thing the same way in two different places).
 - For convenience, to encourage maintaining link-ability throughout demo, the Demuxe engine itself contains a library for manipulating query params (see `/engine/index.ejs`).
-	
+
 	It should be noted though, that while this may _feel_ "Single Page Web App"ish, it isn't. Adding/Removing query params has absolutely no affect on page contents, _will not_ update state on page, and is _only_ intended as a way to make the URL copy/paste-able. Fetching new data from the server will require an actual page re-load. Pushing data to the server is a crime against humanity and will be punished by time-cops sent back from the wrecked future that you destroyed by abusing the Demuxe framework (It'll know once it becomes sentient. Trust me.).
-	
+
 	- Include `<script src="/javascripts/queryParams.js"></script>` on your page.
 	- `queryParams.add('param', 'value');` to add a query param
 	- `queryParams.remove('param');` to remove a query param
@@ -192,7 +192,7 @@ Demuxe consists of:
 ## Brand Theming
 Enables brand re-use across demos, and brand-theming demos, quickly and easily.
 
-All brand assets and verbiage associated with that brand shall live in `/brand-themes/{brand-name}/`. 
+All brand assets and verbiage associated with that brand shall live in `/brand-themes/{brand-name}/`.
 
 You must structure your brand assets as follows:
 
@@ -231,13 +231,13 @@ Also, SVG files do not have access to fonts the same way HTML elements do, so we
 
 		**DO NOT** put this in package.json because it will cause heroku deploys to fail. Eventually this repo needs moved to github.com/salesforce-ux (or somewhere else that Heroku can see it)
 	- From the root directory of this project, run
-	
+
 		`node ./dev-assets/utilities/embed-fonts-in-svgs`
 
 	- By default the script will scan the `demo-overrides/` directory for all SVG files referencing font files, attempt to locate the required font files on your machine, and, create an embedded copy of the files with the `.embedded.svg` suffix.
 
-	- To convert other project directories, add a directory path when running the script, thus: 
-	
+	- To convert other project directories, add a directory path when running the script, thus:
+
 		`node ./dev-assets/utilities/embed-fonts-in-svgs ./some/project/path`
 
 
@@ -262,13 +262,13 @@ Components:
 
 - Live within the template for which they were created.
 - Shall be lightly documented and reviewed to ensure high confidence in quality, readability, and re-usability.
-	
+
 	The intent is that you ought to be able to copy a component out of any template into whatever demo you are building regardless of the template the component was originally built for.
 
 
 ## Your Code Here
 
-Anything changes you would like to make to `/engine/` or `/product-template/[product]/` must be made here instead. Place a copy of the file you would like to modify here (at the same path it existed at in its original location, eg: `/product-template/dmp/includes/file.ejs` would be copied to `/demo-overrides/includes/file.ejs`) and make your modifications.
+Anything changes you would like to make to `/engine/` or `/product-template/[product]/` must be made here instead. Place a copy of the file you would like to modify here (at the same path it existed at in its original location, eg: `/product-template/audience-studio/includes/file.ejs` would be copied to `/demo-overrides/includes/file.ejs`) and make your modifications.
 
 ### RPD Tool
 
@@ -284,7 +284,7 @@ While the RPD Controller exists in `/engine/`, it must be explicitly included in
 
 `<%- include('includes/rpd/controller.ejs') %>`
 
-See `/product-templates/dmp/wrapper.ejs` for an example of this.
+See `/product-templates/audience-studio/wrapper.ejs` for an example of this.
 
 Append `?showRPDController=true` to your URL to make the page load with RPD Controller visible. Enter the KONAMI code (up up down down left right left right b a) at any time to toggle RPD Controller visibility (`?disableKonami=true` to disable KONAMI code listener).
 
