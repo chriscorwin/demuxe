@@ -1,5 +1,13 @@
-<div class="magick-flows-dashboard slds-m-top_x-large slds-p-around_medium">
-	<h1>Magick Flows in this instance of Demuxe</h1>
+<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
+	<h1 class="slds-text-heading_large slds-m-bottom_small">Magick Flows Quick Tips</h1>
+	<h2 class="slds-text-heading_medium slds-m-bottom_small">&ldquo;Click Hints&rdquo;</h2>
+	<p>Magick Flows has a “hints” feature, and your notes can be shown via a keyboard shortcut.</p>
+	<div class="slds-box slds-box_small slds-m-top_small">
+		<p>This is a regular-sized box.</p>
+	</div>
+</div>
+<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
+	<h1 class="slds-text-heading_large slds-m-bottom_small">Magick Flows in this instance of Demuxe</h1>
 	<ul class="slds-has-dividers_bottom slds-has-inline-block-links_space">
 	<%_
 		let magickFlowsUrlSlugs = locals.magickFlows.urlSlugs;
@@ -29,8 +37,8 @@
 	</ul>
 </div>
 
-<div class="magick-flows-dashboard slds-m-top_x-large slds-p-around_medium">
-	<h1>Other Demos at this Instance</h1>
+<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
+	<h1 class="slds-text-heading_large slds-m-bottom_small">Other Demos at this Instance</h1>
 	<ul class="slds-has-dividers_bottom slds-has-block-links_space">
 	<%_
 		echo(`<li class="slds-item"><a href="/">${locals.demoName}</a></li>`);
