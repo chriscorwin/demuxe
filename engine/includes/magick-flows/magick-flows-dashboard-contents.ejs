@@ -1,4 +1,4 @@
-<div class="slds-m-top_x-large slds-p-around_medium">
+<div class="magick-flows-dashboard slds-m-top_x-large slds-p-around_medium">
 	<h1>Magick Flows in this instance of Demuxe</h1>
 	<ul class="slds-has-dividers_bottom slds-has-block-links_space">
 	<%_
@@ -8,6 +8,15 @@
 		magickFlowsUrlSlugs.forEach(function(node, nodeIndex) {
 			echo(`<li class="slds-item"><a href="/${node}">${node}</a></li>`);
 		});
+	_%>
+	</ul>
+</div>
+
+<div class="magick-flows-dashboard slds-m-top_x-large slds-p-around_medium">
+	<h1>Other Demos at this Instance</h1>
+	<ul class="slds-has-dividers_bottom slds-has-block-links_space">
+	<%_
+		echo(`<li class="slds-item"><a href="/">${locals.demoName}</a></li>`);
 	_%>
 	</ul>
 </div>
