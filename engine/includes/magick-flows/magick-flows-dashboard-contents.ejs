@@ -1,47 +1,165 @@
-<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
-	<h1 class="slds-text-heading_large slds-m-bottom_small">Magick Flows Quick Tips</h1>
-	<h2 class="slds-text-heading_medium slds-m-bottom_small">&ldquo;Click Hints&rdquo;</h2>
-	<p>Magick Flows has a “hints” feature, and your notes can be shown via a keyboard shortcut.</p>
-	<div class="slds-box slds-box_small slds-m-top_small">
-		<p>This is a regular-sized box.</p>
+
+<div class="slds-grid slds-gutters">
+
+	<div class="slds-col slds-size_1-of-2">
+
+		<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
+			<h1 class="slds-text-heading_large slds-m-bottom_small">Magick Flows in this instance of Demuxe</h1>
+			<ul class="slds-has-dividers_bottom slds-has-inline-block-links_space">
+			<%_
+				let magickFlowsUrlSlugs = locals.magickFlows.urlSlugs;
+				let magickFlows = locals.magickFlows;
+				// let magickFlowsUrls = magickFlowsConfigAll.urlSlugsMapToFlowDirectories;
+
+
+
+				magickFlowsUrlSlugs.forEach(function(node, nodeIndex) {
+
+					let nodesHtmlOut = '';
+					if ( magickFlows[node]['hasGlobalNotes'] === true ) {
+
+						// let thisWebRootPath = `/magick-flows-web-root/${magickFlows.directoryName}/${magickFlows.urlSlugsMapToFlowDirectories[node]}`;
+						// let thisMainContentPath = `${thisWebRootPath}/main/`;
+						// let thisAssetsContentPath = `${thisWebRootPath}/assets/`;
+						nodesHtmlOut += include(magickFlows[node]['pathToGlobalNotesFile']);
+					}
+
+					echo(`
+						<li class="slds-item">
+							<a href="/${node}">${node}</a>${nodesHtmlOut.length ? ( ' ☞ ' + nodesHtmlOut) : ''}
+						</li>
+					`);
+				});
+			_%>
+			</ul>
+		</div>
+
+
+		<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
+			<h1 class="slds-text-heading_large slds-m-bottom_small">Other Demos at this Instance</h1>
+			<ul class="slds-has-dividers_bottom slds-has-block-links_space">
+			<%_
+				echo(`<li class="slds-item"><a href="/">${locals.demoName}</a></li>`);
+			_%>
+			</ul>
+		</div>
+
+	</div>
+
+
+	<div class="slds-col slds-size_1-of-2">
+
+		<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
+			<h1 class="slds-text-heading_large  slds-m-bottom_small">Magick Flows Quick Tips</h1>
+			
+			<h2 class="slds-text-heading_medium slds-m-top_medium slds-m-bottom_small">Click Hints</h2>
+			<p>Magick Flows has a “hints” feature, and your notes can be shown via a keyboard shortcut, as described below.</p>
+
+			<h2 class="slds-text-heading_medium slds-m-top_medium slds-m-bottom_small">Keyboard Shortcuts Available</h2>
+			<p>The following keyboard shortcuts are available while presenting any Magick Flow.</p>
+			<div class="slds-box slds-box_small slds-m-top_small">
+				<table class="slds-table slds-table_cell-buffer slds-table_header-hidden">
+					<thead class="slds-assistive-text">
+						<tr class="slds-line-height_reset">
+							<th class="" scope="col"> 
+								<div class="slds-truncate" title="Keyboard Shortcut">
+									Keyboard Shortcut
+								</div>
+							</th>
+							<th class="" scope="col"> 
+								<div class="slds-truncate" title="Action">
+									Action
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="slds-hint-parent">
+							<th data-label="Keyboard Shortcut" scope="row"> 
+								<div class="slds-truncate" title="H">
+									<strong>H</strong>
+								</div>
+							</th>
+							<td data-label="Action" class="slds-cell-wrap"> 
+								<p class="slds-truncate slds-cell-wrap" title="Goes to step #0 of the active Magick Flow.">
+									Re-sets a Magick Flow back to the <span style="text-decoration: underline;">H</span>ome step, #0.
+								</p>
+							</td>
+						</tr>
+
+						<tr class="slds-hint-parent">
+							<th data-label="Keyboard Shortcut" scope="row"> 
+								<div class="slds-truncate" title="Control + H">
+									<strong>Control + H</strong>
+								</div>
+							</th>
+							<td data-label="Action" class="slds-cell-wrap"> 
+								<p class="slds-truncate slds-cell-wrap" title="Hitting `Control + H` Goes to Magick Flows Dashboard">
+									Comes back to this <span style="text-decoration: underline;">H</span>ome page, the Magick Flows Dashboard.
+								</p>
+							</td>
+						</tr>
+
+						<tr class="slds-hint-parent">
+							<th data-label="Keyboard Shortcut" scope="row"> 
+								<div class="slds-truncate" title="I">
+									<strong>I</strong>
+								</div>
+							</th>
+							<td data-label="Action" class="slds-cell-wrap"> 
+								<p class="slds-truncate slds-cell-wrap" title="Goes to step #0 of the active Magick Flow.">
+									Shows the Cl<span style="text-decoration: underline;">i</span>ck Hints heads-up for the current step, as long as it is being held down.
+								</p>
+							</td>
+						</tr>
+
+						<tr class="slds-hint-parent">
+							<th data-label="Keyboard Shortcut" scope="row"> 
+							<div class="slds-truncate" title="T">
+								<strong>T</strong>
+							</div>
+							</th>
+							<td data-label="Action" class="slds-cell-wrap"> 
+								<p class="slds-truncate slds-cell-wrap" title="Goes to step #0 of the active Magick Flow.">
+									<span style="text-decoration: underline;">T</span>oggles the Click Hints heads-up display for all steps throughout the current Magick Flow.
+								</p>
+							</td>
+						</tr>
+
+						<tr class="slds-hint-parent">
+							<th data-label="Keyboard Shortcut" scope="row"> 
+								<div class="slds-truncate" title="Right arrow (→)">
+									<strong>→</strong>
+								</div>
+							</th>
+							<td data-label="Action" class="slds-cell-wrap"> 
+								<p class="slds-truncate slds-cell-wrap" title="Goes to step #0 of the active Magick Flow.">
+									Proceeds to the next step.
+								</p>
+							</td>
+						</tr>
+
+						<tr class="slds-hint-parent">
+							<th data-label="Keyboard Shortcut" scope="row"> 
+							<div class="slds-truncate" title="Left arrow (←)">
+								<strong>←</strong>
+							</div>
+							</th>
+							<td data-label="Action" class="slds-cell-wrap"> 
+								<p class="slds-truncate slds-cell-wrap" title="Goes to step #0 of the active Magick Flow.">
+									Goes to the previous step.
+								</p>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+			</div>
+</div>
+
+
 	</div>
 </div>
-<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
-	<h1 class="slds-text-heading_large slds-m-bottom_small">Magick Flows in this instance of Demuxe</h1>
-	<ul class="slds-has-dividers_bottom slds-has-inline-block-links_space">
-	<%_
-		let magickFlowsUrlSlugs = locals.magickFlows.urlSlugs;
-		let magickFlows = locals.magickFlows;
-		// let magickFlowsUrls = magickFlowsConfigAll.urlSlugsMapToFlowDirectories;
 
 
-
-		magickFlowsUrlSlugs.forEach(function(node, nodeIndex) {
-
-			let nodesHtmlOut = '';
-			if ( magickFlows[node]['hasGlobalNotes'] === true ) {
-
-				// let thisWebRootPath = `/magick-flows-web-root/${magickFlows.directoryName}/${magickFlows.urlSlugsMapToFlowDirectories[node]}`;
-				// let thisMainContentPath = `${thisWebRootPath}/main/`;
-				// let thisAssetsContentPath = `${thisWebRootPath}/assets/`;
-				nodesHtmlOut += include(magickFlows[node]['pathToGlobalNotesFile']);
-			}
-
-			echo(`
-				<li class="slds-item">
-					<a href="/${node}">${node}</a>${nodesHtmlOut.length ? ( ' ☞ ' + nodesHtmlOut) : ''}
-				</li>
-			`);
-		});
-	_%>
-	</ul>
-</div>
-
-<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
-	<h1 class="slds-text-heading_large slds-m-bottom_small">Other Demos at this Instance</h1>
-	<ul class="slds-has-dividers_bottom slds-has-block-links_space">
-	<%_
-		echo(`<li class="slds-item"><a href="/">${locals.demoName}</a></li>`);
-	_%>
-	</ul>
-</div>
