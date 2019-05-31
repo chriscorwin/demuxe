@@ -47,6 +47,11 @@ body, .container {
 	// transition-delay: 1000ms;
 }
 
+// Allows scrolling of the main content when a drawer is "open"
+.magick-flows-drawer {
+	pointer-events: none;
+}
+
 
 .magick-flows-drawer--from-top {
 	margin: 0 auto;
@@ -159,6 +164,10 @@ body, .container {
 	}
 }
 
+// div#content-wrapper {
+// 	margin-top: 1.25rem !important;
+// }
+
 
 .app-switcher-one {
 	height: $heightOfAppSwitcher;
@@ -252,8 +261,10 @@ footer.magick-flows-stickey-footer_container {
 
 header.magick-flows-stickey-header_container {
 	position: absolute;
-	bottom: 0;
+	top: 0;
 }
+
+
 
 
 /**
@@ -341,6 +352,7 @@ header.magick-flows-stickey-header_container {
 	transition: 250ms all ease-in-out;
 	will-change: all;
 }
+
 
 
 

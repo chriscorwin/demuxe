@@ -95,7 +95,7 @@ HEADER AREA
 
 #subheader-wrapper {
   background-color: #F7F9FB;
-  margin-top: 90px;
+  margin-top: 108px;
   position: relative;
 }
 
@@ -228,7 +228,6 @@ HEADER AREA
 }
 
 #content-wrapper {
-  margin: 0 auto;
   color: #16325C;
 }
 
@@ -345,7 +344,7 @@ body {
 }
 
 .slds-container_large, .slds-container--large {
-  max-width: 71.3rem;
+  max-width: 76.3rem;
 }
 
 .slds-global-header__logo {
@@ -484,3 +483,5 @@ body {
   width: 10px;
   height: 6px;
 }
+
+/*# sourceMappingURL=global.css.map */

@@ -75,9 +75,11 @@
 
 	const makePanel = (data) => (`
 		<div class="slds-panel-box slds-m-top_medium">
-			<div class="slds-panel-box__header slds-p-horizontal_small slds-grid ">
+			<div class="slds-panel-box__header slds-p-horizontal_small slds-grid slds-wrap">
 				<div class="slds-col slds-size_3-of-5">${data.title}</div>
-				<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-text-align_right">${data.subTitle}</div>
+				<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-text-align_right"></div>
+				<div class="slds-col slds-size_3-of-5 slds-text-body_regular">${data.subTitle}</div>
+				<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-text-align_right"></div>
 				<div class="slds-panel-box__header-settings"><img src="/images/icons/settings.svg" /></div>
 				<div class="slds-panel-box__header-dropdown slds-dropdown slds-dropdown_left slds-dropdown_small slds-hide">
 					<ul class="slds-dropdown__list" role="menu" aria-label="Show More">

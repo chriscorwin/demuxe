@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include('includes/global/head') _%>
+		<% if (locals.siteSection) {
+
+			try {
+		%>
+				<%- include(`includes/${locals.siteSection}/${locals.siteSection}-head`) %>
+		<%
+			}
+			catch(error) {
+				console.error('ERROR ERROR ERROR', error);
+			}
+		%>
+		<% } %>
+		<% if (locals.urlSlug && (locals.urlSlug != 'bbva-atm' || locals.urlSlug != 'ga360')) { %>
+			<%- include(`includes/mobile/mobile-meta-attributes-for-ios-webapp`) _%>
+		<% } %>
+
+	</head>
+
+	<body class="magick-flow">
+
+		<% if (locals.siteSection) { %>
+			<video width="1280" height="720" controls="false">
+				<source src="B2B-video.mp4" type="video/mp4">
+			</video>
+
+			<script>
+				setTimeout(() => {
+					const vid = document.getElementsByTagName('video')[0];
+					vid.removeAttribute('controls');
+					vid.style.cursor = 'none';
+					vid.ended = () => {
+						location.href = '/'
+					}
+
+					// Click to play the video
+					document.body.onclick = () => {
+						vid.play();
+					}
+				}, 1000)
+			</script>
+		<% } %>
+
+
+		<%- include('components/toast', {
+			contents: 'Will be available only under ‘Northern Trail Outfitters - Apparel&rsquo; account as &lsquo;Winter Jackets &ndash; New High Value&rsquo;',
+			title: '&lsquo;Winter Jackets Propensity Customers&rsquo; segment provisioned successfully.',
+			theme: 'success'
+		}) %>
+
+
+		<%- include('includes/global/footer-scripts') %>
+	</body>
+</html>
+<%_
+console.log(`...end \`demo-overrides/mc2/innovation-summit-2019/b2b-video.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

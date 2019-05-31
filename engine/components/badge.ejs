@@ -1,0 +1,24 @@
+<%
+
+	const badgeClasses = classnames('slds-badge', {
+		'slds-badge_lightest': locals.variant === 'lightest',
+		'slds-badge_inverse': locals.variant === 'inverse'
+	});
+
+	const iconPlacement = locals.icon && locals.icon.right ? 'right' : 'left';
+	const icon = `<span class="slds-badge__icon slds-badge__icon_${iconPlacement}">
+		<span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
+			<svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+				<use xlink:href="${locals.icon && locals.icon.src}"></use>
+			</svg>
+		</span>
+	</span>`;
+
+	echo(`
+		<span class="${badgeClasses}">
+			${locals.icon && iconPlacement === 'left' ? icon : ''}
+			${locals.text}
+			${locals.icon && iconPlacement === 'right' ? icon : ''}
+		</span>
+	`);
+%>

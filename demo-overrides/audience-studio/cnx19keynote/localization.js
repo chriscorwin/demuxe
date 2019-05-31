@@ -5,7 +5,7 @@ const data_capture_sources = require('../df18keynote/data-capture-sources');
 const einstein_segmentation = require('../roadshow19/einstein-segmentation');
 const overview = require('../roadshow19/overview');
 const manage_segments = require('../df18keynote/manage-segments');
-const segments = require('../roadshow19/segments');
+const segments = require('./segments');
 
 overview.panels.dcm.view_all_buttons.push({
 	id: 'manage-consumer-rights',

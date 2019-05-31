@@ -79,6 +79,10 @@ body.has-debug span.is-ssi-block {
   box-sizing: content-box;
 }
 
+body.magick-flows-dashboard .magick-flows-dashboard {
+  background-color: white;
+}
+
 .slds-brand-band:before {
   background-image: url(/images/themes/oneSalesforce/banner-brand-default.png), linear-gradient(to top, rgba(221, 219, 218, 0) 0, #e8e8e8);
 }
@@ -145,3 +149,5 @@ body.has-debug span.is-ssi-block {
   margin: 0;
   text-align: center;
 }
+
+/*# sourceMappingURL=style.css.map */
