@@ -1,7 +1,14 @@
 <%
 	const svgHeight = locals.svgHeight || 1000;
 	const svgWidth = locals.svgWidth || 1280;
-	const zoomLevel = locals.zoomLevel || .8;
+	const zoomLevel = locals.zoomLevel || 0.8;
+
+	const labelScaleStops = {
+		0.7: '669px, 577px',
+		0.8: '601px, 547px',
+		0.9: '557px, 517px',
+		1: '181px, 457px'
+	}
 %>
 
 <svg class="graph lifecycle-graph" height="<%= svgHeight %>" width="<%= svgWidth %>" transform="scale(<%= zoomLevel %> <%= zoomLevel %>)" style="transform-origin: top left;">
@@ -129,7 +136,7 @@
 	</g>
 </svg>
 <div class="lifecycle-label-container dynamic-placement" style="transform-origin: center; transform: scale(<%= zoomLevel %>, <%= zoomLevel %>)">
-	<div class="lifecycle-stage-labels" style="transform-origin: top left; transform: translate(601px, 547px) ">
+	<div class="lifecycle-stage-labels" style="transform-origin: top left; transform: translate(<%= labelScaleStops[zoomLevel] %>) ">
 		<%
 			stages.forEach((stage, i) => {
 				echo(`
