@@ -256,9 +256,9 @@ function locationHashChanged(event) {
 	let indexOfEject = currentStepMetaData.findIndex(testForEject);
 
 	if ( hasEject === true ) {
-		console.log(`locals.productTemplate: `, locals.productTemplate);
-		console.log(`locals.brandTheme: `, locals.brandTheme);
-		console.log(`currentStepMetaData[indexOfEject]: `, currentStepMetaData[indexOfEject]);
+		// console.log(`locals.productTemplate: `, locals.productTemplate);
+		// console.log(`locals.brandTheme: `, locals.brandTheme);
+		// console.log(`currentStepMetaData[indexOfEject]: `, currentStepMetaData[indexOfEject]);
 
 		let newUrlSlugForEject = decodeURIComponent(currentStepMetaData[indexOfEject].split('--')[1]);
 		window.location = `/${newUrlSlugForEject}`;
