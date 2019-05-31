@@ -32,7 +32,7 @@ if ( previousClick <= 0 ) {
 
 const $ss = document.querySelector(`.magick-flows--step-content.auto-replace[data-step="${clicks}"]`);
 const $contentWrapper = document.querySelector( '#content-wrapper' );
-const $inlineFrameExample = document.querySelector( '#magick-flows-iframe--1' );
+const $inlineFrameExample = document.querySelector( `#magick-flows-iframe--${clicks}` );
 
 
 
@@ -260,8 +260,11 @@ function locationHashChanged(event) {
 		// console.log(`locals.brandTheme: `, locals.brandTheme);
 		// console.log(`currentStepMetaData[indexOfEject]: `, currentStepMetaData[indexOfEject]);
 
-		let newUrlSlugForEject = decodeURIComponent(currentStepMetaData[indexOfEject].split('--')[1]);
-		window.location = `/${newUrlSlugForEject}`;
+		let newUrlSlugForEject = currentStepMetaData[indexOfEject].split('--')[1];
+		let newUrlSlugForEjectSplitAgain = newUrlSlugForEject.split('-')[0] + '=' + newUrlSlugForEject.split('-')[1];
+		console.log(`newUrlSlugForEjectSplitAgain: `, newUrlSlugForEjectSplitAgain);
+		window.location = `/?${newUrlSlugForEjectSplitAgain}`;
+		return false;
 
 	}
 
