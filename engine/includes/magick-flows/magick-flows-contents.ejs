@@ -69,7 +69,7 @@ _%>
 
 	let maxWidth = thisMagickFlowConfig.templateSizingFileDimensions.width || 1280;
 	let maxHeight = thisMagickFlowConfig.templateSizingFileDimensions.height || 720;
-	
+
 
 	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
 
@@ -122,7 +122,7 @@ _%>
 		let newUrlSlugForEscapeHatch = '';
 		let escapeHatchContentHtmlOut = '';
 		if ( hasEscapeHatch === true ) {
-			newUrlSlugForEscapeHatch = nodeData[indexOfEscapeHatch].split('--')[1];
+			newUrlSlugForEscapeHatch = decodeURIComponent(nodeData[indexOfEscapeHatch].split('--')[1]);
 			escapeHatchContentHtmlOut += `
 <iframe id="magick-flows-iframe--${node.stepsIndex}"
     title="Inline Frame Example"
@@ -131,6 +131,7 @@ _%>
     src="/${newUrlSlugForEscapeHatch}">
 </iframe>
 `
+console.log('urlSlug', newUrlSlugForEscapeHatch, nodeData[indexOfEscapeHatch].split('--')[1])
 		}
 
 
@@ -273,12 +274,12 @@ _%>
 
 
 
-<!--  
+<!--
 
 
 
 
-#<%= nodeIndex %>====================================== 
+#<%= nodeIndex %>======================================
 
 <%= node.id %>
 --------------------------------------
@@ -294,7 +295,7 @@ _%>
 <%_ } _%>
 
 <%
-	
+
 		echo(`
 			<div
 				class="slds-col slds-scrollable"
@@ -304,7 +305,7 @@ _%>
 
 		if (hasEscapeHatch === true) {
 			echo(`${escapeHatchContentHtmlOut}`);
-		} 
+		}
 		if (isPng || isSvg || isGif || isJpeg) {
 			echo(`
 				<div
@@ -327,7 +328,7 @@ _%>
 		} else if (isMp4) {
 			echo(`
 				<video
-					playsinline autoplay 
+					playsinline autoplay
 					class="auto-replace is-video "
 					id="magick-flows--main-content-wrapper--step-${nodeIndex}"
 				>
@@ -345,7 +346,7 @@ _%>
 
 
 		echo(`</div>`)
-	
+
 
 
 %>

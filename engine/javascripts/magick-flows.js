@@ -116,7 +116,7 @@ function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition
 	}
 
 	// console.debug(`[Magick Flows: normalTransition() ] thisStepNumber: `, thisStepNumber);
-	
+
 	if (document.querySelector(`.app-switcher-two`) !== null) {
 		document.querySelector(`.app-switcher-two`).classList.remove(`show`);
 	}
@@ -134,7 +134,7 @@ function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition
 		$appSwitcherOne.classList.remove(`be-left-${thisStepNumber}`);
 		setTimeout(() => {
 			$appSwitcherOne.classList.remove('shrink');
-			
+
 			setTimeout(() => {
 				$appSwitcherOne.classList.remove('rounded-corners');
 				$appSwitcherOne.classList.remove(`slide-left-${thisStepNumber}`);
@@ -255,7 +255,8 @@ function locationHashChanged(event) {
 		// console.log(`locals.brandTheme: `, locals.brandTheme);
 		// console.log(`currentStepMetaData[indexOfEscapeHatch]: `, currentStepMetaData[indexOfEscapeHatch]);
 
-		let newUrlSlugForEscapeHatch = currentStepMetaData[indexOfEscapeHatch].split('--')[1];
+		let newUrlSlugForEscapeHatch = decodeURIComponent(currentStepMetaData[indexOfEscapeHatch].split('--')[1]);
+		console.log('urlSlug', newUrlSlugForEscapeHatch)
 		// window.location = `/${newUrlSlugForEscapeHatch}`;
 
 	}
@@ -270,7 +271,7 @@ function locationHashChanged(event) {
 
 
 
-	
+
 
 	if ( doAutoAdvanceStepTransition === true ) {
 		console.debug(`doAutoAdvanceStepTransition: `, doAutoAdvanceStepTransition);
@@ -294,7 +295,7 @@ function locationHashChanged(event) {
 		// setTimeout(() => {
 		// 	window.location.hash = `#${autoAdvanceTransitionStepNumber}`;
 		// }, autoAdvanceTransitionTiming);
-		
+
 	}
 
 
@@ -414,7 +415,7 @@ function locationHashChanged(event) {
 
 		});
 
-	
+
 		// console.debug(`previousStepNumber: `, previousStepNumber);
 		// console.debug(previousStepDrawersData);
 		// console.debug(`currentStepNumber: `, currentStepNumber);
@@ -422,7 +423,7 @@ function locationHashChanged(event) {
 		// console.debug(`nextStepNumber: `, nextStepNumber);
 		// console.debug(nextStepDrawersData);
 		// console.debug(`delayTransition: `, delayTransition);
-	
+
 	}
 
 
@@ -433,7 +434,7 @@ function locationHashChanged(event) {
 	if (document.querySelectorAll('video').length !== 0) {
 		let theseVideoNodes = document.querySelectorAll(`video`);
 		theseVideoNodes.forEach(function(node, nodeIndex) {
-			
+
 			node.pause();
 			node.currentTime = 0;
 
@@ -498,7 +499,7 @@ function locationHashChanged(event) {
 				delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 			}
 		}
-		
+
 	}
 
 	// once we've sorted out _what_ sort of transition to affect, we trigger it
@@ -646,9 +647,9 @@ document.onkeyup = function(e) {
 		console.log(`Ctrl + H shortcut combination was pressed, from ${thisPathToIncludeForLogging}. That means we should go to the ${pathToDemoHome}`);
 		window.location = `${pathToDemoHome}`;
 	} else if (e.which == 72) {
-		
+
 		// H
-		
+
 		console.debug("H key was pressed. Going to the first step.");
 		setLocationHashWithTiming(0, 0);
 	} else if (e.which == 73) {
@@ -669,7 +670,7 @@ document.onkeyup = function(e) {
 		theNode.style.cursor = "initial";
 
 	} else if (e.which == 84) {
-		
+
 		// T
 
 		// "t" for "toggle"
@@ -705,8 +706,8 @@ document.onkeyup = function(e) {
 
 
 
-// The very first time the URL for this Magick Flow is loaded in the browser we run a "reset" on it 
-// Why? WE DON'T KNOW!! 
+// The very first time the URL for this Magick Flow is loaded in the browser we run a "reset" on it
+// Why? WE DON'T KNOW!!
 // ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
 // window.location.hash = `#reset`;
 // setLocationHashWithTiming(clicks, 0);
