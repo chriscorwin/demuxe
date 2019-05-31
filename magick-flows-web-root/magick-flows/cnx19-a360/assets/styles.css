@@ -56,6 +56,10 @@ body, .container {
   will-change: top;
 }
 
+.magick-flows-drawer {
+  pointer-events: none;
+}
+
 .magick-flows-drawer--from-top {
   margin: 0 auto;
   position: absolute;
@@ -520,7 +524,7 @@ footer.magick-flows-stickey-footer_container {
 
 header.magick-flows-stickey-header_container {
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
 
 /**
@@ -641,3 +645,5 @@ div#content-wrapper {
 .app-switcher-one.rounded-corners .magick-flows-step {
   box-shadow: none !important;
 }
+
+/*# sourceMappingURL=styles.css.map */
