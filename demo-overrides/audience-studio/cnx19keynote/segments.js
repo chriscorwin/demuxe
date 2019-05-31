@@ -100,7 +100,7 @@ const baseSegments = [
 const lookalikeSegment = [
 	{
 		title: 'Family Prospect Targets - Lookalike',
-		titleBadges: [{ text: 'Base', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#preview' }}],
+		titleBadges: [{ icon: { src: 'images/einstein.svg' }}, { text: 'Base', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#preview' }}],
 		subTitle: 'Standard Segment / ID: <b>rsdqtba67</b> <img src="/images/icons/sort.svg" />',
 		subTitleBadges: [{ text: 'Daily Refresh', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
 		devices: '2.7M',
