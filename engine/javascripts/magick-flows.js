@@ -42,6 +42,12 @@ function testForEscapeHatch(node) {
 	return node.includes('is-escape-hatch');
 }
 
+function testForEject(node) {
+	return node.includes('is-eject');
+}
+
+
+
 function incrementLocationHashWithTiming ( hashChangeTiming = 0, directionOfNavigation = 'forward' ) {
 	if (directionOfNavigation === 'backwards') {
 		clicks --;
@@ -246,6 +252,19 @@ function locationHashChanged(event) {
 	// console.debug(`currentStepMetaData: `, currentStepMetaData);
 	// console.debug(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
 
+	let hasEject = currentStepMetaData.some(testForEject);
+	let indexOfEject = currentStepMetaData.findIndex(testForEject);
+
+	if ( hasEject === true ) {
+		console.log(`locals.productTemplate: `, locals.productTemplate);
+		console.log(`locals.brandTheme: `, locals.brandTheme);
+		console.log(`currentStepMetaData[indexOfEject]: `, currentStepMetaData[indexOfEject]);
+
+		let newUrlSlugForEject = decodeURIComponent(currentStepMetaData[indexOfEject].split('--')[1]);
+		window.location = `/${newUrlSlugForEject}`;
+
+	}
+
 
 	let hasEscapeHatch = currentStepMetaData.some(testForEscapeHatch);
 	let indexOfEscapeHatch = currentStepMetaData.findIndex(testForEscapeHatch);
@@ -256,7 +275,6 @@ function locationHashChanged(event) {
 		// console.log(`currentStepMetaData[indexOfEscapeHatch]: `, currentStepMetaData[indexOfEscapeHatch]);
 
 		let newUrlSlugForEscapeHatch = decodeURIComponent(currentStepMetaData[indexOfEscapeHatch].split('--')[1]);
-		console.log('urlSlug', newUrlSlugForEscapeHatch)
 		// window.location = `/${newUrlSlugForEscapeHatch}`;
 
 	}
