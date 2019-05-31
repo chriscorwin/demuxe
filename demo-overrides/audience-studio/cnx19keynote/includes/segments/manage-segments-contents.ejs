@@ -57,12 +57,20 @@
 <%
 	const makePanel = (data) => {
 		const badges = data.titleBadges && data.titleBadges.reduce((badges, badge) => {
-			if (badge.text) {
-				return badges + include('components/badge', badge);
-			} else if (badge.icon.src) {
-				return badges + include(badge.icon.src);
+			let append = '';
+
+			if (badge.popover) {
+				badge.popover.classes = badge.popover.classes ? badge.popover.classes + ' einstein-popover' : 'einstein-popover';
+				append += include('components/popover', badge.popover);
 			}
-			return badges;
+
+			if (badge.text) {
+				append += include('components/badge', badge);
+			} else if (badge.icon.src) {
+				append += include(badge.icon.src);
+			}
+
+			return badges + append;
 		}, '') || '';
 		const subTitleBadges = data.subTitleBadges && data.subTitleBadges.reduce((badges, badge) => include('components/badge', badge), '') || '';
 		const audienceFillPercentage = (data.audienceFill >= 0) ? data.audienceFill : 100;
@@ -252,9 +260,6 @@
 
 <%-makePanels();%>
 
-<img id="lookalike1" src="/images/lookalike1.png" class="slds-hide lookalike" onclick="showLookalike(2);" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
-<img id="lookalike2" src="/images/lookalike2.png" class="slds-hide lookalike" onclick="showLookalike(3);" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
-<img id="lookalike3" src="/images/lookalike3.png" class="slds-hide lookalike" onclick="hideLookalikes();" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
 </div>
 <%
 	const modalId = `audience-studio-manage-segments-modal`;
@@ -274,6 +279,11 @@
 <% } %>
 
 <script>
+const showPopover = (popoverId) => {
+	document.querySelector(popoverId).classList.remove('slds-hide');
+	console.log('hos')
+}
+
 document.querySelectorAll('.slds-panel-box__header-settings').forEach((elm) => elm.addEventListener('click', function () {
 	const img = this.querySelector('img');
 

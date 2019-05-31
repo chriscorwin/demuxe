@@ -63,4 +63,14 @@
   }
 }
 
+.einstein-popover {
+  position: absolute;
+  right: 170px;
+  margin-top: -13px;
+}
+
+.slds-popover__header {
+  background-color: #F7F9FB;
+}
+
 /*# sourceMappingURL=venue.css.map */

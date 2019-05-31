@@ -1,0 +1,30 @@
+<%
+
+const nubbin = locals.nubbin || 'left';
+const width = locals.width || 'medium';
+const height = locals.height || 'small';
+const header = locals.header ? `<header class="slds-popover__header">
+		<h2 class="slds-text-heading_small">${locals.header}</h2>
+	</header>` : '';
+const footer = locals.footer ? `<footer class="slds-popover__footer">
+		<p>${locals.footer}</p>
+	</footer>` : '';
+
+echo(`
+<section id="${locals.id || 'popover'}" class="slds-text-align_left slds-popover slds-nubbin_${nubbin} slds-popover_${width} ${locals.classes}" role="dialog">
+	<button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close" title="Close dialog">
+		<svg class="slds-button__icon" aria-hidden="true">
+			<use xlink:href="/icons/utility-sprite/svg/symbols.svg#close"></use>
+		</svg>
+		<span class="slds-assistive-text">Close dialog</span>
+	</button>
+	${header}
+	<div class="slds-popover__body slds-popover__body_${height}">
+		<div class="slds-text-longform">
+			${locals.contents}
+		</div>
+	</div>
+	${footer}
+</section>
+`);
+%>

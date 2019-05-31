@@ -97,10 +97,19 @@ const baseSegments = [
 	}
 ];
 
+const einsteinPopover = {
+	nubbin: 'right-top',
+	header: '<strong>Suggested Attributes</strong>',
+	contents: '<img style="width: 298px; margin: 20px 0 5px 0;" src="/images/popover-contents.svg" />',
+	height: 'medium',
+	id: 'familyProspects',
+	classes: 'slds-hide'
+};
+
 const lookalikeSegment = [
 	{
 		title: 'Family Prospect Targets - Lookalike',
-		titleBadges: [{ icon: { src: 'images/einstein.svg' }}, { text: 'Base', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#preview' }}],
+		titleBadges: [{ popover: einsteinPopover, icon: { src: 'images/einstein.svg' }}, { text: 'Base', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#preview' }}],
 		subTitle: 'Standard Segment / ID: <b>rsdqtba67</b> <img src="/images/icons/sort.svg" />',
 		subTitleBadges: [{ text: 'Daily Refresh', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
 		devices: '2.7M',
