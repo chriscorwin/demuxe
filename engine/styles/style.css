@@ -78,3 +78,76 @@ body.has-debug span.is-ssi-block {
   border-radius: 0.125rem;
   box-sizing: content-box;
 }
+
+body.magick-flows-dashboard .magick-flows-dashboard {
+  background-color: white;
+}
+
+.slds-brand-band:before {
+  background-image: url(/images/themes/oneSalesforce/banner-brand-default.png), linear-gradient(to top, rgba(221, 219, 218, 0) 0, #e8e8e8);
+}
+
+.slds-brand-band.slds-brand-band_medium {
+  background-image: linear-gradient(to bottom, rgba(27, 95, 158, 0), #b0c4df 200px), url(/images/banner-brand-default.png);
+  background-repeat: repeat-x;
+  background-position: 0 90px;
+  background-color: #1b5f9e;
+}
+
+.slds-brand-band.slds-brand-band_medium:after {
+  top: auto;
+  bottom: 0;
+}
+
+#subheader-wrapper {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 110px;
+  margin-bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+
+#content-wrapper {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  background-color: white;
+}
+
+.slds-container_large, .slds-container--large {
+  max-width: 78.3rem;
+}
+
+#subheader-wrapper.einstein #subheader h1 {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.slds-panel-box {
+  border: 1px solid #E0E5EE;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.slds-panel-box__header {
+  border-radius: 4px 4px 0 0;
+  font-size: 16px;
+}
+
+.slds-panel-box__header span {
+  font-weight: bold;
+}
+
+.slds-panel-box__sub-header {
+  background-color: #F7F9FB;
+  border-top: 2px solid white;
+}
+
+.slds-panel-box__sub-footer {
+  border-top: 1px solid #D8DDE6;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-const einstein_segmentation = require('../../demo-overrides/dmp/df18keynote/einstein-segmentation');
+const einstein_segmentation = require('../../demo-overrides/audience-studio/df18keynote/einstein-segmentation');
 
 einstein_segmentation.personas_graph_data.nodes[0].attributes = [
 	{

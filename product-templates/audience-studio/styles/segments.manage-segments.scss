@@ -1,0 +1,117 @@
+.audience-discovery-tab-nav:before {
+	top: 96px;
+}
+
+.audience-discovery #subheader {
+	background-image: none;
+}
+
+.slds-docked-form-footer {
+	position: static;
+	box-shadow: none;
+}
+
+#content {
+	padding-bottom: 30px;
+}
+
+#footer {
+	background-color: #F7F9FB;
+	height: 56px;
+}
+
+.slds-panel-box__header {
+	padding-top: 6px;
+	padding-bottom: 5px;
+
+	.slds-badge {
+		vertical-align: baseline;
+	}
+
+	.slds-text-body_regular {
+		padding-right: 38px;
+		padding-top: 3px;
+		color: #54698D;
+
+		img {
+			margin-left: 6px;
+		}
+	}
+}
+
+.slds-panel-box__header-settings {
+	width: 42px;
+	height: 60px;
+	background: #fff;
+	position: absolute;
+	margin: -7px 0 0 1165px;
+	border-radius: 0 4px 0 0;
+	border: 1px solid #E0E5EE;
+	cursor: pointer;
+
+	img {
+		margin: 9px 12px;
+		width: 16px;
+		height: 41px;
+	}
+}
+
+.slds-panel-box__header-dropdown {
+	position: absolute;
+	margin: -7px 0 0 926px;
+	border-radius: 4px 0 4px 4px;
+	transform: none;
+	left: auto;
+	float: initial;
+}
+
+.slds-dropdown .slds-dropdown__header .slds-text-title_caps{
+	color: #54688D;
+}
+
+.slds-panel-box__header .slds-dropdown svg, .slds-panel-box__header .slds-dropdown img {
+	float: left;
+}
+
+.slds-panel-box__body .slds-text-heading_large {
+	height: 35px;
+}
+
+.slds-panel-box__body img {
+	margin-right: 11px;
+	margin-top: -6px;
+}
+
+.slds-panel-box__body-settings {
+	width: 42px;
+	height: 57px;
+	background: #fff;
+	position: absolute;
+	margin: -9px 0 0 1165px;
+	/* left: 1170px; */
+	border-radius: 0 0 4px 0;
+	border: 1px solid #E0E5EE;
+	cursor:  pointer;
+
+	img {
+		margin: 20px 12px;
+		width: 16px;
+		height: 16px;
+	}
+}
+
+
+.slds-panel-box__body_label {
+	font-size: 12px;
+	color: #54698D;
+}
+
+.slds-panel-box__body_text {
+	font-size: 14px;
+	color: #16325C;
+}
+
+// make sure fake header actions show above background (defined immediately after this)
+.slds-page-header__col-title {
+	z-index: 3;
+}

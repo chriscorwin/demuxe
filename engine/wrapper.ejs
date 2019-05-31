@@ -3,8 +3,18 @@
 	<head>
 		<%- include('includes/global/head') %>
 	</head>
+	<% 
+		let siteSectionClassname = '';
+		if (locals.siteSection) { 
+			siteSectionClassname += locals.siteSection;
+		} else {
+			siteSectionClassname += ' your-mom-wears-army-boots ';
 
-	<body class="<%= locals.localization.body_class %> <%= locals.sanitizedQueryParams.debug==='true' ? 'has-debug' : '' %>">
+		}
+	%>
+
+
+	<body class="<%= locals.localization.body_class %> <%= siteSectionClassname %> <%= locals.sanitizedQueryParams.debug==='true' ? 'has-debug' : '' %>">
 		<%- include('includes/global/header') %>
 		<div id="content-wrapper">
 			<div id="content" class="slds-container_large">

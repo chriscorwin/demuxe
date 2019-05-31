@@ -14,7 +14,8 @@
     "test": "NODE_ENV=local mocha",
     "livereload": "livereload . -w 200 --extraExts 'scss,ejs,png,svg,js' -d",
     "test:update": "rm -rf test/screenshots/__different_snapshot__/ && NODE_ENV=local update=true mocha",
-    "slides": "node ./slides/upload.js"
+    "slides": "node ./slides/upload.js",
+    "set-config": "./config/config.sh"
   },
   "dependencies": {
     "classnames": "^2.2.6",

@@ -1,7 +1,7 @@
 {
-	"demoName": "IS Fever CNX 19 Keynote",
+	"demoName": "Fever CNX 2019 Keynote",
 	"brandTheme": "fever",
-	"productTemplate": "is",
+	"productTemplate": "audience-studio",
 	"demoVenue": "cnx19keynote",
 	"demoVersion": "0.1",
 	"magickFlows": {
@@ -13,13 +13,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://cnx19keynote-is-fever.herokuapp.com/"
+		"host": "https://cnx19keynote-audience-studio-fever.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19keynote-is-fever-qa.herokuapp.com/"
+		"host": "https://cnx19keynote-audience-studio-fever-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://cnx19keynote-is-fever-dev.herokuapp.com/"
+		"host": "https://cnx19keynote-audience-studio-fever-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
@@ -30,6 +30,6 @@
 		"mismatchThreshold": 0.01,
 		"timeout": 30000
 	},
-	"gapixelid": "UA-133829434-3",
+	"gapixelid": "",
 	"presentationid": "1EzinU2nh2RXITiLawG4BGzbdVYekOlhHPg9VxsKZ7_A"
 }
