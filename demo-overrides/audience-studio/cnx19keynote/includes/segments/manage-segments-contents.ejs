@@ -55,45 +55,23 @@
 	</div>
 
 <%
-	const tableData = lookalikes.tableData;
-
-	const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
-
-	const makeTable = (data) => (`
-	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
-		<thead>
-			<tr class="slds-text-title_caps">
-				<th scope="col">
-					<div class="slds-truncate" title="${data.labels[0]}">${data.labels[0]}</div>
-				</th>
-				<th scope="col">
-					<div class="slds-truncate " title="${data.labels[1]}">${data.labels[1]}</div>
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			${makeTableRows(data.rows)}
-		</tbody>
-	</table>
-
-	`);
-
-
-	const makeTableRow = (data) => (`
-		<tr">
-			${makeTableCell(data.reach)}
-			${makeTableCell(data.similarity)}
-		</tr>
-	`);
-
-	const makeTableCell = (data) => (`
-		<td>
-			<div class="slds-truncate " title="${data}">${data}</div>
-		</td>
-	`);
-
 	const makePanel = (data) => {
-		const badges = data.titleBadges && data.titleBadges.reduce((badges, badge) => include('components/badge', badge), '') || '';
+		const badges = data.titleBadges && data.titleBadges.reduce((badges, badge) => {
+			let append = '';
+
+			if (badge.popover) {
+				badge.popover.classes = badge.popover.classes ? badge.popover.classes + ' einstein-popover' : 'einstein-popover';
+				append += include('components/popover', badge.popover);
+			}
+
+			if (badge.text) {
+				append += include('components/badge', badge);
+			} else if (badge.icon.src) {
+				append += include(badge.icon.src);
+			}
+
+			return badges + append;
+		}, '') || '';
 		const subTitleBadges = data.subTitleBadges && data.subTitleBadges.reduce((badges, badge) => include('components/badge', badge), '') || '';
 		const audienceFillPercentage = (data.audienceFill >= 0) ? data.audienceFill : 100;
 		const audienceFill = 113 - (((data.audienceFill * 100) * 113)/10000);
@@ -282,28 +260,12 @@
 
 <%-makePanels();%>
 
-<img id="lookalike1" src="/images/lookalike1.png" class="slds-hide lookalike" onclick="showLookalike(2);" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
-<img id="lookalike2" src="/images/lookalike2.png" class="slds-hide lookalike" onclick="showLookalike(3);" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
-<img id="lookalike3" src="/images/lookalike3.png" class="slds-hide lookalike" onclick="hideLookalikes();" style="display: block; position: absolute; top: 0; left: 0;z-index: 100000;" />
 </div>
 <%
 	const modalId = `audience-studio-manage-segments-modal`;
 	const modalBackdropId = `${modalId}-backdrop`;
 %>
 
-
-
-<%- include('components/modal', {
-	modalId,
-	modalBackdropId,
-	contentsHeader: 'Create a lookalike segment for High Value Customers - Salesforce 360',
-	contentsHeaderTagline: makeModalContentsHeaderTagline(),
-	contentsMain: makeModalContentsMain(tableData),
-	contentsFooter: makeModalContentsFooter(),
-	handleClose: 'hideLookalikes',
-	size: 'medium',
-	theme: 'success'
-}) %>
 
 <% if (locals.localization.segments.states[locals.state].toast) {
 	const toast = locals.localization.segments.states[locals.state].toast; %>
@@ -317,18 +279,8 @@
 <% } %>
 
 <script>
-const showLookalikeModal = (n) => {
-	document.querySelector(`.slds-modal`).classList.add('slds-fade-in-open');
-	document.querySelector(`.slds-backdrop`).classList.add('slds-backdrop_open');
-}
-const showLookalike = (n) => {
-	document.querySelector('.lookalike').classList.add('slds-hide');
-	document.querySelector(`#lookalike${n}`).classList.remove('slds-hide');
-}
-const hideLookalikes = () => {
-	document.querySelector(`.slds-modal`).classList.remove('slds-fade-in-open');
-	document.querySelector(`.slds-backdrop`).classList.remove('slds-backdrop_open');
-	document.querySelectorAll('.lookalike').forEach((elm) => elm.classList.add('slds-hide'));
+const showPopover = (popoverId) => {
+	document.querySelector(popoverId).classList.remove('slds-hide');
 }
 
 document.querySelectorAll('.slds-panel-box__header-settings').forEach((elm) => elm.addEventListener('click', function () {
