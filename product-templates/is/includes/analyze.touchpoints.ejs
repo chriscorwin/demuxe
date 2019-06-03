@@ -1,1 +1,10 @@
-<%- include('components/svgs.touchpoints.ejs', locals.localization.analyze.states.initial) %>
+<%- include('components/panel', {
+	height: '700px', // The panel's height (default 700px)
+	pageClasses: 'slds-col slds-p-vertical_medium slds-p-left_medium',
+	headerText: 'Proposition', // Text for the panel's header
+	pageContents: 'includes/analyze.touchpoints.contents.ejs', // represents the path to the page's contents
+	panelContents: 'includes/analyze.lifecycles.panel.ejs', // represents the path to the panel's contents
+	collapseIcon: '/icons/utility-sprite/svg/symbols.svg#back'
+}) %>
+
+

@@ -1,5 +1,8 @@
-const analyze = require('./analyze');
+const lifecycle = require('./lifecycle');
+
+const touchpoints = require('./touchpoints');
 
 module.exports = {
-	analyze
+	lifecycle,
+	touchpoints
 };
