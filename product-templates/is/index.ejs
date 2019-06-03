@@ -3,4 +3,9 @@
 		margin: 0;
 	}
 </style>
-<img src="/images/screenshots/welcome.png" width="100%" />
+<img src="/images/screenshots/welcome.png" width="100%" onclick="navigatePage('/lifecycles')"/>
+<script type="text/javascript">
+	const navigatePage = ( url ) => {
+		window.location.href = url;
+	}
+</script>
