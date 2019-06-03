@@ -8,13 +8,11 @@ const web = {
 			{ audience: 'all', state: 'inactive', r: 20 }
 		],
 		flows: [
-			{ type: 'in', width: 10 },
-			{ type: 'off', width: 8 },
+			{ type: 'in', width: 8 },
+			{ type: 'off', width: 6 },
 			{ type: 'forward', path: [[E, 1.2]], width: 4},
-			{ type: 'forward', path: [[E, .5], [N, .5], [E, 1], [S, .5], [E, .5]], width: 3},
-			{ type: 'forward', path: [[E, .5], [S, 2], [E, .5]], width: 3},
-			{ type: 'forward', path: [[E, .5], [S, 4], [E, .5]], width: 1},
-			{ type: 'forward', path: [[E, .5], [S, 3.5], [E, 1], [S, .5], [E, .5]], width: 1}
+			{ type: 'forward', path: [[E, .5], [S, 1], [E, .5]], width: 8},
+			{ type: 'backward', path: [[W, .5], [S, .5], [E, 2], [N, .5], [W, .5]], width: 4},
 		]
 	},
 	search: {
@@ -23,11 +21,11 @@ const web = {
 			{ audience: 'all', state: 'inactive', r: 20 }
 		] ,
 		flows: [
-			{ type: 'in', width: 1 },
-			{ type: 'off', width: 6 },
-			{ type: 'forward', path: [[E, 1.2]], width: 2},
-			{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 3},
-			{ type: 'forward', path: [[E, .5], [S, 4], [E, .5]], width: 1}
+			{ type: 'in', width: 15 },
+			{ type: 'off', width: 7 },
+			{ type: 'forward', path: [[E, 1.2]], width: 4},
+			{ type: 'forward', path: [[E, .5], [S, 1], [E, .5]], width: 8},
+			{ type: 'backward', path: [[W, .5], [S, .5], [E, 2], [N, .5], [W, .5]], width: 2},
 		]
 	},
 	application: {
@@ -35,11 +33,9 @@ const web = {
 			{ audience: 'all', state: 'active', r: 25 }
 		],
 		flows: [
-			{ type: 'in', width: 1 },
-			{ type: 'off', width: 6 },
-			{ type: 'backward', path: [[E, .5], [S, .5], [W, 3], [N, .5], [E, .5]], width: 3},
-			{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 1},
-			{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [S, 3.5], [E, .5]], width: 1}
+			{ type: 'in', width: 8 },
+			{ type: 'off', width: 4 },
+			{ type: 'forward', path: [[E, 3.2]], width: 2},
 		]
 	},
 	inRole: {
@@ -57,18 +53,36 @@ const mobile = {
 		discs: [
 			{ audience: 'all', state: 'active', r: 25 },
 			{ audience: 'all', state: 'inactive', r: 20 }
+		],
+		flows: [
+			{ type: 'in', width: 8 },
+			{ type: 'off', width: 7 },
+			{ type: 'forward', path: [[E, 1.2]], width: 9},
+			{ type: 'backward', path: [[W, .5], [S, .5], [E, 2], [N, .5], [W, .5]], width: 2},
+			{ type: 'backward', path: [[W, .5], [N, .5], [E, 3], [N, .5], [W, .5]], width: 2},
 		]
 	},
 	search: {
 		discs: [
 			{ audience: 'all', state: 'active', r: 20 },
 			{ audience: 'all', state: 'inactive', r: 20 }
+		],
+		flows: [
+			{ type: 'in', width: 6 },
+			{ type: 'off', width: 7 },
+			{ type: 'forward', path: [[E, 1.2]], width: 4},
+			{ type: 'forward', path: [[E, .5], [S, 2], [E, .5]], width: 2},
+			{ type: 'backward', path: [[W, .5], [S, .5], [E, 2], [N, .5], [W, .5]], width: 2},
 		]
 	},
 	application: {
 		discs: [
 			{ audience: 'all', state: 'active', r: 20 },
 			{ audience: 'all', state: 'inactive', r: 20 }
+		],
+		flows: [
+			{ type: 'in', width: 2 },
+			{ type: 'off', width: 4 },
 		]
 	}
 };
@@ -79,13 +93,8 @@ const social = {
 		],
 		flows: [
 			{ type: 'in', width: 3 },
-			{ type: 'off', width: 6 },
-			{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 1.5], [E, .5]], width: 2 },
-			{ type: 'backward', path: [[W, .5], [N, 2], [E, .5]], width: 1 },
-			{ type: 'forward', path: [[E, .5], [S, 2], [W, .5]], width: 1 },
-			{ type: 'forward', path: [[E, .5], [N, 2], [W, .5]], width: 1 },
-			{ type: 'forward', path: [[E, .5], [N, 2], [E, .5]], width: 1 },
-			{ type: 'backward', path: [[W, .5], [N, 1.5], [E, 2], [N, .5], [W, .5]], width: 1 }
+			{ type: 'off', width: 2 },
+			{ type: 'forward', path: [[E, .5], [S, 1], [E, .5]], width: 8},
 		]
 	}
 };
@@ -96,22 +105,27 @@ const store = {
 			{ audience: 'all', state: 'inactive', r: 19 }
 		],
 		flows: [
-			{ type: 'in', width: 3 },
-			{ type: 'off', width: 6 },
-			{ type: 'backward', path: [[E, .5], [N, .5], [W, 3], [N, 3.5], [E, .5]], width: 1 },
-			{ type: 'backward', path: [[E, .5], [S, .5], [W, 2], [N, .5], [E, .5]], width: 1 },
-			{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 1.5], [E, .5]], width: 1 },
-			{ type: 'backward', path: [[W, .5], [N, 4], [E, .5]], width: 1 }
+			{ type: 'off', width: 2 },
+			{ type: 'forward', path: [[E, 1.2]], width: 2},
+			{ type: 'backward', path: [[W, .5], [S, .5], [E, 2], [N, .5], [W, .5]], width: 2},
 		]
 	},
 	consideration: {
 		discs: [
 			{ audience: 'all', state: 'active', r: 20 }
+		],
+		flows: [
+			{ type: 'off', width: 2 },
+			{ type: 'forward', path: [[E, 1.2]], width: 2},
+			{ type: 'backward', path: [[W, .5], [S, .5], [E, 2], [N, .5], [W, .5]], width: 2},
 		]
 	},
 	decision: {
 		discs: [
 			{ audience: 'all', state: 'active', r: 20 }
+		],
+		flows: [
+			{ type: 'off', width: 1 },
 		]
 	}
 };
