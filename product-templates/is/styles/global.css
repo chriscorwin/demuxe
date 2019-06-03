@@ -23,4 +23,12 @@
   }
 }
 
+#subheader-wrapper {
+  margin-top: 40px;
+}
+
+#content-wrapper {
+  border-radius: 4px;
+}
+
 /*# sourceMappingURL=global.css.map */
