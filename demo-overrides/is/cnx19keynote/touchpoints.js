@@ -4,9 +4,8 @@ const web = {
 	awareness: {
 		label: 'awareness',
 		discs: [
-			{ audience: 'all', state: 'active', r: 32.55 },
-			{ audience: 'helped', state: 'active', r: 19.4 },
-			{ audience: 'all', state: 'inactive', r: 22 }
+			{ audience: 'all', state: 'active', r: 25 },
+			{ audience: 'all', state: 'inactive', r: 20 }
 		],
 		flows: [
 			{ type: 'in', width: 10 },
@@ -18,9 +17,9 @@ const web = {
 			{ type: 'forward', path: [[E, .5], [S, 3.5], [E, 1], [S, .5], [E, .5]], width: 1}
 		]
 	},
-	research: {
+	search: {
 		discs: [
-			{ audience: 'all', state: 'active', r: 21 },
+			{ audience: 'all', state: 'active', r: 25 },
 			{ audience: 'all', state: 'inactive', r: 20 }
 		] ,
 		flows: [
@@ -31,7 +30,10 @@ const web = {
 			{ type: 'forward', path: [[E, .5], [S, 4], [E, .5]], width: 1}
 		]
 	},
-	purchase: {
+	application: {
+		discs: [
+			{ audience: 'all', state: 'active', r: 25 }
+		],
 		flows: [
 			{ type: 'in', width: 1 },
 			{ type: 'off', width: 6 },
@@ -51,18 +53,29 @@ const web = {
 
 const mobile = {
 	awareness: {
-		flows: [
-			{ type: 'in', width: 3 },
-			{ type: 'off', width: 6 }
+		label: 'awareness',
+		discs: [
+			{ audience: 'all', state: 'active', r: 25 },
+			{ audience: 'all', state: 'inactive', r: 20 }
+		]
+	},
+	search: {
+		discs: [
+			{ audience: 'all', state: 'active', r: 20 },
+			{ audience: 'all', state: 'inactive', r: 20 }
+		]
+	},
+	application: {
+		discs: [
+			{ audience: 'all', state: 'active', r: 20 },
+			{ audience: 'all', state: 'inactive', r: 20 }
 		]
 	}
 };
-const community = {
-	research: {
+const social = {
+	search: {
 		discs: [
-			{ audience: 'all', state: 'active', r: 22 },
-			{ audience: 'helped', state: 'active', r: 19 },
-			{ audience: 'all', state: 'inactive', r: 19 }
+			{ audience: 'all', state: 'inactive', r: 18 }
 		],
 		flows: [
 			{ type: 'in', width: 3 },
@@ -78,19 +91,7 @@ const community = {
 };
 const kiosk = {};
 const store = {
-	research: {
-		discs: [
-			{ audience: 'all', state: 'active', r: 18 }
-		],
-		flows: [
-			{ type: 'in', width: 3 },
-			{ type: 'off', width: 6 },
-			{ type: 'forward', path: [[E, 1.2]], width: 1},
-			{ type: 'forward', path: [[E, .5], [N, 4], [W, .5]], width: 1 },
-			{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 3.5], [E, .5]], width: 1 }
-		]
-	},
-	purchase: {
+	application: {
 		discs: [
 			{ audience: 'all', state: 'inactive', r: 19 }
 		],
@@ -102,14 +103,24 @@ const store = {
 			{ type: 'backward', path: [[E, .5], [N, .5], [W, 2], [N, 1.5], [E, .5]], width: 1 },
 			{ type: 'backward', path: [[W, .5], [N, 4], [E, .5]], width: 1 }
 		]
+	},
+	consideration: {
+		discs: [
+			{ audience: 'all', state: 'active', r: 20 }
+		]
+	},
+	decision: {
+		discs: [
+			{ audience: 'all', state: 'active', r: 20 }
+		]
 	}
 };
 
 const points = [
-	[web.awareness, web.research, web.purchase, {}, {}, web.inRole],
-	[{}, {}, {}],
-	[{}, community.research, {}],
-	[{}, store.research, store.purchase]
+	[web.awareness, web.search, web.application, {}, {}, web.inRole],
+	[mobile.awareness, mobile.search, mobile.application],
+	[{}, social.search, {}],
+	[{}, {}, store.application, store.consideration, store.decision]
 ];
 
 module.exports = {

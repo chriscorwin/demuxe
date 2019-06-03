@@ -22,7 +22,7 @@
 		<img src="/images/lifecycles.top-left.svg" />
 	</div>
 </div>
-<div>
+<div style="height: 80px;">
 	<%
 	const svgHeight = locals.svgHeight || 100;
 	const svgWidth = locals.svgWidth || 1280;
@@ -36,19 +36,19 @@
 
 	const stages = locals.stages || [{}, {}, {}, {}, {}, {}];
 	%>
-<div class="lifecycle-label-container dynamic-placement" style="transform-origin: center; transform: scale(<%= zoomLevel %>, <%= zoomLevel %>)">
-	<div class="lifecycle-stage-labels" style="transform-origin: top left; transform: translate(<%= labelScaleStops[zoomLevel] %>) ">
-		<%
-			stages.forEach((stage, i) => {
-				echo(`
-					<div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column" style="opacity: 1; transform: translateX(${stops(i)}px) translateX(-50%)">
-						<label class="journeys-label lifecycle-stage-label">
-							<span class="journeys-label-content lifecycle-stage-label-content">${stage.label}</span>
-						</label>
-					</div>
-				`);
-			});
-		%>
+	<div class="lifecycle-label-container dynamic-placement" style="transform-origin: center; transform: scale(<%= zoomLevel %>, <%= zoomLevel %>)">
+		<div class="lifecycle-stage-labels" style="transform-origin: top left; transform: translate(<%= labelScaleStops[zoomLevel] %>) ">
+			<%
+				stages.forEach((stage, i) => {
+					echo(`
+						<div class="journeys-label-container lifecycle-stage-label-container dynamic-placement is-single-column" style="opacity: 1; transform: translateX(${stops(i)}px) translateX(-50%)">
+							<label class="journeys-label lifecycle-stage-label">
+								<span class="journeys-label-content lifecycle-stage-label-content">${stage.label}</span>
+							</label>
+						</div>
+					`);
+				});
+			%>
 	</div>
 	<div class="node-labels"> </div>
 </div>
