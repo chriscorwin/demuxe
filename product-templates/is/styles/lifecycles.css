@@ -64,8 +64,13 @@ label {
 }
 
 .journeys-label-container {
-  width: 160px;
+  width: 107px;
+  height: 27px;
   text-align: center;
+  border: 1px solid #C7D9EF;
+  border-radius: 43px;
+  background: #FFF;
+  padding-top: 3px;
 }
 
 .journeys-label {

@@ -29,6 +29,20 @@
 
 #content-wrapper {
   border-radius: 4px;
+  padding: 0;
+}
+
+.slds-panel__body {
+  padding: 0;
+  padding-top: 15px;
+}
+
+.slds-panel__body img {
+  width: 100%;
+}
+
+.slds-panel_docked-left {
+  border-radius: 4px 0 0 4px;
 }
 
 /*# sourceMappingURL=global.css.map */
