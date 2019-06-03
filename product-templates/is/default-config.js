@@ -2,9 +2,17 @@ module.exports = {
 	account_name: 'NTO',
 	appName: 'Interaction Studio',
 	body_class: 'slds-brand-band slds-brand-band_medium',
+	header: {
+		favorites: false,
+		global_actions: false,
+		help: true,
+		setup: true,
+		notifications: false,
+		avatar: `/images/icons/Identity.svg`
+	},
 	navData: {
 		accountNavItems: [],
-		navItems: [ 
+		navItems: [
 			{
 				label: 'Welcome',
 				isActive: (activePage) => activePage === 'welcome',

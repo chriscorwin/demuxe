@@ -97,10 +97,6 @@ label {
   height: 19px;
 }
 
-.graph {
-  width: 100%;
-}
-
 .flow-container {
   -webkit-transition: opacity .5s,visibility .5s;
   transition: opacity .5s,visibility .5s;
@@ -335,3 +331,5 @@ rect {
 .linear-gradient-stop-separator {
   stop-color: #c9c7c5;
 }
+
+/*# sourceMappingURL=lifecycles.css.map */
