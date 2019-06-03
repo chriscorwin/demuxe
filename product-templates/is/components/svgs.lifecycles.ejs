@@ -1,13 +1,13 @@
 <%
 	const svgHeight = locals.svgHeight || 1000;
 	const svgWidth = locals.svgWidth || 1280;
-	const zoomLevel = locals.zoomLevel || 0.8;
+	const zoomLevel = locals.zoomLevel || 1;
 
 	const labelScaleStops = {
 		0.7: '669px, 577px',
 		0.8: '601px, 427px',
-		0.9: '557px, 517px',
-		1: '181px, 457px'
+		0.9: '557px, 427px',
+		1: '408px, 317px'
 	}
 %>
 
@@ -42,11 +42,11 @@
 			<rect x="-115" y="5" width="230" height="115"> </rect>
 		</clipPath>
 	</defs>
-	<g class="graph-data" transform="translate(0,355)">
+	<g class="graph-data" transform="translate(0,255)">
 
 		<!-- The center line -->
 		<g class="graph-marks">
-			<rect class="axis" width="1012" fill="url(#gradient-axis)" x="80" y="-1" height="2"> </rect>
+			<rect class="axis" width="1012" fill="url(#gradient-axis)" x="0" y="-1" height="2"> </rect>
 			<line class="separator separator-row separator-graph" x1="0" y1="0" x2="100%" y2="0"> </line>
 		</g>
 
@@ -58,7 +58,7 @@
 			const stages = locals.stages;
 		%>
 
-		<g class="graph-elements-svg" transform="translate(166,0)">
+		<g class="graph-elements-svg" transform="translate(56,0)">
 
 			<!-- the discs (blue/purple half circles) -->
 			<g>

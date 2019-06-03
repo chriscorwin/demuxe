@@ -61,13 +61,6 @@ module.exports = {
 						{ direction: 'backward', width: 2, span: 3 }
 					],
 					joinAndLeaveFlows: []
-				},
-				{
-					label: 'Re-Engage',
-					discs: [],
-					arcs: [
-					],
-					joinAndLeaveFlows: []
 				}
 			]
 		}
