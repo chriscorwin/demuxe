@@ -12,7 +12,24 @@
 %>
 
 <div style="margin-left: 548px">
-	<img src="/images/lifecycles.top-left.svg" />
+	<%- include('components/combobox', {
+		isDisabled: false, // whether the combobox appears disabled
+		id: 'touchpointsSelection',
+		versionName: 'Lifecycle', // placeholder text for combobox
+		versions: [
+			{
+				name: 'Lifecycle' // displayed text for option
+			},
+			{
+				name: 'Channels',
+				onclick: "navigatePage('/touchpoints')"
+			},
+			{
+				name: 'Touchpoints', // displayed text for option
+				onclick: "navigatePage('/touchpoints')"
+			}
+		]
+	}) %>
 </div>
 
 <svg class="graph lifecycle-graph" height="<%= svgHeight %>" width="<%= svgWidth %>" transform="scale(<%= zoomLevel %> <%= zoomLevel %>)" style="transform-origin: top left;">
