@@ -11,7 +11,7 @@
 	}
 %>
 
-<div style="margin-left: 548px">
+<div style="display: flex; justify-content: flex-end; width: 900px;">
 	<%- include('components/combobox', {
 		isDisabled: false, // whether the combobox appears disabled
 		id: 'touchpointsSelection',
@@ -30,6 +30,10 @@
 			}
 		]
 	}) %>
+	<div style="margin-left: 10px;">
+		<img src="/images/lifecycles.top-left.svg" />
+	</div>
+
 </div>
 
 <svg class="graph lifecycle-graph" height="<%= svgHeight %>" width="<%= svgWidth %>" transform="scale(<%= zoomLevel %> <%= zoomLevel %>)" style="transform-origin: top left;">
