@@ -477,6 +477,10 @@ rect {
     content: "\e611"
 }
 
+.left-hand-labels .dynamic-placement {
+    text-align: left;
+}
+
 .dynamic-placement {
     will-change: transform;
     position: absolute;
