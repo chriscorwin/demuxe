@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="914px" height="30px" viewBox="0 0 914 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Michael-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Lifecycle-Stages" transform="translate(-340.000000, -676.000000)">
+            <g id="Group-4" transform="translate(301.000000, 657.000000)">
+                <g id="Group-12" transform="translate(38.000000, 15.000000)">
+                    <g id="Group-3" transform="translate(30.000000, 0.000000)">
+                        <g id="icons/utility/back" transform="translate(798.000000, 8.000000)" fill="#7455B9" fill-rule="nonzero">
+                            <path d="M22.4,7.6 L7.1,7.6 C6.7,7.6 6.5,7.1 6.8,6.8 L11.2,2.4 C11.5,2.1 11.5,1.7 11.2,1.4 L10.2,0.4 C9.9,0.1 9.5,0.1 9.2,0.4 L1.2,8.5 C0.9,8.8 0.9,9.2 1.2,9.5 L9.2,17.6 C9.5,17.9 9.9,17.9 10.2,17.6 L11.2,16.6 C11.4,16.3 11.4,15.9 11.2,15.6 L6.7,11.2 C6.5,10.9 6.6,10.4 7.1,10.4 L22.4,10.4 C22.8,10.4 23.1,10.1 23.1,9.7 L23.1,8.4 C23.1,8 22.8,7.6 22.4,7.6 L22.4,7.6 Z" id="Shape"></path>
+                        </g>
+                        <g id="icons/utility/back-copy" transform="translate(715.000000, 17.000000) rotate(-180.000000) translate(-715.000000, -17.000000) translate(703.000000, 8.000000)" fill="#5DB4FF" fill-rule="nonzero">
+                            <path d="M22.4,7.6 L7.1,7.6 C6.7,7.6 6.5,7.1 6.8,6.8 L11.2,2.4 C11.5,2.1 11.5,1.7 11.2,1.4 L10.2,0.4 C9.9,0.1 9.5,0.1 9.2,0.4 L1.2,8.5 C0.9,8.8 0.9,9.2 1.2,9.5 L9.2,17.6 C9.5,17.9 9.9,17.9 10.2,17.6 L11.2,16.6 C11.4,16.3 11.4,15.9 11.2,15.6 L6.7,11.2 C6.5,10.9 6.6,10.4 7.1,10.4 L22.4,10.4 C22.8,10.4 23.1,10.1 23.1,9.7 L23.1,8.4 C23.1,8 22.8,7.6 22.4,7.6 L22.4,7.6 Z" id="Shape"></path>
+                        </g>
+                        <g id="icons/utility/back-copy-2" transform="translate(113.000000, 16.000000) rotate(-90.000000) translate(-113.000000, -16.000000) translate(101.000000, 7.000000)" fill="#7455B9" fill-rule="nonzero">
+                            <path d="M22.4,7.6 L7.1,7.6 C6.7,7.6 6.5,7.1 6.8,6.8 L11.2,2.4 C11.5,2.1 11.5,1.7 11.2,1.4 L10.2,0.4 C9.9,0.1 9.5,0.1 9.2,0.4 L1.2,8.5 C0.9,8.8 0.9,9.2 1.2,9.5 L9.2,17.6 C9.5,17.9 9.9,17.9 10.2,17.6 L11.2,16.6 C11.4,16.3 11.4,15.9 11.2,15.6 L6.7,11.2 C6.5,10.9 6.6,10.4 7.1,10.4 L22.4,10.4 C22.8,10.4 23.1,10.1 23.1,9.7 L23.1,8.4 C23.1,8 22.8,7.6 22.4,7.6 L22.4,7.6 Z" id="Shape"></path>
+                        </g>
+                        <text id="47%" font-family="SalesforceSans-Light, Salesforce Sans" font-size="25" font-weight="300" fill="#4A4A4A">
+                            <tspan x="826" y="29">47%</tspan>
+                        </text>
+                        <text id="63%" font-family="SalesforceSans-Light, Salesforce Sans" font-size="25" font-weight="300" fill="#4A4A4A">
+                            <tspan x="731" y="29">63%</tspan>
+                        </text>
+                        <text id="32%" font-family="SalesforceSans-Light, Salesforce Sans" font-size="25" font-weight="300" fill="#4A4A4A">
+                            <tspan x="129" y="29">32%</tspan>
+                        </text>
+                        <text id="10,457" font-family="SalesforceSans-Light, Salesforce Sans" font-size="25" font-weight="300" fill="#4A4A4A">
+                            <tspan x="0" y="29">10,457</tspan>
+                        </text>
+                    </g>
+                    <g id="icons/standard/people" transform="translate(0.000000, 4.000000)" fill="#706E6B" fill-rule="nonzero">
+                        <path d="M22.8,19.65 L22.8,20.7 C22.8,21.9 21.9,22.8 20.7,22.8 L3.3,22.8 C2.1,22.8 1.2,21.9 1.2,20.7 L1.2,19.65 C1.2,16.95 4.2,15.45 7.2,14.1 C7.2,14.1 7.35,14.1 7.5,13.95 C7.65,13.95 7.95,13.95 8.1,14.1 C9.3,14.85 10.65,15.3 12,15.3 C13.35,15.3 14.7,14.85 15.9,14.1 C16.05,13.95 16.35,13.95 16.5,14.1 C16.65,14.1 16.8,14.1 16.8,14.25 C19.8,15.45 22.8,16.95 22.8,19.65 Z" id="Shape"></path>
+                        <ellipse id="Oval" cx="12" cy="7.14" rx="5.364" ry="5.94"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
