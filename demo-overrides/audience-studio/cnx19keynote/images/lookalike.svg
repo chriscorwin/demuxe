@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<script>
-const hide = () => {
-    document.getElementById('lookalike').classList.add('hide');
-    document.getElementById('lookalike-clicked').classList.remove('hide');
-}
-</script>
-<svg id="lookalike" width="1280px" height="1100px" viewBox="0 0 1280 1100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onclick="hide()">
+
+<svg width="1280px" height="1100px" viewBox="0 0 1280 1100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
     <desc>Created with Sketch.</desc>
     <defs>

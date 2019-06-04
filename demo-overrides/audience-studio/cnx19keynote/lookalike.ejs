@@ -7,10 +7,23 @@
 		display: none;
 		visibility: hidden;
 	}
+
+	img {
+		width: 100%;
+	}
 </style>
-<%- include("images/lookalike.svg") %>
-<%- include("images/lookalike-clicked.svg") %>
+<img src="images/lookalike.png" id="lookalike" onclick="hide()"/>
+<img src="images/lookalike-clicked.png" id="lookalike-clicked" onclick="nextPage()"/>
 <script type="text/javascript">
+	const hide = () => {
+	    document.getElementById('lookalike').classList.add('hide');
+	    document.getElementById('lookalike-clicked').classList.remove('hide');
+	}
+
+	const nextPage = () => {
+	    navigatePage('/?state=addLookalike')
+	}
+
 	const navigatePage = ( url ) => {
 		window.location.href = url;
 	}
