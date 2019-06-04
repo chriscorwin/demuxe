@@ -34,6 +34,25 @@ module.exports = {
 			click: '.slds-panel-box .slds-dropdown__item:nth-of-type(4)',
 			waitFor: 'body',
 			name: '0020.lookalikes'
+		},
+		{
+			click: '#lookalike',
+			waitFor: 200,
+			name: '0021.lookalikes.clicked'
+		},
+		{
+			click: '#lookalike-clicked',
+			waitFor: 'body',
+			name: '0030.manage-segments.lookalike-added'
+		},
+		{
+			waitFor: 1000,
+			name: '0031.manage-segments.lookalike-added.loaded'
+		},
+		{
+			click: '#einsteinBadge',
+			waitFor: 200,
+			name: '0035.manage-segments.einstein-clicked'
 		}
 	]
 };
