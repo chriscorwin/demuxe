@@ -12,20 +12,29 @@
 .slds-panel-box__header {
 	padding: 10px;
 }
+
+#lookalikes-chart {
+	margin-top: -350px;
+	margin-left: 20px;
+}
 </style>
 <%- include('components/segment-panel', { noTopMargin: true, ...segment }) %>
+
+<%- include('images/lookalike.content.svg') %>
 
 <%- include(
 	'components/highcharts.lookalikes.ejs',
 	{
 		lookalikes,
-		width: '510px',
+		width: '800px',
 		height: '268px',
 		selectCallback: (event) => {
 			document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
 		}
 	}
 )%>
+
+
 
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
