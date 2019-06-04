@@ -22,10 +22,6 @@ module.exports = {
 			name: '0001.manage-segments'
 		},
 		{
-			waitFor: 1000,
-			name: '0002.manage-segments.loaded'
-		},
-		{
 			click: '.slds-panel-box__header-settings',
 			waitFor: 500,
 			name: '0010.manage-segments.click-settings'
@@ -42,12 +38,8 @@ module.exports = {
 		},
 		{
 			click: '#lookalike-clicked',
-			waitFor: 'body',
-			name: '0030.manage-segments.lookalike-added'
-		},
-		{
 			waitFor: 1000,
-			name: '0031.manage-segments.lookalike-added.loaded'
+			name: '0030.manage-segments.lookalike-added'
 		},
 		{
 			click: '#einsteinBadge',
