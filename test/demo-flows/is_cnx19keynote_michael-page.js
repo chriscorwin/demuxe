@@ -35,7 +35,7 @@ module.exports = {
 		{
 			goto: testhost + 'lifecycles',
 			waitFor: 'body',
-			name: '0001.lifecycles'
+			name: '0010.lifecycles'
 		},
 		{
 			waitFor: 2000,
