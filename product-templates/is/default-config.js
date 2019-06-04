@@ -15,6 +15,7 @@ module.exports = {
 		navItems: [
 			{
 				label: 'Welcome',
+				href: '/',
 				isActive: (activePage) => activePage === 'welcome',
 			},
 			{
@@ -39,7 +40,7 @@ module.exports = {
 			},
 			{
 				label: 'Test & Publish',
-				href: ``,
+				href: `/monitor`,
 				lookLikeDropdown: true,
 				isActive: (activePage) => activePage === 'test_and_publish'
 			},
