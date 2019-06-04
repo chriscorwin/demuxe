@@ -3,13 +3,13 @@ const settings = require('../../config/config.js')();
 const testhost = settings[env].host;
 
 module.exports = {
-	id: 'dmp_df18keynote_crocs',
-	name: 'dmp.df18keynote.crocs',
-	description: 'DMP Crocs Demo Flow',
+	id: 'audience-studio_df18keynote_crocs',
+	name: 'audience-studio.df18keynote.crocs',
+	description: 'audience-studio Crocs Demo Flow',
 	headless: false,
 	debug: true,
 	resultion: { width: 1280, height: 720 },
-	imageSnapshotPath: './test/screenshots/dmp_df18keynote_crocs/',
+	imageSnapshotPath: './test/screenshots/audience-studio_df18keynote_crocs/',
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
 	steps: [
