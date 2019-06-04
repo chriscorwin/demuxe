@@ -1,6 +1,6 @@
 <%
 
-	const lookalikes = locals.localization.lookalike.lookalikes;
+	const lookalikesData = locals.localization.lookalike.lookalikesData;
 	const segment = locals.localization.lookalike.segment;
 
 	const tableData = locals.localization.lookalike.lookalikes.tableData;
@@ -74,7 +74,7 @@
 	<%- include(
 		'components/highcharts.lookalikes.ejs',
 		{
-			lookalikes,
+			lookalikesData,
 			width: '800px',
 			height: '268px',
 			selectCallback: (event) => {

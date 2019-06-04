@@ -1,4 +1,4 @@
-<!-- 
+<!--
 Highcharts must be included on page prior to this running
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
 <script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
@@ -20,14 +20,15 @@ Highcharts must be included on page prior to this running
 	}
 </style>
 
-<div 
-	id="lookalikes-chart" 
+<div
+	id="lookalikes-chart"
 	style="width: <%= locals.width || '510px' %>; height: <%= locals.height || '268px' %>;"
 	onclick="function test() {document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));}; test();"
 ></div>
 
 <script type="text/javascript">
 
+<%
 const xStart = 98;
 const yStart = 98;
 const xMultiplier = 7; // Change this number to cause an adjustment to numbers at bottom of graph
@@ -40,7 +41,7 @@ let x = xStart;
 let y = yStart;
 
 let switched = false;
-let lookalikesData = [];
+let defaultLookalikesData = [];
 const numPoints = 26;
 
 for (let i = 0; i < numPoints; i++) {
@@ -56,13 +57,21 @@ for (let i = 0; i < numPoints; i++) {
 	y = y - G;
 
 	// x <->, y ^-v, z: radius
-	lookalikesData.push({
+	defaultLookalikesData.push({
 		x: Math.round(x.toFixed(2) * 1),
 		y: Math.round(y.toFixed(2) * 1),
 		z: 77,
 		color: '#7CB5EC'
 	});
 };
+
+console.log('lookalikesData');
+console.dir(locals.lookalikesData);
+const lookalikesData = locals.lookalikesData || defaultLookalikesData;
+console.dir(lookalikesData);
+%>
+
+const lookalikesData = <%- JSON.stringify(lookalikesData) %>
 
 // Gets options for the Cumulative 1st Party Overview chart
 const getLookalikesOptions = () => {

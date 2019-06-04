@@ -55,6 +55,42 @@ const lookalikes = {
 	}
 };
 
+const xStart = 18;
+const yStart = 98;
+const xMultiplier = 2; // Change this number to cause an adjustment to numbers at bottom of graph
+const xEnd = 5001;
+const yEnd = 1;
+let P = -.4;
+let F = 60;
+let G = 0;
+let x = xStart;
+let y = yStart;
+
+let switched = false;
+let lookalikesData = [];
+const numPoints = 26;
+
+for (let i = 0; i < numPoints; i++) {
+	if (!switched && y < 45) {
+		P = -P;
+		switched = true;
+	}
+
+	F = F + P;
+	G = G - P;
+
+	x = x + (F * xMultiplier);
+	y = y - G;
+
+	// x <->, y ^-v, z: radius
+	lookalikesData.push({
+		x: Math.round(x.toFixed(2) * 1),
+		y: Math.round(y.toFixed(2) * 1),
+		z: 77,
+		color: '#7CB5EC'
+	});
+};
+
 module.exports = {
 	segment: {
 		title: 'Family Prospect Targets',
@@ -68,5 +104,6 @@ module.exports = {
 		category: 'Behavioral',
 		subCategory: 'Loyalty'
 	},
-	lookalikes
+	lookalikes,
+	lookalikesData
 };
