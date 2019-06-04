@@ -49,11 +49,11 @@ module.exports = {
 		{
 			click: '#touchpointsSelection-dropdown li:nth-of-type(3)',
 			waitFor: 'body',
-			name: '0020.touchpoint'
+			name: '0020.channels'
 		},
 		{
 			waitFor: 2000,
-			name: '0021.touchpoints.loaded'
+			name: '0021.channels.loaded'
 		},
 		{
 			click: '#test-and-publish',
