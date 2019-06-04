@@ -1,11 +1,20 @@
-<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
-<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
-
 <%
 
-	const lookalikes = locals.lookalikes;
+	const lookalikes = locals.localization.lookalike.lookalikes;
+	const segment = locals.localization.lookalike.segment;
 
 %>
+<style>
+.slds-panel-box__header-settings {
+	display: none;
+}
+
+.slds-panel-box__header {
+	padding: 10px;
+}
+</style>
+<%- include('components/segment-panel', { noTopMargin: true, ...segment }) %>
+
 <%- include(
 	'components/highcharts.lookalikes.ejs',
 	{
@@ -17,3 +26,6 @@
 		}
 	}
 )%>
+
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>

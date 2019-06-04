@@ -1,3 +1,19 @@
+const {
+	today,
+	firstOfMonth,
+	firstOfLastMonth,
+	lastOfLastMonth,
+	aboutOneMonthAgo,
+	aboutTwoMonthsAgo,
+	aboutThreeMonthsAgo,
+	aboutFourMonthsAgo,
+	todayTerse,
+	twoWeeksAgoTerse,
+	oneMonthAgoTerse,
+	DATES,
+	FORMATS
+} = require('../../../engine/javascripts/dates');
+
 const lookalikes = {
 	tableData: {
 		rows: [
@@ -54,5 +70,3 @@ module.exports = {
 	},
 	lookalikes
 };
-
-4,283,180
