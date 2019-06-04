@@ -38,7 +38,7 @@ module.exports = {
 			name: '0010.lifecycles'
 		},
 		{
-			waitFor: 2000,
+			waitFor: 2700,
 			name: '0011.lifecycles.loaded'
 		},
 		{
@@ -47,7 +47,7 @@ module.exports = {
 			name: '0012.lifecycles.click-combobox'
 		},
 		{
-			click: '#touchpointsSelection-dropdown li:nth-of-type(3)',
+			click: '#touchpointsSelection-dropdown li:nth-of-type(2)',
 			waitFor: 'body',
 			name: '0020.channels'
 		},
