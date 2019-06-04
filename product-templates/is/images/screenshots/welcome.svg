@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1280px" height="720px" viewBox="0 0 1280 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
-    <title>Michael Page Welcome </title>
-    <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="68.0507812%" x2="50%" y2="100%" id="linearGradient-1">
             <stop stop-color="#000000" offset="0%"></stop>
@@ -1777,11 +1775,11 @@
         </g>
         <g id="Group-30" transform="translate(843.000000, 350.000000)">
             <g id="Group-28-Copy-4" transform="translate(0.000000, 0.500000)">
-                <g id="Group-6-Copy-3" transform="translate(0.377166, 0.391066)" style="cursor: pointer;">
-                    <g id="Group-35" style="cursor: pointer;">
-                        <g id="Rectangle-4" style="cursor: pointer;">
-                            <use style="cursor: pointer;" fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
-                            <path style="cursor: pointer;" stroke="#DDDBDA" stroke-width="1" d="M4.11320448,0.626119527 C2.18020785,0.626119527 0.613204476,2.1931229 0.613204476,4.12611953 L0.613204476,211.65783 C0.613204476,213.590827 2.18020785,215.15783 4.11320448,215.15783 L350.463796,215.15783 C352.396792,215.15783 353.963796,213.590827 353.963796,211.65783 L353.963796,4.12611953 C353.963796,2.1931229 352.396792,0.626119527 350.463796,0.626119527 L4.11320448,0.626119527 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                <g id="Group-6-Copy-3" transform="translate(0.377166, 0.391066)">
+                    <g id="Group-35">
+                        <g id="Rectangle-4">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                            <path stroke="#DDDBDA" stroke-width="1" d="M4.11320448,0.626119527 C2.18020785,0.626119527 0.613204476,2.1931229 0.613204476,4.12611953 L0.613204476,211.65783 C0.613204476,213.590827 2.18020785,215.15783 4.11320448,215.15783 L350.463796,215.15783 C352.396792,215.15783 353.963796,213.590827 353.963796,211.65783 L353.963796,4.12611953 C353.963796,2.1931229 352.396792,0.626119527 350.463796,0.626119527 L4.11320448,0.626119527 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
                         </g>
                         <text id="Visualize-customer-j" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#2B2826">
                             <tspan x="21.1898196" y="71.8919748">Visualize customer journeys to discover </tspan>
