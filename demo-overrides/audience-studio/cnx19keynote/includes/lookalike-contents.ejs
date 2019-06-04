@@ -1,0 +1,19 @@
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
+
+<%
+
+	const lookalikes = locals.lookalikes;
+
+%>
+<%- include(
+	'components/highcharts.lookalikes.ejs',
+	{
+		lookalikes,
+		width: '510px',
+		height: '268px',
+		selectCallback: (event) => {
+			document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+		}
+	}
+)%>

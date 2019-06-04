@@ -24,7 +24,7 @@
 	<div id="subheader" class="slds-container_large">
 		<div class="slds-grid slds-grid_vertical-align-center">
 			<div>
-				<h1 class="slds-text-heading_medium"><%= locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
+				<h1 class="slds-text-heading_medium"><%- locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
 				|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text)
 				|| locals.sub_header_text
 				|| '' %></h1>
@@ -33,9 +33,11 @@
 
 			<% if (locals.subHeaderVariant === 'hasButton') {
 				// console.log('customizable button in sub-header please');
+				const buttonClasses = classnames('slds-button slds-button_neutral',
+					{'slds-button_icon slds-button_icon-more slds-button_icon-border-filled': locals.subHeaderButtonIsIcon })
 			%>
 				<div class="slds-col_bump-left slds-p-right_medium">
-					<button class="slds-button slds-button_neutral"><%=locals.subHeaderButtonLabel%></button>
+					<button class="<%= buttonClasses %>"><%-locals.subHeaderButtonLabel%></button>
 				</div>
 			<% } else if (locals.subHeaderVariant === 'hasText') { %>
 				<div class="slds-col_bump-left slds-p-right_medium">
