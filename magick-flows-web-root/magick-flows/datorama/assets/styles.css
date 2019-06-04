@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/advertising-studio/main/cnx1@2x.png") url("/magick-flows/advertising-studio/main/cnx2@2x.png") url("/magick-flows/advertising-studio/main/cnx3@2x.png") url("/magick-flows/advertising-studio/main/cnx4@2x.png") url("/magick-flows/advertising-studio/assets/all__viewport-size.png");
+  content: url("/magick-flows/datorama/main/0000___ID=datorama-cross-channel-marketing-intelligence___DATA=unset___NOTES=Notes-go-here.png") url("/magick-flows/datorama/main/0100___ID=datorama-email-performance___DATA=unset___NOTES=Notes-go-here.png") url("/magick-flows/datorama/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 8960px;
+  width: 3840px;
 }
 
 .app-switcher-one.shrink {
@@ -291,70 +291,6 @@ body.debug div#drawer-from-top--step-2::before {
   top: 0;
   width: 1280px;
   left: 5120px;
-}
-
-.app-switcher-one.be-left-3 {
-  left: -7680px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-3 {
-  left: -7680px;
-}
-
-body.debug div#drawer-from-top--step-3::before {
-  content: "Drawer #3";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-3 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 7680px;
-}
-
-.app-switcher-one.be-left-4 {
-  left: -10240px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-4 {
-  left: -10240px;
-}
-
-body.debug div#drawer-from-top--step-4::before {
-  content: "Drawer #4";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-4 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 10240px;
 }
 
 footer.magick-flows-stickey-footer_container {
