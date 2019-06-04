@@ -28,7 +28,7 @@
 	const svgWidth = locals.svgWidth || 1280;
 	const zoomLevel = locals.zoomLevel || 1;
 	const labelScaleStops = {
-		1: '490px, 167px'
+		1: '470px, 167px'
 	}
 
 	const STOP_SPACING = locals.STOP_SPACING || 140;
@@ -61,7 +61,7 @@
 			<stop offset="100%" class="linear-gradient-stop-axis" stop-opacity="0"/>
 		</linearGradient>
 	</defs>
-	<g class="graph-data" transform="translate(84,60)">
+	<g class="graph-data" transform="translate(64,60)">
 
 		<!-- The center line -->
 		<g class="graph-marks">
@@ -125,7 +125,7 @@
 		</clipPath>
 	</defs>
 	<g class="graph-data">
-		<g class="graph-elements-svg" transform="translate(140,0)">
+		<g class="graph-elements-svg" transform="translate(120,0)">
 			<%
 				const DELAY = 200;
 				const stopLocation = (vi, hi) => { return { v: 64.5 + (108 * vi), h: 70 + (140 * hi) }; };

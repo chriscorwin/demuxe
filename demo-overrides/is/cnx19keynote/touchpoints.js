@@ -158,7 +158,7 @@ module.exports = {
 					label: 'Decision',
 				},
 				{
-					label: 'In R&nbsp;&nbsp;&nbsp;&nbsp;',
+					label: 'In Role',
 				}
 			]
 		}
