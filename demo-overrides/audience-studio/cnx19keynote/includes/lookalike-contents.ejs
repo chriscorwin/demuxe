@@ -3,6 +3,42 @@
 	const lookalikes = locals.localization.lookalike.lookalikes;
 	const segment = locals.localization.lookalike.segment;
 
+	const tableData = locals.localization.lookalike.lookalikes.tableData;
+
+	const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
+
+	const makeTable = (data) => (`
+	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+		<thead>
+			<tr class="slds-text-title_caps">
+				<th scope="col">
+					<div class="slds-truncate" title="${data.labels[0]}">${data.labels[0]}</div>
+				</th>
+				<th scope="col">
+					<div class="slds-truncate " title="${data.labels[1]}">${data.labels[1]}</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			${makeTableRows(data.rows)}
+		</tbody>
+	</table>
+
+	`);
+
+
+	const makeTableRow = (data) => (`
+		<tr">
+			${makeTableCell(data.similarity)}
+			${makeTableCell(data.reach)}
+		</tr>
+	`);
+
+	const makeTableCell = (data) => (`
+		<td>
+			<div class="slds-truncate " title="${data}">${data}</div>
+		</td>
+	`);
 %>
 <style>
 .slds-panel-box__header-settings {
@@ -14,25 +50,40 @@
 }
 
 #lookalikes-chart {
-	margin-top: -350px;
+	margin-top: -280px;
 	margin-left: 20px;
+}
+
+#lookalikeTable {
+	width: 369px;
+	margin-top: -420px;
+	margin-left: 852px;
+	border-left: 1px solid #D8DDE6;
+	border-right: 1px solid #D8DDE6;
+	border-radius: 3px 3px 0 0 ;
+}
+
+.slds-table thead th, .slds-table td {
+	padding: 0.5rem;
 }
 </style>
 <%- include('components/segment-panel', { noTopMargin: true, ...segment }) %>
 
-<%- include('images/lookalike.content.svg') %>
-
-<%- include(
-	'components/highcharts.lookalikes.ejs',
-	{
-		lookalikes,
-		width: '800px',
-		height: '268px',
-		selectCallback: (event) => {
-			document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+<div class="slds-panel-box slds-m-top_small slds-p-around_small" style="height: 521px">
+	<%- include('images/lookalike.content.svg') %>
+	<%- include(
+		'components/highcharts.lookalikes.ejs',
+		{
+			lookalikes,
+			width: '800px',
+			height: '268px',
+			selectCallback: (event) => {
+				document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+			}
 		}
-	}
-)%>
+	)%>
+	<div id="lookalikeTable"><%- makeTable(tableData) %></div>
+</div>
 
 
 
