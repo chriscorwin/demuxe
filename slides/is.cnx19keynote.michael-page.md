@@ -4,7 +4,7 @@
 
 ---
 
-![](https://cnx19-is-michael-page-dev.herokuapp.com/screenshots/is.cnx19keynote.michael-page.0001.lifecycles.slide.png){.background}
+![](https://cnx19-is-michael-page-dev.herokuapp.com/screenshots/is.cnx19keynote.michael-page.0010.lifecycles.slide.png){.background}
 
 ---
 
@@ -16,11 +16,11 @@
 
 ---
 
-![](https://cnx19-is-michael-page-dev.herokuapp.com/screenshots/is.cnx19keynote.michael-page.0020.touchpoint.slide.png){.background}
+![](https://cnx19-is-michael-page-dev.herokuapp.com/screenshots/is.cnx19keynote.michael-page.0020.channels.slide.png){.background}
 
 ---
 
-![](https://cnx19-is-michael-page-dev.herokuapp.com/screenshots/is.cnx19keynote.michael-page.0021.touchpoints.loaded.slide.png){.background}
+![](https://cnx19-is-michael-page-dev.herokuapp.com/screenshots/is.cnx19keynote.michael-page.0021.channels.loaded.slide.png){.background}
 
 ---
 
