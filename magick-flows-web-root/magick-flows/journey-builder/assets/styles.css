@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/journey-builder/main/0010___ID=journey-canvas-for-fever___NOTES=click-push-notification-titled-welcome-and-seating.png") url("/magick-flows/journey-builder/main/0020___ID=email-activity-summary-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=click-edit-message.png") url("/magick-flows/journey-builder/main/0022___ID=email-activity-summary-out-reset___NOTES=click-replace-link.png") url("/magick-flows/journey-builder/main/0030___ID=email-editor-slides-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-st-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=click-on-skyline-image-block.png") url("/magick-flows/journey-builder/main/0030___ID=email-editor-slides-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=click-on-skyline-image-block.png") url("/magick-flows/journey-builder/main/0032___ID=email-editor-reset___NOTES=click-on-skyline-image-block.png") url("/magick-flows/journey-builder/main/0034___ID=email-activity-summary-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=click-on-skyline-image-block.png") url("/magick-flows/journey-builder/main/0034___ID=image-editor-slides-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=click-on-skyline-image-block.png") url("/magick-flows/journey-builder/main/0040___ID=email-editor-reset___NOTES=click-replace-link.png") url("/magick-flows/journey-builder/main/0050___ID=content-selector___NOTES=click-filter-button.png") url("/magick-flows/journey-builder/main/0060___ID=content-selector___NOTES=click-einstein-filter-for-locations-checkbox.png") url("/magick-flows/journey-builder/main/0070___ID=content-selector___NOTES=select-content-image-c-gherkinbuild.png") url("/magick-flows/journey-builder/main/0080___ID=content-selector___NOTES=click-select-button-bottom-right-of-modal.png") url("/magick-flows/journey-builder/main/0090___ID=email-editor___NOTES=click-on-skyline-image-block.png") url("/magick-flows/journey-builder/main/0100___ID=email-editor-slides-away___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=click-primary-button-done.png") url("/magick-flows/journey-builder/main/0102___ID=email-message-summary-configured-reset___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=click-primary-button-done.png") url("/magick-flows/journey-builder/main/0110___ID=journey-canvas-for-mp-return___NOTES=click-activate-button.png") url("/magick-flows/journey-builder/main/0120___ID=journey-launch-modal___NOTES=click-header-activate-button=End.png") url("/magick-flows/journey-builder/assets/all__viewport-size.png") url("/magick-flows/journey-builder/assets/email-activity-summary-configured__drawer-from-left.png") url("/magick-flows/journey-builder/assets/email-activity-summary-out___drawer-from-left.png") url("/magick-flows/journey-builder/assets/email-editor-slides-away___drawer-from-left.png") url("/magick-flows/journey-builder/assets/email-editor-slides-out___drawer-from-left.png") url("/magick-flows/journey-builder/assets/image-editor-slides-out___drawer-from-left.png");
+  content: url("/magick-flows/journey-builder/main/0010___ID=journey-canvas-for-fever___NOTES=click-email-welcome-appointment-schedule.png") url("/magick-flows/journey-builder/main/0020___ID=email-activity-summary-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder/main/0022___ID=email-activity-summary-out-reset___NOTES=click-edit-message-button.png") url("/magick-flows/journey-builder/main/0030___ID=email-editor-slides-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder/main/0032___ID=email-editor-reset___NOTES=click-on-skyline-image-block-in-email.png") url("/magick-flows/journey-builder/main/0034___ID=image-editor-slides-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder/main/0040___ID=image-editor-reset___NOTES=click-replace-link.png") url("/magick-flows/journey-builder/main/0050___ID=content-selector___NOTES=click-filter-button.png") url("/magick-flows/journey-builder/main/0060___ID=content-selector___NOTES=click-checkbox-next-to-filter-for-Location.png") url("/magick-flows/journey-builder/main/0070___ID=content-selector___NOTES=select-content-image-top-row-middle-named-c-gherkinbuild.png") url("/magick-flows/journey-builder/main/0080___ID=content-selector___NOTES=click-select-button-bottom-right-of-modal.png") url("/magick-flows/journey-builder/main/0090___ID=email-editor___NOTES=click-done-editing.png") url("/magick-flows/journey-builder/main/0100___ID=email-editor-slides-away___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder/main/0102___ID=email-message-summary-configured-reset___NOTES=click-done-button.png") url("/magick-flows/journey-builder/main/0104___ID=email-activity-summary-slides-away___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder/main/0110___ID=journey-canvas-for-mp-return___NOTES=click-activate-button.png") url("/magick-flows/journey-builder/main/0120___ID=journey-launch-modal___NOTES=click-header-activate-button=End.png") url("/magick-flows/journey-builder/assets/all__viewport-size.png") url("/magick-flows/journey-builder/assets/email-activity-summary-out___drawer-from-left.png") url("/magick-flows/journey-builder/assets/email-activity-summary-slides-away__drawer-from-left.png") url("/magick-flows/journey-builder/assets/email-editor-slides-away___drawer-from-left.png") url("/magick-flows/journey-builder/assets/email-editor-slides-out___drawer-from-left.png") url("/magick-flows/journey-builder/assets/image-editor-slides-out___drawer-from-left.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 44800px;
+  width: 42240px;
 }
 
 .app-switcher-one.shrink {
@@ -771,38 +771,6 @@ body.debug div#drawer-from-top--step-17::before {
   top: 0;
   width: 1280px;
   left: 43520px;
-}
-
-.app-switcher-one.be-left-18 {
-  left: -46080px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-18 {
-  left: -46080px;
-}
-
-body.debug div#drawer-from-top--step-18::before {
-  content: "Drawer #18";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-18 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 46080px;
 }
 
 footer.magick-flows-stickey-footer_container {
