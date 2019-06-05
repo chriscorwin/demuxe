@@ -54,10 +54,12 @@ module.exports = function() {
     let demoOverrideConfig = {};
     try {
         demoOverrideConfig = configData.demoVenue && configData.productTemplate ? require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`) : {};
+        console.log('demoOverrideConfig');
+        console.dir(demoOverrideConfig);
     } catch (e) {
         console.warn('no demo overrides localization');
     }
-    
+
     let brandThemeConfig = {};
     try {
         brandThemeConfig = configData.brandTheme ? require(`../brand-themes/${configData.brandTheme}/localization.js`) : {};
@@ -101,7 +103,7 @@ module.exports = function() {
             const thisMagickFlowObject = configData.magickFlows[magickFlowUrlSlug];
             const thisMagickFlowSteps = configData.magickFlows[magickFlowUrlSlug].steps;
             const thisMagickFlowAssets = configData.magickFlows[magickFlowUrlSlug].assets;
-            
+
 
             // const thisMagickFlowHasTemplateSizingInfo = thisMagickFlowAssets.includes('all__viewport-size.png');
 
