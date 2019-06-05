@@ -91,7 +91,7 @@ let lookalikesData = [
 
 module.exports = {
 	segment: {
-		title: 'Family Prospect Targets',
+		title: 'High Value Families',
 		subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
 		subTitleBadges: [{ text: 'Daily Refresh', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
 		devices: '250k',
