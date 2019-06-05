@@ -120,6 +120,14 @@ function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition
 		document.querySelector('.container').dataset.next = `magick-flows--step-${nextClick}`;
 		document.querySelector('.container').dataset.previous = `magick-flows--step-${previousClick}`;
 	}
+	if (document.querySelector('body') !== null) {
+		document.querySelector('body').dataset.current = `magick-flows--step-${thisStepNumber}`;
+		document.querySelector('body').dataset.next = `magick-flows--step-${nextClick}`;
+		document.querySelector('body').dataset.previous = `magick-flows--step-${previousClick}`;
+		document.querySelector('html').dataset.current = `magick-flows--step-${thisStepNumber}`;
+		document.querySelector('html').dataset.next = `magick-flows--step-${nextClick}`;
+		document.querySelector('html').dataset.previous = `magick-flows--step-${previousClick}`;
+	}
 
 	// console.debug(`[Magick Flows: normalTransition() ] thisStepNumber: `, thisStepNumber);
 

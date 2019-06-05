@@ -3,9 +3,9 @@
 $numberOfSlides: 1 !default;
 $preloadImagesData: "url('/fake.png')" !default;
 
-$heightOfSlideValue: 720 !default;
-$widthOfSlideValue: 1280 !default;
-$widthOfGutterValue: 1280 !default;
+$heightOfSlideValue: 2304 !default;
+$widthOfSlideValue: 1125 !default;
+$widthOfGutterValue: 1125 !default;
 
 $widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
 $heightOfAppSwitcher: $heightOfSlideValue + 0px;
@@ -59,15 +59,43 @@ html {
 }
 
 body.magick-flow {
-  background: transparent !important;
+  // background-color: transparent !important;
+  background-color: white;
   overflow: hidden;
   width: 100vw;
 }
+body.magick-flow[data-current="magick-flows--step-1"], html[data-current="magick-flows--step-1"] {
+  background-color: #056CDF;
+}
+body.magick-flow[data-current="magick-flows--step-2"], html[data-current="magick-flows--step-2"] {
+  background-color: #022DA2;
+}
+body.magick-flow[data-current="magick-flows--step-3"], html[data-current="magick-flows--step-3"] {
+  background-color: #022DA2;
+}
+body.magick-flow[data-current="magick-flows--step-4"], html[data-current="magick-flows--step-4"] {
+  background-color: #022DA2;
+}
+body.magick-flow[data-current="magick-flows--step-7"], html[data-current="magick-flows--step-7"] {
+  background-color: black;
+}
+body.magick-flow[data-current="magick-flows--step-8"], html[data-current="magick-flows--step-8"] {
+  background-color: black;
+}
+
+body.magick-flow[data-current="magick-flows--step-9"], html[data-current="magick-flows--step-9"] {
+  background-color: #e03a3e;
+}
+
+body.magick-flow[data-current="magick-flows--step-10"], html[data-current="magick-flows--step-10"] {
+  background-color: #e8b018;
+}
+
 
 div#content-wrapper {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
-  border-radius: 0.25rem;
-  position: relative;
-  left: auto;
-  margin: 0px auto;
+  // box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
+  // border-radius: 0.25rem;
+  // position: relative;
+  // left: auto;
+  // margin: 0px auto;
 }

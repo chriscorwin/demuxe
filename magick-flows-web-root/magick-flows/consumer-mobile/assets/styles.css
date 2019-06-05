@@ -31,22 +31,22 @@ body {
 body, .container {
   background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
-  height: 720px;
+  height: 2304px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 333px;
+  width: 1125px;
 }
 
 .ios-notification {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 333px;
+  width: 1125px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 2304px;
+  top: -2304px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -65,10 +65,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 333px;
+  width: 1125px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 2304px;
+  top: -2304px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -89,11 +89,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms left ease-in-out;
-  width: 333px;
+  width: 1125px;
   background-color: transparent;
-  height: 720px;
+  height: 2304px;
   top: 0;
-  left: -333px;
+  left: -1125px;
   will-change: left;
 }
 
@@ -113,11 +113,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms right ease-in-out;
-  width: 333px;
+  width: 1125px;
   background-color: transparent;
-  height: 720px;
+  height: 2304px;
   top: 0;
-  right: -333px;
+  right: -1125px;
   will-change: right;
 }
 
@@ -137,10 +137,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms bottom ease-in-out;
-  width: 333px;
+  width: 1125px;
   background-color: transparent;
-  height: 720px;
-  bottom: -720px;
+  height: 2304px;
+  bottom: -2304px;
   will-change: bottom;
 }
 
@@ -161,12 +161,12 @@ body, .container {
 }
 
 .app-switcher-one {
-  height: 720px;
+  height: 2304px;
   left: 0;
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 8991px;
+  width: 30375px;
 }
 
 .app-switcher-one.shrink {
@@ -186,8 +186,8 @@ body, .container {
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step .slds-scrollable {
-  max-height: 720px;
-  height: 720px;
+  max-height: 2304px;
+  height: 2304px;
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step.notification {
@@ -195,7 +195,7 @@ body, .container {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: 166.5px;
+  left: 562.5px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -223,21 +223,21 @@ body.debug div#drawer-from-top--step-0::before {
 }
 
 .magick-flows--step-0 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
+  width: 1125px;
   left: 0px;
 }
 
 .app-switcher-one.be-left-1 {
-  left: -666px;
+  left: -2250px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -666px;
+  left: -2250px;
 }
 
 body.debug div#drawer-from-top--step-1::before {
@@ -255,21 +255,21 @@ body.debug div#drawer-from-top--step-1::before {
 }
 
 .magick-flows--step-1 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 666px;
+  width: 1125px;
+  left: 2250px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -1332px;
+  left: -4500px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -1332px;
+  left: -4500px;
 }
 
 body.debug div#drawer-from-top--step-2::before {
@@ -287,21 +287,21 @@ body.debug div#drawer-from-top--step-2::before {
 }
 
 .magick-flows--step-2 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 1332px;
+  width: 1125px;
+  left: 4500px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -1998px;
+  left: -6750px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -1998px;
+  left: -6750px;
 }
 
 body.debug div#drawer-from-top--step-3::before {
@@ -319,21 +319,21 @@ body.debug div#drawer-from-top--step-3::before {
 }
 
 .magick-flows--step-3 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 1998px;
+  width: 1125px;
+  left: 6750px;
 }
 
 .app-switcher-one.be-left-4 {
-  left: -2664px;
+  left: -9000px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-4 {
-  left: -2664px;
+  left: -9000px;
 }
 
 body.debug div#drawer-from-top--step-4::before {
@@ -351,21 +351,21 @@ body.debug div#drawer-from-top--step-4::before {
 }
 
 .magick-flows--step-4 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 2664px;
+  width: 1125px;
+  left: 9000px;
 }
 
 .app-switcher-one.be-left-5 {
-  left: -3330px;
+  left: -11250px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-5 {
-  left: -3330px;
+  left: -11250px;
 }
 
 body.debug div#drawer-from-top--step-5::before {
@@ -383,21 +383,21 @@ body.debug div#drawer-from-top--step-5::before {
 }
 
 .magick-flows--step-5 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 3330px;
+  width: 1125px;
+  left: 11250px;
 }
 
 .app-switcher-one.be-left-6 {
-  left: -3996px;
+  left: -13500px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-6 {
-  left: -3996px;
+  left: -13500px;
 }
 
 body.debug div#drawer-from-top--step-6::before {
@@ -415,21 +415,21 @@ body.debug div#drawer-from-top--step-6::before {
 }
 
 .magick-flows--step-6 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 3996px;
+  width: 1125px;
+  left: 13500px;
 }
 
 .app-switcher-one.be-left-7 {
-  left: -4662px;
+  left: -15750px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-7 {
-  left: -4662px;
+  left: -15750px;
 }
 
 body.debug div#drawer-from-top--step-7::before {
@@ -447,21 +447,21 @@ body.debug div#drawer-from-top--step-7::before {
 }
 
 .magick-flows--step-7 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 4662px;
+  width: 1125px;
+  left: 15750px;
 }
 
 .app-switcher-one.be-left-8 {
-  left: -5328px;
+  left: -18000px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-8 {
-  left: -5328px;
+  left: -18000px;
 }
 
 body.debug div#drawer-from-top--step-8::before {
@@ -479,21 +479,21 @@ body.debug div#drawer-from-top--step-8::before {
 }
 
 .magick-flows--step-8 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 5328px;
+  width: 1125px;
+  left: 18000px;
 }
 
 .app-switcher-one.be-left-9 {
-  left: -5994px;
+  left: -20250px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-9 {
-  left: -5994px;
+  left: -20250px;
 }
 
 body.debug div#drawer-from-top--step-9::before {
@@ -511,21 +511,21 @@ body.debug div#drawer-from-top--step-9::before {
 }
 
 .magick-flows--step-9 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 5994px;
+  width: 1125px;
+  left: 20250px;
 }
 
 .app-switcher-one.be-left-10 {
-  left: -6660px;
+  left: -22500px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-10 {
-  left: -6660px;
+  left: -22500px;
 }
 
 body.debug div#drawer-from-top--step-10::before {
@@ -543,21 +543,21 @@ body.debug div#drawer-from-top--step-10::before {
 }
 
 .magick-flows--step-10 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 6660px;
+  width: 1125px;
+  left: 22500px;
 }
 
 .app-switcher-one.be-left-11 {
-  left: -7326px;
+  left: -24750px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-11 {
-  left: -7326px;
+  left: -24750px;
 }
 
 body.debug div#drawer-from-top--step-11::before {
@@ -575,21 +575,21 @@ body.debug div#drawer-from-top--step-11::before {
 }
 
 .magick-flows--step-11 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 7326px;
+  width: 1125px;
+  left: 24750px;
 }
 
 .app-switcher-one.be-left-12 {
-  left: -7992px;
+  left: -27000px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-12 {
-  left: -7992px;
+  left: -27000px;
 }
 
 body.debug div#drawer-from-top--step-12::before {
@@ -607,21 +607,21 @@ body.debug div#drawer-from-top--step-12::before {
 }
 
 .magick-flows--step-12 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 7992px;
+  width: 1125px;
+  left: 27000px;
 }
 
 .app-switcher-one.be-left-13 {
-  left: -8658px;
+  left: -29250px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-13 {
-  left: -8658px;
+  left: -29250px;
 }
 
 body.debug div#drawer-from-top--step-13::before {
@@ -639,21 +639,21 @@ body.debug div#drawer-from-top--step-13::before {
 }
 
 .magick-flows--step-13 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 8658px;
+  width: 1125px;
+  left: 29250px;
 }
 
 .app-switcher-one.be-left-14 {
-  left: -9324px;
+  left: -31500px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-14 {
-  left: -9324px;
+  left: -31500px;
 }
 
 body.debug div#drawer-from-top--step-14::before {
@@ -671,11 +671,11 @@ body.debug div#drawer-from-top--step-14::before {
 }
 
 .magick-flows--step-14 {
-  height: 720px;
+  height: 2304px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 9324px;
+  width: 1125px;
+  left: 31500px;
 }
 
 footer.magick-flows-stickey-footer_container {
@@ -772,26 +772,50 @@ html {
 .container {
   background: url(/images/home-background.jpg) no-repeat top left;
   background-size: 100% 100%;
-  height: 720px;
+  height: 2304px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 333;
+  width: 1125px;
 }
 
 body.magick-flow {
-  background: transparent !important;
+  background-color: white;
   overflow: hidden;
   width: 100vw;
 }
 
-div#content-wrapper {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
-  border-radius: 0.25rem;
-  position: relative;
-  left: auto;
-  margin: 0px auto;
+body.magick-flow[data-current="magick-flows--step-1"], html[data-current="magick-flows--step-1"] {
+  background-color: #056CDF;
+}
+
+body.magick-flow[data-current="magick-flows--step-2"], html[data-current="magick-flows--step-2"] {
+  background-color: #022DA2;
+}
+
+body.magick-flow[data-current="magick-flows--step-3"], html[data-current="magick-flows--step-3"] {
+  background-color: #022DA2;
+}
+
+body.magick-flow[data-current="magick-flows--step-4"], html[data-current="magick-flows--step-4"] {
+  background-color: #022DA2;
+}
+
+body.magick-flow[data-current="magick-flows--step-7"], html[data-current="magick-flows--step-7"] {
+  background-color: black;
+}
+
+body.magick-flow[data-current="magick-flows--step-8"], html[data-current="magick-flows--step-8"] {
+  background-color: black;
+}
+
+body.magick-flow[data-current="magick-flows--step-9"], html[data-current="magick-flows--step-9"] {
+  background-color: #e03a3e;
+}
+
+body.magick-flow[data-current="magick-flows--step-10"], html[data-current="magick-flows--step-10"] {
+  background-color: #e8b018;
 }
 
 /*# sourceMappingURL=styles.css.map */
