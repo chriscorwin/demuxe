@@ -28,8 +28,8 @@
 
 
 	const makeTableRow = (data) => (`
-		<tr">
-			${makeTableCell(data.similarity)}
+		<tr id="similarity${data.similarity}">
+			${makeTableCell(data.similarity + '%')}
 			${makeTableCell(data.reach)}
 		</tr>
 	`);
@@ -66,6 +66,10 @@
 .slds-table thead th, .slds-table td {
 	padding: 0.5rem;
 }
+
+.highlighted {
+	background: #EAF4FD;
+}
 </style>
 <%- include('components/segment-panel', { noTopMargin: true, ...segment }) %>
 
@@ -79,10 +83,31 @@
 			height: '268px',
 			selectCallback: (event) => {
 				document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+				document.querySelector('#similarity65').classList.add('highlighted');
 			}
 		}
 	)%>
 	<div id="lookalikeTable"><%- makeTable(tableData) %></div>
+	<div id="lookalikeButtons" class="slds-m-around_small" style="text-align: center">
+		<%- include(
+				'components/button',
+				{
+					variant: 'brand',
+					isDisabled: true,
+					text: 'Create a lookalike segment',
+					onClick: `navigatePage('/?state=addLookalike')`
+				}
+			)
+		%>
+		<%- include(
+				'components/button',
+				{
+					isDisabled: true,
+					text: 'Cancel'
+				}
+			)
+		%>
+	</div>
 </div>
 
 

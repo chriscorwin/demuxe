@@ -18,37 +18,37 @@ const lookalikes = {
 	tableData: {
 		rows: [
 			{
-				reach: '2,879,152', similarity: '78%'
+				reach: '2,879,152', similarity: '78'
 			},
 			{
-				reach: '3,283,156', similarity: '72%'
+				reach: '3,283,156', similarity: '72'
 			},
 			{
-				reach: '4,283,180', similarity: '65%'
+				reach: '4,283,180', similarity: '65'
 			},
 			{
-				reach: '4,721,100', similarity: '60%'
+				reach: '4,721,100', similarity: '60'
 			},
 			{
-				reach: '4,803,480', similarity: '58%'
+				reach: '4,803,480', similarity: '58'
 			},
 			{
-				reach: '5,087,930', similarity: '52%'
+				reach: '5,087,930', similarity: '52'
 			},
 			{
-				reach: '6,237,498', similarity: '50%'
+				reach: '6,237,498', similarity: '50'
 			},
 			{
-				reach: '7,283,180', similarity: '47%'
+				reach: '7,283,180', similarity: '47'
 			},
 			{
-				reach: '8,293,582', similarity: '40%'
+				reach: '8,293,582', similarity: '40'
 			},
 			{
-				reach: '10,874,201', similarity: '37%'
+				reach: '10,874,201', similarity: '37'
 			},
 			{
-				reach: '11,453,000', similarity: '34%'
+				reach: '11,453,000', similarity: '34'
 			}
 		],
 		labels: ['Similarity', 'Reach']
@@ -65,7 +65,7 @@ let lookalikesData = [
   { x: 736, y: 78, z: 77, color: '#7CB5EC' },
   { x: 872, y: 74, z: 77, color: '#7CB5EC' },
   { x: 989, y: 68, z: 77, color: '#7CB5EC' },
-  { x: 1082, y: 63, z: 77, color: '#7CB5EC' },
+  { x: 1082, y: 65, z: 77, color: '#7CB5EC' },
   { x: 1137, y: 57, z: 77, color: '#7CB5EC' },
   { x: 1258, y: 55, z: 77, color: '#7CB5EC' },
   { x: 1335, y: 52, z: 77, color: '#7CB5EC' },
