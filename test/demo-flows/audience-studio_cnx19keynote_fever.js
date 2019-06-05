@@ -28,8 +28,15 @@ module.exports = {
 		},
 		{
 			click: '.slds-panel-box .slds-dropdown__item:nth-of-type(4)',
-			waitFor: 'body',
+			waitFor: 2000,
 			name: '0020.lookalikes'
+		},
+		{
+			evaluate: () => {
+				window.scrollBy(0, window.innerHeight);
+			},
+			waitFor: 2000,
+			name: '0020.lookalikes.scrolled'
 		},
 		{
 			goto: testhost + '?state=addLookalike',

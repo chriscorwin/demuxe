@@ -12,6 +12,10 @@
 
 ---
 
+![](https://cnx19-as-fever-dev.herokuapp.com/screenshots/audience-studio.cnx19keynote.fever.0020.lookalikes.scrolled.slide.png){.background}
+
+---
+
 ![](https://cnx19-as-fever-dev.herokuapp.com/screenshots/audience-studio.cnx19keynote.fever.0030.manage-segments.lookalike-added.slide.png){.background}
 
 ---
