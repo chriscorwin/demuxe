@@ -55,41 +55,39 @@ const lookalikes = {
 	}
 };
 
-const xStart = 18;
-const yStart = 98;
-const xMultiplier = 2; // Change this number to cause an adjustment to numbers at bottom of graph
-const xEnd = 5001;
-const yEnd = 1;
-let P = -.4;
-let F = 60;
-let G = 0;
-let x = xStart;
-let y = yStart;
 
-let switched = false;
-let lookalikesData = [];
-const numPoints = 26;
+let lookalikesData = [
+  { x: 193, y: 94, z: 77, color: '#7CB5EC' },
+  { x: 249, y: 92, z: 77, color: '#7CB5EC' },
+  { x: 390, y: 90, z: 77, color: '#7CB5EC' },
+  { x: 536, y: 88, z: 77, color: '#7CB5EC' },
+  { x: 624, y: 84, z: 77, color: '#7CB5EC' },
+  { x: 736, y: 78, z: 77, color: '#7CB5EC' },
+  { x: 872, y: 74, z: 77, color: '#7CB5EC' },
+  { x: 989, y: 68, z: 77, color: '#7CB5EC' },
+  { x: 1082, y: 63, z: 77, color: '#7CB5EC' },
+  { x: 1137, y: 57, z: 77, color: '#7CB5EC' },
+  { x: 1258, y: 55, z: 77, color: '#7CB5EC' },
+  { x: 1335, y: 52, z: 77, color: '#7CB5EC' },
+  { x: 1461, y: 48, z: 77, color: '#7CB5EC' },
+  { x: 1608, y: 43, z: 77, color: '#7CB5EC' },
+  { x: 1749, y: 37, z: 77, color: '#7CB5EC' },
+  { x: 1823, y: 32, z: 77, color: '#7CB5EC' },
+  { x: 1969, y: 29, z: 77, color: '#7CB5EC' },
+  { x: 2102, y: 25, z: 77, color: '#7CB5EC' },
+  { x: 2202, y: 21, z: 77, color: '#7CB5EC' },
+  { x: 2269, y: 16, z: 77, color: '#7CB5EC' },
+  { x: 2356, y: 14, z: 77, color: '#7CB5EC' },
+  { x: 2463, y: 11, z: 77, color: '#7CB5EC' },
+  { x: 2602, y: 9, z: 77, color: '#7CB5EC' },
+  { x: 2670, y: 7, z: 77, color: '#7CB5EC' },
+  { x: 2736, y: 2, z: 77, color: '#7CB5EC' },
+  { x: 2840, y: -0, z: 77, color: '#7CB5EC' },
+  { x: 5503, y: -94, z: 77, color: '#7CB5EC' }// Force the dots to only go half way across the graph
+];
 
-for (let i = 0; i < numPoints; i++) {
-	if (!switched && y < 45) {
-		P = -P;
-		switched = true;
-	}
 
-	F = F + P;
-	G = G - P;
 
-	x = x + (F * xMultiplier);
-	y = y - G;
-
-	// x <->, y ^-v, z: radius
-	lookalikesData.push({
-		x: Math.round(x.toFixed(2) * 1),
-		y: Math.round(y.toFixed(2) * 1),
-		z: 77,
-		color: '#7CB5EC'
-	});
-};
 
 module.exports = {
 	segment: {
