@@ -32,12 +32,7 @@ module.exports = {
 			name: '0020.lookalikes'
 		},
 		{
-			click: '#lookalike',
-			waitFor: 200,
-			name: '0021.lookalikes.clicked'
-		},
-		{
-			click: '#lookalike-clicked',
+			goto: testhost + '?state=addLookalike',
 			waitFor: 1000,
 			name: '0030.manage-segments.lookalike-added'
 		},
