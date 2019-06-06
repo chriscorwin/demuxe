@@ -10,16 +10,82 @@
 			</div>
 		</div>
 		<% if (localization.header && localization.header.search) { %>
-		<div class="slds-global-header__item">
-			<div class="slds-form-element">
-				<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
-					<svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
-						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#search"></use>
-					</svg>
-					<input type="text" id="text-input-id-1" placeholder="Search Salesforce" disabled="" class="slds-input" style="width: 530px;"/>
+		<div class="slds-global-header__item slds-global-header__item_search">
+			  <div class="slds-form-element">
+				<label class="slds-form-element__label slds-assistive-text" for="combobox-id-1">Search Salesforce</label>
+				<div class="slds-form-element__control">
+				  <div class="slds-combobox-group">
+					<div class="slds-combobox_object-switcher slds-combobox-addon_start">
+					  <div class="slds-form-element">
+						<label class="slds-form-element__label slds-assistive-text" for="objectswitcher-combobox-id-1">Filter Search by:</label>
+						<div class="slds-form-element__control">
+						  <div class="slds-combobox_container">
+							<div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-controls="primary-search-combobox-id-1" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+							  <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+								<input type="text" class="slds-input slds-combobox__input slds-combobox__input-value" id="objectswitcher-combobox-id-1" aria-controls="objectswitcher-listbox-id-1" autoComplete="off" role="textbox" placeholder=" " value="All"
+								/>
+								<span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
+								  <svg class="slds-icon slds-icon slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
+									<use xlink:href="/icons/utility-sprite/svg/symbols.svg#down"></use>
+								  </svg>
+								</span>
+							  </div>
+							  <div id="objectswitcher-listbox-id-1" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_x-small slds-dropdown_left" role="listbox">
+								<ul class="slds-listbox slds-listbox_vertical" role="group" aria-label="Suggested for you">
+								  <li role="presentation" class="slds-listbox__item">
+									<div id="object0" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="presentation">
+									  <h3 class="slds-listbox__option-header" role="presentation">Suggested for you</h3>
+									</div>
+								  </li>
+								  <li role="presentation" class="slds-listbox__item">
+									<div id="object1" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected" role="option">
+									  <span class="slds-media__figure slds-listbox__option-icon">
+										<span class="slds-icon_container slds-icon-utility-check slds-current-color">
+										  <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+											<use xlink:href="/icons/utility-sprite/svg/symbols.svg#check"></use>
+										  </svg>
+										</span>
+									  </span>
+									  <span class="slds-media__body">
+										<span class="slds-truncate" title="All">
+										  <span class="slds-assistive-text">Current Selection:</span> All</span>
+									  </span>
+									</div>
+								  </li>
+
+								</ul>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div class="slds-combobox_container slds-combobox-addon_end">
+					  <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" id="primary-search-combobox-id-1" role="combobox">
+						<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left slds-global-search__form-element" role="none">
+						  <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_left">
+							<svg class="slds-icon slds-icon slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
+							  <use xlink:href="/icons/utility-sprite/svg/symbols.svg#search"></use>
+							</svg>
+						  </span>
+						  <input type="text" class="slds-input slds-combobox__input" id="combobox-id-1" aria-autocomplete="list" aria-controls="search-listbox-id-1" autoComplete="off" role="textbox" placeholder="Search Salesforce" />
+						</div>
+						<div id="search-listbox-id-1" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+						  <ul class="slds-listbox slds-listbox_vertical" role="group" aria-label="Recent Items">
+							<li role="presentation" class="slds-listbox__item">
+							  <div id="option0" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_center" role="presentation">
+								<h3 class="slds-listbox__option-header" role="presentation">Recent Items</h3>
+							  </div>
+							</li>
+
+						  </ul>
+						</div>
+					  </div>
+					</div>
+				  </div>
 				</div>
+			  </div>
 			</div>
-		</div>
 		<% } %>
 		<div class="slds-global-header__item">
 			<ul class="slds-global-actions">
@@ -27,7 +93,7 @@
 				<li class="slds-global-actions__item">
 					<div class="slds-global-actions__favorites slds-dropdown-trigger slds-dropdown-trigger_click">
 						<div class="slds-button-group">
-							<button class="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small" aria-pressed="false" title="Toggle Favorites">
+							<button class="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small" aria-pressed="false" title="Toggle Favorites" <%= (localization.header.favorites.disabled) ? 'disabled=""' : '' %>>
 								<svg class="slds-button__icon" aria-hidden="true">
 									<use xlink:href="/icons/utility-sprite/svg/symbols.svg#favorite"></use>
 								</svg>
@@ -110,58 +176,60 @@
 		<%- include('includes/global/global-nav'); %>
 	</div>
 </header>
-<div id="subheader-wrapper" class="slds-p-around_medium slds-m-bottom_small<%= locals.headerVariant === 'einstein' ? ' einstein' : '' %>">
-	<% if (locals.breadcrumbs) { %>
-	<nav role="navigation" aria-label="Breadcrumbs" class="slds-p-bottom_x-small">
-		<ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
-			<% locals.breadcrumbs.forEach(function(crumb) { %> <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);"><%=crumb%></a></li> <% }) %>
-		</ol>
-	</nav>
-	<% } %>
+<% if (localization.header && !localization.header.hideSubheader) { %>
+	<div id="subheader-wrapper" class="slds-p-around_medium slds-m-bottom_small<%= locals.headerVariant === 'einstein' ? ' einstein' : '' %>">
+		<% if (locals.breadcrumbs) { %>
+		<nav role="navigation" aria-label="Breadcrumbs" class="slds-p-bottom_x-small">
+			<ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
+				<% locals.breadcrumbs.forEach(function(crumb) { %> <li class="slds-breadcrumb__item slds-text-title_caps"><a href="javascript:void(0);"><%=crumb%></a></li> <% }) %>
+			</ol>
+		</nav>
+		<% } %>
 
-	<div id="subheader" class="slds-container_large">
-		<div class="slds-grid slds-grid_vertical-align-center">
-			<div>
-				<h1 class="slds-text-heading_medium"><%- locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
-				|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text)
-				|| locals.sub_header_text
-				|| '' %></h1>
-			</div>
-
-
-			<% if (locals.subHeaderVariant === 'hasButton') {
-				// console.log('customizable button in sub-header please');
-				const buttonClasses = classnames('slds-button slds-button_neutral',
-					{'slds-button_icon slds-button_icon-more slds-button_icon-border-filled': locals.subHeaderButtonIsIcon })
-			%>
-				<div class="slds-col_bump-left slds-p-right_medium">
-					<button class="<%= buttonClasses %>"><%-locals.subHeaderButtonLabel%></button>
-				</div>
-			<% } else if (locals.subHeaderVariant === 'hasText') { %>
-				<div class="slds-col_bump-left slds-p-right_medium">
-					<%= (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
+		<div id="subheader" class="slds-container_large">
+			<div class="slds-grid slds-grid_vertical-align-center">
+				<div>
+					<h1 class="slds-text-heading_medium"><%- locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
 					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text)
 					|| locals.sub_header_text
-					|| '' %>
+					|| '' %></h1>
 				</div>
-			<% } %>
 
 
+				<% if (locals.subHeaderVariant === 'hasButton') {
+					// console.log('customizable button in sub-header please');
+					const buttonClasses = classnames('slds-button slds-button_neutral',
+						{'slds-button_icon slds-button_icon-more slds-button_icon-border-filled': locals.subHeaderButtonIsIcon })
+				%>
+					<div class="slds-col_bump-left slds-p-right_medium">
+						<button class="<%= buttonClasses %>"><%-locals.subHeaderButtonLabel%></button>
+					</div>
+				<% } else if (locals.subHeaderVariant === 'hasText') { %>
+					<div class="slds-col_bump-left slds-p-right_medium">
+						<%= (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
+						|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text)
+						|| locals.sub_header_text
+						|| '' %>
+					</div>
+				<% } %>
+
+
+			</div>
+			<% if (locals.subHeaderVariant === 'hasCustomSubheader')  {
+				// console.log('customizable sub-header please');
+				const isFilePath = /([A-z0-9-_+]+\/)*([A-z0-9]+\.(ejs|js|md|svg))$/mg;
+
+				if (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents) { %>
+					<%- (locals.localization[locals.page].subHeaderContents.match(isFilePath) && include(locals.localization[locals.page].subHeaderContents)) || locals.localization[locals.page].subHeaderContents %>
+				<% } else if (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents) { %>
+					<%- (locals.localization[locals.site_section].subHeaderContents.match(isFilePath) && include(locals.localization[locals.site_section].subHeaderContents)) || locals.localization[locals.site_section].subHeaderContents %>
+				<% } else if (locals.subHeaderContents) { %>
+					<%- (locals.subHeaderContents.match(isFilePath) && include(locals.subHeaderContents)) || locals.subHeaderContents %>
+				<% } else {
+					console.log(`locals.subHeaderVariant === 'hasCustomSubheader' specified, but no subHeaderContents were specified.`); %>
+					<!-- output nothing -->
+				<% }
+			} %>
 		</div>
-		<% if (locals.subHeaderVariant === 'hasCustomSubheader')  {
-			// console.log('customizable sub-header please');
-			const isFilePath = /([A-z0-9-_+]+\/)*([A-z0-9]+\.(ejs|js|md|svg))$/mg;
-
-			if (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents) { %>
-				<%- (locals.localization[locals.page].subHeaderContents.match(isFilePath) && include(locals.localization[locals.page].subHeaderContents)) || locals.localization[locals.page].subHeaderContents %>
-			<% } else if (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents) { %>
-				<%- (locals.localization[locals.site_section].subHeaderContents.match(isFilePath) && include(locals.localization[locals.site_section].subHeaderContents)) || locals.localization[locals.site_section].subHeaderContents %>
-			<% } else if (locals.subHeaderContents) { %>
-				<%- (locals.subHeaderContents.match(isFilePath) && include(locals.subHeaderContents)) || locals.subHeaderContents %>
-			<% } else {
-				console.log(`locals.subHeaderVariant === 'hasCustomSubheader' specified, but no subHeaderContents were specified.`); %>
-				<!-- output nothing -->
-			<% }
-		} %>
 	</div>
-</div>
+<% } %>
