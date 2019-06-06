@@ -1,4 +1,35 @@
 <svg style="margin-top: -38px; margin-left: -4px; margin-bottom: 16px;" width="829" height="341" viewBox="0 0 829 341" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+	#Shape1, #Shape2, #Shape3 {
+	    animation: grow-line .9s linear backwards;
+	    animation-delay: 100ms;
+	}
+
+	@keyframes grow-line {
+	    from {
+	        stroke-dashoffset: 600;
+	    }
+	}
+
+	#text25, #text25_2, #text25_3 {
+		animation: change-text-color 1s linear;
+	}
+
+	@keyframes change-text-color {
+	    from {
+	        opacity: 0;
+	    }
+
+	    90% {
+	    	opacity: 0;
+	    }
+
+	    to {
+	    	opacity: 1;
+	    }
+	}
+</style>
+
 <g id="Conversion Path Analysis">
 <g id="Conversion Path Chart">
 <path id="Rectangle 9" fill-rule="evenodd" clip-rule="evenodd" d="M707 289.4H720.094V335H707V289.4Z" fill="#6247B3"/>
@@ -18,12 +49,12 @@
 <text id="stage7" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="725.001" y="148.212">Partner Sites</tspan></text>
 </g>
 <g id="branch 1">
-<path id="Shape3" d="M132 125C418.264 125 417.994 212 704.258 212" stroke="url(#paint0_linear)" stroke-width="74"/>
-<path id="Shape2" d="M132 159C418.129 159 418.129 294 704.258 294" stroke="url(#paint1_linear)" stroke-width="7"/>
-<path id="Shape1" d="M132 90C420.046 90 415.23 145 703.276 145" stroke="url(#paint2_linear)" stroke-width="10"/>
-<text id="25" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="673.057" y="163.212">263K</tspan></text>
-<text id="25_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="673.057" y="312.212">175K</tspan></text>
-<text id="25_3" fill="white" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="664.295" y="216.212">3.7M</tspan></text>
+<path id="Shape3" d="M132 125C418.264 125 417.994 212 704.258 212" stroke="url(#paint0_linear)" stroke-width="74" stroke-dasharray="600"/>
+<path id="Shape2" d="M132 159C418.129 159 418.129 294 704.258 294" stroke="url(#paint1_linear)" stroke-width="7" stroke-dasharray="600"/>
+<path id="Shape1" d="M132 90C420.046 90 415.23 145 703.276 145" stroke="url(#paint2_linear)" stroke-width="10" stroke-dasharray="600"/>
+<text id="text25" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="673.057" y="163.212">263K</tspan></text>
+<text id="text25_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="673.057" y="312.212">175K</tspan></text>
+<text id="text25_3" fill="white" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="664.295" y="216.212">3.7M</tspan></text>
 </g>
 <rect id="Rectangle 5.1" x="118.344" y="312.6" width="11.0088" height="22.4" fill="#DDDBDA"/>
 <rect id="Rectangle 4" x="118.344" y="279" width="11.0088" height="32" fill="#DDDBDA"/>
