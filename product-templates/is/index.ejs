@@ -1,11 +1,13 @@
-<style>
-	body {
-		margin: 0;
-	}
-</style>
-<%- include("images/screenshots/welcome.svg") %>
-<script type="text/javascript">
-	const navigatePage = ( url ) => {
-		window.location.href = url;
-	}
-</script>
+<%-
+	include(
+		'wrapper.ejs',
+		{
+			title:'Welcome',
+			headerVariant:'default',
+			siteSection: 'welcome',
+			pageStylesheets: [],
+			pageContents: 'includes/welcome.ejs',
+			breadcrumbs: []
+		}
+	)
+%>
