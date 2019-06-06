@@ -9,7 +9,19 @@
 				</a>
 			</div>
 		</div>
-		 <div class="slds-global-header__item">
+		<% if (localization.header && localization.header.search) { %>
+		<div class="slds-global-header__item">
+			<div class="slds-form-element">
+				<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+					<svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+						<use xlink:href="/icons/utility-sprite/svg/symbols.svg#search"></use>
+					</svg>
+					<input type="text" id="text-input-id-1" placeholder="Search Salesforce" disabled="" class="slds-input" style="width: 530px;"/>
+				</div>
+			</div>
+		</div>
+		<% } %>
+		<div class="slds-global-header__item">
 			<ul class="slds-global-actions">
 				<% if (localization.header && localization.header.favorites) { %>
 				<li class="slds-global-actions__item">
@@ -110,7 +122,7 @@
 	<div id="subheader" class="slds-container_large">
 		<div class="slds-grid slds-grid_vertical-align-center">
 			<div>
-				<h1 class="slds-text-heading_medium"><%= locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
+				<h1 class="slds-text-heading_medium"><%- locals.title || (locals.localization[locals.page] && locals.localization[locals.page].sub_header_text)
 				|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].sub_header_text)
 				|| locals.sub_header_text
 				|| '' %></h1>
@@ -119,9 +131,11 @@
 
 			<% if (locals.subHeaderVariant === 'hasButton') {
 				// console.log('customizable button in sub-header please');
+				const buttonClasses = classnames('slds-button slds-button_neutral',
+					{'slds-button_icon slds-button_icon-more slds-button_icon-border-filled': locals.subHeaderButtonIsIcon })
 			%>
 				<div class="slds-col_bump-left slds-p-right_medium">
-					<button class="slds-button slds-button_neutral"><%=locals.subHeaderButtonLabel%></button>
+					<button class="<%= buttonClasses %>"><%-locals.subHeaderButtonLabel%></button>
 				</div>
 			<% } else if (locals.subHeaderVariant === 'hasText') { %>
 				<div class="slds-col_bump-left slds-p-right_medium">
@@ -136,11 +150,18 @@
 		</div>
 		<% if (locals.subHeaderVariant === 'hasCustomSubheader')  {
 			// console.log('customizable sub-header please');
-		%>
-			<%- (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents)
-					|| (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents)
-					|| locals.subHeaderContents
-					|| '' %>
-		<% } %>
+			const isFilePath = /([A-z0-9-_+]+\/)*([A-z0-9]+\.(ejs|js|md|svg))$/mg;
+
+			if (locals.localization[locals.page] && locals.localization[locals.page].subHeaderContents) { %>
+				<%- (locals.localization[locals.page].subHeaderContents.match(isFilePath) && include(locals.localization[locals.page].subHeaderContents)) || locals.localization[locals.page].subHeaderContents %>
+			<% } else if (locals.localization[locals.site_section] && locals.localization[locals.site_section].subHeaderContents) { %>
+				<%- (locals.localization[locals.site_section].subHeaderContents.match(isFilePath) && include(locals.localization[locals.site_section].subHeaderContents)) || locals.localization[locals.site_section].subHeaderContents %>
+			<% } else if (locals.subHeaderContents) { %>
+				<%- (locals.subHeaderContents.match(isFilePath) && include(locals.subHeaderContents)) || locals.subHeaderContents %>
+			<% } else {
+				console.log(`locals.subHeaderVariant === 'hasCustomSubheader' specified, but no subHeaderContents were specified.`); %>
+				<!-- output nothing -->
+			<% }
+		} %>
 	</div>
 </div>

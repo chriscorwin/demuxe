@@ -4,13 +4,13 @@ const settings = require('../../config/config.js')();
 const testhost = settings[env].host;
 
 module.exports = {
-	id: 'dmp_roadshow19_nto',
-	name: 'dmp.roadshow19.nto',
-	description: 'DMP Demo Flow',
+	id: 'audience-studio_roadshow19_nto',
+	name: 'audience-studio.roadshow19.nto',
+	description: 'audience-studio Demo Flow',
 	headless: false,
 	resolution: { width: 1280, height: 720 },
 	debug: true,
-	imageSnapshotPath: './test/screenshots/dmp_roadshow19_nto/',
+	imageSnapshotPath: './test/screenshots/audience-studio_roadshow19_nto/',
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
 	skipTestCapture: true,

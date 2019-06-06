@@ -4,13 +4,13 @@ const settings = require('../../config/config.js')();
 const testhost = settings[env].host;
 
 module.exports = {
-	id: 'dmp_df18keynote_bbva',
-	name: 'dmp.df18keynote.bbva',
-	description: 'DMP Demo Flow',
+	id: 'audience-studio_df18keynote_bbva',
+	name: 'audience-studio.df18keynote.bbva',
+	description: 'audience-studio Demo Flow',
 	headless: false,
 	resolution: { width: 1280, height: 720 },
 	debug: true,
-	imageSnapshotPath: './test/screenshots/dmp_df18keynote_bbva/',
+	imageSnapshotPath: './test/screenshots/audience-studio_df18keynote_bbva/',
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
 	skipTestCapture: true,
