@@ -1,10 +1,10 @@
 <!-- include('images/slices/dashboard.svg') -->
     <%- include('images/slices/header.svg') %>
-    <div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-horizontal_large">
+    <div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-horizontal_x-small">
         <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
             <%- include('components/panel-box.ejs', {
-                title: 'Audience Profile',
-                contents: '<img src="images/audience_profile.png" style="margin: 0 auto;" />',
+                title: 'Total Consumer Population',
+                contents: include('images/slices/tcp.svg'),
                 footer_links: [{}]
             }) %>
         </div>
