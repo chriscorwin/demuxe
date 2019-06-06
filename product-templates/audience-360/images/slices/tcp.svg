@@ -39,7 +39,25 @@
 <text id="75%" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" letter-spacing="0px"><tspan x="183" y="141.818">74.8% of 12.3M</tspan></text>
 <g id="Group 33.1">
 <text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="182" y="53.712">No. of people with this </tspan><tspan x="182" y="70.712">profile in your audience</tspan></text>
-<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="181.301" y="110.785">8.5M</tspan></text>
+<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="181.301" y="110.785" id="numberAudience"></tspan></text>
+<script>
+	const audience = document.querySelector('#numberAudience');
+
+	audience.textContent = '0M';
+
+	let audienceNumber = .5;
+
+	const increase = () => {
+		if (audienceNumber < 8.5) {
+			audienceNumber += 1;
+
+			audience.textContent = `${audienceNumber.toFixed(1)}M`;
+			window.setTimeout(increase, 70);
+		}
+	}
+
+	increase();
+</script>
 </g>
 </g>
 </svg>
