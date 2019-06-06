@@ -17,30 +17,70 @@
         </div>
     </div>
 
-    <!--div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-m-top_medium slds-p-horizontal_large">
-        <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
-            <%- include('components/panel-box.ejs', {
-                title: 'Top Segments',
-                header_buttons: [
-                    { label: 'Conversion Rate (CVR)' }
-                ],
-                contents: '<img src="images/top_segments.png" style="margin: 0 auto;" />',
-                footer_links: [{}]
-            }) %>
+    <div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-m-top_medium slds-p-horizontal_x-small">
+        <div class="slds-grid slds-wrap slds-col slds-size_2-of-3">
+            <div id="top-segments-panel" class="slds-col slds-p-horizontal_x-small slds-size_1-of-2">
+                <style>
+                    #top-segments-panel button.slds-button.slds-button_neutral {
+                        margin-left: 14px;
+                    }
+                </style>
+                <%- include('components/panel-box.ejs', {
+                    title: 'Top Segments',
+                    header_buttons: [
+                        { label: 'Season Ticket Hold...' },
+                        { img: include('images/icons/einstein.svg') }
+                    ],
+                    contents: include('images/slices/top-segments.svg'),
+                    footer_links: [{}]
+                }) %>
+            </div>
+            <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2">
+                <%- include('components/panel-box.ejs', {
+                    title: 'Consent Across Channels',
+                    contents: include('images/slices/consent-across-channels.svg'),
+                    footer_links: [{}]
+                }) %>
+            </div>
+            <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2 slds-m-top_medium">
+                <%- include('components/panel-box.ejs', {
+                    title: 'Top Channels',
+                    header_buttons: [
+                        { label: 'Conversion Rate (CVR)' }
+                    ],
+                    contents: include('images/slices/top-channels.svg'),
+                    footer_links: [{}]
+                }) %>
+            </div>
+            <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2 slds-m-top_medium">
+                <%- include('components/panel-box.ejs', {
+                    title: 'Channel Engagement',
+                    header_buttons: [
+                        { label: 'Email' }
+                    ],
+                    contents: include('images/slices/channel-engagement.svg'),
+                    footer_links: [{}]
+                }) %>
+            </div>
         </div>
-        <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
-            <%- include('components/panel-box.ejs', {
-                title: 'Consent Across Segments',
-                contents: '<img src="images/consent_across_segments.png" style="margin: 0 auto;" />',
-                footer_links: [{}]
-            }) %>
+        <div class="slds-grid slds-wrap slds-col slds-p-horizontal_x-small slds-size_1-of-3">
+            <div class="slds-col slds-size_1-of-1">
+                <%- include('components/panel-box.ejs', {
+                    title: 'Top Products',
+                    header_buttons: [
+                        { label: 'Revenue' }
+                    ],
+                    contents: include('images/slices/top-products.svg'),
+                    footer_links: [{}]
+                }) %>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                <%- include('components/panel-box.ejs', {
+                    title: 'Service Cases',
+                    contents: include('images/slices/service-cases.svg'),
+                    footer_links: [{}]
+                }) %>
+            </div>
         </div>
-        <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
-            <%- include('components/panel-box.ejs', {
-                title: 'Engagement By Channel',
-                contents: '<img src="images/engagement_by_channel.png" style="margin: 0 auto;" />',
-                footer_links: [{}]
-            }) %>
-        </div>
-    </div-->
+    </div>
 

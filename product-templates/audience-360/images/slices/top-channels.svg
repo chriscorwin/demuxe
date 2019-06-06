@@ -1,0 +1,46 @@
+<svg style="margin-left: 11px; margin-top: -55px;" width="398" height="333" viewBox="0 0 398 333" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Top Channels">
+<g id="Gridline">
+<g id="grid7">
+<path id="Path 2" d="M128.936 86.7812V333" stroke="#DDDBDA"/>
+<path id="Path 2.1" d="M101.936 86.7812V333" stroke="#DDDBDA"/>
+<text id="$0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="107.728" y="78.212">5%</tspan></text>
+</g>
+<g id="grid6">
+<path id="Path 2_2" d="M204.8 86.7809V333" stroke="#DDDBDA"/>
+<text id="$200" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="191.335" y="78.212">10%</tspan></text>
+</g>
+<g id="grid5">
+<path id="Path 2_3" d="M242.561 86.8153V333" stroke="#DDDBDA"/>
+<text id="300" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="235.033" y="77.6934">300</tspan></text>
+</g>
+<g id="grid4">
+<path id="Path 2_4" d="M166.984 86.8154V333" stroke="#DDDBDA"/>
+<text id="100" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="149.682" y="77.6934">100</tspan></text>
+</g>
+<g id="grid3">
+<path id="Path 2_5" d="M273.988 86.7809V333" stroke="#DDDBDA"/>
+<text id="$400" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="272.329" y="78.212">15%</tspan></text>
+</g>
+<g id="grid2">
+<path id="Path 2_6" d="M308.26 86.8153V333" stroke="#DDDBDA"/>
+<text id="500" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="311.436" y="77.6934">500</tspan></text>
+</g>
+<g id="grid1">
+<path id="Path 2_7" d="M340.266 86.7809V333" stroke="#DDDBDA"/>
+<text id="$600" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="336.776" y="78.212">20%</tspan></text>
+</g>
+</g>
+<path id="Bar" d="M102 92H339V127H102V92Z" fill="#3296ED"/>
+<text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="114.212">Email</tspan></text>
+<path id="Bar_2" d="M102 143H295V178H102V143Z" fill="#3296ED"/>
+<text id="Account B" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="157.212">Push Messages</tspan></text>
+<path id="Bar_3" d="M102 195H287V231H102V195Z" fill="#3296ED"/>
+<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="208.212">SMS</tspan></text>
+<path id="Bar_4" d="M102 247H232V282H102V247Z" fill="#3296ED"/>
+<text id="Account D" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="266.212">Store</tspan></text>
+<path id="Bar_5" d="M102 298H138V333H102V298Z" fill="#3296ED"/>
+<text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="311.212">OTT Devices</tspan></text>
+<text id="Last 30 days" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1" y="46.904">Last 30 days</tspan></text>
+</g>
+</svg>
