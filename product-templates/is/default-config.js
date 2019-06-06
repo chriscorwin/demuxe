@@ -41,7 +41,7 @@ module.exports = {
 			{
 				label: 'Test & Publish',
 				id: 'test-and-publish',
-				href: `/monitor`,
+				href: `/test-and-publish`,
 				lookLikeDropdown: true,
 				isActive: (activePage) => activePage === 'test-and-publish'
 			},

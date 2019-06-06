@@ -258,13 +258,13 @@
                     <tspan x="660" y="257">PROPOSITIONS</tspan>
                 </text>
                 <text id="Michael-Page-Contrac" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" line-spacing="35">
-                    <tspan x="681" y="279" fill="#2B2826">Michael Page</tspan>
+                    <tspan x="681" y="286" fill="#2B2826">Michael Page</tspan>
                     <tspan x="761.665" y="279" fill="#0070D2"></tspan>
-                    <tspan x="681" y="314" fill="#2B2826">     Contract Types</tspan>
-                    <tspan x="681" y="349" fill="#2B2826">     Job Industries </tspan>
-                    <tspan x="681" y="384" fill="#2B2826">     Job Sectors</tspan>
-                    <tspan x="681" y="419" fill="#2B2826">	</tspan>
-                    <tspan x="681" y="454" fill="#2B2826"> 		</tspan>
+                    <tspan x="698" y="320" fill="#2B2826">     Contract Types</tspan>
+                    <tspan x="698" y="357" fill="#2B2826">     Job Industries </tspan>
+                    <tspan x="698" y="392" fill="#2B2826">     Job Sectors</tspan>
+                    <tspan x="698" y="419" fill="#2B2826">	</tspan>
+                    <tspan x="698" y="454" fill="#2B2826"> 		</tspan>
                 </text>
                 <g id="icons/utility/chevrondown" transform="translate(679.000000, 311.000000)" fill="#706E6B" fill-rule="nonzero">
                     <path d="M9.45454545,3.74545455 L4.27272727,8.98181818 C4.10909091,9.09090909 3.89090909,9.09090909 3.72727273,8.98181818 L-1.45454545,3.74545455 C-1.56363636,3.58181818 -1.56363636,3.36363636 -1.45454545,3.2 L-0.909090909,2.65454545 C-0.745454545,2.49090909 -0.472727273,2.49090909 -0.309090909,2.65454545 L3.72727273,6.74545455 C3.89090909,6.90909091 4.10909091,6.90909091 4.27272727,6.74545455 L8.30909091,2.65454545 C8.47272727,2.54545455 8.74545455,2.54545455 8.90909091,2.65454545 L9.45454545,3.2 C9.56363636,3.36363636 9.56363636,3.58181818 9.45454545,3.74545455 Z" id="Shape" transform="translate(4.000000, 5.797727) rotate(-90.000000) translate(-4.000000, -5.797727) "></path>
@@ -358,7 +358,7 @@
                         <tspan x="247.228" y="47" fill="#706E6B"> for Optimization Point </tspan>
                         <tspan x="378.172" y="47" fill="#2B2826">Email</tspan>
                         <tspan x="88" y="67" fill="#706E6B">Returned Action</tspan>
-                        <tspan x="179.236" y="67" fill="#2B2826"> Relevant Email Content 3</tspan>
+                        <tspan x="182.236" y="67" fill="#2B2826"> Relevant Email Content 3</tspan>
                         <tspan x="324.244" y="67" fill="#1570D2"></tspan>
                     </text>
                     <rect id="Rectangle-1593" fill="#6275A1" x="37" y="37" width="2" height="36"></rect>
@@ -389,7 +389,7 @@
                 <text id="Captured-Activity-br-Copy" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="20">
                     <tspan x="736" y="521" fill="#706E6B">Captured Activity </tspan>
                     <tspan x="834.832" y="521" fill="#2B2826">browse</tspan>
-                    <tspan x="875.644" y="521" fill="#706E6B"> for capture point login</tspan>
+                    <tspan x="878.644" y="521" fill="#706E6B"> for capture point login</tspan>
                     <tspan x="736" y="541" fill="#706E6B">Returned Action </tspan>
                     <tspan x="830.332" y="541" fill="#2B2826">Relevant Mobile Content 1</tspan>
                 </text>
@@ -494,13 +494,13 @@
                     <tspan x="326.061" y="279" font-family="SalesforceSans-Bold, Salesforce Sans" font-weight="bold">most engaged </tspan>
                     <tspan x="418.985" y="279">with </tspan>
                     <tspan x="448.391" y="279" font-family="SalesforceSans-Bold, Salesforce Sans" font-weight="bold">web</tspan>
-                    <tspan x="474.846" y="279"> targeted </tspan>
+                    <tspan x="477.846" y="279"> targeted </tspan>
                     <tspan x="200" y="298">messages.</tspan>
                 </text>
                 <text id="In-the-past-year-Kat" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#2B2826">
                     <tspan x="200" y="359">In the past year Kat </tspan>
                     <tspan x="320.328" y="359" font-family="SalesforceSans-Bold, Salesforce Sans" font-weight="bold">least engaged</tspan>
-                    <tspan x="407.649" y="359"> with </tspan>
+                    <tspan x="410.649" y="359"> with </tspan>
                     <tspan x="440.409" y="359" font-family="SalesforceSans-Bold, Salesforce Sans" font-weight="bold">physical location</tspan>
                     <tspan x="545.215" y="359"> </tspan>
                     <tspan x="200" y="378">targeted messages.</tspan>
@@ -612,10 +612,10 @@
                         <tspan x="88" y="48" fill="#706E6B">Tracked Activity</tspan>
                         <tspan x="175.3" y="48" fill="#1570D2"> </tspan>
                         <tspan x="178.396" y="48" fill="#2B2826">browse</tspan>
-                        <tspan x="219.208" y="48" fill="#706E6B"> for Optimization Point </tspan>
+                        <tspan x="222.208" y="48" fill="#706E6B"> for Optimization Point </tspan>
                         <tspan x="350.152" y="48" fill="#2B2826">Web</tspan>
                         <tspan x="88" y="68" fill="#706E6B">Returned Action</tspan>
-                        <tspan x="179.236" y="68" fill="#2B2826"> Relevant home Content 2</tspan>
+                        <tspan x="181.236" y="68" fill="#2B2826"> Relevant home Content 2</tspan>
                         <tspan x="326.128" y="68" fill="#1570D2"></tspan>
                     </text>
                     <g id="Group-18-Copy-2" transform="translate(25.000000, 0.000000)" fill="#4BC076">
@@ -645,7 +645,7 @@
                         <tspan x="88" y="48" fill="#706E6B">Tracked Activity</tspan>
                         <tspan x="175.3" y="48" fill="#1570D2"> </tspan>
                         <tspan x="178.396" y="48" fill="#2B2826">click ad</tspan>
-                        <tspan x="219.856" y="48" fill="#706E6B"> for Optimization Point </tspan>
+                        <tspan x="222.856" y="48" fill="#706E6B"> for Optimization Point </tspan>
                         <tspan x="350.8" y="48" fill="#2B2826">Web</tspan>
                         <tspan x="88" y="68" fill="#1570D2"></tspan>
                     </text>
@@ -676,7 +676,7 @@
                         <tspan x="88" y="48" fill="#706E6B">Captured Activity</tspan>
                         <tspan x="183.736" y="48" fill="#1570D2"> </tspan>
                         <tspan x="186.832" y="48" fill="#2B2826">fill lead form</tspan>
-                        <tspan x="257.536" y="48" fill="#706E6B"> for Optimization Point </tspan>
+                        <tspan x="260.536" y="48" fill="#706E6B"> for Optimization Point </tspan>
                         <tspan x="388.48" y="48" fill="#2B2826">Web</tspan>
                         <tspan x="88" y="68" fill="#1570D2"></tspan>
                     </text>
@@ -695,7 +695,7 @@
                 </text>
                 <text id="2-Product-Purchased" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="20" font-weight="bold" fill="#2B2826">
                     <tspan x="30.421009" y="758.985851">2</tspan>
-                    <tspan x="42.621009" y="758.985851" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal"> Product Purchased</tspan>
+                    <tspan x="52.621009" y="758.985851" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal"> Product Purchased</tspan>
                 </text>
                 <text id="Avg-Spender" font-family="SalesforceSans-Light, Salesforce Sans" font-size="24" font-weight="300" fill="#2B2826">
                     <tspan x="122.780779" y="713.1">Avg Spender</tspan>
