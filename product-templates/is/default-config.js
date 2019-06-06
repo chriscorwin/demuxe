@@ -43,7 +43,7 @@ module.exports = {
 				id: 'test-and-publish',
 				href: `/monitor`,
 				lookLikeDropdown: true,
-				isActive: (activePage) => activePage === 'test_and_publish'
+				isActive: (activePage) => activePage === 'test-and-publish'
 			},
 			{
 				label: 'Configure',
