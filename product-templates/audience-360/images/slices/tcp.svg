@@ -1,4 +1,15 @@
 <svg style="margin: -10px 0 24px 12px" width="373" height="305" viewBox="0 0 373 305" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+#Oval-2 {
+    animation: grow-oval2 .6s linear backwards;
+}
+
+@keyframes grow-oval2 {
+    from {
+        stroke-dashoffset: 210;
+    }
+}
+</style>
 <g id="Total Consumer Population">
 <text id="Displaying an aggreg" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="12.712">Displaying the most common characteristics of your population</tspan></text>
 <g id="Group 41">
@@ -24,7 +35,7 @@
 </g>
 </g>
 <path id="Oval" opacity="0.5" d="M75.5 137C101.181 137 122 116.181 122 90.5C122 64.8188 101.181 44 75.5 44C49.8188 44 29 64.8188 29 90.5C29 116.181 49.8188 137 75.5 137Z" stroke="#DDDBDA" stroke-width="10"/>
-<path id="Oval 2" d="M75.5 44C49.8188 44 29 64.8188 29 90.5C29 116.181 49.8188 137 75.5 137C101.181 137 122 116.181 122 90.5" stroke="#3296ED" stroke-width="10" stroke-linecap="round"/>
+<path id="Oval-2" d="M75.5 44C49.8188 44 29 64.8188 29 90.5C29 116.181 49.8188 137 75.5 137C101.181 137 122 116.181 122 90.5" stroke="#3296ED" stroke-width="10" stroke-linecap="round" stroke-dasharray="219"/>
 <text id="75%" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" letter-spacing="0px"><tspan x="183" y="141.818">74.8% of 12.3M</tspan></text>
 <g id="Group 33.1">
 <text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="182" y="53.712">No. of people with this </tspan><tspan x="182" y="70.712">profile in your audience</tspan></text>
