@@ -1,4 +1,3 @@
-<!-- include('images/slices/dashboard.svg') -->
     <%- include('images/slices/header.svg') %>
     <div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-horizontal_x-small">
         <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
@@ -31,7 +30,7 @@
                         { label: 'Season Ticket Holders' },
                         { img: include('images/icons/einstein.svg') }
                     ],
-                    contents: include('images/slices/top-segments.svg'),
+                    contents: include('images/slices/top-segments.ejs'),
                     footer_links: [{}]
                 }) %>
             </div>
@@ -48,7 +47,7 @@
                     header_buttons: [
                         { label: 'Conversion Rate (CVR)' }
                     ],
-                    contents: include('images/slices/top-channels.svg'),
+                    contents: include('images/slices/top-channels.ejs'),
                     footer_links: [{}]
                 }) %>
             </div>
@@ -58,7 +57,7 @@
                     header_buttons: [
                         { label: 'Email' }
                     ],
-                    contents: include('images/slices/channel-engagement.svg'),
+                    contents: include('images/slices/channel-engagement.ejs'),
                     footer_links: [{}]
                 }) %>
             </div>

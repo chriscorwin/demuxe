@@ -1,4 +1,15 @@
 <svg style="margin-left: 11px; margin-top: -55px;" width="398" height="333" viewBox="0 0 398 333" fill="none" xmlns="http://www.w3.org/2000/svg">
+	    <style>
+        .growThisBar2 {
+            animation: growBar 1s ease-out forwards;
+            transform-origin: 102px center;
+        }
+
+        @-webkit-keyframes growBar {
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
+        }
+    </style>
 <g id="Top Channels">
 <g id="Gridline">
 <g id="grid7">
@@ -31,15 +42,15 @@
 <text id="$600" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="336.776" y="78.212">20%</tspan></text>
 </g>
 </g>
-<path id="Bar" d="M102 92H339V127H102V92Z" fill="#3296ED"/>
+<path id="Bar" class="growThisBar2" d="M102 92H339V127H102V92Z" fill="#3296ED"/>
 <text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="114.212">Email</tspan></text>
-<path id="Bar_2" d="M102 143H295V178H102V143Z" fill="#3296ED"/>
+<path id="Bar_2" class="growThisBar2" d="M102 143H295V178H102V143Z" fill="#3296ED"/>
 <text id="Account B" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="157.212">Push Messages</tspan></text>
-<path id="Bar_3" d="M102 195H287V231H102V195Z" fill="#3296ED"/>
+<path id="Bar_3" class="growThisBar2" d="M102 195H287V231H102V195Z" fill="#3296ED"/>
 <text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="208.212">SMS</tspan></text>
-<path id="Bar_4" d="M102 247H232V282H102V247Z" fill="#3296ED"/>
+<path id="Bar_4" class="growThisBar2" d="M102 247H232V282H102V247Z" fill="#3296ED"/>
 <text id="Account D" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="266.212">Store</tspan></text>
-<path id="Bar_5" d="M102 298H138V333H102V298Z" fill="#3296ED"/>
+<path id="Bar_5" class="growThisBar2" d="M102 298H138V333H102V298Z" fill="#3296ED"/>
 <text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="311.212">OTT Devices</tspan></text>
 <text id="Last 30 days" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1" y="46.904">Last 30 days</tspan></text>
 </g>
