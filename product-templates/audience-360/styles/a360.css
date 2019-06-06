@@ -30,4 +30,15 @@
   }
 }
 
+.slds-button.slds-button_neutral {
+  color: #000;
+  font-size: 12px;
+}
+
+.slds-button.slds-button_neutral .slds-button__icon.slds-button__icon_right {
+  color: #706e6b;
+  margin-top: -2px;
+  margin-right: -9px;
+}
+
 /*# sourceMappingURL=a360.css.map */
