@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/journey-builder/main/0010___ID=journey-canvas-for-fever___NOTES=click-push-notification-titled-welcome-and-seating.png") url("/magick-flows/journey-builder/main/0120___ID=journey-launch-modal___NOTES=click-header-activate-button=End.png") url("/magick-flows/journey-builder/assets/all__viewport-size.png") url("/magick-flows/journey-builder/assets/push-activity-summary-out___drawer-from-left.png") url("/magick-flows/journey-builder/assets/push-editor-slides-away___drawer-from-left.png") url("/magick-flows/journey-builder/assets/push-editor-slides-out___drawer-from-left.png") url("/magick-flows/journey-builder/assets/push-notification-summary-configured__drawer-from-left.png");
+  content: url("/magick-flows/journey-builder/main/010___ID=journey-canvas-for-fever___NOTES=click-push-notification-titled-welcome-and-seating.png") url("/magick-flows/journey-builder/main/020___ID=push-activity-summary-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder/main/030___ID=push-notification-summary-reset___NOTES=click-done-button.png") url("/magick-flows/journey-builder/main/040___ID=push-activity-summary-slides-away___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder/main/050___ID=journey-canvas-reset___NOTES=click-activate-button.png") url("/magick-flows/journey-builder/main/060___ID=journey-launch-modal___NOTES=click-header-activate-button=End.png") url("/magick-flows/journey-builder/assets/all__viewport-size.png") url("/magick-flows/journey-builder/assets/push-activity-summary-out___drawer-from-left.png") url("/magick-flows/journey-builder/assets/push-activity-summary-slides-away__drawer-from-left.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 3840px;
+  width: 14080px;
 }
 
 .app-switcher-one.shrink {
@@ -291,6 +291,134 @@ body.debug div#drawer-from-top--step-2::before {
   top: 0;
   width: 1280px;
   left: 5120px;
+}
+
+.app-switcher-one.be-left-3 {
+  left: -7680px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-3 {
+  left: -7680px;
+}
+
+body.debug div#drawer-from-top--step-3::before {
+  content: "Drawer #3";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-3 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 7680px;
+}
+
+.app-switcher-one.be-left-4 {
+  left: -10240px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-4 {
+  left: -10240px;
+}
+
+body.debug div#drawer-from-top--step-4::before {
+  content: "Drawer #4";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-4 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 10240px;
+}
+
+.app-switcher-one.be-left-5 {
+  left: -12800px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-5 {
+  left: -12800px;
+}
+
+body.debug div#drawer-from-top--step-5::before {
+  content: "Drawer #5";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-5 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 12800px;
+}
+
+.app-switcher-one.be-left-6 {
+  left: -15360px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-6 {
+  left: -15360px;
+}
+
+body.debug div#drawer-from-top--step-6::before {
+  content: "Drawer #6";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-6 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 15360px;
 }
 
 footer.magick-flows-stickey-footer_container {
