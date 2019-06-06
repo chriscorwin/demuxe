@@ -1,41 +1,41 @@
 @font-face {
   font-family: "Salesforce Sans";
-  src: url(fonts/SalesforceSans-Regular.woff2) format("woff2"), url(fonts/SalesforceSans-Regular.woff) format("woff");
+  src: url(/fonts/webfonts/SalesforceSans-Regular.woff2) format("woff2"), url(/fonts/webfonts/SalesforceSans-Regular.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Salesforce Sans";
-  src: url(fonts/SalesforceSans-Italic.woff2) format("woff2"), url(fonts/SalesforceSans-Italic.woff) format("woff");
+  src: url(/fonts/webfonts/SalesforceSans-Italic.woff2) format("woff2"), url(/fonts/webfonts/SalesforceSans-Italic.woff) format("woff");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Salesforce Sans";
-  src: url(fonts/SalesforceSans-BoldItalic.woff2) format("woff2"), url(fonts/SalesforceSans-BoldItalic.woff) format("woff");
+  src: url(/fonts/webfonts/SalesforceSans-BoldItalic.woff2) format("woff2"), url(/fonts/webfonts/SalesforceSans-BoldItalic.woff) format("woff");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Salesforce Sans";
-  src: url(fonts/SalesforceSans-Light.woff2) format("woff2"), url(fonts/SalesforceSans-Light.woff) format("woff");
+  src: url(/fonts/webfonts/SalesforceSans-Light.woff2) format("woff2"), url(/fonts/webfonts/SalesforceSans-Light.woff) format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Salesforce Sans";
-  src: url(fonts/SalesforceSans-LightItalic.woff2) format("woff2"), url(fonts/SalesforceSans-LightItalic.woff) format("woff");
+  src: url(/fonts/webfonts/SalesforceSans-LightItalic.woff2) format("woff2"), url(/fonts/webfonts/SalesforceSans-LightItalic.woff) format("woff");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Salesforce Icons";
-  src: url(fonts/sf-icons.woff) format("woff"), url(fonts/sf-icons.svg#sf-icons) format("svg");
+  src: url(/fonts/sf-icons.woff) format("woff"), url(/fonts/sf-icons.svg#sf-icons) format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -448,6 +448,7 @@ rect {
 }
 
 .one-glyphicon-lg {
+  margin-right: 6px;
   font-size: 20px;
 }
 
@@ -471,9 +472,17 @@ rect {
   content: "\e611";
 }
 
+.left-hand-labels .dynamic-placement {
+  text-align: left;
+}
+
 .dynamic-placement {
   will-change: transform;
   position: absolute;
   top: 0;
   left: 0;
+  width: 80px;
+  text-align: center;
 }
+
+/*# sourceMappingURL=touchpoints.css.map */

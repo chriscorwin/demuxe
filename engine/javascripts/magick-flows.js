@@ -104,7 +104,7 @@ function closeIFrame(){
 		window.location.hash = `#${clicks}`;
 	}, hashChangeTiming);
 
-	document.querySelector( '#magick-flows-iframe--1' ).classList.toggle('slds-hide');
+	document.querySelector( `#magick-flows-iframe--${clicks}` ).classList.toggle('slds-hide');
 }
 
 
@@ -256,16 +256,11 @@ function locationHashChanged(event) {
 	let indexOfEject = currentStepMetaData.findIndex(testForEject);
 
 	if ( hasEject === true ) {
-		// console.log(`locals.productTemplate: `, locals.productTemplate);
-		// console.log(`locals.brandTheme: `, locals.brandTheme);
-		// console.log(`currentStepMetaData[indexOfEject]: `, currentStepMetaData[indexOfEject]);
 
 		let newUrlSlugForEject = currentStepMetaData[indexOfEject].split('--')[1];
 		let newUrlSlugForEjectSplitAgain = newUrlSlugForEject.split('-')[0] + '=' + newUrlSlugForEject.split('-')[1];
-		console.log(`newUrlSlugForEjectSplitAgain: `, newUrlSlugForEjectSplitAgain);
 		window.location = `/?${newUrlSlugForEjectSplitAgain}`;
 		return false;
-
 	}
 
 

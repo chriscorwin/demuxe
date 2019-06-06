@@ -41,7 +41,7 @@
 		</div>
 	</div>
 	<% if (!locals.isRight && locals.pageContents) { %>
-	<div class="slds-col slds-p-around_medium">
+	<div class="<%= locals.pageClasses || 'slds-col slds-p-around_medium' %>">
 		<%- include(`${locals.pageContents}`) %>
 	</div>
 	<% } %>

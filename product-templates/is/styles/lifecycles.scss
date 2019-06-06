@@ -63,8 +63,13 @@ label {
 }
 
 .journeys-label-container {
-		width: 160px;
+		width: 107px;
+		height: 27px;
 		text-align: center;
+		border: 1px solid #C7D9EF;
+		border-radius: 43px;
+		background: #FFF;
+		padding-top: 3px;
 }
 
 .journeys-label {
@@ -86,7 +91,7 @@ label {
 
 .lifecycle-stage-label {
 		font-family: 'Salesforce Sans',Arial,sans-serif;
-		font-size: 16px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: 400;
 		cursor: pointer;
@@ -94,10 +99,6 @@ label {
 		line-height: 19px;
 		max-width: 105px;
 		height: 19px;
-}
-
-.graph {
-		width: 100%
 }
 
 .flow-container {

@@ -16,7 +16,7 @@ exec(`md2gslides slides/${config.productTemplate}.${config.demoVenue}.${config.b
 		console.warn(`stderr: ${stderr}`);
 	}
 
-	const presentationIdRegex = /d\/(\w*)/;
+	const presentationIdRegex = /d\/(.*)\)/;
 	const presentationId = stdout.match(presentationIdRegex)[1];
 
 	console.log(`

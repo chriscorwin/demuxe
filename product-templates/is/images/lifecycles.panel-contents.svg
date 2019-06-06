@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="302px" height="537px" viewBox="0 0 302 537" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Michael-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Lifecycle-Stages" transform="translate(-12.000000, -162.000000)">
+            <g id="Group-10" transform="translate(12.000000, 103.000000)">
+                <g id="Group-7">
+                    <g id="Group-6" transform="translate(1.000000, 58.899511)">
+                        <text id="LENS" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#706E6B">
+                            <tspan x="16" y="68.0414724">LENS</tspan>
+                        </text>
+                        <text id="SEQUENCE" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#706E6B">
+                            <tspan x="16" y="159.600489">SEQUENCE</tspan>
+                        </text>
+                        <text id="TIME-PERIOD" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#706E6B">
+                            <tspan x="17" y="374.878317">TIME PERIOD</tspan>
+                        </text>
+                        <text id="Lifecycle-Span:" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#706E6B">
+                            <tspan x="26" y="188.600489">Lifecycle Span:</tspan>
+                        </text>
+                        <text id="Activity-Order:" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#706E6B">
+                            <tspan x="27" y="272.663489">Activity Order:</tspan>
+                        </text>
+                        <g id="picklist-copy-2" transform="translate(16.000000, 0.000000)" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <text id="Michael-Page">
+                                <tspan x="0" y="15">Michael Page</tspan>
+                            </text>
+                        </g>
+                        <g id="picklist-copy-3" transform="translate(17.000000, 86.877984)" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <text id="No-Lens-Applied">
+                                <tspan x="0" y="15">No Lens Applied</tspan>
+                            </text>
+                        </g>
+                        <g id="picklist-copy-4" transform="translate(28.000000, 214.100489)" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <text id="All">
+                                <tspan x="0" y="15">All</tspan>
+                            </text>
+                        </g>
+                        <g id="picklist-copy-5" transform="translate(28.000000, 298.100489)" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <text id="Activity-Order">
+                                <tspan x="0" y="15">Activity Order</tspan>
+                            </text>
+                        </g>
+                        <g id="picklist-copy-6" transform="translate(17.000000, 400.100489)" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <text id="Last-4-weeks" fill="#2B2826">
+                                <tspan x="0" y="15">Last 4 weeks</tspan>
+                            </text>
+                            <text id="Compare-previous-per" fill="#0070D2">
+                                <tspan x="0" y="54.2191101">Compare previous period</tspan>
+                            </text>
+                        </g>
+                        <path d="M0,32.6004886 L300,32.6004886" id="Line-2" stroke="#D8DDE6" stroke-linecap="square"></path>
+                        <path d="M0,120.600489 L300,120.600489" id="Line-2-Copy" stroke="#D8DDE6" stroke-linecap="square"></path>
+                        <path d="M0,333.600489 L300,333.600489" id="Line-2-Copy-3" stroke="#D8DDE6" stroke-linecap="square"></path>
+                        <g id="icons/utility/chevronright" transform="translate(262.000000, 0.100489)" fill="#706E6B" fill-rule="nonzero">
+                            <path d="M1.87891441,0.125615764 L9.81210856,8.08128079 C10.0626305,8.33251232 10.0626305,8.66748768 9.81210856,8.91871921 L1.87891441,16.8743842 C1.62839248,17.0418719 1.21085595,17.0418719 0.960334029,16.8743842 L0.12526096,16.0369458 C-0.0417536534,15.7857143 -0.0417536534,15.3669951 0.12526096,15.1157635 L6.47181628,8.91871921 C6.6388309,8.66748768 6.6388309,8.33251232 6.47181628,8.08128079 L0.208768267,1.88423645 C-0.0417536534,1.63300493 -0.0417536534,1.21428571 0.208768267,0.963054187 L1.04384134,0.125615764 C1.29436326,-0.0418719212 1.62839248,-0.0418719212 1.87891441,0.125615764 Z" id="Shape"></path>
+                        </g>
+                        <g id="icons/utility/chevronright-copy" transform="translate(262.000000, 87.100489)" fill="#706E6B" fill-rule="nonzero">
+                            <path d="M1.87891441,0.125615764 L9.81210856,8.08128079 C10.0626305,8.33251232 10.0626305,8.66748768 9.81210856,8.91871921 L1.87891441,16.8743842 C1.62839248,17.0418719 1.21085595,17.0418719 0.960334029,16.8743842 L0.12526096,16.0369458 C-0.0417536534,15.7857143 -0.0417536534,15.3669951 0.12526096,15.1157635 L6.47181628,8.91871921 C6.6388309,8.66748768 6.6388309,8.33251232 6.47181628,8.08128079 L0.208768267,1.88423645 C-0.0417536534,1.63300493 -0.0417536534,1.21428571 0.208768267,0.963054187 L1.04384134,0.125615764 C1.29436326,-0.0418719212 1.62839248,-0.0418719212 1.87891441,0.125615764 Z" id="Shape"></path>
+                        </g>
+                        <g id="icons/utility/chevronright-copy-2" transform="translate(262.000000, 212.100489)" fill="#706E6B" fill-rule="nonzero">
+                            <path d="M1.87891441,0.125615764 L9.81210856,8.08128079 C10.0626305,8.33251232 10.0626305,8.66748768 9.81210856,8.91871921 L1.87891441,16.8743842 C1.62839248,17.0418719 1.21085595,17.0418719 0.960334029,16.8743842 L0.12526096,16.0369458 C-0.0417536534,15.7857143 -0.0417536534,15.3669951 0.12526096,15.1157635 L6.47181628,8.91871921 C6.6388309,8.66748768 6.6388309,8.33251232 6.47181628,8.08128079 L0.208768267,1.88423645 C-0.0417536534,1.63300493 -0.0417536534,1.21428571 0.208768267,0.963054187 L1.04384134,0.125615764 C1.29436326,-0.0418719212 1.62839248,-0.0418719212 1.87891441,0.125615764 Z" id="Shape"></path>
+                        </g>
+                        <g id="icons/utility/chevronright-copy-3" transform="translate(262.000000, 295.100489)" fill="#706E6B" fill-rule="nonzero">
+                            <path d="M1.87891441,0.125615764 L9.81210856,8.08128079 C10.0626305,8.33251232 10.0626305,8.66748768 9.81210856,8.91871921 L1.87891441,16.8743842 C1.62839248,17.0418719 1.21085595,17.0418719 0.960334029,16.8743842 L0.12526096,16.0369458 C-0.0417536534,15.7857143 -0.0417536534,15.3669951 0.12526096,15.1157635 L6.47181628,8.91871921 C6.6388309,8.66748768 6.6388309,8.33251232 6.47181628,8.08128079 L0.208768267,1.88423645 C-0.0417536534,1.63300493 -0.0417536534,1.21428571 0.208768267,0.963054187 L1.04384134,0.125615764 C1.29436326,-0.0418719212 1.62839248,-0.0418719212 1.87891441,0.125615764 Z" id="Shape"></path>
+                        </g>
+                        <g id="icons/utility/chevronright-copy-4" transform="translate(262.000000, 397.100489)" fill="#706E6B" fill-rule="nonzero">
+                            <path d="M1.87891441,0.125615764 L9.81210856,8.08128079 C10.0626305,8.33251232 10.0626305,8.66748768 9.81210856,8.91871921 L1.87891441,16.8743842 C1.62839248,17.0418719 1.21085595,17.0418719 0.960334029,16.8743842 L0.12526096,16.0369458 C-0.0417536534,15.7857143 -0.0417536534,15.3669951 0.12526096,15.1157635 L6.47181628,8.91871921 C6.6388309,8.66748768 6.6388309,8.33251232 6.47181628,8.08128079 L0.208768267,1.88423645 C-0.0417536534,1.63300493 -0.0417536534,1.21428571 0.208768267,0.963054187 L1.04384134,0.125615764 C1.29436326,-0.0418719212 1.62839248,-0.0418719212 1.87891441,0.125615764 Z" id="Shape"></path>
+                        </g>
+                        <path d="M0,503.362989 L300,503.362989" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <text id="action" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#006DD5">
+                            <tspan x="115.379" y="535.862989">Save as Lens</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
