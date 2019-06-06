@@ -34,7 +34,7 @@ const web = {
 		],
 		flows: [
 			{ type: 'in', width: 8 },
-			{ type: 'off', width: 4 },
+			{ type: 'off', width: 6 },
 			{ type: 'forward', path: [[E, 3.2]], width: 2},
 		]
 	},
