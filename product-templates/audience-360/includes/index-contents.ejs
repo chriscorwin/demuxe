@@ -1,4 +1,5 @@
-
+<!-- include('images/slices/dashboard.svg') -->
+    <%- include('images/slices/header.svg') %>
     <div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-horizontal_large">
         <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
             <%- include('components/panel-box.ejs', {
@@ -9,17 +10,14 @@
         </div>
         <div class="slds-col slds-p-horizontal_x-small slds-size_2-of-3">
             <%- include('components/panel-box.ejs', {
-                title: 'Audience Profile',
-                header_buttons: [
-                    { icon: 'icons/utility-sprite/svg/symbols.svg#einstein' }
-                ],
-                contents: '<img src="images/conversion_path_analysis.png" style="margin: 0 auto;" />',
+                title: 'Conversion Path Analysis',
+                contents: include('images/slices/cpa.svg'),
                 footer_links: [{}]
             }) %>
         </div>
     </div>
 
-    <div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-m-top_medium slds-p-horizontal_large">
+    <!--div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-m-top_medium slds-p-horizontal_large">
         <div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
             <%- include('components/panel-box.ejs', {
                 title: 'Top Segments',
@@ -44,5 +42,5 @@
                 footer_links: [{}]
             }) %>
         </div>
-    </div>
+    </div-->
 

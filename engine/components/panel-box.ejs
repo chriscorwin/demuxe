@@ -5,7 +5,7 @@
 			<% locals.header_buttons && locals.header_buttons.forEach((button, i, buttons) => {
 				// const icon = button.icon ? `<img class="slds-button__icon slds-button__icon_right" src="${button.icon}" />` : '<img class="slds-button__icon slds-button__icon_right" src="/icons/utility-sprite/svg/symbols.svg#down" />';
 
-				const icon = `
+				const icon = button.img || `
 				<svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
 					<use xlink:href="${button.icon || '/icons/utility-sprite/svg/symbols.svg#down'}"></use>
 				</svg>
