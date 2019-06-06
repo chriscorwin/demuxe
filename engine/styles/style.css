@@ -92,6 +92,7 @@ body.magick-flows-dashboard .magick-flows-dashboard {
   background-repeat: repeat-x;
   background-position: 0 90px;
   background-color: #1b5f9e;
+  background-attachment: fixed;
 }
 
 .slds-brand-band.slds-brand-band_medium:after {
