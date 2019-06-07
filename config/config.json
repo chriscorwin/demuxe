@@ -12,14 +12,15 @@
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
+	"herokupipeline": "https://dashboard.heroku.com/pipelines/97d863d0-ea96-4a69-97dc-b6909895a3b6",
 	"production": {
-		"host": "https://cnx19keynote-audience-studio-fever.herokuapp.com/"
+		"host": "https://cnx19-mc-fever.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19keynote-audience-studio-fever-qa.herokuapp.com/"
+		"host": "https://cnx19-mc-fever-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://cnx19keynote-audience-studio-fever-dev.herokuapp.com/"
+		"host": "https://cnx19-mc-fever-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
