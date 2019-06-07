@@ -1,0 +1,32 @@
+<div id="tcp-here"><%- include('images/slices/tcp-blank.svg') %></div>
+<script>
+	const addTCPSVG = (data) => (`<%- include('images/slices/tcp.svg') %>`);
+
+	let triggeredTCPGraphAnimation = false;
+	const animateTCPGraph = () => {
+		if (window.scrollY > 1 && !triggeredTCPGraphAnimation) {
+			triggeredTCPGraphAnimation = true;
+
+			document.querySelector('#tcp-here').innerHTML = addTCPSVG();
+
+			const audience = document.querySelector('#numberAudience');
+
+			audience.textContent = '0M';
+
+			let audienceNumber = .5;
+
+			const increase = () => {
+				if (audienceNumber < 8.5) {
+					audienceNumber += .2;
+
+					audience.textContent = `${audienceNumber.toFixed(1)}M`;
+					window.setTimeout(increase, 30);
+				}
+			}
+
+			increase();
+		}
+	};
+
+	document.addEventListener("scroll", animateTCPGraph);
+</script>
