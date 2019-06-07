@@ -1,0 +1,15 @@
+<div id="cpa-here"><%- include('images/slices/cpa-blank.svg') %></div>
+<script>
+	const addCPASVG = (data) => (`<%- include('images/slices/cpa.svg') %>`);
+
+	let triggeredCPAGraphAnimation = false;
+	const animateCPAGraph = () => {
+		if (window.scrollY > 1 && !triggeredCPAGraphAnimation) {
+			triggeredCPAGraphAnimation = true;
+
+			document.querySelector('#cpa-here').innerHTML = addCPASVG();
+		}
+	};
+
+	document.addEventListener("scroll", animateCPAGraph);
+</script>
