@@ -1,0 +1,44 @@
+<svg style="margin-left: 10px; margin-top: -50px; margin-bottom: 12px;" width="366" height="326" viewBox="0 0 366 326" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <style>
+
+            animation: flipHeads 1s ease-out forwards;
+            transform-origin: 140px center;
+        }
+
+        @-webkit-keyframes flipHeads {
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
+        }
+    </style>
+
+<g id="Top Segments">
+<g id="Group 55">
+<g id="Gridline">
+<g id="grid7">
+<path id="Path 2" d="M138.643 81.6184V326" stroke="#DDDBDA"/>
+<text id="$0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="130.235" y="73.212">1k</tspan></text>
+</g>
+<g id="grid6">
+<path id="Path 2_2" d="M212.487 81.6184V326" stroke="#DDDBDA"/>
+<text id="$200" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="203.8" y="73.212">7.1k</tspan></text>
+</g>
+<g id="grid3">
+<path id="Path 2_3" d="M276.536 81.6184V326" stroke="#DDDBDA"/>
+<text id="$400" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="270.097" y="73.212">15k</tspan></text>
+</g>
+<g id="grid1">
+<path id="Path 2_4" d="M344.061 81.6184V326" stroke="#DDDBDA"/>
+<text id="$600" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="329" y="75.212">22.3k</tspan></text>
+</g>
+</g>
+
+<text id="Account A" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="107.212">Super Fans</tspan></text>
+
+<text id="Account B" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="155.212">Families</tspan></text>
+
+<text id="Account C" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="207.212">Sports Enthusiasts</tspan></text>
+<text id="Last 30 days" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1" y="42.904">Last 30 days</tspan></text>
+</g>
+</g>
+</svg>

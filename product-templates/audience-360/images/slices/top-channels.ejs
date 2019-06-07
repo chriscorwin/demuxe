@@ -1,12 +1,10 @@
-<div id="top-channels-here"></div>
+<div id="top-channels-here"><%- include('images/slices/top-channels-blank.svg') %></div>
 <script>
 	const addChannelsSVG = (data) => (`<%- include('images/slices/top-channels.svg') %>`);
 
-	document.querySelector('#top-channels-here').innerHTML = addChannelsSVG();
-
 	let triggeredChannelsGraphAnimation = false;
 	const animateChannelsGraph = () => {
-		if (window.scrollY > 400 && !triggeredChannelsGraphAnimation) {
+		if (window.scrollY > 700 && !triggeredChannelsGraphAnimation) {
 			triggeredChannelsGraphAnimation = true;
 
 			document.querySelector('#top-channels-here').innerHTML = addChannelsSVG();

@@ -1,12 +1,10 @@
-<div id="channel-engagement-here"></div>
+<div id="channel-engagement-here"><%- include('images/slices/channel-engagement-blank.svg') %></div>
 <script>
 	const addChannelEngagementSVG = (data) => (`<%- include('images/slices/channel-engagement.svg') %>`);
 
-	document.querySelector('#channel-engagement-here').innerHTML = addChannelEngagementSVG();
-
 	let triggeredChannelEngagementGraphAnimation = false;
 	const animateChannelEngagementGraph = () => {
-		if (window.scrollY > 400 && !triggeredChannelEngagementGraphAnimation) {
+		if (window.scrollY > 700 && !triggeredChannelEngagementGraphAnimation) {
 			triggeredChannelEngagementGraphAnimation = true;
 
 			document.querySelector('#channel-engagement-here').innerHTML = addChannelEngagementSVG();
