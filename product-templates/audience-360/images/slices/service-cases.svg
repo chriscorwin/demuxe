@@ -1,4 +1,39 @@
 <svg style="margin-left: 11px; margin-top: -15px;" width="364" height="314" viewBox="0 0 364 314" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+	.fill-in {
+		animation: send-lines 1s linear backwards;
+		animation-play-state: paused;
+		fill-opacity: 0.15;
+		animation-delay: 1s;
+	}
+
+	@keyframes send-lines {
+		from {
+			fill-opacity: 0;
+		}
+
+		to {
+			fill-opacity: 0.15;
+		}
+	}
+
+	.draw-in {
+		animation: draw-in-animation 1s linear backwards;
+		animation-play-state: paused;
+		stroke-dasharray: 330px;
+	}
+
+	@keyframes draw-in-animation {
+		from {
+
+			stroke-dashoffset: 330px;
+		}
+
+		to {
+			stroke-dashoffset: 0px;
+		}
+	}
+</style>
 <g id="Service Cases">
 <g id="Group 33.1">
 <text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="19.7763" y="48.712">Total Cases</tspan></text>
@@ -53,14 +88,14 @@
 <text id="Apr" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="321.033" y="273.222">Apr</tspan></text>
 </g>
 <g id="Line">
-<path id="series fill" d="M62.3442 255.87L62.3442 192.336L82.6557 186.164L101.177 181.935L120.596 181.739L139.617 169.744L158.733 172.155L177.754 158.126L197.268 168.103L215.593 168.206L234.81 166.488L254.128 160.588L273.006 151.781L291.94 141.564L311.471 144.668L330.604 170.608L350.136 173.915L350.028 255.87H62.3442Z" fill="#77B9F2" fill-opacity="0.3"/>
-<path id="series" d="M62.3442 192.204L82.6557 186.092L101.177 181.904L120.596 181.71L139.617 169.831L158.733 172.219L177.754 158.326L197.268 168.365L215.593 168.468L234.81 166.766L254.128 160.923L273.006 152.202L291.94 142.084L311.471 145.158L330.604 171.058L350.136 174.545" stroke="#3296ED" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="series fill" class="fill-in" d="M62.3442 255.87L62.3442 192.336L82.6557 186.164L101.177 181.935L120.596 181.739L139.617 169.744L158.733 172.155L177.754 158.126L197.268 168.103L215.593 168.206L234.81 166.488L254.128 160.588L273.006 151.781L291.94 141.564L311.471 144.668L330.604 170.608L350.136 173.915L350.028 255.87H62.3442Z" fill="#77B9F2" fill-opacity="0.3"/>
+<path id="series" class="draw-in" d="M62.3442 192.204L82.6557 186.092L101.177 181.904L120.596 181.71L139.617 169.831L158.733 172.219L177.754 158.326L197.268 168.365L215.593 168.468L234.81 166.766L254.128 160.923L273.006 152.202L291.94 142.084L311.471 145.158L330.604 171.058L350.136 174.545" stroke="#3296ED" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 </g>
 <g id="Line_2">
-<path id="series fill_2" d="M61.6836 255.879L61.6836 214.343L82.0507 205.121L100.622 198.802L120.095 198.51L139.168 180.586L158.336 184.189L177.409 163.772L196.977 173.869L215.352 174.569L234.622 172.001L253.993 169.725L272.922 156.567L291.908 147.296L311.493 148.119L330.678 172.289L350.263 175.228V255.879H61.6836Z" fill="#9D53F2" fill-opacity="0.15"/>
-<path id="series_2" d="M61.6836 214.471L82.0507 205.239L100.622 198.913L120.095 198.62L139.168 181.222L158.336 184.829L177.409 163.844L196.977 173.931L215.352 174.086L234.622 171.515L253.993 169.775L272.922 156.603L291.908 146.77L311.493 147.598L330.678 172.865L350.263 175.723" stroke="#9D53F2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="series_fill_2" class="fill-in" d="M61.6836 255.879L61.6836 214.343L82.0507 205.121L100.622 198.802L120.095 198.51L139.168 180.586L158.336 184.189L177.409 163.772L196.977 173.869L215.352 174.569L234.622 172.001L253.993 169.725L272.922 156.567L291.908 147.296L311.493 148.119L330.678 172.289L350.263 175.228V255.879H61.6836Z" fill="#9D53F2" fill-opacity=""/>
+<path id="series_2" class="draw-in" d="M61.6836 214.471L82.0507 205.239L100.622 198.913L120.095 198.62L139.168 181.222L158.336 184.829L177.409 163.844L196.977 173.931L215.352 174.086L234.622 171.515L253.993 169.775L272.922 156.603L291.908 146.77L311.493 147.598L330.678 172.865L350.263 175.723" stroke="#9D53F2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 <g id="Group 51">

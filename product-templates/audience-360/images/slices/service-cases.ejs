@@ -1,0 +1,11 @@
+<div id="service-cases-here"><%- include('images/slices/service-cases.svg') %></div>
+<script>
+	let triggeredServiceCasesGraphAnimation = false;
+	const animateServiceCasesGraph = () => {
+		if (window.scrollY > 800 && !triggeredServiceCasesGraphAnimation) {
+			document.querySelectorAll('.fill-in, .draw-in').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+	};
+
+	document.addEventListener("scroll", animateServiceCasesGraph);
+</script>
