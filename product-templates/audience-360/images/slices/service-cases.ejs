@@ -3,6 +3,8 @@
 	let triggeredServiceCasesGraphAnimation = false;
 	const animateServiceCasesGraph = () => {
 		if (window.scrollY > 800 && !triggeredServiceCasesGraphAnimation) {
+			triggeredServiceCasesGraphAnimation = true;
+
 			document.querySelectorAll('.fill-in, .draw-in').forEach(elm => elm.style.animationPlayState = 'running');
 		}
 	};
