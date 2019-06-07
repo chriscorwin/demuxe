@@ -14,14 +14,14 @@
 
 			audience.textContent = '0M';
 
-			let audienceNumber = .5;
+			let audienceNumber = .1;
 
 			const increase = () => {
-				if (audienceNumber < 8.5) {
-					audienceNumber += .2;
+				if (audienceNumber < 1.56) {
+					audienceNumber += .01;
 
-					audience.textContent = `${audienceNumber.toFixed(1)}M`;
-					window.setTimeout(increase, 30);
+					audience.textContent = `${audienceNumber.toFixed(2)}M`;
+					window.setTimeout(increase, 10);
 				}
 			}
 
