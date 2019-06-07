@@ -1,14 +1,4 @@
 <svg style="margin-left: 13px; margin-top: -13px;" width="358" height="309" viewBox="0 0 358 309" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<style>
-        .growCircle {
-            animation: growCircle 2s ease-out forwards;
-            transform-origin: 102px center;
-        }
-
-        @-webkit-keyframes growCircle {
-          from { r: 0; }
-        }
-    </style>
 <g id="Consent across Channels">
 <text id="Updated a minute ago" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="11.904">Updated a minute ago</tspan></text>
 <path id="ygridlin6" opacity="0.5" d="M57.0044 43.9595H348.996" stroke="#DDDBDA" stroke-linecap="square"/>
@@ -25,16 +15,12 @@
 <path id="ygridlin1" opacity="0.5" d="M57.001 232.445H348.997" stroke="#DDDBDA" stroke-linecap="square"/>
 <text id="Number of Employees" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="132.066" y="276.212">Consented Population</tspan></text>
 <text id="Sales" transform="rotate(-90)" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="240.212">Total Addressable Population</tspan></text>
-<circle class="growCircle" cx="308" cy="100" r="10" fill="#3296ED"/>
 <text id="10_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="64" y="249.212">10</tspan></text>
 <text id="20_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="101.449" y="250.28">20</tspan></text>
-<circle class="growCircle" cx="103" cy="60" r="10" fill="#26ABA4"/>
 <text id="30_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="135.803" y="250.273">30</tspan></text>
-<circle class="growCircle" cx="126" cy="138" r="10" fill="#9D53F2"/>
 <text id="40_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="169.479" y="250.268">40</tspan></text>
 <text id="50_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="203.125" y="250.283">50</tspan></text>
 <text id="60" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="236.801" y="249.212">60</tspan></text>
-<circle class="growCircle" cx="222" cy="176" r="10" fill="#F7A452"/>
 <text id="70" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="269.751" y="249.274">70</tspan></text>
 <text id="80" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="303.759" y="250.274">80</tspan></text>
 <text id="100" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="335" y="250.212">100</tspan></text>
