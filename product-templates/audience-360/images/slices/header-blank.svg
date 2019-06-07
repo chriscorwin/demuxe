@@ -1,43 +1,4 @@
 <svg style="margin: 0 0 10px 0;" width="1250" height="125" viewBox="0 0 1260 125" fill="none" xmlns="http://www.w3.org/2000/svg">
-<style>
-	.makeFairBckgd {
-		animation: make-fair-bkg .5s linear;
-		fill: #FFB75D;
-	}
-
-	@keyframes make-fair-bkg {
-	    from {
-	        fill: #C23934;
-	    }
-	}
-
-	.makeFair {
-		animation: make-fair .5s linear;
-		fill: #3E3E3C;
-	}
-
-	@keyframes make-fair {
-	    from {
-	        fill: #FFF;
-	    }
-	}
-
-	#Rectangle192 {
-		animation: needle-up 1s linear forwards;
-		transform-origin:  1052px 85px;
-	}
-
-	@keyframes needle-up {
-		from {
-			transform: rotate(-90deg);
-		}
-
-		to {
-			transform: rotate(0deg);
-		}
-	}
-</style>
-
 <g id="Page Header">
 <g id="Card" filter="url(#filter0_d)">
 <rect x="2" width="1256" height="121" rx="4" fill="white"/>
@@ -60,8 +21,8 @@
 <path id="Oval 84 Copy 3_2" d="M1072.88 86.6204C1072.88 85.7215 1072.82 84.835 1072.72 83.9641C1072.14 79.4229 1070.13 75.3024 1067.11 72.0278C1065.24 69.9938 1062.98 68.2862 1060.45 67.0067" stroke="#04844B" stroke-width="7" stroke-linecap="round"/>
 <path id="Oval 84 Copy 3_3" d="M1039.64 67.595C1042.93 65.9387 1046.67 65.0001 1050.65 65.0001C1053.67 65.0001 1056.55 65.5398 1059.2 66.5228C1060.74 67.0963 1061.22 67.4048 1062.58 68.261" stroke="#FFB75D" stroke-width="7"/>
 </g>
-<g id="Needle">
-<path id="Rectangle192" fill-rule="evenodd" clip-rule="evenodd" d="M1052.87 87.9067C1053 89.0235 1052.12 90 1051 90V90C1049.88 90 1049 89.0235 1049.13 87.9067L1051 71L1052.87 87.9067Z" fill="#3E3E3C"/>
+<g id="Needle" >
+<path transform="rotate(-90 1052 85)" id="Rectangle 192" fill-rule="evenodd" clip-rule="evenodd" d="M1052.87 87.9067C1053 89.0235 1052.12 90 1051 90V90C1049.88 90 1049 89.0235 1049.13 87.9067L1051 71L1052.87 87.9067Z" fill="#3E3E3C"/>
 </g>
 </g>
 </g>
@@ -74,11 +35,11 @@
 <g id="Group 31.1">
 <text id="AVG. ORDER VALUE_3" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="795.314" y="46.712">Avg. Satisfaction Score</tspan></text>
 </g>
-<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan id="satisfactionScore" x="815.202" y="90.785">71.7%</tspan></text>
+<text  fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan id="satisfactionScoreBlank" x="815.202" y="90.785">0%</tspan></text>
 </g>
 <g id="badge">
-<rect id="FairBckgd" x="760" y="68" width="47" height="21" rx="10.5" fill="#C23934"/>
-<text id="Fair" fill="#fff" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="10" font-weight="bold" letter-spacing="0px"><tspan x="774.265" y="81.92">Poor</tspan></text>
+<rect id="bkgd [4 8]" x="760" y="68" width="47" height="21" rx="10.5" fill="#C23934"/>
+<text id="Fair" fill="#FFF" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="10" font-weight="bold" letter-spacing="0px"><tspan x="774.265" y="81.92">Poor</tspan></text>
 </g>
 </g>
 <defs>

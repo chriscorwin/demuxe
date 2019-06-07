@@ -1,0 +1,41 @@
+<div id="header-here"><%- include('images/slices/header-blank.svg') %></div>
+<script>
+	const addHeaderSVG = (data) => (`<%- include('images/slices/header.svg') %>`);
+
+	let triggeredHeaderGraphAnimation = false;
+	const animateHeaderGraph = () => {
+		if (window.scrollY > 1 && !triggeredHeaderGraphAnimation) {
+			triggeredHeaderGraphAnimation = true;
+
+			document.querySelector('#header-here').innerHTML = addHeaderSVG();
+
+			const satisfactionScore = document.querySelector('#satisfactionScore');
+
+			satisfactionScore.textContent = '0%';
+
+			let satisfactionScoreNumber = .1;
+
+			const increase = () => {
+				if (satisfactionScoreNumber < 71) {
+					satisfactionScoreNumber += .3;
+
+					window.setTimeout(increase, 2);
+				} else {
+					satisfactionScoreNumber = 71.7;
+				}
+
+				if (satisfactionScoreNumber > 20) {
+					document.querySelector('#FairBckgd').classList.add('makeFairBckgd');
+					document.querySelector('#Fair').classList.add('makeFair');
+					document.querySelector('#Fair tspan').textContent = 'Fair';
+				}
+
+				satisfactionScore.textContent = `${satisfactionScoreNumber.toFixed(1)}%`;
+			}
+
+			increase();
+		}
+	};
+
+	document.addEventListener("scroll", animateHeaderGraph);
+</script>
