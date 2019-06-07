@@ -1,6 +1,6 @@
 {
-	"demoName": "Fever CNX 2019 Keynote",
-	"brandTheme": "fever",
+	"demoName": "Michael Page CNX 2019 Keynote",
+	"brandTheme": "michael-page",
 	"productTemplate": "audience-studio",
 	"demoVenue": "cnx19keynote",
 	"demoVersion": "0.1",
@@ -12,14 +12,15 @@
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
+	"herokupipeline": "https://dashboard.heroku.com/pipelines/097ebecc-c076-4cf1-a368-daff5feead82",
 	"production": {
-		"host": "https://cnx19keynote-audience-studio-fever.herokuapp.com/"
+		"host": "https://cnx19-mc-mp.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19keynote-audience-studio-fever-qa.herokuapp.com/"
+		"host": "https://cnx19-mc-mp-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://cnx19keynote-audience-studio-fever-dev.herokuapp.com/"
+		"host": "https://cnx19-mc-mp-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
