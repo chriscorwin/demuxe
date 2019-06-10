@@ -34,15 +34,15 @@
 <text id="$600" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="349.776" y="54.212">20%</tspan></text>
 </g>
 </g>
-<path id="Bar" d="M115 68H352V103H115V68Z" fill="#3296ED"/>
+<path class="growTopChannels" id="Bar" d="M115 68H352V103H115V68Z" fill="#3296ED"/>
 <text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="23" y="90.212">Email</tspan></text>
-<path id="Bar_2" d="M115 119H308V154H115V119Z" fill="#3296ED"/>
+<path class="growTopChannels" id="Bar_2" d="M115 119H308V154H115V119Z" fill="#3296ED"/>
 <text id="Account B" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="23" y="139.212">Push Messages</tspan></text>
-<path id="Bar_3" d="M115 171H300V207H115V171Z" fill="#3296ED"/>
+<path class="growTopChannels" id="Bar_3" d="M115 171H300V207H115V171Z" fill="#3296ED"/>
 <text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="23" y="189.212">SMS</tspan></text>
-<path id="Bar_4" d="M115 223H245V258H115V223Z" fill="#3296ED"/>
+<path class="growTopChannels" id="Bar_4" d="M115 223H245V258H115V223Z" fill="#3296ED"/>
 <text id="Account D" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="23" y="243.212">Store</tspan></text>
-<path id="Bar_5" d="M115 274H151V309H115V274Z" fill="#3296ED"/>
+<path class="growTopChannels" id="Bar_5" d="M115 274H151V309H115V274Z" fill="#3296ED"/>
 <text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="23" y="294.212">OTT Devices</tspan></text>
 <text id="Last 30 days" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="24" y="22.904">Last 30 days</tspan></text>
 </g>

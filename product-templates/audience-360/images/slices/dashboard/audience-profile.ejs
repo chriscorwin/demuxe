@@ -1,0 +1,43 @@
+<style>
+#Oval-2 {
+    animation: grow-oval2 2s linear;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 50;
+    transform: scaleX(-1);
+    transform-origin: 94px 110px;
+    animation-play-state: paused;
+}
+
+@keyframes grow-oval2 {
+    from {
+        stroke-dashoffset: 50;
+    }
+}
+</style>
+<div id="audience-profile-here"><%- include('images/audience-profile.svg') %></div>
+<script>
+	let triggeredAudienceProfileGraphAnimation = false;
+	const animateAudienceProfileGraph = () => {
+		triggeredAudienceProfileGraphAnimation = true;
+
+		const audience = document.querySelector('#numberAudience');
+
+		audience.textContent = '0M';
+
+		let audienceNumber = .1;
+
+		const increase = () => {
+			if (audienceNumber < 1.2) {
+				audienceNumber += .01;
+
+				audience.textContent = `${audienceNumber.toFixed(2)}M`;
+				window.setTimeout(increase, 14);
+			}
+		}
+
+		increase();
+
+		document.querySelectorAll('#Oval-2').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+</script>
+

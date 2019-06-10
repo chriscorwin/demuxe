@@ -23,11 +23,11 @@
 <path id="Shape_4" fill-rule="evenodd" clip-rule="evenodd" d="M203.235 304.461C202.016 305.68 200.12 305.68 198.901 304.461C195.244 300.668 188.336 293.355 188.336 293.355C185.221 290.104 185.221 284.822 188.336 281.571C189.826 280.081 191.858 279.133 194.025 279.133C196.192 279.133 198.088 279.946 199.578 281.571L200.255 282.384C200.661 282.79 201.474 282.79 201.88 282.384L202.422 281.707C204.047 280.081 205.944 279.133 208.111 279.133C210.142 279.133 212.174 279.946 213.664 281.571C216.779 284.822 216.779 290.104 213.664 293.355C213.664 293.355 206.892 300.668 203.235 304.461V304.461Z" fill="#919191"/>
 </g>
 <path id="Oval" opacity="0.5" d="M93.5 140C119.181 140 140 119.181 140 93.5C140 67.8188 119.181 47 93.5 47C67.8188 47 47 67.8188 47 93.5C47 119.181 67.8188 140 93.5 140Z" stroke="#DDDBDA" stroke-width="10"/>
-<path id="Oval 2" d="M94 47C106.399 47 117.664 51.8525 126 59.7619" stroke="#3296ED" stroke-width="10" stroke-linecap="round"/>
+<path id="Oval-2" d="M94 47C106.399 47 117.664 51.8525 126 59.7619" stroke="#3296ED" stroke-width="10" stroke-linecap="round"/>
 <text id="75%" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" letter-spacing="0px"><tspan x="201" y="144.818">9.49% of 12.4M</tspan></text>
 <g id="Group 33.1">
 <text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="200" y="56.712">No. of people with this </tspan><tspan x="200" y="73.712">profile in your audience</tspan></text>
-<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="199.301" y="113.785">1.2M</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan id="numberAudience" x="199.301" y="113.785">1.2M</tspan></text>
 </g>
 </g>
 </svg>

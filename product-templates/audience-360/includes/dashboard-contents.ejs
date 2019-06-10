@@ -4,7 +4,7 @@
 			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2">
 				<%- include('components/panel-box.ejs', {
 					title: 'Audience Profile',
-					contents: include('images/slices/dashboard/tcp.ejs'),
+					contents: include('images/slices/dashboard/audience-profile.ejs'),
 					footer_links: [{}]
 				}) %>
 			</div>
@@ -80,6 +80,16 @@
 	.slds-modal__content {
 		padding: 0;
 		margin: 0;
+		background: transparent;
+		overflow: visible;
+	}
+
+	.slds-modal__content svg {
+		margin-top: -113px;
+	}
+
+	.slds-modal_small .slds-modal__container {
+		width: 432px !important;
 	}
 </style>
 <%
@@ -87,14 +97,31 @@
 const data = {
 	size: 'small',
 	contentsMain: include('images/woohoo-modal.svg'),
-	isOpen: false,
-	handleClose: function kickoff() {
-		document.querySelector('.slds-modal').classList.remove('slds-fade-in-open');
-		document.querySelector('.slds-backdrop').classList.remove('slds-backdrop_open');
-		animateEinstein();
-	}
+	isOpen: true,
+	handleClose: 'kickoff'
 };
 
 echo(include('components/modal', data));
 
 %>
+<script>
+	const kickoff = function kickoff() {
+		document.querySelector('.slds-modal').classList.remove('slds-fade-in-open');
+		document.querySelector('.slds-backdrop').classList.remove('slds-backdrop_open');
+		animateEinstein();
+		animateAudienceProfileGraph();
+		animateTopChannelsGraph();
+	}
+    document.getElementById('Got-it-hover-target').addEventListener('mouseover', function() {
+        document.querySelector('#Got-it-hover-target rect').setAttribute('fill', '#006DD5');
+        document.querySelector('#Got-it-action-text').setAttribute('fill', '#FFF');
+    });
+    document.getElementById('Got-it-hover-target').addEventListener('mouseout', function() {
+        document.querySelector('#Got-it-hover-target rect').setAttribute('fill', '#FFF');
+        document.querySelector('#Got-it-action-text').setAttribute('fill', '#006DD5');
+    });
+    document.getElementById('Got-it-hover-target').addEventListener('click', function() {
+    	kickoff();
+    });
+
+</script>
