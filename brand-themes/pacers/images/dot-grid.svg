@@ -1,0 +1,140 @@
+<svg width="815" height="330" viewBox="0 0 815 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="pacers-dash-card-04">
+<rect id="Rectangle Copy 12.4" width="815" height="330" fill="white"/>
+<g id="Group 44">
+<text id="Updated a minute ago" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="23" y="14.904">Updated a minute ago</tspan></text>
+<text id="40" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="51.0044" y="67.5274">5+</tspan></text>
+<text id="30" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="51.0044" y="104.047">4</tspan></text>
+<text id="20" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="51.0044" y="143.237">3</tspan></text>
+<text id="10" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="51.0044" y="181.094">2</tspan></text>
+<text id="10_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="51.0039" y="220.094">1</tspan></text>
+<path id="ygridlin6" opacity="0.5" d="M80 46.5H769" stroke="#DDDBDA" stroke-linecap="square"/>
+<path id="Vector" d="M420 47L420 281" stroke="#EEEDEC" stroke-width="2"/>
+<path id="ygridlin5" opacity="0.5" d="M80 84.5H769" stroke="#DDDBDA" stroke-linecap="square"/>
+<path id="ygridlin5_2" opacity="0.5" d="M80 122.5H769" stroke="#DDDBDA" stroke-linecap="square"/>
+<path id="ygridlin3" opacity="0.5" d="M80 160.5H769" stroke="#DDDBDA" stroke-linecap="square"/>
+<path id="ygridlin2" opacity="0.5" d="M80 197.5H769" stroke="#DDDBDA" stroke-linecap="square"/>
+<path id="ygridlin1" opacity="0.5" d="M80 235.5H769" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="Number of Employees" fill="#F30808" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="159" y="276.212">Losing Streak (# of Games)</tspan></text>
+<text id="Number of Employees_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="520" y="276.212">Winning Streak (# of Games)</tspan></text>
+<text id="Sales" transform="rotate(-90)" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="23.582" y="243.212">Number of Kids in Household</tspan></text>
+
+<circle class="growCircle" cx="285" cy="65" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="332" cy="65" r="5" fill="#04844B"/>
+<circle class="growCircle" cx="378" cy="65" r="5" fill="#04844B"/>
+<circle class="growCircle" cx="462" cy="65" r="10" fill="#04844B"/>
+<circle class="growCircle" cx="508" cy="65" r="5" fill="#04844B"/>
+<circle class="growCircle" cx="555" cy="65" r="10" fill="#04844B"/>
+<circle class="growCircle" cx="600" cy="65" r="10" fill="#04844B"/>
+<circle class="growCircle" cx="649" cy="65" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="742" cy="65" r="5" fill="#04844B"/>
+
+
+<circle class="growCircle" cx="191" cy="141" r="5" fill="#D8D8D8"/>
+<circle class="growCircle" cx="238" cy="141" r="5" fill="#D8D8D8"/>
+<circle class="growCircle" cx="285" cy="141" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="332" cy="141" r="5" fill="#D8D8D8"/>
+<circle class="growCircle" cx="378" cy="141" r="10" fill="#3296ED"/>
+<circle class="growCircle" cx="462" cy="141" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="508" cy="141" r="10" fill="#3296ED"/>
+<circle class="growCircle" cx="555" cy="141" r="10" fill="#04844B"/>
+<circle class="growCircle" cx="600" cy="141" r="15" fill="#04844B"/>
+<circle class="growCircle" cx="649" cy="141" r="5" fill="#04844B"/>
+<circle class="growCircle" cx="694" cy="141" r="15" fill="#04844B"/>
+<circle class="growCircle" cx="743" cy="141" r="25" fill="#04844B"/>
+
+
+<circle class="growCircle" cx="238" cy="103" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="285" cy="103" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="332" cy="103" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="378" cy="103" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="462" cy="103" r="10" fill="#04844B"/>
+<circle class="growCircle" cx="508" cy="103" r="10" fill="#3296ED"/>
+<circle class="growCircle" cx="555" cy="103" r="5" fill="#04844B"/>
+<circle class="growCircle" cx="600" cy="103" r="10" fill="#04844B"/>
+<circle class="growCircle" cx="649" cy="103" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="693" cy="103" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="742" cy="103" r="5" fill="#3296ED"/>
+
+
+<circle class="growCircle" cx="145" cy="179" r="5" fill="#D8D8D8"/>
+<circle class="growCircle" cx="191" cy="179" r="5" fill="#D8D8D8"/>
+<circle class="growCircle" cx="238" cy="179" r="10" fill="#3296ED"/>
+<circle class="growCircle" cx="285" cy="179" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="378" cy="179" r="20" fill="#3296ED"/>
+<circle class="growCircle" cx="462" cy="179" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="508" cy="179" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="555" cy="179" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="600" cy="179" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="649" cy="179" r="5" fill="#04844B"/>
+<circle class="growCircle" cx="694" cy="179" r="15" fill="#04844B"/>
+<circle class="growCircle" cx="742" cy="179" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="332" cy="179" r="15" fill="#3296ED"/>
+
+
+<circle class="growCircle" cx="98" cy="216" r="5" fill="#D8D8D8"/>
+<circle class="growCircle" cx="145" cy="216" r="10" fill="#D8D8D8"/>
+<circle class="growCircle" cx="191" cy="216" r="15" fill="#D8D8D8"/>
+<circle class="growCircle" cx="238" cy="216" r="10" fill="#D8D8D8"/>
+<circle class="growCircle" cx="285" cy="216" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="332" cy="216" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="378" cy="216" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="462" cy="216" r="10" fill="#3296ED"/>
+<circle class="growCircle" cx="508" cy="216" r="5" fill="#D8D8D8"/>
+<circle class="growCircle" cx="555" cy="216" r="5" fill="#D8D8D8"/>
+<circle class="growCircle" cx="602" cy="216" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="649" cy="216" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="695" cy="216" r="5" fill="#3296ED"/>
+<circle class="growCircle" cx="742" cy="216" r="5" fill="#04844B"/>
+
+
+
+
+
+
+
+
+
+<text id="10_3" fill="#F30808" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="140" y="253.212">6</tspan></text>
+<text id="10_4" fill="#F30808" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="94" y="253.212">7+</tspan></text>
+<text id="20_2" fill="#F30808" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="185" y="253.212">5</tspan></text>
+<text id="30_2" fill="#F30808" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="234" y="253.212">4</tspan></text>
+<text id="40_2" fill="#F30808" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="283" y="253.212">3</tspan></text>
+<text id="50" fill="#F30808" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="328" y="253.212">2</tspan></text>
+<text id="10_5" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="551" y="252.212">3</tspan></text>
+<text id="20_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="598" y="253.212">4</tspan></text>
+<text id="30_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="647" y="253.212">5</tspan></text>
+<text id="40_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="690" y="253.212">6</tspan></text>
+<text id="50_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="737" y="253.212">7+</tspan></text>
+<text id="60" fill="#F30808" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="374" y="253.212">1</tspan></text>
+<text id="80" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="457" y="253.212">1</tspan></text>
+<text id="100" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="504" y="253.212">2</tspan></text>
+<g id="Group 5">
+<g id="Group 3">
+<path id="legendcircle5" d="M245.66 311.649C247.681 311.649 249.32 309.937 249.32 307.825C249.32 305.712 247.681 304 245.66 304C243.639 304 242 305.712 242 307.825C242 309.937 243.639 311.649 245.66 311.649Z" fill="#3296ED"/>
+<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="255" y="312.212">$100 - $500</tspan></text>
+</g>
+<g id="Group 4">
+<path id="legendcircle3" d="M180.66 311.649C182.681 311.649 184.32 309.937 184.32 307.825C184.32 305.712 182.681 304 180.66 304C178.639 304 177 305.712 177 307.825C177 309.937 178.639 311.649 180.66 311.649Z" fill="#D8D8D8"/>
+<text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="188.979" y="312.212">&#60; $100</tspan></text>
+</g>
+<text id="Account A_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="53" y="312.212">Average Order Value</tspan></text>
+<g id="Group 2">
+<path id="legendcircle1" d="M340.66 311.649C342.681 311.649 344.32 309.937 344.32 307.825C344.32 305.712 342.681 304 340.66 304C338.639 304 337 305.712 337 307.825C337 309.937 338.639 311.649 340.66 311.649Z" fill="#04844B"/>
+<text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="349" y="312.212">$500 +</tspan></text>
+</g>
+</g>
+<g id="Group 5.1">
+<g id="Group 4_2">
+<g id="Group">
+<path id="legendcircle3_2" d="M618.66 311.649C620.681 311.649 622.32 309.937 622.32 307.825C622.32 305.712 620.681 304 618.66 304C616.639 304 615 305.712 615 307.825C615 309.937 616.639 311.649 618.66 311.649Z" fill="#3296ED"/>
+<path id="legendcircle3_3" d="M715 324C723.284 324 730 317.284 730 309C730 300.716 723.284 294 715 294C707.395 294 640.001 302 618.5 304C615.253 304.678 622.075 306.762 619 307.5C619 309.162 618 308.5 618 311.5C618 311.5 708.377 324 715 324Z" fill="#3296ED"/>
+</g>
+<text id="Account A_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="583" y="312.212">&#60; 10</tspan></text>
+<text id="Account A_4" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="736" y="312.212">500 +</tspan></text>
+</g>
+<text id="Account A_5" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="494" y="312.212">Order Volume</tspan></text>
+</g>
+</g>
+</g>
+</svg>

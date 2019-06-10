@@ -1,0 +1,24 @@
+	<style>
+        .growCircle {
+            animation: growCircle 2s ease-out forwards;
+            transform-origin: 102px center;
+            animation-play-state: paused;
+        }
+
+        @-webkit-keyframes growCircle {
+          from { r: 0; }
+        }
+    </style>
+<div id="got-grid-here"><%- include('images/dot-grid.svg') %></div>
+<script>
+	let triggeredDotGridGraphAnimation = false;
+	const animateDotGridGraph = () => {
+		if (window.scrollY > 400 && !triggeredDotGridGraphAnimation) {
+			triggeredDotGridGraphAnimation = true;
+
+			document.querySelectorAll('.growCircle').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+	};
+
+	document.addEventListener("scroll", animateDotGridGraph);
+</script>

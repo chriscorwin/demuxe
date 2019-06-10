@@ -21,7 +21,7 @@
 			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-1 slds-m-top_medium">
 				<%- include('components/panel-box.ejs', {
 					title: 'Conversion Path Analysis',
-					contents: include('images/slices/dashboard/cpa.ejs'),
+					contents: include('images/slices/dashboard/dot-grid.ejs'),
 					footer_links: [{}]
 				}) %>
 			</div>
@@ -97,7 +97,7 @@
 const data = {
 	size: 'small',
 	contentsMain: include('images/woohoo-modal.svg'),
-	isOpen: true,
+	isOpen: false,
 	handleClose: 'kickoff'
 };
 
@@ -112,6 +112,7 @@ echo(include('components/modal', data));
 		animateAudienceProfileGraph();
 		animateTopChannelsGraph();
 		animateHeaderGraph();
+		animateCPAGraph();
 	}
     document.getElementById('Got-it-hover-target').addEventListener('mouseover', function() {
         document.querySelector('#Got-it-hover-target rect').setAttribute('fill', '#F4F6F9');
