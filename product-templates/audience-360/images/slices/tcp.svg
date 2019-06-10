@@ -1,7 +1,7 @@
 <svg style="margin: -10px 0 24px 12px" width="373" height="305" viewBox="0 0 373 305" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
 #Oval-2 {
-    animation: grow-oval2 1.5s linear;
+    animation: grow-oval2 2s linear;
     stroke-dashoffset: 70;
 }
 

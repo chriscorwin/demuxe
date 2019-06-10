@@ -5,29 +5,26 @@
 
 	let triggeredTCPGraphAnimation = false;
 	const animateTCPGraph = () => {
-		if (window.scrollY > 1 && !triggeredTCPGraphAnimation) {
-			triggeredTCPGraphAnimation = true;
+		triggeredTCPGraphAnimation = true;
 
-			document.querySelector('#tcp-here').innerHTML = addTCPSVG();
+		document.querySelector('#tcp-here').innerHTML = addTCPSVG();
 
-			const audience = document.querySelector('#numberAudience');
+		const audience = document.querySelector('#numberAudience');
 
-			audience.textContent = '0M';
+		audience.textContent = '0M';
 
-			let audienceNumber = .1;
+		let audienceNumber = .1;
 
-			const increase = () => {
-				if (audienceNumber < 1.56) {
-					audienceNumber += .01;
+		const increase = () => {
+			if (audienceNumber < 1.56) {
+				audienceNumber += .01;
 
-					audience.textContent = `${audienceNumber.toFixed(2)}M`;
-					window.setTimeout(increase, 10);
-				}
+				audience.textContent = `${audienceNumber.toFixed(2)}M`;
+				window.setTimeout(increase, 14);
 			}
-
-			increase();
 		}
+
+		increase();
 	};
 
-	document.addEventListener("scroll", animateTCPGraph);
 </script>

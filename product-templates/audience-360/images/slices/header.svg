@@ -1,7 +1,7 @@
 <svg style="margin: 0 0 10px 0;" width="1250" height="125" viewBox="0 0 1260 125" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
 	.makeFairBckgd {
-		animation: make-fair-bkg .5s linear;
+		animation: make-fair-bkg 1s linear;
 		fill: #FFB75D;
 	}
 
@@ -12,7 +12,7 @@
 	}
 
 	.makeFair {
-		animation: make-fair .5s linear;
+		animation: make-fair 1s linear;
 		fill: #3E3E3C;
 	}
 
@@ -23,7 +23,7 @@
 	}
 
 	#Rectangle192 {
-		animation: needle-up 1s linear forwards;
+		animation: needle-up 2s linear forwards;
 		transform-origin:  1052px 85px;
 	}
 

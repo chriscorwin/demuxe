@@ -5,38 +5,35 @@
 
 	let triggeredHeaderGraphAnimation = false;
 	const animateHeaderGraph = () => {
-		if (window.scrollY > 1 && !triggeredHeaderGraphAnimation) {
-			triggeredHeaderGraphAnimation = true;
+		triggeredHeaderGraphAnimation = true;
 
-			document.querySelector('#header-here').innerHTML = addHeaderSVG();
+		document.querySelector('#header-here').innerHTML = addHeaderSVG();
 
-			const satisfactionScore = document.querySelector('#satisfactionScore');
+		const satisfactionScore = document.querySelector('#satisfactionScore');
 
-			satisfactionScore.textContent = '0%';
+		satisfactionScore.textContent = '0%';
 
-			let satisfactionScoreNumber = .1;
+		let satisfactionScoreNumber = .1;
 
-			const increase = () => {
-				if (satisfactionScoreNumber < 71) {
-					satisfactionScoreNumber += .3;
+		const increase = () => {
+			if (satisfactionScoreNumber < 71) {
+				satisfactionScoreNumber += .2;
 
-					window.setTimeout(increase, 2);
-				} else {
-					satisfactionScoreNumber = 71.7;
-				}
-
-				if (satisfactionScoreNumber > 20) {
-					document.querySelector('#FairBckgd').classList.add('makeFairBckgd');
-					document.querySelector('#Fair').classList.add('makeFair');
-					document.querySelector('#Fair tspan').textContent = 'Fair';
-				}
-
-				satisfactionScore.textContent = `${satisfactionScoreNumber.toFixed(1)}%`;
+				window.setTimeout(increase, 2);
+			} else {
+				satisfactionScoreNumber = 71.7;
 			}
 
-			increase();
+			if (satisfactionScoreNumber > 20) {
+				document.querySelector('#FairBckgd').classList.add('makeFairBckgd');
+				document.querySelector('#Fair').classList.add('makeFair');
+				document.querySelector('#Fair tspan').textContent = 'Fair';
+			}
+
+			satisfactionScore.textContent = `${satisfactionScoreNumber.toFixed(1)}%`;
 		}
+
+		increase();
 	};
 
-	document.addEventListener("scroll", animateHeaderGraph);
 </script>

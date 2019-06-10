@@ -1,8 +1,8 @@
 <svg style="margin-top: -38px; margin-left: -4px; margin-bottom: 16px;" width="829" height="341" viewBox="0 0 829 341" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style>
 	#Shape1, #Shape2, #Shape3 {
-	    animation: grow-line 1s linear backwards;
-	    animation-delay: .2s;
+	    animation: grow-line 1.5s linear backwards;
+	    animation-delay: .5s;
 	}
 
 	@keyframes grow-line {
@@ -12,7 +12,7 @@
 	}
 
 	#text25, #text25_2, #text25_3 {
-		animation: change-text-color 1s linear;
+		animation: change-text-color 1.5s linear;
 	}
 
 	@keyframes change-text-color {
@@ -30,7 +30,7 @@
 	}
 
 	#Rectangle3 {
-		animation: change-color .2s linear;
+		animation: change-color .5s linear;
 	}
 
 	@keyframes change-color {
@@ -40,7 +40,7 @@
 	}
 
 	#Rectangle7, #Rectangle8, #Rectangle9 {
-		animation: change-color-later 1.2s linear;
+		animation: change-color-later 1.5s linear;
 	}
 
 	@keyframes change-color-later {

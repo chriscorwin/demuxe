@@ -5,12 +5,8 @@
 
 	let triggeredCPAGraphAnimation = false;
 	const animateCPAGraph = () => {
-		if (window.scrollY > 1 && !triggeredCPAGraphAnimation) {
-			triggeredCPAGraphAnimation = true;
+		triggeredCPAGraphAnimation = true;
 
-			document.querySelector('#cpa-here').innerHTML = addCPASVG();
-		}
+		document.querySelector('#cpa-here').innerHTML = addCPASVG();
 	};
-
-	document.addEventListener("scroll", animateCPAGraph);
 </script>
