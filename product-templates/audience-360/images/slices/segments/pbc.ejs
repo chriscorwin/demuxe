@@ -1,0 +1,17 @@
+<style>
+#pbc-here svg{
+	width: 100%;
+	margin-top: -10px;
+}
+</style>
+<div id="pbc-here"><%- include('images/slices/segments/pbc.svg') %></div>
+<script>
+	let triggeredPBCGraphAnimation = false;
+	const animatePBCGraph = () => {
+		triggeredPBCGraphAnimation = true;
+
+		document.querySelectorAll('.fill-in, .draw-in').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+
+	window.setTimeout(animatePBCGraph, 200);
+</script>

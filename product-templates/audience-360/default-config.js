@@ -23,7 +23,7 @@ module.exports = {
 			{
 				label: 'Segments',
 				id: 'segments-global-nav-link',
-				href: '/segments/manage-segments/',
+				href: '/segments',
 				isActive: (activePage) => activePage === 'segments'
 			},
 			{

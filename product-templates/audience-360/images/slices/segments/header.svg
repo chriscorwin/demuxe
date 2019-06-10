@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1256px" height="128px" viewBox="0 0 1256 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0020___ID=segment" transform="translate(-12.000000, -100.000000)">
+            <g id="Segment---Header/Summary" transform="translate(12.000000, 100.000000)">
+                <g id="Group-4">
+                    <g id="Record-Anchor-Copy">
+                        <g id="Rectangle-663-Copy-3">
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="1256" height="128" rx="4"></rect>
+                            <rect id="Rectangle" stroke="#DDDBDA" x="0.5" y="0.5" width="1255" height="127" rx="3.5"></rect>
+                        </g>
+                        <rect id="Rectangle-663-Copy" fill="#F3F2F2" fill-rule="nonzero" x="0.9814" y="1" width="1254.04" height="64" rx="4"></rect>
+                        <polygon id="Rectangle-15" fill="#F3F2F2" points="0.9814 61 1255.02 61 1255.02 65 0.9814 65"></polygon>
+                        <text id="Segments" fill="#006DCC" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal">
+                            <tspan x="68" y="26.888">Segments</tspan>
+                        </text>
+                        <text id="Families" fill="#080707" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="18" font-weight="bold">
+                            <tspan x="66.7251" y="48.818">Families</tspan>
+                        </text>
+                        <text id="New-running-shoes-launch-f…" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <tspan x="145" y="109.063">New running shoes launch f…</tspan>
+                        </text>
+                        <g id="Group" opacity="0.8" transform="translate(148.000000, 37.000000)" fill="#6F6E6B">
+                            <g id="Edit">
+                                <path d="M8.527,0.922 C8.419,1.031 8.419,1.194 8.527,1.302 L10.698,3.473 C10.806,3.581 10.969,3.581 11.078,3.473 L11.674,2.876 C12.109,2.496 12.109,1.899 11.674,1.465 L10.535,0.326 C10.101,-0.109 9.504,-0.109 9.07,0.326 L8.527,0.922 Z M1.853,7.868 L4.078,10.093 C4.186,10.201 4.349,10.201 4.403,10.093 L9.992,4.504 C10.101,4.395 10.101,4.287 9.992,4.178 L7.768,1.953 C7.659,1.845 7.551,1.845 7.442,1.953 L1.853,7.542 C1.745,7.651 1.745,7.814 1.853,7.868 Z M0.442,11.992 C0.171,12.046 -0.046,11.829 0.008,11.558 L0.659,8.845 C0.659,8.79 0.714,8.682 0.768,8.627 L0.822,8.573 C0.877,8.519 1.039,8.519 1.148,8.627 L3.373,10.852 C3.481,10.961 3.481,11.123 3.427,11.178 L3.373,11.232 C3.318,11.286 3.264,11.34 3.155,11.34 L0.442,11.992 Z" id="Edit_2"></path>
+                            </g>
+                        </g>
+                        <g id="Group_2" opacity="0.8" transform="translate(328.000000, 98.000000)" fill="#6F6E6B">
+                            <g id="Edit_3">
+                                <path d="M9.027,0.922 C8.919,1.031 8.919,1.194 9.027,1.302 L11.198,3.473 C11.306,3.581 11.469,3.581 11.578,3.473 L12.174,2.876 C12.609,2.496 12.609,1.899 12.174,1.465 L11.035,0.326 C10.601,-0.109 10.004,-0.109 9.57,0.326 L9.027,0.922 Z M2.353,7.868 L4.578,10.093 C4.686,10.201 4.849,10.201 4.903,10.093 L10.492,4.504 C10.601,4.395 10.601,4.287 10.492,4.178 L8.268,1.953 C8.159,1.845 8.051,1.845 7.942,1.953 L2.353,7.542 C2.245,7.651 2.245,7.814 2.353,7.868 Z M0.942,11.992 C0.671,12.046 0.454,11.829 0.508,11.558 L1.159,8.845 C1.159,8.79 1.214,8.682 1.268,8.627 L1.322,8.573 C1.377,8.519 1.539,8.519 1.648,8.627 L3.873,10.852 C3.981,10.961 3.981,11.123 3.927,11.178 L3.873,11.232 C3.818,11.286 3.764,11.34 3.655,11.34 L0.942,11.992 Z" id="Edit_4"></path>
+                            </g>
+                        </g>
+                        <text id="Description" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="145" y="87.712">Description</tspan>
+                        </text>
+                        <text id="Karen-M" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <tspan x="418" y="109.063">Karen M</tspan>
+                        </text>
+                        <text id="Created-by" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="418" y="87.712">Created by</tspan>
+                        </text>
+                        <text id="1/31/2019" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <tspan x="554" y="109.063">1/31/2019</tspan>
+                        </text>
+                        <text id="1/31/2019,-10:23-AM" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <tspan x="697.927" y="109.063">1/31/2019, 10:23 AM</tspan>
+                        </text>
+                        <text id="Created" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="554" y="87.712">Created</tspan>
+                        </text>
+                        <text id="Modified" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="697.927" y="87.712">Modified</tspan>
+                        </text>
+                        <g id="Group-58" transform="translate(1017.000000, 16.000000)">
+                            <g id="Group-57">
+                                <path d="M0.52,3 C0.52,1.619 1.64,0.5 3.02,0.5 L218.02,0.5 C219.4,0.5 220.52,1.619 220.52,3 L220.52,29 C220.52,30.381 219.4,31.5 218.02,31.5 L3.02,31.5 C1.64,31.5 0.52,30.381 0.52,29 L0.52,3 Z" id="Rectangle-827" stroke="#DDDBDA" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                <text id="Disable" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                    <tspan x="67.76" y="21.063">Disable</tspan>
+                                </text>
+                                <text id="Copy" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                    <tspan x="12.76" y="21.063">Copy</tspan>
+                                </text>
+                                <text id="Share" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                    <tspan x="140.98" y="21.063">Share</tspan>
+                                </text>
+                                <path d="M209.97,13.336 L205.18,19.169 C205.14,19.223 205.08,19.25 205.02,19.25 C204.94,19.25 204.89,19.223 204.86,19.169 L200.07,13.336 C200.01,13.274 200,13.201 200.04,13.116 C200.08,13.039 200.14,13 200.23,13 L209.81,13 C209.9,13 209.96,13.039 210,13.116 C210.04,13.201 210.03,13.274 209.97,13.336 Z" id="dropdown-2" fill="#706E6B"></path>
+                                <rect id="Rectangle-1645" fill="#DDDBDA" fill-rule="nonzero" x="54.02" y="1" width="1" height="30"></rect>
+                                <rect id="Rectangle-1645-Copy" fill="#DDDBDA" fill-rule="nonzero" x="123.02" y="1" width="1" height="30"></rect>
+                                <rect id="Rectangle-1645-Copy-2" fill="#DDDBDA" fill-rule="nonzero" x="189.02" y="1" width="1" height="30"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Icon-Segment" transform="translate(22.000000, 14.000000)">
+                    <g id="Entity-Icon" fill="#FCB95B">
+                        <path d="M4.1543,0 C1.9452,0 0.1543,1.791 0.1543,4 L0.1543,32 C0.1543,34.209 1.9452,36 4.1543,36 L31.4919,36 C33.7011,36 35.4919,34.209 35.4919,32 L35.4919,4 C35.4919,1.791 33.7011,0 31.4919,0 L4.1543,0 Z" id="Rectangle-44"></path>
+                    </g>
+                    <g id="Icons-/-Utility-Icon_2" transform="translate(6.000000, 5.000000)" fill="#FFFFFF">
+                        <g id="Icon-Glyph">
+                            <path d="M21.7955,11.033 L11.1512,16.901 C10.4243,17.264 9.5935,16.745 9.5935,15.966 L9.5935,3.245 C9.5935,2.726 9.0743,2.31 8.607,2.466 C3.4147,3.92 -0.3238,8.957 0.2993,14.72 C0.8705,19.964 5.0762,24.222 10.3724,24.793 C17.2781,25.52 23.0935,20.172 23.0935,13.422 C23.0935,12.799 23.0416,12.176 22.9378,11.553 C22.8339,11.033 22.2628,10.774 21.7955,11.033 Z" id="Path_2"></path>
+                            <path d="M12.5531,13.422 L22.7819,7.97 C23.405,7.658 23.6127,6.828 23.1973,6.257 C20.8608,3.037 17.2262,0.701 13.0723,0.026 C12.3454,-0.13 11.6704,0.441 11.6704,1.168 L11.6704,12.903 C11.6704,13.37 12.1377,13.63 12.5531,13.422 Z" id="Path_3"></path>
+                        </g>
+                    </g>
+                </g>
+                <text id="Status" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <tspan x="26.9502" y="87.712">Status</tspan>
+                </text>
+                <text id="Ready" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                    <tspan x="26.9502" y="109.563">Ready</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

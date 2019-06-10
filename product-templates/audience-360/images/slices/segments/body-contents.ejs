@@ -1,0 +1,16 @@
+<style>
+#body-contents-here svg{
+	width: 100%;
+}
+</style>
+<div id="body-contents-here"><%- include('images/slices/segments/body-contents.svg') %></div>
+<script>
+	let triggeredBodyContentsAnimation = false;
+	const animateBodyContents = () => {
+		triggeredBodyContentsAnimation = true;
+
+		document.querySelectorAll('.fill-in, .draw-in').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+
+	window.setTimeout(animateBodyContents, 200);
+</script>

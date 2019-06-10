@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="422px" height="347px" viewBox="0 0 422 347" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0020___ID=segment" transform="translate(-846.000000, -238.000000)">
+            <g id="Performance-by-Channel" transform="translate(846.000000, 238.000000)">
+                <path d="M4,0 C1.791,0 0,1.791 0,4 L0,343 C0,345.209 1.791,347 4,347 L418,347 C420.21,347 422,345.209 422,343 L422,4 C422,1.791 420.21,0 418,0 L4,0 Z" id="Rectangle-18-Copy_2" fill="#FFFFFF"></path>
+                <g id="Desktop-Components-/-Tabs-/-z-nested-/Tab---Selected-Copy-2" transform="translate(26.000000, 17.000000)" fill="#080707" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="18" font-weight="bold">
+                    <text id="Performance-by-Channel">
+                        <tspan x="0" y="20.318">Performance by Channel</tspan>
+                    </text>
+                </g>
+                <g id="Horizontal-Bar---Single-Copy" transform="translate(24.000000, 137.000000)">
+                    <g id="Chart">
+                        <g id="hbar6" transform="translate(6.000000, 0.000000)">
+                            <polygon id="Bar" fill="#00A1E0" points="81.75 0.75 310.25 0.75 310.25 24.75 81.75 24.75"></polygon>
+                            <text id="Delivery-rate" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="0.483" y="16.313">Delivery rate</tspan>
+                            </text>
+                            <text id="340M" fill="#FFFFFF" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal">
+                                <tspan x="348.71" y="15.909">340M</tspan>
+                            </text>
+                        </g>
+                        <g id="hbar5" transform="translate(8.000000, 30.000000)">
+                            <polygon id="Bar_2" fill="#00A1E0" points="79.75 0.75 198.75 0.75 198.75 24.75 79.75 24.75"></polygon>
+                            <text id="Bounce-rate" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="0.798" y="17.313">Bounce rate</tspan>
+                            </text>
+                            <text id="65%" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal">
+                                <tspan x="202.79" y="15.909">65%</tspan>
+                            </text>
+                        </g>
+                        <g id="hbar4" transform="translate(0.000000, 60.000000)">
+                            <polygon id="Bar_3" fill="#00A1E0" points="87.75 0.75 148.75 0.75 148.75 24.75 87.75 24.75"></polygon>
+                            <text id="Opens" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="41.314" y="16.313">Opens</tspan>
+                            </text>
+                            <text id="Clicks" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="46.367" y="48.063">Clicks</tspan>
+                            </text>
+                            <text id="Unsubscribes" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="0.055" y="79.813">Unsubscribes</tspan>
+                            </text>
+                        </g>
+                        <g id="hbar3" transform="translate(87.000000, 4.000000)">
+                            <polygon id="Bar_4" fill="#00A1E0" points="0.5 86.75 13.5 86.75 13.5 110.75 0.5 110.75"></polygon>
+                            <polygon id="Bar-Copy" fill="#00A1E0" points="0.5 117 3 117 3 141 0.5 141"></polygon>
+                            <text id="7%" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal">
+                                <tspan x="16.529" y="101.909">7%</tspan>
+                            </text>
+                            <text id="1%" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal">
+                                <tspan x="5.529" y="132.159">1%</tspan>
+                            </text>
+                            <text id="34%" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal">
+                                <tspan x="65.54" y="71.909">34%</tspan>
+                            </text>
+                            <text id="97%" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal">
+                                <tspan x="231.54" y="10.659">97%</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+                <g id="Tabs-Copy_2" transform="translate(24.000000, 58.000000)">
+                    <rect id="Rectangle-8_3" fill="#DDDBDA" fill-rule="nonzero" x="0.5" y="38" width="369.5" height="2"></rect>
+                    <g id="Desktop-Components-/-Tabs-/-z-nested-/Tab---Selected_4">
+                        <rect id="Rectangle-5_5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0" width="72" height="40"></rect>
+                        <text id="Email" fill="#080707" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13" font-weight="bold">
+                            <tspan x="19.228" y="23.563">Email</tspan>
+                        </text>
+                        <polygon id="Active-2_3" fill="#1589EE" points="0.5 38 0.5 40 72 40 72 38"></polygon>
+                    </g>
+                    <g id="Desktop-Components-/-Tabs-/-z-nested-/Tab---Selected_5" transform="translate(78.000000, 0.000000)">
+                        <rect id="Rectangle-5_6" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0" width="95" height="38"></rect>
+                        <text id="Text-Message" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <tspan x="18.5" y="23.563">Text Message</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

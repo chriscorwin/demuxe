@@ -1,0 +1,11 @@
+<div id="segmentPopulation-here"><%- include('images/slices/segments/segment-population.svg') %></div>
+<script>
+	let triggeredSegmentPopulationGraphAnimation = false;
+	const animateSegmentPopulationGraph = () => {
+		triggeredSegmentPopulationGraphAnimation = true;
+
+		document.querySelectorAll('.fill-in, .draw-in').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+
+	window.setTimeout(animateSegmentPopulationGraph, 200);
+</script>
