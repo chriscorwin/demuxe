@@ -5,7 +5,7 @@
 		if (window.scrollY > 230 && !triggeredTopProductsGraphAnimation) {
 			triggeredTopProductsGraphAnimation = true;
 
-			document.querySelectorAll('circle').forEach(elm => elm.style.animationPlayState = 'running');
+			document.querySelectorAll('#top-products-here circle').forEach(elm => elm.style.animationPlayState = 'running');
 		}
 
 		document.addEventListener("scroll", animateTopProductsGraph);

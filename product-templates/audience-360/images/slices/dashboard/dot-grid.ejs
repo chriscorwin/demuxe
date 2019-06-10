@@ -22,10 +22,10 @@
 <script>
 	let triggeredDotGridGraphAnimation = false;
 	const animateDotGridGraph = () => {
-		if (window.scrollY > 400 && !triggeredDotGridGraphAnimation) {
+		if (window.scrollY > 300 && !triggeredDotGridGraphAnimation) {
 			triggeredDotGridGraphAnimation = true;
 
-			document.querySelectorAll('.growCircle').forEach(elm => elm.style.animationPlayState = 'running');
+			document.querySelectorAll('#got-grid-here .growCircle').forEach(elm => elm.style.animationPlayState = 'running');
 		}
 
         document.addEventListener("scroll", animateDotGridGraph);
