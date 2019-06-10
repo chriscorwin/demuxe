@@ -1,0 +1,55 @@
+<svg width="1248" height="110" viewBox="0 0 1248 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="pacers-dash-top-panel">
+<rect id="Card" width="1248" height="110" fill="white"/>
+<g id="Group 33">
+<text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="54.2031" y="43.712">Total Audience</tspan></text>
+<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="39.1196" y="80.785">12.4M</tspan></text>
+</g>
+<g id="Group 30">
+<text id="CONVERSION RATE Copy" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="271.707" y="43.712">Avg. Order Value</tspan></text>
+<text id="78.5% copy" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="243.688" y="83.785">$ 67.48</tspan></text>
+</g>
+<g id="Group 32">
+<text id="AVG. ORDER VALUE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="1104.47" y="43.712">Avg. Engagement</tspan></text>
+<text id="39" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="28" font-weight="300" letter-spacing="0px"><tspan x="1083.21" y="84.828">Moderate</tspan></text>
+<g id="Charts / Metric / Gauge">
+<g id="Metric / Gauge">
+<g id="Gauge">
+<path id="Oval 84 Copy 3" d="M1033.52 62.6735C1032.09 63.5691 1030.77 64.6088 1029.59 65.7708C1025.51 69.7667 1023 75.2084 1023 81.2053" stroke="#C23934" stroke-width="7" stroke-linecap="round"/>
+<path id="Oval 84 Copy 3_2" d="M1066.88 81.6204C1066.88 80.7215 1066.82 79.835 1066.72 78.9641C1066.14 74.4229 1064.13 70.3024 1061.11 67.0278C1059.24 64.9938 1056.98 63.2862 1054.45 62.0067" stroke="#04844B" stroke-width="7" stroke-linecap="round"/>
+<path id="Oval 84 Copy 3_3" d="M1033.64 62.595C1036.93 60.9387 1040.67 60.0001 1044.65 60.0001C1047.67 60.0001 1050.55 60.5398 1053.2 61.5228C1054.74 62.0963 1055.22 62.4048 1056.58 63.261" stroke="#FFB75D" stroke-width="7"/>
+</g>
+<g id="Needle">
+<path id="Rectangle 192" fill-rule="evenodd" clip-rule="evenodd" d="M1046.87 82.9067C1047 84.0235 1046.12 85 1045 85V85C1043.88 85 1043 84.0235 1043.13 82.9067L1045 66L1046.87 82.9067Z" fill="#3E3E3C"/>
+</g>
+</g>
+</g>
+</g>
+<g id="Group 31">
+<text id="AVG. ORDER VALUE_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="467.598" y="43.712">Forecast Avg. Lifetime Value</tspan></text>
+<g id="indicator - icon">
+<g id="icon">
+<g id="einstein">
+<path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M652.641 39.653C652.314 38.8693 651.955 38.2816 651.563 37.8244C651.204 37.4 650.159 36.7795 649.571 36.551C649.735 36.3224 650.061 36.1591 650.551 36.0612C650.518 35.7346 650.192 35.3755 649.571 34.9836C648.951 34.5918 648.102 34.4938 647.025 34.7224C647.025 34.3306 646.763 33.6449 646.208 32.6326C645.425 31.0979 642.192 30.6081 642.225 31.3265C642.518 32.2081 642.649 33.351 642.682 34.6898C642.29 34.2326 641.865 33.9387 641.408 33.8081C641.049 33.7102 640.723 33.6775 640.396 33.7428C640.363 33.7428 640.331 33.7755 640.298 33.7755C640.2 33.8408 640.2 34.004 640.265 34.102C640.461 34.3632 640.559 34.5591 640.625 34.6898C640.69 34.8857 640.82 35.1469 640.984 35.5387C640.494 35.4734 639.874 35.6367 639.025 36.0285C638.241 36.4204 637.588 37.302 637.033 38.7061V38.7714C637.033 38.902 637.098 39 637.196 39.0326C637.947 39.1632 638.469 39.2938 638.763 39.4571C639.09 39.6204 639.449 39.9795 639.874 40.4693C639.71 40.4367 639.449 40.6 639.057 40.9591C638.698 41.253 638.437 41.7102 638.274 42.3632V42.4285C638.274 42.5591 638.339 42.6571 638.469 42.6571C639.025 42.6898 639.58 42.7877 640.102 42.951C640.69 43.1469 641.147 43.3428 641.474 43.5714V41.6775C641.474 41.2204 641.441 40.8612 641.898 40.3061C642.355 39.751 642.812 39.6204 643.89 40.0449C644.967 40.4693 646.176 39.5877 647.123 39.8163C648.102 40.0449 648.592 41.0244 648.69 41.7102C648.788 42.3959 648.69 42.7551 648.69 43.604V43.7346H648.723C649.212 43.4408 649.474 43.2775 649.865 43.1142C650.127 42.9836 650.551 42.853 651.106 42.6571C651.074 42.3306 650.812 42.0367 650.29 41.7102C650.453 41.6449 651.204 41.1551 651.629 40.8285C651.89 40.6326 652.216 40.3387 652.641 39.9142C652.674 39.8816 652.706 39.751 652.641 39.653Z" fill="#006DCC"/>
+<path id="Oval" fill-rule="evenodd" clip-rule="evenodd" d="M645.914 43.604C646.185 43.604 646.404 43.2823 646.404 42.8856C646.404 42.4889 646.185 42.1672 645.914 42.1672C645.644 42.1672 645.424 42.4889 645.424 42.8856C645.424 43.2823 645.644 43.604 645.914 43.604Z" fill="#006DCC"/>
+<path id="Oval_2" fill-rule="evenodd" clip-rule="evenodd" d="M643.106 43.604C643.377 43.604 643.596 43.2823 643.596 42.8856C643.596 42.4889 643.377 42.1672 643.106 42.1672C642.836 42.1672 642.616 42.4889 642.616 42.8856C642.616 43.2823 642.836 43.604 643.106 43.604Z" fill="#006DCC"/>
+<path id="Path_2" fill-rule="evenodd" clip-rule="evenodd" d="M643.825 44.2244C643.531 44.0611 643.074 44.1264 642.812 44.257C642.551 44.3876 642.225 44.7795 642.225 45.1386C642.225 45.4978 642.323 45.7264 642.388 45.857C642.421 45.955 642.518 46.0529 642.649 46.2162C642.682 46.2815 642.747 46.2815 642.812 46.2815L643.27 46.1835L644.249 46.6407C644.282 46.6733 644.347 46.6733 644.38 46.6407L645.457 46.1835L646.012 46.2815C646.045 46.2815 646.11 46.2815 646.143 46.2489C646.404 46.0856 646.567 45.857 646.665 45.6284C646.796 45.2366 646.665 44.6162 646.339 44.355C646.045 44.0611 645.588 43.9631 645.131 44.1591C644.772 44.2897 644.51 44.355 644.314 44.355C644.184 44.355 644.053 44.2897 643.825 44.2244V44.2244Z" fill="#006DCC"/>
+</g>
+</g>
+</g>
+<text id="39_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="513.34" y="83.785">$ 15.3K</tspan></text>
+</g>
+<g id="Group 58">
+<g id="Group 39">
+<g id="Group 31.1">
+<text id="AVG. ORDER VALUE_3" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="788.314" y="41.712">Avg. Satisfaction Score</tspan></text>
+</g>
+<text id="39_3" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="808.202" y="85.785">71.7%</tspan></text>
+</g>
+<g id="badge">
+<rect id="bkgd [4 8]" x="753" y="63" width="47" height="21" rx="10.5" fill="#FFB75D"/>
+<text id="Fair" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="10" font-weight="bold" letter-spacing="0px"><tspan x="767.265" y="76.92">Fair</tspan></text>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,41 @@
+<svg width="400" height="330" viewBox="0 0 400 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="pacers-dash-card-08">
+<rect id="Rectangle Copy 12.4" width="400" height="330" fill="white"/>
+<text id="Updated a minute ago" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="22" y="14.904">Updated a minute ago</tspan></text>
+<path id="ygridlin6" opacity="0.5" d="M79.0044 46.9595H370.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="50" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="50.0044" y="49.671">50</tspan></text>
+<path id="ygridlin5" opacity="0.5" d="M79.0044 84.4572H370.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<path id="ygridlin5_2" opacity="0.5" d="M79.0044 122.545H370.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="40" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="50.0044" y="87.5274">40</tspan></text>
+<text id="30" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="50.0044" y="124.047">30</tspan></text>
+<path id="ygridlin3" opacity="0.5" d="M79.0044 160.45H370.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="20" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="50.0044" y="163.237">20</tspan></text>
+<path id="ygridlin2" opacity="0.5" d="M79.0044 197.947H370.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="10" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="50.0044" y="201.094">10</tspan></text>
+<text id="0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="50.001" y="238.949">0</tspan></text>
+<path id="ygridlin1" opacity="0.5" d="M79.001 235.445H370.997" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="Number of Employees" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="154.066" y="279.212">Consented Population</tspan></text>
+<text id="Sales" transform="rotate(-90)" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="22" y="243.212">Total Addressable Population</tspan></text>
+<path id="bubble5" d="M330 112C335.523 112 340 107.523 340 102C340 96.4772 335.523 92 330 92C324.477 92 320 96.4772 320 102C320 107.523 324.477 112 330 112Z" fill="#3296ED"/>
+<text id="10_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="86" y="252.212">10</tspan></text>
+<text id="20_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="123.449" y="253.28">20</tspan></text>
+<path id="bubble3" d="M125 73C130.523 73 135 68.5228 135 63C135 57.4772 130.523 53 125 53C119.477 53 115 57.4772 115 63C115 68.5228 119.477 73 125 73Z" fill="#26ABA4"/>
+<text id="30_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="157.803" y="253.273">30</tspan></text>
+<path id="bubble4" d="M148 150C153.523 150 158 145.523 158 140C158 134.477 153.523 130 148 130C142.477 130 138 134.477 138 140C138 145.523 142.477 150 148 150Z" fill="#9D53F2"/>
+<text id="40_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="191.479" y="253.268">40</tspan></text>
+<text id="50_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="225.125" y="253.283">50</tspan></text>
+<text id="60" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="258.801" y="252.212">60</tspan></text>
+<path id="bubble1" d="M244 189C249.523 189 254 184.523 254 179C254 173.477 249.523 169 244 169C238.477 169 234 173.477 234 179C234 184.523 238.477 189 244 189Z" fill="#F7A452"/>
+<text id="70" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="291.751" y="252.274">70</tspan></text>
+<text id="80" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="325.759" y="253.274">80</tspan></text>
+<text id="100" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="356.644" y="253.274">10</tspan><tspan x="356.644" y="271.274">0</tspan></text>
+<path id="legendcircle5" d="M124.66 306.649C126.681 306.649 128.32 304.937 128.32 302.825C128.32 300.712 126.681 299 124.66 299C122.639 299 121 300.712 121 302.825C121 304.937 122.639 306.649 124.66 306.649Z" fill="#9D53F2"/>
+<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="134" y="307.212">Mobile</tspan></text>
+<path id="legendcircle3" d="M56.6598 306.649C58.681 306.649 60.3196 304.937 60.3196 302.825C60.3196 300.712 58.681 299 56.6598 299C54.6385 299 53 300.712 53 302.825C53 304.937 54.6385 306.649 56.6598 306.649Z" fill="#3296ED"/>
+<text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="64.9795" y="307.212">Email</tspan></text>
+<path id="legendcircle1" d="M208.66 306.649C210.681 306.649 212.32 304.937 212.32 302.825C212.32 300.712 210.681 299 208.66 299C206.639 299 205 300.712 205 302.825C205 304.937 206.639 306.649 208.66 306.649Z" fill="#26ABA4"/>
+<text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="220" y="307.212">Web</tspan></text>
+<path id="legendcircle1_2" d="M273.66 306.649C275.681 306.649 277.32 304.937 277.32 302.825C277.32 300.712 275.681 299 273.66 299C271.639 299 270 300.712 270 302.825C270 304.937 271.639 306.649 273.66 306.649Z" fill="#F7A452"/>
+<text id="Account E_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="284" y="307.212">Retail Store</tspan></text>
+</g>
+</svg>

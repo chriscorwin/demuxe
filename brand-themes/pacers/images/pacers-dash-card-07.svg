@@ -1,0 +1,74 @@
+<svg width="410" height="325" viewBox="0 0 410 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="pacers-dash-card-07">
+<rect id="Rectangle Copy 12.3" width="410" height="325" fill="white"/>
+<g id="Group 33.1">
+<text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="27.5352" y="51.712">Total Cases</tspan></text>
+<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="30.4565" y="90.785">810</tspan></text>
+</g>
+<g id="Group 33.2">
+<text id="TOTAL PEOPLE_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="198.09" y="51.712">Open</tspan></text>
+<text id="82K_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="165.457" y="90.785">137</tspan></text>
+</g>
+<g id="Group 33.3">
+<text id="TOTAL PEOPLE_3" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="289.414" y="51.712">Time to Close</tspan></text>
+<g id="82K_3">
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="295.466" y="90.785">14</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="16" font-weight="300" letter-spacing="0px"><tspan x="338.19" y="90.785">min</tspan></text>
+</g>
+</g>
+<text id="Last 4 months" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="17" y="14.904">Last 4 months</tspan></text>
+<g id="Group 50">
+<g id="Trending / Line Chart Multiple Axes">
+<g id="Chart">
+<g id="GridLines">
+<g id="gridline6">
+<path id="ygridlin6" d="M80.708 125.907H368.22" stroke="#DDDBDA"/>
+<text id="$50M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="47" y="134.212">1K</tspan></text>
+</g>
+<g id="gridline5">
+<path id="ygridlin5" d="M80.708 153.042H369" stroke="#DDDBDA"/>
+<text id="$40M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="47.2041" y="161.345">800</tspan></text>
+</g>
+<g id="gridline4">
+<path id="ygridlin4" d="M80.708 180.181L369 179.095" stroke="#DDDBDA"/>
+<text id="$30M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="47.2041" y="187.536">600</tspan></text>
+</g>
+<g id="gridline3">
+<path id="ygridlin3" d="M80.708 206.233H368.22" stroke="#DDDBDA"/>
+<text id="$20M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="47.2041" y="214.018">400</tspan></text>
+</g>
+<g id="gridline2">
+<path id="ygridlin2" d="M80.708 232.827H368.22" stroke="#DDDBDA"/>
+<text id="$10M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="47.2041" y="240.893">200</tspan></text>
+</g>
+<g id="gridline1">
+<text id="0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="47.2041" y="266.792">0</tspan></text>
+<path id="ygridlin1" d="M76.8506 259.422H367.444" stroke="#DDDBDA"/>
+</g>
+</g>
+<text id="Sales" transform="rotate(-90)" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="26" y="227.709">Cases</tspan></text>
+<g id="xaxis">
+<text id="Jan" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="75.0615" y="276.391">Jan</tspan></text>
+<text id="Feb" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="151" y="276.222">Feb</tspan></text>
+<text id="Mar" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="257.835" y="276.391">Mar</tspan></text>
+<text id="Apr" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="337" y="276.222">Apr</tspan></text>
+</g>
+<g id="Line">
+<path id="series fill" d="M81.3613 258.87L81.3613 195.336L101.433 189.164L119.736 184.935L138.926 184.739L157.723 172.744L176.613 175.155L195.41 161.126L214.694 171.103L232.803 171.206L251.793 169.488L270.884 163.588L289.539 154.781L308.249 144.564L327.55 147.668L346.458 173.608L365.759 176.915L365.652 258.87H81.3613Z" fill="#77B9F2" fill-opacity="0.3"/>
+<path id="series" d="M81.3613 195.204L101.433 189.092L119.736 184.904L138.926 184.71L157.723 172.831L176.613 175.219L195.41 161.326L214.694 171.365L232.803 171.468L251.793 169.766L270.884 163.923L289.539 155.202L308.249 145.084L327.55 148.158L346.458 174.058L365.759 177.545" stroke="#3296ED" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<g id="Line_2">
+<path id="series fill_2" d="M80.7085 258.879L80.7085 217.343L100.835 208.121L119.188 201.802L138.431 201.51L157.279 183.586L176.221 187.189L195.07 166.772L214.407 176.869L232.565 177.569L251.607 175.001L270.75 172.725L289.456 159.567L308.218 150.296L327.572 151.119L346.531 175.289L365.885 178.228V258.879H80.7085Z" fill="#9D53F2" fill-opacity="0.15"/>
+<path id="series_2" d="M80.7085 217.471L100.835 208.239L119.188 201.913L138.431 201.62L157.279 184.222L176.221 187.829L195.07 166.844L214.407 176.931L232.565 177.086L251.607 174.515L270.75 172.775L289.456 159.603L308.218 149.77L327.572 150.598L346.531 175.865L365.885 178.723" stroke="#9D53F2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="Group 51">
+<path id="legendcircle5" d="M222.66 311.649C224.681 311.649 226.32 309.937 226.32 307.825C226.32 305.712 224.681 304 222.66 304C220.639 304 219 305.712 219 307.825C219 309.937 220.639 311.649 222.66 311.649Z" fill="#9D53F2"/>
+<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="232" y="312.212">Closed</tspan></text>
+<path id="legendcircle3" d="M154.66 311.649C156.681 311.649 158.32 309.937 158.32 307.825C158.32 305.712 156.681 304 154.66 304C152.639 304 151 305.712 151 307.825C151 309.937 152.639 311.649 154.66 311.649Z" fill="#3296ED"/>
+<text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="162.979" y="312.212">Open</tspan></text>
+</g>
+</g>
+</svg>

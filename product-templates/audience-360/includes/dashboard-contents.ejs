@@ -1,0 +1,100 @@
+	<%- include('images/slices/dashboard/header.ejs') %>
+	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-m-top_medium slds-p-horizontal_x-small">
+		<div class="slds-grid slds-wrap slds-col slds-size_2-of-3">
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2">
+				<%- include('components/panel-box.ejs', {
+					title: 'Audience Profile',
+					contents: include('images/slices/dashboard/tcp.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2">
+				<%- include('components/panel-box.ejs', {
+					title: 'Top Channels',
+					header_buttons: [
+						{ label: 'Conversion Rate (CVR)' }
+					],
+					contents: include('images/slices/dashboard/top-channels.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-1 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Conversion Path Analysis',
+					contents: include('images/slices/dashboard/cpa.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Consent Across Channels',
+					contents: include('images/slices/dashboard/consent-across-channels.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Channel Engagement',
+					header_buttons: [
+						{ label: 'Email' }
+					],
+					contents: include('images/slices/dashboard/channel-engagement.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-1 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Conversion Path Analysis',
+					contents: include('images/slices/dashboard/cpa.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+		</div>
+		<div class="slds-grid slds-wrap slds-col slds-p-horizontal_x-small slds-size_1-of-3">
+			<div id="einstein-panel" class="slds-col slds-size_1-of-1">
+				<%- include('images/slices/dashboard/einstein.ejs') %>
+			</div>
+			<div class="slds-col slds-size_1-of-1">
+				<%- include('components/panel-box.ejs', {
+					title: 'Top Products',
+					header_buttons: [
+						{ label: 'Revenue' }
+					],
+					contents: include('images/slices/dashboard/top-products.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Service Cases',
+					contents: include('images/slices/dashboard/service-cases.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+		</div>
+	</div>
+
+
+<style>
+	.slds-modal__content {
+		padding: 0;
+		margin: 0;
+	}
+</style>
+<%
+
+const data = {
+	size: 'small',
+	contentsMain: include('images/woohoo-modal.svg'),
+	isOpen: false,
+	handleClose: function kickoff() {
+		document.querySelector('.slds-modal').classList.remove('slds-fade-in-open');
+		document.querySelector('.slds-backdrop').classList.remove('slds-backdrop_open');
+		animateEinstein();
+	}
+};
+
+echo(include('components/modal', data));
+
+%>

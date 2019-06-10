@@ -1,0 +1,12 @@
+<style>#einstein-here svg { width: 100%; margin-top: -6px; }</style>
+<div id="einstein-here"><%- include('images/einstein.svg') %></div>
+<script>
+	let triggeredEinsteinAnimation = false;
+	const animateEinstein = () => {
+		triggeredEinsteinAnimation = true;
+
+		document.querySelectorAll('.fill-in, .draw-in').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+
+	document.addEventListener("scroll", animateEinstein);
+</script>
