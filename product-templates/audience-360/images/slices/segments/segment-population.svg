@@ -13,12 +13,12 @@
                 <path d="M779.673,106.864 L216.084,106.949" id="Line-6-Copy-5_2" stroke="#979797" opacity="0.3" stroke-linecap="square"></path>
                 <path d="M779.673,162.471 L216.084,162.8" id="Line-6-Copy-7" stroke="#979797" opacity="0.3" stroke-linecap="square"></path>
                 <path d="M779.673,134.607 L216.084,134.935" id="Line-6-Copy-7_2" stroke="#979797" opacity="0.7" stroke-linecap="square"></path>
-                <polygon id="Path-3-Copy-2" fill="#74C9FC" points="222 120.891 406 89.5 587.5 110.5 770.521 91 771 189 222 189"></polygon>
-                <polyline id="Path-Copy-2" fill="#76DED9" points="222 177.672 405.463 146.17 591.968 154.392 770.521 130 771 191 222 191"></polyline>
-                <polyline id="Path-Copy-6" fill="#D4A4FD" points="222.001 203.329 406.929 223 590.806 203.497 771 212.5 771 192 222 192"></polyline>
-                <polyline id="Path" stroke="#B169EF" stroke-width="2" points="222 204 406.592 223 590.135 204.162 771 213.263"></polyline>
-                <polyline id="Path-Copy-3" stroke="#16325C" stroke-width="2" points="223 121.5 406 90 586.5 111 769.5 91"></polyline>
-                <polyline id="Path-Copy-4" stroke="#3CB6D2" stroke-width="2" points="222 177 405.118 145.308 587.035 153.5 771 130"></polyline>
+                <polygon class="growUp" id="Path-3-Copy-2" fill="#74C9FC" points="222 120.891 406 89.5 587.5 110.5 770.521 91 771 189 222 189"></polygon>
+                <polyline class="growUp" id="Path-Copy-2" fill="#76DED9" points="222 177.672 405.463 146.17 591.968 154.392 770.521 130 771 191 222 191"></polyline>
+                <polyline class="growDown" id="Path-Copy-6" fill="#D4A4FD" points="222.001 203.329 406.929 223 590.806 203.497 771 212.5 771 192 222 192"></polyline>
+                <polyline class="growAcross" id="Path" stroke="#B169EF" stroke-width="2" points="222 204 406.592 223 590.135 204.162 771 213.263"></polyline>
+                <polyline class="growAcross" id="Path-Copy-3" stroke="#16325C" stroke-width="2" points="223 121.5 406 90 586.5 111 769.5 91"></polyline>
+                <polyline class="growAcross" id="Path-Copy-4" stroke="#3CB6D2" stroke-width="2" points="222 177 405.118 145.308 587.035 153.5 771 130"></polyline>
                 <path d="M344.333,264.199 C346.726,264.199 348.666,262.185 348.666,259.699 C348.666,257.214 346.726,255.199 344.333,255.199 C341.94,255.199 340,257.214 340,259.699 C340,262.185 341.94,264.199 344.333,264.199 Z" id="Oval-Copy-30" fill="#16325C"></path>
                 <path d="M598.333,264.199 C600.726,264.199 602.666,262.185 602.666,259.699 C602.666,257.214 600.726,255.199 598.333,255.199 C595.94,255.199 594,257.214 594,259.699 C594,262.185 595.94,264.199 598.333,264.199 Z" id="Oval-Copy-32" fill="#C790F7"></path>
                 <path d="M479.619,264.199 C482.012,264.199 483.952,262.185 483.952,259.699 C483.952,257.214 482.012,255.199 479.619,255.199 C477.226,255.199 475.286,257.214 475.286,259.699 C475.286,262.185 477.226,264.199 479.619,264.199 Z" id="Oval-Copy-33" fill="#61D6D0"></path>
