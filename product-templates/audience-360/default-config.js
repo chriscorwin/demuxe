@@ -113,7 +113,7 @@ module.exports = {
 			{
 				label: 'Data Streams',
 				id: 'data-studio',
-				href: `/data-studio/audience-discovery`,
+				href: `/cnx19-a360#4`,
 				lookLikeDropdown: true,
 				isActive: (activePage) => activePage === 'audience-discovery' || activePage === 'data-studio',
 				dropdownItems: [
