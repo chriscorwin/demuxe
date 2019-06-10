@@ -13,10 +13,10 @@
 <script>
 	let triggeredConsentAcrossChannelsGraphAnimation = false;
 	const animateConsentAcrossChannelsGraph = () => {
-		if (window.scrollY > 330 && !triggeredConsentAcrossChannelsGraphAnimation) {
+		if (window.scrollY > 700 && !triggeredConsentAcrossChannelsGraphAnimation) {
 			triggeredConsentAcrossChannelsGraphAnimation = true;
 
-			document.querySelectorAll('circle').forEach(elm => elm.style.animationPlayState = 'running');
+			document.querySelectorAll('#consent-across-channels-here circle').forEach(elm => elm.style.animationPlayState = 'running');
 		}
 
 		document.addEventListener("scroll", animateConsentAcrossChannelsGraph);

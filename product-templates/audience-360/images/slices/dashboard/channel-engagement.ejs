@@ -1,0 +1,27 @@
+	<style>
+        .growThisBar2 {
+            animation: growBar 1s ease-out forwards;
+            transform-origin: 102px center;
+            animation-play-state: paused;
+        }
+
+        @-webkit-keyframes growBar {
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
+        }
+    </style>
+<div id="channel-engagement-here"><%- include('images/slices/channel-engagement.svg') %></div>
+<script>
+	let triggeredChannelEngagementGraphAnimation = false;
+	const animateChannelEngagementGraph = () => {
+		if (window.scrollY > 700 && !triggeredChannelEngagementGraphAnimation) {
+			triggeredChannelEngagementGraphAnimation = true;
+
+			document.querySelectorAll('#channel-engagement-here .growThisBar2').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+
+		document.addEventListener("scroll", animateChannelEngagementGraph);
+	};
+
+
+</script>
