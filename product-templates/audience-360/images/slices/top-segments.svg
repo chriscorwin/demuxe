@@ -35,7 +35,7 @@
 <path id="Bar" class="growThisBar" d="M139 85H334V120H139V85Z" fill="#26ABA4"/>
 <text id="Account A" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="107.212">Super Fans</tspan></text>
 <path id="Bar_2" class="growThisBar" d="M139 136H215V171H139V136Z" fill="#26ABA4"/>
-<text id="Account B" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="155.212">Families</tspan></text>
+<text id="Account B" fill="#0070D2" xml:space="preserve" style="white-space: pre; cursor: pointer;" font-family="Salesforce Sans" font-size="12" letter-spacing="0px" onclick="navigatePage('/segments')"><tspan x="0" y="155.212">Families</tspan></text>
 <path id="Bar_3" class="growThisBar" d="M139 188H164V223H139V188Z" fill="#26ABA4"/>
 <text id="Account C" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="207.212">Sports Enthusiasts</tspan></text>
 <text id="Last 30 days" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1" y="42.904">Last 30 days</tspan></text>
