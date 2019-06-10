@@ -20,7 +20,7 @@
 <path id="Oval 84 Copy 3_3" d="M1033.64 62.595C1036.93 60.9387 1040.67 60.0001 1044.65 60.0001C1047.67 60.0001 1050.55 60.5398 1053.2 61.5228C1054.74 62.0963 1055.22 62.4048 1056.58 63.261" stroke="#FFB75D" stroke-width="7"/>
 </g>
 <g id="Needle">
-<path id="Rectangle 192" fill-rule="evenodd" clip-rule="evenodd" d="M1046.87 82.9067C1047 84.0235 1046.12 85 1045 85V85C1043.88 85 1043 84.0235 1043.13 82.9067L1045 66L1046.87 82.9067Z" fill="#3E3E3C"/>
+<path id="Rectangle192" fill-rule="evenodd" clip-rule="evenodd" d="M1046.87 82.9067C1047 84.0235 1046.12 85 1045 85V85C1043.88 85 1043 84.0235 1043.13 82.9067L1045 66L1046.87 82.9067Z" fill="#3E3E3C"/>
 </g>
 </g>
 </g>
@@ -44,11 +44,11 @@
 <g id="Group 31.1">
 <text id="AVG. ORDER VALUE_3" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="788.314" y="41.712">Avg. Satisfaction Score</tspan></text>
 </g>
-<text id="39_3" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="808.202" y="85.785">71.7%</tspan></text>
+<text id="satisfactionScore" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="808.202" y="85.785">0%</tspan></text>
 </g>
 <g id="badge">
-<rect id="bkgd [4 8]" x="753" y="63" width="47" height="21" rx="10.5" fill="#FFB75D"/>
-<text id="Fair" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="10" font-weight="bold" letter-spacing="0px"><tspan x="767.265" y="76.92">Fair</tspan></text>
+<rect id="FairBckgd" x="753" y="63" width="47" height="21" rx="10.5" fill="#C23934"/>
+<text id="Fair" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="10" font-weight="bold" letter-spacing="0px"><tspan x="767.265" y="76.92">Poor</tspan></text>
 </g>
 </g>
 </g>

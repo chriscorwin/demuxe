@@ -111,14 +111,13 @@ echo(include('components/modal', data));
 		animateEinstein();
 		animateAudienceProfileGraph();
 		animateTopChannelsGraph();
+		animateHeaderGraph();
 	}
     document.getElementById('Got-it-hover-target').addEventListener('mouseover', function() {
-        document.querySelector('#Got-it-hover-target rect').setAttribute('fill', '#006DD5');
-        document.querySelector('#Got-it-action-text').setAttribute('fill', '#FFF');
+        document.querySelector('#Got-it-hover-target rect').setAttribute('fill', '#F4F6F9');
     });
     document.getElementById('Got-it-hover-target').addEventListener('mouseout', function() {
         document.querySelector('#Got-it-hover-target rect').setAttribute('fill', '#FFF');
-        document.querySelector('#Got-it-action-text').setAttribute('fill', '#006DD5');
     });
     document.getElementById('Got-it-hover-target').addEventListener('click', function() {
     	kickoff();

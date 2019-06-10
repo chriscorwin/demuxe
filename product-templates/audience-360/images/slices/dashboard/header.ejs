@@ -1,15 +1,49 @@
-<!-- DON'T USE THIS FILE AS AN EXAMPLE. USE service-cases.ejs METHOD INSTEAD -->
-<div id="header-here"><%- include('images/slices/header-blank.svg') %></div>
-<script>
-	const addHeaderSVG = (data) => (`<%- include('images/slices/header.svg') %>`);
+<style>
+	.makeFairBckgd {
+		animation: make-fair-bkg 1s linear;
+		fill: #FFB75D;
+	}
 
+	@keyframes make-fair-bkg {
+	    from {
+	        fill: #C23934;
+	    }
+	}
+
+	.makeFair {
+		animation: make-fair 1s ease-out;
+		fill: #3E3E3C;
+	}
+
+	@keyframes make-fair {
+	    from {
+	        fill: #FFF;
+	    }
+	}
+
+	#Rectangle192 {
+		animation: needle-up 2s ease-out forwards;
+		transform-origin:  1045px 81px;
+		animation-play-state: paused;
+	}
+
+	@keyframes needle-up {
+		from {
+			transform: rotate(-90deg);
+		}
+
+		to {
+			transform: rotate(0deg);
+		}
+	}
+</style>
+<div id="header-here"><%- include('images/header.svg') %></div>
+<script>
 	let triggeredHeaderGraphAnimation = false;
 	const animateHeaderGraph = () => {
 		triggeredHeaderGraphAnimation = true;
 
-		document.querySelector('#header-here').innerHTML = addHeaderSVG();
-
-		const satisfactionScore = document.querySelector('#satisfactionScore');
+		const satisfactionScore = document.querySelector('#satisfactionScore tspan');
 
 		satisfactionScore.textContent = '0%';
 
@@ -34,6 +68,8 @@
 		}
 
 		increase();
+
+		document.querySelectorAll('#Rectangle192').forEach(elm => elm.style.animationPlayState = 'running');
 	};
 
 </script>

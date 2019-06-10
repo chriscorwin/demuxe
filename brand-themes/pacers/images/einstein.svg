@@ -110,12 +110,10 @@
 <text id="Create-Segment-action-text" id="Button Text and Style" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="125.074" y="345.563">Create Segment</tspan></text>
 <script>
     document.getElementById('Create-Segment-hover-target').addEventListener('mouseover', function() {
-        document.querySelector('#Create-Segment-hover-target rect').setAttribute('fill', '#006DD5');
-        document.querySelector('#Create-Segment-action-text').setAttribute('fill', '#FFF');
+        document.querySelector('#Create-Segment-hover-target rect').setAttribute('fill', '#F4F6F9');
     });
     document.getElementById('Create-Segment-hover-target').addEventListener('mouseout', function() {
         document.querySelector('#Create-Segment-hover-target rect').setAttribute('fill', '#FFF');
-        document.querySelector('#Create-Segment-action-text').setAttribute('fill', '#006DD5');
     });
     document.getElementById('Create-Segment-hover-target').addEventListener('click', function() {
         navigatePage('/magick-flow');
