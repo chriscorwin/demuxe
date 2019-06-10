@@ -1,0 +1,26 @@
+	<style>
+        .growCircle {
+            animation: growCircle 2s ease-out forwards;
+            transform-origin: 102px center;
+            animation-play-state: paused;
+        }
+
+        @-webkit-keyframes growCircle {
+          from { r: 0; }
+        }
+    </style>
+<div id="consent-across-channels-here"><%- include('images/slices/consent-across-channels.svg') %></div>
+<script>
+	let triggeredConsentAcrossChannelsGraphAnimation = false;
+	const animateConsentAcrossChannelsGraph = () => {
+		if (window.scrollY > 330 && !triggeredConsentAcrossChannelsGraphAnimation) {
+			triggeredConsentAcrossChannelsGraphAnimation = true;
+
+			document.querySelectorAll('circle').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+
+		document.addEventListener("scroll", animateConsentAcrossChannelsGraph);
+	};
+
+
+</script>
