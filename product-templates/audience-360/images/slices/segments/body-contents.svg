@@ -17,7 +17,7 @@
                         <path d="M0,0.5 L801,0.5" id="Line-Copy-2" stroke="#E6E6E6" stroke-linecap="square"></path>
                         <g id="Tab_Line" transform="translate(1.000000, 33.000000)">
                             <path d="M0,26.5 L801,26.5" id="Line-Copy_2" stroke="#E6E6E6" stroke-linecap="square"></path>
-                            <text id="Lottie-Garner" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                            <text id="Lottie-Garner" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" onclick="navigatePage('/segments/families')" style="cursor: pointer;">
                                         <tspan x="85.331" y="15.563">Lottie Garner</tspan>
                                     </text>
                             <text id="1" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
