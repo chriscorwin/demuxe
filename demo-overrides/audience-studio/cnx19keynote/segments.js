@@ -22,7 +22,7 @@ const baseSegments = [
 		devices: '250k',
 		audience: '54k',
 		audienceFill: 80,
-		modified: aboutOneMonthAgo,
+		modified: today,
 		type: 'Standard',
 		category: 'Behavioral',
 		subCategory: 'Loyalty'
@@ -115,7 +115,7 @@ const lookalikeSegment = [
 		devices: '2.7M',
 		audience: '1.2M',
 		audienceFill: 44,
-		modified: today,
+		modified: 'Just Now',
 		type: 'Standard',
 		category: 'Behavioral',
 		subCategory: 'Loyalty'
