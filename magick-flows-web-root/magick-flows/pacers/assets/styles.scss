@@ -35,3 +35,45 @@ $heightOfSlide: $heightOfSlideValue + 0px;
 $widthOfSlide: $widthOfSlideValue + 0px;
 
 @import "./../../../../engine/styles/magick-flows.scss";
+
+
+
+html {
+  font-family: "Salesforce Sans", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  background: #514f4d;
+  color: #080707;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  // background-color: blue;
+  background-image: linear-gradient(to bottom, rgba(27, 95, 158, 0), #b0c4df 200px), url(/images/banner-brand-default.png);
+  background-repeat: repeat-x;
+  background-position: 0 90px;
+  background-color: #1b5f9e;
+  background-attachment: fixed;
+
+  background-size: 100% 100%;
+  height: $heightOfAppSwitcher;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: $widthOfSlide;
+}
+
+body.magick-flow {
+  background: transparent !important;
+  overflow: hidden;
+  width: 100vw;
+}
+
+div#content-wrapper {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
+  border-radius: 0.25rem;
+  position: relative;
+  left: auto;
+  margin: 0px auto;
+}
