@@ -1,9 +1,11 @@
 .slds-context-bar__item.slds-is-active:before {
+body {
 	background: #F48B00;
 }
 
 .slds-context-bar__item:not(.slds-no-hover):hover, .slds-context-bar__item.slds-is-active, ::selection {
 	background: #FEF3E5;
+	// background-color: red !important;
 }
 
 .slds-context-bar {
