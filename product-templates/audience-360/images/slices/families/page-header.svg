@@ -36,7 +36,7 @@
 <path id="Oval 84 Copy 3_3" d="M1022.64 60.595C1025.93 58.9387 1029.67 58.0001 1033.65 58.0001C1036.67 58.0001 1039.55 58.5398 1042.2 59.5228C1043.74 60.0963 1044.22 60.4048 1045.58 61.261" stroke="#FFB75D" stroke-width="7"/>
 </g>
 <g id="Needle">
-<path id="Rectangle 192" fill-rule="evenodd" clip-rule="evenodd" d="M1033.94 81.3009C1033.04 81.9784 1031.76 81.7265 1031.18 80.7609C1030.61 79.7953 1031 78.5446 1032.02 78.0799L1047.51 71.0449L1033.94 81.3009Z" fill="#3E3E3C"/>
+<path id="Rectangle192" fill-rule="evenodd" clip-rule="evenodd" d="M1033.94 81.3009C1033.04 81.9784 1031.76 81.7265 1031.18 80.7609C1030.61 79.7953 1031 78.5446 1032.02 78.0799L1047.51 71.0449L1033.94 81.3009Z" fill="#3E3E3C"/>
 </g>
 </g>
 </g>
@@ -45,10 +45,10 @@
 <g id="Group 31.1">
 <text id="AVG. ORDER VALUE_4" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="754.496" y="41.712">Satisfaction Score</tspan></text>
 </g>
-<text id="39_4" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="778.292" y="85.785">98%</tspan></text>
+<text id="satisfactionScore" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="778.292" y="85.785">98%</tspan></text>
 <g id="badge">
-<rect id="bkgd [4 8]" x="720" y="63" width="47" height="21" rx="10.5" fill="#04844B"/>
-<text id="Good" fill="white" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="10" font-weight="bold" letter-spacing="0px"><tspan x="730" y="75.92">Good</tspan></text>
+<rect id="FairBckgd" x="720" y="63" width="47" height="21" rx="10.5" fill="#C23934"/>
+<text id="Fair" fill="white" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="10" font-weight="bold" letter-spacing="0px"><tspan x="732" y="75.92">Poor</tspan></text>
 </g>
 </g>
 </g>
