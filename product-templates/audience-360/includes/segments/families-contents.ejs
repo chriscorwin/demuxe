@@ -27,6 +27,21 @@
 	#spending-profile .slds-panel-box__header button:nth-of-type(1) {
 		margin-left: 185px;
 	}
+
+	.grow-circle {
+		animation: grow-circle 2s linear;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 100;
+		transform-origin: 75.5px;
+		animation-play-state: paused;
+	}
+
+	@keyframes grow-circle {
+		from {
+			stroke-dashoffset: 100;
+		}
+	}
+
 </style>
 	<div class="page-header"><%- include('images/slices/families/record-header.svg') %></div>
 	<div class="page-header slds-m-top_medium"><%- include('images/slices/families/page-header.ejs') %></div>
@@ -95,3 +110,12 @@
 			}) %>
 		</div>
 	</div>
+<script>
+	const triggerAnimations = () => {
+		if (window.scrollY > 250) {
+			document.querySelectorAll('#channel-engagement svg .grow-circle').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+	};
+
+	document.addEventListener("scroll", triggerAnimations);
+</script>

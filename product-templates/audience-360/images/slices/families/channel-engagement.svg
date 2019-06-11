@@ -11,7 +11,7 @@
 <g id="Goal Tracker Copy">
 <g id="Polar Gauge">
 <path id="Oval 3" fill-rule="evenodd" clip-rule="evenodd" d="M44.5002 95.0019C66.3156 95.0019 84.0005 77.3171 84.0005 55.5017C84.0005 33.6863 66.3156 16.0015 44.5002 16.0015C22.6849 16.0015 5 33.6863 5 55.5017C5 77.3171 22.6849 95.0019 44.5002 95.0019Z" stroke="#E6ECF2" stroke-width="10"/>
-<path id="Oval 3_2" d="M44.5002 16.0001C66.3156 16.0001 84.0005 33.6849 84.0005 55.5003C84.0005 65.7583 80.0903 75.103 73.6791 82.1252" stroke="#4BCA81" stroke-width="10" stroke-linecap="round"/>
+<path id="Oval 3_2" class="grow-circle" d="M44.5002 16.0001C66.3156 16.0001 84.0005 33.6849 84.0005 55.5003C84.0005 65.7583 80.0903 75.103 73.6791 82.1252" stroke="#4BCA81" stroke-width="10" stroke-linecap="round"/>
 </g>
 </g>
 <g id="Gender_3">
@@ -24,7 +24,7 @@
 <g id="Goal Tracker Copy_2">
 <g id="Polar Gauge_2">
 <path id="Oval 3_3" fill-rule="evenodd" clip-rule="evenodd" d="M44.5002 222.002C66.3156 222.002 84.0005 204.317 84.0005 182.502C84.0005 160.686 66.3156 143.001 44.5002 143.001C22.6849 143.001 5 160.686 5 182.502C5 204.317 22.6849 222.002 44.5002 222.002Z" stroke="#E6ECF2" stroke-width="10"/>
-<path id="Oval 3_4" d="M44.5002 143C54.9418 143 64.4372 147.052 71.5 153.668" stroke="#C23934" stroke-width="10" stroke-linecap="round"/>
+<path id="Oval 3_4" class="grow-circle" d="M44.5002 143C54.9418 143 64.4372 147.052 71.5 153.668" stroke="#C23934" stroke-width="10" stroke-linecap="round"/>
 </g>
 </g>
 <g id="Gender_6">
