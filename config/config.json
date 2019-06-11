@@ -1,7 +1,7 @@
 {
-	"demoName": "Audience 360 Fever CNX 19 Keynote",
+	"demoName": "Audience Studio Fever CNX 19 Keynote",
 	"brandTheme": "fever",
-	"productTemplate": "audience-360",
+	"productTemplate": "audience-studio",
 	"demoVenue": "cnx19keynote",
 	"demoVersion": "0.1",
 	"magickFlows": {
@@ -13,13 +13,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://cnx19-audience-360-fever.herokuapp.com/"
+		"host": "https://cnx19-as-fever.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19-audience-360-fever-qa.herokuapp.com/"
+		"host": "https://cnx19-as-fever-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://cnx19-audience-360-fever-dev.herokuapp.com/"
+		"host": "https://cnx19-as-fever-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
