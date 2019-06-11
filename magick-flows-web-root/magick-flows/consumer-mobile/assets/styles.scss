@@ -20,14 +20,14 @@ $widthOfSlideNegative: $widthOfSlideValue * -1px;
 
 /* This is done to preload images and reduce load flicker */
 body::after {
-	backface-visibility: visible;
-	content: $preloadImagesData;
-	outline:1px solid red;
-	height: 0;
-	overflow: hidden;
-	position: absolute;
-	width: 0;
-	z-index: -1;
+  backface-visibility: visible;
+  content: $preloadImagesData;
+  outline:1px solid red;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  z-index: -1;
 }
 
 $widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
@@ -49,8 +49,12 @@ html {
 }
 
 .container {
-  background: url(/images/home-background.jpg) no-repeat top left;
+  background-image: linear-gradient(to bottom, #504f4d00, #000000 );
+  background-repeat: repeat-x;
+  background-color: #504f4d;
+  background-attachment: fixed;
   background-size: 100% 100%;
+
   height: $heightOfAppSwitcher;
   left: 0;
   overflow: hidden;
@@ -67,31 +71,53 @@ body.magick-flow {
   overflow: hidden;
   width: 100vw;
 }
+
+
+
+
 body.magick-flow[data-current="magick-flows--step-1"], html[data-current="magick-flows--step-1"] {
   background-color: #056CDF;
+  transition: 500ms all;
 }
 body.magick-flow[data-current="magick-flows--step-2"], html[data-current="magick-flows--step-2"] {
   background-color: #022DA2;
+  transition: 500ms all;
 }
 body.magick-flow[data-current="magick-flows--step-3"], html[data-current="magick-flows--step-3"] {
   background-color: #022DA2;
+  transition: 500ms all;
 }
 body.magick-flow[data-current="magick-flows--step-4"], html[data-current="magick-flows--step-4"] {
   background-color: #022DA2;
+  transition: 500ms all;
 }
 body.magick-flow[data-current="magick-flows--step-7"], html[data-current="magick-flows--step-7"] {
   background-color: black;
+  transition: 500ms all;
 }
 body.magick-flow[data-current="magick-flows--step-8"], html[data-current="magick-flows--step-8"] {
   background-color: black;
+  transition: 500ms all;
 }
 
 body.magick-flow[data-current="magick-flows--step-9"], html[data-current="magick-flows--step-9"] {
   background-color: #e03a3e;
+  transition: 500ms all;
 }
 
 body.magick-flow[data-current="magick-flows--step-10"], html[data-current="magick-flows--step-10"] {
   background-color: #e8b018;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-11"], html[data-current="magick-flows--step-11"] {
+  background-color: #e8b018;
+  transition: 500ms all;
+}
+
+#drawer-from-right--step-6 {
+  box-shadow: 2px 0px 7px rgb(0, 0, 0);
+  overflow: overlay;
 }
 
 
