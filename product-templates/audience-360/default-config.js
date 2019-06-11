@@ -115,17 +115,7 @@ module.exports = {
 				id: 'data-studio',
 				href: `/cnx19-a360#4`,
 				lookLikeDropdown: true,
-				isActive: (activePage) => activePage === 'audience-discovery' || activePage === 'data-studio',
-				dropdownItems: [
-					[
-						{ label: '+ New Data Stream'},
-						{ label: 'Recent Streams', separator: true },
-						{ label: 'Marketing Cloud (Email)...' },
-						{ label: 'Marketing Cloud (Push)...' },
-						{ label: 'Audience Studio Standa...' },
-						{ label: 'Interaction Studio Stre...' },
-					]
-				]
+				isActive: (activePage) => activePage === 'audience-discovery' || activePage === 'data-studio'
 			}
 		]
 	}
