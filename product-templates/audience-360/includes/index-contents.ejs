@@ -89,21 +89,56 @@
 		margin: 0;
 	}
 </style>
-<%
-
-const data = {
-	size: 'medium',
-	contentsMain: '<img src="images/slices/modal-contents.png" />',
-	isOpen: true,
-	handleClose: function kickoff() {
+<script>
+	const kickoff = function kickoff() {
 		document.querySelector('.slds-modal').classList.remove('slds-fade-in-open');
 		document.querySelector('.slds-backdrop').classList.remove('slds-backdrop_open');
 		animateTCPGraph();
 		animateCPAGraph();
 		animateHeaderGraph();
 	}
+</script>
+<%
+
+const data = {
+	size: 'medium',
+	contentsMain: `
+<div id="rpdDiv1560258978394" class="rapidDiv" data-width="200" data-height="200" data-top="318" data-left="115" data-classes="rapidDiv" data-id="rpdDiv1560258978394" data-onclick-add-class="" data-onclick-remove-class="" data-onclick-toggle-class="" data-onclick-raw="" data-is-draggable="" data-onmouseover-add-class="" data-onmouseover-remove-class="" data-onmouseover-toggle-class="" data-onmouseover-raw="" data-onmouseout-add-class="" data-onmouseout-remove-class="" data-onmouseout-toggle-class="" data-onmouseout-raw="" data-background-image="" data-background-image-on-mouseover="" data-background-image-on-click="" data-background-image-on-received-drop="" data-background-image-on-hover="" data-background-image-on-hovered="" data-background-image-on-dropped="" data-background-image-on-dropped-over-target="" data-on-was-dropped-raw="" data-on-received-drop-raw="" data-accepts-only-drops-with-class="" style="top: 328px; left: 128px; width: 200px; height: 200px; z-index: 999999;">
+	<style class="backgroundImage"></style>
+	<style class="backgroundImageOnMouseover"></style>
+	<style class="backgroundImageOnClick"></style>
+	<style class="backgroundImageOnHover"></style>
+	<style class="backgroundImageOnDropped"></style>
+	<style class="backgroundImageOnDroppedOverTarget"></style>
+	<style class="backgroundImageOnReceivedDrop"></style>
+	<style class="backgroundImageOnHovered"></style>
+
+	<script class="onWasDroppedRaw"></script>
+	<script class="onReceivedDropRaw"></script>
+	<script class="onclickAddClass"></script>
+	<script class="onclickRemoveClass"></script>
+	<script class="onclickToggleClass"></script>
+	<script class="onclickRaw"></script>
+	<script class="onmouseoverAddClass"></script>
+	<script class="onmouseoverRemoveClass"></script>
+	<script class="onmouseoverToggleClass"></script>
+	<script class="onmouseoverRaw"></script>
+	<script class="onmouseoutAddClass"></script>
+	<script class="onmouseoutRemoveClass"></script>
+	<script class="onmouseoutToggleClass"></script>
+	<script class="onmouseoutRaw"></script>
+	<!--Rapid Div rpdDiv1560258978394-->
+	<button class="slds-button slds-button_brand" title="Home" aria-pressed="false" style="width: 191px; height: 35px;" onclick="kickoff()">
+	Let's Dive In!
+	</button>
+</div>
+<img src="images/slices/modal-contents.png" />
+	`,
+	isOpen: true,
+	handleClose: 'kickoff'
 };
 
 echo(include('components/modal', data));
 
 %>
+
