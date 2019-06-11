@@ -1,0 +1,96 @@
+<style>
+	#contact-details svg, #addtnl-prof-info svg, #channel-engagement svg, #preferred-conversion-path .slds-panel-box__body svg, #spending-profile .slds-panel-box__body svg, #transaction-overview svg{
+		margin-left: 12px;
+		margin-bottom: 12px;
+	}
+
+	#addtnl-prof-info svg{
+		margin-bottom: 45px;
+	}
+
+	#spending-profile .slds-panel-box__body svg {
+		margin-bottom: 17px;
+	}
+
+	#transaction-overview svg {
+		margin-bottom: 88px;
+	}
+
+	#page-header svg{
+		width: 100%;
+	}
+
+	.slds-panel-box  {
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+	}
+
+	#spending-profile .slds-panel-box__header button:nth-of-type(1) {
+		margin-left: 185px;
+	}
+</style>
+	<div id="page-header"><%- include('images/slices/families/page-header.svg') %></div>
+	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-m-top_medium slds-p-horizontal_x-small slds-m-bottom_x-large">
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
+			<%- include('components/panel-box.ejs', {
+				id: 'contact-details',
+				title: 'Contact Details',
+				header_buttons: [{}],
+				contents: include('images/slices/families/contact-details.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_2-of-3">
+			<%- include('components/panel-box.ejs', {
+				id: 'addtnl-prof-info',
+				title: 'Additional Profile Information',
+				header_buttons: [{}],
+				contents: include('images/slices/families/profile-information.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3 slds-m-top_medium">
+			<%- include('components/panel-box.ejs', {
+				id: 'channel-engagement',
+				title: 'Channel Engagement',
+				header_buttons: [{}],
+				contents: include('images/slices/families/channel-engagement.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3 slds-m-top_medium">
+			<%- include('components/panel-box.ejs', {
+				id: 'preferred-conversion-path',
+				header_buttons: [
+					{ img: include('images/icons/einstein.svg') }
+				],
+				title: 'Preferred Conversion Path',
+				contents: include('images/slices/families/preferred-conversion-path.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3 slds-m-top_medium">
+			<%- include('components/panel-box.ejs', {
+				id: 'spending-profile',
+				title: 'Spending Profile',
+				header_buttons: [ { img: include('images/icons/einstein.svg') }, {}],
+				contents: include('images/slices/families/spending-profile.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_2-of-3 slds-m-top_medium slds-m-bottom_x-large">
+			<%- include('components/panel-box.ejs', {
+				title: '',
+				contents: include('images/slices/families/customer-activity.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3 slds-m-top_medium slds-m-bottom_x-large">
+			<%- include('components/panel-box.ejs', {
+				id: 'transaction-overview',
+				title: 'Transactions Overview',
+				contents: include('images/slices/families/transaction-overview.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+	</div>
