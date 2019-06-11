@@ -8,8 +8,6 @@ $widthOfSlideValue: 1280 !default;
 $widthOfGutterValue: 1280 !default;
 
 $widthOfAppSwitcher: (($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) + 0px;
-$widthOfAppSwitcherShrunk: ((($widthOfSlideValue * $numberOfSlides) + ($widthOfGutterValue * ($numberOfSlides - 1))) * 1.25) + 0px;
-
 $heightOfAppSwitcher: $heightOfSlideValue + 0px;
 $heightOfSlide: $heightOfSlideValue + 0px;
 $widthOfSlide: $widthOfSlideValue + 0px;
@@ -50,14 +48,14 @@ html {
 }
 
 .container {
-  background: url(/images/home-background.jpg) no-repeat top left;
+  // background: url(/magick-flows/consumer-desktop/assets/all__background.png) no-repeat top left;
   background-size: 100% 100%;
   height: $heightOfAppSwitcher;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: $widthOfSlideValue;
+  width: $widthOfSlide;
 }
 
 body.magick-flow {
@@ -72,21 +70,4 @@ div#content-wrapper {
   position: relative;
   left: auto;
   margin: 0px auto;
-}
-
-.app-switcher-one {
-  transition: 400ms transform, 800ms left !important;
-  width: $widthOfAppSwitcherShrunk ;
-
-  &.shrink {
-    transform: scale(0.98) !important;
-  }
-
-  &.rounded-corners {
-    .magick-flows-step {
-      box-shadow: none !important;
-
-    }
-  }
-
 }

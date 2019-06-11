@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/interaction-studio/main/0000___ID=Michael-Page-Welcome.png") url("/magick-flows/interaction-studio/main/0100___ID=Lifecycle-Stages___DATA=is-escape-hatch--lifecycles.png") url("/magick-flows/interaction-studio/main/0200___ID=channels.png") url("/magick-flows/interaction-studio/main/0300___ID=Michael-Page-Monitor-with-Audience___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio/assets/all__viewport-size.png");
+  content: url("/magick-flows/pacers/main/0000___ID=Welcome___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0100___ID=Setup-1___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0110___ID=Setup-2___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0120___ID=Setup-3___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0130___ID=Setup-4-2___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0140___ID=Setup-4-3___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0150___ID=Setup-4-4___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0160___ID=Setup-4-5___DATA=unset___NOTES=Click.png") url("/magick-flows/pacers/main/0200___ID=Dashboard___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0300___ID=Segmentation-1___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0310___ID=Segmentation-1-1___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0320___ID=Segmentation-2___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0330___ID=Segmentation-3___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0400___ID=Activation___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 8960px;
+  width: 34560px;
 }
 
 .app-switcher-one.shrink {
@@ -357,6 +357,326 @@ body.debug div#drawer-from-top--step-4::before {
   left: 10240px;
 }
 
+.app-switcher-one.be-left-5 {
+  left: -12800px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-5 {
+  left: -12800px;
+}
+
+body.debug div#drawer-from-top--step-5::before {
+  content: "Drawer #5";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-5 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 12800px;
+}
+
+.app-switcher-one.be-left-6 {
+  left: -15360px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-6 {
+  left: -15360px;
+}
+
+body.debug div#drawer-from-top--step-6::before {
+  content: "Drawer #6";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-6 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 15360px;
+}
+
+.app-switcher-one.be-left-7 {
+  left: -17920px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-7 {
+  left: -17920px;
+}
+
+body.debug div#drawer-from-top--step-7::before {
+  content: "Drawer #7";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-7 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 17920px;
+}
+
+.app-switcher-one.be-left-8 {
+  left: -20480px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-8 {
+  left: -20480px;
+}
+
+body.debug div#drawer-from-top--step-8::before {
+  content: "Drawer #8";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-8 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 20480px;
+}
+
+.app-switcher-one.be-left-9 {
+  left: -23040px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-9 {
+  left: -23040px;
+}
+
+body.debug div#drawer-from-top--step-9::before {
+  content: "Drawer #9";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-9 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 23040px;
+}
+
+.app-switcher-one.be-left-10 {
+  left: -25600px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-10 {
+  left: -25600px;
+}
+
+body.debug div#drawer-from-top--step-10::before {
+  content: "Drawer #10";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-10 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 25600px;
+}
+
+.app-switcher-one.be-left-11 {
+  left: -28160px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-11 {
+  left: -28160px;
+}
+
+body.debug div#drawer-from-top--step-11::before {
+  content: "Drawer #11";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-11 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 28160px;
+}
+
+.app-switcher-one.be-left-12 {
+  left: -30720px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-12 {
+  left: -30720px;
+}
+
+body.debug div#drawer-from-top--step-12::before {
+  content: "Drawer #12";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-12 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 30720px;
+}
+
+.app-switcher-one.be-left-13 {
+  left: -33280px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-13 {
+  left: -33280px;
+}
+
+body.debug div#drawer-from-top--step-13::before {
+  content: "Drawer #13";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-13 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 33280px;
+}
+
+.app-switcher-one.be-left-14 {
+  left: -35840px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-14 {
+  left: -35840px;
+}
+
+body.debug div#drawer-from-top--step-14::before {
+  content: "Drawer #14";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-14 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 35840px;
+}
+
 footer.magick-flows-stickey-footer_container {
   position: absolute;
   bottom: 0;
@@ -437,40 +757,6 @@ header.magick-flows-stickey-header_container {
   opacity: 1;
   transition: 250ms all ease-in-out;
   will-change: all;
-}
-
-html {
-  font-family: "Salesforce Sans", Arial, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
-  background: #514f4d;
-  color: #080707;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.container {
-  background: url(/images/home-background.jpg) no-repeat top left;
-  background-size: 100% 100%;
-  height: 720px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 1280;
-}
-
-body.magick-flow {
-  background: transparent !important;
-  overflow: hidden;
-  width: 100vw;
-}
-
-div#content-wrapper {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
-  border-radius: 0.25rem;
-  position: relative;
-  left: auto;
-  margin: 0px auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
