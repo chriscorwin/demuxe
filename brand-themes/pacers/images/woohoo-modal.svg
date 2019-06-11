@@ -13,8 +13,8 @@
 <rect id="brand blue [0 16]_2" x="125.5" y="368.5" width="72" height="31" rx="3.5" fill="white" stroke="#C7C7C7"/>
 <text id="Got-it" fill="#006DCC" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan id="Got-it-action-text" x="144.723" y="388.563">Got it</tspan></text>
 </g>
-<text id="Sales reps can more" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="69.2412" y="292.188">Customer 360 has finished importing your data and </tspan><tspan x="63.0459" y="311.438">made it available. You can view the dashboard or start </tspan><tspan x="138.329" y="330.688">building audience segments.</tspan></text>
-<text id="The New Kanban is He" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="28" font-weight="300" letter-spacing="0px"><tspan x="165.588" y="219.828">Woohoo!&#10;</tspan><tspan x="54.9551" y="255.828">Your data&#x2019;s been imported!</tspan></text>
+<text id="Sales reps can more" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="69.2412" y="292.188">Customer 360 has finished importing your data and </tspan><tspan x="63.0459" y="311.438">made it available. You can continue to the dashboard</tspan><tspan x="118.329" y="330.688">or start building audience segments.</tspan></text>
+<text id="The New Kanban is He" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="28" font-weight="300" letter-spacing="0px"><tspan x="165.588" y="219.828">Woohoo!&#10;</tspan><tspan x="37.9551" y="255.828">Your data has been imported!</tspan></text>
 <g id="Customer 360 Enabled">
 <rect id="2018sf_Customer_360_square_2C_icon_RGB" x="147" y="19.1533" width="155.963" height="140.367" fill="url(#alkjsdfhlkjha)"/>
 <circle id="Ellipse" cx="278" cy="32" r="22" fill="#4BCA81" stroke="white" stroke-width="4"/>
