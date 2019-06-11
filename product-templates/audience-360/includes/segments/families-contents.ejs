@@ -42,6 +42,69 @@
 		}
 	}
 
+	#transaction-overview svg circle {
+		transform-origin: 113px 176px;
+	}
+	#OvalDarkBlue {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(98deg);
+	}
+	#OvalLightBlue {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(195deg);
+	}
+	#OvalPurple {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(268deg);
+	}
+
+	@keyframes grow-donut {
+	    from {
+	        stroke-dasharray: 700;
+  			stroke-dashoffset: 0;
+  			transform: rotate(0deg);
+	    }
+	}
+
+	.fill-in {
+		animation: send-lines 2s linear;
+		animation-play-state: paused;
+		fill-opacity: 0.3;
+	}
+
+	@keyframes send-lines {
+		from {
+			fill-opacity: 0;
+		}
+
+		50% {
+			fill-opacity: 0;
+		}
+
+		to {
+			fill-opacity: 0.3;
+		}
+	}
+
+	.draw-in {
+		animation: draw-in-animation 1s linear;
+		animation-play-state: paused;
+		stroke-dasharray: 350px;
+	}
+
+	@keyframes draw-in-animation {
+		from {
+
+			stroke-dashoffset: 350px;
+		}
+
+		to {
+			stroke-dashoffset: 0px;
+		}
+	}
 </style>
 	<div class="page-header"><%- include('images/slices/families/record-header.svg') %></div>
 	<div class="page-header slds-m-top_medium"><%- include('images/slices/families/page-header.ejs') %></div>
@@ -114,6 +177,14 @@
 	const triggerAnimations = () => {
 		if (window.scrollY > 250) {
 			document.querySelectorAll('#channel-engagement svg .grow-circle').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+
+		if (window.scrollY > 650) {
+			document.querySelectorAll('#transaction-overview svg .grow-donut').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+
+		if (window.scrollY > 900) {
+			document.querySelectorAll('#transaction-overview svg .draw-in, #transaction-overview svg .fill-in').forEach(elm => elm.style.animationPlayState = 'running');
 		}
 	};
 
