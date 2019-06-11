@@ -2,7 +2,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/C360/main/0000___ID=Dashboard___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/C360/main/0100___ID=Segment-Details___DATA=is-own-header__own-header-height--90___NOTES=Scroll-down-to-list-of-people__Clck-clickbox-in-first-row.png") url("/magick-flows/C360/main/0110___ID=user-details-1___DATA=is-own-header__own-header-height--90___NOTES=Click-“Data-Streams”-in-global-nav-bar.png") url("/magick-flows/C360/main/0120___ID=user-details-2___DATA=is-own-header__own-header-height--90___NOTES=Click-“New-Data-Stream”-from-dropdown-menu.png") url("/magick-flows/C360/main/0200___ID=new-stream___DATA=show-drawer-from-left--on-arrival__show-drawer-from-right--on-arrival__hide-drawer-from-left--never__hide-drawer-from-right--never___NOTES=Click-“Add-source”-button.png") url("/magick-flows/C360/main/0210___ID=choose-data-source-type___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never__is-own-header__own-header-height--90___NOTES=Click-“Messaging”-from-Data-Source-Type-panel.png") url("/magick-flows/C360/main/0220___ID=marketing-data-source-type-chosen___DATA=is-own-header__own-header-height--90___NOTES=Click-“Continue”-button.png") url("/magick-flows/C360/main/0224___ID=data-source-content-slides-away___DATA=show-drawer-from-right--instantly__hide-drawer-from-right--on-leave__is-own-header__own-header-height--90___NOTES=Click-“Continue”-button.png") url("/magick-flows/C360/main/0230___ID=data-ext-content-arrives___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never__is-own-header__own-header-height--90___NOTES=Click-checkbox-for-“loyalty_Profile_of_Customers”.png") url("/magick-flows/C360/main/0240___ID=data-ext-chosen___DATA=show-drawer-from-left--instantly__show-drawer-from-right--instantly__hide-drawer-from-left--on-leave__hide-drawer-from-right--on-leave__is-own-header__own-header-height--90___NOTES=Click-“Continue”-button.png") url("/magick-flows/C360/main/0300___ID=data-stream-mapping___DATA=show-drawer-from-left--on-arrival__show-drawer-from-right--on-arrival__hide-drawer-from-left--never__hide-drawer-from-right--never__is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/C360/main/0310___ID=data-stream-mapping___DATA=is-own-header__own-header-height--90___NOTES=Click-“Deploy”-button.png") url("/magick-flows/C360/main/0320___ID=mapping-popup___DATA=is-own-header__own-header-height--90___NOTES=Click-“Confirm”-button-in-popup.png") url("/magick-flows/C360/main/0340___ID=mapping-finalized___DATA=is-own-header__own-header-height--90___NOTES=Click-“Deploy”-button.png") url("/magick-flows/C360/main/0380___ID=deploy-data-stream___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/C360/main/4000___ID=data-stream-created___DATA=show-drawer-from-top--on-arrival__hide-drawer-from-top--on-leave__is-own-header__own-header-height--90___use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/C360/main/4010___ID=data-stream-pending___DATA=is-own-header__own-header-height--90__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/C360/main/4020___ID=manage-data-streams___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/C360/main/5000___ID=custom-profile-will-update___DATA=is-own-header__own-header-height--90__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/C360/main/5010___ID=custome-profile-new-card-loaded___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Create-Segment”-button.png") url("/magick-flows/C360/main/5020___ID=custome-profile-ready___DATA=is-own-header__own-header-height--90___NOTES=Click-“Create-Segment”-button.png") url("/magick-flows/C360/main/6000___ID=segmentation-1-0.png") url("/magick-flows/C360/main/6020___ID=segmentation-1-1.png") url("/magick-flows/C360/main/6030___ID=segmentation-1-2.png") url("/magick-flows/C360/main/6040___ID=segmentation-1-3.png") url("/magick-flows/C360/main/7000___ID=activation-1-0.png") url("/magick-flows/C360/main/7010___ID=activation-1-1.png") url("/magick-flows/C360/assets/all__viewport-size.png") url("/magick-flows/C360/assets/choose-data-source-type___drawer-from-right@2x.png") url("/magick-flows/C360/assets/data-ext-chosen___drawer-from-left@2x.png") url("/magick-flows/C360/assets/data-ext-chosen___drawer-from-right@2x.png") url("/magick-flows/C360/assets/data-ext-content-arrives___drawer-from-right@2x.png") url("/magick-flows/C360/assets/data-source-content-slides-away___drawer-from-right@2x.png") url("/magick-flows/C360/assets/data-stream-created___drawer-from-top@2x.png") url("/magick-flows/C360/assets/data-stream-mapping___drawer-from-left@2x.png") url("/magick-flows/C360/assets/data-stream-mapping___drawer-from-right@2x.png") url("/magick-flows/C360/assets/new-stream___drawer-from-left@2x.png") url("/magick-flows/C360/assets/new-stream___drawer-from-right@2x.png");
+  content: url("/magick-flows/C360/main/0000___ID=Dashboard___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/C360/main/0100___ID=Segment-Details___DATA=is-own-header__own-header-height--90___NOTES=Scroll-down-to-list-of-people__Clck-clickbox-in-first-row.png") url("/magick-flows/C360/main/0110___ID=user-details-1___DATA=is-own-header__own-header-height--90___NOTES=Click-“Data-Streams”-in-global-nav-bar.png") url("/magick-flows/C360/main/0120___ID=user-details-2___DATA=is-own-header__own-header-height--90___NOTES=Click-“New-Data-Stream”-from-dropdown-menu.png") url("/magick-flows/C360/main/0200___ID=new-stream___DATA=show-drawer-from-left--on-arrival__show-drawer-from-right--on-arrival__hide-drawer-from-left--never__hide-drawer-from-right--never___NOTES=Click-“Add-source”-button.png") url("/magick-flows/C360/main/0210___ID=choose-data-source-type___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never__is-own-header__own-header-height--90___NOTES=Click-“Messaging”-from-Data-Source-Type-panel.png") url("/magick-flows/C360/main/0220___ID=marketing-data-source-type-chosen___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing__is-own-header__own-header-height--90___NOTES=Click-“Continue”-button.png") url("/magick-flows/C360/main/0224___ID=data-source-content-slides-away___DATA=show-drawer-from-right--instantly__hide-drawer-from-right--on-leave__is-own-header__own-header-height--90___NOTES=Click-“Continue”-button.png") url("/magick-flows/C360/main/0230___ID=data-ext-content-arrives___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never__is-own-header__own-header-height--90___NOTES=Click-checkbox-for-“loyalty_Profile_of_Customers”.png") url("/magick-flows/C360/main/0240___ID=data-ext-chosen___DATA=show-drawer-from-left--instantly__show-drawer-from-right--instantly__hide-drawer-from-left--on-leave__hide-drawer-from-right--on-leave__is-own-header__own-header-height--90___NOTES=Click-“Continue”-button.png") url("/magick-flows/C360/main/0300___ID=data-stream-mapping___DATA=show-drawer-from-left--on-arrival__show-drawer-from-right--on-arrival__hide-drawer-from-left--never__hide-drawer-from-right--never__is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/C360/main/0310___ID=data-stream-mapping___DATA=is-own-header__own-header-height--90___NOTES=Click-“Target”-icon.png") url("/magick-flows/C360/main/0320___ID=mapping-popup___DATA=is-own-header__own-header-height--90___NOTES=Click-“Confirm”-button-in-popup.png") url("/magick-flows/C360/main/0340___ID=mapping-finalized___DATA=is-own-header__own-header-height--90___NOTES=Click-“Deploy”-button.png") url("/magick-flows/C360/main/0380___ID=deploy-data-stream___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/C360/main/4000___ID=data-stream-created___DATA=show-ios-notification__use-step-transition__step-transition_auto-advance__step-transition-timing--slow___NOTES=Auto-advances.png") url("/magick-flows/C360/main/4010___ID=data-stream-pending___DATA=is-own-header__own-header-height--90__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/C360/main/4020___ID=manage-data-streams___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/C360/main/5000___ID=custom-profile-will-update___DATA=is-own-header__own-header-height--90__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/C360/main/5010___ID=custome-profile-new-card-loaded___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Create-Segment”-button.png") url("/magick-flows/C360/main/5020___ID=custome-profile-ready___DATA=is-own-header__own-header-height--90___NOTES=Click-“Create-Segment”-button.png") url("/magick-flows/C360/main/6000___ID=segmentation-1-0.png") url("/magick-flows/C360/main/6010___ID=segmentation-1-4.png") url("/magick-flows/C360/main/6020___ID=segmentation-1-1.png") url("/magick-flows/C360/main/6030___ID=segmentation-1-2.png") url("/magick-flows/C360/main/6040___ID=segmentation-1-3.png") url("/magick-flows/C360/main/7000___ID=activation-1-0.png") url("/magick-flows/C360/main/7010___ID=activation-1-1.png") url("/magick-flows/C360/main/8000___ID=journey.png") url("/magick-flows/C360/assets/all__viewport-size.png") url("/magick-flows/C360/assets/choose-data-source-type___drawer-from-right@2x.png") url("/magick-flows/C360/assets/data-ext-chosen___drawer-from-left@2x.png") url("/magick-flows/C360/assets/data-ext-chosen___drawer-from-right@2x.png") url("/magick-flows/C360/assets/data-ext-content-arrives___drawer-from-right@2x.png") url("/magick-flows/C360/assets/data-source-content-slides-away___drawer-from-right@2x.png") url("/magick-flows/C360/assets/data-stream-created___ios-notification.png") url("/magick-flows/C360/assets/data-stream-mapping___drawer-from-left@2x.png") url("/magick-flows/C360/assets/data-stream-mapping___drawer-from-right@2x.png") url("/magick-flows/C360/assets/new-stream___drawer-from-left@2x.png") url("/magick-flows/C360/assets/new-stream___drawer-from-right@2x.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -166,7 +166,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 67840px;
+  width: 72960px;
 }
 
 .app-switcher-one.shrink {
@@ -1092,6 +1092,70 @@ body.debug div#drawer-from-top--step-27::before {
   top: 0;
   width: 1280px;
   left: 69120px;
+}
+
+.app-switcher-one.be-left-28 {
+  left: -71680px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-28 {
+  left: -71680px;
+}
+
+body.debug div#drawer-from-top--step-28::before {
+  content: "Drawer #28";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-28 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 71680px;
+}
+
+.app-switcher-one.be-left-29 {
+  left: -74240px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-29 {
+  left: -74240px;
+}
+
+body.debug div#drawer-from-top--step-29::before {
+  content: "Drawer #29";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-29 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 74240px;
 }
 
 footer.magick-flows-stickey-footer_container {
