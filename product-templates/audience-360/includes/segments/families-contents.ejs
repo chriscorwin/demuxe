@@ -16,7 +16,7 @@
 		margin-bottom: 88px;
 	}
 
-	#page-header svg{
+	.page-header svg{
 		width: 100%;
 	}
 
@@ -28,7 +28,8 @@
 		margin-left: 185px;
 	}
 </style>
-	<div id="page-header"><%- include('images/slices/families/page-header.ejs') %></div>
+	<div class="page-header"><%- include('images/slices/families/record-header.svg') %></div>
+	<div class="page-header slds-m-top_medium"><%- include('images/slices/families/page-header.ejs') %></div>
 	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-m-top_small slds-p-horizontal_x-small slds-m-bottom_x-large">
 		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
 			<%- include('components/panel-box.ejs', {
