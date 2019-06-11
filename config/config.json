@@ -1,7 +1,7 @@
 {
 	"demoName": "Fever CNX 2019 Keynote",
 	"brandTheme": "fever",
-	"productTemplate": "is",
+	"productTemplate": "dashboard",
 	"demoVenue": "cnx19keynote",
 	"demoVersion": "0.1",
 	"magickFlows": {
@@ -9,6 +9,7 @@
 		"urlSlugs": [],
 		"urlSlugsMapToFlowDirectories": {}
 	},
+	"defaultUrl": "magick-flows-dashboard",
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
