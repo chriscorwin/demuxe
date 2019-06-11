@@ -1,0 +1,132 @@
+	<%- include('images/slices/dashboard/header.ejs') %>
+	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-m-top_medium slds-p-horizontal_x-small slds-m-bottom_x-large">
+		<div class="slds-grid slds-wrap slds-col slds-size_2-of-3">
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2">
+				<%- include('components/panel-box.ejs', {
+					title: 'Audience Profile',
+					contents: include('images/slices/dashboard/audience-profile.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2">
+				<%- include('components/panel-box.ejs', {
+					title: 'Top Channels',
+					header_buttons: [
+						{ label: 'Conversion Rate (CVR)' }
+					],
+					contents: include('images/slices/dashboard/top-channels.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-1 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Orders – Volume and Value – By Kids in Household and Pacers Win/Loss Streak',
+					contents: include('images/slices/dashboard/dot-grid.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Consent Across Channels',
+					contents: include('images/slices/dashboard/consent-across-channels.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Channel Engagement',
+					header_buttons: [
+						{ label: 'Email' }
+					],
+					contents: include('images/slices/dashboard/channel-engagement.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-1 slds-m-top_medium slds-m-bottom_x-large">
+				<%- include('components/panel-box.ejs', {
+					title: 'Conversion Path Analysis',
+					contents: include('images/slices/dashboard/cpa.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+		</div>
+		<div class="slds-grid slds-wrap slds-col slds-p-horizontal_x-small slds-size_1-of-3">
+			<div id="einstein-panel" class="slds-col slds-size_1-of-1">
+				<%- include('images/slices/dashboard/einstein.ejs') %>
+			</div>
+			<div class="slds-col slds-size_1-of-1  slds-m-top_small">
+				<%- include('components/panel-box.ejs', {
+					title: 'Top Products',
+					header_buttons: [
+						{ label: 'Revenue' }
+					],
+					contents: include('images/slices/dashboard/top-products.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Service Cases',
+					contents: include('images/slices/dashboard/service-cases.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+		</div>
+	</div>
+
+
+<style>
+	.slds-modal__content {
+		padding: 0;
+		margin: 0;
+		background: transparent;
+		overflow: visible;
+	}
+
+	.slds-modal__content svg {
+		margin-top: -113px;
+	}
+
+	.slds-modal_small .slds-modal__container {
+		width: 432px !important;
+	}
+</style>
+<%
+
+const data = {
+	size: 'small',
+	contentsMain: include('images/woohoo-modal.svg'),
+	isOpen: true,
+	handleClose: 'kickoff'
+};
+
+echo(include('components/modal', data));
+
+%>
+<script>
+	const kickoff = function kickoff() {
+		document.querySelector('.slds-modal').classList.remove('slds-fade-in-open');
+		document.querySelector('.slds-backdrop').classList.remove('slds-backdrop_open');
+		animateEinstein();
+		animateAudienceProfileGraph();
+		animateTopChannelsGraph();
+		animateHeaderGraph();
+		animateCPAGraph();
+		animateDotGridGraph();
+		animateTopProductsGraph();
+		animateConsentAcrossChannelsGraph();
+		animateChannelEngagementGraph();
+		animateServiceCasesGraph();
+	}
+    document.getElementById('Got-it-hover-target').addEventListener('mouseover', function() {
+        document.querySelector('#Got-it-hover-target rect').setAttribute('fill', '#F4F6F9');
+    });
+    document.getElementById('Got-it-hover-target').addEventListener('mouseout', function() {
+        document.querySelector('#Got-it-hover-target rect').setAttribute('fill', '#FFF');
+    });
+    document.getElementById('Got-it-hover-target').addEventListener('click', function() {
+    	kickoff();
+    });
+
+</script>

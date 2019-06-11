@@ -74,6 +74,9 @@ module.exports = function() {
     // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
     const appViews = [];
 
+    if (configData.brandTheme) {
+        appViews.push(path.join(__dirname, '../', 'brand-themes', configData.brandTheme));
+    }
     if (configData.productTemplate) {
         if (configData.demoVenue) {
             appViews.push(path.join(__dirname, '../', 'demo-overrides', configData.productTemplate, configData.demoVenue));
