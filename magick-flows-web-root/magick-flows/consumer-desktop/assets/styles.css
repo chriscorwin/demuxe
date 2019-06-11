@@ -456,7 +456,7 @@ html {
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 1280;
+  width: 1280px;
 }
 
 body.magick-flow {
