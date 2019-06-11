@@ -1,4 +1,4 @@
 module.exports = {
-	account_name: 'Fever',
-	NAME: 'Fever'
+	account_name: 'Indiana Fever',
+	NAME: 'Indiana Fever'
 };
