@@ -1,7 +1,8 @@
+@charset "UTF-8";
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/consumer-mobile/main/9.png") url("/magick-flows/consumer-mobile/main/10.png") url("/magick-flows/consumer-mobile/main/11.png") url("/magick-flows/consumer-mobile/assets/all__viewport-size.png");
+  content: url("/magick-flows/consumer-mobile/main/0000___ID=start___DATA=unset___NOTES=Click-to-schedule.png") url("/magick-flows/consumer-mobile/main/0100___ID=london___NOTES=Click-“Accept”.png") url("/magick-flows/consumer-mobile/main/0201___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/main/0202___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/main/0203___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/main/0204___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/main/0205___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/main/0206___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/main/0207___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/main/0208___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/main/0209___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/main/0210___ID=phone___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/consumer-mobile/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +166,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 1875px;
+  width: 8625px;
 }
 
 .app-switcher-one.shrink {
@@ -323,6 +324,294 @@ body.debug div#drawer-from-top--step-3::before {
   top: 0;
   width: 375px;
   left: 2250px;
+}
+
+.app-switcher-one.be-left-4 {
+  left: -3000px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-4 {
+  left: -3000px;
+}
+
+body.debug div#drawer-from-top--step-4::before {
+  content: "Drawer #4";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-4 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 3000px;
+}
+
+.app-switcher-one.be-left-5 {
+  left: -3750px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-5 {
+  left: -3750px;
+}
+
+body.debug div#drawer-from-top--step-5::before {
+  content: "Drawer #5";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-5 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 3750px;
+}
+
+.app-switcher-one.be-left-6 {
+  left: -4500px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-6 {
+  left: -4500px;
+}
+
+body.debug div#drawer-from-top--step-6::before {
+  content: "Drawer #6";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-6 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 4500px;
+}
+
+.app-switcher-one.be-left-7 {
+  left: -5250px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-7 {
+  left: -5250px;
+}
+
+body.debug div#drawer-from-top--step-7::before {
+  content: "Drawer #7";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-7 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 5250px;
+}
+
+.app-switcher-one.be-left-8 {
+  left: -6000px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-8 {
+  left: -6000px;
+}
+
+body.debug div#drawer-from-top--step-8::before {
+  content: "Drawer #8";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-8 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 6000px;
+}
+
+.app-switcher-one.be-left-9 {
+  left: -6750px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-9 {
+  left: -6750px;
+}
+
+body.debug div#drawer-from-top--step-9::before {
+  content: "Drawer #9";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-9 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 6750px;
+}
+
+.app-switcher-one.be-left-10 {
+  left: -7500px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-10 {
+  left: -7500px;
+}
+
+body.debug div#drawer-from-top--step-10::before {
+  content: "Drawer #10";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-10 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 7500px;
+}
+
+.app-switcher-one.be-left-11 {
+  left: -8250px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-11 {
+  left: -8250px;
+}
+
+body.debug div#drawer-from-top--step-11::before {
+  content: "Drawer #11";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-11 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 8250px;
+}
+
+.app-switcher-one.be-left-12 {
+  left: -9000px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-12 {
+  left: -9000px;
+}
+
+body.debug div#drawer-from-top--step-12::before {
+  content: "Drawer #12";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-12 {
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+  left: 9000px;
 }
 
 footer.magick-flows-stickey-footer_container {
