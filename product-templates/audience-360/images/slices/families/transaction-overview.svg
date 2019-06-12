@@ -1,0 +1,51 @@
+<svg width="349" height="532" viewBox="0 0 349 532" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="transaction-overview">
+<g id="Group 73">
+<text id="Email" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="255.075" y="152.212">Tickets</tspan></text>
+<text id="Call" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="254.325" y="181.212">Merchandise</tspan></text>
+<rect id="Rectangle 522" x="238" y="143.27" width="10.5705" height="10.5705" rx="5.28525" fill="#8073F7"/>
+<rect id="Rectangle 522 Copy" x="238" y="171.858" width="10.5705" height="10.5705" rx="5.28525" fill="#0855C9"/>
+<text id="Text" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="253.816" y="211.212">Training Camps</tspan></text>
+<rect id="Rectangle 522 Copy 2" x="238" y="200.971" width="10.5705" height="10.5705" rx="5.28525" fill="#2E9BED"/>
+<g id="Group">
+<text id="$72m" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="28" font-weight="bold" letter-spacing="0px"><tspan x="76.4985" y="180.776">$3.8K</tspan></text>
+<text id="Lifetime Spend" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="72.5871" y="200.609">Lifetime Spend</tspan></text>
+
+<circle id="OvalDarkBlue" class="grow-donut" stroke="#0855C9" stroke-width="20" cx="113" cy="176" r="87" stroke-dasharray="145 535"></circle>
+
+<circle id="OvalLightBlue" class="grow-donut" stroke="#2E9BED" stroke-width="20" cx="113" cy="176" r="87" stroke-dasharray="109 493"></circle>
+
+<circle id="OvalPurple" class="grow-donut" stroke="#8073F7" stroke-width="20" cx="113" cy="176" r="87" stroke-dasharray="286 260"></circle>
+
+</g>
+</g>
+<g id="Group 33.2">
+<text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="61.7773" y="11.712">Highest Spend</tspan></text>
+<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="49.6812" y="50.8661">$2.1K</tspan></text>
+</g>
+<g id="Group 33.3">
+<text id="TOTAL PEOPLE_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="191.094" y="11.712">Recent Order Value</tspan></text>
+<text id="82K_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="234.871" y="50.8661">$75</tspan></text>
+</g>
+<path id="ygridlin6" d="M52.0547 348.002H347.2" stroke="#DDDBDA"/>
+<text id="$50M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="21.0224" y="352.212">100</tspan></text>
+<path id="ygridlin5" d="M52.0547 381.192H348" stroke="#DDDBDA"/>
+<text id="$40M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.3466" y="385.399">80</tspan></text>
+<path id="ygridlin4" d="M52.0547 414.385L348 413.058" stroke="#DDDBDA"/>
+<text id="$30M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.3466" y="417.435">60</tspan></text>
+<path id="ygridlin3" d="M52.0547 446.253H347.2" stroke="#DDDBDA"/>
+<text id="$20M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.3466" y="449.826">40</tspan></text>
+<path id="ygridlin2" d="M52.0547 478.781H347.2" stroke="#DDDBDA"/>
+<text id="$10M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.3466" y="482.698">20</tspan></text>
+<text id="0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="35.6708" y="514.378">0</tspan></text>
+<path id="ygridlin1" d="M48.0945 511.31H346.402" stroke="#DDDBDA"/>
+<text id="Sales" transform="rotate(-90)" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="38.627" y="524.212">Order Value ($) </tspan></text>
+<text id="Jan" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="46.2578" y="529.117">Jan</tspan></text>
+<text id="Feb" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="140" y="529.212">Feb</tspan></text>
+<text id="Mar" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="235.697" y="529.117">Mar</tspan></text>
+<text id="Apr" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="320" y="529.212">Apr</tspan></text>
+<path id="series fill" class="fill-in" d="M53 511L53 433.74L73.6085 426.235L92.4004 421.092L112.104 420.854L131.403 406.267L150.798 409.2L170.097 392.14L189.897 404.272L208.49 404.398L227.988 402.308L247.589 395.133L266.742 384.424L285.953 372L305.77 375.774L325.183 407.319L345 411.34L344.891 511H53Z" fill="#77B9F2" fill-opacity="0.3"/>
+<path id="series" class="draw-in" d="M53 435L73.6085 427.561L92.4004 422.464L112.104 422.229L131.403 407.771L150.798 410.677L170.097 393.768L189.897 405.986L208.49 406.111L227.988 404.04L247.589 396.929L266.742 386.314L285.953 374L305.77 377.741L325.183 409.264L345 413.508" stroke="#3296ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text id="Order Value($) over the last 4 months" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0em"><tspan x="2" y="317.904">Order Value($) over the last 4 months</tspan></text>
+</g>
+</svg>
