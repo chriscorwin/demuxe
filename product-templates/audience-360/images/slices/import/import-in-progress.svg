@@ -50,11 +50,11 @@
 <path class="bar" id="Bar_2" d="M536 473H780V491H536V473Z" fill="#26ABA4"/>
 <text id="Account B" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="487.063">.org</tspan></text>
 <path class="bar" id="Bar_3" d="M536 508H742V526H536V508Z" fill="#26ABA4"/>
-<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="521.063">.uk</tspan></text>
+<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="521.063">.net</tspan></text>
 <path class="bar" id="Bar_4" d="M536 541H710V559H536V541Z" fill="#26ABA4"/>
 <text id="Account D" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="555.063">.edu</tspan></text>
 <path class="bar" id="Bar_5" d="M536 575H671V593H536V575Z" fill="#26ABA4"/>
-<text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="589.063">.ca</tspan></text>
+<text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="589.063">.biz</tspan></text>
 </g>
 <g id="Group_2">
 <text id="Top segments_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" font-weight="bold" letter-spacing="0px"><tspan x="852" y="392.414">Number of Phone Numbers per Customer</tspan></text>
