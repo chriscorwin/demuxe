@@ -30,22 +30,22 @@ body {
 body, .container {
   background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
-  height: 720px;
+  height: 812px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 333px;
+  width: 375px;
 }
 
 .ios-notification {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 333px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 812px;
+  top: -812px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -64,10 +64,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 333px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 812px;
+  top: -812px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -88,11 +88,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms left ease-in-out;
-  width: 333px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
+  height: 812px;
   top: 0;
-  left: -333px;
+  left: -375px;
   will-change: left;
 }
 
@@ -112,11 +112,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms right ease-in-out;
-  width: 333px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
+  height: 812px;
   top: 0;
-  right: -333px;
+  right: -375px;
   will-change: right;
 }
 
@@ -136,10 +136,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms bottom ease-in-out;
-  width: 333px;
+  width: 375px;
   background-color: transparent;
-  height: 720px;
-  bottom: -720px;
+  height: 812px;
+  bottom: -812px;
   will-change: bottom;
 }
 
@@ -160,12 +160,12 @@ body, .container {
 }
 
 .app-switcher-one {
-  height: 720px;
+  height: 812px;
   left: 0;
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 1665px;
+  width: 1875px;
 }
 
 .app-switcher-one.shrink {
@@ -185,8 +185,8 @@ body, .container {
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step .slds-scrollable {
-  max-height: 720px;
-  height: 720px;
+  max-height: 812px;
+  height: 812px;
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step.notification {
@@ -194,7 +194,7 @@ body, .container {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: 166.5px;
+  left: 187.5px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -222,21 +222,21 @@ body.debug div#drawer-from-top--step-0::before {
 }
 
 .magick-flows--step-0 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 333px;
+  width: 375px;
   left: 0px;
 }
 
 .app-switcher-one.be-left-1 {
-  left: -666px;
+  left: -750px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -666px;
+  left: -750px;
 }
 
 body.debug div#drawer-from-top--step-1::before {
@@ -254,21 +254,21 @@ body.debug div#drawer-from-top--step-1::before {
 }
 
 .magick-flows--step-1 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 666px;
+  width: 375px;
+  left: 750px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -1332px;
+  left: -1500px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -1332px;
+  left: -1500px;
 }
 
 body.debug div#drawer-from-top--step-2::before {
@@ -286,21 +286,21 @@ body.debug div#drawer-from-top--step-2::before {
 }
 
 .magick-flows--step-2 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 1332px;
+  width: 375px;
+  left: 1500px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -1998px;
+  left: -2250px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -1998px;
+  left: -2250px;
 }
 
 body.debug div#drawer-from-top--step-3::before {
@@ -318,11 +318,11 @@ body.debug div#drawer-from-top--step-3::before {
 }
 
 .magick-flows--step-3 {
-  height: 720px;
+  height: 812px;
   position: absolute;
   top: 0;
-  width: 333px;
-  left: 1998px;
+  width: 375px;
+  left: 2250px;
 }
 
 footer.magick-flows-stickey-footer_container {
@@ -422,12 +422,12 @@ html {
   background-color: #504f4d;
   background-attachment: fixed;
   background-size: 100% 100%;
-  height: 720px;
+  height: 812px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 333px;
+  width: 375px;
 }
 
 body.magick-flow {
