@@ -2,7 +2,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/pacers/main/0040___ID=mapper___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/pacers/main/0050___ID=model___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/pacers/main/0060___ID=c360.png") url("/magick-flows/pacers/main/0100___ID=Setup-1___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Pacers-Customer-Community”-card.png") url("/magick-flows/pacers/main/0110___ID=Setup-choose-data-source-community___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Pacers-Sales”-card.png") url("/magick-flows/pacers/main/0112___ID=Setup-choose-data-source-sales___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Pacers-Service-Central”-card.png") url("/magick-flows/pacers/main/0114___ID=Setup-choose-data-source-service___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“PacersTeamStore”-card.png") url("/magick-flows/pacers/main/0116___ID=Setup-choose-data-source-teamstore___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Ticketmaster”-card.png") url("/magick-flows/pacers/main/0118___ID=Setup-choose-data-source-ticketmaster___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Continue”-button.png") url("/magick-flows/pacers/main/0120___ID=Setup-3___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0130___ID=Setup-4-2___DATA=is-eject--import-data___NOTES=Click.png") url("/magick-flows/pacers/main/0140___ID=Setup-4-3___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0150___ID=Setup-4-4___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0160___ID=Setup-4-5___DATA=unset___NOTES=Click.png") url("/magick-flows/pacers/main/0200___ID=Dashboard___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0300___ID=Segmentation-1___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0310___ID=Segmentation-1-1___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0320___ID=Segmentation-2___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0330___ID=Segmentation-3___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0400___ID=Activation___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/assets/all__viewport-size.png");
+  content: url("/magick-flows/pacers/main/0000___ID=Welcome.png") url("/magick-flows/pacers/main/0100___ID=Setup-1___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Pacers-Customer-Community”-card.png") url("/magick-flows/pacers/main/0110___ID=Setup-choose-data-source-community___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Pacers-Sales”-card.png") url("/magick-flows/pacers/main/0112___ID=Setup-choose-data-source-sales___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Pacers-Service-Central”-card.png") url("/magick-flows/pacers/main/0114___ID=Setup-choose-data-source-service___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“PacersTeamStore”-card.png") url("/magick-flows/pacers/main/0116___ID=Setup-choose-data-source-teamstore___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Ticketmaster”-card.png") url("/magick-flows/pacers/main/0118___ID=Setup-choose-data-source-ticketmaster___DATA=is-own-header__own-header-height--90___NOTES=Click-the-“Continue”-button.png") url("/magick-flows/pacers/main/0120___ID=Setup-3___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0130___ID=Setup-4-2___DATA=is-eject--import-data___NOTES=Click.png") url("/magick-flows/pacers/main/0140___ID=Setup-4-3___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0150___ID=Setup-4-4___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0160___ID=Setup-4-5___DATA=unset___NOTES=Click.png") url("/magick-flows/pacers/main/0200___ID=Dashboard___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0300___ID=Segmentation-1___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0310___ID=Segmentation-1-1___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0320___ID=Segmentation-2___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0330___ID=Segmentation-3___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/main/0400___ID=Activation___DATA=is-own-header__own-header-height--90___NOTES=Click.png") url("/magick-flows/pacers/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -166,7 +166,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 49920px;
+  width: 44800px;
 }
 
 .app-switcher-one.shrink {
@@ -804,70 +804,6 @@ body.debug div#drawer-from-top--step-18::before {
   top: 0;
   width: 1280px;
   left: 46080px;
-}
-
-.app-switcher-one.be-left-19 {
-  left: -48640px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-19 {
-  left: -48640px;
-}
-
-body.debug div#drawer-from-top--step-19::before {
-  content: "Drawer #19";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-19 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 48640px;
-}
-
-.app-switcher-one.be-left-20 {
-  left: -51200px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-20 {
-  left: -51200px;
-}
-
-body.debug div#drawer-from-top--step-20::before {
-  content: "Drawer #20";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-20 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 51200px;
 }
 
 footer.magick-flows-stickey-footer_container {
