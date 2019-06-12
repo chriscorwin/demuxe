@@ -15,7 +15,7 @@
 <path id="ygridlin1" opacity="0.5" d="M57.001 232.445H348.997" stroke="#DDDBDA" stroke-linecap="square"/>
 <text id="Number of Employees" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="132.066" y="276.212">Consented Population</tspan></text>
 <text id="Sales" transform="rotate(-90 0 230)" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="240.212">Total Addressable Population</tspan></text>
-<circle class="growCircle" cx="308" cy="100" r="10" fill="#3296ED"/>
+<circle class="growCircle" cx="348" cy="100" r="10" fill="#3296ED"/>
 <text id="10_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="64" y="249.212">10</tspan></text>
 <text id="20_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="101.449" y="250.28">20</tspan></text>
 <circle class="growCircle" cx="103" cy="60" r="10" fill="#26ABA4"/>
