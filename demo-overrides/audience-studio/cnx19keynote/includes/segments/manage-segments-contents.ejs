@@ -129,6 +129,16 @@
 	}) %>
 <% } %>
 
+<script type="text/javascript">
+	const animate = () => {
+		document.querySelectorAll('circle.animated, #Oval-2, #Oval-3, #Oval-4, .slds-icon_ring circle, #einstein-page').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+
+	document.addEventListener("scroll", animate);
+
+	<%= (locals.state === 'addLookalike') ? 'animate()' : '' %>
+</script>
+
 <script>
 const showPopover = (popoverId) => {
 	document.querySelector(popoverId).classList.remove('slds-hide');

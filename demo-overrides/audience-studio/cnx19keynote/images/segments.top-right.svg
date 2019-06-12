@@ -3,7 +3,8 @@
     <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
         <style>
         circle.animated {
-            animation: grow-circle-2 400ms linear backwards;
+            animation: grow-circle-2 2s linear backwards;
+            animation-play-state: paused;
         }
 
         @keyframes grow-circle-2 {

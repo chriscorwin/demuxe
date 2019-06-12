@@ -3,32 +3,35 @@
     <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
     <style>
         #Oval-2 {
-            animation: grow-oval2 400ms linear backwards;
+            animation: grow-oval2 2s linear backwards;
+            animation-play-state: paused;
         }
 
         @keyframes grow-oval2 {
             from {
-                stroke-dashoffset: 70;
+                stroke-dashoffset: 90;
             }
         }
 
         #Oval-3 {
-            animation: grow-oval3 400ms linear backwards;
+            animation: grow-oval3 2s linear backwards;
+            animation-play-state: paused;
         }
 
         @keyframes grow-oval3 {
             from {
-                stroke-dashoffset: 70;
+                stroke-dashoffset: 90;
             }
         }
 
         #Oval-4 {
-            animation: grow-oval4 400ms linear backwards;
+            animation: grow-oval4 2s linear backwards;
+            animation-play-state: paused;
         }
 
         @keyframes grow-oval4 {
             from {
-                stroke-dashoffset: 180;
+                stroke-dashoffset: 188;
             }
         }
     </style>
@@ -118,7 +121,7 @@
                                 <g id="Oval">
                                     <g>
                                         <circle stroke="#E6ECF2" opacity="0.5" fill-rule="nonzero" cx="29.76" cy="29.76" r="29.76"></circle>
-                                        <path d="M29.8595542,0.0182277071 C13.3734422,0.0182277071 0.00880788173,13.382862 0.00880788173,29.868974 C0.00880788173,40.0616867 5.11738744,49.0612268 12.9138049,54.4468525" id="Oval-3" stroke="#FFB75D" stroke-dashoffset="0" stroke-dasharray="73" stroke-linecap="round"></path>
+                                        <path d="M29.8595542,0.0182277071 C13.3734422,0.0182277071 0.00880788173,13.382862 0.00880788173,29.868974 C0.00880788173,40.0616867 5.11738744,49.0612268 12.9138049,54.4468525" id="Oval-3" stroke="#FFB75D" stroke-dashoffset="0" stroke-dasharray="90" stroke-linecap="round"></path>
                                     </g>
                                 </g>
                             </g>
