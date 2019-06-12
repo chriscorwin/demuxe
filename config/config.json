@@ -1,7 +1,7 @@
 {
-	"demoName": "Audience 360 Fever CNX 19 Keynote",
-	"brandTheme": "fever",
-	"productTemplate": "audience-360",
+	"demoName": "IS Michael Page CNX 19 Keynote",
+	"brandTheme": "michael-page",
+	"productTemplate": "is",
 	"demoVenue": "cnx19keynote",
 	"demoVersion": "0.1",
 	"magickFlows": {
@@ -13,13 +13,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://cnx19-audience-360-fever.herokuapp.com/"
+		"host": "https://cnx19-is-michael-page.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19-audience-360-fever-qa.herokuapp.com/"
+		"host": "https://cnx19-is-michael-page-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://cnx19-audience-360-fever-dev.herokuapp.com/"
+		"host": "https://cnx19-is-michael-page-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
@@ -31,5 +31,5 @@
 		"timeout": 30000
 	},
 	"gapixelid": "",
-	"presentationid": ""
+	"presentationid": "1-B3_Rnl7GzEsG5PUFIehmgDJzHvn3JxQOajEmg1Jkk8"
 }
