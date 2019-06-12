@@ -1,0 +1,56 @@
+<svg style="margin: 0 0 10px 0;" width="1250" height="125" viewBox="0 0 1260 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Page Header">
+<g id="Card" filter="url(#filter0_d)">
+<rect x="2" width="1256" height="121" rx="4" fill="white"/>
+</g>
+<g id="Group 33">
+<text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="60.2031" y="48.712">Total Audience</tspan></text>
+<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="65" y="85.785">2.7M</tspan></text>
+</g>
+<g id="Group 30">
+<text id="CONVERSION RATE Copy" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="268.354" y="48.712">Avg. Order Value</tspan></text>
+<text id="78.5% copy" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="262.025" y="88.785">$ 98.5</tspan></text>
+</g>
+<g id="Group 32">
+<text id="AVG. ORDER VALUE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="1136.15" y="48.712">Engagement</tspan></text>
+<text id="39" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="28" font-weight="300" letter-spacing="0px"><tspan x="1089.21" y="89.828">Moderate</tspan></text>
+<g id="Charts / Metric / Gauge">
+<g id="Metric / Gauge">
+<g id="Gauge">
+<path id="Oval 84 Copy 3" d="M1039.52 67.6735C1038.09 68.5691 1036.77 69.6088 1035.59 70.7708C1031.51 74.7667 1029 80.2084 1029 86.2053" stroke="#C23934" stroke-width="7" stroke-linecap="round"/>
+<path id="Oval 84 Copy 3_2" d="M1072.88 86.6204C1072.88 85.7215 1072.82 84.835 1072.72 83.9641C1072.14 79.4229 1070.13 75.3024 1067.11 72.0278C1065.24 69.9938 1062.98 68.2862 1060.45 67.0067" stroke="#04844B" stroke-width="7" stroke-linecap="round"/>
+<path id="Oval 84 Copy 3_3" d="M1039.64 67.595C1042.93 65.9387 1046.67 65.0001 1050.65 65.0001C1053.67 65.0001 1056.55 65.5398 1059.2 66.5228C1060.74 67.0963 1061.22 67.4048 1062.58 68.261" stroke="#FFB75D" stroke-width="7"/>
+</g>
+<g id="Needle" >
+<path transform="rotate(-90 1052 85)" id="Rectangle 192" fill-rule="evenodd" clip-rule="evenodd" d="M1052.87 87.9067C1053 89.0235 1052.12 90 1051 90V90C1049.88 90 1049 89.0235 1049.13 87.9067L1051 71L1052.87 87.9067Z" fill="#3E3E3C"/>
+</g>
+</g>
+</g>
+</g>
+<g id="Group 31">
+<text id="AVG. ORDER VALUE_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="501.439" y="48.712">Avg. Lifetime Value</tspan></text>
+<text id="39_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="510.021" y="88.785">$ 14.7K</tspan></text>
+</g>
+<g id="Group 39">
+<g id="Group 31.1">
+<text id="AVG. ORDER VALUE_3" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="795.314" y="46.712">Avg. Satisfaction Score</tspan></text>
+</g>
+<text  fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan id="satisfactionScoreBlank" x="815.202" y="90.785">0%</tspan></text>
+</g>
+<g id="badge">
+<rect id="bkgd [4 8]" x="760" y="68" width="47" height="21" rx="10.5" fill="#C23934"/>
+<text id="Fair" fill="#FFF" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="10" font-weight="bold" letter-spacing="0px"><tspan x="774.265" y="81.92">Poor</tspan></text>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" x="0" y="0" width="1260" height="125" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

@@ -1,0 +1,21 @@
+<style>
+	.growTopChannels {
+		animation: growTopChannels 2s ease-out forwards;
+		transform-origin: 115px center;
+		animation-play-state: paused;
+	}
+
+	@-webkit-keyframes growTopChannels {
+	  from { transform: scaleX(0); }
+	  to { transform: scaleX(1); }
+	}
+</style>
+<div id="top-channels-here"><%- include('images/top-channels.svg') %></div>
+<script>
+	let triggeredTopChannelsGraphAnimation = false;
+	const animateTopChannelsGraph = () => {
+		triggeredTopChannelsGraphAnimation = true;
+
+		document.querySelectorAll('#top-channels-here .growTopChannels').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+</script>

@@ -1,0 +1,19 @@
+<% const subHeaderButtonLabel = `<svg class="slds-button__icon" aria-hidden="true">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#download" />
+		</svg>` %>
+<%-
+	include(
+		'wrapper.ejs',
+		{
+			title: '<svg class="slds-icon slds-icon-text-default" style="width: 22px; height: 22px; fill: #16325C;" aria-hidden="true"><use xlink:href="/icons/utility-sprite/svg/symbols.svg#back"></use></svg> Lookalikes',
+			headerVariant: 'default',
+			subHeaderVariant: 'hasButton',
+			subHeaderButtonLabel: subHeaderButtonLabel,
+			subHeaderButtonIsIcon: true,
+			siteSection: 'lookalike',
+			pageContents: 'includes/lookalike-contents',
+			pageStylesheets: ['lookalike.brand.css'],
+			breadcrumbs: ['Manage Segments', 'Lookalikes']
+		}
+	)
+%>

@@ -1,0 +1,16 @@
+<!-- DON'T USE THIS FILE AS AN EXAMPLE. USE service-cases.ejs METHOD INSTEAD -->
+<div id="top-segments-here"><%- include('images/slices/top-segments-blank.svg') %></div>
+<script>
+	const addSVG = (data) => (`<%- include('images/slices/top-segments.svg') %>`);
+
+	let triggeredSegmentsGraphAnimation = false;
+	const animateSegmentsGraph = () => {
+		if (window.scrollY > 330 && !triggeredSegmentsGraphAnimation) {
+			triggeredSegmentsGraphAnimation = true;
+
+			document.querySelector('#top-segments-here').innerHTML = addSVG();
+		}
+	};
+
+	document.addEventListener("scroll", animateSegmentsGraph);
+</script>

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="823px" height="1001px" viewBox="0 0 823 1001" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <defs>
+        <polygon id="path-1" points="0.331 0.5 145.331 0.5 145.331 21.5 0.331 21.5"></polygon>
+        <path d="M14.761,13.938 L10.638,9.846 C11.469,8.676 11.899,7.199 11.684,5.63 C11.315,2.984 9.161,0.892 6.484,0.646 C2.853,0.276 -0.224,3.353 0.146,7.015 C0.392,9.661 2.484,11.846 5.13,12.215 C6.699,12.43 8.176,11.999 9.346,11.169 L13.438,15.261 C13.623,15.446 13.899,15.446 14.084,15.261 L14.73,14.615 C14.915,14.43 14.915,14.122 14.761,13.938 Z M1.961,6.43 C1.961,4.246 3.746,2.461 5.93,2.461 C8.115,2.461 9.899,4.246 9.899,6.43 C9.899,8.615 8.115,10.399 5.93,10.399 C3.746,10.399 1.961,8.646 1.961,6.43 Z" id="path-3"></path>
+        <path d="M15.225,0.808 L0.709,0.808 C0.219,0.808 -0.01,1.363 0.284,1.723 L6.627,9.144 C6.823,9.373 6.921,9.7 6.921,9.994 L6.921,14.702 C6.921,14.963 7.183,15.192 7.444,15.192 L8.425,15.192 C8.686,15.192 8.883,14.963 8.883,14.702 L8.883,9.994 C8.883,9.667 9.013,9.373 9.242,9.144 L15.65,1.723 C15.944,1.363 15.715,0.808 15.225,0.808 L15.225,0.808 Z" id="path-5"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0020___ID=segment" transform="translate(-13.000000, -524.000000)">
+            <g id="Background" transform="translate(0.000000, 88.000000)">
+                <g id="Group-3" transform="translate(13.000000, 436.015966)">
+                    <path d="M0,7.24403372 C0,5.04103372 1.7812,3.25203372 3.9841,3.24403372 L818.984,5.68434189e-14 C821.199,5.68434189e-14 823,1.78503372 823,4.00003372 L823,996.984034 C823,999.194034 821.209,1000.98403 819,1000.98403 L4,1000.98403 C1.7909,1000.98403 0,999.194034 0,996.984034 L0,7.24403372 Z" id="Rectangle-Copy-13" fill="#FFFFFF"></path>
+                    <g id="Activation-Platforms" transform="translate(10.000000, 154.984034)">
+                        <rect id="Rectangle" fill="#FAFAF9" fill-rule="nonzero" x="1" y="0.5" width="801" height="30"></rect>
+                        <path d="M0,31 L801,31" id="Line-Copy" stroke="#E6E6E6" stroke-linecap="square"></path>
+                        <path d="M0,0.5 L801,0.5" id="Line-Copy-2" stroke="#E6E6E6" stroke-linecap="square"></path>
+                        <g id="Tab_Line" transform="translate(1.000000, 33.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_2" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Lottie-Garner" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" onclick="navigatePage('/segments/families')" style="cursor: pointer;">
+                                        <tspan x="85.331" y="15.563">Lottie Garner</tspan>
+                                    </text>
+                            <text id="1" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">1</tspan>
+                            </text>
+                            <text id="3,800" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="349" y="15.563">3,800</tspan>
+                            </text>
+                            <text id="Today" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">Today</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-7" transform="translate(1.000000, 243.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_3" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Gordon-McKinney" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.563">Gordon McKinney</tspan>
+                            </text>
+                            <text id="8" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">8</tspan>
+                            </text>
+                            <text id="5,340" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.563">5,340</tspan>
+                            </text>
+                            <text id="Today" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">Today</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_2" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-14" transform="translate(1.000000, 573.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_4" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Willie-Graham" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Willie Graham</tspan>
+                            </text>
+                            <text id="19" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">19</tspan>
+                            </text>
+                            <text id="7,340" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">7,340</tspan>
+                            </text>
+                            <text id="Today" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Today</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_3" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy" transform="translate(1.000000, 63.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_5" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Charlie-Schmidt" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.563">Charlie Schmidt</tspan>
+                            </text>
+                            <text id="2" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">2</tspan>
+                            </text>
+                            <text id="2,700" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="349" y="15.563">2,700</tspan>
+                            </text>
+                            <text id="Yesterday" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">Yesterday</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_4" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-8" transform="translate(1.000000, 273.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_6" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Tommy-Walker" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.563">Tommy Walker</tspan>
+                            </text>
+                            <text id="9" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">9</tspan>
+                            </text>
+                            <text id="4,340" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.563">4,340</tspan>
+                            </text>
+                            <text id="Yesterday" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">Yesterday</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_5" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-15" transform="translate(1.000000, 603.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_7" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Laura-Santiago" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Laura Santiago</tspan>
+                            </text>
+                            <text id="20" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">20</tspan>
+                            </text>
+                            <text id="2,390" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">2,390</tspan>
+                            </text>
+                            <text id="Yesterday" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Yesterday</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_6" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-2" transform="translate(1.000000, 93.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_8" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Catarina-Morrison" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.563">Catarina Morrison</tspan>
+                            </text>
+                            <text id="3" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">3</tspan>
+                            </text>
+                            <text id="2,580" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.563">2,580</tspan>
+                            </text>
+                            <text id="2/4/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">2/4/2019</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_7" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-9" transform="translate(1.000000, 303.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_9" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Daisy-Daniels" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.563">Daisy Daniels</tspan>
+                            </text>
+                            <text id="10" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">10</tspan>
+                            </text>
+                            <text id="9,100" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.563">9,100</tspan>
+                            </text>
+                            <text id="2/4/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">2/4/2019</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_8" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-16" transform="translate(1.000000, 633.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_10" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Russell-Glover" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Russell Glover</tspan>
+                            </text>
+                            <text id="21" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">21</tspan>
+                            </text>
+                            <text id="3,470" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">3,470</tspan>
+                            </text>
+                            <text id="2/4/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">2/4/2019</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_9" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-3" transform="translate(1.000000, 123.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_11" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Roxie-Swanson" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.563">Roxie Swanson</tspan>
+                            </text>
+                            <text id="4" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">4</tspan>
+                            </text>
+                            <text id="2,200" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.563">2,200</tspan>
+                            </text>
+                            <text id="2/4/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">2/4/2019</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_10" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-17" transform="translate(1.000000, 453.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_12" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Hannah-McLaughlin" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Hannah McLaughlin</tspan>
+                            </text>
+                            <text id="15" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">15</tspan>
+                            </text>
+                            <text id="2,950" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">2,950</tspan>
+                            </text>
+                            <text id="2/4/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">2/4/2019</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_11" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-10" transform="translate(1.000000, 333.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_13" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Alan-Wilkins" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Alan Wilkins</tspan>
+                            </text>
+                            <text id="11" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">11</tspan>
+                            </text>
+                            <text id="2,850" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">2,850</tspan>
+                            </text>
+                            <text id="Today" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Today</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_12" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-18" transform="translate(1.000000, 663.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_14" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Mable-Watson" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Mable Watson</tspan>
+                            </text>
+                            <text id="22" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">22</tspan>
+                            </text>
+                            <text id="2,560" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">2,560</tspan>
+                            </text>
+                            <text id="Today" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Today</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_13" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-4" transform="translate(1.000000, 153.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_15" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Georgie-Fleming" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.563">Georgie Fleming</tspan>
+                            </text>
+                            <text id="5" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">5</tspan>
+                            </text>
+                            <text id="2,950" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="351" y="15.563">2,950</tspan>
+                            </text>
+                            <text id="Today" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">Today</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_14" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-19" transform="translate(1.000000, 483.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_16" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Rhoda-Hardy" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Rhoda Hardy</tspan>
+                            </text>
+                            <text id="16" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">16</tspan>
+                            </text>
+                            <text id="3,150" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">3,150</tspan>
+                            </text>
+                            <text id="Today" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Today</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_15" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-11" transform="translate(1.000000, 363.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_17" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Barbara-Black" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Barbara Black</tspan>
+                            </text>
+                            <text id="12" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">12</tspan>
+                            </text>
+                            <text id="3,980" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">3,980</tspan>
+                            </text>
+                            <text id="Today" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Today</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_16" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-20" transform="translate(1.000000, 693.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_18" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Zachary-Roy" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Zachary Roy</tspan>
+                            </text>
+                            <text id="23" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">23</tspan>
+                            </text>
+                            <text id="4,600" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">4,600</tspan>
+                            </text>
+                            <text id="Today" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Today</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_17" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-5" transform="translate(1.000000, 183.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_19" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Cody-Garza" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.563">Cody Garza</tspan>
+                            </text>
+                            <text id="6" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">6</tspan>
+                            </text>
+                            <text id="4,100" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.563">4,100</tspan>
+                            </text>
+                            <text id="1/28/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">1/28/2019</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_18" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-21" transform="translate(1.000000, 513.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_20" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Dorothy-Tate" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Dorothy Tate</tspan>
+                            </text>
+                            <text id="17" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">17</tspan>
+                            </text>
+                            <text id="4,100" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">4,100</tspan>
+                            </text>
+                            <text id="1/28/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">1/28/2019</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_19" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-12" transform="translate(1.000000, 393.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_21" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Mae-Wilkins" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Mae Wilkins</tspan>
+                            </text>
+                            <text id="13" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">13</tspan>
+                            </text>
+                            <text id="3,560" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">3,560</tspan>
+                            </text>
+                            <text id="1/28/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">1/28/2019</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_20" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-22" transform="translate(1.000000, 723.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_22" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Mathilda-Beck" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Mathilda Beck</tspan>
+                            </text>
+                            <text id="24" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">24</tspan>
+                            </text>
+                            <text id="3780" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">3780</tspan>
+                            </text>
+                            <text id="1/28/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">1/28/2019</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_21" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-6" transform="translate(1.000000, 213.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_23" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Landon-Sullivan" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.563">Landon Sullivan</tspan>
+                            </text>
+                            <text id="7" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.563">7</tspan>
+                            </text>
+                            <text id="2,670" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.563">2,670</tspan>
+                            </text>
+                            <text id="Yesterday" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.563">Yesterday</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_22" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-23" transform="translate(1.000000, 543.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_24" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Willie-Cain" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Willie Cain</tspan>
+                            </text>
+                            <text id="18" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">18</tspan>
+                            </text>
+                            <text id="1,000" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">1,000</tspan>
+                            </text>
+                            <text id="Yesterday" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Yesterday</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_23" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-13" transform="translate(1.000000, 423.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_25" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Tommy-Keller" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Tommy Keller</tspan>
+                            </text>
+                            <text id="14" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">14</tspan>
+                            </text>
+                            <text id="2,100" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">2,100</tspan>
+                            </text>
+                            <text id="Yesterday" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Yesterday</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_24" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <g id="Tab_Line-Copy-24" transform="translate(1.000000, 753.000000)">
+                            <path d="M0,26.5 L801,26.5" id="Line-Copy_26" stroke="#E6E6E6" stroke-linecap="square"></path>
+                            <text id="Ernest-Hammond" fill="#0070D2" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="85.331" y="15.56">Ernest Hammond</tspan>
+                            </text>
+                            <text id="25" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="12.8311" y="15.56">25</tspan>
+                            </text>
+                            <text id="1250" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="350" y="15.56">1250</tspan>
+                            </text>
+                            <text id="Yesterday" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                                <tspan x="658" y="15.56">Yesterday</tspan>
+                            </text>
+                            <rect id="Rectangle-Copy-2_25" stroke="#A8B7C5" fill="#FFFFFF" fill-rule="nonzero" x="55" y="4" width="15" height="15" rx="2.5"></rect>
+                        </g>
+                        <text id="Name" fill="#000000" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13" font-weight="bold">
+                            <tspan x="85.331" y="20.063">Name</tspan>
+                        </text>
+                        <text id="Lifetime-Value-($)" fill="#000000" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13" font-weight="bold">
+                            <tspan x="347" y="20.063">Lifetime Value ($)</tspan>
+                        </text>
+                        <text id="Last-updated" fill="#000000" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13" font-weight="bold">
+                            <tspan x="657" y="20.063">Last updated</tspan>
+                        </text>
+                    </g>
+                    <text id="People-included-in-the-segment" fill="#2B2826" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="14" font-weight="bold">
+                        <tspan x="57" y="86.8980337">People included in the segment</tspan>
+                    </text>
+                    <text id="25-items-•-Sorted-by-Last-updated-•-Last-refreshed-just-now" fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                        <tspan x="23" y="144.888034">25 items • Sorted by Last updated • Last refreshed just now</tspan>
+                    </text>
+                    <text id="Displaying-sample-records-from-all-of-7,095-people-in-this-segment." fill="#2B2826" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                        <tspan x="23" y="112.888034">Displaying sample records from all of 7,095 people in this segment.</tspan>
+                    </text>
+                    <g id="state" transform="translate(476.000000, 71.984034)" fill="#FFFFFF" fill-rule="nonzero" stroke="#DDDBDA">
+                        <rect id="Rectangle-2" x="0.5" y="0.5" width="290" height="31" rx="3.5"></rect>
+                    </g>
+                    <text id="Find-people" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                        <tspan x="492" y="93.0470337">Find people</tspan>
+                    </text>
+                    <g id="Icon" transform="translate(740.000000, 79.984034)">
+                        <g id="Icons-/-z-nested-/-icon-glyphs-/-utility-/search">
+                            <path d="M14.761,13.938 L10.638,9.846 C11.469,8.676 11.899,7.199 11.684,5.63 C11.315,2.984 9.161,0.892 6.484,0.646 C2.853,0.276 -0.224,3.353 0.146,7.015 C0.392,9.661 2.484,11.846 5.13,12.215 C6.699,12.43 8.176,11.999 9.346,11.169 L13.438,15.261 C13.623,15.446 13.899,15.446 14.084,15.261 L14.73,14.615 C14.915,14.43 14.915,14.122 14.761,13.938 Z M1.961,6.43 C1.961,4.246 3.746,2.461 5.93,2.461 C8.115,2.461 9.899,4.246 9.899,6.43 C9.899,8.615 8.115,10.399 5.93,10.399 C3.746,10.399 1.961,8.646 1.961,6.43 Z" id="Mask" fill="#000000"></path>
+                            <g id="Clipped">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <g id="Mask_2"></g>
+                                <g id="Icon-Color" mask="url(#mask-4)">
+                                    <g transform="translate(-1.000000, 0.000000)" id="z-nested-/-Color-Tokens-/-PALETTE_GRAY_9">
+                                        <g>
+                                            <polygon id="Rectangle_2" fill="#706E6B" points="0.5 0 16.5 0 16.5 16 0.5 16"></polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <rect id="Background_2" stroke="#DDDBDA" fill="#FFFFFF" fill-rule="nonzero" x="775.5" y="72.4840337" width="31" height="31" rx="2.5"></rect>
+                    <g id="Icons-/-z-nested-/-icon-glyphs-/-utility-/filterList" transform="translate(783.000000, 79.984034)">
+                        <path d="M15.225,0.808 L0.709,0.808 C0.219,0.808 -0.01,1.363 0.284,1.723 L6.627,9.144 C6.823,9.373 6.921,9.7 6.921,9.994 L6.921,14.702 C6.921,14.963 7.183,15.192 7.444,15.192 L8.425,15.192 C8.686,15.192 8.883,14.963 8.883,14.702 L8.883,9.994 C8.883,9.667 9.013,9.373 9.242,9.144 L15.65,1.723 C15.944,1.363 15.715,0.808 15.225,0.808 L15.225,0.808 Z" id="Mask_3" fill="#000000"></path>
+                        <g id="Clipped">
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <g id="Mask_4"></g>
+                            <g id="Icon-Color_2" mask="url(#mask-6)">
+                                <g transform="translate(-1.000000, -1.000000)" id="z-nested-/-Color-Tokens-/-PALETTE_GRAY_9_2">
+                                    <g>
+                                        <polygon id="Rectangle_3" fill="#706E6B" points="0.5 0.5 17.5 0.5 17.5 17.5 0.5 17.5"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Tabs" transform="translate(10.000000, 11.984034)">
+                        <rect id="Rectangle-8" fill="#DDDBDA" fill-rule="nonzero" x="0" y="38" width="801" height="2"></rect>
+                        <g id="Desktop-Components-/-Tabs-/-z-nested-/Tab---Default">
+                            <rect id="Rectangle-5" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="88" height="38"></rect>
+                            <text id="Details" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal">
+                                <tspan x="18" y="24.616">Details</tspan>
+                            </text>
+                        </g>
+                        <g id="Desktop-Components-/-Tabs-/-z-nested-/Tab---Selected" transform="translate(105.000000, 0.000000)">
+                            <rect id="Rectangle-5_2" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="127" height="40"></rect>
+                            <text id="People" fill="#080707" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="16" font-weight="bold">
+                                <tspan x="37.078" y="24.616">People</tspan>
+                            </text>
+                            <polygon id="Active-2" fill="#1589EE" points="0 38 0 40 127 40 127 38"></polygon>
+                        </g>
+                    </g>
+                    <text id="Refresh-this-list" fill="#0D77D4" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                        <tspan x="722.17" y="145.196034">Refresh this list</tspan>
+                    </text>
+                    <g id="reset_password" transform="translate(705.000000, 134.984034)" fill="#0070D2">
+                        <path d="M10.623,0 L9.868,0 C9.652,0 9.49,0.216 9.49,0.377 L9.49,2.157 C9.49,2.373 9.382,2.48 9.167,2.319 C9.113,2.211 9.059,2.157 8.951,2.049 C7.711,0.809 5.931,0.324 4.152,0.647 C3.559,0.755 2.912,1.025 2.426,1.348 C0.917,2.373 0,3.99 0,5.716 C0,7.064 0.485,8.412 1.456,9.382 C2.426,10.407 3.775,11 5.23,11 C6.471,11 7.711,10.569 8.627,9.76 C8.789,9.598 8.789,9.382 8.681,9.221 L8.142,8.681 C8.034,8.574 7.765,8.52 7.657,8.681 C6.74,9.382 5.5,9.706 4.314,9.382 C3.99,9.328 3.667,9.167 3.343,9.005 C1.941,8.142 1.294,6.471 1.672,4.853 C1.725,4.529 1.887,4.206 2.049,3.882 C2.75,2.696 3.99,1.995 5.284,1.995 C6.255,1.995 7.225,2.426 7.926,3.127 C8.034,3.235 8.142,3.343 8.196,3.451 C8.304,3.667 8.088,3.775 7.873,3.775 L6.147,3.775 C5.931,3.775 5.77,3.936 5.77,4.152 L5.77,4.907 C5.77,5.123 5.931,5.23 6.147,5.23 L10.676,5.23 C10.838,5.23 11,5.123 11,4.907 L11,0.377 C11,0.216 10.784,0 10.623,0 Z" id="Shape"></path>
+                    </g>
+                    <g id="Group-13" transform="translate(23.000000, 68.984034)">
+                        <rect id="bkgd" fill="#A092F0" fill-rule="nonzero" x="0" y="0" width="25.9676" height="26" rx="3.2"></rect>
+                        <g id="people" transform="translate(6.000000, 6.000000)" fill="#FFFFFF">
+                            <path d="M11.8334,6.012 C11.0018,5.693 10.8739,5.373 10.8739,5.053 C10.8739,4.733 11.1298,4.413 11.3856,4.158 C11.8973,3.71 12.1532,3.134 12.1532,2.431 C12.1532,1.151 11.3217,0 9.7866,0 C8.4433,0 7.6118,0.959 7.4839,2.111 C7.4839,2.239 7.5479,2.303 7.6118,2.367 C8.7632,3.07 9.4028,4.349 9.4028,5.821 C9.4028,6.972 9.019,7.931 8.1875,8.635 C8.1235,8.699 8.1235,8.827 8.1875,8.891 C8.3794,9.019 8.8911,9.275 9.1469,9.402 C9.2749,9.402 9.3388,9.466 9.4028,9.466 L12.9847,9.466 C13.6243,9.466 14.2,8.891 14.2,8.251 L14.2,8.123 C14.2,7.1 13.0486,6.524 11.8334,6.012 Z M7.8674,10.106 C6.844,9.722 6.7161,9.338 6.7161,8.955 C6.7161,8.571 7.0359,8.187 7.3557,7.867 C7.9313,7.419 8.2512,6.716 8.2512,5.884 C8.2512,4.349 7.2278,3.006 5.4368,3.006 C3.6459,3.006 2.5585,4.349 2.5585,5.884 C2.5585,6.716 2.8783,7.419 3.5179,7.867 C3.8377,8.187 4.0936,8.571 4.0936,8.955 C4.0936,9.338 3.9657,9.722 2.9423,10.106 C1.4711,10.682 0,11.385 0,12.6 L0,12.984 C0,13.624 0.5757,14.199 1.2153,14.199 L9.4025,14.199 C10.1061,14.199 10.6178,13.624 10.6178,12.984 L10.6178,12.6 C10.6178,11.385 9.3385,10.682 7.8674,10.106 Z" id="Shape_2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

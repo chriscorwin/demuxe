@@ -1,0 +1,16 @@
+<!-- DON'T USE THIS FILE AS AN EXAMPLE. USE service-cases.ejs METHOD INSTEAD -->
+<div id="channel-engagement-here"><%- include('images/slices/channel-engagement-blank.svg') %></div>
+<script>
+	const addChannelEngagementSVG = (data) => (`<%- include('images/slices/channel-engagement.svg') %>`);
+
+	let triggeredChannelEngagementGraphAnimation = false;
+	const animateChannelEngagementGraph = () => {
+		if (window.scrollY > 700 && !triggeredChannelEngagementGraphAnimation) {
+			triggeredChannelEngagementGraphAnimation = true;
+
+			document.querySelector('#channel-engagement-here').innerHTML = addChannelEngagementSVG();
+		}
+	};
+
+	document.addEventListener("scroll", animateChannelEngagementGraph);
+</script>

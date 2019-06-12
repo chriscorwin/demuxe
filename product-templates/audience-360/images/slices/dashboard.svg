@@ -1,0 +1,726 @@
+<svg width="1270" height="1777" viewBox="10 100 1280 1777" fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g id="Dashboard for export to demo team">
+
+		<g id="Service Cases">
+			<rect id="Rectangle Copy 12.3" x="844" y="1326" width="424" height="432" rx="4" fill="white"/>
+			<g id="Group 33.1">
+				<text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px">
+					<tspan x="884.776" y="1424.71">Total Cases</tspan>
+				</text>
+				<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px">
+					<tspan x="887.345" y="1463.78">810</tspan>
+				</text>
+			</g>
+			<g id="Group 33.2">
+				<text id="TOTAL PEOPLE_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px">
+					<tspan x="1056.98" y="1424.71">Open</tspan>
+				</text>
+				<text id="82K_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px">
+					<tspan x="1023.96" y="1463.78">137</tspan>
+				</text>
+			</g>
+			<g id="Group 33.3">
+				<text id="TOTAL PEOPLE_3" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px">
+					<tspan x="1149.95" y="1424.71">Time to Close</tspan>
+				</text>
+				<g id="82K_3">
+					<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px">
+						<tspan x="1155.56" y="1463.78">14</tspan>
+					</text>
+					<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="16" font-weight="300" letter-spacing="0px">
+						<tspan x="1198.28" y="1463.78">min</tspan>
+					</text>
+				</g>
+			</g>
+			<path id="Line 3 Copy 6.5" d="M857.541 1699.5H1247.66" stroke="#E6E5E4" stroke-linecap="square"/>
+			<text id="View All" fill="#006AD8" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+				<tspan x="1027.07" y="1730.85">View All</tspan>
+			</text>
+			<g id="Desktop Components / Tabs / z-nested /Tab - Selected Copy 2.3">
+				<text id="Top segments" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" font-weight="bold" letter-spacing="0px">
+					<tspan x="864.239" y="1362.32">Service Cases</tspan>
+				</text>
+			</g>
+			<text id="Last 4 months" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="865.25" y="1387.9">Last 4 months</tspan>
+			</text>
+			<g id="Group 50">
+				<g id="Trending / Line Chart Multiple Axes">
+					<g id="Chart">
+						<g id="GridLines">
+							<g id="gridline6">
+								<path id="ygridlin6" d="M926.683 1498.91H1217.63" stroke="#DDDBDA"/>
+								<text id="$50M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+									<tspan x="892.573" y="1507.21">1K</tspan>
+								</text>
+							</g>
+							<g id="gridline5">
+								<path id="ygridlin5" d="M926.683 1526.04H1218.41" stroke="#DDDBDA"/>
+								<text id="$40M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+									<tspan x="892.779" y="1534.34">800</tspan>
+								</text>
+							</g>
+							<g id="gridline4">
+								<path id="ygridlin4" d="M926.683 1553.18L1218.41 1552.1" stroke="#DDDBDA"/>
+								<text id="$30M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+									<tspan x="892.779" y="1560.54">600</tspan>
+								</text>
+							</g>
+							<g id="gridline3">
+								<path id="ygridlin3" d="M926.683 1579.23H1217.63" stroke="#DDDBDA"/>
+								<text id="$20M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+									<tspan x="892.779" y="1587.02">400</tspan>
+								</text>
+							</g>
+							<g id="gridline2">
+								<path id="ygridlin2" d="M926.683 1605.83H1217.63" stroke="#DDDBDA"/>
+								<text id="$10M" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+									<tspan x="892.779" y="1613.89">200</tspan>
+								</text>
+							</g>
+							<g id="gridline1">
+								<text id="0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+									<tspan x="892.779" y="1639.79">0</tspan>
+								</text>
+								<path id="ygridlin1" d="M922.78 1632.42H1216.84" stroke="#DDDBDA"/>
+							</g>
+						</g>
+						<text id="Sales" transform="rotate(-90)" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="871.322" y="1600.71">Cases</tspan>
+						</text>
+						<g id="xaxis">
+							<text id="Jan" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+								<tspan x="920.969" y="1649.39">Jan</tspan>
+							</text>
+							<text id="Feb" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+								<tspan x="997.814" y="1649.22">Feb</tspan>
+							</text>
+							<text id="Mar" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+								<tspan x="1105.92" y="1649.39">Mar</tspan>
+							</text>
+							<text id="Apr" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+								<tspan x="1186.03" y="1649.22">Apr</tspan>
+							</text>
+						</g>
+						<g id="Line">
+							<path id="series fill" d="M927.344 1631.87V1568.34L947.656 1562.16L966.177 1557.93L985.596 1557.74L1004.62 1545.74L1023.73 1548.15L1042.75 1534.13L1062.27 1544.1L1080.59 1544.21L1099.81 1542.49L1119.13 1536.59L1138.01 1527.78L1156.94 1517.56L1176.47 1520.67L1195.6 1546.61L1215.14 1549.92L1215.03 1631.87H927.344Z" fill="#77B9F2" fill-opacity="0.3"/>
+							<path id="series" d="M927.344 1568.2L947.656 1562.09L966.177 1557.9L985.596 1557.71L1004.62 1545.83L1023.73 1548.22L1042.75 1534.33L1062.27 1544.37L1080.59 1544.47L1099.81 1542.77L1119.13 1536.92L1138.01 1528.2L1156.94 1518.08L1176.47 1521.16L1195.6 1547.06L1215.14 1550.55" stroke="#3296ED" stroke-linecap="round" stroke-linejoin="round"/>
+						</g>
+					</g>
+				</g>
+				<g id="Line_2">
+					<path id="series fill_2" d="M926.684 1631.88V1590.34L947.051 1581.12L965.622 1574.8L985.095 1574.51L1004.17 1556.59L1023.34 1560.19L1042.41 1539.77L1061.98 1549.87L1080.35 1550.57L1099.62 1548L1118.99 1545.73L1137.92 1532.57L1156.91 1523.3L1176.49 1524.12L1195.68 1548.29L1215.26 1551.23V1631.88H926.684Z" fill="#9D53F2" fill-opacity="0.15"/>
+					<path id="series_2" d="M926.684 1590.47L947.051 1581.24L965.622 1574.91L985.095 1574.62L1004.17 1557.22L1023.34 1560.83L1042.41 1539.84L1061.98 1549.93L1080.35 1550.09L1099.62 1547.52L1118.99 1545.78L1137.92 1532.6L1156.91 1522.77L1176.49 1523.6L1195.68 1548.86L1215.26 1551.72" stroke="#9D53F2" stroke-linecap="round" stroke-linejoin="round"/>
+				</g>
+			</g>
+			<g id="Group 51">
+				<path id="legendcircle5" d="M1070.33 1684.65C1072.37 1684.65 1074.03 1682.94 1074.03 1680.82C1074.03 1678.71 1072.37 1677 1070.33 1677C1068.28 1677 1066.63 1678.71 1066.63 1680.82C1066.63 1682.94 1068.28 1684.65 1070.33 1684.65Z" fill="#9D53F2"/>
+				<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="1079.78" y="1685.21">Closed</tspan>
+				</text>
+				<path id="legendcircle3" d="M1001.52 1684.65C1003.56 1684.65 1005.22 1682.94 1005.22 1680.82C1005.22 1678.71 1003.56 1677 1001.52 1677C999.472 1677 997.814 1678.71 997.814 1680.82C997.814 1682.94 999.472 1684.65 1001.52 1684.65Z" fill="#3296ED"/>
+				<text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="1009.94" y="1685.21">Open</tspan>
+				</text>
+			</g>
+		</g>
+		<g id="Total Consumer Population">
+			<rect id="Rectangle Copy 12" x="15" y="235" width="401" height="432" rx="4" fill="white"/>
+			<text id="Path Analysis across" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" font-weight="bold" letter-spacing="0px">
+				<tspan x="34.6875" y="270.881">Total Consumer Population</tspan>
+			</text>
+			<text id="Displaying an aggreg" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="34" y="292.712">Displaying the most common characteristics of your population</tspan>
+			</text>
+			<g id="Group 41">
+				<text id="Gender" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" letter-spacing="0px">
+					<tspan x="83" y="473.888">Gender</tspan>
+				</text>
+				<text id="Gender_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="82" y="497.84">Female</tspan>
+				</text>
+				<g id="Group 37">
+					<g id="iconmonstr-gender-5">
+						<path id="Shape" fill-rule="evenodd" clip-rule="evenodd" d="M57.05 468V465H66.5V474H63.35V470.121L60.022 473.29C61.1214 474.762 61.775 476.556 61.775 478.5C61.775 483.385 57.6831 487.353 52.588 487.488C51.213 489.76 48.8458 491.413 46.025 491.865V495H50.75V498H46.025V501H42.875V498H38.15V495H42.875V491.865C38.4083 491.149 35 487.459 35 483C35 478.121 39.0808 474.158 44.1665 474.014C45.7982 471.324 48.8285 469.5 52.325 469.5C54.3662 469.5 56.2499 470.123 57.795 471.17L61.1229 468H57.05ZM46.1472 479.646C46.7126 482.406 49.2641 484.5 52.3259 484.5C55.8003 484.5 58.6259 481.809 58.6259 478.5C58.6259 475.191 55.8003 472.5 52.3259 472.5C50.4485 472.5 48.7711 473.295 47.6182 474.54C50.9352 475.668 53.4032 478.497 53.8284 481.937C52.6881 482.396 51.6959 482.346 50.6265 481.821C50.05 479.076 47.5017 477 44.4509 477C40.9764 477 38.1509 479.691 38.1509 483C38.1509 486.309 40.9764 489 44.4509 489C46.3267 489 47.9883 488.201 49.1365 486.954C45.8227 485.819 43.3641 482.987 42.9452 479.547C43.9973 479.127 45.1077 479.147 46.1472 479.646Z" fill="#919191"/>
+					</g>
+				</g>
+				<text id="Gender_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" letter-spacing="0px">
+					<tspan x="89" y="557.888">Age</tspan>
+				</text>
+				<text id="Gender_4" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="88" y="581.84">35-44</tspan>
+				</text>
+				<g id="Group 38.1">
+					<path id="Shape_2" fill-rule="evenodd" clip-rule="evenodd" d="M68.749 577V582H41.2492V577H68.749ZM41.2492 575.75V572H68.749V575.75H41.2492ZM66.8162 564.5C68.3861 564.514 69.9836 565.814 69.9999 567.625C70.0149 569.35 68.5299 570.75 66.7187 570.75C65.4337 570.75 64.3187 570.045 63.7812 569.017C63.2437 570.045 62.1287 570.75 60.8437 570.75C59.57 570.75 58.465 570.057 57.9225 569.047C57.3775 570.057 56.2737 570.75 55 570.75C53.7263 570.75 52.6225 570.057 52.0788 569.047C51.535 570.057 50.43 570.75 49.1563 570.75C47.8713 570.75 46.7576 570.045 46.2188 569.017C45.6801 570.045 44.5663 570.75 43.2813 570.75C41.4701 570.75 39.9851 569.35 40.0001 567.625C40.0164 565.814 41.6151 564.514 43.1826 564.5H45.0001V560.782H47.5001V564.5H53.75V558.25H56.25V564.5H62.4999V560.75H64.9999V564.5H66.8162ZM45.1912 560.186C42.82 559.41 43.5025 555.881 46.3037 554.533C46.4037 556.31 48.75 556.49 48.75 558.285C48.75 559.038 48.1987 559.878 47.395 560.186C47.5875 559.55 47.1625 558.416 46.295 557.925C45.4175 558.434 44.9662 559.553 45.1912 560.186ZM62.691 560.154C60.3211 559.377 61.0036 555.849 63.8048 554.5C63.9048 556.277 66.251 556.457 66.251 558.252C66.251 559.005 65.6998 559.845 64.896 560.154C65.0873 559.517 64.6635 558.384 63.796 557.892C62.9185 558.401 62.4673 559.52 62.691 560.154ZM53.9404 557.654C51.5692 556.878 52.2517 553.349 55.0529 552C55.1529 553.777 57.4991 553.957 57.4991 555.752C57.4991 556.505 56.9479 557.345 56.1441 557.654C56.3354 557.018 55.9117 555.884 55.0442 555.393C54.1667 555.901 53.7154 557.02 53.9404 557.654Z" fill="#919191"/>
+				</g>
+				<text id="Gender_5" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" letter-spacing="0px">
+					<tspan x="248" y="559.888">Interest</tspan>
+				</text>
+				<text id="Gender_6" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="247" y="583.84">Basketball</tspan>
+				</text>
+				<text id="Gender_7" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" letter-spacing="0px">
+					<tspan x="246" y="480.888">Children in Household</tspan>
+				</text>
+				<text id="Gender_8" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="245" y="504.84">2</tspan>
+				</text>
+				<path id="Shape_3" fill-rule="evenodd" clip-rule="evenodd" d="M223.204 488.697C223.204 487.839 223.953 486.981 224.515 486.467C225.827 485.265 226.389 483.893 226.389 482.177C226.389 478.917 224.328 476 220.58 476C214.482 476 214.222 481.913 214.222 483.743C216.463 483.743 221.292 487.295 218.816 492.831C218.441 493.517 218.066 494.288 218.816 494.459C220.877 495.489 222.886 497.136 223.391 499.164C223.578 499.507 223.953 499.85 224.515 499.85H228.638C230.511 499.85 231.636 498.477 231.636 496.762C231.823 494.188 228.825 492.3 225.827 491.099C223.578 490.241 223.204 489.555 223.204 488.697ZM203.44 488.697C203.44 487.839 202.691 486.981 202.129 486.467C200.817 485.265 200.255 483.893 200.255 482.177C200.255 478.917 202.316 476 206.064 476C212.162 476 212.422 481.913 212.422 483.743C210.181 483.743 205.352 487.295 207.828 492.831C208.203 493.517 208.578 494.288 207.828 494.459C205.767 495.489 203.758 497.136 203.253 499.164C203.066 499.507 202.691 499.85 202.129 499.85H198.006C196.133 499.85 195.008 498.477 195.008 496.762C194.821 494.188 197.819 492.3 200.817 491.099C203.066 490.241 203.44 489.555 203.44 488.697ZM216.281 497.17C215.09 496.51 214.891 495.96 214.891 495.41C214.891 494.75 215.189 494.2 215.686 493.87C216.381 493.1 216.778 492 216.778 490.79C216.778 488.48 215.586 486.5 213.302 486.5C211.018 486.5 209.827 488.48 209.827 490.79C209.827 492 210.224 493.1 210.919 493.87C211.415 494.31 211.713 494.86 211.713 495.41C211.713 496.07 211.515 496.51 210.323 497.17C208.436 498.05 206.748 498.93 206.649 500.8C206.649 502.01 207.443 503 208.536 503H218.069C219.161 503 219.956 502.01 219.956 500.8C219.856 498.93 218.168 498.05 216.281 497.17V497.17Z" fill="#919191"/>
+				<g id="new_custom1">
+					<path id="Shape_4" fill-rule="evenodd" clip-rule="evenodd" d="M219.235 581.461C218.016 582.68 216.12 582.68 214.901 581.461C211.244 577.668 204.336 570.355 204.336 570.355C201.221 567.104 201.221 561.822 204.336 558.571C205.826 557.081 207.858 556.133 210.025 556.133C212.192 556.133 214.088 556.946 215.578 558.571L216.255 559.384C216.661 559.79 217.474 559.79 217.88 559.384L218.422 558.707C220.047 557.081 221.944 556.133 224.111 556.133C226.142 556.133 228.174 556.946 229.664 558.571C232.779 561.822 232.779 567.104 229.664 570.355C229.664 570.355 222.892 577.668 219.235 581.461V581.461Z" fill="#919191"/>
+				</g>
+			</g>
+			<path id="Oval" opacity="0.5" d="M109.5 417C135.181 417 156 396.181 156 370.5C156 344.819 135.181 324 109.5 324C83.8188 324 63 344.819 63 370.5C63 396.181 83.8188 417 109.5 417Z" stroke="#DDDBDA" stroke-width="10"/>
+			<path id="Oval 2" d="M109.5 324C83.8188 324 63 344.819 63 370.5C63 396.181 83.8188 417 109.5 417C135.181 417 156 396.181 156 370.5" stroke="#3296ED" stroke-width="10" stroke-linecap="round"/>
+			<text id="75%" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" letter-spacing="0px">
+				<tspan x="217" y="421.818">74.8% of 12.3M</tspan>
+			</text>
+			<g id="Group 33.1_2">
+				<text id="TOTAL PEOPLE_4" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px">
+					<tspan x="216" y="333.712">No. of people with this </tspan>
+					<tspan x="216" y="350.712">profile in your audience</tspan>
+				</text>
+				<text id="82K_4" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px">
+					<tspan x="215.301" y="390.785">8.5M</tspan>
+				</text>
+			</g>
+			<path id="Line 3 Copy 6.4_2" d="M21.3813 608.5H406.9" stroke="#E6E5E4" stroke-linecap="square"/>
+			<text id="View All_2" fill="#006AD8" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+				<tspan x="188.635" y="639.849">View All</tspan>
+			</text>
+		</g>
+		<g id="Top Products">
+			<g id="Group 3 Copy">
+				<g id="Top Overlapping ">
+					<path id="Rectangle 18 Copy" fill-rule="evenodd" clip-rule="evenodd" d="M848 680C845.791 680 844 681.791 844 684V1308C844 1310.21 845.791 1312 848 1312H1264C1266.21 1312 1268 1310.21 1268 1308V684C1268 681.791 1266.21 680 1264 680H848Z" fill="white"/>
+				</g>
+				<path id="Line 3 Copy 6" d="M862.469 1258.5H1249.81" stroke="#E6E5E4" stroke-linecap="square"/>
+				<text id="View All_3" fill="#006DD5" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+					<tspan x="1031.25" y="1289.06">View All</tspan>
+				</text>
+				<g id="Desktop Components / Tabs / z-nested /Tab - Selected Copy 2">
+					<text id="Journey Analytics" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" font-weight="bold" letter-spacing="0px">
+						<tspan x="870.123" y="722.818">Top Products </tspan>
+					</text>
+				</g>
+			</g>
+			<g id="$72m">
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="28" letter-spacing="0px">
+					<tspan x="1082.27" y="887.776">k</tspan>
+				</text>
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="28" letter-spacing="0px">
+					<tspan x="1013.91" y="887.776">$298</tspan>
+				</text>
+			</g>
+			<g id="Ellipse">
+				<mask id="path-110-outside-1" maskUnits="userSpaceOnUse" x="933.436" y="853" width="118" height="154" fill="black">
+					<rect fill="white" x="933.436" y="853" width="118" height="154"/>
+					<path d="M940.493 855.83C935.954 872.691 935.213 890.342 938.324 907.521C941.435 924.7 948.322 940.983 958.49 955.205C968.659 969.427 981.859 981.238 997.147 989.793C1012.43 998.348 1029.43 1003.44 1046.93 1004.69L1048.64 981.054C1034.65 980.049 1021.05 975.978 1008.82 969.135C996.587 962.291 986.027 952.842 977.892 941.464C969.757 930.086 964.248 917.06 961.759 903.317C959.27 889.574 959.862 875.453 963.494 861.964L940.493 855.83Z"/>
+				</mask>
+				<path d="M940.493 855.83C935.954 872.691 935.213 890.342 938.324 907.521C941.435 924.7 948.322 940.983 958.49 955.205C968.659 969.427 981.859 981.238 997.147 989.793C1012.43 998.348 1029.43 1003.44 1046.93 1004.69L1048.64 981.054C1034.65 980.049 1021.05 975.978 1008.82 969.135C996.587 962.291 986.027 952.842 977.892 941.464C969.757 930.086 964.248 917.06 961.759 903.317C959.27 889.574 959.862 875.453 963.494 861.964L940.493 855.83Z" fill="#F7A452"/>
+				<path d="M940.493 855.83C935.954 872.691 935.213 890.342 938.324 907.521C941.435 924.7 948.322 940.983 958.49 955.205C968.659 969.427 981.859 981.238 997.147 989.793C1012.43 998.348 1029.43 1003.44 1046.93 1004.69L1048.64 981.054C1034.65 980.049 1021.05 975.978 1008.82 969.135C996.587 962.291 986.027 952.842 977.892 941.464C969.757 930.086 964.248 917.06 961.759 903.317C959.27 889.574 959.862 875.453 963.494 861.964L940.493 855.83Z" stroke="white" stroke-width="4" mask="url(#path-110-outside-1)"/>
+			</g>
+			<g id="Ellipse_2">
+				<mask id="path-111-outside-2" maskUnits="userSpaceOnUse" x="933.436" y="766" width="125" height="165" fill="black">
+					<rect fill="white" x="933.436" y="766" width="125" height="165"/>
+					<path d="M1055.5 768C1036.25 768 1017.29 772.643 1000.25 781.532C983.198 790.421 968.569 803.291 957.613 819.039C946.657 834.787 939.699 852.943 937.337 871.953C934.974 890.963 937.277 910.259 944.047 928.189L966.338 919.852C960.921 905.507 959.079 890.07 960.969 874.862C962.859 859.654 968.425 845.129 977.19 832.531C985.955 819.933 997.658 809.637 1011.3 802.526C1024.93 795.415 1040.1 791.7 1055.5 791.7L1055.5 768Z"/>
+				</mask>
+				<path d="M1055.5 768C1036.25 768 1017.29 772.643 1000.25 781.532C983.198 790.421 968.569 803.291 957.613 819.039C946.657 834.787 939.699 852.943 937.337 871.953C934.974 890.963 937.277 910.259 944.047 928.189L966.338 919.852C960.921 905.507 959.079 890.07 960.969 874.862C962.859 859.654 968.425 845.129 977.19 832.531C985.955 819.933 997.658 809.637 1011.3 802.526C1024.93 795.415 1040.1 791.7 1055.5 791.7L1055.5 768Z" fill="#4ED4CD"/>
+				<path d="M1055.5 768C1036.25 768 1017.29 772.643 1000.25 781.532C983.198 790.421 968.569 803.291 957.613 819.039C946.657 834.787 939.699 852.943 937.337 871.953C934.974 890.963 937.277 910.259 944.047 928.189L966.338 919.852C960.921 905.507 959.079 890.07 960.969 874.862C962.859 859.654 968.425 845.129 977.19 832.531C985.955 819.933 997.658 809.637 1011.3 802.526C1024.93 795.415 1040.1 791.7 1055.5 791.7L1055.5 768Z" stroke="white" stroke-width="4" mask="url(#path-111-outside-2)"/>
+			</g>
+			<g id="Ellipse_3">
+				<mask id="path-112-outside-3" maskUnits="userSpaceOnUse" x="1052.44" y="765" width="125" height="120" fill="black">
+					<rect fill="white" x="1052.44" y="765" width="125" height="120"/>
+					<path d="M1174.43 880.915C1172.98 850.421 1159.77 821.658 1137.54 800.623C1115.31 779.587 1085.78 767.901 1055.11 768.001L1055.19 791.701C1079.72 791.621 1103.35 800.97 1121.13 817.798C1138.91 834.627 1149.48 857.636 1150.64 882.032L1174.43 880.915Z"/>
+				</mask>
+				<path d="M1174.43 880.915C1172.98 850.421 1159.77 821.658 1137.54 800.623C1115.31 779.587 1085.78 767.901 1055.11 768.001L1055.19 791.701C1079.72 791.621 1103.35 800.97 1121.13 817.798C1138.91 834.627 1149.48 857.636 1150.64 882.032L1174.43 880.915Z" fill="#3296ED"/>
+				<path d="M1174.43 880.915C1172.98 850.421 1159.77 821.658 1137.54 800.623C1115.31 779.587 1085.78 767.901 1055.11 768.001L1055.19 791.701C1079.72 791.621 1103.35 800.97 1121.13 817.798C1138.91 834.627 1149.48 857.636 1150.64 882.032L1174.43 880.915Z" stroke="white" stroke-width="4" mask="url(#path-112-outside-3)"/>
+			</g>
+			<g id="Ellipse_4">
+				<mask id="path-113-outside-4" maskUnits="userSpaceOnUse" x="1037.44" y="875" width="140" height="133" fill="black">
+					<rect fill="white" x="1037.44" y="875" width="140" height="133"/>
+					<path d="M1040.08 1004C1057.6 1006.28 1075.41 1004.65 1092.22 999.223C1109.03 993.8 1124.41 984.72 1137.26 972.644C1150.1 960.567 1160.08 945.797 1166.48 929.403C1172.88 913.01 1175.53 895.405 1174.24 877.865L1150.49 879.592C1151.52 893.624 1149.4 907.708 1144.28 920.823C1139.17 933.937 1131.18 945.754 1120.9 955.415C1110.63 965.076 1098.32 972.34 1084.87 976.679C1071.43 981.018 1057.18 982.324 1043.16 980.502L1040.08 1004Z"/>
+				</mask>
+				<path d="M1040.08 1004C1057.6 1006.28 1075.41 1004.65 1092.22 999.223C1109.03 993.8 1124.41 984.72 1137.26 972.644C1150.1 960.567 1160.08 945.797 1166.48 929.403C1172.88 913.01 1175.53 895.405 1174.24 877.865L1150.49 879.592C1151.52 893.624 1149.4 907.708 1144.28 920.823C1139.17 933.937 1131.18 945.754 1120.9 955.415C1110.63 965.076 1098.32 972.34 1084.87 976.679C1071.43 981.018 1057.18 982.324 1043.16 980.502L1040.08 1004Z" fill="#77B9F2"/>
+				<path d="M1040.08 1004C1057.6 1006.28 1075.41 1004.65 1092.22 999.223C1109.03 993.8 1124.41 984.72 1137.26 972.644C1150.1 960.567 1160.08 945.797 1166.48 929.403C1172.88 913.01 1175.53 895.405 1174.24 877.865L1150.49 879.592C1151.52 893.624 1149.4 907.708 1144.28 920.823C1139.17 933.937 1131.18 945.754 1120.9 955.415C1110.63 965.076 1098.32 972.34 1084.87 976.679C1071.43 981.018 1057.18 982.324 1043.16 980.502L1040.08 1004Z" stroke="white" stroke-width="4" mask="url(#path-113-outside-4)"/>
+			</g>
+			<g id="Ellipse_5">
+				<mask id="path-114-outside-5" maskUnits="userSpaceOnUse" x="995.436" y="967" width="107" height="41" fill="black">
+					<rect fill="white" x="995.436" y="967" width="107" height="41"/>
+					<path d="M999.101 990.863C1014.38 999.04 1031.26 1003.8 1048.58 1004.8C1065.9 1005.8 1083.23 1003.03 1099.35 996.668L1090.58 974.635C1077.68 979.722 1063.82 981.942 1049.96 981.14C1036.11 980.338 1022.6 976.532 1010.38 969.99L999.101 990.863Z"/>
+				</mask>
+				<path d="M999.101 990.863C1014.38 999.04 1031.26 1003.8 1048.58 1004.8C1065.9 1005.8 1083.23 1003.03 1099.35 996.668L1090.58 974.635C1077.68 979.722 1063.82 981.942 1049.96 981.14C1036.11 980.338 1022.6 976.532 1010.38 969.99L999.101 990.863Z" fill="#9D53F2"/>
+				<path d="M999.101 990.863C1014.38 999.04 1031.26 1003.8 1048.58 1004.8C1065.9 1005.8 1083.23 1003.03 1099.35 996.668L1090.58 974.635C1077.68 979.722 1063.82 981.942 1049.96 981.14C1036.11 980.338 1022.6 976.532 1010.38 969.99L999.101 990.863Z" stroke="white" stroke-width="4" mask="url(#path-114-outside-5)"/>
+			</g>
+			<text id="Total Revenue" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="1016.46" y="908.904">Total Revenue</tspan>
+			</text>
+			<text id="Last 30 days" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="870.123" y="747.904">Last 30 days</tspan>
+			</text>
+			<text id="Rook Security" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+				<tspan x="1011.79" y="1056.9">Youth Indiana Pacers Logo </tspan>
+				<tspan x="1011.79" y="1073.9">Hat</tspan>
+			</text>
+			<g id="$12.7m">
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="988.128" y="1058.84">k</tspan>
+				</text>
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="951.507" y="1058.84">$75</tspan>
+				</text>
+			</g>
+			<rect id="Rectangle 522.1" x="913.327" y="1085" width="13.0616" height="13" rx="6.5" fill="#77B9F2"/>
+			<rect id="Rectangle 522.2" x="913.327" y="1123" width="13.0616" height="13" rx="6.5" fill="#9D53F2"/>
+			<rect id="Rectangle 522.3" x="913.327" y="1161" width="13.0616" height="13" rx="6.5" fill="#F7A452"/>
+			<rect id="Rectangle 522.4" x="913.327" y="1200" width="13.0616" height="13" rx="6.5" fill="#4ED4CD"/>
+			<text id="SCORE Systems" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+				<tspan x="1010.79" y="1095.9">Indiana Pacers Nike Custom </tspan>
+				<tspan x="1010.79" y="1112.9">Swingman Jersey</tspan>
+			</text>
+			<g id="$10.8m">
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="988.128" y="1097.84">k</tspan>
+				</text>
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="951.507" y="1097.84">$62</tspan>
+				</text>
+			</g>
+			<text id="Fitzmark" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+				<tspan x="1010.79" y="1173.9">Women&#x2019;s Pacers Perfect Pitch Full </tspan>
+				<tspan x="1010.79" y="1190.9">Zip Track Jacket</tspan>
+			</text>
+			<g id="$6.7m">
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="988.128" y="1175.84">k</tspan>
+				</text>
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="951.507" y="1175.84">$35</tspan>
+				</text>
+			</g>
+			<text id="Fitzmark_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+				<tspan x="1009.78" y="1134.9">Pacers ABA Rubber </tspan>
+				<tspan x="1009.78" y="1151.9">Basketball</tspan>
+			</text>
+			<g id="$6.7m_2">
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="988.128" y="1136.84">k</tspan>
+				</text>
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="963.714" y="1136.84">42</tspan>
+				</text>
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="951.507" y="1136.84">$</tspan>
+				</text>
+			</g>
+			<text id="Fitzmark_3" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+				<tspan x="1011.79" y="1212.9">Youth 4-7 Pacers Nike Replica </tspan>
+				<tspan x="1011.79" y="1229.9">Shorts</tspan>
+			</text>
+			<g id="$6.7m_3">
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="988.128" y="1214.84">k</tspan>
+				</text>
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="963.714" y="1214.84">84</tspan>
+				</text>
+				<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px">
+					<tspan x="951.507" y="1214.84">$</tspan>
+				</text>
+			</g>
+			<g id="Group 43">
+				<rect id="Rectangle 522" x="913.327" y="1045" width="13.0616" height="13" rx="6.5" fill="#3296ED"/>
+			</g>
+			<g id="picklist">
+				<rect id="bkgd" x="1048.46" y="698.5" width="200.953" height="31" rx="3.5" fill="white" stroke="#DDDBDA"/>
+				<path id="down" fill-rule="evenodd" clip-rule="evenodd" d="M1225.13 711H1234.12C1234.38 711 1234.56 711.325 1234.35 711.55L1229.96 716.85C1229.8 717.05 1229.47 717.05 1229.32 716.85L1224.87 711.55C1224.69 711.325 1224.85 711 1225.13 711" fill="#706E6B"/>
+				<text id="Select an Option" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+					<tspan x="1060.02" y="718.896">Revenue</tspan>
+				</text>
+			</g>
+		</g>
+		<g id="Top Channels">
+			<text id="Build your first seg" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="124.109" y="1478.71">Build your first segment to access the Journey </tspan>
+			</text>
+			<g id="Group 3">
+				<g id="Top Overlapping _2">
+					<path id="Rectangle 18 Copy_2" fill-rule="evenodd" clip-rule="evenodd" d="M20 1124C17.7909 1124 16 1125.79 16 1128V1552C16 1554.21 17.7909 1556 20 1556H413C415.209 1556 417 1554.21 417 1552V1128C417 1125.79 415.209 1124 413 1124H20Z" fill="white"/>
+				</g>
+				<path id="Line 3 Copy 6_2" d="M26.4219 1501.5H409.078" stroke="#E6E5E4" stroke-linecap="square"/>
+				<text id="View All_4" fill="#006AD8" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+					<tspan x="192.257" y="1532.85">View All</tspan>
+				</text>
+				<g id="Desktop Components / Tabs / z-nested /Tab - Selected Copy 2_2">
+					<text id="Reach Frequency by S" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" font-weight="bold" letter-spacing="0px">
+						<tspan x="34.8589" y="1164.32">Top Channels</tspan>
+					</text>
+				</g>
+			</g>
+			<g id="Gridline">
+				<g id="grid7">
+					<path id="Path 2" d="M164.936 1228.78V1475" stroke="#DDDBDA"/>
+					<path id="Path 2.1" d="M137.936 1228.78V1475" stroke="#DDDBDA"/>
+					<text id="$0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+						<tspan x="143.728" y="1220.21">5%</tspan>
+					</text>
+				</g>
+				<g id="grid6">
+					<path id="Path 2_2" d="M240.8 1228.78V1475" stroke="#DDDBDA"/>
+					<text id="$200" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+						<tspan x="227.335" y="1220.21">10%</tspan>
+					</text>
+				</g>
+				<g id="grid5">
+					<path id="Path 2_3" d="M278.561 1228.82V1475" stroke="#DDDBDA"/>
+					<text id="300" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+						<tspan x="271.033" y="1219.69">300</tspan>
+					</text>
+				</g>
+				<g id="grid4">
+					<path id="Path 2_4" d="M202.984 1228.82V1475" stroke="#DDDBDA"/>
+					<text id="100" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+						<tspan x="185.682" y="1219.69">100</tspan>
+					</text>
+				</g>
+				<g id="grid3">
+					<path id="Path 2_5" d="M309.988 1228.78V1475" stroke="#DDDBDA"/>
+					<text id="$400" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+						<tspan x="308.329" y="1220.21">15%</tspan>
+					</text>
+				</g>
+				<g id="grid2">
+					<path id="Path 2_6" d="M344.26 1228.82V1475" stroke="#DDDBDA"/>
+					<text id="500_3" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+						<tspan x="347.436" y="1219.69">500</tspan>
+					</text>
+				</g>
+				<g id="grid1">
+					<path id="Path 2_7" d="M376.266 1228.78V1475" stroke="#DDDBDA"/>
+					<text id="$600" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+						<tspan x="372.776" y="1220.21">20%</tspan>
+					</text>
+				</g>
+			</g>
+			<path id="Bar" d="M138 1234H375V1269H138V1234Z" fill="#3296ED"/>
+			<text id="Account A_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="36" y="1256.21">Email</tspan>
+			</text>
+			<path id="Bar_2" d="M138 1285H331V1320H138V1285Z" fill="#3296ED"/>
+			<text id="Account B" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="36" y="1299.21">Push Messages</tspan>
+			</text>
+			<path id="Bar_3" d="M138 1337H323V1373H138V1337Z" fill="#3296ED"/>
+			<text id="Account C_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="36" y="1350.21">SMS</tspan>
+			</text>
+			<path id="Bar_4" d="M138 1389H268V1424H138V1389Z" fill="#3296ED"/>
+			<text id="Account D" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="36" y="1408.21">Store</tspan>
+			</text>
+			<path id="Bar_5" d="M138 1440H174V1475H138V1440Z" fill="#3296ED"/>
+			<text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="36" y="1453.21">OTT Devices</tspan>
+			</text>
+			<text id="Last 30 days_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="37" y="1188.9">Last 30 days</tspan>
+			</text>
+			<g id="picklist_2">
+				<rect id="bkgd_2" x="196.5" y="1142.5" width="200" height="31" rx="3.5" fill="white" stroke="#DDDBDA"/>
+				<path id="down_2" fill-rule="evenodd" clip-rule="evenodd" d="M372.329 1155H381.284C381.537 1155 381.714 1155.33 381.512 1155.55L377.136 1160.85C376.984 1161.05 376.655 1161.05 376.503 1160.85L372.076 1155.55C371.899 1155.33 372.051 1155 372.329 1155" fill="#706E6B"/>
+				<text id="Select an Option_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+					<tspan x="208" y="1162.9">Conversion Rate (CVR)</tspan>
+				</text>
+			</g>
+		</g>
+		<g id="Consent across Channels">
+			<rect id="Rectangle Copy 12.4" x="429" y="679" width="401" height="432" rx="4" fill="white"/>
+			<text id="Journey Analytics_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" font-weight="bold" letter-spacing="0px">
+				<tspan x="452" y="711.318">Consent Across Channels</tspan>
+			</text>
+			<text id="Updated a minute ago" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="452" y="734.904">Updated a minute ago</tspan>
+			</text>
+			<path id="Line 3 Copy 6.5_2" d="M438.381 1052.5H823.9" stroke="#E6E5E4" stroke-linecap="square"/>
+			<text id="View All_5" fill="#006AD8" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+				<tspan x="605.635" y="1083.85">View All</tspan>
+			</text>
+			<path id="ygridlin6_2" opacity="0.5" d="M509.004 766.96H800.996" stroke="#DDDBDA" stroke-linecap="square"/>
+			<text id="50" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="480.004" y="769.671">50</tspan>
+			</text>
+			<path id="ygridlin5_2" opacity="0.5" d="M509.004 804.457H800.996" stroke="#DDDBDA" stroke-linecap="square"/>
+			<path id="ygridlin5_3" opacity="0.5" d="M509.004 842.545H800.996" stroke="#DDDBDA" stroke-linecap="square"/>
+			<text id="40" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="480.004" y="807.527">40</tspan>
+			</text>
+			<text id="30" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="480.004" y="844.047">30</tspan>
+			</text>
+			<path id="ygridlin3_2" opacity="0.5" d="M509.004 880.45H800.996" stroke="#DDDBDA" stroke-linecap="square"/>
+			<text id="20" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="480.004" y="883.237">20</tspan>
+			</text>
+			<path id="ygridlin2_2" opacity="0.5" d="M509.004 917.947H800.996" stroke="#DDDBDA" stroke-linecap="square"/>
+			<text id="10" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="480.004" y="921.094">10</tspan>
+			</text>
+			<text id="0_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="480.001" y="958.949">0</tspan>
+			</text>
+			<path id="ygridlin1_2" opacity="0.5" d="M509.001 955.445H800.997" stroke="#DDDBDA" stroke-linecap="square"/>
+			<text id="Number of Employees" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="584.066" y="999.212">Consented Population</tspan>
+			</text>
+			<text id="Sales_2" transform="rotate(-90)" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="452" y="963.212">Total Addressable Population</tspan>
+			</text>
+			<path id="bubble5" d="M760 832C765.523 832 770 827.523 770 822C770 816.477 765.523 812 760 812C754.477 812 750 816.477 750 822C750 827.523 754.477 832 760 832Z" fill="#3296ED"/>
+			<text id="10_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="516" y="972.212">10</tspan>
+			</text>
+			<text id="20_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="553.449" y="973.28">20</tspan>
+			</text>
+			<path id="bubble3" d="M555 793C560.523 793 565 788.523 565 783C565 777.477 560.523 773 555 773C549.477 773 545 777.477 545 783C545 788.523 549.477 793 555 793Z" fill="#26ABA4"/>
+			<text id="30_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="587.803" y="973.273">30</tspan>
+			</text>
+			<path id="bubble4" d="M578 870C583.523 870 588 865.523 588 860C588 854.477 583.523 850 578 850C572.477 850 568 854.477 568 860C568 865.523 572.477 870 578 870Z" fill="#9D53F2"/>
+			<text id="40_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="621.479" y="973.268">40</tspan>
+			</text>
+			<text id="50_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="655.125" y="973.283">50</tspan>
+			</text>
+			<text id="60" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="688.801" y="972.212">60</tspan>
+			</text>
+			<path id="bubble1" d="M674 909C679.523 909 684 904.523 684 899C684 893.477 679.523 889 674 889C668.477 889 664 893.477 664 899C664 904.523 668.477 909 674 909Z" fill="#F7A452"/>
+			<text id="70" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="721.751" y="972.274">70</tspan>
+			</text>
+			<text id="80" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="755.759" y="973.274">80</tspan>
+			</text>
+			<text id="100_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="787" y="973.212">100</tspan>
+			</text>
+			<path id="legendcircle5_2" d="M554.66 1026.65C556.681 1026.65 558.32 1024.94 558.32 1022.82C558.32 1020.71 556.681 1019 554.66 1019C552.639 1019 551 1020.71 551 1022.82C551 1024.94 552.639 1026.65 554.66 1026.65Z" fill="#9D53F2"/>
+			<text id="Account C_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="564" y="1027.21">Mobile</tspan>
+			</text>
+			<path id="legendcircle3_2" d="M486.66 1026.65C488.681 1026.65 490.32 1024.94 490.32 1022.82C490.32 1020.71 488.681 1019 486.66 1019C484.639 1019 483 1020.71 483 1022.82C483 1024.94 484.639 1026.65 486.66 1026.65Z" fill="#3296ED"/>
+			<text id="Account A_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="494.979" y="1027.21">Email</tspan>
+			</text>
+			<path id="legendcircle1" d="M638.66 1026.65C640.681 1026.65 642.32 1024.94 642.32 1022.82C642.32 1020.71 640.681 1019 638.66 1019C636.639 1019 635 1020.71 635 1022.82C635 1024.94 636.639 1026.65 638.66 1026.65Z" fill="#26ABA4"/>
+			<text id="Account E_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="650" y="1027.21">Web</tspan>
+			</text>
+			<path id="legendcircle1_2" d="M703.66 1026.65C705.681 1026.65 707.32 1024.94 707.32 1022.82C707.32 1020.71 705.681 1019 703.66 1019C701.639 1019 700 1020.71 700 1022.82C700 1024.94 701.639 1026.65 703.66 1026.65Z" fill="#F7A452"/>
+			<text id="Account E_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="714" y="1027.21">Retail Store</tspan>
+			</text>
+		</g>
+		<g id="Channel Engagement">
+			<g id="Group 51_2">
+				<rect id="Rectangle Copy 12.2" x="429" y="1123" width="401" height="432" rx="4" fill="white"/>
+				<g id="Desktop Components / Tabs / z-nested /Tab - Selected Copy 2.2">
+					<text id="Top segments_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" font-weight="bold" letter-spacing="0px">
+						<tspan x="450.891" y="1156.32">Channel Engagement</tspan>
+					</text>
+				</g>
+				<path id="Line 3 Copy 6.2" d="M439.336 1495.5H829.899" stroke="#E6E5E4" stroke-linecap="square"/>
+				<text id="View All_6" fill="#006AD8" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+					<tspan x="609.734" y="1527.06">View All</tspan>
+				</text>
+				<g id="Gridline_2">
+					<g id="grid6_2">
+						<path id="Path 2_8" d="M604.555 1223.78V1470" stroke="#DDDBDA"/>
+						<text id="$200_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="586.476" y="1215.21">20%</tspan>
+						</text>
+					</g>
+					<g id="grid5_2">
+						<path id="Path 2_9" d="M655.256 1223.82V1470" stroke="#DDDBDA"/>
+						<text id="300_2" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="648.915" y="1214.69">300</tspan>
+						</text>
+					</g>
+					<g id="grid4_2">
+						<path id="Path 2_10" d="M553.78 1223.82V1470" stroke="#DDDBDA"/>
+						<text id="100_3" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="534.314" y="1214.69">100</tspan>
+						</text>
+					</g>
+					<g id="grid3_2">
+						<path id="Path 2_11" d="M697.452 1223.78V1470" stroke="#DDDBDA"/>
+						<text id="$400_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="684.725" y="1215.21">60%</tspan>
+						</text>
+					</g>
+					<g id="grid2_2">
+						<path id="Path 2_12" d="M743.469 1223.82V1470" stroke="#DDDBDA"/>
+						<text id="500_4" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="751.5" y="1214.69">500</tspan>
+						</text>
+					</g>
+					<g id="grid1_2">
+						<path id="Path 2_13" d="M786.444 1223.78V1470" stroke="#DDDBDA"/>
+						<text id="$600_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="773.283" y="1215.21">100%</tspan>
+						</text>
+					</g>
+				</g>
+				<text id="$400_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="733.481" y="1215.21">80%</tspan>
+				</text>
+				<path id="Bar_6" d="M553.38 1229H762.338V1264H553.38V1229Z" fill="#3296ED"/>
+				<text id="Account A_4" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="457.856" y="1251.21">Delivery Rate</tspan>
+				</text>
+				<path id="Bar_7" d="M553.38 1280H556.365V1315H553.38V1280Z" fill="#3296ED"/>
+				<text id="Account B_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="457.856" y="1302.21">Bounce Rate</tspan>
+				</text>
+				<path id="Bar_8" d="M553.38 1332H590.196V1368H553.38V1332Z" fill="#3296ED"/>
+				<text id="Account C_4" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="458.851" y="1351.21">Opens</tspan>
+				</text>
+				<path id="Bar_9" d="M553.38 1384H572.286V1419H553.38V1384Z" fill="#3296ED"/>
+				<text id="Account D_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="457.856" y="1407.21">Clicks</tspan>
+				</text>
+				<path id="Bar_10" d="M553.38 1435H561.34V1470H553.38V1435Z" fill="#3296ED"/>
+				<text id="Account E_4" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="457.856" y="1457.21">Unsubscribes</tspan>
+				</text>
+				<text id="$400_4" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="643.928" y="1215.21">40%</tspan>
+				</text>
+				<g id="picklist_3">
+					<rect id="bkgd_3" x="691.195" y="1137.5" width="118.404" height="31" rx="3.5" fill="white" stroke="#DDDBDA"/>
+					<path id="down_3" fill-rule="evenodd" clip-rule="evenodd" d="M785.551 1150H794.461C794.713 1150 794.889 1150.33 794.688 1150.55L790.333 1155.85C790.182 1156.05 789.855 1156.05 789.704 1155.85L785.299 1150.55C785.123 1150.33 785.274 1150 785.551 1150" fill="#706E6B"/>
+					<text id="Select an Option_3" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+						<tspan x="713.581" y="1157.9">Email </tspan>
+					</text>
+				</g>
+			</g>
+			<text id="Last 30 days_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+				<tspan x="451.886" y="1180.9">Last 30 days</tspan>
+			</text>
+		</g>
+		<g id="Top Segments">
+			<g id="Group 55">
+				<rect id="Rectangle Copy 12.1" x="16" y="679" width="401" height="432" rx="4" fill="white"/>
+				<path id="Line 3 Copy 6.1" d="M22.3813 1052.5H407.9" stroke="#E6E5E4" stroke-linecap="square"/>
+				<text id="View All_7" fill="#006AD8" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+					<tspan x="189.635" y="1083.85">View All</tspan>
+				</text>
+				<g id="Desktop Components / Tabs / z-nested /Tab - Selected Copy 2_3">
+					<text id="Top segments_3" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" font-weight="bold" letter-spacing="0px">
+						<tspan x="38" y="715.318">Top Segments</tspan>
+					</text>
+				</g>
+				<g id="Gridline_3">
+					<g id="grid7_2">
+						<path id="Path 2_14" d="M176.643 777.618V1022" stroke="#DDDBDA"/>
+						<text id="$0_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="168.235" y="769.212">1k</tspan>
+						</text>
+					</g>
+					<g id="grid6_3">
+						<path id="Path 2_15" d="M250.487 777.618V1022" stroke="#DDDBDA"/>
+						<text id="$200_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="241.8" y="769.212">7.1k</tspan>
+						</text>
+					</g>
+					<g id="grid3_3">
+						<path id="Path 2_16" d="M314.536 777.618V1022" stroke="#DDDBDA"/>
+						<text id="$400_5" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="308.097" y="769.212">15k</tspan>
+						</text>
+					</g>
+					<g id="grid1_3">
+						<path id="Path 2_17" d="M382.061 777.618V1022" stroke="#DDDBDA"/>
+						<text id="$600_3" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+							<tspan x="367" y="771.212">22.3k</tspan>
+						</text>
+					</g>
+				</g>
+				<path id="Bar_11" d="M177 781H372V816H177V781Z" fill="#26ABA4"/>
+				<text id="Account A_5" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="38" y="803.212">Super Fans</tspan>
+				</text>
+				<path id="Bar_12" d="M177 832H253V867H177V832Z" fill="#26ABA4"/>
+				<text id="Account B_3" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="38" y="851.212">Families</tspan>
+				</text>
+				<path id="Bar_13" d="M177 884H202V919H177V884Z" fill="#26ABA4"/>
+				<text id="Account C_5" fill="#0070D2" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="38" y="903.212">Sports Enthusiasts</tspan>
+				</text>
+				<text id="Last 30 days_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px">
+					<tspan x="39" y="738.904">Last 30 days</tspan>
+				</text>
+				<g id="picklist_4">
+					<g id="Group">
+						<rect id="bkgd_4" x="180.5" y="697.5" width="171" height="31" rx="3.5" fill="white" stroke="#DDDBDA"/>
+						<path id="down_4" fill-rule="evenodd" clip-rule="evenodd" d="M329.814 710H341.058C341.375 710 341.598 710.325 341.344 710.55L335.849 715.85C335.658 716.05 335.246 716.05 335.055 715.85L329.497 710.55C329.275 710.325 329.465 710 329.814 710" fill="#706E6B"/>
+						<text id="Select an Option_4" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px">
+							<tspan x="195.066" y="717.896">Season Ticket Hold...</tspan>
+						</text>
+					</g>
+				</g>
+			</g>
+			<g id="indicator - mini illustration 2.1">
+				<g id="indicator_2">
+					<path id="bg_4" fill-rule="evenodd" clip-rule="evenodd" d="M382 728C390.837 728 398 720.837 398 712C398 703.163 390.837 696 382 696C373.163 696 366 703.163 366 712C366 720.837 373.163 728 382 728Z" fill="#16325C"/>
+					<path id="bg_5" fill-rule="evenodd" clip-rule="evenodd" d="M382 726.667C390.1 726.667 396.667 720.1 396.667 712C396.667 703.9 390.1 697.333 382 697.333C373.9 697.333 367.333 703.9 367.333 712C367.333 720.1 373.9 726.667 382 726.667Z" fill="#006DCC"/>
+					<mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="367" y="697" width="30" height="30">
+						<path id="bg_6" fill-rule="evenodd" clip-rule="evenodd" d="M382 726.667C390.1 726.667 396.667 720.1 396.667 712C396.667 703.9 390.1 697.333 382 697.333C373.9 697.333 367.333 703.9 367.333 712C367.333 720.1 373.9 726.667 382 726.667Z" fill="white"/>
+					</mask>
+					<g mask="url(#mask2)">
+						<rect id="einshtein-head_2" x="370" y="686.667" width="37.3333" height="43.4424" fill="url(#pattern1)"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<defs>
+		<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+			<use xlink:href="#einshtein-head" transform="scale(0.0023753 0.00205761)"/>
+		</pattern>
+		<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+			<use xlink:href="#einshtein-head" transform="scale(0.0023753 0.00205761)"/>
+		</pattern>
+		<filter id="filter0_d" x="10" y="98" width="1260" height="125" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+			<feOffset dy="2"/>
+			<feGaussianBlur stdDeviation="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+		</filter>
+		<linearGradient id="paint0_linear" x1="565" y1="343.941" x2="1137.26" y2="343.941" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#44A2F5"/>
+			<stop offset="0.339385" stop-color="#44A2F5"/>
+			<stop offset="1" stop-color="#476FB3"/>
+		</linearGradient>
+		<linearGradient id="paint1_linear" x1="565" y1="337.5" x2="1137.26" y2="337.5" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#44A2F5"/>
+			<stop offset="0.337632" stop-color="#44A2F5"/>
+			<stop offset="1" stop-color="#6247B3"/>
+		</linearGradient>
+		<linearGradient id="paint2_linear" x1="562.055" y1="491.628" x2="1138.15" y2="491.628" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#44A2F5"/>
+			<stop offset="0.339963" stop-color="#44A2F5"/>
+			<stop offset="1" stop-color="#59B37B"/>
+		</linearGradient>
+
+	</defs>
+</svg>

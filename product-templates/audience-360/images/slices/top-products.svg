@@ -1,0 +1,92 @@
+<svg style="margin-left: 11px; margin-top: -55px;" width="380" height="536" viewBox="0 0 380 536" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Top Products">
+<g id="$72m">
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="28" letter-spacing="0px"><tspan x="212.267" y="189.776">k</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="28" letter-spacing="0px"><tspan x="143.908" y="189.776">$298</tspan></text>
+</g>
+
+<style>
+	circle {
+		transform-origin: 186px 189px;
+	}
+	#OvalTurquoise {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(161deg);
+	}
+
+	#OvalDarkBlue {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(270deg);
+	}
+	#OvalLightBlue {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(356deg);
+	}
+	#OvalPurple {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(69deg);
+	}
+	#OvalOrange {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(120deg);
+	}
+
+	@keyframes grow-donut {
+	    from {
+	        stroke-dasharray: 700;
+  			stroke-dashoffset: 0;
+  			transform: rotate(0deg);
+	    }
+	}
+</style>
+
+
+<circle id="OvalPurple" stroke="#9D53F2" stroke-width="24" cx="186" cy="189" r="107" stroke-dasharray="92 593"></circle>
+<circle id="OvalOrange" stroke="#F7A452" stroke-width="24" cx="186" cy="189" r="107" stroke-dasharray="73 599"></circle>
+<circle id="OvalTurquoise" stroke="#4ED4CD"  stroke-width="24" cx="186" cy="189" r="107" stroke-dasharray="200 512"></circle>
+<circle id="OvalDarkBlue" stroke="#3296ED" stroke-width="24" cx="186" cy="189" r="107" stroke-dasharray="157 535"></circle>
+<circle id="OvalLightBlue" stroke="#77B9F2" stroke-width="24" cx="186" cy="189" r="107" stroke-dasharray="133 553"></circle>
+
+<text id="Total Revenue" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="146.457" y="210.904">Total Revenue</tspan></text>
+<text id="Last 30 days" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0.123047" y="49.904">Last 30 days</tspan></text>
+<text id="Rook Security" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="141.792" y="358.896">Youth Indiana Pacers Logo </tspan><tspan x="141.792" y="375.896">Hat</tspan></text>
+<g id="$12.7m">
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="118.128" y="360.84">k</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="81.5068" y="360.84">$75</tspan></text>
+</g>
+<rect id="Rectangle 522.1" x="43.3267" y="387" width="13.0616" height="13" rx="6.5" fill="#77B9F2"/>
+<rect id="Rectangle 522.2" x="43.3267" y="425" width="13.0616" height="13" rx="6.5" fill="#9D53F2"/>
+<rect id="Rectangle 522.3" x="43.3267" y="463" width="13.0616" height="13" rx="6.5" fill="#F7A452"/>
+<rect id="Rectangle 522.4" x="43.3267" y="502" width="13.0616" height="13" rx="6.5" fill="#4ED4CD"/>
+<text id="SCORE Systems" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="140.787" y="397.896">Indiana Pacers Nike Custom </tspan><tspan x="140.787" y="414.896">Swingman Jersey</tspan></text>
+<g id="$10.8m">
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="118.128" y="399.84">k</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="81.5068" y="399.84">$62</tspan></text>
+</g>
+<text id="Fitzmark" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="140.787" y="475.896">Women&#x2019;s Pacers Perfect Pitch Full </tspan><tspan x="140.787" y="492.896">Zip Track Jacket</tspan></text>
+<g id="$6.7m">
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="118.128" y="477.84">k</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="81.5068" y="477.84">$35</tspan></text>
+</g>
+<text id="Fitzmark_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="139.782" y="436.896">Pacers ABA Rubber </tspan><tspan x="139.782" y="453.896">Basketball</tspan></text>
+<g id="$6.7m_2">
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="118.128" y="438.84">k</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="93.7139" y="438.84">42</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="81.5068" y="438.84">$</tspan></text>
+</g>
+<text id="Fitzmark_3" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="141.792" y="514.896">Youth 4-7 Pacers Nike Replica </tspan><tspan x="141.792" y="531.896">Shorts</tspan></text>
+<g id="$6.7m_3">
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="118.128" y="516.84">k</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="93.7139" y="516.84">84</tspan></text>
+<text fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0px"><tspan x="81.5068" y="516.84">$</tspan></text>
+</g>
+<g id="Group 43">
+<rect id="Rectangle 522" x="43.3267" y="347" width="13.0616" height="13" rx="6.5" fill="#3296ED"/>
+</g>
+</g>
+</svg>

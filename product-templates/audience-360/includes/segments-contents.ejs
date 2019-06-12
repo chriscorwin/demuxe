@@ -1,0 +1,30 @@
+	<%- include('images/slices/segments/header.svg') %>
+	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-horizontal_x-small slds-m-top_medium">
+		<div class="slds-col slds-p-horizontal_x-small slds-size_2-of-3">
+			<%- include('components/panel-box.ejs', {
+				contents: include('images/slices/segments/segment-population.ejs'),
+				title: '',
+				footer_links: [{}]
+			}) %>
+			<%- include('components/panel-box.ejs', {
+				contents: include('images/slices/segments/body-contents.ejs'),
+				title: '',
+				footer_links: [{}],
+				panelClasses: ' slds-m-top_medium'
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
+			<%- include('components/panel-box.ejs', {
+				contents: include('images/slices/segments/pbc.ejs'),
+				title: '',
+				footer_links: [{}]
+			}) %>
+			<%- include('components/panel-box.ejs', {
+				contents: include('images/slices/segments/activity-log.ejs'),
+				title: '',
+				footer_links: [{}],
+				panelClasses: ' slds-m-top_medium'
+			}) %>
+		</div>
+	</div>
+

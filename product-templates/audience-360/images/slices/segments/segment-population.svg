@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="823px" height="278px" viewBox="0 0 823 278" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <defs>
+        <path d="M14.5923,10.819 C15.0635,10.836 15.3987,10.523 15.4151,10.052 L15.6322,1.303 C15.6486,0.832 15.3076,0.466 14.8365,0.45 L6.0656,0.026 C5.5945,0.009 5.2593,0.322 5.2428,0.793 L5.2157,2.414 C5.1993,2.885 5.5403,3.25 6.0114,3.267 L8.7489,3.392 C9.22,3.408 9.4655,3.977 9.0998,4.318 L0.8717,11.991 C0.567,12.275 0.518,12.834 0.8306,13.169 L1.9673,14.388 C2.2799,14.723 2.8709,14.685 3.1451,14.429 L11.3732,6.756 C11.7389,6.415 12.2892,6.7 12.2727,7.171 L12.2065,9.91 C12.1901,10.381 12.5311,10.747 13.0022,10.764 L14.5923,10.819 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0020___ID=segment" transform="translate(-12.000000, -241.000000)">
+            <g id="Chart2" transform="translate(12.000000, 241.000000)">
+                <rect id="Rectangle-Copy-12" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="823" height="278" rx="4"></rect>
+                <path d="M779.673,192 L216.084,192" id="Line-6" stroke="#979797" opacity="0.9" stroke-linecap="square"></path>
+                <path d="M779.673,79 L216.084,79.084" id="Line-6-Copy-5" stroke="#979797" opacity="0.7" stroke-linecap="square"></path>
+                <path d="M779.673,106.864 L216.084,106.949" id="Line-6-Copy-5_2" stroke="#979797" opacity="0.3" stroke-linecap="square"></path>
+                <path d="M779.673,162.471 L216.084,162.8" id="Line-6-Copy-7" stroke="#979797" opacity="0.3" stroke-linecap="square"></path>
+                <path d="M779.673,134.607 L216.084,134.935" id="Line-6-Copy-7_2" stroke="#979797" opacity="0.7" stroke-linecap="square"></path>
+                <polygon class="growUp" id="Path-3-Copy-2" fill="#74C9FC" points="222 120.891 406 89.5 587.5 110.5 770.521 91 771 189 222 189"></polygon>
+                <polyline class="growUp" id="Path-Copy-2" fill="#76DED9" points="222 177.672 405.463 146.17 591.968 154.392 770.521 130 771 191 222 191"></polyline>
+                <polyline class="growDown" id="Path-Copy-6" fill="#D4A4FD" points="222.001 203.329 406.929 223 590.806 203.497 771 212.5 771 192 222 192"></polyline>
+                <polyline class="growAcross" id="Path" stroke="#B169EF" stroke-width="2" points="222 204 406.592 223 590.135 204.162 771 213.263"></polyline>
+                <polyline class="growAcross" id="Path-Copy-3" stroke="#16325C" stroke-width="2" points="223 121.5 406 90 586.5 111 769.5 91"></polyline>
+                <polyline class="growAcross" id="Path-Copy-4" stroke="#3CB6D2" stroke-width="2" points="222 177 405.118 145.308 587.035 153.5 771 130"></polyline>
+                <path d="M344.333,264.199 C346.726,264.199 348.666,262.185 348.666,259.699 C348.666,257.214 346.726,255.199 344.333,255.199 C341.94,255.199 340,257.214 340,259.699 C340,262.185 341.94,264.199 344.333,264.199 Z" id="Oval-Copy-30" fill="#16325C"></path>
+                <path d="M598.333,264.199 C600.726,264.199 602.666,262.185 602.666,259.699 C602.666,257.214 600.726,255.199 598.333,255.199 C595.94,255.199 594,257.214 594,259.699 C594,262.185 595.94,264.199 598.333,264.199 Z" id="Oval-Copy-32" fill="#C790F7"></path>
+                <path d="M479.619,264.199 C482.012,264.199 483.952,262.185 483.952,259.699 C483.952,257.214 482.012,255.199 479.619,255.199 C477.226,255.199 475.286,257.214 475.286,259.699 C475.286,262.185 477.226,264.199 479.619,264.199 Z" id="Oval-Copy-33" fill="#61D6D0"></path>
+                <text id="Total-people" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <tspan x="359.016" y="263.911">Total people</tspan>
+                </text>
+                <text id="Retained" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <tspan x="493.829" y="263.911">Retained</tspan>
+                </text>
+                <text id="Dropped" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <tspan x="612.812" y="263.911">Dropped</tspan>
+                </text>
+                <text id="05/27" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                    <tspan x="208.521" y="238.81">05/27</tspan>
+                </text>
+                <text id="06/03" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                    <tspan x="388.607" y="238.81">06/03</tspan>
+                </text>
+                <text id="06/10" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                    <tspan x="571.091" y="238.81">06/10</tspan>
+                </text>
+                <text id="06/17" fill="#333333" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="11" font-weight="bold">
+                    <tspan x="755.851" y="238.81">06/17</tspan>
+                </text>
+                <path d="M222.84,124.68 C224.961,124.68 226.68,122.961 226.68,120.84 C226.68,118.719 224.961,117 222.84,117 C220.719,117 219,118.719 219,120.84 C219,122.961 220.719,124.68 222.84,124.68 Z" id="Oval-Copy-3" fill="#16325C"></path>
+                <path d="M405.84,93.68 C407.961,93.68 409.68,91.961 409.68,89.84 C409.68,87.719 407.961,86 405.84,86 C403.719,86 402,87.719 402,89.84 C402,91.961 403.719,93.68 405.84,93.68 Z" id="Oval-Copy-4" fill="#16325C"></path>
+                <path d="M587.84,114.68 C589.961,114.68 591.68,112.961 591.68,110.84 C591.68,108.719 589.961,107 587.84,107 C585.719,107 584,108.719 584,110.84 C584,112.961 585.719,114.68 587.84,114.68 Z" id="Oval-Copy-5" fill="#16325C"></path>
+                <path d="M769.16,94.84 C771.281,94.84 773,93.121 773,91 C773,88.879 771.281,87.16 769.16,87.16 C767.039,87.16 765.32,88.879 765.32,91 C765.32,93.121 767.039,94.84 769.16,94.84 Z" id="Oval-Copy-6" fill="#16325C"></path>
+                <path d="M172.5,39 L172.5,246.449" id="Line-4" stroke="#DFDCDC" stroke-linecap="square"></path>
+                <path d="M67.0947,146.959 C74.879,146.959 81.1895,140.649 81.1895,132.864 C81.1895,125.08 74.879,118.77 67.0947,118.77 C59.3104,118.77 53,125.08 53,132.864 C53,140.649 59.3104,146.959 67.0947,146.959 Z" id="Oval" fill="#E0F5EC"></path>
+                <text id="vs.-05/27" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <tspan x="95" y="155.212">vs. 05/27</tspan>
+                </text>
+                <g id="Icons-/-Utility-Icon" transform="translate(57.000000, 128.000000)">
+                    <path d="M14.5923,10.819 C15.0635,10.836 15.3987,10.523 15.4151,10.052 L15.6322,1.303 C15.6486,0.832 15.3076,0.466 14.8365,0.45 L6.0656,0.026 C5.5945,0.009 5.2593,0.322 5.2428,0.793 L5.2157,2.414 C5.1993,2.885 5.5403,3.25 6.0114,3.267 L8.7489,3.392 C9.22,3.408 9.4655,3.977 9.0998,4.318 L0.8717,11.991 C0.567,12.275 0.518,12.834 0.8306,13.169 L1.9673,14.388 C2.2799,14.723 2.8709,14.685 3.1451,14.429 L11.3732,6.756 C11.7389,6.415 12.2892,6.7 12.2727,7.171 L12.2065,9.91 C12.1901,10.381 12.5311,10.747 13.0022,10.764 L14.5923,10.819 Z" id="Mask_5" fill="#04844B"></path>
+                    <g id="Clipped">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask_6"></g>
+                    </g>
+                </g>
+                <text id="0" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                    <tspan x="200.728" y="196.361">0</tspan>
+                </text>
+                <text id="10K" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                    <tspan x="187.698" y="82.021">10K</tspan>
+                </text>
+                <text id="5K" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                    <tspan x="194.412" y="137.701">5K</tspan>
+                </text>
+                <text id="7.5K" fill="#898989" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="8" font-weight="normal">
+                    <tspan x="191.084" y="109.308">7.5K</tspan>
+                </text>
+                <text id="2.5K" fill="#898989" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="8" font-weight="normal">
+                    <tspan x="191.084" y="166.267">2.5K</tspan>
+                </text>
+                <text id="0.07%" fill="#04844B" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="17" font-weight="bold">
+                    <tspan x="92.5" y="139.926">0.07%</tspan>
+                </text>
+                <text id="Segment-Population" fill="#080707" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="16" font-weight="bold">
+                    <tspan x="21.6562" y="26.616">Segment Population</tspan>
+                </text>
+                <text id="As-of-06/17/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                    <tspan x="54.8389" y="220.31">As of 06/17/2019</tspan>
+                </text>
+                <text id="8:30-AM-UTC" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                    <tspan x="81.0605" y="236.31">8:30 AM UTC</tspan>
+                </text>
+                <text id="7,095" fill="#17324D" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="40" font-weight="bold">
+                    <tspan x="39.625" y="99.989">7,095</tspan>
+                </text>
+                <text id="Last-30-days,-aggregated-by-week" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                    <tspan x="185" y="57.563">Last 30 days, aggregated by week</tspan>
+                </text>
+                <text id="Total-count" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
+                    <tspan x="81" y="57.563">Total count</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

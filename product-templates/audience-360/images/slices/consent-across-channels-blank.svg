@@ -1,0 +1,36 @@
+<svg style="margin-left: 13px; margin-top: -13px;" width="358" height="309" viewBox="0 0 358 309" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Consent across Channels">
+<text id="Updated a minute ago" fill="black" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="11.904">Updated a minute ago</tspan></text>
+<path id="ygridlin6" opacity="0.5" d="M57.0044 43.9595H348.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="50" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.0044" y="46.671">50</tspan></text>
+<path id="ygridlin5" opacity="0.5" d="M57.0044 81.4572H348.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<path id="ygridlin5_2" opacity="0.5" d="M57.0044 119.545H348.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="40" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.0044" y="84.5274">40</tspan></text>
+<text id="30" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.0044" y="121.047">30</tspan></text>
+<path id="ygridlin3" opacity="0.5" d="M57.0044 157.45H348.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="20" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.0044" y="160.237">20</tspan></text>
+<path id="ygridlin2" opacity="0.5" d="M57.0044 194.947H348.996" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="10" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.0044" y="198.094">10</tspan></text>
+<text id="0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="28.001" y="235.949">0</tspan></text>
+<path id="ygridlin1" opacity="0.5" d="M57.001 232.445H348.997" stroke="#DDDBDA" stroke-linecap="square"/>
+<text id="Number of Employees" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="132.066" y="276.212">Consented Population</tspan></text>
+<text id="Sales" transform="rotate(-90)" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="0" y="240.212">Total Addressable Population</tspan></text>
+<text id="10_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="64" y="249.212">10</tspan></text>
+<text id="20_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="101.449" y="250.28">20</tspan></text>
+<text id="30_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="135.803" y="250.273">30</tspan></text>
+<text id="40_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="169.479" y="250.268">40</tspan></text>
+<text id="50_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="203.125" y="250.283">50</tspan></text>
+<text id="60" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="236.801" y="249.212">60</tspan></text>
+<text id="70" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="269.751" y="249.274">70</tspan></text>
+<text id="80" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="303.759" y="250.274">80</tspan></text>
+<text id="100" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="335" y="250.212">100</tspan></text>
+<path id="legendcircle5" d="M102.66 303.649C104.681 303.649 106.32 301.937 106.32 299.825C106.32 297.712 104.681 296 102.66 296C100.639 296 99 297.712 99 299.825C99 301.937 100.639 303.649 102.66 303.649Z" fill="#9D53F2"/>
+<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="112" y="304.212">Mobile</tspan></text>
+<path id="legendcircle3" d="M34.6598 303.649C36.681 303.649 38.3196 301.937 38.3196 299.825C38.3196 297.712 36.681 296 34.6598 296C32.6385 296 31 297.712 31 299.825C31 301.937 32.6385 303.649 34.6598 303.649Z" fill="#3296ED"/>
+<text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="42.9795" y="304.212">Email</tspan></text>
+<path id="legendcircle1" d="M186.66 303.649C188.681 303.649 190.32 301.937 190.32 299.825C190.32 297.712 188.681 296 186.66 296C184.639 296 183 297.712 183 299.825C183 301.937 184.639 303.649 186.66 303.649Z" fill="#26ABA4"/>
+<text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="198" y="304.212">Web</tspan></text>
+<path id="legendcircle1_2" d="M251.66 303.649C253.681 303.649 255.32 301.937 255.32 299.825C255.32 297.712 253.681 296 251.66 296C249.639 296 248 297.712 248 299.825C248 301.937 249.639 303.649 251.66 303.649Z" fill="#F7A452"/>
+<text id="Account E_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="262" y="304.212">Retail Store</tspan></text>
+</g>
+</svg>
