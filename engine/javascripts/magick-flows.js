@@ -265,9 +265,11 @@ function locationHashChanged(event) {
 
 	if ( hasEject === true ) {
 
-		let newUrlSlugForEject = currentStepMetaData[indexOfEject].split('--')[1];
-		let newUrlSlugForEjectSplitAgain = newUrlSlugForEject.split('-')[0] + '=' + newUrlSlugForEject.split('-')[1];
-		window.location = `/?${newUrlSlugForEjectSplitAgain}`;
+		// let newUrlSlugForEject = currentStepMetaData[indexOfEject].split('--')[1];
+		// let newUrlSlugForEjectSplitAgain = newUrlSlugForEject.split('-')[0] + '=' + newUrlSlugForEject.split('-')[1];
+		// window.location = `/?${newUrlSlugForEjectSplitAgain}`;
+		let newUrlSlugForEject = decodeURIComponent(currentStepMetaData[indexOfEject].split('--')[1]);
+		window.location = `/${newUrlSlugForEject}`;
 		return false;
 	}
 
