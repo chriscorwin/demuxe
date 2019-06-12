@@ -1,257 +1,249 @@
-<svg width="1195" height="693" viewBox="0 0 1195 693" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1195" height="609" viewBox="0 0 1195 609" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="import-in-progress" clip-path="url(#clip0)">
+<rect width="1195" height="609" fill="#FF6D6D"/>
+<g id="Group 36">
 <g id="Modal">
 <g id="Modal - Info w Video">
-<rect id="body bg" width="1195" height="674" rx="4" fill="white"/>
-<g id="Footer">
-<g id="Footer_2">
-<g id="Background" filter="url(#filter0_d)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 637H1194.92V689C1194.92 691.209 1193.13 693 1190.92 693H4C1.79086 693 0 691.209 0 689V637Z" fill="#F3F2F2"/>
-</g>
-</g>
-</g>
+<rect id="body bg" width="1195" height="605" rx="4" fill="white"/>
 <g id="Header">
-<line id="Line" x1="-8.74228e-08" y1="68" x2="1195" y2="67.9999" stroke="#DDDBDA" stroke-width="2"/>
-<text id="Import Data into Customer 360" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0em"><tspan x="453.408" y="44.02">Import Data into Customer 360</tspan></text>
+<line id="Line" x1="14" y1="68" x2="1176" y2="67.9999" stroke="#DDDBDA" stroke-width="2"/>
+<text id="Import Data" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" letter-spacing="0em"><tspan x="543.037" y="44.02">Import Data</tspan></text>
 </g>
 </g>
 </g>
 <g id="Group 34">
-<text id="Import in progress..." fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="24" letter-spacing="0em"><tspan x="131.359" y="148.308">Import in progress...</tspan></text>
-<text id="What&#226;&#128;&#153;s in the data..." fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="24" letter-spacing="0em"><tspan x="704" y="148.308">What&#x2019;s in the data...</tspan></text>
-<path id="Vector" d="M451 110V615" stroke="#D8D8D8"/>
+<text id="Import in progress..." fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="24" letter-spacing="0em"><tspan x="131.359" y="116.808">Import in progress...</tspan></text>
+<text id="What&#226;&#128;&#153;s in the data..." fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="24" letter-spacing="0em"><tspan x="704" y="116.808">What&#x2019;s in the data...</tspan></text>
+<path id="Vector" d="M451 82L451 542" stroke="#D8D8D8"/>
 <g id="Group">
-<text id="Top segments" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" font-weight="bold" letter-spacing="0px"><tspan x="495" y="392.414">Emails by Top Level Domains</tspan></text>
+<text id="Top segments" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" font-weight="bold" letter-spacing="0px"><tspan x="495" y="372.414">Emails by Top Level Domains</tspan></text>
 <g id="Gridline">
 <g id="grid7">
-<path id="Path 2" d="M564.5 436.5V599.5" stroke="#DDDBDA"/>
-<text id="$0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="554" y="427.712">5%</tspan></text>
+<path id="Path 2" d="M564.5 416.5V516.5" stroke="#DDDBDA"/>
+<text id="$0" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="554" y="407.712">5%</tspan></text>
 </g>
 <g id="grid6">
-<path id="Path 2_2" d="M651 436.5V599.5" stroke="#DDDBDA"/>
-<text id="$200" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="636" y="427.712">15%</tspan></text>
+<path id="Path 2_2" d="M651 416.5V516.5" stroke="#DDDBDA"/>
+<text id="$200" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="636" y="407.712">15%</tspan></text>
 </g>
 <g id="grid5">
-<path id="Path 2_3" d="M695 436.5V599.5" stroke="#DDDBDA"/>
-<text id="300" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="687.805" y="427.186">300</tspan></text>
+<path id="Path 2_3" d="M695 416.5V516.5" stroke="#DDDBDA"/>
+<text id="300" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="687.805" y="407.186">300</tspan></text>
 </g>
 <g id="grid4">
-<path id="Path 2_4" d="M608 436.5V599.5" stroke="#DDDBDA"/>
-<text id="100" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="589.802" y="427.186">100</tspan></text>
+<path id="Path 2_4" d="M608 416.5V516.5" stroke="#DDDBDA"/>
+<text id="100" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="589.802" y="407.186">100</tspan></text>
 </g>
 <g id="grid3">
-<path id="Path 2_5" d="M731 436.5V599.5" stroke="#DDDBDA"/>
-<text id="$400" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="719" y="427.712">25%</tspan></text>
+<path id="Path 2_5" d="M731 416.5V516.5" stroke="#DDDBDA"/>
+<text id="$400" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="719" y="407.712">25%</tspan></text>
 </g>
-<path id="Path 2_6" d="M770 436.5V599.5" stroke="#DDDBDA"/>
+<path id="Path 2_6" d="M770 416.5V516.5" stroke="#DDDBDA"/>
 </g>
-<path class="bar" id="Bar" d="M536 439H780V457H536V439Z" fill="#26ABA4"/>
-<text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="451.602">.com</tspan></text>
-<path class="bar" id="Bar_2" d="M536 473H780V491H536V473Z" fill="#26ABA4"/>
-<text id="Account B" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="487.063">.org</tspan></text>
-<path class="bar" id="Bar_3" d="M536 508H742V526H536V508Z" fill="#26ABA4"/>
-<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="521.063">.uk</tspan></text>
-<path class="bar" id="Bar_4" d="M536 541H710V559H536V541Z" fill="#26ABA4"/>
-<text id="Account D" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="555.063">.edu</tspan></text>
-<path class="bar" id="Bar_5" d="M536 575H671V593H536V575Z" fill="#26ABA4"/>
-<text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="589.063">.ca</tspan></text>
+<path id="Bar" class="bar" d="M536 419H671V437H536V419Z" fill="#26ABA4"/>
+<text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="431.602">.com</tspan></text>
+<path id="Bar_2" class="bar" d="M536 453H665V471H536V453Z" fill="#26ABA4"/>
+<text id="Account B" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="467.063">.org</tspan></text>
+<path id="Bar_3" class="bar" d="M536 488H688V506H536V488Z" fill="#26ABA4"/>
+<text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="501.063">.net</tspan></text>
 </g>
 <g id="Group_2">
-<text id="Top segments_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" font-weight="bold" letter-spacing="0px"><tspan x="852" y="392.414">Number of Phone Numbers per Customer</tspan></text>
+<text id="Top segments_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" font-weight="bold" letter-spacing="0px"><tspan x="852" y="372.414">Number of Phone Numbers per Customer</tspan></text>
 <g id="Gridline_2">
 <g id="grid7_2">
-<path id="Path 2_7" d="M903.5 436.5V599.5" stroke="#DDDBDA"/>
-<text id="$0_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="893" y="427.712">10%</tspan></text>
+<path id="Path 2_7" d="M903.5 416V516" stroke="#DDDBDA"/>
+<text id="$0_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="893" y="407.712">10%</tspan></text>
 </g>
 <g id="grid6_2">
-<path id="Path 2_8" d="M990 436.5V599.5" stroke="#DDDBDA"/>
-<text id="$200_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="975" y="427.712">30%</tspan></text>
+<path id="Path 2_8" d="M990 416V516" stroke="#DDDBDA"/>
+<text id="$200_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="975" y="407.712">30%</tspan></text>
 </g>
 <g id="grid5_2">
-<path id="Path 2_9" d="M1034 436.5V599.5" stroke="#DDDBDA"/>
-<text id="300_2" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1026.8" y="427.186">300</tspan></text>
+<path id="Path 2_9" d="M1034 416V516" stroke="#DDDBDA"/>
+<text id="300_2" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1026.8" y="407.186">300</tspan></text>
 </g>
 <g id="grid4_2">
-<path id="Path 2_10" d="M947 436.5V599.5" stroke="#DDDBDA"/>
-<text id="100_2" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="928.802" y="427.186">100</tspan></text>
+<path id="Path 2_10" d="M947 416V516" stroke="#DDDBDA"/>
+<text id="100_2" opacity="0.01" fill="#706E6B" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="928.802" y="407.186">100</tspan></text>
 </g>
 <g id="grid3_2">
-<path id="Path 2_11" d="M1070 436.5V599.5" stroke="#DDDBDA"/>
-<text id="$400_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1058" y="427.712">50%</tspan></text>
+<path id="Path 2_11" d="M1070 416V516" stroke="#DDDBDA"/>
+<text id="$400_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1058" y="407.712">50%</tspan></text>
 </g>
-<path id="Path 2_12" d="M1109 436.5V599.5" stroke="#DDDBDA"/>
+<path id="Path 2_12" d="M1109 416V516" stroke="#DDDBDA"/>
 </g>
-<path class="bar2" id="Bar_6" d="M875 439H1001V457H875V439Z" fill="#3296ED"/>
-<text id="Account A_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="451.602">1</tspan></text>
-<path class="bar2" id="Bar_7" d="M875 473H1110V491H875V473Z" fill="#3296ED"/>
-<text id="Account B_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="487.063">2</tspan></text>
-<path class="bar2" id="Bar_8" d="M875 507H968V525H875V507Z" fill="#3296ED"/>
-<text id="Account C_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="521.063">3</tspan></text>
-<path class="bar2" id="Bar_9" d="M875 541H893V559H875V541Z" fill="#3296ED"/>
-<text id="Account D_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="555.063">4</tspan></text>
-<path class="bar2" id="Bar_10" d="M875 575H912V593H875V575Z" fill="#3296ED"/>
-<text id="Account E_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="589.063">5+</tspan></text>
+<path id="Bar_4" class="bar2" d="M875 419H1054V437H875V419Z" fill="#3296ED"/>
+<text id="Account A_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="431.602">1</tspan></text>
+<path id="Bar_5" class="bar2" d="M875 453H1049V471H875V453Z" fill="#3296ED"/>
+<text id="Account B_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="467.063">2</tspan></text>
+<path id="Bar_6" class="bar2" d="M875 487H1032V505H875V487Z" fill="#3296ED"/>
+<text id="Account C_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="501.063">3+</tspan></text>
 </g>
 <g id="Group 32">
 <g id="Group 30">
-<text id="CONVERSION RATE Copy" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1007.47" y="194.212">AVG. ORDER VALUE</tspan></text>
-<text id="aov" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="1001.86" y="234.285">$67.48</tspan></text>
+<text id="CONVERSION RATE Copy" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1007.47" y="178.212">AVG. ORDER VALUE</tspan></text>
+<text id="aov" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="1001.86" y="218.285">$15.11</tspan></text>
 </g>
 <g id="Group 31">
-<text id="AVG. ORDER VALUE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="661" y="194.212">TOTAL ORDER VALUE</tspan></text>
-<text id="tov" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px" text-anchor="end"><tspan x="780" y="234.285"></tspan></text>
+<text id="AVG. ORDER VALUE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="661" y="178.212">TOTAL ORDER VALUE</tspan></text>
+<text id="tov" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px" text-anchor="end"><tspan x="780" y="218.285"></tspan></text>
 </g>
 </g>
 <g id="Group 33">
 <g id="Group 30.1">
-<text id="CONVERSION RATE Copy_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="925.848" y="289.212">CUSTOMER SATISFACTION SCORE</tspan></text>
-<text id="css" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="1001.89" y="329.285">71.7%</tspan></text>
+<text id="CONVERSION RATE Copy_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="925.848" y="273.212">CUSTOMER SATISFACTION SCORE</tspan></text>
+<text id="css" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="1003.95" y="313.285">7%</tspan></text>
 </g>
 <g id="Group 31.1">
-<text id="AVG. ORDER VALUE_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="648" y="289.212">TOTAL SUPPORT CASES</tspan></text>
-<text id="tsc" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px" text-anchor="end"><tspan x="780" y="329.285">127,348</tspan></text>
+<text id="AVG. ORDER VALUE_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="648" y="273.212">TOTAL SUPPORT CASES</tspan></text>
+<text id="tsc"  text-anchor="end" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="780" y="313.285">3,786</tspan></text>
 </g>
 </g>
 <g id="progress diagram">
-<g id="Group 2.1">
-
-<circle id="mule2Circle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="238" cy="505" r="37" transform="rotate(-90 238 505)"></circle>
-<path id="Subtract_2" fill-rule="evenodd" clip-rule="evenodd" d="M236.301 471.538C218.531 472.672 204.468 487.444 204.468 505.5C204.468 524.295 219.705 539.532 238.5 539.532C257.295 539.532 272.532 524.295 272.532 505.5C272.532 487.592 258.7 472.915 241.137 471.569L236.591 502.324L236.301 471.538Z" fill="#DDDBDA"/>
+<g id="connectors">
+<path id="Line 7" d="M238.608 301V205.198" stroke="#979797" stroke-linecap="square" stroke-dasharray="1 1"/>
+<path id="Line 7.1" d="M238.608 451.802V356" stroke="#979797" stroke-linecap="square" stroke-dasharray="1 1"/>
+<path id="Line 7_2" d="M134.467 404.196L359.3 271.546" stroke="#979797" stroke-linecap="square" stroke-dasharray="1 1"/>
+<path id="Line 7_3" d="M356.917 406.709L125.09 269.594" stroke="#979797" stroke-linecap="square" stroke-dasharray="1 1"/>
 </g>
+<g id="logos">
+	<circle id="mule2Circle" stroke="#DDDBDA" stroke-width="10" cx="283" cy="505" r="37" transform="rotate(-90 238 505)"></circle>
+	<circle id="searchCircle" stroke="#DDDBDA" stroke-width="10" cx="286" cy="246" r="37" transform="rotate(-90 241 246)"></circle>
+	<circle id="communityCircle" stroke="#DDDBDA" stroke-width="10" cx="404" cy="315" r="37" transform="rotate(-90 358 315)"></circle>
+	<circle id="chartCircle" stroke="#DDDBDA" stroke-width="10" cx="168" cy="450" r="37" transform="rotate(-90 124 450)"></circle>
+	<circle id="heartCircle" stroke="#DDDBDA" stroke-width="10" cx="168" cy="314" r="37" transform="rotate(-90 124 314)"></circle>
+	<circle id="mule1Circle" stroke="#DDDBDA" stroke-width="10" cx="404" cy="448" r="37" transform="rotate(-90 358 448)"></circle>
+	<circle id="mule2Circle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="283" cy="505" r="37" transform="rotate(-90 238 505)"></circle>
+	<circle id="searchCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="286" cy="246" r="37" transform="rotate(-90 241 246)"></circle>
+	<circle id="communityCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="404" cy="315" r="37" transform="rotate(-90 358 315)"></circle>
+	<circle id="chartCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="168" cy="450" r="37" transform="rotate(-90 124 450)"></circle>
+	<circle id="heartCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="168" cy="314" r="37" transform="rotate(-90 124 314)"></circle>
+	<circle id="mule1Circle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="404" cy="448" r="37" transform="rotate(-90 358 448)"></circle>
 <g id="System Logo Circle">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="204" y="471" width="69" height="69">
-<g id="mask 10">
-<path id="Vector_2" d="M238.5 540C257.554 540 273 524.554 273 505.5C273 486.446 257.554 471 238.5 471C219.446 471 204 486.446 204 505.5C204 524.554 219.446 540 238.5 540Z" fill="white"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="89" y="234" width="70" height="71">
+<g id="mask 2">
+<path id="Vector_2" d="M123.858 304.288C143.109 304.288 158.716 288.665 158.716 269.394C158.716 250.123 143.109 234.5 123.858 234.5C104.606 234.5 89 250.123 89 269.394C89 288.665 104.606 304.288 123.858 304.288Z" fill="white"/>
 </g>
 </mask>
 <g mask="url(#mask0)">
-<path id="Mask" d="M238.5 540C257.554 540 273 524.554 273 505.5C273 486.446 257.554 471 238.5 471C219.446 471 204 486.446 204 505.5C204 524.554 219.446 540 238.5 540Z" fill="#D8D8D8"/>
-<g id="Color/White">
-<path id="Rectangle 5" d="M273 471H204V540H273V471Z" fill="white"/>
-</g>
-<g id="Icon/MuleSoft">
-<g id="mule">
-<path id="Shape" d="M264.375 505.5C264.375 515.89 258.248 524.846 249.413 528.963L247.131 520.447C252.289 517.463 255.764 511.888 255.764 505.5C255.764 502.593 255.04 499.853 253.772 497.45L242.097 514.125H234.906L223.228 497.45C221.96 499.853 221.236 502.593 221.236 505.5C221.236 511.888 224.711 517.463 229.869 520.447L227.587 528.963C218.752 524.846 212.625 515.89 212.625 505.5C212.625 496.473 217.251 488.529 224.26 483.9L238.5 504.232L252.74 483.9C259.749 488.529 264.375 496.473 264.375 505.5ZM273 505.5C273 524.553 257.553 540 238.5 540C219.447 540 204 524.553 204 505.5C204 486.447 219.447 471 238.5 471C257.553 471 273 486.447 273 505.5ZM270.125 505.5C270.125 488.034 255.966 473.875 238.5 473.875C221.034 473.875 206.875 488.034 206.875 505.5C206.875 522.966 221.034 537.125 238.5 537.125C255.966 537.125 270.125 522.966 270.125 505.5Z" fill="#0070D2"/>
-</g>
-</g>
-</g>
-</g>
-<g id="connectors">
-<path id="Line 7" d="M238.608 346V250.198" stroke="#979797" stroke-linecap="square" stroke-dasharray="1 1"/>
-<path id="Line 7_2" d="M134.467 449.196L359.3 316.546" stroke="#979797" stroke-linecap="square" stroke-dasharray="1 1"/>
-<path id="Line 7_3" d="M356.917 451.709L125.09 314.594" stroke="#979797" stroke-linecap="square" stroke-dasharray="1 1"/>
-</g>
-<g id="logos">
-	<circle id="searchCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="241" cy="246" r="37" transform="rotate(-90 241 246)"></circle>
-	<circle id="communityCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="358" cy="315" r="37" transform="rotate(-90 358 315)"></circle>
-	<circle id="chartCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="124" cy="450" r="37" transform="rotate(-90 124 450)"></circle>
-	<circle id="heartCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="124" cy="314" r="37" transform="rotate(-90 124 314)"></circle>
-	<circle id="mule1Circle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="358" cy="448" r="37" transform="rotate(-90 358 448)"></circle>
-<g id="System Logo Circle_2">
-<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="89" y="279" width="70" height="71">
-<g id="mask 2">
-<path id="Vector_3" d="M123.858 349.288C143.109 349.288 158.716 333.665 158.716 314.394C158.716 295.123 143.109 279.5 123.858 279.5C104.606 279.5 89 295.123 89 314.394C89 333.665 104.606 349.288 123.858 349.288Z" fill="white"/>
-</g>
-</mask>
-<g mask="url(#mask1)">
-<path id="Mask_2" d="M123.858 349.288C143.109 349.288 158.716 333.665 158.716 314.394C158.716 295.123 143.109 279.5 123.858 279.5C104.606 279.5 89 295.123 89 314.394C89 333.665 104.606 349.288 123.858 349.288Z" fill="#D8D8D8"/>
+<path id="Mask" d="M123.858 304.288C143.109 304.288 158.716 288.665 158.716 269.394C158.716 250.123 143.109 234.5 123.858 234.5C104.606 234.5 89 250.123 89 269.394C89 288.665 104.606 304.288 123.858 304.288Z" fill="#D8D8D8"/>
 <g id="Color">
-<path id="Rectangle 5_2" d="M158.607 279.5H89V349.191H158.607V279.5Z" fill="#812244"/>
+<path id="Rectangle 5" d="M158.607 234.5H89V304.191H158.607V234.5Z" fill="#812244"/>
 </g>
 <g id="Icon">
 <g id="service white@2x rgb">
-<rect id="Rectangle" x="99.8761" y="291.478" width="48.9425" height="49.0014" fill="url(#pattern0)"/>
+<rect id="Rectangle" x="99.8761" y="246.478" width="48.9425" height="49.0014" fill="url(#pattern0)"/>
 </g>
 </g>
 </g>
 </g>
 <g id="System Logo Circle Copy 5.1">
-<mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="206" y="211" width="70" height="71">
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="206" y="166" width="70" height="71">
 <g id="mask 4">
-<path id="Vector_4" d="M240.858 281.288C260.109 281.288 275.716 265.665 275.716 246.394C275.716 227.123 260.109 211.5 240.858 211.5C221.606 211.5 206 227.123 206 246.394C206 265.665 221.606 281.288 240.858 281.288Z" fill="white"/>
+<path id="Vector_3" d="M240.858 236.288C260.109 236.288 275.716 220.665 275.716 201.394C275.716 182.123 260.109 166.5 240.858 166.5C221.606 166.5 206 182.123 206 201.394C206 220.665 221.606 236.288 240.858 236.288Z" fill="white"/>
 </g>
 </mask>
-<g mask="url(#mask2)">
-<path id="Mask_3" d="M240.858 281.288C260.109 281.288 275.716 265.665 275.716 246.394C275.716 227.123 260.109 211.5 240.858 211.5C221.606 211.5 206 227.123 206 246.394C206 265.665 221.606 281.288 240.858 281.288Z" fill="#D8D8D8"/>
+<g mask="url(#mask1)">
+<path id="Mask_2" d="M240.858 236.288C260.109 236.288 275.716 220.665 275.716 201.394C275.716 182.123 260.109 166.5 240.858 166.5C221.606 166.5 206 182.123 206 201.394C206 220.665 221.606 236.288 240.858 236.288Z" fill="#D8D8D8"/>
 <g id="Color_2">
-<path id="Rectangle 5_3" d="M275.607 211.5H206V281.191H275.607V211.5Z" fill="#ED8B00"/>
+<path id="Rectangle 5_2" d="M275.607 166.5H206V236.191H275.607V166.5Z" fill="#ED8B00"/>
 </g>
 <g id="Icon_2">
 <g id="marketing white@2x rgb">
-<rect id="Rectangle_2" x="215.789" y="221.3" width="50.0301" height="50.0904" fill="url(#pattern1)"/>
+<rect id="Rectangle_2" x="215.789" y="176.3" width="50.0301" height="50.0904" fill="url(#pattern1)"/>
 </g>
 </g>
 </g>
 </g>
 <g id="System Logo Circle Copy 4.1">
-<mask id="mask3" mask-type="alpha" maskUnits="userSpaceOnUse" x="323" y="279" width="70" height="71">
+<mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="323" y="234" width="70" height="71">
 <g id="mask 6">
-<path id="Vector_5" d="M357.858 349.585C377.109 349.585 392.716 333.962 392.716 314.691C392.716 295.419 377.109 279.797 357.858 279.797C338.606 279.797 323 295.419 323 314.691C323 333.962 338.606 349.585 357.858 349.585Z" fill="white"/>
+<path id="Vector_4" d="M357.858 304.585C377.109 304.585 392.716 288.962 392.716 269.691C392.716 250.419 377.109 234.797 357.858 234.797C338.606 234.797 323 250.419 323 269.691C323 288.962 338.606 304.585 357.858 304.585Z" fill="white"/>
 </g>
 </mask>
-<g mask="url(#mask3)">
-<path id="Mask_4" d="M357.858 349.585C377.109 349.585 392.716 333.962 392.716 314.691C392.716 295.419 377.109 279.797 357.858 279.797C338.606 279.797 323 295.419 323 314.691C323 333.962 338.606 349.585 357.858 349.585Z" fill="#D8D8D8"/>
+<g mask="url(#mask2)">
+<path id="Mask_3" d="M357.858 304.585C377.109 304.585 392.716 288.962 392.716 269.691C392.716 250.419 377.109 234.797 357.858 234.797C338.606 234.797 323 250.419 323 269.691C323 288.962 338.606 304.585 357.858 304.585Z" fill="#D8D8D8"/>
 <g id="Color_3">
-<path id="Rectangle 5_4" d="M392.607 279.797H323V349.488H392.607V279.797Z" fill="#E7A536"/>
+<path id="Rectangle 5_3" d="M392.607 234.797H323V304.488H392.607V234.797Z" fill="#E7A536"/>
 </g>
 <g id="Icon_3">
 <g id="community white@2x rgb">
-<rect id="Rectangle_3" x="337.139" y="293.953" width="42.4168" height="42.4679" fill="url(#pattern2)"/>
+<rect id="Rectangle_3" x="337.139" y="248.953" width="42.4168" height="42.4679" fill="url(#pattern2)"/>
 </g>
 </g>
 </g>
 </g>
 <g id="System Logo Circle Copy 3.1">
-<mask id="mask4" mask-type="alpha" maskUnits="userSpaceOnUse" x="89" y="415" width="70" height="71">
+<mask id="mask3" mask-type="alpha" maskUnits="userSpaceOnUse" x="89" y="370" width="70" height="71">
 <g id="mask 8">
-<path id="Vector_6" d="M123.858 485.288C143.109 485.288 158.716 469.665 158.716 450.394C158.716 431.123 143.109 415.5 123.858 415.5C104.606 415.5 89 431.123 89 450.394C89 469.665 104.606 485.288 123.858 485.288Z" fill="white"/>
+<path id="Vector_5" d="M123.858 440.288C143.109 440.288 158.716 424.665 158.716 405.394C158.716 386.123 143.109 370.5 123.858 370.5C104.606 370.5 89 386.123 89 405.394C89 424.665 104.606 440.288 123.858 440.288Z" fill="white"/>
 </g>
 </mask>
-<g mask="url(#mask4)">
-<path id="Mask_5" d="M123.858 485.288C143.109 485.288 158.716 469.665 158.716 450.394C158.716 431.123 143.109 415.5 123.858 415.5C104.606 415.5 89 431.123 89 450.394C89 469.665 104.606 485.288 123.858 485.288Z" fill="#D8D8D8"/>
+<g mask="url(#mask3)">
+<path id="Mask_4" d="M123.858 440.288C143.109 440.288 158.716 424.665 158.716 405.394C158.716 386.123 143.109 370.5 123.858 370.5C104.606 370.5 89 386.123 89 405.394C89 424.665 104.606 440.288 123.858 440.288Z" fill="#D8D8D8"/>
 <g id="Color_4">
-<path id="Rectangle 5_5" d="M158.607 415.5H89V485.191H158.607V415.5Z" fill="#00857D"/>
+<path id="Rectangle 5_4" d="M158.607 370.5H89V440.191H158.607V370.5Z" fill="#00857D"/>
 </g>
 <g id="Icon_4">
 <g id="sales white@2x rgb">
-<rect id="Rectangle_4" x="102.051" y="429.656" width="43.5044" height="43.5568" fill="url(#pattern3)"/>
+<rect id="Rectangle_4" x="102.051" y="384.656" width="43.5044" height="43.5568" fill="url(#pattern3)"/>
+</g>
+</g>
+</g>
+</g>
+<g id="System Logo Circle_2">
+<mask id="mask4" mask-type="alpha" maskUnits="userSpaceOnUse" x="323" y="368" width="69" height="69">
+<g id="mask 10">
+<path id="Vector_6" d="M357.5 437C376.554 437 392 421.554 392 402.5C392 383.446 376.554 368 357.5 368C338.446 368 323 383.446 323 402.5C323 421.554 338.446 437 357.5 437Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask4)">
+<path id="Mask_5" d="M357.5 437C376.554 437 392 421.554 392 402.5C392 383.446 376.554 368 357.5 368C338.446 368 323 383.446 323 402.5C323 421.554 338.446 437 357.5 437Z" fill="#D8D8D8"/>
+<g id="Color/White">
+<path id="Rectangle 5_5" d="M392 368H323V437H392V368Z" fill="white"/>
+</g>
+<g id="Icon/MuleSoft">
+<g id="mule">
+<path id="Shape" d="M383.375 402.5C383.375 412.89 377.248 421.846 368.413 425.963L366.131 417.447C371.289 414.463 374.764 408.888 374.764 402.5C374.764 399.593 374.04 396.853 372.772 394.45L361.097 411.125H353.906L342.228 394.45C340.96 396.853 340.236 399.593 340.236 402.5C340.236 408.888 343.711 414.463 348.869 417.447L346.587 425.963C337.752 421.846 331.625 412.89 331.625 402.5C331.625 393.473 336.251 385.529 343.26 380.9L357.5 401.232L371.74 380.9C378.749 385.529 383.375 393.473 383.375 402.5ZM392 402.5C392 421.553 376.553 437 357.5 437C338.447 437 323 421.553 323 402.5C323 383.447 338.447 368 357.5 368C376.553 368 392 383.447 392 402.5ZM389.125 402.5C389.125 385.034 374.966 370.875 357.5 370.875C340.034 370.875 325.875 385.034 325.875 402.5C325.875 419.966 340.034 434.125 357.5 434.125C374.966 434.125 389.125 419.966 389.125 402.5Z" fill="#0070D2"/>
 </g>
 </g>
 </g>
 </g>
 <g id="System Logo Circle_3">
-<mask id="mask5" mask-type="alpha" maskUnits="userSpaceOnUse" x="323" y="414" width="69" height="69">
+<mask id="mask5" mask-type="alpha" maskUnits="userSpaceOnUse" x="204" y="426" width="69" height="69">
 <g id="mask 10_2">
-<path id="Vector_7" d="M357.5 483C376.554 483 392 467.554 392 448.5C392 429.446 376.554 414 357.5 414C338.446 414 323 429.446 323 448.5C323 467.554 338.446 483 357.5 483Z" fill="white"/>
+<path id="Vector_7" d="M238.5 495C257.554 495 273 479.554 273 460.5C273 441.446 257.554 426 238.5 426C219.446 426 204 441.446 204 460.5C204 479.554 219.446 495 238.5 495Z" fill="white"/>
 </g>
 </mask>
 <g mask="url(#mask5)">
-<path id="Mask_6" d="M357.5 483C376.554 483 392 467.554 392 448.5C392 429.446 376.554 414 357.5 414C338.446 414 323 429.446 323 448.5C323 467.554 338.446 483 357.5 483Z" fill="#D8D8D8"/>
+<path id="Mask_6" d="M238.5 495C257.554 495 273 479.554 273 460.5C273 441.446 257.554 426 238.5 426C219.446 426 204 441.446 204 460.5C204 479.554 219.446 495 238.5 495Z" fill="#D8D8D8"/>
 <g id="Color/White_2">
-<path id="Rectangle 5_6" d="M392 414H323V483H392V414Z" fill="white"/>
+<path id="Rectangle 5_6" d="M273 426H204V495H273V426Z" fill="white"/>
 </g>
 <g id="Icon/MuleSoft_2">
 <g id="mule_2">
-<path id="Shape_2" d="M383.375 448.5C383.375 458.89 377.248 467.846 368.413 471.963L366.131 463.447C371.289 460.463 374.764 454.888 374.764 448.5C374.764 445.593 374.04 442.853 372.772 440.45L361.097 457.125H353.906L342.228 440.45C340.96 442.853 340.236 445.593 340.236 448.5C340.236 454.888 343.711 460.463 348.869 463.447L346.587 471.963C337.752 467.846 331.625 458.89 331.625 448.5C331.625 439.473 336.251 431.529 343.26 426.9L357.5 447.232L371.74 426.9C378.749 431.529 383.375 439.473 383.375 448.5ZM392 448.5C392 467.553 376.553 483 357.5 483C338.447 483 323 467.553 323 448.5C323 429.447 338.447 414 357.5 414C376.553 414 392 429.447 392 448.5ZM389.125 448.5C389.125 431.034 374.966 416.875 357.5 416.875C340.034 416.875 325.875 431.034 325.875 448.5C325.875 465.966 340.034 480.125 357.5 480.125C374.966 480.125 389.125 465.966 389.125 448.5Z" fill="#0070D2"/>
+<path id="Shape_2" d="M264.375 460.5C264.375 470.89 258.248 479.846 249.413 483.963L247.131 475.447C252.289 472.463 255.764 466.888 255.764 460.5C255.764 457.593 255.04 454.853 253.772 452.45L242.097 469.125H234.906L223.228 452.45C221.96 454.853 221.236 457.593 221.236 460.5C221.236 466.888 224.711 472.463 229.869 475.447L227.587 483.963C218.752 479.846 212.625 470.89 212.625 460.5C212.625 451.473 217.251 443.529 224.26 438.9L238.5 459.232L252.74 438.9C259.749 443.529 264.375 451.473 264.375 460.5ZM273 460.5C273 479.553 257.553 495 238.5 495C219.447 495 204 479.553 204 460.5C204 441.447 219.447 426 238.5 426C257.553 426 273 441.447 273 460.5ZM270.125 460.5C270.125 443.034 255.966 428.875 238.5 428.875C221.034 428.875 206.875 443.034 206.875 460.5C206.875 477.966 221.034 492.125 238.5 492.125C255.966 492.125 270.125 477.966 270.125 460.5Z" fill="#0070D2"/>
 </g>
 </g>
 </g>
 </g>
 </g>
-<rect id="2018sf Customer 360 square 2C icon RGB" x="192" y="335.5" width="99" height="90" fill="url(#pattern4)"/>
+<rect id="2018sf Customer 360 square 2C icon RGB" x="192" y="290.5" width="99" height="90" fill="url(#pattern4)"/>
 </g>
 </g>
-<text id="Feel free to navigate away and explore. The import will continue, and you&#226;&#128;&#153;ll be notified by email when it&#226;&#128;&#153;s done." fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0em"><tspan x="262" y="668.396">Feel free to navigate away and explore. The import will continue, and you&#x2019;ll be notified by email when it&#x2019;s done.</tspan></text>
+<g id="Group 35">
+<g id="Footer">
+<g id="Footer_2">
+<g id="Background" filter="url(#filter0_d)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 553H1194.92V605C1194.92 607.209 1193.13 609 1190.92 609H4C1.79086 609 0 607.209 0 605V553Z" fill="#F3F2F2"/>
+</g>
+</g>
+</g>
+<text id="Feel free to navigate away and explore. The import will continue, and you&#226;&#128;&#153;ll be notified by email when it&#226;&#128;&#153;s done." fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0em"><tspan x="262" y="584.396">Feel free to navigate away and explore. The import will continue, and you&#x2019;ll be notified by email when it&#x2019;s done.</tspan></text>
+</g>
+</g>
 </g>
 <defs>
-<filter id="filter0_d" x="0" y="635" width="1194.92" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-<feOffset dy="-2"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.866667 0 0 0 0 0.858824 0 0 0 0 0.854902 0 0 0 1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-</filter>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0" transform="scale(0.0078125)"/>
 </pattern>
@@ -267,8 +259,16 @@
 <pattern id="pattern4" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image4" transform="scale(0.0045045 0.005)"/>
 </pattern>
+<filter id="filter0_d" x="0" y="551" width="1194.92" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="-2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.866667 0 0 0 0 0.858824 0 0 0 0 0.854902 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
 <clipPath id="clip0">
-<rect width="1195" height="693" fill="white"/>
+<rect width="1195" height="609" fill="white"/>
 </clipPath>
 <image id="image0" data-name="service white@2x rgb.png" width="128" height="128" xlink:href="data:image/png;base64,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"/>
 <image id="image1" data-name="marketing white@2x rgb.png" width="128" height="128" xlink:href="data:image/png;base64,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"/>
