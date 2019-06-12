@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/advertising-studio/main/cnx1@2x.png") url("/magick-flows/advertising-studio/main/cnx2@2x.png") url("/magick-flows/advertising-studio/main/cnx3@2x.png") url("/magick-flows/advertising-studio/main/cnx4@2x.png") url("/magick-flows/advertising-studio/assets/all__viewport-size.png");
+  content: url("/magick-flows/advertising-studio/main/cnx11@2x.png") url("/magick-flows/advertising-studio/main/cnx22@2x.png") url("/magick-flows/advertising-studio/main/cnx33@2x.png") url("/magick-flows/advertising-studio/main/cnx44@2x.png") url("/magick-flows/advertising-studio/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
