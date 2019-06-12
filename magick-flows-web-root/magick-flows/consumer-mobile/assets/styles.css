@@ -417,7 +417,10 @@ html {
 }
 
 .container {
-  background: url(/images/home-background.jpg) no-repeat top left;
+  background-image: linear-gradient(to bottom, #504f4d00, #000000);
+  background-repeat: repeat-x;
+  background-color: #504f4d;
+  background-attachment: fixed;
   background-size: 100% 100%;
   height: 720px;
   left: 0;
@@ -428,13 +431,13 @@ html {
 }
 
 body.magick-flow {
-  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none;
   overflow: hidden;
   width: 100vw;
 }
 
 div#content-wrapper {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61);
   border-radius: 0.25rem;
   position: relative;
   left: auto;
