@@ -1,6 +1,11 @@
 <style>
 #body-contents-here svg{
 	width: 100%;
+	margin-left: 7px;
+}
+
+#Lottie-Garner {
+	cursor: pointer;
 }
 </style>
 <div id="body-contents-here"><%- include('images/slices/segments/body-contents.svg') %></div>
@@ -13,4 +18,6 @@
 	};
 
 	window.setTimeout(animateBodyContents, 200);
+
+	document.querySelector('#Lottie-Garner').addEventListener('click', () => { navigatePage('/segments/families'); })
 </script>

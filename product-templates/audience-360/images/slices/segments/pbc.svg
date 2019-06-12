@@ -42,7 +42,7 @@
                     </g>
                     <g id="Group-6" transform="translate(92.529000, 4.659000)" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="9" font-weight="normal">
                         <text class="moveThisText" id="text65">
-                            <tspan data-top="65" x="118.261" y="41.25">0%</tspan>
+                            <tspan data-top="2" x="0" y="41.25">0%</tspan>
                         </text>
                         <text class="moveThisText" id="text7">
                             <tspan data-top="7" x="11" y="101.25">0%</tspan>
@@ -59,7 +59,7 @@
                     </g>
                     <g id="Group-5" transform="translate(87.500000, 0.750000)" fill="#00A1E0">
                         <polygon class="growThisBar" id="Bar" points="0.25 0 228.75 0 228.75 24 0.25 24"></polygon>
-                        <polygon class="growThisBar" id="Bar_2" points="0.25 30 119.25 30 119.25 54 0.25 54"></polygon>
+                        <polygon class="growThisBar" id="Bar_2" points="0.25 30 2.5 30 2.5 54 0.25 54"></polygon>
                         <polygon class="growThisBar" id="Bar_3" points="0.25 60 61.25 60 61.25 84 0.25 84"></polygon>
                         <polygon class="growThisBar" id="Bar_4" points="0 90 13 90 13 114 0 114"></polygon>
                         <polygon class="growThisBar" id="Bar-Copy" points="0 120.25 2.5 120.25 2.5 144.25 0 144.25"></polygon>

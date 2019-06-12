@@ -15,7 +15,7 @@
 
 	let triggeredConsentAcrossChannelsGraphAnimation = false;
 	const animateConsentAcrossChannelsGraph = () => {
-		if (window.scrollY > 330 && !triggeredConsentAcrossChannelsGraphAnimation) {
+		if (window.scrollY > 300 && !triggeredConsentAcrossChannelsGraphAnimation) {
 			triggeredConsentAcrossChannelsGraphAnimation = true;
 
 			document.querySelector('#consent-across-channels-here').innerHTML = addConsentAcrossChannelsSVG();

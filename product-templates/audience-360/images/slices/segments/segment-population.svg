@@ -88,8 +88,8 @@
                 <text id="8:30-AM-UTC" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
                     <tspan x="81.0605" y="236.31">8:30 AM UTC</tspan>
                 </text>
-                <text id="7,095" fill="#17324D" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="40" font-weight="bold">
-                    <tspan x="39.625" y="99.989">7,095</tspan>
+                <text id="7,095" fill="#17324D" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="35" font-weight="bold">
+                    <tspan x="10" y="99.989">150,095</tspan>
                 </text>
                 <text id="Last-30-days,-aggregated-by-week" fill="#080707" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
                     <tspan x="185" y="57.563">Last 30 days, aggregated by week</tspan>

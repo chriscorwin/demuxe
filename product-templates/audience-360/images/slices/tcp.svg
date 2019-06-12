@@ -39,10 +39,10 @@
 </g>
 <path id="Oval" opacity="0.5" d="M75.5 137C101.181 137 122 116.181 122 90.5C122 64.8188 101.181 44 75.5 44C49.8188 44 29 64.8188 29 90.5C29 116.181 49.8188 137 75.5 137Z" stroke="#DDDBDA" stroke-width="10"/>
 <path id="Oval-2" d="M75.5 44C49.8188 44 29 64.8188 29 90.5C29 116.181 49.8188 137 75.5 137C101.181 137 122 116.181 122 90.5" stroke="#3296ED" stroke-width="10" stroke-linecap="round" stroke-dasharray="219"/>
-<text id="75%" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" letter-spacing="0px"><tspan x="183" y="141.818">57.8% of 2.7M</tspan></text>
+<text id="75%" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="18" letter-spacing="0px"><tspan x="183" y="141.818">24.8% of 2.7M</tspan></text>
 <g id="Group 33.1">
 <text id="TOTAL PEOPLE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" font-weight="bold" letter-spacing="0px"><tspan x="182" y="53.712">No. of people with this </tspan><tspan x="182" y="70.712">profile in your audience</tspan></text>
-<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="181.301" y="110.785" id="numberAudience">0M</tspan></text>
+<text id="82K" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="181.301" y="110.785" id="numberAudience">0K</tspan></text>
 </g>
 </g>
 </svg>

@@ -9,11 +9,9 @@
 		"urlSlugs": [],
 		"urlSlugsMapToFlowDirectories": {}
 	},
-	"defaultUrl": "magick-flows-dashboard",
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
-	"herokupipeline": "https://dashboard.heroku.com/pipelines/97d863d0-ea96-4a69-97dc-b6909895a3b6",
 	"production": {
 		"host": "https://cnx19-audience-360-pacers.herokuapp.com/"
 	},
