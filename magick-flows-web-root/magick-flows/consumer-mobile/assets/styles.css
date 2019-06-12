@@ -2,7 +2,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/consumer-mobile/main/0000___ID=home-page___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-”somewhere”-to-get-started.png") url("/magick-flows/consumer-mobile/main/1000___ID=ticketmaster-app___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-dot-dot-dot-somewhere-comma-I-guess-question-mark.png") url("/magick-flows/consumer-mobile/main/1010___ID=ticketmaster-app___DATA=unset___NOTES=Click-the-first-row__Sec-16-Row-4.png") url("/magick-flows/consumer-mobile/main/1020___ID=ticketmaster-app___DATA=unset___NOTES=Click-the-“Next”-button__Green__At-the-bottom.png") url("/magick-flows/consumer-mobile/main/1030___ID=ticketmaster-app___DATA=unset___NOTES=Click-the-“Add-to-Apple-Wallet”-button.png") url("/magick-flows/consumer-mobile/main/2000___ID=email-inbox___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-the-first-email__The-subject-is-“Indiana-Fever”.png") url("/magick-flows/consumer-mobile/main/2010___ID=email-details___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never___NOTES=Click-the-“Download-Now”-button__Yellow__At-the-bottom.png") url("/magick-flows/consumer-mobile/main/4000___ID=apple-wallet-1___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-the-“Add-to-Apple-Wallet”-button.png") url("/magick-flows/consumer-mobile/main/4010___ID=apple-wallet-2___DATA=show-ios-notification___NOTES=Click-the-notification.png") url("/magick-flows/consumer-mobile/main/5000___ID=map-to-seats___DATA=unset___NOTES=Click-on-your-seat.png") url("/magick-flows/consumer-mobile/main/6000___ID=phone-locked-1___DATA=unset___NOTES=Click-on-the-notification-to-dismiss.png") url("/magick-flows/consumer-mobile/main/6010___ID=phone-locked-2___DATA=show-ios-notification___NOTES=Click-on-the-notification-to-dismiss.png") url("/magick-flows/consumer-mobile/main/7000___ID=kats-daughter-can-not-hang-onto-her-things-so-we-tweet-about-it-i-guess___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/consumer-mobile/main/7010___ID=the-fever-reply-about-the-hat-thank-goodness___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/consumer-mobile/main/7020___ID=kat-is-thankful-enough-to-use-an-exlclaimation-point___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/consumer-mobile/assets/all__phone-background.png") url("/magick-flows/consumer-mobile/assets/all__viewport-size.png") url("/magick-flows/consumer-mobile/assets/apple-wallet-2___ios-notification.png") url("/magick-flows/consumer-mobile/assets/email-details___drawer-from-right.png") url("/magick-flows/consumer-mobile/assets/phone-locked-2___ios-notification.png");
+  content: url("/magick-flows/consumer-mobile/main/1010___ID=ticketmaster-app___DATA=unset___NOTES=Click-the-first-row__Sec-16-Row-4.png") url("/magick-flows/consumer-mobile/main/1020___ID=ticketmaster-app___DATA=unset___NOTES=Click-the-“Next”-button__Green__At-the-bottom.png") url("/magick-flows/consumer-mobile/main/1030___ID=ticketmaster-app___DATA=unset___NOTES=Click-the-“Add-to-Apple-Wallet”-button.png") url("/magick-flows/consumer-mobile/main/2000___ID=email-inbox___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-the-first-email__The-subject-is-“Indiana-Fever”.png") url("/magick-flows/consumer-mobile/main/2010___ID=email-details___DATA=show-darawer-from-right--on-arrival__hide-drawer-from-right--never___NOTES=Click-the-“Download-Now”-button__Yellow__At-the-bottom.png") url("/magick-flows/consumer-mobile/main/4000___ID=apple-wallet-1___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-the-“Add-to-Apple-Wallet”-button.png") url("/magick-flows/consumer-mobile/main/4010___ID=apple-wallet-2___DATA=show-ios-notification___NOTES=Click-the-notification.png") url("/magick-flows/consumer-mobile/main/5000___ID=map-to-seats___DATA=unset___NOTES=Click-on-your-seat.png") url("/magick-flows/consumer-mobile/main/6000___ID=phone-locked-1___DATA=unset___NOTES=Click-on-the-notification-to-dismiss.png") url("/magick-flows/consumer-mobile/main/6010___ID=phone-locked-2___DATA=show-ios-notification___NOTES=Click-on-the-notification-to-dismiss.png") url("/magick-flows/consumer-mobile/main/7000___ID=kats-daughter-can-not-hang-onto-her-things-so-we-tweet-about-it-i-guess___DATA=use-step-transition__step-transition_app-switch___NOTES=End.png") url("/magick-flows/consumer-mobile/main/7010___ID=the-fever-reply-about-the-hat-thank-goodness___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/consumer-mobile/main/7020___ID=kat-is-thankful-enough-to-use-an-exlclaimation-point___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/consumer-mobile/assets/all__phone-background.png") url("/magick-flows/consumer-mobile/assets/all__viewport-size.png") url("/magick-flows/consumer-mobile/assets/apple-wallet-2___ios-notification.png") url("/magick-flows/consumer-mobile/assets/email-details___drawer-from-right.png") url("/magick-flows/consumer-mobile/assets/phone-locked-2___ios-notification.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -166,7 +166,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 10875px;
+  width: 9375px;
 }
 
 .app-switcher-one.shrink {
@@ -646,70 +646,6 @@ body.debug div#drawer-from-top--step-13::before {
   left: 9750px;
 }
 
-.app-switcher-one.be-left-14 {
-  left: -10500px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-14 {
-  left: -10500px;
-}
-
-body.debug div#drawer-from-top--step-14::before {
-  content: "Drawer #14";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-14 {
-  height: 812px;
-  position: absolute;
-  top: 0;
-  width: 375px;
-  left: 10500px;
-}
-
-.app-switcher-one.be-left-15 {
-  left: -11250px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-15 {
-  left: -11250px;
-}
-
-body.debug div#drawer-from-top--step-15::before {
-  content: "Drawer #15";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-15 {
-  height: 812px;
-  position: absolute;
-  top: 0;
-  width: 375px;
-  left: 11250px;
-}
-
 footer.magick-flows-stickey-footer_container {
   position: absolute;
   bottom: 0;
@@ -816,14 +752,24 @@ html {
 }
 
 body.magick-flow {
-  background-color: transparent !important;
+  background-color: #022DA2;
   background-image: none;
   overflow: hidden;
   width: 100vw;
 }
 
+body.magick-flow, html {
+  background-color: #022DA2;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step--0"], html[data-current="magick-flows--step--0"] {
+  background-color: #022DA2;
+  transition: 500ms all;
+}
+
 body.magick-flow[data-current="magick-flows--step-1"], html[data-current="magick-flows--step-1"] {
-  background-color: #056CDF;
+  background-color: #022DA2;
   transition: 500ms all;
 }
 
@@ -833,41 +779,56 @@ body.magick-flow[data-current="magick-flows--step-2"], html[data-current="magick
 }
 
 body.magick-flow[data-current="magick-flows--step-3"], html[data-current="magick-flows--step-3"] {
-  background-color: #022DA2;
+  background-color: #FFFFFF;
   transition: 500ms all;
 }
 
 body.magick-flow[data-current="magick-flows--step-4"], html[data-current="magick-flows--step-4"] {
-  background-color: #022DA2;
+  background-color: #FFFFFF;
+  transition: 500ms background-color;
+}
+
+body.magick-flow[data-current="magick-flows--step-5"], html[data-current="magick-flows--step-5"] {
+  background-color: black;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-6"], html[data-current="magick-flows--step-6"] {
+  background-color: black;
   transition: 500ms all;
 }
 
 body.magick-flow[data-current="magick-flows--step-7"], html[data-current="magick-flows--step-7"] {
-  background-color: black;
-  transition: 500ms all;
-}
-
-body.magick-flow[data-current="magick-flows--step-8"], html[data-current="magick-flows--step-8"] {
-  background-color: black;
-  transition: 500ms all;
-}
-
-body.magick-flow[data-current="magick-flows--step-9"], html[data-current="magick-flows--step-9"] {
   background-color: #e03a3e;
   transition: 500ms all;
 }
 
-body.magick-flow[data-current="magick-flows--step-10"], html[data-current="magick-flows--step-10"] {
+body.magick-flow[data-current="magick-flows--step-8"], html[data-current="magick-flows--step-8"] {
   background-color: #e8b018;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-9"], html[data-current="magick-flows--step-9"] {
+  background-color: #e8b018;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-10"], html[data-current="magick-flows--step-10"] {
+  background-color: #FFFFFF;
   transition: 500ms all;
 }
 
 body.magick-flow[data-current="magick-flows--step-11"], html[data-current="magick-flows--step-11"] {
-  background-color: #e8b018;
+  background-color: #FFFFFF;
   transition: 500ms all;
 }
 
-#drawer-from-right--step-6 {
+body.magick-flow[data-current="magick-flows--step-12"], html[data-current="magick-flows--step-12"] {
+  background-color: #FFFFFF;
+  transition: 500ms all;
+}
+
+#drawer-from-right--step-4 {
   box-shadow: 2px 0px 7px black;
   overflow: overlay;
 }

@@ -64,7 +64,7 @@ html {
 }
 
 body.magick-flow {
-  background-color: transparent !important;
+  background-color: #022DA2;
   // background-color: white;
   // background-image: url('/magick-flows/consumer-mobile/assets/all__phone-background.png');
   background-image: none;
@@ -75,47 +75,75 @@ body.magick-flow {
 
 
 
+body.magick-flow, html {
+  background-color: #022DA2;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step--0"], html[data-current="magick-flows--step--0"] {
+  background-color: #022DA2;
+  transition: 500ms all;
+}
 body.magick-flow[data-current="magick-flows--step-1"], html[data-current="magick-flows--step-1"] {
-  background-color: #056CDF;
+  background-color: #022DA2;
   transition: 500ms all;
 }
 body.magick-flow[data-current="magick-flows--step-2"], html[data-current="magick-flows--step-2"] {
   background-color: #022DA2;
   transition: 500ms all;
 }
+
+
 body.magick-flow[data-current="magick-flows--step-3"], html[data-current="magick-flows--step-3"] {
-  background-color: #022DA2;
+  background-color: #FFFFFF;
   transition: 500ms all;
 }
 body.magick-flow[data-current="magick-flows--step-4"], html[data-current="magick-flows--step-4"] {
-  background-color: #022DA2;
-  transition: 500ms all;
+  background-color: #FFFFFF;
+  transition: 500ms background-color;
 }
-body.magick-flow[data-current="magick-flows--step-7"], html[data-current="magick-flows--step-7"] {
+
+
+body.magick-flow[data-current="magick-flows--step-5"], html[data-current="magick-flows--step-5"] {
   background-color: black;
   transition: 500ms all;
 }
-body.magick-flow[data-current="magick-flows--step-8"], html[data-current="magick-flows--step-8"] {
+body.magick-flow[data-current="magick-flows--step-6"], html[data-current="magick-flows--step-6"] {
   background-color: black;
   transition: 500ms all;
 }
 
-body.magick-flow[data-current="magick-flows--step-9"], html[data-current="magick-flows--step-9"] {
+body.magick-flow[data-current="magick-flows--step-7"], html[data-current="magick-flows--step-7"] {
   background-color: #e03a3e;
   transition: 500ms all;
 }
 
+body.magick-flow[data-current="magick-flows--step-8"], html[data-current="magick-flows--step-8"] {
+  background-color: #e8b018;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-9"], html[data-current="magick-flows--step-9"] {
+  background-color: #e8b018;
+  transition: 500ms all;
+}
+
 body.magick-flow[data-current="magick-flows--step-10"], html[data-current="magick-flows--step-10"] {
-  background-color: #e8b018;
+  background-color: #FFFFFF;
   transition: 500ms all;
 }
-
 body.magick-flow[data-current="magick-flows--step-11"], html[data-current="magick-flows--step-11"] {
-  background-color: #e8b018;
+  background-color: #FFFFFF;
+  transition: 500ms all;
+}
+body.magick-flow[data-current="magick-flows--step-12"], html[data-current="magick-flows--step-12"] {
+  background-color: #FFFFFF;
   transition: 500ms all;
 }
 
-#drawer-from-right--step-6 {
+
+
+#drawer-from-right--step-4 {
   box-shadow: 2px 0px 7px rgb(0, 0, 0);
   overflow: overlay;
 }
