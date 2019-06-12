@@ -95,21 +95,21 @@
 <g id="Group 32">
 <g id="Group 30">
 <text id="CONVERSION RATE Copy" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="1007.47" y="194.212">AVG. ORDER VALUE</tspan></text>
-<text id="78.5% copy" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="1001.86" y="234.285">$67.48</tspan></text>
+<text id="aov" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="1001.86" y="234.285">$67.48</tspan></text>
 </g>
 <g id="Group 31">
 <text id="AVG. ORDER VALUE" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="661" y="194.212">TOTAL ORDER VALUE</tspan></text>
-<text id="39" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="495" y="234.285">$134,221,892.00</tspan></text>
+<text id="tov" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px" text-anchor="end"><tspan x="780" y="234.285"></tspan></text>
 </g>
 </g>
 <g id="Group 33">
 <g id="Group 30.1">
 <text id="CONVERSION RATE Copy_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="925.848" y="289.212">CUSTOMER SATISFACTION SCORE</tspan></text>
-<text id="78.5% copy_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="1001.89" y="329.285">71.7%</tspan></text>
+<text id="css" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="1001.89" y="329.285">71.7%</tspan></text>
 </g>
 <g id="Group 31.1">
 <text id="AVG. ORDER VALUE_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="648" y="289.212">TOTAL SUPPORT CASES</tspan></text>
-<text id="39_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px"><tspan x="642.256" y="329.285">127,348</tspan></text>
+<text id="tsc" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" letter-spacing="0px" text-anchor="end"><tspan x="780" y="329.285">127,348</tspan></text>
 </g>
 </g>
 <g id="progress diagram">

@@ -36,3 +36,54 @@
 <div id="import-in-progress-wrapper">
 	<%- include('images/slices/import/import-in-progress.svg') %>
 </div>
+
+<script type="text/javascript">
+	const maxValues = {
+		tov: 134221892,
+		tcs: 127348,
+		aov: 67.48,
+		css: 71.7
+	}
+
+	const numbers = [
+		{ elm: document.querySelector('#tov tspan'), max: 134221892, var: 100000, cur: 0, pre: '$', fixed: 2, fluxuate: false },
+		{ elm: document.querySelector('#tsc tspan'), max: 127348, var: 1000, cur: 0, fixed: 0, fluxuate: false },
+		{ elm: document.querySelector('#aov tspan'), max: 67.48, var: 1, cur: 40, pre: '$', fixed: 2, fluxuate: true },
+		{ elm: document.querySelector('#css tspan'), max: 71.7, var: 1, cur: 50, post: '%', fixed: 1, fluxuate: true }
+	]
+
+	const startTime = new Date();
+
+	const increase = () => {
+		const now = new Date();
+
+		numbers.forEach(number => {
+			if (now - startTime < 9000) {
+				number.cur += (number.cur < number.var * 10) ? number.cur + 1 * number.cur + 1 : (Math.random() < 0.5) ? Math.random() * number.var : (Math.random() < 0.3 && number.fluxuate) ? -number.var : 0;
+			} else if (now - startTime < 11000) {
+				if (number.cur <= number.max + (number.var * 10)) {
+					number.cur += number.var * Math.random();
+				} else {
+					number.cur -= number.var * 3;
+				}
+			} else {
+				if (number.cur < number.max) {
+					number.cur += ((number.max - number.cur)/10) + (number.var * 10);
+				} else {
+					number.cur = number.max;
+				}
+			}
+
+			const formattedNumber = number.cur.toLocaleString('en-US', {minimumFractionDigits: number.fixed, maximumFractionDigits: number.fixed});
+			number.elm.textContent = `${number.pre || ''}${formattedNumber}${number.post || ''}`;
+		});
+
+
+		if (now - startTime < 18000) {
+			window.setTimeout(increase, 100);
+		}
+
+	}
+
+	increase();
+</script>
