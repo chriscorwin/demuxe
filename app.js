@@ -25,7 +25,9 @@ let scssDebug = false;
 console.debug = function() {
 	if (process.env.DEBUG === "true") {
 		// console.debug = console.log;
-		scssDebug = true;
+		// LIKE A COOKIE SASS DEBUG IS A SOMETIMES TREAT
+		// scssDebug = true;
+		scssDebug = false;
 		console.log.apply(this, arguments);
 	} else {
 		return;
