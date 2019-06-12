@@ -1,6 +1,5 @@
 <svg width="1195" height="693" viewBox="0 0 1195 693" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="import-in-progress" clip-path="url(#clip0)">
-<rect width="1195" height="693" fill="#FF6D6D"/>
 <g id="Modal">
 <g id="Modal - Info w Video">
 <rect id="body bg" width="1195" height="674" rx="4" fill="white"/>
@@ -46,15 +45,15 @@
 </g>
 <path id="Path 2_6" d="M770 436.5V599.5" stroke="#DDDBDA"/>
 </g>
-<path id="Bar" d="M536 439H780V457H536V439Z" fill="#26ABA4"/>
+<path class="bar" id="Bar" d="M536 439H780V457H536V439Z" fill="#26ABA4"/>
 <text id="Account A" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="451.602">.com</tspan></text>
-<path id="Bar_2" d="M536 473H780V491H536V473Z" fill="#26ABA4"/>
+<path class="bar" id="Bar_2" d="M536 473H780V491H536V473Z" fill="#26ABA4"/>
 <text id="Account B" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="487.063">.org</tspan></text>
-<path id="Bar_3" d="M536 508H742V526H536V508Z" fill="#26ABA4"/>
+<path class="bar" id="Bar_3" d="M536 508H742V526H536V508Z" fill="#26ABA4"/>
 <text id="Account C" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="521.063">.uk</tspan></text>
-<path id="Bar_4" d="M536 541H710V559H536V541Z" fill="#26ABA4"/>
+<path class="bar" id="Bar_4" d="M536 541H710V559H536V541Z" fill="#26ABA4"/>
 <text id="Account D" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="555.063">.edu</tspan></text>
-<path id="Bar_5" d="M536 575H671V593H536V575Z" fill="#26ABA4"/>
+<path class="bar" id="Bar_5" d="M536 575H671V593H536V575Z" fill="#26ABA4"/>
 <text id="Account E" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="497" y="589.063">.ca</tspan></text>
 </g>
 <g id="Group_2">
@@ -82,15 +81,15 @@
 </g>
 <path id="Path 2_12" d="M1109 436.5V599.5" stroke="#DDDBDA"/>
 </g>
-<path id="Bar_6" d="M875 439H1001V457H875V439Z" fill="#3296ED"/>
+<path class="bar2" id="Bar_6" d="M875 439H1001V457H875V439Z" fill="#3296ED"/>
 <text id="Account A_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="451.602">1</tspan></text>
-<path id="Bar_7" d="M875 473H1110V491H875V473Z" fill="#3296ED"/>
+<path class="bar2" id="Bar_7" d="M875 473H1110V491H875V473Z" fill="#3296ED"/>
 <text id="Account B_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="487.063">2</tspan></text>
-<path id="Bar_8" d="M875 507H968V525H875V507Z" fill="#3296ED"/>
+<path class="bar2" id="Bar_8" d="M875 507H968V525H875V507Z" fill="#3296ED"/>
 <text id="Account C_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="521.063">3</tspan></text>
-<path id="Bar_9" d="M875 541H893V559H875V541Z" fill="#3296ED"/>
+<path class="bar2" id="Bar_9" d="M875 541H893V559H875V541Z" fill="#3296ED"/>
 <text id="Account D_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="555.063">4</tspan></text>
-<path id="Bar_10" d="M875 575H912V593H875V575Z" fill="#3296ED"/>
+<path class="bar2" id="Bar_10" d="M875 575H912V593H875V575Z" fill="#3296ED"/>
 <text id="Account E_2" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" letter-spacing="0px"><tspan x="852" y="589.063">5+</tspan></text>
 </g>
 <g id="Group 32">
@@ -115,7 +114,8 @@
 </g>
 <g id="progress diagram">
 <g id="Group 2.1">
-<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M238.5 547.5C261.696 547.5 280.5 528.696 280.5 505.5C280.5 482.304 261.696 463.5 238.5 463.5C215.304 463.5 196.5 482.304 196.5 505.5C196.5 528.696 215.304 547.5 238.5 547.5ZM238.5 539.532C257.295 539.532 272.532 524.295 272.532 505.5C272.532 486.705 257.295 471.469 238.5 471.469C219.705 471.469 204.468 486.705 204.468 505.5C204.468 524.295 219.705 539.532 238.5 539.532Z" fill="#4BCA81"/>
+
+<circle id="mule2Circle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="238" cy="505" r="37" transform="rotate(-90 238 505)"></circle>
 <path id="Subtract_2" fill-rule="evenodd" clip-rule="evenodd" d="M236.301 471.538C218.531 472.672 204.468 487.444 204.468 505.5C204.468 524.295 219.705 539.532 238.5 539.532C257.295 539.532 272.532 524.295 272.532 505.5C272.532 487.592 258.7 472.915 241.137 471.569L236.591 502.324L236.301 471.538Z" fill="#DDDBDA"/>
 </g>
 <g id="System Logo Circle">
@@ -142,11 +142,11 @@
 <path id="Line 7_3" d="M356.917 451.709L125.09 314.594" stroke="#979797" stroke-linecap="square" stroke-dasharray="1 1"/>
 </g>
 <g id="logos">
-<path id="Subtract_3" fill-rule="evenodd" clip-rule="evenodd" d="M241 288C264.196 288 283 269.196 283 246C283 222.804 264.196 204 241 204C217.804 204 199 222.804 199 246C199 269.196 217.804 288 241 288ZM241 280.032C259.795 280.032 275.032 264.795 275.032 246C275.032 227.205 259.795 211.969 241 211.969C222.205 211.969 206.968 227.205 206.968 246C206.968 264.795 222.205 280.032 241 280.032Z" fill="#4BCA81"/>
-<path id="Subtract_4" fill-rule="evenodd" clip-rule="evenodd" d="M358 357C381.196 357 400 338.196 400 315C400 291.804 381.196 273 358 273C334.804 273 316 291.804 316 315C316 338.196 334.804 357 358 357ZM358 349.032C376.795 349.032 392.032 333.795 392.032 315C392.032 296.205 376.795 280.969 358 280.969C339.205 280.969 323.968 296.205 323.968 315C323.968 333.795 339.205 349.032 358 349.032Z" fill="#4BCA81"/>
-<path id="Subtract_5" fill-rule="evenodd" clip-rule="evenodd" d="M124 492C147.196 492 166 473.196 166 450C166 426.804 147.196 408 124 408C100.804 408 82 426.804 82 450C82 473.196 100.804 492 124 492ZM124 484.032C142.795 484.032 158.032 468.795 158.032 450C158.032 431.205 142.795 415.969 124 415.969C105.205 415.969 89.9684 431.205 89.9684 450C89.9684 468.795 105.205 484.032 124 484.032Z" fill="#4BCA81"/>
-<path id="Subtract_6" fill-rule="evenodd" clip-rule="evenodd" d="M124 356C147.196 356 166 337.196 166 314C166 290.804 147.196 272 124 272C100.804 272 82 290.804 82 314C82 337.196 100.804 356 124 356ZM124 348.032C142.795 348.032 158.032 332.795 158.032 314C158.032 295.205 142.795 279.969 124 279.969C105.205 279.969 89.9684 295.205 89.9684 314C89.9684 332.795 105.205 348.032 124 348.032Z" fill="#4BCA81"/>
-<path id="Subtract_7" fill-rule="evenodd" clip-rule="evenodd" d="M358 490C381.196 490 400 471.196 400 448C400 424.804 381.196 406 358 406C334.804 406 316 424.804 316 448C316 471.196 334.804 490 358 490ZM358 482.032C376.795 482.032 392.032 466.795 392.032 448C392.032 429.205 376.795 413.969 358 413.969C339.205 413.969 323.968 429.205 323.968 448C323.968 466.795 339.205 482.032 358 482.032Z" fill="#4BCA81"/>
+	<circle id="searchCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="241" cy="246" r="37" transform="rotate(-90 241 246)"></circle>
+	<circle id="communityCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="358" cy="315" r="37" transform="rotate(-90 358 315)"></circle>
+	<circle id="chartCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="124" cy="450" r="37" transform="rotate(-90 124 450)"></circle>
+	<circle id="heartCircle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="124" cy="314" r="37" transform="rotate(-90 124 314)"></circle>
+	<circle id="mule1Circle" class="grow-circle" stroke="#4BCA81" stroke-width="10" cx="358" cy="448" r="37" transform="rotate(-90 358 448)"></circle>
 <g id="System Logo Circle_2">
 <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="89" y="279" width="70" height="71">
 <g id="mask 2">

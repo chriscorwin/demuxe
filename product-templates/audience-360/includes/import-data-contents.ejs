@@ -1,1 +1,38 @@
-<%- include('images/slices/import/import-in-progress.svg') %>
+<style>
+	#import-in-progress-wrapper svg{
+		margin-left: 24px;
+		margin-bottom: 200px;
+	}
+
+	.grow-circle {
+		animation: grow-circle 12s linear;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 233;
+		/*animation-play-state: paused;*/
+	}
+
+	@keyframes grow-circle {
+		from {
+			stroke-dashoffset: 233;
+		}
+	}
+
+	.bar {
+		animation: growBar 12s ease-out forwards;
+		transform-origin: 536px center;
+	}
+
+	.bar2 {
+		animation: growBar 12s ease-out forwards;
+		transform-origin: 876px center;
+	}
+
+	@-webkit-keyframes growBar {
+		from { transform: scaleX(0); }
+		to { transform: scaleX(1); }
+	}
+</style>
+
+<div id="import-in-progress-wrapper">
+	<%- include('images/slices/import/import-in-progress.svg') %>
+</div>
