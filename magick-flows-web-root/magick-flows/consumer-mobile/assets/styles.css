@@ -850,14 +850,14 @@ body.magick-flow[data-current="magick-flows--step-7"], html.magick-flow[data-cur
 }
 
 body.magick-flow[data-current="magick-flows--step-8"], html.magick-flow[data-current="magick-flows--step-8"] {
-  background-color: #e8b018;
-  background: #e8b018;
+  background-color: #fefffe;
+  background: #fefffe;
   transition: 500ms all;
 }
 
 body.magick-flow[data-current="magick-flows--step-9"], html.magick-flow[data-current="magick-flows--step-9"] {
-  background-color: #e8b018;
-  background: #e8b018;
+  background-color: #fefffe;
+  background: #fefffe;
   transition: 500ms all;
 }
 
@@ -874,6 +874,12 @@ body.magick-flow[data-current="magick-flows--step-11"], html.magick-flow[data-cu
 }
 
 body.magick-flow[data-current="magick-flows--step-12"], html.magick-flow[data-current="magick-flows--step-12"] {
+  background-color: #FFFFFF;
+  background: #FFFFFF;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-13"], html.magick-flow[data-current="magick-flows--step-13"] {
   background-color: #FFFFFF;
   background: #FFFFFF;
   transition: 500ms all;
