@@ -116,7 +116,7 @@
         document.querySelector('#Create-Segment-hover-target rect').setAttribute('fill', '#FFF');
     });
     document.getElementById('Create-Segment-hover-target').addEventListener('click', function() {
-        navigatePage('/pacers#15');
+        navigatePage('/pacers#13');
     });
 </script>
 </g>
