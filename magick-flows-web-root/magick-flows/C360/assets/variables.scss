@@ -1,4 +1,4 @@
-$numberOfSlides: 34;
+$numberOfSlides: 35;
 $preloadImagesData: url('/magick-flows/C360/main/0000___ID=Dashboard___DATA=is-own-header__own-header-height--90___NOTES=Clck-“Segments”-in-the-global-nav.png')
 		url('/magick-flows/C360/main/0100___ID=Segment-Details___DATA=is-own-header__own-header-height--90___NOTES=Scroll-down-to-list-of-people__Clck-checkbox-in-first-row.png')
 		url('/magick-flows/C360/main/0110___ID=user-details-1___DATA=is-own-header__own-header-height--90___NOTES=Click-“Data-Streams”-in-global-nav-bar.png')
@@ -9,6 +9,7 @@ $preloadImagesData: url('/magick-flows/C360/main/0000___ID=Dashboard___DATA=is-o
 		url('/magick-flows/C360/main/0224___ID=data-source-content-slides-away___DATA=show-drawer-from-right--instantly__hide-drawer-from-right--on-leave__is-own-header__own-header-height--90___NOTES=Click-“Continue”-button.png')
 		url('/magick-flows/C360/main/0230___ID=data-ext-content-arrives___DATA=show-drawer-from-right--on-arrival__hide-drawer-from-right--never__is-own-header__own-header-height--90___NOTES=Click-checkbox-for-“loyalty_Profile_of_Customers”.png')
 		url('/magick-flows/C360/main/0240___ID=data-ext-chosen___DATA=show-drawer-from-left--instantly__show-drawer-from-right--instantly__hide-drawer-from-left--never__hide-drawer-from-right--on-leave__is-own-header__own-header-height--90___NOTES=Click-“Continue”-button.png')
+		url('/magick-flows/C360/main/0300___ID=data-stream-mapping-0___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click.png')
 		url('/magick-flows/C360/main/0310___ID=data-stream-mapping-1___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal__NOTES=Auto-advances.png')
 		url('/magick-flows/C360/main/0320___ID=mapping-popup___DATA=is-own-header__own-header-height--90___NOTES=Click-“Confirm”-button-in-popup.png')
 		url('/magick-flows/C360/main/0340___ID=mapping-finalized___DATA=is-own-header__own-header-height--90___NOTES=Click-“Deploy”-button.png')
@@ -34,17 +35,15 @@ $preloadImagesData: url('/magick-flows/C360/main/0000___ID=Dashboard___DATA=is-o
 		url('/magick-flows/C360/main/7010___ID=activation-1-1.png')
 		url('/magick-flows/C360/main/8000___ID=journey.png')
 		url('/magick-flows/C360/assets/all__viewport-size.png')
-		url('/magick-flows/C360/assets/choose-data-source-type___drawer-from-right@2x.png')
-		url('/magick-flows/C360/assets/data-ext-chosen___drawer-from-left@2x.png')
-		url('/magick-flows/C360/assets/data-ext-chosen___drawer-from-right@2x.png')
-		url('/magick-flows/C360/assets/data-ext-content-arrives___drawer-from-right@2x.png')
-		url('/magick-flows/C360/assets/data-source-content-slides-away___drawer-from-right@2x.png')
-		url('/magick-flows/C360/assets/data-stream-created___ios-notification@2x.png')
-		url('/magick-flows/C360/assets/data-stream-mapping-0___drawer-from-left@2x.png')
-		url('/magick-flows/C360/assets/data-stream-mapping-0___drawer-from-right@2x.png')
-		url('/magick-flows/C360/assets/data-stream-mapping-1___drawer-from-left@2x.png')
-		url('/magick-flows/C360/assets/new-stream___drawer-from-left@2x.png')
-		url('/magick-flows/C360/assets/new-stream___drawer-from-right@2x.png');
+		url('/magick-flows/C360/assets/choose-data-source-type___drawer-from-right.png')
+		url('/magick-flows/C360/assets/data-ext-chosen___drawer-from-left.png')
+		url('/magick-flows/C360/assets/data-ext-chosen___drawer-from-right.png')
+		url('/magick-flows/C360/assets/data-ext-content-arrives___drawer-from-right.png')
+		url('/magick-flows/C360/assets/data-source-content-slides-away___drawer-from-right.png')
+		url('/magick-flows/C360/assets/data-stream-created___ios-notification.png')
+		url('/magick-flows/C360/assets/data-stream-mapping-1___drawer-from-left.png')
+		url('/magick-flows/C360/assets/new-stream___drawer-from-left.png')
+		url('/magick-flows/C360/assets/new-stream___drawer-from-right.png');
 $heightOfSlideValue: 720;
 $widthOfSlideValue: 1280;
 $widthOfGutterValue: 1280;
