@@ -39,7 +39,8 @@ $widthOfSlide: $widthOfSlideValue + 0px;
 
 
 
-html {
+
+html.magick-flow {
   font-family: "Salesforce Sans", Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
@@ -63,62 +64,50 @@ html {
   width: $widthOfSlide;
 }
 
-body.magick-flow {
-  background-color: transparent !important;
-  // background-color: white;
-  // background-image: url('/magick-flows/consumer-mobile/assets/all__phone-background.png');
+body.magick-flow, html.magick-flow {
   background-image: none;
+  background-image: linear-gradient(to bottom, #504f4d00, #00000066);
+  background-repeat: repeat-x;
+  background-color: #504f4d;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
   overflow: hidden;
   width: 100vw;
+  transition: 500ms all;
+}
+
+
+
+body.magick-flow, html.magick-flow {
+  background-color: #FFFFFF;
+  background: #FFFFFF;
+  // background-image: linear-gradient(to bottom, #FFFFFF, #000000 );
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step--0"], html.magick-flow[data-current="magick-flows--step--0"] {
+  background-color: #FFFFFF;
+  background: #FFFFFF;
+  // background-image: linear-gradient(to bottom, #FFFFFF, #000000 );
+  transition: 500ms all;
 }
 
 
 
 
-// body.magick-flow[data-current="magick-flows--step-1"], html[data-current="magick-flows--step-1"] {
-//   background-color: #056CDF;
-//   transition: 500ms all;
-// }
-// body.magick-flow[data-current="magick-flows--step-2"], html[data-current="magick-flows--step-2"] {
-//   background-color: #022DA2;
-//   transition: 500ms all;
-// }
-// body.magick-flow[data-current="magick-flows--step-3"], html[data-current="magick-flows--step-3"] {
-//   background-color: #022DA2;
-//   transition: 500ms all;
-// }
-// body.magick-flow[data-current="magick-flows--step-4"], html[data-current="magick-flows--step-4"] {
-//   background-color: #022DA2;
-//   transition: 500ms all;
-// }
-// body.magick-flow[data-current="magick-flows--step-7"], html[data-current="magick-flows--step-7"] {
-//   background-color: black;
-//   transition: 500ms all;
-// }
-// body.magick-flow[data-current="magick-flows--step-8"], html[data-current="magick-flows--step-8"] {
-//   background-color: black;
-//   transition: 500ms all;
-// }
+@for $i from 1 through 10 {
 
-// body.magick-flow[data-current="magick-flows--step-9"], html[data-current="magick-flows--step-9"] {
-//   background-color: #e03a3e;
-//   transition: 500ms all;
-// }
 
-// body.magick-flow[data-current="magick-flows--step-10"], html[data-current="magick-flows--step-10"] {
-//   background-color: #e8b018;
-//   transition: 500ms all;
-// }
+  body.magick-flow[data-current="magick-flows--step-#{$i}"], html.magick-flow[data-current="magick-flows--step-#{$i}"] {
+    background-color: #151417;
+    background: #151417;
+    transition: 500ms all;
+  }
 
-// body.magick-flow[data-current="magick-flows--step-11"], html[data-current="magick-flows--step-11"] {
-//   background-color: #e8b018;
-//   transition: 500ms all;
-// }
+}
 
-// #drawer-from-right--step-6 {
-//   box-shadow: 2px 0px 7px rgb(0, 0, 0);
-//   overflow: overlay;
-// }
+
 
 
 div#content-wrapper {

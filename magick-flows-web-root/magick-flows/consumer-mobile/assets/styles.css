@@ -696,7 +696,7 @@ header.magick-flows-stickey-header_container {
   will-change: all;
 }
 
-html {
+html.magick-flow {
   font-family: "Salesforce Sans", Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
@@ -719,11 +719,88 @@ html {
   width: 375px;
 }
 
-body.magick-flow {
-  background-color: transparent !important;
+body.magick-flow, html.magick-flow {
   background-image: none;
+  background-image: linear-gradient(to bottom, #504f4d00, #00000066);
+  background-repeat: repeat-x;
+  background-color: #504f4d;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   overflow: hidden;
   width: 100vw;
+  transition: 500ms all;
+}
+
+body.magick-flow, html.magick-flow {
+  background-color: #FFFFFF;
+  background: #FFFFFF;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step--0"], html.magick-flow[data-current="magick-flows--step--0"] {
+  background-color: #FFFFFF;
+  background: #FFFFFF;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-1"], html.magick-flow[data-current="magick-flows--step-1"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-2"], html.magick-flow[data-current="magick-flows--step-2"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-3"], html.magick-flow[data-current="magick-flows--step-3"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-4"], html.magick-flow[data-current="magick-flows--step-4"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-5"], html.magick-flow[data-current="magick-flows--step-5"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-6"], html.magick-flow[data-current="magick-flows--step-6"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-7"], html.magick-flow[data-current="magick-flows--step-7"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-8"], html.magick-flow[data-current="magick-flows--step-8"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-9"], html.magick-flow[data-current="magick-flows--step-9"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-10"], html.magick-flow[data-current="magick-flows--step-10"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
 }
 
 div#content-wrapper {

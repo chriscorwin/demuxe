@@ -57,7 +57,7 @@ _%>
 	function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
 
 		let ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
-		let toReturn = { width: Math.floor((srcWidth * ratio) || 0), height: Math.floor((srcHeight * ratio) || 0) };
+		let toReturn = { width: Math.ceil((srcWidth * ratio) || 0), height: Math.ceil((srcHeight * ratio) || 0) };
 		return toReturn;
 	 }
 
