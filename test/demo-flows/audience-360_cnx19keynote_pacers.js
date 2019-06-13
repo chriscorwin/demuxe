@@ -18,7 +18,7 @@ module.exports = {
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
 	skipTestCapture: false,
-	skipSlideCapture: false,
+	skipSlideCapture: true,
 	steps: [
 		{
 			goto: `${testhost}pacers`,
@@ -129,7 +129,6 @@ module.exports = {
 			name: '0302.magick-flow'
 		},
 		{
-			click: 'body',
 			waitFor: SHORT,
 			name: '0303.magick-flow'
 		},
