@@ -17,6 +17,7 @@ module.exports = {
 		accountDropdown: '<svg style="width: 24px; height: 24px;" class="slds-icon slds-icon-text-default slds-m-horizontal_medium slds-m-top_xx-small" aria-hidden="true"><use xlink:href="/icons/utility-sprite/svg/symbols.svg#edit"></use></svg>',
 		navItems: [ {
 				label: 'Home',
+				id: 'home-nav-link',
 				href: `/`,
 				isActive: (activePage) => activePage === 'index'
 			},

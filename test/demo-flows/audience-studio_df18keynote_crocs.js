@@ -8,7 +8,7 @@ module.exports = {
 	description: 'audience-studio Crocs Demo Flow',
 	headless: false,
 	debug: true,
-	resultion: { width: 1280, height: 720 },
+	resolution: { width: 1280, height: 720 },
 	imageSnapshotPath: './test/screenshots/audience-studio_df18keynote_crocs/',
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
