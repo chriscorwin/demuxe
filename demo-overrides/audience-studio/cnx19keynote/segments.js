@@ -99,7 +99,7 @@ const baseSegments = [
 
 const einsteinPopover = {
 	nubbin: 'right-top',
-	header: '<strong>Suggested Attributes</strong>',
+	header: '<strong>Einstein Insights</strong>',
 	contents: '<img style="width: 298px; margin: 20px 0 5px 0;" src="/images/popover-contents.svg" />',
 	height: 'medium',
 	id: 'familyProspects',
