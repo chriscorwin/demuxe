@@ -12,6 +12,7 @@
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
+	"defaultUrl": "magick-flows-dashboard",
 	"herokupipeline": "https://dashboard.heroku.com/pipelines/549d7201-691b-46c5-bcfc-7d2c4b0b2c94",
 	"production": {
 		"host": "https://cnx19-mc-nto-c360.herokuapp.com/"
