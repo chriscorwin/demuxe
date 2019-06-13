@@ -3,7 +3,7 @@ const ONEWEEK = 604800000;
 
 const FORMATS = {
 	monthShort: { month: 'short' },
-	monthDayFormat: { month: 'short', day: '2-digit' },
+	monthDay: { month: 'short', day: '2-digit' },
 	monthDayYear: { year: 'numeric', month: 'short', day: '2-digit' },
 	terse: { month: '2-digit', day: '2-digit' },
 	terseWithYear: { month: '2-digit', day: '2-digit', year: 'numeric' }
@@ -59,32 +59,33 @@ const oneMonthAgoTerse = DATES.fourWeeksAgo.toLocaleDateString("en-US", FORMATS.
 const todayTerseWithYear = DATES.now.toLocaleDateString("en-US", FORMATS.terseWithYear);
 const fourMonthsAgoTerseWithYear = DATES.fourMonthsAgo.toLocaleDateString("en-US", FORMATS.terseWithYear);
 
+// All examples below assume today is Mar 02 2019
 module.exports = {
-	today,
-	firstOfMonth,
-	firstOfLastMonth,
-	lastOfLastMonth,
-	oneMonthAgo,
-	twoMonthsAgo,
-	threeMonthsAgo,
-	fourMonthsAgo,
-	oneYearAgo,
-	aboutOneMonthAgo,
-	aboutTwoMonthsAgo,
-	aboutThreeMonthsAgo,
-	aboutFourMonthsAgo,
-	todayTerse,
-	oneWeekAgoTerse,
-	twoWeeksAgoTerse,
-	threeWeeksAgoTerse,
-	oneMonthAgoTerse,
-	todayTerseWithYear,
-	fourMonthsAgoTerseWithYear,
-	thisMonthShort: DATES.now.toLocaleDateString("en-US", FORMATS.monthShort),
-	oneMonthAgoShort: DATES.oneMonthAgo.toLocaleDateString("en-US", FORMATS.monthShort),
-	twoMonthsAgoShort: DATES.twoMonthsAgo.toLocaleDateString("en-US", FORMATS.monthShort),
-	threeMonthsAgoShort: DATES.threeMonthsAgo.toLocaleDateString("en-US", FORMATS.monthShort),
-	fourMonthsAgoShort: DATES.fourMonthsAgo.toLocaleDateString("en-US", FORMATS.monthShort),
+	today, // Mar 02 2019
+	firstOfMonth, // Mar 02
+	firstOfLastMonth, // Feb 02
+	lastOfLastMonth, // Feb 28 2019
+	oneMonthAgo,// Feb 02 2019
+	twoMonthsAgo, // Jan 02 2019
+	threeMonthsAgo, // Dec 02 2019
+	fourMonthsAgo, // Nov 02 2019
+	oneYearAgo, // Mar 02 2018
+	aboutOneMonthAgo, // Feb 05 2019
+	aboutTwoMonthsAgo, // Jan 17 2019
+	aboutThreeMonthsAgo, // Dec 12 2019
+	aboutFourMonthsAgo, // Nov 26 2019
+	todayTerse, // 03/02
+	oneWeekAgoTerse, // 02/23
+	twoWeeksAgoTerse, // 02/16
+	threeWeeksAgoTerse, // 02/09
+	oneMonthAgoTerse, // 02/02
+	todayTerseWithYear, // 03/02/2019
+	fourMonthsAgoTerseWithYear, // 12/02/2018
+	thisMonthShort: DATES.now.toLocaleDateString("en-US", FORMATS.monthShort), // Mar
+	oneMonthAgoShort: DATES.oneMonthAgo.toLocaleDateString("en-US", FORMATS.monthShort), // Feb
+	twoMonthsAgoShort: DATES.twoMonthsAgo.toLocaleDateString("en-US", FORMATS.monthShort), // Jan
+	threeMonthsAgoShort: DATES.threeMonthsAgo.toLocaleDateString("en-US", FORMATS.monthShort), // Dec
+	fourMonthsAgoShort: DATES.fourMonthsAgo.toLocaleDateString("en-US", FORMATS.monthShort), // Nov
 	DATES,
 	FORMATS
 };
