@@ -62,7 +62,7 @@ module.exports = {
 		},
 		{
 			click: 'body',
-			waitFor: 'body',
+			waitFor: '#import-in-progress-wrapper',
 			name: '0100.import-data'
 		},
 		{
