@@ -27,38 +27,38 @@ module.exports = {
 		},
 		{
 			click: 'body',
-			waitFor: SHORT,
+			waitFor: XSHORT,
 			name: '0002.magick-flow'
 		},
 		{
 			click: 'body',
-			waitFor: SHORT,
+			waitFor: XSHORT,
 			name: '0003.magick-flow'
 		},
 		{
 			click: 'body',
-			waitFor: SHORT,
-			name: '0003.magick-flow'
-		},
-		{
-			click: 'body',
-			waitFor: SHORT,
+			waitFor: XSHORT,
 			name: '0004.magick-flow'
 		},
 		{
 			click: 'body',
-			waitFor: SHORT,
+			waitFor: XSHORT,
 			name: '0005.magick-flow'
 		},
 		{
 			click: 'body',
-			waitFor: SHORT,
+			waitFor: XSHORT,
 			name: '0006.magick-flow'
 		},
 		{
 			click: 'body',
-			waitFor: SHORT,
+			waitFor: XSHORT,
 			name: '0007.magick-flow'
+		},
+		{
+			click: 'body',
+			waitFor: XSHORT,
+			name: '0008.magick-flow'
 		},
 		{
 			click: 'body',
@@ -124,12 +124,12 @@ module.exports = {
 			name: '0301.magick-flow'
 		},
 		{
-			click: 'body',
-			waitFor: SHORT,
+			waitFor: XSHORT,
 			name: '0302.magick-flow'
 		},
 		{
-			waitFor: SHORT,
+			click: 'body',
+			waitFor: MEDIUM,
 			name: '0303.magick-flow'
 		},
 		{
