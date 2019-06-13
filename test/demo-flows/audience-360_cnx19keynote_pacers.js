@@ -10,7 +10,7 @@ const XLONG = 6000;
 module.exports = {
 	id: 'audience-360_cnx19keynote_pacers',
 	name: 'audience-360.cnx19keynote.pacers',
-	description: 'audience-360 DF 19 Keynote Demo Flow',
+	description: 'audience-360 DF 19 Pacers Keynote Demo Flow',
 	headless: false,
 	debug: true,
 	resolution: { width: 1280, height: 720 },
@@ -18,7 +18,7 @@ module.exports = {
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
 	skipTestCapture: false,
-	skipSlideCapture: true,
+	skipSlideCapture: false,
 	steps: [
 		{
 			goto: `${testhost}pacers`,
