@@ -67,7 +67,8 @@ module.exports = function() {
         console.warn('no brand theme localization');
     }
 
-    configData.localization = Object.assign({}, defaultEngineConfig, defaultProductTemplateConfig, demoOverrideConfig, brandThemeConfig);
+    const dates = require('../engine/javascripts/dates');
+    configData.localization = Object.assign({}, { dates }, defaultEngineConfig, defaultProductTemplateConfig, demoOverrideConfig, brandThemeConfig);
 
     // view engine setup
     // https://expressjs.com/en/4x/api.html#app.set

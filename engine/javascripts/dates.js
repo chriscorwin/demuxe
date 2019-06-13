@@ -1,9 +1,11 @@
 const FORTNIGHT = 12096e5;
 
 const FORMATS = {
+	monthShort: { month: 'short' },
 	monthDayFormat: { month: 'short', day: 'numeric' },
 	monthDayYear: { year: 'numeric', month: 'short', day: 'numeric' },
-	terse: { month: 'numeric', day: 'numeric' }
+	terse: { month: 'numeric', day: 'numeric' },
+	terseWithYear: { month: 'numeric', day: 'numeric', year: 'numeric' }
 };
 
 const date = new Date();
@@ -49,6 +51,8 @@ const todayTerse = DATES.now.toLocaleDateString("en-US", FORMATS.terse);
 const twoWeeksAgoTerse = DATES.twoWeeksAgo.toLocaleDateString("en-US", FORMATS.terse);
 const oneMonthAgoTerse = DATES.fourWeeksAgo.toLocaleDateString("en-US", FORMATS.terse);
 
+const fourMonthsAgoTerseWithYear = DATES.fourMonthsAgo.toLocaleDateString("en-US", FORMATS.terseWithYear);
+
 module.exports = {
 	today,
 	firstOfMonth,
@@ -66,6 +70,12 @@ module.exports = {
 	todayTerse,
 	twoWeeksAgoTerse,
 	oneMonthAgoTerse,
+	fourMonthsAgoTerseWithYear,
+	thisMonthShort: DATES.now.toLocaleDateString("en-US", FORMATS.monthShort),
+	oneMonthAgoShort: DATES.oneMonthAgo.toLocaleDateString("en-US", FORMATS.monthShort),
+	twoMonthsAgoShort: DATES.twoMonthsAgo.toLocaleDateString("en-US", FORMATS.monthShort),
+	threeMonthsAgoShort: DATES.threeMonthsAgo.toLocaleDateString("en-US", FORMATS.monthShort),
+	fourMonthsAgoShort: DATES.fourMonthsAgo.toLocaleDateString("en-US", FORMATS.monthShort),
 	DATES,
 	FORMATS
 };
