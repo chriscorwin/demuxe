@@ -1,11 +1,12 @@
 const FORTNIGHT = 12096e5;
+const ONEWEEK = 604800000;
 
 const FORMATS = {
 	monthShort: { month: 'short' },
-	monthDayFormat: { month: 'short', day: 'numeric' },
-	monthDayYear: { year: 'numeric', month: 'short', day: 'numeric' },
-	terse: { month: 'numeric', day: 'numeric' },
-	terseWithYear: { month: 'numeric', day: 'numeric', year: 'numeric' }
+	monthDayFormat: { month: 'short', day: '2-digit' },
+	monthDayYear: { year: 'numeric', month: 'short', day: '2-digit' },
+	terse: { month: '2-digit', day: '2-digit' },
+	terseWithYear: { month: '2-digit', day: '2-digit', year: 'numeric' }
 };
 
 const date = new Date();
@@ -14,7 +15,9 @@ const m = date.getMonth();
 const d = date.getDay();
 const DATES = {
 	now: date,
+	oneWeekAgo: new Date(Date.now() - ONEWEEK),
 	twoWeeksAgo: new Date(Date.now() - FORTNIGHT),
+	threeWeeksAgo: new Date(Date.now() - FORTNIGHT - ONEWEEK),
 	fourWeeksAgo: new Date(Date.now() - FORTNIGHT - FORTNIGHT),
 	oneMonthAgo: new Date(y, m - 1, d),
 	twoMonthsAgo: new Date(y, m - 2, d),
@@ -48,9 +51,12 @@ const aboutFourMonthsAgo = DATES.aboutFourMonthsAgo.toLocaleDateString("en-US", 
 
 
 const todayTerse = DATES.now.toLocaleDateString("en-US", FORMATS.terse);
+const oneWeekAgoTerse = DATES.oneWeekAgo.toLocaleDateString("en-US", FORMATS.terse);
 const twoWeeksAgoTerse = DATES.twoWeeksAgo.toLocaleDateString("en-US", FORMATS.terse);
+const threeWeeksAgoTerse = DATES.threeWeeksAgo.toLocaleDateString("en-US", FORMATS.terse);
 const oneMonthAgoTerse = DATES.fourWeeksAgo.toLocaleDateString("en-US", FORMATS.terse);
 
+const todayTerseWithYear = DATES.now.toLocaleDateString("en-US", FORMATS.terseWithYear);
 const fourMonthsAgoTerseWithYear = DATES.fourMonthsAgo.toLocaleDateString("en-US", FORMATS.terseWithYear);
 
 module.exports = {
@@ -68,8 +74,11 @@ module.exports = {
 	aboutThreeMonthsAgo,
 	aboutFourMonthsAgo,
 	todayTerse,
+	oneWeekAgoTerse,
 	twoWeeksAgoTerse,
+	threeWeeksAgoTerse,
 	oneMonthAgoTerse,
+	todayTerseWithYear,
 	fourMonthsAgoTerseWithYear,
 	thisMonthShort: DATES.now.toLocaleDateString("en-US", FORMATS.monthShort),
 	oneMonthAgoShort: DATES.oneMonthAgo.toLocaleDateString("en-US", FORMATS.monthShort),
