@@ -55,7 +55,7 @@ function incrementLocationHashWithTiming ( hashChangeTiming = 0, directionOfNavi
 		clicks++;
 	}
 	if ( clicks >= magickFlowConfig.numberOfSteps ) {
-		clicks = magickFlowConfig.numberOfSteps - 1;
+		clicks = magickFlowConfig.numberOfSteps * -1;
 	}
 	if ( clicks < 0 ) {
 		clicks = 0;
