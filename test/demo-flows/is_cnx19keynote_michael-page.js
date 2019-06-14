@@ -1,4 +1,3 @@
-
 const env = process.env.ENV || 'local';
 const settings = require('../../config/config.js')();
 const testhost = settings[env].host;
