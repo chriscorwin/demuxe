@@ -835,6 +835,54 @@ body.magick-flow[data-current="magick-flows--step-10"], html.magick-flow[data-cu
   transition: 500ms all;
 }
 
+body.magick-flow[data-current="magick-flows--step-11"], html.magick-flow[data-current="magick-flows--step-11"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-12"], html.magick-flow[data-current="magick-flows--step-12"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-13"], html.magick-flow[data-current="magick-flows--step-13"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-14"], html.magick-flow[data-current="magick-flows--step-14"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-15"], html.magick-flow[data-current="magick-flows--step-15"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-16"], html.magick-flow[data-current="magick-flows--step-16"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-17"], html.magick-flow[data-current="magick-flows--step-17"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
+body.magick-flow[data-current="magick-flows--step-18"], html.magick-flow[data-current="magick-flows--step-18"] {
+  background-color: #151417;
+  background: #151417;
+  transition: 500ms all;
+}
+
 div#content-wrapper {
   border-radius: 0.25rem;
   position: relative;
