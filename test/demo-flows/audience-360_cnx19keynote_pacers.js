@@ -18,7 +18,7 @@ module.exports = {
 	imageSnapshotPathProvided: true,
 	mismatchThreshold: 0.001,
 	skipTestCapture: false,
-	skipSlideCapture: false,
+	skipSlideCapture: true,
 	steps: [
 		{
 			goto: `${testhost}pacers`,
