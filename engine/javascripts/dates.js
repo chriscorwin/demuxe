@@ -57,6 +57,10 @@ const threeWeeksAgoTerse = DATES.threeWeeksAgo.toLocaleDateString("en-US", FORMA
 const oneMonthAgoTerse = DATES.fourWeeksAgo.toLocaleDateString("en-US", FORMATS.terse);
 
 const todayTerseWithYear = DATES.now.toLocaleDateString("en-US", FORMATS.terseWithYear);
+const oneWeekAgoTerseWithYear = DATES.oneWeekAgo.toLocaleDateString("en-US", FORMATS.terseWithYear);
+const twoWeeksAgoTerseWithYear = DATES.twoWeeksAgo.toLocaleDateString("en-US", FORMATS.terseWithYear);
+const threeWeeksAgoTerseWithYear = DATES.threeWeeksAgo.toLocaleDateString("en-US", FORMATS.terseWithYear);
+const oneMonthAgoTerseWithYear = DATES.fourWeeksAgo.toLocaleDateString("en-US", FORMATS.terseWithYear);
 const fourMonthsAgoTerseWithYear = DATES.fourMonthsAgo.toLocaleDateString("en-US", FORMATS.terseWithYear);
 
 // All examples below assume today is Mar 02 2019
@@ -80,6 +84,10 @@ module.exports = {
 	threeWeeksAgoTerse, // 02/09
 	oneMonthAgoTerse, // 02/02
 	todayTerseWithYear, // 03/02/2019
+	oneWeekAgoTerseWithYear, // 02/23/2019
+	twoWeeksAgoTerseWithYear, // 02/16/2019
+	threeWeeksAgoTerseWithYear, // 02/09/2019
+	oneMonthAgoTerseWithYear, // 02/02/2019
 	fourMonthsAgoTerseWithYear, // 12/02/2018
 	thisMonthShort: DATES.now.toLocaleDateString("en-US", FORMATS.monthShort), // Mar
 	oneMonthAgoShort: DATES.oneMonthAgo.toLocaleDateString("en-US", FORMATS.monthShort), // Feb
