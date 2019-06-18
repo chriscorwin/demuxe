@@ -96,7 +96,7 @@ body.magick-flow[data-current="magick-flows--step--0"], html.magick-flow[data-cu
 
 
 
-@for $i from 1 through 18 {
+@for $i from 1 through 32 {
 
 
   body.magick-flow[data-current="magick-flows--step-#{$i}"], html.magick-flow[data-current="magick-flows--step-#{$i}"] {
