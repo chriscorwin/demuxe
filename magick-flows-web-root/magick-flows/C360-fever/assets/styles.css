@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/C360/main/0000___ID=c360-data-sources___DATA=unset.png") url("/magick-flows/C360/assets/all__viewport-size.png");
+  content: url("/magick-flows/C360-fever/main/0000___ID=c360-data-sources___DATA=unset.png") url("/magick-flows/C360-fever/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;

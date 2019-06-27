@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/interaction-studio/main/0000___ID=Michael-Page-Welcome___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio/main/0100___ID=Lifecycle-Stages___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio/main/0200___ID=channels___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio/main/0300___ID=Michael-Page-Monitor-with-Audience___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio/assets/all__viewport-size.png");
+  content: url("/magick-flows/interaction-studio-mp/main/0000___ID=Michael-Page-Welcome___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio-mp/main/0100___ID=Lifecycle-Stages___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio-mp/main/0200___ID=channels___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio-mp/main/0300___ID=Michael-Page-Monitor-with-Audience___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio-mp/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
