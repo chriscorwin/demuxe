@@ -1,7 +1,8 @@
-<%
-
-	const hello = `Hello ${locals.localization.NAME}`;
-
+<%-
+	include(
+		'wrapper.ejs',
+		{
+			pageContents: 'includes/index-contents.ejs'
+		}
+	)
 %>
-
-<%= hello %>
