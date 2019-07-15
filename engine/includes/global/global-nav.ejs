@@ -218,6 +218,37 @@ const makeNavItem = ( navItem ) => {
 const makeNavLinks = ( navItems ) => navItems.reduce( ( items, item ) => items + makeNavItem( item ), '' );
 const makePrimaryNav = ( data ) => {
 
+	const defaultAccountDropdown = `<a href="javascript:void(0);" class="slds-context-bar__label-action" title="${data.account_name}">
+		<span class="slds-truncate" title="${data.account_name}">${data.account_name}</span>
+	</a>
+	<div class="slds-context-bar__icon-action slds-p-left_none">
+		<button class="slds-button slds-button_icon slds-button_icon slds-context-bar__button" aria-haspopup="true" title="Open menu item submenu">
+			<svg class="slds-m-left_small" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+				<path fill="#4F6A92" d="M9.15909091,1.01136364 L4.84090909,5.375 C4.70454545,5.46590909 4.52272727,5.46590909 4.38636364,5.375 L0.0681818182,1.01136364 C-0.0227272727,0.875 -0.0227272727,0.693181818 0.0681818182,0.556818182 L0.522727273,0.102272727 C0.659090909,-0.0340909091 0.886363636,-0.0340909091 1.02272727,0.102272727 L4.38636364,3.51136364 C4.52272727,3.64772727 4.70454545,3.64772727 4.84090909,3.51136364 L8.20454545,0.102272727 C8.34090909,0.0113636364 8.56818182,0.0113636364 8.70454545,0.102272727 L9.15909091,0.556818182 C9.25,0.693181818 9.25,0.875 9.15909091,1.01136364 Z" id="Shape"></path>
+			</svg>
+			<span class="slds-assistive-text">Open menu item submenu</span>
+		</button>
+	</div>
+	<div class="slds-dropdown slds-dropdown_right" style="width: auto; min-width: 10rem;">
+		<ul class="slds-dropdown__list" role="menu">
+			<li class="slds-dropdown__item" role="presentation">
+
+				<div class="slds-form-element slds-m-around--small">
+					<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+						<svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#search" />
+						</svg>
+						<input type="text" id="text-input-id-1" class="slds-input" placeholder="Find Instance" />
+					</div>
+				</div>
+
+			</li>
+			${makeAccountDropdownLinks(data.navData.accountNavItems)}
+		</ul>
+	</div>`;
+
+	const accountDropdown = data.navData.accountDropdown || defaultAccountDropdown;
+
 	return ( `
 		<div class="slds-context-bar__primary">
 			<div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
@@ -252,34 +283,7 @@ const makePrimaryNav = ( data ) => {
 				}
 			</style>
 			<li class="slds-context-bar__item slds-context-bar__item_tab slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover" style="width: auto; max-width: 20rem;">
-				<a href="javascript:void(0);" class="slds-context-bar__label-action" title="${data.account_name}">
-					<span class="slds-truncate" title="${data.account_name}">${data.account_name}</span>
-				</a>
-				<div class="slds-context-bar__icon-action slds-p-left_none">
-					<button class="slds-button slds-button_icon slds-button_icon slds-context-bar__button" aria-haspopup="true" title="Open menu item submenu">
-						<svg class="slds-m-left_small" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-							<path fill="#4F6A92" d="M9.15909091,1.01136364 L4.84090909,5.375 C4.70454545,5.46590909 4.52272727,5.46590909 4.38636364,5.375 L0.0681818182,1.01136364 C-0.0227272727,0.875 -0.0227272727,0.693181818 0.0681818182,0.556818182 L0.522727273,0.102272727 C0.659090909,-0.0340909091 0.886363636,-0.0340909091 1.02272727,0.102272727 L4.38636364,3.51136364 C4.52272727,3.64772727 4.70454545,3.64772727 4.84090909,3.51136364 L8.20454545,0.102272727 C8.34090909,0.0113636364 8.56818182,0.0113636364 8.70454545,0.102272727 L9.15909091,0.556818182 C9.25,0.693181818 9.25,0.875 9.15909091,1.01136364 Z" id="Shape"></path>
-						</svg>
-						<span class="slds-assistive-text">Open menu item submenu</span>
-					</button>
-				</div>
-				<div class="slds-dropdown slds-dropdown_right" style="width: auto; min-width: 10rem;">
-					<ul class="slds-dropdown__list" role="menu">
-						<li class="slds-dropdown__item" role="presentation">
-
-							<div class="slds-form-element slds-m-around--small">
-								<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
-									<svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#search" />
-									</svg>
-									<input type="text" id="text-input-id-1" class="slds-input" placeholder="Find Instance" />
-								</div>
-							</div>
-
-						</li>
-						${makeAccountDropdownLinks(data.navData.accountNavItems)}
-					</ul>
-				</div>
+				${accountDropdown}
 			</li>
 		</ul>
 	` )

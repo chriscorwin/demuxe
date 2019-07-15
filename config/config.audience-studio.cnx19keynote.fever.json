@@ -1,0 +1,35 @@
+{
+	"demoName": "Audience Studio Fever CNX 19 Keynote",
+	"brandTheme": "fever",
+	"productTemplate": "audience-studio",
+	"demoVenue": "cnx19keynote",
+	"demoVersion": "0.1",
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
+	"env": "production",
+	"production": {
+		"host": "https://cnx19-as-fever.herokuapp.com/"
+	},
+	"qa": {
+		"host": "https://cnx19-as-fever-qa.herokuapp.com/"
+	},
+	"dev": {
+		"host": "https://cnx19-as-fever-dev.herokuapp.com/"
+	},
+	"local": {
+		"host": "http://localhost:3000/"
+	},
+	"tests": {
+		"headless": true,
+		"imageSnapshotPath": "./test/screenshots/",
+		"mismatchThreshold": 0.01,
+		"timeout": 30000
+	},
+	"gapixelid": "",
+	"presentationid": "1RIZd-KT-xBR0vPBViZgnGQhRhElISJoQCRHv9yu8e78"
+}

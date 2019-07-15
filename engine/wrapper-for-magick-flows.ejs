@@ -17,13 +17,14 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 		<% } %>
 
 		<link rel="stylesheet" href="/styles/confetti.css">
+
 	</head>
 
 	<body class="magick-flow">
 
 		<% if (locals.siteSection) { %>
 		<div id="content-wrapper"  class="container magick-flow_content-wrapper   ">
-			<div id="content" class="app-switcher-one magick-flow_content ">
+			<div id="content" class="app-switcher-one magick-flow_content be-left-<%= locals.sanitizedQueryParams['step']%> was-left-<%= locals.sanitizedQueryParams['step']%>">
 				<%- include(`includes/${locals.siteSection}/${locals.siteSection}-contents`) _%>
 			</div>
 		</div>
@@ -98,6 +99,14 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 				if (oldHashHandlers) oldHashHandlers.out();
 				if (newHashHandlers) newHashHandlers.in();
 			}, false)
+
+		</script>
+		<script type="text/javascript">
+			var initialUrlHash = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+
+			var container = document.querySelector(`.app-switcher-one`);
+
+			container.classList.add(`be-left-${initialUrlHash}`);
 
 		</script>
 		<script src="/javascripts/confetti.js"></script>

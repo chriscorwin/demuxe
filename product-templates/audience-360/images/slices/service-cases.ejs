@@ -1,0 +1,18 @@
+<div id="service-cases-here" class="slds-m-bottom_xxx-small"><%- include('images/slices/service-cases.svg') %></div>
+<script>
+	let triggeredServiceCasesGraphAnimation = false;
+	const animateServiceCasesGraph = () => {
+		if (window.scrollY > 800 && !triggeredServiceCasesGraphAnimation) {
+			triggeredServiceCasesGraphAnimation = true;
+
+			document.querySelectorAll('.fill-in, .draw-in').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+	};
+
+	document.addEventListener("scroll", animateServiceCasesGraph);
+
+	document.querySelector('#Apr tspan').textContent = locals.localization.dates.oneMonthAgoShort;
+	document.querySelector('#Mar tspan').textContent = locals.localization.dates.twoMonthsAgoShort;
+	document.querySelector('#Feb tspan').textContent = locals.localization.dates.threeMonthsAgoShort;
+	document.querySelector('#Jan tspan').textContent = locals.localization.dates.fourMonthsAgoShort;
+</script>

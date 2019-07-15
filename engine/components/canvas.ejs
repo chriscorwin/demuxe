@@ -1,0 +1,87 @@
+<%/*
+
+	This file, when included, will create a builder canvas in-place.
+
+	include('components/canvas', data)
+
+	Options for data:
+
+	rows: [
+		[
+			{
+				connector: { // optional. Connector arrows between objects. 'connector' must at least be an empty object to show.
+					direction: 'right', // optional. Defaults to 'right'.
+					label: 'Clicked' // optional. Defaults to nothing. Creates a little pill-box label on the connector arrow.
+				},
+				isConnection: true,
+				isJoin: true,
+				isUnconfigured: false
+
+*/%>
+
+<link rel="stylesheet" href="styles/canvas.css" />
+
+<div class="layout-builder layout-builder_logic">
+	<div class="builder-canvas slds-p-vertical_large slds-p-horizontal_xx-large">
+		<div class="builder-canvas-flow">
+			<% locals.rows && locals.rows.forEach(row => { %>
+				<div class="builder-canvas-row">
+				<% row && row.forEach(element => {
+					const canvasElementClasses = classnames('builder-canvas-element',
+					{
+						'builder-canvas-element-connection': element.isConnection,
+						'builder-canvas-element_isUnconfigured': element.isUnconfigured,
+						'builder-canvas-element_end': element.connector && element.connector.direction && element.connector.direction === 'stop'
+					});
+
+					const connectorClasses = classnames('builder-canvas-element-connector',
+					{
+						'builder-canvas-element-connector-with-join': element.isJoin
+					})
+
+					%>
+					<div class="<%= canvasElementClasses %>">
+						<% if (Object.keys(element).length) { %>
+							<% if (element.connector || element.isJoin) { %>
+							<div class="<%= connectorClasses %>">
+								<% if (element.isJoin) { %>
+								<div class="builder-canvas-element-join-connector spans-<%= element.rowsSpanned ? element.rowsSpanned : 2 %>-rows"></div>
+								<% } else { %>
+								<span>
+									<svg aria-hidden="true" class="slds-icon slds-icon_x-small slds-icon-text-default">
+										<use xlink:href="/icons/utility-sprite/svg/symbols.svg#<%= element.connector.direction || 'right' %>"></use>
+									</svg>
+								</span>
+								<% if (element.connector.label) { %><span class="builder-canvas-element-connector-label"><%= element.connector.label %></span><% } %>
+								<% if (element.isConnection) { %><div class="builder-canvas-element-vertical-connector spans-<%= element.rowsSpanned ? element.rowsSpanned : 2 %>-rows"></div><% } %>
+								<% } %>
+							</div>
+							<% } %>
+							<% if (element.icon || element.name) { %>
+							<div class="builder-canvas-element-node">
+								<% if (element.icon) {
+									if (element.icon.nodeType === 'custom') {
+										const customIconClasses = classnames('builder-element-custom-icon',
+											{ 'builder-element-rotate-custom-icon': element.icon.rotate }
+										);
+										%>
+										<img alt="Wait Until" class="<%= customIconClasses %>" src="<%= element.icon.path %>">
+									<% } else { %>
+										<span>
+											<svg aria-hidden="true" class="builder-element-icon builder-element-<%= element.icon.nodeType %>-icon slds-icon slds-icon_large slds-icon-text-default">
+												<use xlink:href="<%= element.icon.path %>"></use>
+											</svg>
+										</span>
+									<% }
+								} %>
+								<strong class="builder-element-name"><%= element.name %></strong><% if (element.stats) {%><span class="builder-element-stats"><%= element.stats %></span><% } %>
+							</div>
+							<% } %>
+						<% } %>
+					</div>
+				<% }) %>
+				</div>
+			<% }) %>
+		</div>
+	</div>
+</div>

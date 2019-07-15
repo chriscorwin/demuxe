@@ -1,4 +1,4 @@
-segments = require('../../demo-overrides/dmp/df18keynote/segments');
+segments = require('../../demo-overrides/audience-studio/df18keynote/segments');
 
 // Segments is pass by reference, therefore changing it in the `initial` object _also_ changes the
 // reference to it in addHighValue object.

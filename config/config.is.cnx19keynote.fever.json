@@ -1,0 +1,35 @@
+{
+	"demoName": "IS Fever CNX 19 Keynote",
+	"brandTheme": "fever",
+	"productTemplate": "is",
+	"demoVenue": "cnx19keynote",
+	"demoVersion": "0.1",
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
+	"env": "production",
+	"production": {
+		"host": "https://cnx19keynote-is-fever.herokuapp.com/"
+	},
+	"qa": {
+		"host": "https://cnx19keynote-is-fever-qa.herokuapp.com/"
+	},
+	"dev": {
+		"host": "https://cnx19keynote-is-fever-dev.herokuapp.com/"
+	},
+	"local": {
+		"host": "http://localhost:3000/"
+	},
+	"tests": {
+		"headless": true,
+		"imageSnapshotPath": "./test/screenshots/",
+		"mismatchThreshold": 0.01,
+		"timeout": 30000
+	},
+	"gapixelid": "",
+	"presentationid": ""
+}

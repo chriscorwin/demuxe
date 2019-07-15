@@ -1,11 +1,11 @@
 <%_
 const includeDebugInfoStart = `
 ============================================================
-Demuxe: including product-templates/dmp/components/toast.ejs now...
+Demuxe: including product-templates/audience-studio/components/toast.ejs now...
 ------------------------------------------------------------
 `;
 const includeDebugInfoEnd = `
-...end product-templates/dmp/components/toast.ejs
+...end product-templates/audience-studio/components/toast.ejs
 ------------------------------------------------------------
 `;
 console.group(includeDebugInfoStart);
@@ -44,7 +44,7 @@ const toastId = locals.id || locals.theme+'Toast';
 <% if ( locals.triggerImmediately ) { %>
 <script>
 	var toastId = '<%= toastId %>';
-	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the 
+	// Complicated, but necessary: the transitions make it pretty but `slds-hide` removes it from the
 	// flow, which we need to do in order to keep global nav dropdowns working.
 	if (typeof(document.getElementById(toastId)) != 'undefined' && document.getElementById(toastId) != null) {
 		window.setTimeout(() => {

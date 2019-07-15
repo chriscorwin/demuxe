@@ -1,0 +1,105 @@
+<style>
+	.makeFairBckgd {
+		animation: make-fair-bkg .2s linear;
+		fill: #FFB75D;
+	}
+	@keyframes make-fair-bkg {
+	    from {
+	        fill: #C23934;
+	    }
+	}
+
+	.makeGoodBckgd {
+		animation: make-good-bkg .2s linear;
+		fill: #04844B;
+	}
+	@keyframes make-good-bkg {
+	    from {
+	        fill: #FFB75D;
+	    }
+	}
+
+	.makeFair {
+		animation: make-fair .2s ease-out;
+		fill: #3E3E3C;
+		transform: translateX(3px);
+	}
+
+	@keyframes make-fair {
+	    from {
+	        fill: #FFF;
+	    }
+	}
+
+	.makeGood {
+		animation: make-good .2s ease-out;
+		fill: #FFF;
+		transform: translateX(-2px);
+	}
+
+	@keyframes make-good {
+	    from {
+	        fill: #3E3E3C;
+	    }
+	}
+
+	#Rectangle192 {
+		animation: needle-up 2.5s ease-out forwards;
+		transform-origin:  1035px 79px;
+		animation-play-state: paused;
+	}
+
+	@keyframes needle-up {
+		from {
+			transform: rotate(-160deg);
+		}
+
+		to {
+			transform: rotate(20deg);
+		}
+	}
+</style>
+<%- include('images/slices/families/page-header.svg') %>
+<script>
+	let triggeredHeaderGraphAnimation = false;
+	const animateHeaderGraph = () => {
+		triggeredHeaderGraphAnimation = true;
+
+		const satisfactionScore = document.querySelector('#satisfactionScore tspan');
+
+		satisfactionScore.textContent = '0%';
+
+		let satisfactionScoreNumber = .1;
+
+		const increase = () => {
+			if (satisfactionScoreNumber < 98) {
+				satisfactionScoreNumber += .2;
+
+				window.setTimeout(increase, 2);
+			} else {
+				satisfactionScoreNumber = 98;
+			}
+
+			if (satisfactionScoreNumber > 15) {
+				document.querySelector('#FairBckgd').classList.add('makeFairBckgd');
+				document.querySelector('#Fair').classList.add('makeFair');
+				document.querySelector('#Fair tspan').textContent = 'Fair';
+			}
+
+			if (satisfactionScoreNumber > 50) {
+				document.querySelector('#FairBckgd').classList.remove('makeFairBckgd');
+				document.querySelector('#FairBckgd').classList.add('makeGoodBckgd');
+				document.querySelector('#Fair').classList.remove('makeFair');
+				document.querySelector('#Fair').classList.add('makeGood');
+				document.querySelector('#Fair tspan').textContent = 'Good';
+			}
+
+			satisfactionScore.textContent = `${satisfactionScoreNumber.toFixed(1)}%`;
+		}
+
+		increase();
+
+		document.querySelectorAll('#Rectangle192').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+	animateHeaderGraph();
+</script>

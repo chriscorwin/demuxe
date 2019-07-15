@@ -1,0 +1,201 @@
+<!--
+Highcharts must be included on page prior to this running
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
+-->
+<style>
+	.circle {
+		border-radius: 12px;
+		width: 4px;
+		height: 4px;
+		float: left;
+		margin: 2px 8px 0 0;
+		border: 2px solid #fff;
+	}
+
+	.circle.small {
+		width: 2px;
+		height: 2px;
+		margin-top: 3px;
+	}
+</style>
+
+<div
+	id="lookalikes-chart"
+	style="width: <%= locals.width || '510px' %>; height: <%= locals.height || '268px' %>;"
+	onclick="function test() {document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));}; test();"
+></div>
+
+<script type="text/javascript">
+
+<%
+const xStart = 98;
+const yStart = 98;
+const xMultiplier = 7; // Change this number to cause an adjustment to numbers at bottom of graph
+const xEnd = 10001;
+const yEnd = 1;
+let P = -.4;
+let F = 60;
+let G = 0;
+let x = xStart;
+let y = yStart;
+
+let switched = false;
+let defaultLookalikesData = [];
+const numPoints = 26;
+
+for (let i = 0; i < numPoints; i++) {
+	if (!switched && y < 45) {
+		P = -P;
+		switched = true;
+	}
+
+	F = F + P;
+	G = G - P;
+
+	x = x + (F * xMultiplier);
+	y = y - G;
+
+	// x <->, y ^-v, z: radius
+	defaultLookalikesData.push({
+		x: Math.round(x.toFixed(2) * 1),
+		y: Math.round(y.toFixed(2) * 1),
+		z: 77,
+		color: '#7CB5EC'
+	});
+};
+
+const lookalikesData = locals.lookalikesData || defaultLookalikesData;
+%>
+
+const lookalikesData = <%- JSON.stringify(lookalikesData) %>
+
+// Gets options for the Cumulative 1st Party Overview chart
+const getLookalikesOptions = () => {
+	return {
+		legend: {
+			verticalAlign: 'top',
+			enabled: false
+		},
+		title: {
+			text: ''
+		},
+		chart: {
+			type: 'bubble',
+			height: 268,
+			style: {
+				fontFamily: 'Salesforce Sans'
+			},
+			zoomType: 'xy',
+			// https://api.highcharts.com/highcharts/chart.plotBackgroundColor
+			plotBackgroundImage: '/images/lookalike-background.svg',
+			plotBackgroundColor: {
+				linearGradient: [100, 0, 100, 268],
+				stops: [
+					[0, '#5FAEFC'],
+					[0.14, '#5FAEFC'],
+					[0.14, '#78BAFA'],
+					[0.25, '#78BAFA'],
+					[0.25, '#91C8FD'],
+					[0.4, '#91C8FD'],
+					[0.4, '#ABD5FD'],
+					[0.6, '#ABD5FD'],
+					[0.6, '#C2DFFC'],
+					[1, '#C2DFFC']
+				]
+			}
+		},
+		// https://api.highcharts.com/highcharts/xAxis
+		xAxis: {
+			gridLineWidth: 0,
+			tickInterval: 1000,
+			// https://api.highcharts.com/highcharts/xAxis.softMax
+			softMin: 0,
+			softMax: 100,
+			labels: {
+				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+				formatter: function formatter () {
+					return Math.floor(this.value/210) + 'M';
+				}
+			},
+			title: {
+				text: 'Reach'
+			}
+		},
+		// https://api.highcharts.com/highcharts/yAxis
+		yAxis: {
+			tickInterval: 20,
+			min: 0,
+			max: 100,
+			gridLineWidth: 0,
+			title: {
+				text: 'Similarity'
+			},
+			labels: {
+				// Do not replace `function formatter () {` with `() => {}` as that will change the context of `this`
+				formatter: function formatter () {
+					return this.value + '%';
+				}
+			}
+		},
+		// https://api.highcharts.com/highcharts/plotOptions
+		plotOptions: {
+			// https://api.highcharts.com/highcharts/plotOptions.bubble
+			bubble: {
+				marker: {
+					lineWidth: 2,
+					lineColor: '#fff',
+					fillOpacity: 0.9,
+					// https://api.highcharts.com/highcharts/plotOptions.bubble.marker.states.select
+					states: {
+						select: {
+							lineColor: '#000',
+							fillColor: '#fff',
+							radius: 6
+						}
+					}
+				},
+				minSize: 8,
+				maxSize: 8,
+				allowPointSelect: true
+			},
+			series: {
+				animation: {
+					duration: 1000
+				},
+				cursor: 'pointer',
+				events: {
+					<% if (!locals.selectCallback) {
+						locals.selectCallback = () => {};
+					} %>
+					click: <%- locals.selectCallback %>
+				}
+			}
+		},
+		// https://api.highcharts.com/highcharts/tooltip
+		tooltip: {
+			shared: true,
+			useHTML: true,
+			headerFormat: '',
+			// https://api.highcharts.com/highcharts/tooltip.pointFormatter
+			pointFormatter: function formatter () {
+				let reach = Math.floor(this.x/210);
+				reach = (this.y === 65) ? '4,283,180' : reach;
+					return `
+						<div style="width: 120px;">
+							Reach: ${reach}M<br />
+							Similarity: ${this.y}%
+						</div>
+					`
+			},
+			footerFormat: '',
+			valueDecimals: 0
+		},
+		// https://api.highcharts.com/highcharts/series
+		series: [{ data: lookalikesData }]
+	};
+};
+
+Highcharts.setOptions({credits: { enabled: false }});
+const LookalikesChart = Highcharts.chart('lookalikes-chart', getLookalikesOptions());
+</script>

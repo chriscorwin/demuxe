@@ -1,0 +1,340 @@
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url(fonts/SalesforceSans-Regular.woff2) format("woff2"), url(fonts/SalesforceSans-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url(fonts/SalesforceSans-Italic.woff2) format("woff2"), url(fonts/SalesforceSans-Italic.woff) format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url(fonts/SalesforceSans-BoldItalic.woff2) format("woff2"), url(fonts/SalesforceSans-BoldItalic.woff) format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url(fonts/SalesforceSans-Light.woff2) format("woff2"), url(fonts/SalesforceSans-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url(fonts/SalesforceSans-LightItalic.woff2) format("woff2"), url(fonts/SalesforceSans-LightItalic.woff) format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Salesforce Icons";
+  src: url(fonts/sf-icons.woff) format("woff"), url(fonts/sf-icons.svg#sf-icons) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Salesforce Sans',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #16325c;
+  background-color: #fafaf9;
+}
+
+label {
+  font-family: 'Salesforce Sans',Arial,sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  color: #5d686f;
+}
+
+.dynamic-placement {
+  will-change: transform;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.journeys-label-container {
+  width: 107px;
+  height: 27px;
+  text-align: center;
+  border: 1px solid #C7D9EF;
+  border-radius: 43px;
+  background: #FFF;
+  padding-top: 3px;
+}
+
+.journeys-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Salesforce Sans',Arial,sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  -webkit-transition: max-width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: max-width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  color: #2b2826;
+  margin-bottom: 0;
+  text-transform: none;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.lifecycle-stage-label {
+  font-family: 'Salesforce Sans',Arial,sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 19px;
+  max-width: 105px;
+  height: 19px;
+}
+
+.flow-container {
+  -webkit-transition: opacity .5s,visibility .5s;
+  transition: opacity .5s,visibility .5s;
+}
+
+.separator {
+  stroke-width: 1;
+  stroke-dasharray: 1,8;
+  stroke-dashoffset: 1;
+}
+
+.separator-transitionable {
+  -webkit-transition: opacity .5s,visibility .5s;
+  transition: opacity .5s,visibility .5s;
+}
+
+.separator-graph {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+
+.separator-column {
+  stroke-width: 2;
+  stroke-dasharray: 2,8;
+}
+
+.separator-row {
+  stroke: #c9c7c5;
+}
+
+.volume-active {
+  fill: #1589ee;
+  fill-opacity: .25;
+}
+
+.volume-inactive {
+  fill: #7874a3;
+  fill-opacity: .25;
+}
+
+.volume-outline {
+  fill: none;
+  stroke: #dddbda;
+  stroke-width: 1;
+}
+
+circle.tick {
+  fill: #b0adab;
+  fill-opacity: 1;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+
+circle.tick-outer {
+  fill: #000;
+  fill-opacity: .3;
+  pointer-events: none;
+}
+
+.node-focusable .tick {
+  cursor: pointer;
+}
+
+circle {
+  -webkit-transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+  transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+}
+
+circle.volume-active, circle.volume-inactive {
+  animation: grow-circle 400ms linear backwards;
+}
+
+@keyframes grow-circle {
+  from {
+    r: 0;
+  }
+}
+
+.flow line, .flow path, .flow rect {
+  -webkit-transition: opacity .5s,visibility .5s;
+  transition: opacity .5s,visibility .5s;
+}
+
+.flow rect {
+  animation: grow 400ms linear forwards;
+}
+
+@keyframes grow {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 160px;
+  }
+}
+
+/*
+	The dashoffset and dasharray numbers are brute forced, which means they are messing up the animation delay (you have to get through all of the blank space in the offset before the animation appears to start). You could figure out the actual length of half of the circle's circumference and make that number the dasharray and dashoffset which would make the animation delay line up better and therefore probably make the animation length less random seeming and more programmable.
+
+	https://stackoverflow.com/questions/30355241/get-the-length-of-a-svg-line-rect-polygon-and-circle-tags
+*/
+.flow path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 1s linear forwards;
+  fill: none;
+}
+
+.flow path.flow-span3 {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: dash 1430ms linear forwards;
+  fill: none;
+}
+
+.flow path.flow-span4, .flow path.flow-span5 {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: dash 2150ms linear forwards;
+  fill: none;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.set0 circle, .set0 rect.flow-dropoff, .set1 rect.flow-dropin {
+  animation-delay: 400ms;
+}
+
+.set1 circle, .set1 rect.flow-dropoff, .set2 rect.flow-dropin {
+  animation-delay: 800ms;
+}
+
+.set2 circle, .set2 rect.flow-dropoff, .set3 rect.flow-dropin {
+  animation-delay: 1200ms;
+}
+
+.set3 circle, .set3 rect.flow-dropoff, .set4 rect.flow-dropin {
+  animation-delay: 1600ms;
+}
+
+.set4 circle, .set4 rect.flow-dropoff, .set5 rect.flow-dropin {
+  animation-delay: 2000ms;
+}
+
+.set5 circle, .set5 rect.flow-dropoff, .set6 rect.flow-dropin {
+  animation-delay: 2400ms;
+}
+
+.flow-dropin {
+  opacity: .7;
+}
+
+.flow-dropoff {
+  opacity: 1;
+}
+
+rect {
+  shape-rendering: crispEdges;
+}
+
+circle {
+  -webkit-transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+  transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+}
+
+rect {
+  shape-rendering: crispEdges;
+}
+
+.flow line, .flow path, .flow rect {
+  -webkit-transition: opacity .5s,visibility .5s;
+  transition: opacity .5s,visibility .5s;
+}
+
+.flow:hover .flow-forward, .flow:hover .flow-passive--forward {
+  stroke: #1589ee;
+}
+
+.flow:hover .flow-backward, .flow:hover .flow-passive--backward {
+  stroke: #5e429b;
+}
+
+.flow:hover .flow-dropin {
+  fill: #1589ee;
+}
+
+.flow:hover .flow-dropoff {
+  fill: #5e429b;
+}
+
+.flow-count-background {
+  fill: rgba(0, 0, 0, 0.5);
+  shape-rendering: initial;
+}
+
+.flow-dropin.flow-thin, .flow-dropoff.flow-thin {
+  stroke: transparent;
+  stroke-width: 4px;
+}
+
+.flow-dropoff {
+  cursor: pointer;
+}
+
+.linear-gradient-stop-forward {
+  stop-color: #5eb4ff;
+}
+
+.linear-gradient-stop-dropin {
+  stop-color: #1589ee;
+}
+
+.linear-gradient-stop-backward {
+  stop-color: #7555b8;
+}
+
+.linear-gradient-stop-dropoff {
+  stop-color: #7555b8;
+}
+
+.linear-gradient-stop-axis {
+  stop-color: #c9c7c5;
+}
+
+.linear-gradient-stop-separator {
+  stop-color: #c9c7c5;
+}
+
+/*# sourceMappingURL=lifecycles.css.map */

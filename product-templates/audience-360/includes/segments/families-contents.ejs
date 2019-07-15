@@ -1,0 +1,192 @@
+<style>
+	#contact-details svg, #addtnl-prof-info svg, #channel-engagement svg, #preferred-conversion-path .slds-panel-box__body svg, #spending-profile .slds-panel-box__body svg, #transaction-overview svg{
+		margin-left: 12px;
+		margin-bottom: 12px;
+	}
+
+	#addtnl-prof-info svg{
+		margin-bottom: 45px;
+	}
+
+	#spending-profile .slds-panel-box__body svg {
+		margin-bottom: 17px;
+	}
+
+	#transaction-overview svg {
+		margin-bottom: 88px;
+	}
+
+	.page-header svg{
+		width: 100%;
+	}
+
+	.slds-panel-box  {
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+	}
+
+	#spending-profile .slds-panel-box__header button:nth-of-type(1) {
+		margin-left: 185px;
+	}
+
+	.grow-circle {
+		animation: grow-circle 2s linear;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 100;
+		transform-origin: 75.5px;
+		animation-play-state: paused;
+	}
+
+	@keyframes grow-circle {
+		from {
+			stroke-dashoffset: 100;
+		}
+	}
+
+	#transaction-overview svg circle {
+		transform-origin: 113px 176px;
+	}
+	#OvalDarkBlue {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(98deg);
+	}
+	#OvalLightBlue {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(195deg);
+	}
+	#OvalPurple {
+		animation: grow-donut 1.5s linear;
+		animation-play-state: paused;
+		transform: rotate(268deg);
+	}
+
+	@keyframes grow-donut {
+	    from {
+	        stroke-dasharray: 700;
+  			stroke-dashoffset: 0;
+  			transform: rotate(0deg);
+	    }
+	}
+
+	.fill-in {
+		animation: send-lines 2s linear;
+		animation-play-state: paused;
+		fill-opacity: 0.3;
+	}
+
+	@keyframes send-lines {
+		from {
+			fill-opacity: 0;
+		}
+
+		50% {
+			fill-opacity: 0;
+		}
+
+		to {
+			fill-opacity: 0.3;
+		}
+	}
+
+	.draw-in {
+		animation: draw-in-animation 1s linear;
+		animation-play-state: paused;
+		stroke-dasharray: 350px;
+	}
+
+	@keyframes draw-in-animation {
+		from {
+
+			stroke-dashoffset: 350px;
+		}
+
+		to {
+			stroke-dashoffset: 0px;
+		}
+	}
+</style>
+	<div class="page-header"><%- include('images/slices/families/record-header.svg') %></div>
+	<div class="page-header slds-m-top_medium"><%- include('images/slices/families/page-header.ejs') %></div>
+	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-m-top_small slds-p-horizontal_x-small slds-m-bottom_x-large">
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
+			<%- include('components/panel-box.ejs', {
+				id: 'contact-details',
+				title: 'Contact Details',
+				header_buttons: [{}],
+				contents: include('images/slices/families/contact-details.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_2-of-3">
+			<%- include('components/panel-box.ejs', {
+				id: 'addtnl-prof-info',
+				title: 'Additional Profile Information',
+				header_buttons: [{}],
+				contents: include('images/slices/families/profile-information.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3 slds-m-top_medium">
+			<%- include('components/panel-box.ejs', {
+				id: 'channel-engagement',
+				title: 'Channel Engagement',
+				header_buttons: [{}],
+				contents: include('images/slices/families/channel-engagement.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3 slds-m-top_medium">
+			<%- include('components/panel-box.ejs', {
+				id: 'preferred-conversion-path',
+				header_buttons: [
+					{ img: include('images/icons/einstein.svg') }
+				],
+				title: 'Preferred Conversion Path',
+				contents: include('images/slices/families/preferred-conversion-path.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3 slds-m-top_medium">
+			<%- include('components/panel-box.ejs', {
+				id: 'spending-profile',
+				title: 'Spending Profile',
+				header_buttons: [ { img: include('images/icons/einstein.svg') }, {}],
+				contents: include('images/slices/families/spending-profile.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_2-of-3 slds-m-top_medium slds-m-bottom_x-large">
+			<%- include('components/panel-box.ejs', {
+				title: '',
+				contents: include('images/slices/families/customer-activity.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3 slds-m-top_medium slds-m-bottom_x-large">
+			<%- include('components/panel-box.ejs', {
+				id: 'transaction-overview',
+				title: 'Transactions Overview',
+				contents: include('images/slices/families/transaction-overview.svg'),
+				footer_links: [{}]
+			}) %>
+		</div>
+	</div>
+<script>
+	const triggerAnimations = () => {
+		if (window.scrollY > 250) {
+			document.querySelectorAll('#channel-engagement svg .grow-circle').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+
+		if (window.scrollY > 650) {
+			document.querySelectorAll('#transaction-overview svg .grow-donut').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+
+		if (window.scrollY > 900) {
+			document.querySelectorAll('#transaction-overview svg .draw-in, #transaction-overview svg .fill-in').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+	};
+
+	document.addEventListener("scroll", triggerAnimations);
+</script>

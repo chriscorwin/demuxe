@@ -1,0 +1,32 @@
+<svg width="1260" height="77" viewBox="0 0 1260 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Record Header">
+<path id="Rectangle" d="M2 4C2 1.79086 3.79086 0 6 0H1254C1256.21 0 1258 1.79086 1258 4V73C1258 75.2091 1256.21 77 1254 77H6.00003C3.79089 77 2 75.2091 2 73V4Z" fill="#F3F2F2"/>
+<g id="Group">
+<path id="Rectangle_2" d="M1110.5 32C1110.5 31.1716 1111.17 30.5 1112 30.5H1210H1240C1240.83 30.5 1241.5 31.1716 1241.5 32V59C1241.5 59.8284 1240.83 60.5 1240 60.5H1210H1112C1111.17 60.5 1110.5 59.8284 1110.5 59V32Z" fill="white" stroke="#DEDCD9"/>
+<text id="Edit" fill="#1172CF" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="1146.46" y="49.896">Edit</tspan></text>
+<path id="Vector" d="M1220.41 42H1231.61C1231.92 42 1232.14 42.3792 1231.89 42.6417L1226.42 48.825C1226.23 49.0583 1225.82 49.0583 1225.63 48.825L1220.1 42.6417C1219.87 42.3792 1220.06 42 1220.41 42Z" fill="#706E6B"/>
+</g>
+<g id="Group_2">
+<rect id="Rectangle_3" x="1010.5" y="30.5" width="88" height="30" rx="1.5" fill="white" stroke="#DEDCD9"/>
+<text id="Follow" fill="#1172CF" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="1043.65" y="49.896">Follow</tspan></text>
+<path id="Vector_2" d="M1029.68 44.5962L1035.18 44.5962C1035.44 44.5962 1035.62 44.7854 1035.62 45.0377L1035.62 45.9206C1035.62 46.1729 1035.44 46.3621 1035.18 46.3621L1029.68 46.3621C1029.51 46.3621 1029.38 46.4882 1029.38 46.6564L1029.4 52.1852C1029.4 52.4374 1029.21 52.6266 1028.96 52.6266L1028.08 52.6266C1027.83 52.6266 1027.64 52.4374 1027.64 52.1852L1027.64 46.6774C1027.64 46.5092 1027.51 46.3831 1027.34 46.3831L1021.79 46.3831C1021.54 46.3831 1021.35 46.1939 1021.35 45.9416L1021.35 45.0587C1021.35 44.8064 1021.54 44.6172 1021.79 44.6172L1027.32 44.5962C1027.49 44.5962 1027.62 44.4701 1027.62 44.3019L1027.62 38.7941C1027.62 38.5418 1027.8 38.3526 1028.06 38.3526L1028.94 38.3526C1029.19 38.3526 1029.38 38.5418 1029.38 38.7941V44.3019C1029.4 44.449 1029.53 44.5752 1029.68 44.5962Z" fill="#1172CF"/>
+</g>
+<g id="Record Details">
+<text id="Segments" fill="#006DCC" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" letter-spacing="0em"><tspan x="69" y="25.888">Segments</tspan></text>
+<text id="&#62;" fill="#3E3E3C" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" letter-spacing="0em"><tspan x="137" y="25.888">&#62;</tspan></text>
+<text id="Families" fill="#006DCC" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="14" letter-spacing="0em"><tspan x="149" y="25.888">Families</tspan></text>
+<text id="Lottie Garner" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="20" font-weight="bold" letter-spacing="0em"><tspan x="69" y="50.84">Lottie Garner</tspan></text>
+<g id="Icon-Segment">
+<g id="Entity Icon">
+<path id="Rectangle 44" fill-rule="evenodd" clip-rule="evenodd" d="M22.1543 16C19.9452 16 18.1543 17.7909 18.1543 20V48C18.1543 50.2091 19.9452 52 22.1543 52H49.4919C51.7011 52 53.4919 50.2091 53.4919 48V20C53.4919 17.7909 51.7011 16 49.4919 16H22.1543Z" fill="#FCB95B"/>
+</g>
+<g id="Icons / Utility Icon">
+<g id="Icon Glyph">
+<path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M45.7952 32.0336L35.151 37.9009C34.4241 38.2643 33.5933 37.7451 33.5933 36.9663V24.2451C33.5933 23.7259 33.0741 23.3105 32.6068 23.4663C27.4144 24.9201 23.676 29.9566 24.2991 35.7201C24.8702 40.9643 29.076 45.222 34.3721 45.7932C41.2779 46.5201 47.0933 41.172 47.0933 34.422C47.0933 33.799 47.0414 33.1759 46.9375 32.5528C46.8337 32.0336 46.2625 31.774 45.7952 32.0336Z" fill="white"/>
+<path id="Path_2" fill-rule="evenodd" clip-rule="evenodd" d="M36.5529 34.4219L46.7817 28.97C47.4048 28.6585 47.6125 27.8277 47.1971 27.2566C44.8606 24.0373 41.2259 21.7008 37.0721 21.0258C36.3452 20.87 35.6702 21.4412 35.6702 22.1681V33.9027C35.6702 34.37 36.1375 34.6296 36.5529 34.4219Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
