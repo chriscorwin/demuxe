@@ -1,4 +1,4 @@
-<%_
+<%
 console.group(`
 ============================================================
 Demuxe: including \`engine/includes/magick-flows/magick-flows-contents.ejs\` now...
@@ -12,15 +12,36 @@ _%>
 	const thisMagickFlowConfig =<%- JSON.stringify(thisMagickFlowConfig)%>;
 	console.group('[ includes/magick-flows/magick-flows-contents.ejs:14 ] thisMagickFlowConfig:');
 	console.dir(thisMagickFlowConfig);
+
+
+	var clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+
+	if ( clicks >= thisMagickFlowConfig.numberOfSteps ) {
+		clicks = 0;
+	}
+
+	var nextClick = clicks + 1;
+	if ( nextClick >= thisMagickFlowConfig.numberOfSteps ) {
+		nextClick = 0
+	}
+
+	var previousClick = clicks - 1;
+	if ( previousClick <= 0 ) {
+		previousClick = thisMagickFlowConfig.numberOfSteps
+	}
+
+
+
 	console.groupEnd();
 </script>
-<%_
+<%
 	let showMetaDataMissingError = true;
 	let thisMagickFlowMetaData = thisMagickFlowConfig.metaData;
 
 	const webRootPath = `/${locals.magickFlows.directoryName}/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}`;
 	const mainContentPath = `${webRootPath}/main/`;
 	const assetsContentPath = `${webRootPath}/assets/`;
+
 
 
 	/**
@@ -41,6 +62,11 @@ _%>
 	 }
 
 
+	function testForEscapeHatch(node) {
+		return node.includes('is-escape-hatch');
+	}
+
+
 	let maxWidth = thisMagickFlowConfig.templateSizingFileDimensions.width || 1280;
 	let maxHeight = thisMagickFlowConfig.templateSizingFileDimensions.height || 720;
 	
@@ -50,14 +76,15 @@ _%>
 
 		const mainContentWebRootUrl = `${mainContentPath}${node.fileName}`;
 		const clickHintsAssetWebRootUrl = `${assetsContentPath}${node.id}___click-hint.png`;
-		const showHeader = node.hasStickyHeader === true || false;
+		let showHeader = node.hasStickyHeader === true || false;
 		const showFooter = node.hasStickyFooter === true || false;
-		const nodeData = node.data;
+		const nodeData = node.data || ['unset'];
 		const nodeNotes = node.notes;
+		let showHeaderPaddingOnMain = false;
+		let headerPaddingforMain = 0;
 
 
-
-		const headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
+		let headerWebRootUrl = `${assetsContentPath}${node.stickyHeaderFileName}`;
 		const footerWebRootUrl = `${assetsContentPath}${node.stickyFooterFileName}`;
 
 
@@ -70,6 +97,9 @@ _%>
 		let renderSizeFooter = calculateAspectRatioFit(srcWidthFooter, srcHeightFooter, maxWidth, maxHeight);
 		let renderSizeMainContent = calculateAspectRatioFit(node.dimensions.width, node.dimensions.height, maxWidth, node.dimensions.height);
 		let mainContentScrollableAreaHeight = ((maxHeight - (renderSizeHeader.height + renderSizeFooter.height)) + 0);
+
+		headerPaddingforMain = renderSizeHeader['height'];
+
 
 		if (renderSizeMainContent.height < mainContentScrollableAreaHeight) {
 			mainContentScrollableAreaHeight = renderSizeMainContent.height;
@@ -84,6 +114,46 @@ _%>
 		let thisMagickFlowsSlideClassnames = {
 			'magick-flows-step': true
 		};
+
+
+
+		let hasEscapeHatch = nodeData.some(testForEscapeHatch);
+		let indexOfEscapeHatch = nodeData.findIndex(testForEscapeHatch);
+		let newUrlSlugForEscapeHatch = '';
+		let escapeHatchContentHtmlOut = '';
+		if ( hasEscapeHatch === true ) {
+			newUrlSlugForEscapeHatch = nodeData[indexOfEscapeHatch].split('--')[1];
+			escapeHatchContentHtmlOut += `
+<iframe id="magick-flows-iframe--${node.stepsIndex}"
+    title="Inline Frame Example"
+    width="${renderSizeMainContent.width}"
+    height="${mainContentScrollableAreaHeight}"
+    src="/${newUrlSlugForEscapeHatch}">
+</iframe>
+`
+		}
+
+
+
+
+
+
+		if ( nodeData.find(k => k=='is-own-header') === 'is-own-header') {
+			thisMagickFlowsSlideClassnames['is-own-header'] = true;
+			nodeData.forEach(function(dataNode, dataNodeIndex){
+				if (dataNode !== 'is-own-header') {
+					if (dataNode.startsWith('own-header-height--')) {
+						renderSizeHeader['height'] = dataNode.split('--')[dataNode.split('--').length - 1];
+						renderSizeHeader['width'] = renderSizeMainContent.width;
+						thisMagickFlowsSlideClassnames[`own-header-height--${renderSizeHeader['height']}`] = true;
+					}
+				}
+			});
+			showHeader = true;
+			showHeaderPaddingOnMain = true;
+			headerPaddingforMain = 0;
+			headerWebRootUrl = mainContentWebRootUrl;
+		}
 
 		preLoadImages += `<img
 			class=""
@@ -101,8 +171,8 @@ _%>
 			const iosNotificationWebRootUrl = `${assetsContentPath}${node.iosNotificationFileName}`;
 			iosNotificationHtmlOut = `
 				<div
-					id="ios-notification--step-${node.screensIndex}"
-					class="ios-notification ios-notification--step-${node.screensIndex}  magick-flows-step-asset"
+					id="ios-notification--step-${node.stepsIndex}"
+					class="ios-notification ios-notification--step-${node.stepsIndex}  magick-flows-step-asset"
 				><img src="${iosNotificationWebRootUrl}" /></div>
 			`
 		}
@@ -116,8 +186,8 @@ _%>
 			const drawerFromTopWebRootUrl = `${assetsContentPath}${node.drawerFromTopFileName}`;
 			drawerFromTopHtmlOut = `
 				<div
-					id="drawer-from-top--step-${node.screensIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-top magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
+					id="drawer-from-top--step-${node.stepsIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-top magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
 				><img src="${drawerFromTopWebRootUrl}" /></div>
 			`
 		}
@@ -130,8 +200,8 @@ _%>
 			const drawerFromLeftWebRootUrl = `${assetsContentPath}${node.drawerFromLeftFileName}`;
 			drawerFromLeftHtmlOut = `
 				<div
-					id="drawer-from-left--step-${node.screensIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-left magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
+					id="drawer-from-left--step-${node.stepsIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-left magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
 				><img src="${drawerFromLeftWebRootUrl}" /></div>
 			`
 		}
@@ -143,8 +213,8 @@ _%>
 			const drawerFromBottomWebRootUrl = `${assetsContentPath}${node.drawerFromBottomFileName}`;
 			drawerFromBottomHtmlOut = `
 				<div
-					id="drawer-from-bottom--step-${node.screensIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-bottom magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
+					id="drawer-from-bottom--step-${node.stepsIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-bottom magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
 				><img src="${drawerFromBottomWebRootUrl}" /></div>
 			`
 		}
@@ -156,14 +226,15 @@ _%>
 			const drawerFromRightWebRootUrl = `${assetsContentPath}${node.drawerFromRightFileName}`;
 			drawerFromRightHtmlOut = `
 				<div
-					id="drawer-from-right--step-${node.screensIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-right magick-flows-step-asset magick-flows-step-asset--step-${node.screensIndex} "
+					id="drawer-from-right--step-${node.stepsIndex}"
+					class="drawer magick-flows-drawer magick-flows-drawer--from-right magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
 				><img src="${drawerFromRightWebRootUrl}" /></div>
 			`
 		}
 
 
 		let clickHintsHtmlOut = '';
+		let htmlCommentsHtmlOut = '';
 		let hasNotes = node.notes.length > 0 ? true : false;
 		if ( node.notes.length === 1 && node.notes[0] === 'unset' ) {
 			hasNotes = false;
@@ -173,15 +244,20 @@ _%>
 
 			clickHintsHtmlOut += `
 				<div
-					id="magick-flows-click-hints--step-${node.screensIndex}"
-					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.screensIndex} "
+					id="magick-flows-click-hints--step-${node.stepsIndex}"
+					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.stepsIndex} "
 				>
 			`
-
+			let thisParagraphClassName = `slds-p-bottom_medium`;
 			node.notes.forEach((note, noteIndex) => {
+				if (noteIndex === node.notes.length - 1) {
+					thisParagraphClassName = `slds-p-bottom_none`
+				}
 				note = note.replace(/-/g, ' ');
 
-				clickHintsHtmlOut += `${note}. `
+				clickHintsHtmlOut += `<p data="Click hint number ${noteIndex} (${node.notes.length})" class="${thisParagraphClassName}">${note}.</p>`
+				htmlCommentsHtmlOut += `${note}
+`;
 			});
 
 
@@ -189,17 +265,32 @@ _%>
 				</div>
 			`
 		}
+%>
 
 
-_%>
 
+
+
+
+
+<!--  
+
+
+
+
+#<%= nodeIndex %>====================================== 
+
+<%= node.id %>
+--------------------------------------
+<%= htmlCommentsHtmlOut %>
+-->
 <div
 	class="slds-grid slds-grid_vertical magick-flows--step-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
 	data-step="<%=nodeIndex%>"
 	id="magick-flows--step-<%=nodeIndex%>"
 >
 <%_ if (showHeader) { _%>
-	<header class="slds-colmagick-flows-stickey-header_container" style="background-image: url(<%=headerWebRootUrl%>); display: block; height: <%=renderSizeHeader.height%>px; width: <%=renderSizeHeader.width%>px; background-size: cover; background-color: transparent; z-index: 1;"></header>
+	<header class="slds-col magick-flows-stickey-header_container" style="background-image: url(<%=headerWebRootUrl%>); display: block; height: <%=renderSizeHeader.height%>px; width: <%=renderSizeHeader.width%>px; background-size: cover; background-color: transparent; z-index: 1;"></header>
 <%_ } _%>
 
 <%
@@ -207,16 +298,19 @@ _%>
 		echo(`
 			<div
 				class="slds-col slds-scrollable"
-				style="height: ${mainContentScrollableAreaHeight}px; margin-bottom: ${renderSizeFooter.height}px;"
+				style="height: ${mainContentScrollableAreaHeight}px; margin-bottom: ${renderSizeFooter.height}px; margin-top: ${headerPaddingforMain}px;"
 			>
 		`);
 
+		if (hasEscapeHatch === true) {
+			echo(`${escapeHatchContentHtmlOut}`);
+		} 
 		if (isPng || isSvg || isGif || isJpeg) {
 			echo(`
 				<div
-					class="screenshot auto-replace is-image "
+					class="magick-flows--main-content auto-replace is-image "
 					style="height: ${renderSizeMainContent.height}px; width: ${renderSizeMainContent.width}px; background-size: cover; background-image: url(${mainContentWebRootUrl}); display: block;"
-					id="screenshot--step-${nodeIndex}"
+					id="magick-flows--main-content--step-${nodeIndex}"
 				>
 				</div>
 			`);
@@ -233,14 +327,13 @@ _%>
 		} else if (isMp4) {
 			echo(`
 				<video
-					autoplay
+					playsinline autoplay 
 					class="auto-replace is-video "
-					id="screenshot-wrapper--step-${nodeIndex}"
-					playsinline
+					id="magick-flows--main-content-wrapper--step-${nodeIndex}"
 				>
 					<source
-						class="screenshot auto-replace "
-						id="screenshot--step-${nodeIndex}"
+						class="magick-flows--main-content auto-replace "
+						id="magick-flows--main-content--step-${nodeIndex}"
 						src="${mainContentWebRootUrl}"
 						type="video/mp4"
 					>
@@ -280,13 +373,17 @@ _%>
 </div>
 
 
-<%_ }); _%>
+<% }); %>
+
+
+
+
 
 <div class="preload-images">
 <%- preLoadImages %>
 </div>
 
-<%_
+<%
 console.log(`...end \`engine/includes/magick-flows/magick-flows-contents.ejs\`
 ------------------------------------------------------------
 `);

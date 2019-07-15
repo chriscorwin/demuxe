@@ -15,22 +15,22 @@ const possibleTraitIds = possibleTraits.reduce(
 
 const getStepTraits = (stepInfo) => {
 	// steps without IDs can't have data. Abort.
-	console.log(`
+	console.debug(`
 	[ config/magick-flows-util/get-step-traits.js:15 ] stepInfo.stepId: `, util.inspect(stepInfo.stepId, { showHidden: true, depth: null, colors: true }));
-	console.log(`[ config/magick-flows-util/get-step-traits.js:21 ] stepInfo: `, util.inspect(stepInfo, { showHidden: true, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-step-traits.js:21 ] stepInfo: `, util.inspect(stepInfo, { showHidden: true, depth: null, colors: true }));
 	if ( !stepInfo.stepId ) return {};
 
 	let traitsData = {
 		assetsMetaData: [],
 		stepDataAttributes: {}
 	};
-	// console.log(`
+	// console.debug(`
 	// [ config/magick-flows-util/get-step-traits.js:31 ] possibleTraitIds: 
 	// 	`, util.inspect(possibleTraitIds, { showHidden: true, depth: null, colors: true }));
-	console.log(`
+	console.debug(`
 	[ config/magick-flows-util/get-step-traits.js:34 ] stepInfo.fileName.
 		match(possibleTraitIds): `, util.inspect(stepInfo.fileName.match(possibleTraitIds), { showHidden: true, depth: null, colors: true }));
-	console.log(`
+	console.debug(`
 	[ config/magick-flows-util/get-step-traits.js:37 ] traitsData: 
 		`, util.inspect(traitsData, { showHidden: true, depth: null, colors: true }));
 	if ( !stepInfo.fileName.match(possibleTraitIds) ) return traitsData;
@@ -143,7 +143,7 @@ instead of local.
 
 module.exports = getStepTraits;
 
-console.log(`...end: \`config/magick-flows-util/get-step-traits.js\`
+console.debug(`...end: \`config/magick-flows-util/get-step-traits.js\`
 ------------------------------------------------------------
 
 

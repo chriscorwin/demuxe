@@ -3,7 +3,7 @@ const fs = require('fs');
 const util = require('util');
 const sizeOf = require('image-size');
 const sortAlphaNum = require('./sort-alpha-num.js');
-const getScreenTraits = require('./get-screen-traits.js');
+const getStepTraits = require('./get-step-traits.js');
 const sassGenerator = require('./sass-generator.js');
 
 function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleError) {
@@ -12,7 +12,7 @@ function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleErro
 
 	fs.writeFile(scssVariablesFilePath, dataString, function(err){
 		if(!err){
-			// console.log(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
+			// console.debug(`[ config/config.js:26 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
 		} else {
 			console.error(`[ config/config.js:28 ] dataString: `, util.inspect(dataString, { showHidden: true, depth: null, colors: true }));
 
@@ -21,10 +21,10 @@ function dynamicSass(scssVariablesFilePath, variables, handleSuccess, handleErro
 }
 
 function dynamicSassHandleSuccess(data){
-	console.log(`[ dynamicSassHandleSuccess ]: `, data);
+	console.debug(`[ dynamicSassHandleSuccess ]: `, data);
 }
 function dynamicSassHandleError(data){
-	console.log(`[ dynamicSassHandleError ]: `, data);
+	console.debug(`[ dynamicSassHandleError ]: `, data);
 }
 
 
@@ -84,7 +84,7 @@ String.prototype.toTitleCase = function() {
 };
 
 
-// This gets files -- used to get the lists of screens for each magick flow.
+// This gets files -- used to get the lists of steps for each magick flow.
 const getFiles = (dir, files_) => {
 	files_ = files_ || [];
 	const files = fs.readdirSync(dir);
@@ -101,8 +101,8 @@ const getFiles = (dir, files_) => {
 	return files_;
 }
 
-const getDataFromFilename = (screenDataAttributes, fileName) => {
-	screenDataAttributes.fileName = fileName;
+const getDataFromFilename = (stepDataAttributes, fileName) => {
+	stepDataAttributes.fileName = fileName;
 	const splitFileName = fileName.split('___');
 
 	splitFileName.forEach((node, index) => {
@@ -128,39 +128,39 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 
 			switch (key) {
 				case "id":
-					screenDataAttributes[key] = value;
+					stepDataAttributes[key] = value;
 					break;
 
 				case "data":
 					if ( value.includes('__') === true ) {
-						screenDataAttributes[key] = value.split('__').map(val => val.toLowerCase());
+						stepDataAttributes[key] = value.split('__').map(val => val.toLowerCase());
 					} else if ( typeof value === 'string' ) {
-						screenDataAttributes[key] = [value];
+						stepDataAttributes[key] = [value];
 					} else {
-						screenDataAttributes[key] = value;
+						stepDataAttributes[key] = value;
 					}
 					break;
 				case "notes": 
 					if ( value.includes('__') === true ) {
-						screenDataAttributes[key] = value.split('__').map(val => val.toTitleCase());
+						stepDataAttributes[key] = value.split('__').map(val => val.toTitleCase());
 					} else if ( typeof value === 'string' ) {
-						screenDataAttributes[key] = [value];
+						stepDataAttributes[key] = [value];
 					} else {
-						screenDataAttributes[key] = value;
+						stepDataAttributes[key] = value;
 					}
 				break;
 				
 				default: 
-					screenDataAttributes[key] = value;
+					stepDataAttributes[key] = value;
 
 			}
 
 		} else {
 			// first one is the sorter, store it as such
 			if ( index === 0 ) {
-				screenDataAttributes['sorter'] = node;
+				stepDataAttributes['sorter'] = node;
 			} else if ( index === 1 ) {
-				screenDataAttributes['id'] = node;
+				stepDataAttributes['id'] = node;
 			} else {
 				console.debug(`[ config/magick-flows-util/get-flow-data.js:96 ] index: `, util.inspect(index, { showHidden: true, depth: null, colors: true }));
 				console.debug(`[ config/magick-flows-util/get-flow-data.js:97 ] node: `, util.inspect(node, { showHidden: true, depth: null, colors: true }));
@@ -168,58 +168,63 @@ const getDataFromFilename = (screenDataAttributes, fileName) => {
 
 		}
 	});
-	if (typeof screenDataAttributes.notes === 'undefined' ) {
-		screenDataAttributes.notes = ['unset'];
+	if (typeof stepDataAttributes.notes === 'undefined' ) {
+		stepDataAttributes.notes = ['unset'];
 	}
-	return screenDataAttributes;
+	return stepDataAttributes;
 }
 
-const getScreenData = (flowData, fileName, fileIndex) => {
+const getStepData = (flowData, fileName, fileIndex) => {
 
-	let screenDataAttributes = {
-		screensIndex: fileIndex,
+	let stepDataAttributes = {
+		stepsIndex: fileIndex,
 		fileExtension: fileName.split('.')[fileName.split('.').length - 1]
 	}
 
-	screenDataAttributes = getDataFromFilename(screenDataAttributes, fileName);
+	stepDataAttributes = getDataFromFilename(stepDataAttributes, fileName);
 
-	console.debug(`[ config/magick-flows-util/get-flow-data.js:109 ] screenDataAttributes: `, util.inspect(screenDataAttributes, { showHidden: true, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:109 ] stepDataAttributes: `, util.inspect(stepDataAttributes, { showHidden: true, depth: null, colors: true }));
 
 	if ( fileName.endsWith('.ejs') === true ) {
-		screenDataAttributes.dimensions = {type: 'ejs'};
+		stepDataAttributes.dimensions = {type: 'ejs'};
+	} else if ( fileName.endsWith('.mp4') === true ) {
+		stepDataAttributes.dimensions = {type: 'mp4'};
+	} else if ( fileName.endsWith('.mov') === true ) {
+		stepDataAttributes.dimensions = {type: 'mov'};
 	} else {
 		const pathToFile = path.join(flowData.fullContentPath, fileName);
-		screenDataAttributes.dimensions = sizeOf(pathToFile);
+		stepDataAttributes.dimensions = sizeOf(pathToFile);
 	}
 
-	if ( typeof screenDataAttributes.data !== 'undefined' ) {
+	if ( typeof stepDataAttributes.data !== 'undefined' ) {
 
-		const screenInfo = { 
+		const stepInfo = { 
 			assetFiles: flowData.assets, 
-			screenId: screenDataAttributes.id, 
+			stepId: stepDataAttributes.id, 
 			fileName, 
 			fileIndex, 
-			sorter: screenDataAttributes.sorter, 
+			sorter: stepDataAttributes.sorter, 
 			fullAssetsPath: flowData.fullAssetsPath,
 			magickFlowUrlSlug: flowData.urlSlug,
 			magickFlowPath: flowData.path,
-			screenDataAttributes,
+			stepDataAttributes,
 		};
-		const traitsData = getScreenTraits(screenInfo);
+		const traitsData = getStepTraits(stepInfo);
 		flowData.assetsMetaData = traitsData.assetsMetaData;
-		screenDataAttributes = Object.assign(screenDataAttributes, traitsData.screenDataAttributes);
+		stepDataAttributes = Object.assign(stepDataAttributes, traitsData.stepDataAttributes);
 	}
 
-	flowData.metaData.push(screenDataAttributes);
+	flowData.metaData.push(stepDataAttributes);
 	return flowData;
 };
 
 const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 
 
-	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:205 ] configData: `, util.inspect(configData, { showHidden: false, depth: 1, colors: true }));
-	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:206 ] fileOrDirectoryPath: `, util.inspect(fileOrDirectoryPath, { showHidden: false, depth: null, colors: true }));
-	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:207 ] subFileOrDirectory: `, util.inspect(subFileOrDirectory, { showHidden: false, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:220 ] configData: `, util.inspect(configData, { showHidden: false, depth: 1, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:221 ] fileOrDirectoryPath: `, util.inspect(fileOrDirectoryPath, { showHidden: false, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:222 ] subFileOrDirectory: `, util.inspect(subFileOrDirectory, { showHidden: false, depth: null, colors: true }));
+
 	if(!fs.statSync(path.join(fileOrDirectoryPath, subFileOrDirectory)).isDirectory()) {
 		return configData;
 	}
@@ -235,13 +240,13 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 		fullContentPath: path.join(fileOrDirectoryPath, subFileOrDirectory, 'main'),
 		fullAssetsPath: path.join(fileOrDirectoryPath, subFileOrDirectory, 'assets'),
 		urlSlug: subFileOrDirectory,
-		screens: [],
+		steps: [],
 		templateSizingFileDimensions
 	};
 
 	try {
-		flowData.screens = getFiles(flowData.fullContentPath).sort(sortAlphaNum);
-		flowData.numberOfSteps = flowData.screens.length;
+		flowData.steps = getFiles(flowData.fullContentPath).sort(sortAlphaNum);
+		flowData.numberOfSteps = flowData.steps.length;
 	} catch(error) {
 		noFileError(error, flowData.name, flowData.fullContentPath);
 	}
@@ -252,24 +257,24 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 		noAssetsError(error, flowData.name, flowData.fullAssetsPath);
 	}
 
-	flowData.screens.forEach((fileName, fileIndex) => {
-		getScreenData(flowData, fileName, fileIndex);
+	flowData.steps.forEach((fileName, fileIndex) => {
+		getStepData(flowData, fileName, fileIndex);
 	});
 
 
 	const thisMagickFlowHasTemplateSizingInfo = flowData.assets.includes('all__viewport-size.png');
 
 
-	console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:245 ] thisMagickFlowHasTemplateSizingInfo: `, util.inspect(thisMagickFlowHasTemplateSizingInfo, { showHidden: true, depth: null, colors: true }));
+	console.debug(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:245 ] thisMagickFlowHasTemplateSizingInfo: `, util.inspect(thisMagickFlowHasTemplateSizingInfo, { showHidden: true, depth: null, colors: true }));
 	if ( thisMagickFlowHasTemplateSizingInfo === true ) {
 
 		const pathToTemplateSizingFile = path.join(flowData.fullAssetsPath, 'all__viewport-size.png');
 		templateSizingFileDimensions = sizeOf(pathToTemplateSizingFile);
 		flowData.templateSizingFileDimensions = templateSizingFileDimensions;
-		console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:250 ] templateSizingFileDimensions: `, util.inspect(templateSizingFileDimensions, { showHidden: true, depth: null, colors: true }));
+		console.debug(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:250 ] templateSizingFileDimensions: `, util.inspect(templateSizingFileDimensions, { showHidden: true, depth: null, colors: true }));
 	}
 
-	const thisMagickFlowMainImagesForScssVariables = flowData.screens.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+	const thisMagickFlowMainImagesForScssVariables = flowData.steps.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
 	const thisMagickFlowAssetsImagesForScssVariables = flowData.assets.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
 	const thisMagickFlowBackgroundImageVariable = [];
 
