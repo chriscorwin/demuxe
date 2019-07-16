@@ -11,7 +11,7 @@ let thisIncludeDebugInfoEnd = `
 // console.group(thisIncludeDebugInfoStart);
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
-const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
+const drawerDirectionOptions = ['left', 'right', 'top', 'bottom'];
 
 var clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
