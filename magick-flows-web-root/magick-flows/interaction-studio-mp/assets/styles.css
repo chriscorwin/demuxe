@@ -439,6 +439,10 @@ header.magick-flows-stickey-header_container {
   will-change: all;
 }
 
+.magick-flows-step iframe {
+  border: none;
+}
+
 html {
   font-family: "Salesforce Sans", Arial, sans-serif;
   font-size: 100%;
