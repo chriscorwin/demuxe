@@ -1,1 +1,16 @@
 /* Your styles here */
+
+
+// THIS IS ONE WAY TO DO DO IT
+
+// UNCOMMENT THE CODE AND RELOAD TO SEE IT IN USE
+/* 
+#content-wrapper {
+	margin-top: 10rem;
+}
+*/
+
+// NOW: you don't actually _want_ to do it this way though :D
+
+// Instead try adding an [SLDS utility classname](https://lightningdesignsystem.com/utilities/margin/) to your #content element (in the wrapper file).
+
