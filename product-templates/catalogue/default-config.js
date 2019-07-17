@@ -1,15 +1,15 @@
 module.exports = {
 	account_name: 'NTO',
-	appName: 'Engine',
+	appName: 'Prototype Library',
     body_class: 'slds-brand-band slds-brand-band_medium',
     header: {
-		favorites: { disabled: true },
-		global_actions: true,
+		favorites: { disabled: false },
+		global_actions: false,
 		help: true,
-		setup: true,
-		notifications: true,
+		setup: false,
+		notifications: false,
 		search: true,
-		hideSubheader: true,
+		hideSubheader: false,
 		avatar: `/images/icons/Identity.svg`
 	},
 	navData: {
