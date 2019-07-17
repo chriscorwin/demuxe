@@ -1,5 +1,5 @@
 rm config/config.json
-cp config/config.$1.$2.$3.json config/config.json
+cp config/demos/config.$1.$2.$3.json config/config.json
 
 
 # quick copy/paste to set your config:
