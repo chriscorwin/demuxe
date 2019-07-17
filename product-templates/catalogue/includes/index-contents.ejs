@@ -5,3 +5,12 @@
 %>
 
 <%= hello %>
+
+
+<%
+	// Cards at bottom of homepage. Look through all available demo configs and creat the card to correspond with that demo.
+	locals.availableDemoConfigs.forEach((demoConfig) => {
+		echo(`<div class="demoCard">${demoConfig.demoName}</div>`);
+	});
+
+%>
