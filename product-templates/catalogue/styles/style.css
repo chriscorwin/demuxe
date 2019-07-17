@@ -1,4 +1,5 @@
 /* Your styles here */
+<<<<<<< HEAD
 .container {
   position: relative;
   text-align: center;
@@ -18,5 +19,12 @@
   top: 50px;
   left: 0px;
 }
+=======
+/* 
+#content-wrapper {
+	margin-top: 10rem;
+}
+*/
+>>>>>>> 4b4ce4c46a866bce0d9f861298cde95216fb825a
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 /* Your styles here */
+<<<<<<< HEAD
 .container {
     position: relative;
     text-align: center;
@@ -18,3 +19,20 @@
     top: 50px;
     left: 0px;
 }
+=======
+
+
+// THIS IS ONE WAY TO DO DO IT
+
+// UNCOMMENT THE CODE AND RELOAD TO SEE IT IN USE
+/* 
+#content-wrapper {
+	margin-top: 10rem;
+}
+*/
+
+// NOW: you don't actually _want_ to do it this way though :D
+
+// Instead try adding a couple of [SLDS utility classnames](https://lightningdesignsystem.com/utilities/margin/) to your #content element (in the wrapper file). You will need both `slds-m-top_xx-large` and `slds-p-top_xx-large` on there to get the proper amount of spacing.
+
+>>>>>>> 4b4ce4c46a866bce0d9f861298cde95216fb825a
