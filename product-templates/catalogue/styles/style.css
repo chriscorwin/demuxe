@@ -1,21 +1,22 @@
 /* Your styles here */
 .container {
-    position: relative;
-    text-align: center;
-    color: black;
-  }
-  
-.title{
-    position: absolute;
-    font-size: 30px;
-    top: 70px;
-    left: 16px;
+  position: relative;
+  text-align: center;
+  color: black;
 }
 
-.desc{
-    position: absolute;
-    font-size: 30px;
-    top: 50px;
-    left: 0px;
+.title {
+  position: absolute;
+  font-size: 30px;
+  top: 70px;
+  left: 16px;
 }
+
+.desc {
+  position: absolute;
+  font-size: 30px;
+  top: 50px;
+  left: 0px;
+}
+
 /*# sourceMappingURL=style.css.map */

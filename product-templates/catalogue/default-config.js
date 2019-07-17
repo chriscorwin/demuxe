@@ -1,5 +1,5 @@
 module.exports = {
-	account_name: 'NTO',
+	account_name: '',
 	appName: 'Prototype Library',
     body_class: 'slds-brand-band slds-brand-band_medium',
     header: {
@@ -10,7 +10,7 @@ module.exports = {
 		notifications: false,
 		search: true,
 		hideSubheader: false,
-		avatar: `/images/icons/Identity.svg`
+		// avatar: `/images/icons/Identity.svg`
 	},
 	navData: {
 		accountNavItems: [],
