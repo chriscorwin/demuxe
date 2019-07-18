@@ -1,5 +1,9 @@
 {
 	"demoName": "Demuxe Catalogue",
+	"description": "The Demuxe Catalogue",
+	"venue": "",
+	"tags": [],
+	"thumbnail": "",
 	"brandTheme": "demuxe",
 	"productTemplate": "catalogue",
 	"demoVenue": "poc19",
