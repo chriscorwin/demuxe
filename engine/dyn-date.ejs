@@ -1,7 +1,7 @@
 <h1>Dynamic SVG Components POC (Localization for Magick Flows)</h1>
 <div style="float: left; width: 528px;"><h2>Original (as appears in Sketch)</h2>
 <img src="images/dyn-date-poc.png" /></div>
-<div style="float: left; width: 528px; margin-left: 20px;"><h2>Dynamically Converted based on SVG Text's ID</h2>
+<div style="float: left; width: 528px; margin-left: 20px;"><h2>Dynamically Converted based on IDs</h2>
 <%- include('images/dyn-date-poc.svg'); %></div>
 <div style="float: left; width: 528px;">
 <img src="images/dyn-brand-poc.png" /></div>
@@ -13,7 +13,7 @@
 
 <script>
 	const locals = {localization: <%- JSON.stringify(locals.localization) %>};
-	const brandTextsToReplace = document.querySelectorAll('[id*="dyn-brand="]');
+	const brandTextsToReplace = document.querySelectorAll('text[id*="dyn-brand="]');
 
 	brandTextsToReplace.forEach((brandTextToReplaceWrapper) => {
 		const targetText = brandTextToReplaceWrapper.id.match(/dyn-brand=([a-zA-Z0-9\-]*)/);
@@ -39,6 +39,16 @@
 		const brandTextToReplace = brandTextToReplaceWrapper.querySelector('tspan');
 
 		brandTextToReplace.textContent = finalText;
+	});
+
+	const brandImagesToReplace = document.querySelectorAll('image[id*="dyn-brand="]');
+console.log('brandImagesToReplace', brandImagesToReplace)
+	brandImagesToReplace.forEach((brandImageToReplace) => {
+		const targetImage = brandImageToReplace.id.match(/dyn-brand=([a-zA-Z0-9\-\/\.]*)/)[1];
+
+		console.log('targetImage', targetImage)
+
+		brandImageToReplace.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', targetImage);
 	});
 
 	const datesToReplace = document.querySelectorAll('[id*="dyn-date="]');
