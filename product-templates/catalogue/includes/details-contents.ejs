@@ -1,19 +1,38 @@
-<div class="header">
-		<img src="connection.png" alt="">
-		<div class="title">Prototype Library
-			<div class="slds-text-heading_large">Your newest Library to access <br> any demo you can imagine.</div>
+<%
+
+	const targetDemoName = locals.sanitizedQueryParams.demoName;
+	const demo = locals.availableDemoConfigs.find((demo) => demo.demoName === targetDemoName);
+
+%>
+	<div class="header">
+		<img src="<%= demo.thumbnail %>" alt="">
+		<div class="title"><%= demo.demoName %>
+			<div class="slds-text-heading_large"><%= demo.description %></div>
+		</div>
+		<a href="<%= demo.production.host %>" class="slds-button">View Demo</a>
+	</div>
+
+	<!-- TODO: McCulloh: Make this dynamically load in the correct thumbnail images -->
+	<div class="row">
+		<div class="column">
+			<div class="content">
+				<a class="thumbnail" href="screenshots/audience-360.cnx19keynote.fever.0000.dashboard.slide.png">
+					<img src="screenshots/audience-360.cnx19keynote.fever.0000.dashboard.slide.png" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="column">
+			<div class="content">
+				<a class="thumbnail" href="screenshots/audience-360.cnx19keynote.fever.0001.dashboard.slide.png">
+					<img src="screenshots/audience-360.cnx19keynote.fever.0001.dashboard.slide.png" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="column">
+			<div class="content">
+				<a class="thumbnail" href="screenshots/audience-360.cnx19keynote.fever.0002.dashboard.slide.png">
+					<img src="screenshots/audience-360.cnx19keynote.fever.0002.dashboard.slide.png" alt="">
+				</a>
+			</div>
 		</div>
 	</div>
-    <div class="row">
-            <div class="column">
-                <div class="content">
-                    <a target='_blank' href="/details">
-                        <img id="connection" src="audience-360.cnx19keynote.fever.0000.dashboard.png" alt="">
-                    </a>
-                    <h3>Connections</h3>
-                    <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at
-                        tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.
-                    </p>
-                </div>
-            </div>
-            
