@@ -2,6 +2,7 @@
 
 	const targetDemoName = locals.sanitizedQueryParams.demoName;
 	const demo = locals.availableDemoConfigs.find((demo) => demo.demoName === targetDemoName);
+	console.log('demo.demoFlow', demo.demoFlow);
 
 %>
 	<div class="header">
@@ -12,27 +13,42 @@
 		<a href="<%= demo.production.host %>" class="slds-button">View Demo</a>
 	</div>
 
-	<!-- TODO: McCulloh: Make this dynamically load in the correct thumbnail images -->
 	<div class="row">
-		<div class="column">
-			<div class="content">
-				<a class="thumbnail" href="screenshots/audience-360.cnx19keynote.fever.0000.dashboard.slide.png">
-					<img src="screenshots/audience-360.cnx19keynote.fever.0000.dashboard.slide.png" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="column">
-			<div class="content">
-				<a class="thumbnail" href="screenshots/audience-360.cnx19keynote.fever.0001.dashboard.slide.png">
-					<img src="screenshots/audience-360.cnx19keynote.fever.0001.dashboard.slide.png" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="column">
-			<div class="content">
-				<a class="thumbnail" href="screenshots/audience-360.cnx19keynote.fever.0002.dashboard.slide.png">
-					<img src="screenshots/audience-360.cnx19keynote.fever.0002.dashboard.slide.png" alt="">
-				</a>
-			</div>
-		</div>
+		<%
+			const screenshotFilenamePrefix = `${demo.productTemplate}.${demo.demoVenue}.${demo.brandTheme}`;
+			demo.demoFlow.steps.forEach((step) => {
+				let actionTaken = '';
+
+				if (typeof step.goto !== "undefined") {
+					actionTaken = `Went to ${step.goto}`;
+				}
+
+				if (typeof step.click !== "undefined") {
+					actionTaken = `Clicked ${step.click}`;
+				}
+
+				if (typeof step.hover !== "undefined") {
+					actionTaken = `Hovered ${step.hover}`;
+				}
+
+				if (typeof step.evaluate !== "undefined") {
+					actionTaken = `Executed JS: <code>${step.evaluate}</code>`;
+				}
+
+				if (typeof step.drag !== "undefined") {
+					actionTaken = `Dragged ${step.drag}`;
+				}
+
+				echo(`
+					<div class="column">
+						<div class="content">
+							<a class="thumbnail" href="screenshots/${screenshotFilenamePrefix}.${step.name}.slide.png">
+								<img src="screenshots/${screenshotFilenamePrefix}.${step.name}.slide.png" alt="">
+							</a>
+							<h4>${actionTaken}</h4>
+						</div>
+					</div>
+				`);
+			});
+		%>
 	</div>
