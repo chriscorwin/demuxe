@@ -32,12 +32,16 @@
 				}
 
 				if (typeof step.evaluate !== "undefined") {
-					actionTaken = `Executed JS: <code>${step.evaluate}</code>`;
+					actionTaken = `Executed JS: <div><code>${step.evaluate}</code></div>`;
 				}
 
 				if (typeof step.drag !== "undefined") {
 					actionTaken = `Dragged ${step.drag}`;
 				}
+
+				if (actionTaken === '') { actionTaken = 'Did nothing'}
+
+				const waitedFor = (typeof step.waitFor === 'number') ? `${step.waitFor/1000} seconds` : `${step.waitFor} to load`;
 
 				echo(`
 					<div class="column">
@@ -45,7 +49,9 @@
 							<a class="thumbnail" href="screenshots/${screenshotFilenamePrefix}.${step.name}.slide.png">
 								<img src="screenshots/${screenshotFilenamePrefix}.${step.name}.slide.png" alt="">
 							</a>
-							<h4>${actionTaken}</h4>
+							<div>
+								${actionTaken} and waited for ${waitedFor}
+							</div>
 						</div>
 					</div>
 				`);
