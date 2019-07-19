@@ -5,7 +5,12 @@
   color: black;
 }
 
+#content {
+  max-width: initial;
+}
+
 .title {
+  text-align: left;
   position: absolute;
   font-size: 30px;
   top: 70px;
@@ -13,20 +18,30 @@
 }
 
 .desc {
+  text-align: left;
   position: absolute;
   font-size: 30px;
   top: 50px;
   left: 0px;
 }
 
+h3 {
+  font-size: 16px;
+}
+
 .row {
-  margin: 8px -1px;
+  margin: 15px 20px;
 }
 
 /* Add padding BETWEEN each column */
+#df, #connection {
+  width: 700px;
+  height: auto;
+}
+
 .row,
 .row > .column {
-  padding: 8px;
+  padding: 15px;
 }
 
 /* Create four equal columns that floats next to each other */
@@ -51,14 +66,14 @@
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {
-    width: 50%;
+    width: 100%;
   }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
-    width: 100%;
+    width: 50%;
   }
 }
 
