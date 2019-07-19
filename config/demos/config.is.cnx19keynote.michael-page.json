@@ -1,5 +1,9 @@
 {
 	"demoName": "IS Michael Page CNX 19 Keynote",
+	"description": "Interaction Studio Michael Page demo for Connections 2019 Keynote",
+	"venue": "Connections 2019",
+	"tags": ["Connections", "Keynote", "2019"],
+	"thumbnail": "/screenshots/is.cnx19keynote.michael-page.0011.lifecycles.loaded.slide.png",
 	"brandTheme": "michael-page",
 	"productTemplate": "is",
 	"demoVenue": "cnx19keynote",
