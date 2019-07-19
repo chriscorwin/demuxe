@@ -1,6 +1,6 @@
 module.exports = {
 	account_name: '',
-	appName: 'Prototype Library',
+	appName: 'Prototype Catalogue',
     body_class: 'slds-brand-band slds-brand-band_medium',
     header: {
 		favorites: { disabled: false },

@@ -1,14 +1,46 @@
-<h1>Dynamic SVG Dates POC</h1>
+<h1>Dynamic SVG Components POC (Localization for Magick Flows)</h1>
 <div style="float: left; width: 528px;"><h2>Original (as appears in Sketch)</h2>
 <img src="images/dyn-date-poc.png" /></div>
 <div style="float: left; width: 528px; margin-left: 20px;"><h2>Dynamically Converted based on SVG Text's ID</h2>
 <%- include('images/dyn-date-poc.svg'); %></div>
-
+<div style="float: left; width: 528px;">
+<img src="images/dyn-brand-poc.png" /></div>
+<div style="float: left; width: 528px; margin-left: 20px;">
+<%- include('images/dyn-brand-poc.svg'); %></div>
 
 <script src="javascripts/third-party-libraries/moment.js"></script>
 <script src="javascripts/third-party-libraries/moment.parse-format.js"></script>
 
 <script>
+	const locals = {localization: <%- JSON.stringify(locals.localization) %>};
+	const brandTextsToReplace = document.querySelectorAll('[id*="dyn-brand="]');
+
+	brandTextsToReplace.forEach((brandTextToReplaceWrapper) => {
+		const targetText = brandTextToReplaceWrapper.id.match(/dyn-brand=([a-zA-Z0-9\-]*)/);
+		let finalText;
+
+		switch (targetText[1]) {
+			case 'name':
+			case 'NAME':
+				finalText = locals.localization.NAME;
+				break;
+			case 'account_name':
+			case 'accountName':
+				finalText = locals.localization.account_name;
+				break;
+			case 'appName':
+				finalText = locals.localization.appName;
+				break;
+
+			default:
+
+		}
+
+		const brandTextToReplace = brandTextToReplaceWrapper.querySelector('tspan');
+
+		brandTextToReplace.textContent = finalText;
+	});
+
 	const datesToReplace = document.querySelectorAll('[id*="dyn-date="]');
 
 	datesToReplace.forEach((dateToReplaceWrapper) => {
@@ -76,7 +108,6 @@
 		}
 
 		const dateToReplace = dateToReplaceWrapper.querySelector('tspan');
-		const placeholderDate = dateToReplace.textContent;
 
 		const dateFormat = parseFormat(dateToReplace.textContent);
 

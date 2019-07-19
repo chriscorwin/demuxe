@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="528px" height="370px" viewBox="0 0 528 370" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>dyn-brand-poc</title>
+    <desc>Created with Sketch.</desc>
+    <g id="dyn-brand-poc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13.5" font-weight="bold">
+        <text id="dyn-brand=name" fill="#2B2826">
+            <tspan x="197" y="25">BBVA</tspan>
+        </text>
+        <text id="dyn-brand=appName" fill="#2B2826">
+            <tspan x="197" y="40">C360</tspan>
+        </text>
+        <text id="Brand-Name" fill="#2B2826">
+            <tspan x="106.518" y="25">Brand Name:</tspan>
+        </text>
+        <text id="Brand-Name-Copy" fill="#2B2826">
+            <tspan x="119.0595" y="40">App Name:</tspan>
+        </text>
+    </g>
+</svg>
