@@ -10,7 +10,8 @@
 <%
 // Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
 locals.availableDemoConfigs.forEach((demoConfig) => {
-	echo(`<div class="column">
+	echo(`
+	<div class="column">
 			<div class="content">
 				<a href="/details?demoName=${demoConfig.demoName}">
 					<img id="connection" src="${demoConfig.thumbnail}" alt="">
@@ -19,8 +20,9 @@ locals.availableDemoConfigs.forEach((demoConfig) => {
 				<p>${demoConfig.description}
 				</p>
 			</div>
-		</div>`);
-	});
+		</div>
+	`); 
+});
 %>
-	</div>
 </div>
+	</div>

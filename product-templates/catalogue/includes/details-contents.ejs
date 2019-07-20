@@ -6,55 +6,67 @@
 
 %>
 	<div class="header">
-		<img src="<%= demo.thumbnail %>" alt="">
+		<img class="thumb" src="DF18.png"  alt="">
 		<div class="title"><%= demo.demoName %>
 			<div class="slds-text-heading_large"><%= demo.description %></div>
 		</div>
-		<a href="<%= demo.production.host %>" class="slds-button">View Demo</a>
+		
 	</div>
+    
+    <div class="row">
+	
 
-	<div class="row">
-		<%
-			const screenshotFilenamePrefix = `${demo.productTemplate}.${demo.demoVenue}.${demo.brandTheme}`;
-			demo.demoFlow.steps.forEach((step) => {
-				let actionTaken = '';
-
-				if (typeof step.goto !== "undefined") {
-					actionTaken = `Went to ${step.goto}`;
-				}
-
-				if (typeof step.click !== "undefined") {
-					actionTaken = `Clicked ${step.click}`;
-				}
-
-				if (typeof step.hover !== "undefined") {
-					actionTaken = `Hovered ${step.hover}`;
-				}
-
-				if (typeof step.evaluate !== "undefined") {
-					actionTaken = `Executed JS: <div><code>${step.evaluate}</code></div>`;
-				}
-
-				if (typeof step.drag !== "undefined") {
-					actionTaken = `Dragged ${step.drag}`;
-				}
-
-				if (actionTaken === '') { actionTaken = 'Did nothing'}
-
-				const waitedFor = (typeof step.waitFor === 'number') ? `${step.waitFor/1000} seconds` : `${step.waitFor} to load`;
-
-				echo(`
-					<div class="column">
-						<div class="content">
-							<a class="thumbnail" href="screenshots/${screenshotFilenamePrefix}.${step.name}.slide.png">
-								<img src="screenshots/${screenshotFilenamePrefix}.${step.name}.slide.png" alt="">
-							</a>
-							<div>
-								${actionTaken} and waited for ${waitedFor}
-							</div>
-						</div>
-					</div>
-				`);
-			});
+        <%
+        const screenshotFilenamePrefix = `${demo.productTemplate}.${demo.demoVenue}.${demo.brandTheme}`;
+        demo.demoFlow.steps.forEach((step) => {
+            let actionTaken = '';
+            
+            if (typeof step.goto !== "undefined") {
+                actionTaken = `Went to ${step.goto}`;
+            }
+            
+            if (typeof step.click !== "undefined") {
+                actionTaken = `Clicked ${step.click}`;
+            }
+            
+            if (typeof step.hover !== "undefined") {
+                actionTaken = `Hovered ${step.hover}`;
+            }
+            
+            if (typeof step.evaluate !== "undefined") {
+                actionTaken = `Executed JS: <div><code>${step.evaluate}</code></div>`;
+            }
+            
+            if (typeof step.drag !== "undefined") {
+                actionTaken = `Dragged ${step.drag}`;
+            }
+            
+            if (actionTaken === '') { actionTaken = 'Did nothing'}
+            
+            const waitedFor = (typeof step.waitFor === 'number') ? `${step.waitFor/1000} seconds` : `${step.waitFor} to load`;
+            
+            echo(`
+                
+                <div class="column">
+                    <div class="content">
+                        <a href="screenshots/${screenshotFilenamePrefix}.${step.name}.slide.png">
+                            <img class="thumbnail" src="screenshots/${screenshotFilenamePrefix}.${step.name}.slide.png" alt="">
+                        </a>
+                        <div>
+                            ${actionTaken} and waited for ${waitedFor}
+                        </div>
+                    </div>
+                </div>
+            `);
+        });
 		%>
-	</div>
+    </div>
+	
+
+<button class="slds-button slds-button_neutral">
+    <a href="<%= demo.production.host %>" class="slds-button">View Demo</a>
+</button>
+
+<br>
+<br>
+<br>

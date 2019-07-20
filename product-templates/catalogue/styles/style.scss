@@ -13,6 +13,7 @@
     font-size: 30px;
     top: 70px;
     left: 30px;
+    color: white;
 }
 
 .desc{
@@ -26,18 +27,16 @@
 h3{
     font-size: 16px;
 }
+
   .row {
     margin: 15px 20px;
   }
   
   /* Add padding BETWEEN each column */
-  #df, #connection{
-      width: 700px;
-      height: auto;
-  }
+ 
   .row,
   .row > .column {
-    padding: 15px;
+    padding: 30px;
   }
   
   /* Create four equal columns that floats next to each other */
@@ -73,3 +72,16 @@ h3{
     }
   }
   
+ 
+  
+ .thumb{
+     
+     width: 1500px;
+     height: 300px;
+ }
+ 
+button{
+    float: right;
+    margin-right: 80px;
+    background-color: white;
+}
