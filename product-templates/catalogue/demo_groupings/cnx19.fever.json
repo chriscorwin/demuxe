@@ -1,0 +1,14 @@
+{
+	"id": "cnx19.fever",
+	// Can either be demo IDs or other group IDs
+	"demoIDs": [
+		"audience-360.cnx19keynote.fever",
+		"audience-studio.cnx19keynote.fever",
+		"is.cnx19keynote.fever"
+	],
+	"name": "Connections 2019 Fever Demos",
+	"description": "Salesforce Connections 2019 Fever Demos",
+	"longformDescription": "<p>Salesforce Connections 2019 Fever Demos Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"thumbnail": "",
+	"heroBanner": ""
+}
