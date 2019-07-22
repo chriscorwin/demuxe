@@ -18,6 +18,10 @@
   color: black;
 }
 
+#a {
+  color: white;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -93,8 +97,8 @@ button {
   background-color: white;
 }
 
-p {
-  padding: 20px;
+#overview {
+  padding: 30px;
   font-size: 15px;
 }
 
