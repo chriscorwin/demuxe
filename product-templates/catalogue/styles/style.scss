@@ -13,10 +13,10 @@
     font-size: 30px;
     top: 100px;
     left: 30px;
-    color: black;
+    color: white;
 }
 #a{
-    color: white;
+    color: black;
 }
 a{
     text-decoration: none;
@@ -29,7 +29,7 @@ a{
     text-align: left;
     position: absolute;
     font-size: 30px;
-    top: 50px;
+    top: 30px;
     left: 0px;
 }
 
@@ -83,10 +83,11 @@ h3{
   
  
   
- .thumb{
-     
+ #banner{
+    background-image: linear-gradient(black);
+	opacity: 1; 
      width: 1500px;
-     height: 300px;
+     height: 200px;
  }
  
 button{
@@ -97,4 +98,22 @@ button{
 #overview{
     padding: 30px;
     font-size: 15px;
+}
+#eventInfo{
+    padding: 12px;
+    background-color: aliceblue;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+#eventDesc{
+    padding: 12px;
+    background-color: aliceblue;
+    float: right;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+#overview{
+    display: inline-block;
+    padding: 5px;
 }
