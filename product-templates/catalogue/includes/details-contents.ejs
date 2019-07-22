@@ -46,7 +46,7 @@
 			echo(`</div>`);
 		}
 
-		if (demo.demoFlow) {
+		if (demo.demoFlow && demo.demoFlow.steps) {
 			echo(`<div class="row">`);
 
 			demo.demoFlow.steps.forEach((step) => {
