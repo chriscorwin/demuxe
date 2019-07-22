@@ -1,6 +1,6 @@
 {
 	"demoName": "Fever CNX 2019 Keynote",
-	"brandTheme": "fever",
+	"brandTheme": "Demuxe",
 	"productTemplate": "dashboard",
 	"demoVenue": "cnx19keynote",
 	"demoVersion": "0.1",
@@ -15,13 +15,13 @@
 	"env": "production",
 	"herokupipeline": "https://dashboard.heroku.com/pipelines/97d863d0-ea96-4a69-97dc-b6909895a3b6",
 	"production": {
-		"host": "https://cnx19-mc-fever.herokuapp.com/"
+		"host": "https://cnx19-mc-spotlight.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19-mc-fever-qa.herokuapp.com/"
+		"host": "https://cnx19-mc-spotlight-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://cnx19-mc-fever-dev.herokuapp.com/"
+		"host": "https://cnx19-mc-spotlight-qa.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
