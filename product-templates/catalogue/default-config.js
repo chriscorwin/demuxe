@@ -25,7 +25,7 @@ module.exports = {
 		setup: false,
 		notifications: false,
 		search: true,
-		hideSubheader: false,
+		hideSubheader: true,
 		// avatar: `/images/icons/Identity.svg`
 	},
 	navData: {
