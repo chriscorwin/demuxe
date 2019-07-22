@@ -1,6 +1,5 @@
 {
 	"id": "cnx19",
-	// Can either be demo IDs or other group IDs
 	"demoIDs": [
 		"cnx19keynote",
 		"cnx19.fever",
@@ -10,5 +9,6 @@
 	"description": "Salesforce Connections 2019",
 	"longformDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
 	"thumbnail": "",
-	"heroBanner": ""
+	"heroBanner": "",
+	"date": "June 17, 2019"
 }

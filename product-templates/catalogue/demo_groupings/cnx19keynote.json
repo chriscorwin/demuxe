@@ -1,6 +1,5 @@
 {
 	"id": "cnx19keynote",
-	// Can either be demo IDs or other group IDs
 	"demoIDs": [
 		"audience-360.cnx19keynote.fever",
 		"audience-360.cnx19keynote.pacers",
@@ -12,5 +11,6 @@
 	"description": "Salesforce Connections 2019 Keynotes",
 	"longformDescription": "<p>Salesforce Connections 2019 Keynotes Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
 	"thumbnail": "",
-	"heroBanner": ""
+	"heroBanner": "",
+	"date": "June 18, 2019 11am PDT"
 }
