@@ -16,7 +16,7 @@ demoGroups.sort((groupA, groupB) => groupA.date < groupB.date)
 
 module.exports = {
 	account_name: '',
-	appName: 'Prototype Library',
+	appName: 'Prototype Catalogue',
 	body_class: 'slds-brand-band slds-brand-band_medium',
 	header: {
 		favorites: { disabled: true },
@@ -30,7 +30,13 @@ module.exports = {
 	},
 	navData: {
 		accountNavItems: [],
-		navItems: []
+		navItems: [
+{
+				label: 'Overview',
+				href: `/`,
+				isActive: (activePage) => activePage === 'index'
+			}
+]
 	},
 	demoGroups
 };
