@@ -13,9 +13,18 @@
   text-align: left;
   position: absolute;
   font-size: 30px;
-  top: 70px;
+  top: 80px;
   left: 30px;
   color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.head {
+  color: black;
 }
 
 .desc {
@@ -82,6 +91,11 @@ button {
   float: right;
   margin-right: 80px;
   background-color: white;
+}
+
+p {
+  padding: 20px;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,51 @@
+<div class="header">
+		<img src="Screen Shot 2019-07-22 at 9.52.57 AM.png" alt="">
+		<div class="title">Prototype Library
+			<div class="slds-text-heading_large">Your newest Library to access <br> any demo you can imagine.</div>
+		</div>
+	</div>
+    <br>
+    <p>
+        nclusionemque et eam, vivendo principes vis ne, sed aperiam imperdiet an. Fastidii appetere urbanitas per ne, nec no
+        zril similique deseruisse. No duis fuisset mei. Te vim ancillae euripidis, eam ea probatus indoctum, an vero utinam
+        sed.
+        <br>
+        Ius et everti liberavisse, at qui aliquip Lorem ipsum dolor sit amet, nec id augue euripidis interpretaris, scripta
+        corrumpit vituperata qui no. Habeo ipsum copercipit. Postea vocent usu ea, eam lobortis maiestatis at. Sea eu
+        accusata temporibus instructior.
+        <br>
+        Elit fuisset tractatos eum te, in usu numquam fierent accusata, sed id blandit epicurei. Magna summo liberavisse ei
+        ius, ornatus accusam recusabo sit et, regione iuvaret et vim. An his euismod disputando, te iudicabit gubergren
+        appellantur sed. Eum in dico fugit, ex duo feugait abhorreant disputando. Ut error omittam sit, ad vero accusam
+        appetere mel, est at postea admodum.
+        <br>
+        Lorem ipsum dolor sit amet, cum everti fastidii conclusionemque cu, nam clita ocurreret reprehendunt eu. Te ceteros
+        eleifend qui, diam legimus ne duo, qui ex illud constituam. Ex eos veritus adipiscing, sea patrioque abhorreant
+        liberavisse ex. Vix suas utroque ancillae.
+        <br>
+        Vix repudiandae instructior id, sit ex tale intellegat moderatius. Quo eu autem adolescens, iudico abhorreant ei
+        pri, mea meliore vulputate comprehensam cu. Mel in interesset persequeris. No vero albucius petentium mel, etiam
+        ponderum eleifend duo eu, usu ex everti cetero. Ex nec nonumy vituperatoribus, wisi eirmod ocurreret vis in.
+    
+    </p>
+<div class="home">
+	<div class="row">
+<%
+// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
+locals.availableDemoConfigs.forEach((demoConfig) => {
+	echo(`
+	<div class="column">
+			<div class="content">
+				<a href="/details?demoName=${demoConfig.demoName}">
+					<img id="connection" src="${demoConfig.thumbnail}" alt="">
+				</a>
+				<h3>${demoConfig.demoName}</h3>
+				<p>${demoConfig.description}
+				</p>
+			</div>
+		</div>
+	`); 
+});
+%>
+</div>
+	</div>

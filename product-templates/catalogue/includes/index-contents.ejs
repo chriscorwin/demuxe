@@ -1,28 +1,46 @@
 <div class="header">
-		<img src="Screen Shot 2019-07-11 at 12.35.16 PM.png" alt="">
+	<img src="Screen Shot 2019-07-11 at 12.35.16 PM.png" alt="">
+	<div class="head">
 		<div class="title">Prototype Library
 			<div class="slds-text-heading_large">Your newest Library to access <br> any demo you can imagine.</div>
 		</div>
 	</div>
+</div>
 
 <div class="home">
 	<div class="row">
-<%
-// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
-locals.availableDemoConfigs.forEach((demoConfig) => {
-	echo(`
-	<div class="column">
-			<div class="content">
-				<a href="/details?demoName=${demoConfig.demoName}">
-					<img id="connection" src="${demoConfig.thumbnail}" alt="">
-				</a>
-				<h3>${demoConfig.demoName}</h3>
-				<p>${demoConfig.description}
-				</p>
-			</div>
+		<div class="column">
+			<a href="overview">
+				<div class="content">
+					<img src="connection.png" alt="Mountains" style="width:100%">
+					<h3>Connections</h3>
+					<p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas
+						oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+			</a>
 		</div>
-	`); 
-});
-%>
-</div>
 	</div>
+	<div class="column">
+		<div class="content">
+			<img src="connection.png" alt="Lights" style="width:100%">
+			<h3>Dreamforce</h3>
+			<p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat
+				nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+		</div>
+	</div>
+	<div class="column">
+		<div class="content">
+			<img src="connection.png" alt="Nature" style="width:100%">
+			<h3>Laulima</h3>
+			<p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat
+				nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+		</div>
+	</div>
+	<div class="column">
+		<div class="content">
+			<img src="connection.png" alt="Mountains" style="width:100%">
+			<h3>Innovation Summit</h3>
+			<p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat
+				nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+		</div>
+	</div>
+</div>
