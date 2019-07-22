@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="528px" height="370px" viewBox="0 0 528 370" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>dyn-date-poc</title>
+    <desc>Created with Sketch.</desc>
+    <g id="dyn-date-poc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13.5" font-weight="bold">
+        <text id="dyn-date=today" fill="#2B2826">
+            <tspan x="197" y="25">July 3rd, 2019</tspan>
+        </text>
+        <text id="dyn-date=today-copy" fill="#2B2826">
+            <tspan x="335" y="25">7/3/18</tspan>
+        </text>
+        <text id="Today:" fill="#2B2826">
+            <tspan x="148.827" y="25">Today:</tspan>
+        </text>
+        <text id="dyn-date=yesterday" fill="#2B2826">
+            <tspan x="197" y="43">July 3rd, 2019</tspan>
+        </text>
+        <text id="dyn-date=yesterday" fill="#2B2826">
+            <tspan x="335" y="43">7/3/18</tspan>
+        </text>
+        <text id="Yesterday:" fill="#2B2826">
+            <tspan x="124.608" y="43">Yesterday:</tspan>
+        </text>
+        <text id="dyn-date=oneWeekAgo" fill="#2B2826">
+            <tspan x="197" y="62">July 3rd, 2019</tspan>
+        </text>
+        <text id="dyn-date=oneWeekAgo" fill="#2B2826">
+            <tspan x="335" y="62">7/3/18</tspan>
+        </text>
+        <text id="One-Week-Ago:" fill="#2B2826">
+            <tspan x="91.0875" y="62">One Week Ago:</tspan>
+        </text>
+        <text id="dyn-date=twoWeeksAgo" fill="#2B2826">
+            <tspan x="197" y="80">July 3rd, 2019</tspan>
+        </text>
+        <text id="dyn-date=twoWeeksAgo" fill="#2B2826">
+            <tspan x="335" y="80">07/03/2018</tspan>
+        </text>
+        <text id="twoWeeksAgo" fill="#2B2826">
+            <tspan x="85.053" y="80">Two Weeks Ago:</tspan>
+        </text>
+        <text id="dyn-date=threeWeeksAgo" fill="#2B2826">
+            <tspan x="197" y="99">July 3rd, 2019</tspan>
+        </text>
+        <text id="dyn-date=threeWeeksAgo" fill="#2B2826">
+            <tspan x="335" y="99">Jul 3rd ‘19</tspan>
+        </text>
+        <text id="Three-Weeks-Ago:" fill="#2B2826">
+            <tspan x="75.009" y="99">Three Weeks Ago:</tspan>
+        </text>
+        <text id="dyn-date=fourWeeksAgo" fill="#2B2826">
+            <tspan x="197" y="117">July 3rd, 2019</tspan>
+        </text>
+        <text id="dyn-date=fourWeeksAgo" fill="#2B2826">
+            <tspan x="335" y="117">July 3, 2019</tspan>
+        </text>
+        <text id="Four-Weeks-Ago:" fill="#2B2826">
+            <tspan x="82.2855" y="117">Four Weeks Ago:</tspan>
+        </text>
+        <text id="dyn-date=oneMonthAgo" fill="#2B2826">
+            <tspan x="197" y="136">July 3rd, 2019</tspan>
+        </text>
+        <text id="dyn-date=oneMonthAgo" fill="#2B2826">
+            <tspan x="335" y="136">3rd of July 2019</tspan>
+        </text>
+        <text id="One-Month-Ago:" fill="#2B2826">
+            <tspan x="84.567" y="136">One Month Ago:</tspan>
+        </text>
+        <text id="dyn-date=twoMonthsAgo" fill="#2B2826">
+            <tspan x="197" y="154">July 3rd, 2019</tspan>
+        </text>
+        <text id="Two-Months-Ago" fill="#2B2826">
+            <tspan x="78.5325" y="154">Two Months Ago:</tspan>
+        </text>
+        <text id="dyn-date=threeMonthsAgo" fill="#2B2826">
+            <tspan x="197" y="173">July 3rd, 2019</tspan>
+        </text>
+        <text id="Two-Months-Ago" fill="#2B2826">
+            <tspan x="68.4885" y="173">Three Months Ago:</tspan>
+        </text>
+        <text id="dyn-date=fourMonthsAgo" fill="#2B2826">
+            <tspan x="197" y="191">July 3rd, 2019</tspan>
+        </text>
+        <text id="Four-Months-Ago" fill="#2B2826">
+            <tspan x="75.765" y="191">Four Months Ago:</tspan>
+        </text>
+        <text id="Note-that-this-one-i" fill="#2B2826">
+            <tspan x="354" y="173">Note that this one is </tspan>
+            <tspan x="354" y="192">buggy! Using this date </tspan>
+            <tspan x="354" y="211">format is not </tspan>
+            <tspan x="354" y="230">recommended.</tspan>
+        </text>
+        <text id="dyn-date=oneYearAgo" fill="#2B2826">
+            <tspan x="197" y="209">July 3rd, 2019</tspan>
+        </text>
+        <text id="One-Year-Ago:" fill="#2B2826">
+            <tspan x="99.255" y="209">One Year Ago:</tspan>
+        </text>
+        <text id="dyn-date=aboutOneMonthAgo" fill="#2B2826">
+            <tspan x="197" y="228">July 3rd, 2019</tspan>
+        </text>
+        <text id="About-One-Month-Ago:" fill="#2B2826">
+            <tspan x="40.9215" y="228">About One Month Ago:</tspan>
+        </text>
+        <text id="dyn-date=aboutTwoMonthsAgo" fill="#2B2826">
+            <tspan x="197" y="246">July 3rd, 2019</tspan>
+        </text>
+        <text id="About-Two-Months-Ago" fill="#2B2826">
+            <tspan x="34.887" y="246">About Two Months Ago:</tspan>
+        </text>
+        <text id="dyn-date=aboutThreeMonthsAgo" fill="#2B2826">
+            <tspan x="197" y="265">July 3rd, 2019</tspan>
+        </text>
+        <text id="About-Three-Months-A" fill="#2B2826">
+            <tspan x="24.843" y="265">About Three Months Ago:</tspan>
+        </text>
+        <text id="dyn-date=aboutFourMonthsAgo" fill="#2B2826">
+            <tspan x="197" y="283">July 3rd, 2019</tspan>
+        </text>
+        <text id="About-Four-Months-Ag" fill="#2B2826">
+            <tspan x="32.1195" y="283">About Four Months Ago:</tspan>
+        </text>
+        <text id="dyn-date=firstDayThisMonth" fill="#2B2826">
+            <tspan x="197" y="302">July 3rd, 2019</tspan>
+        </text>
+        <text id="First-Day-This-Month" fill="#2B2826">
+            <tspan x="54.9075" y="302">First Day This Month:</tspan>
+        </text>
+        <text id="dyn-date=firstDayLastMonth" fill="#2B2826">
+            <tspan x="197" y="320">July 3rd, 2019</tspan>
+        </text>
+        <text id="First-Day-Last-Month" fill="#2B2826">
+            <tspan x="54.9345" y="320">First Day Last Month:</tspan>
+        </text>
+        <text id="dyn-date=lastDayLastMonth" fill="#2B2826">
+            <tspan x="197" y="339">July 3rd, 2019</tspan>
+        </text>
+        <text id="Last-Day-Last-Month:" fill="#2B2826">
+            <tspan x="56.7975" y="339">Last Day Last Month:</tspan>
+        </text>
+        <text id="nothing" fill="#2B2826">
+            <tspan x="197" y="357">July 3rd, 2019</tspan>
+        </text>
+        <text id="Non-Dynamic:" fill="#2B2826">
+            <tspan x="99.5925" y="357">Non-Dynamic:</tspan>
+        </text>
+        <text id="dyn-date=twoMonthsAgo" fill="#2B2826">
+            <tspan x="335" y="154">7-3-19</tspan>
+        </text>
+    </g>
+</svg>

@@ -27,22 +27,9 @@
 </div>
 <div class="home">
     <div class="row">
-        <%
-// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
-locals.availableDemoConfigs.forEach((demoConfig) => {
-	echo(`
-	<div class="column">
-			<div class="content">
-				<a href="/details?demoName=${demoConfig.demoName}">
-					<img id="connection" src="${demoConfig.thumbnail}" alt="">
-				</a>
-				<h3>${demoConfig.demoName}</h3>
-				<p>${demoConfig.description}
-				</p>
-			</div>
-		</div>
-	`); 
-});
-%>
+		<%
+			// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
+			locals.localization.demoGroups.forEach((demoConfig) => echo(include('includes/demo-thumb', demoConfig)));
+		%>
     </div>
 </div>
