@@ -31,12 +31,12 @@ module.exports = {
 	navData: {
 		accountNavItems: [],
 		navItems: [
-{
+			{
 				label: 'Overview',
 				href: `/`,
 				isActive: (activePage) => activePage === 'index'
 			}
-]
+		]
 	},
 	demoGroups
 };

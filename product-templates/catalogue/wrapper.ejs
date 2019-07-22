@@ -7,16 +7,20 @@
 </head>
 
 <body>
-		<%- include('includes/header') %>
-		
-		<div id="content-wrapper">
-			<div id="content" class="slds-container_large">
-				<%- include(`${locals.pageContents}`) %>
-			</div>
-	
+	<%- include('includes/header') %>
+
+	<div id="content-wrapper">
+		<div id="content" class="slds-container_large">
+			<%- include(`${locals.pageContents}`) %>
 		</div>
 
+	</div>
 
+	<script type="text/javascript">
+		const navigatePage = ( url ) => {
+			window.location.href = url;
+		}
+	</script>
 </body>
 
 </html>
