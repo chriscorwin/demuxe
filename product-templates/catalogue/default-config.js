@@ -6,13 +6,14 @@ module.exports = {
 		favorites: { disabled: false },
 		global_actions: false,
 		help: true,
-		setup: false,
-		notifications: false,
+		setup: true,
+		notifications: true,
 		search: true,
 		hideSubheader: false,
 		// avatar: `/images/icons/Identity.svg`
 	},
 	navData: {
 		accountNavItems: [],
-		navItems: [ ]}
+		navItems: []
+	}
 };
