@@ -28,7 +28,7 @@ _%>
 	console.log('demo.demoFlow', demo.demoFlow);
 
 
-	const bannerImagesArray = ["yellow.png", "dark-grey.png", "med-grey.png", "banner.png"]
+	const bannerImagesArray = ["banner.png"]
 	function imgRandom(imgArr) {
 		return imgArr[Math.floor(Math.random() * imgArr.length)];
 	}
@@ -39,14 +39,12 @@ _%>
 	}
 
 %>
+
 <div class="header">
 	<img id="details-page-header-banner_image" class="thumb" src="<%= demuxe_detailsPageHeaderBannerImageSrc %>" alt="">
-	<div id="details-page-header-banner_name" class="title"><%= demo.name %>
-		<div id="details-page-header-banner_description" class="slds-text-heading_large"><%= demo.description %></div>
+	<div id="details-page-header-banner_name" class="title">Prototype Library
+		<div id="details-page-header-banner_description" class="slds-text-heading_large">Your newest Library to access <br> any demo you can imagine.</div>
 	</div>
-	<button class="slds-button slds-button_neutral">
-		<a href="<%= demo.production && demo.production.host %>" class="slds-button">View Demo</a>
-	</button>
 </div>
 
 
