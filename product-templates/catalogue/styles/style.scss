@@ -12,7 +12,7 @@
     position: absolute;
     font-size: 30px;
     top: 100px;
-    left: 30px;
+    left: 50px;
     color: white;
 }
 #a{
@@ -37,15 +37,21 @@ h3{
     font-size: 16px;
 }
 
+  /* Center website */
+.home {
+    max-width: 1000;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
   .row {
-    margin: 15px 20px;
+    margin: 8px -16px;
   }
   
   /* Add padding BETWEEN each column */
- 
   .row,
   .row > .column {
-    padding: 30px;
+    padding: 8px;
   }
   
   /* Create four equal columns that floats next to each other */
@@ -64,23 +70,23 @@ h3{
   /* Content */
   .content {
     background-color: white;
-    padding: 10px;
+    padding: 5px;
+    
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 900px) {
     .column {
-      width: 100%;
+      width: 50%;
     }
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column {
-      width: 50%;
+      width: 100%;
     }
   }
-  
  
   
  #banner{
@@ -112,8 +118,4 @@ button{
     float: right;
     border: 2px solid black;
     border-radius: 4px;
-}
-#overview{
-    display: inline-block;
-    padding: 5px;
 }

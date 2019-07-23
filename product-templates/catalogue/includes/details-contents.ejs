@@ -19,79 +19,79 @@
 
 %>
 <div class="header">
-	<img class="thumb" src="DF18.png" alt="">
 	<div id="a" class="title"><%= demo.name %>
 		<div class="slds-text-heading_large"><%= demo.description %></div>
 	</div>
-	<button class="slds-button slds-button_neutral">
-		<a href="<%= demo.production && demo.production.host %>" class="slds-button">View Demo</a>
-	</button>
 </div>
 <div>
-	<%- demo.longDescription %>
+    <%- demo.longDescription %>
 </div>
 
-	<%
-		if (demo.demoIDs) {
-			echo(`<div class="row">`);
-
-			demo.demoIDs.forEach((demo) => {
-				let demoConfig = locals.availableDemoConfigs.find((possibleMatch) => possibleMatch.id === demo);
-
-				if(demoConfig) {
-					echo(include('includes/demo-thumb', demoConfig))
-				}
-			});
-
-			echo(`</div>`);
-		}
-
-		if (demo.demoFlow && demo.demoFlow.steps) {
-			echo(`<div class="row">`);
-
-			demo.demoFlow.steps.forEach((step) => {
-				let actionTaken = '';
-
+<%
+if (demo.demoIDs) {
+    echo(`<div class="row">`);
+        
+        demo.demoIDs.forEach((demo) => {
+            let demoConfig = locals.availableDemoConfigs.find((possibleMatch) => possibleMatch.id === demo);
+            
+            if(demoConfig) {
+                echo(include('includes/demo-thumb', demoConfig))
+            }
+        });
+        
+        echo(`</div>`);
+    }
+    
+    if (demo.demoFlow && demo.demoFlow.steps) {
+        echo(`<div class="row">`);
+            
+            demo.demoFlow.steps.forEach((step) => {
+                let actionTaken = '';
+                
 				if (typeof step.goto !== "undefined") {
-					actionTaken = `Went to ${step.goto}`;
+                    actionTaken = `Went to ${step.goto}`;
 				}
-
+                
 				if (typeof step.click !== "undefined") {
-					actionTaken = `Clicked ${step.click}`;
+                    actionTaken = `Clicked ${step.click}`;
 				}
-
+                
 				if (typeof step.hover !== "undefined") {
-					actionTaken = `Hovered ${step.hover}`;
+                    actionTaken = `Hovered ${step.hover}`;
 				}
-
+                
 				if (typeof step.evaluate !== "undefined") {
-					actionTaken = `Executed JS: <div><code>${step.evaluate}</code></div>`;
+                    actionTaken = `Executed JS: <div><code>${step.evaluate}</code></div>`;
 				}
-
+                
 				if (typeof step.drag !== "undefined") {
-					actionTaken = `Dragged ${step.drag}`;
+                    actionTaken = `Dragged ${step.drag}`;
 				}
-
+                
 				if (actionTaken === '') { actionTaken = 'Did nothing'}
-
+                
 				const waitedFor = (typeof step.waitFor === 'number') ? `${step.waitFor/1000} seconds` : `${step.waitFor} to load`;
-
+                
 				echo(`
-
-					<div class="column">
-						<div class="content">
-							<a href="screenshots/${demo.id}.${step.name}.slide.png">
-								<img class="thumbnail" src="screenshots/${demo.id}.${step.name}.slide.png" alt="">
-							</a>
-							<div>
-								${actionTaken} and waited for ${waitedFor}
-							</div>
-						</div>
-					</div>
+                
+                <div class="column">
+                    <div class="content">
+                        <a href="screenshots/${demo.id}.${step.name}.slide.png">
+                            <img id="banner" src="screenshots/${demo.id}.${step.name}.slide.png" alt="">
+                        </a>
+                        <div>
+                            ${actionTaken} and waited for ${waitedFor}
+                        </div>
+                    </div>
+                </div>
 				`);
 			});
-
+            
 			echo(`</div>`);
 		}
 		%>
-</div>
+    </div>
+    
+    <button class="slds-button slds-button_neutral">
+        <a href="<%= demo.production && demo.production.host %>" class="slds-button">View Demo</a>
+    </button>

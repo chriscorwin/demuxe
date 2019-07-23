@@ -27,9 +27,11 @@
 </div>
 <div class="home">
     <div class="row">
-		<%
+        <div class="content">
+            <%
 			// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
 			locals.localization.demoGroups.forEach((demoConfig) => echo(include('includes/demo-thumb', demoConfig)));
-		%>
+            %>
+        </div>
     </div>
 </div>
