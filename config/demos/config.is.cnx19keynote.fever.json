@@ -5,7 +5,7 @@
 	"longDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
 	"venue": "Connections 2019",
 	"tags": ["Connections", "Keynote", "2019"],
-	"thumbnail": "DF18.png",
+	"thumbnail": "/images/DF18.png",
 	"brandTheme": "fever",
 	"productTemplate": "is",
 	"demoVenue": "cnx19keynote",
