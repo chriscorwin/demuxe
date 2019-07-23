@@ -5,7 +5,8 @@
     color: black;
   }
  #content{
-     max-width: initial;
+     // max-width: initial;
+     // We should use SLDS margin/padding utilities here instead.
  } 
 .title {
     text-align: left;
