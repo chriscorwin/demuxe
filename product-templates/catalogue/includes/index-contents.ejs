@@ -35,7 +35,7 @@ _%>
 	let demuxe_detailsPageHeaderBannerImageSrc = imgRandom(bannerImagesArray);
 
 	if (targetDemoID === 'cnx19keynote') {
-		demuxe_detailsPageHeaderBannerImageSrc = 'connection.png';
+		demuxe_detailsPageHeaderBannerImageSrc = '/images/connection.png';
 	}
 
 %>
@@ -49,34 +49,39 @@ _%>
 
 
 
-<div class="home">
-	<div class="row">
-		<%
+<div class="slds-m-around_x-large">
+
+	<div class="demo-catalogue_thumbnails">
+
+		<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">
+
+			<%
 
 
-		// Build the rendered HTML piece by piece -- we will render it all at once later
-		let allDemoThumbsHtmlOut = ``;
-		// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
-		locals.localization.demoGroups.forEach((demoConfig) => {
+			// Build the rendered HTML piece by piece -- we will render it all at once later
+			let allDemoThumbsHtmlOut = ``;
+			// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
+			locals.localization.demoGroups.forEach((demoConfig) => {
 
-			// Buld this card piece-by-piece
-			let demoThumbHtmlOut = ``;
+				// Buld this card piece-by-piece
+				let demoThumbHtmlOut = ``;
 
-			// We may need to conditionally show demo thumbnails based on some filter, best account for that now.
-			// const showDemoThumb = node.showDemoThumb === true || false;
-			const showDemoThumb = true;
+				// We may need to conditionally show demo thumbnails based on some filter, best account for that now.
+				// const showDemoThumb = node.showDemoThumb === true || false;
+				const showDemoThumb = true;
 
-			if ( showDemoThumb === true ) {
-				demoThumbHtmlOut += include('includes/demo-thumb', demoConfig);
-			}
+				if ( showDemoThumb === true ) {
+					demoThumbHtmlOut += include('includes/demo-thumb', demoConfig);
+				}
 
-			allDemoThumbsHtmlOut += demoThumbHtmlOut;
-		});
+				allDemoThumbsHtmlOut += demoThumbHtmlOut;
+			});
 
 
 
-		echo(`${allDemoThumbsHtmlOut}`);
-		%>
+			echo(`${allDemoThumbsHtmlOut}`);
+			%>
+		</div>
 	</div>
 </div>
 

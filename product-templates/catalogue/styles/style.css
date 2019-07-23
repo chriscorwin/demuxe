@@ -1,12 +1,6 @@
 /* Your styles here */
 .header {
-  position: relative;
-  text-align: center;
-  color: black;
-}
-
-#content {
-  max-width: initial;
+  background-image: image(src= "connection.png");
 }
 
 .title {
@@ -45,16 +39,6 @@ h3 {
 }
 
 /* Center website */
-.home {
-  max-width: 1000;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.row {
-  margin: 8px -16px;
-}
-
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
@@ -94,6 +78,11 @@ h3 {
   }
 }
 
+.thumb {
+  width: 1500px;
+  height: 300px;
+}
+
 #banner {
   background-image: linear-gradient(black);
   opacity: 1;
@@ -105,27 +94,6 @@ button {
   float: right;
   margin-right: 80px;
   background-color: white;
-}
-
-#overview {
-  padding: 30px;
-  font-size: 15px;
-}
-
-#eventInfo {
-  padding: 12px;
-  background-color: aliceblue;
-  width: 300px;
-  border: 2px solid black;
-  border-radius: 4px;
-}
-
-#eventDesc {
-  padding: 12px;
-  background-color: aliceblue;
-  float: right;
-  border: 2px solid black;
-  border-radius: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
