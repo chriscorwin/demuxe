@@ -4,10 +4,7 @@
 	let demo = locals.availableDemoConfigs.find((demo) => demo.id === targetDemoID);
 
 	if (!demo) {
-		demo = locals.localization.demoGroups.find((demo) => {
-			console.log(demo.id, targetDemoID, demo.id === targetDemoID);
-			return demo.id === targetDemoID
-		});
+		demo = locals.localization.demoGroups.find((demo) => demo.id === targetDemoID);
 	}
 
 	if (!demo) {
@@ -15,23 +12,9 @@
 		demo = locals.availableDemoConfigs[0];
 	}
 
-	console.log('demo.demoFlow', demo.demoFlow);
-
-
-
-	let demuxe_detailsPageHeaderBannerImageSrc = 'banner.png';
-
-
-	if (targetDemoID === 'cnx19keynote') {
-		demuxe_detailsPageHeaderBannerImageSrc = 'connection.png';
-	}
-
-		demuxe_detailsPageHeaderBannerImageSrc = demo.thumbnail;
-
-
 %>
 <div class="header">
-	<img id="details-page-header-banner_image" class="thumb" src="<%= demuxe_detailsPageHeaderBannerImageSrc %>" alt="">
+	<%- (demo.heroBanner) ? `<img id="details-page-header-banner_image" class="thumb" src="${demo.heroBanner}" alt="">` : '' %>
 	<div id="details-page-header-banner_name" class="title"><%= demo.name %>
 		<div id="details-page-header-banner_description" class="slds-text-heading_large"><%= demo.description %></div>
 	</div>
@@ -45,7 +28,7 @@
         <h3>Where</h3>
         <p>Chicago, Illinois</p>
         <h3>Brands</h3>
-        <p>Indiana Pacers, Indiana Fever, Michael Page, 
+        <p>Indiana Pacers, Indiana Fever, Michael Page,
            <br> Northern Trail Outfitters</p>
         <h3>Presenters</h3>
         <p>Eric Stahl, Katrin Rabant, Christy Poulos, </p>
@@ -81,29 +64,29 @@
 				if (typeof step.goto !== "undefined") {
                     actionTaken = `Went to ${step.goto}`;
 				}
-                
+
 				if (typeof step.click !== "undefined") {
                     actionTaken = `Clicked ${step.click}`;
 				}
-                
+
 				if (typeof step.hover !== "undefined") {
                     actionTaken = `Hovered ${step.hover}`;
 				}
-                
+
 				if (typeof step.evaluate !== "undefined") {
                     actionTaken = `Executed JS: <div><code>${step.evaluate}</code></div>`;
 				}
-                
+
 				if (typeof step.drag !== "undefined") {
                     actionTaken = `Dragged ${step.drag}`;
 				}
-                
+
 				if (actionTaken === '') { actionTaken = 'Did nothing'}
-                
+
 				const waitedFor = (typeof step.waitFor === 'number') ? `${step.waitFor/1000} seconds` : `${step.waitFor} to load`;
-                
+
 				echo(`
-                
+
                 <div class="column">
                     <div class="content">
                         <a href="screenshots/${demo.id}.${step.name}.slide.png">
@@ -116,12 +99,12 @@
                 </div>
 				`);
 			});
-            
+
 			echo(`</div>`);
 		}
 		%>
     </div>
-    
+
     <button class="slds-button slds-button_neutral">
         <a href="<%= demo.production && demo.production.host %>" class="slds-button">View Demo</a>
     </button>

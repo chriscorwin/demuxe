@@ -6,6 +6,6 @@
 	"description": "Salesforce Innovation Summit 2019 Demos",
 	"longformDescription": "<p>Salesforce Innovation Summit 2019 Demos Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
 	"thumbnail": "connection.png",
-	"heroBanner": "",
+	"heroBanner": "connection.png",
 	"date": "June 18, 2019 11am PDT"
 }
