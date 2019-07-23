@@ -8,6 +8,10 @@
 	}
 
 	if (!demo) {
+		demo = locals.magickFlows[targetDemoID] && locals.magickFlows[targetDemoID].metaData;
+	}
+
+	if (!demo) {
 		console.log('NOTHING FOUND!!!!!')
 		demo = locals.availableDemoConfigs[0];
 	}
@@ -52,10 +56,7 @@
 
 				if (!demoConfig) demoConfig = locals.localization.demoGroups.find((possibleMatch) => possibleMatch.id === demo);
 
-				if (!demoConfig) {
-					demoConfig = locals.magickFlows[demo].metaData;
-					console.log('magickflows demoConfig', demoConfig);
-				}
+				if (!demoConfig) demoConfig = locals.magickFlows[demo].metaData;
 
 
 				if(demoConfig) {
