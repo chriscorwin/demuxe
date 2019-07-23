@@ -27,9 +27,26 @@
 		<a href="<%= demo.production && demo.production.host %>" class="slds-button">View Demo</a>
 	</button>
 </div>
-<div>
-	<%- demo.longDescription %>
+
+
+<div id="overview">
+    <div id="eventInfo">
+        <h3>When</h3>
+        <p>June 16th, 2019 - June 19th, 2019</p>
+        <h3>Where</h3>
+        <p>Chicago, Illinois</p>
+        <h3>Brands</h3>
+        <p>Indiana Pacers, Indiana Fever, Michael Page, 
+           <br> Northern Trail Outfitters</p>
+        <h3>Presenters</h3>
+        <p>Eric Stahl, Katrin Rabant, Christy Poulos, </p>
+    </div>
+    <div id="eventDesc">
+		<%- demo.longformDescription %>
+    </div>
 </div>
+
+
 
 	<%
 		if (demo.demoIDs) {

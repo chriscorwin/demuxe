@@ -1,3 +1,14 @@
+<%
+console.group(`
+============================================================
+Demuxe: including \`product-templates/catalogue/includes/index-contents.ejs\` now...
+------------------------------------------------------------
+`);
+
+_%>
+
+
+
 <div class="header">
 	<img src="banner.png" alt="">
 	<div class="head">
@@ -7,12 +18,15 @@
 	</div>
 </div>
 
+
+
 <div class="home">
 	<div class="row">
 		<%
-		console.dir(locals.localization);
 		// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
 		locals.localization.demoGroups.forEach((demoConfig) => {
+
+
 			echo(`
 				<div class="column">
 					<div class="content">
@@ -28,3 +42,13 @@
 		%>
 	</div>
 </div>
+
+
+
+
+<%
+console.log(`...end \`product-templates/catalogue/includes/index-contents.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>
