@@ -50,6 +50,14 @@
 			demo.demoIDs.forEach((demo) => {
 				let demoConfig = locals.availableDemoConfigs.find((possibleMatch) => possibleMatch.id === demo);
 
+				if (!demoConfig) demoConfig = locals.localization.demoGroups.find((possibleMatch) => possibleMatch.id === demo);
+
+				if (!demoConfig) {
+					demoConfig = locals.magickFlows[demo].metaData;
+					console.log('magickflows demoConfig', demoConfig);
+				}
+
+
 				if(demoConfig) {
 					echo(include('includes/demo-thumb', demoConfig))
 				}

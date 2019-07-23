@@ -5,7 +5,11 @@
 		"audience-360.cnx19keynote.pacers",
 		"audience-studio.cnx19keynote.fever",
 		"is.cnx19keynote.fever",
-		"is.cnx19keynote.michael-page"
+		"is.cnx19keynote.michael-page",
+		"as-fever",
+		"advertising-studio-mp",
+		"cnx19.fever",
+		"cnx19.pacers"
 	],
 	"name": "Connections 2019 Keynotes",
 	"description": "Salesforce Connections 2019 Keynotes",

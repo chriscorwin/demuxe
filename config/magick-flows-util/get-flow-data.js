@@ -28,7 +28,23 @@ function dynamicSassHandleError(data){
 }
 
 
+const noMetaDataError = (error, name, fullContentPath) => {
+	if ( error.message.includes('ENOENT: no such file or directory')) {
+		console.error(`
+[ ERROR IN: \`config/magick-flows-util/get-flow-data.js:10\`]
 
+Magick Flow URL Slug: \`${name}\`.
+
+The app is attempting to render a Magick Flow at:
+
+${fullContentPath}
+
+...and did not find meta data there.
+		`);
+	} else {
+		console.warn(error);
+	}
+}
 
 const noFileError = (error, name, fullContentPath) => {
 	if ( error.message.includes('ENOENT: no such file or directory')) {
@@ -234,6 +250,7 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 
 	let flowData = {
 		assets: [],
+		metaData: {},
 		stepMetaData: [],
 		name: subFileOrDirectory,
 		path: path.join(fileOrDirectoryPath, subFileOrDirectory),
@@ -243,6 +260,12 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 		steps: [],
 		templateSizingFileDimensions
 	};
+
+	try {
+		flowData.metaData = require(path.join(fileOrDirectoryPath, subFileOrDirectory, 'meta_data.json'));
+	} catch (e) {
+		noMetaDataError(e, flowData.name, flowData.fullContentPath);
+	}
 
 	try {
 		flowData.steps = getFiles(flowData.fullContentPath).sort(sortAlphaNum);
