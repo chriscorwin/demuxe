@@ -5,7 +5,7 @@
 	"name": "Laulima 2019",
 	"description": "Salesforce Laulima 2019",
 	"longformDescription": "<p>Salesforce Laulima 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
-	"thumbnail": "/images/connection.png",
-	"heroBanner": "",
+	"thumbnail": "/images/banner-2.png",
+	"heroBanner": "/images/banner-2.png",
 	"date": "August 9, 2019"
 }

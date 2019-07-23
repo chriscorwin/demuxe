@@ -4,10 +4,7 @@
 	let demo = locals.availableDemoConfigs.find((demo) => demo.id === targetDemoID);
 
 	if (!demo) {
-		demo = locals.localization.demoGroups.find((demo) => {
-			console.log(demo.id, targetDemoID, demo.id === targetDemoID);
-			return demo.id === targetDemoID
-		});
+		demo = locals.localization.demoGroups.find((demo) => demo.id === targetDemoID);
 	}
 
 	if (!demo) {
@@ -15,30 +12,9 @@
 		demo = locals.availableDemoConfigs[0];
 	}
 
-	console.log('demo.demoFlow', demo.demoFlow);
-
-
-	const bannerImagesArray = ["/images/banner.png", "/images/banner-2.png", "/images/banner-3.png"]
-	function imgRandom(imgArr) {
-		return imgArr[Math.floor(Math.random() * imgArr.length)];
-	}
-	let demuxe_detailsPageHeaderBannerImageSrc = imgRandom(bannerImagesArray);
-
-	if (targetDemoID === 'cnx19keynote') {
-		demuxe_detailsPageHeaderBannerImageSrc = 'connection.png';
-	}
-
-
-
-
-
-
-		demuxe_detailsPageHeaderBannerImageSrc = demo.thumbnail;
-
-
 %>
 <div class="header">
-	<img id="details-page-header-banner_image" class="thumb" src="<%= demuxe_detailsPageHeaderBannerImageSrc %>" alt="">
+	<%- (demo.heroBanner) ? `<img id="details-page-header-banner_image" class="thumb" src="${demo.heroBanner}" alt="">` : '' %>
 	<div id="details-page-header-banner_name" class="title"><%= demo.name %>
 		<div id="details-page-header-banner_description" class="slds-text-heading_large"><%= demo.description %></div>
 	</div>
@@ -56,7 +32,7 @@
         <h3>Where</h3>
         <p>Chicago, Illinois</p>
         <h3>Brands</h3>
-        <p>Indiana Pacers, Indiana Fever, Michael Page, 
+        <p>Indiana Pacers, Indiana Fever, Michael Page,
            <br> Northern Trail Outfitters</p>
         <h3>Presenters</h3>
         <p>Eric Stahl, Katrin Rabant, Christy Poulos, </p>
