@@ -8,7 +8,7 @@
 	"name": "Dreamforce 2019",
 	"description": "Salesforce Dreamforce 2019",
 	"longformDescription": "<p>Salesforce Dreamforce 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
-	"thumbnail": "DF18.png",
-	"heroBanner": "DF18.png",
+	"thumbnail": "/images/DF18.png",
+	"heroBanner": "/images/DF18.png",
 	"date": "November 19, 2019"
 }

@@ -18,6 +18,9 @@
 	<div id="details-page-header-banner_name" class="title"><%= demo.name %>
 		<div id="details-page-header-banner_description" class="slds-text-heading_large"><%= demo.description %></div>
 	</div>
+	<button class="slds-button slds-button_neutral">
+		<a href="<%= demo.production && demo.production.host %>" class="slds-button">View Demo</a>
+	</button>
 </div>
 
 
@@ -62,23 +65,23 @@
 				let actionTaken = '';
 
 				if (typeof step.goto !== "undefined") {
-                    actionTaken = `Went to ${step.goto}`;
+					actionTaken = `Went to ${step.goto}`;
 				}
 
 				if (typeof step.click !== "undefined") {
-                    actionTaken = `Clicked ${step.click}`;
+					actionTaken = `Clicked ${step.click}`;
 				}
 
 				if (typeof step.hover !== "undefined") {
-                    actionTaken = `Hovered ${step.hover}`;
+					actionTaken = `Hovered ${step.hover}`;
 				}
 
 				if (typeof step.evaluate !== "undefined") {
-                    actionTaken = `Executed JS: <div><code>${step.evaluate}</code></div>`;
+					actionTaken = `Executed JS: <div><code>${step.evaluate}</code></div>`;
 				}
 
 				if (typeof step.drag !== "undefined") {
-                    actionTaken = `Dragged ${step.drag}`;
+					actionTaken = `Dragged ${step.drag}`;
 				}
 
 				if (actionTaken === '') { actionTaken = 'Did nothing'}
@@ -87,24 +90,20 @@
 
 				echo(`
 
-                <div class="column">
-                    <div class="content">
-                        <a href="screenshots/${demo.id}.${step.name}.slide.png">
-                            <img id="banner" src="screenshots/${demo.id}.${step.name}.slide.png" alt="">
-                        </a>
-                        <div>
-                            ${actionTaken} and waited for ${waitedFor}
-                        </div>
-                    </div>
-                </div>
+					<div class="column">
+						<div class="content">
+							<a href="screenshots/${demo.id}.${step.name}.slide.png">
+								<img class="thumbnail" src="screenshots/${demo.id}.${step.name}.slide.png" alt="">
+							</a>
+							<div>
+								${actionTaken} and waited for ${waitedFor}
+							</div>
+						</div>
+					</div>
 				`);
 			});
 
 			echo(`</div>`);
 		}
 		%>
-    </div>
-
-    <button class="slds-button slds-button_neutral">
-        <a href="<%= demo.production && demo.production.host %>" class="slds-button">View Demo</a>
-    </button>
+</div>
