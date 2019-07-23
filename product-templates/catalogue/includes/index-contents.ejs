@@ -1,30 +1,93 @@
+<%
+console.group(`
+============================================================
+Demuxe: including \`product-templates/catalogue/includes/index-contents.ejs\` now...
+------------------------------------------------------------
+`);
+
+_%>
+
+
+<%
+
+	const targetDemoID = locals.sanitizedQueryParams.id;
+	let demo = locals.availableDemoConfigs.find((demo) => demo.id === targetDemoID);
+
+	if (!demo) {
+		demo = locals.localization.demoGroups.find((demo) => {
+			console.log(demo.id, targetDemoID, demo.id === targetDemoID);
+			return demo.id === targetDemoID
+		});
+	}
+
+	if (!demo) {
+		console.log('NOTHING FOUND!!!!!')
+		demo = locals.availableDemoConfigs[0];
+	}
+
+	console.log('demo.demoFlow', demo.demoFlow);
+
+
+	const bannerImagesArray = ["yellow.png", "dark-grey.png", "med-grey.png", "banner.png"]
+	function imgRandom(imgArr) {
+		return imgArr[Math.floor(Math.random() * imgArr.length)];
+	}
+	let demuxe_detailsPageHeaderBannerImageSrc = imgRandom(bannerImagesArray);
+
+	if (targetDemoID === 'cnx19keynote') {
+		demuxe_detailsPageHeaderBannerImageSrc = 'connection.png';
+	}
+
+%>
 <div class="header">
-	<img src="banner.png" alt="">
-	<div class="head">
-		<div class="title">Prototype Library
-			<div class="slds-text-heading_large">Your newest Library to access <br> any demo you can imagine.</div>
-		</div>
+	<img id="details-page-header-banner_image" class="thumb" src="<%= demuxe_detailsPageHeaderBannerImageSrc %>" alt="">
+	<div id="details-page-header-banner_name" class="title"><%= demo.name %>
+		<div id="details-page-header-banner_description" class="slds-text-heading_large"><%= demo.description %></div>
 	</div>
+	<button class="slds-button slds-button_neutral">
+		<a href="<%= demo.production && demo.production.host %>" class="slds-button">View Demo</a>
+	</button>
 </div>
+
+
 
 <div class="home">
 	<div class="row">
 		<%
-		console.dir(locals.localization);
+
+
+		// Build the rendered HTML piece by piece -- we will render it all at once later
+		let allDemoThumbsHtmlOut = ``;
 		// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
 		locals.localization.demoGroups.forEach((demoConfig) => {
-			echo(`
-				<div class="column">
-					<div class="content">
-						<a href="/details?id=${demoConfig.id}">
-							<img id="connection" src="${demoConfig.thumbnail}" alt="${demoConfig.thumbnailAltText}">
-						</a>
-						<h3>${demoConfig.name}</h3>
-						<p>${demoConfig.description}</p>
-					</div>
-				</div>
-			`);
+
+			// Buld this card piece-by-piece
+			let demoThumbHtmlOut = ``;
+
+			// We may need to conditionally show demo thumbnails based on some filter, best account for that now.
+			// const showDemoThumb = node.showDemoThumb === true || false;
+			const showDemoThumb = true;
+
+			if ( showDemoThumb === true ) {
+				demoThumbHtmlOut += include('includes/demo-thumb', demoConfig);
+			}
+
+			allDemoThumbsHtmlOut += demoThumbHtmlOut;
 		});
+
+
+
+		echo(`${allDemoThumbsHtmlOut}`);
 		%>
 	</div>
 </div>
+
+
+
+
+<%
+console.log(`...end \`product-templates/catalogue/includes/index-contents.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

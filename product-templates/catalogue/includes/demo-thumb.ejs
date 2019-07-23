@@ -1,7 +1,7 @@
 <div class="column">
 	<div class="content">
 		<a href="/details?id=<%=locals.id%>">
-			<img id="connection" src="<%=locals.thumbnail%>" alt="">
+			<img id="demo-thumb---<%=`${locals.id.replace(/\./g, '--')}`%>" src="<%=locals.thumbnail%>" alt="">
 		</a>
 		<h3><%=locals.name%></h3>
 		<p><%=locals.description%></p>
