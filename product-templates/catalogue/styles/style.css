@@ -1,10 +1,4 @@
 /* Your styles here */
-.header {
-  position: relative;
-  text-align: center;
-  color: black;
-}
-
 .title {
   text-align: left;
   position: absolute;
@@ -41,16 +35,6 @@ h3 {
 }
 
 /* Center website */
-.home {
-  max-width: 1000;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.row {
-  margin: 8px -16px;
-}
-
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
@@ -101,27 +85,6 @@ button {
   float: right;
   margin-right: 80px;
   background-color: white;
-}
-
-#overview {
-  padding: 30px;
-  font-size: 15px;
-}
-
-#eventInfo {
-  padding: 12px;
-  background-color: aliceblue;
-  width: 300px;
-  border: 2px solid black;
-  border-radius: 4px;
-}
-
-#eventDesc {
-  padding: 12px;
-  background-color: aliceblue;
-  float: right;
-  border: 2px solid black;
-  border-radius: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

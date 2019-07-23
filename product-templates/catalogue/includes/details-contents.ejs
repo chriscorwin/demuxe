@@ -24,7 +24,7 @@
 </div>
 
 
-<div id="overview" class="home slds-m-around_x-large">
+<div id="overview" class="slds-m-around_x-large">
 
     <div id="eventInfo">
         <h3>When</h3>
@@ -44,23 +44,31 @@
 
 
 
+
 	<%
+
+		let detailsContentHtmlOut = ``;
+
+
+
+		detailsContentHtmlOut += `<div class="demo-catalogue_thumbnails slds-m-around_x-large">`;
 		if (demo.demoIDs) {
-			echo(`<div class="row">`);
+
+			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
 
 			demo.demoIDs.forEach((demo) => {
 				let demoConfig = locals.availableDemoConfigs.find((possibleMatch) => possibleMatch.id === demo);
 
 				if(demoConfig) {
-					echo(include('includes/demo-thumb', demoConfig))
+					detailsContentHtmlOut += include('includes/demo-thumb', demoConfig);
 				}
 			});
 
-			echo(`</div>`);
+			detailsContentHtmlOut += `</div>`;
 		}
 
 		if (demo.demoFlow && demo.demoFlow.steps) {
-			echo(`<div class="row">`);
+			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
 
 			demo.demoFlow.steps.forEach((step) => {
 				let actionTaken = '';
@@ -89,22 +97,29 @@
 
 				const waitedFor = (typeof step.waitFor === 'number') ? `${step.waitFor/1000} seconds` : `${step.waitFor} to load`;
 
-				echo(`
 
-					<div class="column">
-						<div class="content">
-							<a href="screenshots/${demo.id}.${step.name}.slide.png">
-								<img class="thumbnail" src="screenshots/${demo.id}.${step.name}.slide.png" alt="">
-							</a>
-							<div>
-								${actionTaken} and waited for ${waitedFor}
+
+				detailsContentHtmlOut += `
+
+					<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 demo-thumb_col demo-thumb_content slds-card">
+							<div class="slds-card__body slds-card__body_inner">
+								<a href="screenshots/${demo.id}.${step.name}.slide.png">
+									<img  id="demo-thumb---${demo.id.replace(/\./g, '--')}---${step.name.replace(/\./g, '--')}" class="thumbnail" src="screenshots/${demo.id}.${step.name}.slide.png" alt="">
+								</a>
 							</div>
-						</div>
-					</div>
-				`);
+							<footer class="slds-card__footer">
+								${actionTaken} and waited for ${waitedFor}
+							</footer>
+					</article>
+				`;
 			});
 
-			echo(`</div>`);
+			detailsContentHtmlOut += `</div>`;
 		}
+
+		detailsContentHtmlOut += `</div>`;
+
+		echo(`${detailsContentHtmlOut}`);
+
 		%>
 </div>

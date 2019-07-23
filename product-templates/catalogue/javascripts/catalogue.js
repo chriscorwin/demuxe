@@ -42,15 +42,13 @@ const detailsPageHeaderBannerName = document.getElementById(`details-page-header
 const detailsPageHeaderBannerDescription = document.getElementById(`details-page-header-banner_description`);
 
 
-console.log(`detailsPageHeaderBannerImage.src: `, detailsPageHeaderBannerImage.src);
 getImageLightness(detailsPageHeaderBannerImage.src, function(brightness){
-    console.log(brightness);
+    console.log('Brightness of banner image: ' + brightness);
     if (brightness > 140) {
         detailsPageHeaderBannerName.style.color = 'black';
         detailsPageHeaderBannerName.style.textShadow = 'none';
         detailsPageHeaderBannerDescription.style.color = 'black';
         detailsPageHeaderBannerDescription.style.textShadow = 'none';
-        console.log(`detailsPageHeaderBannerDescription: `, detailsPageHeaderBannerDescription);
         
     }
 });
