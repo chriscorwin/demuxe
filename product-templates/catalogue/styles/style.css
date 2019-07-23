@@ -1,4 +1,8 @@
 /* Your styles here */
+.header {
+  background-image: image(src= "connection.png");
+}
+
 .title {
   text-align: left;
   position: absolute;
@@ -72,6 +76,11 @@ h3 {
   .column {
     width: 100%;
   }
+}
+
+.thumb {
+  width: 1500px;
+  height: 300px;
 }
 
 #banner {

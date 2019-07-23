@@ -14,13 +14,39 @@
 
 %>
 <div class="header">
-	<%- (demo.heroBanner) ? `<img id="details-page-header-banner_image" class="thumb" src="${demo.heroBanner}" alt="">` : '' %>
-	<div id="details-page-header-banner_name" class="title"><%= demo.name %>
-		<div id="details-page-header-banner_description" class="slds-text-heading_large"><%= demo.description %></div>
-	</div>
-	<button class="slds-button slds-button_neutral">
-		<a href="<%= demo.production && demo.production.host %>" class="slds-button">View Demo</a>
-	</button>
+	<%- (demo.heroBanner) ? `<img id="details-page-header-banner_image" class="thumb" src="${demo.heroBanner}" alt="">` : '<div style="height:90px" ></div>' %>
+	
+	
+    <div class="slds-page-header">
+  <div class="slds-page-header__row">
+    <div class="slds-page-header__col-title">
+      <div class="slds-media">
+        <div class="slds-media__figure">
+          <%# <span class="slds-icon_container slds-icon-standard-opportunity" title="opportunity">
+            <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"></use>
+            </svg>
+            <span class="slds-assistive-text">opportunity</span>
+          </span> %>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-page-header__name">
+            <div class="slds-page-header__name-title">
+              <h1>
+                <span class="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets"><%= demo.name %>
+		<div id="details-page-header-banner_description" class="slds-text-heading_large"><%= demo.description %></span>
+              </h1>
+            </div>
+          </div>
+          <p class="slds-page-header__name-meta">Eric Stahl • Indidana Fever • 06/16-19/19</p>
+        </div>
+        <% if (demo.production) {%>
+      <a href="<%= demo.production.host%>" class="slds-button slds-button_neutral" >View Demo</a>
+      <% } %>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
 

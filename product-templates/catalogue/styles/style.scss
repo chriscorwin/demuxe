@@ -1,8 +1,6 @@
 /* Your styles here */
 .header {
-    // position: relative;
-    // text-align: center;
-    // color: black;
+  background-image: image(src="connection.png");
   }
  #content{
      // max-width: initial;
@@ -92,7 +90,10 @@ h3{
     }
   }
  
-  
+.thumb{
+    width: 1500px;
+    height: 300px;
+}
  #banner{
     background-image: linear-gradient(black);
 	opacity: 1; 
