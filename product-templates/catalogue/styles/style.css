@@ -130,7 +130,7 @@ h2, h3 {
 }
 
 .slds-grid.slds-grid_vertical-stretch .slds-col + .slds-col > .slds-box {
-  background-color: red;
+  background-color: #FFFFFF;
 }
 
 .slds-grid.slds-gutters.slds-wrap.slds-grid_vertical-stretch .slds-col:not(:last-child) {

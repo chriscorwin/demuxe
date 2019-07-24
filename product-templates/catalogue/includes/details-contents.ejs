@@ -58,10 +58,10 @@
 </div>
 
 <br>
-<div class="flex-container" class="slds-m-around_x-large">
+<div class="slds-grid slds-gutters slds-grid_align-spread  slds-m-around_x-large">
 
-    <div class="box">
-    <h3>Event Information</h3>
+	<div class="slds-col slds-size_3-of-12">
+	    <h3>Event Information</h3>
         <h2>When</h2>
         <p><%= demo.date %></p>
 
@@ -74,10 +74,11 @@
         <h2>Presenters</h2>
         <p><%= demo.presenters %></p>
     </div>
-    <br>
-    <div class="eventDesc">
-    <h3>Event Description</h3>
-		<p><%- demo.longformDescription %></p>
+    <div class="slds-col slds-size_9-of-12">
+	    <h3>Event Description</h3>
+	    <section class="slds-text-longform">
+			<p><%- demo.longformDescription %></p>
+		</section>
     </div>
 </div>
 
