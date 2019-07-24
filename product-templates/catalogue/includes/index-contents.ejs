@@ -41,7 +41,9 @@ _%>
 %>
 
 <div class="header">
-	<img id="details-page-header-banner_image" class="thumb" src="<%= demuxe_detailsPageHeaderBannerImageSrc %>" alt="">
+	<div class="banner-image" style="background-image: url('<%= demuxe_detailsPageHeaderBannerImageSrc %>'); background-size: cover; background-position: center; height: 300px;">
+		<img id="details-page-header-banner_image" src="<%= demuxe_detailsPageHeaderBannerImageSrc %>" height="0" width="0">
+	</div>
 	<div id="details-page-header-banner_name" class="title">Prototype Library
 		<div id="details-page-header-banner_description" class="slds-text-heading_large">Your newest Library to access <br> any demo you can imagine.</div>
 	</div>

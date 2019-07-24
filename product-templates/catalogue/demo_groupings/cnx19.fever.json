@@ -3,6 +3,11 @@
 	"demoIDs": [
 		"audience-360.cnx19keynote.fever",
 		"audience-studio.cnx19keynote.fever",
+		"audience-studio-fever",
+		"consumer-desktop-fever",
+		"consumer-mobile-fever",
+		"interaction-studio-fever",
+		"journey-builder-fever",
 		"is.cnx19keynote.fever"
 	],
 	"name": "Connections 2019 Fever Demos",

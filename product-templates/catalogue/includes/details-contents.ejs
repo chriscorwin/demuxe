@@ -30,7 +30,15 @@
 </script>
 
 <div class="header">
-	<%- (demo.heroBanner) ? `<img id="details-page-header-banner_image" class="thumb" src="${demo.heroBanner}" alt="">` : '<div style="height:90px" ></div>' %>
+
+
+	<%- (demo.heroBanner) ? `
+		
+
+		<div class="banner-image" style="background-image: url('${demo.heroBanner}'); background-size: cover; background-position: center; height: 300px;">
+			<img id="details-page-header-banner_image" src="${demo.heroBanner}>" height="0" width="0">
+		</div>
+		` : '<div style="height:90px" ></div>' %>
 	
 	
     <div class="slds-page-header">
@@ -112,8 +120,7 @@
 
 
 		detailsContentHtmlOut += `<div class="demo-catalogue_thumbnails slds-m-around_x-large">`;
-
-		 if (demo.demoIDs) {
+		if (demo.demoIDs) {
 
 			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
 
@@ -131,10 +138,7 @@
 			});
 
 			detailsContentHtmlOut += `</div>`;
-		} 
-
-
-		if (demo.demoFlow && demo.demoFlow.steps) {
+		} else if (demo.demoFlow && demo.demoFlow.steps) {
 			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
 
 			demo.demoFlow.steps.forEach((step) => {
@@ -206,16 +210,13 @@
 			});
 
 			detailsContentHtmlOut += `</div>`;
-		} 
-
-		if (locals.magickFlows[targetDemoID]) {
+		} else if (locals.magickFlows[targetDemoID]) {
 			let thisMagickFlowConfig = locals.magickFlows[locals.magickFlows.urlSlugsMapToFlowDirectories[targetDemoID]];
 			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
 			detailsContentHtmlOut += include('includes/details-contents-magick-flows', {"data": thisMagickFlowConfig, "targetDemoID": targetDemoID});
 			detailsContentHtmlOut += `</div>`;
 
 		}
-
 
 		detailsContentHtmlOut += `</div>`;
 

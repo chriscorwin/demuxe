@@ -44,7 +44,7 @@ const detailsPageHeaderBannerDescription = document.getElementById(`details-page
 
 getImageLightness(detailsPageHeaderBannerImage.src, function(brightness){
     console.log('Brightness of banner image: ' + brightness);
-    if (brightness > 140) {
+    if (brightness > 167) {
         detailsPageHeaderBannerName.style.color = 'black';
         detailsPageHeaderBannerName.style.textShadow = 'none';
         detailsPageHeaderBannerDescription.style.color = 'black';
