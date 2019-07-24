@@ -96,4 +96,16 @@ button {
   background-color: white;
 }
 
+#eventInfo {
+  padding: 12px;
+  background-color: aliceblue;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+#eventDesc {
+  float: right;
+}
+
 /*# sourceMappingURL=style.css.map */
