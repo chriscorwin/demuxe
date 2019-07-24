@@ -28,7 +28,23 @@ function dynamicSassHandleError(data){
 }
 
 
+const noMetaDataError = (error, name, fullContentPath) => {
+	if ( error.message.includes('ENOENT: no such file or directory')) {
+		console.error(`
+[ ERROR IN: \`config/magick-flows-util/get-flow-data.js:10\`]
 
+Magick Flow URL Slug: \`${name}\`.
+
+The app is attempting to render a Magick Flow at:
+
+${fullContentPath}
+
+...and did not find meta data there.
+		`);
+	} else {
+		console.warn(error);
+	}
+}
 
 const noFileError = (error, name, fullContentPath) => {
 	if ( error.message.includes('ENOENT: no such file or directory')) {
@@ -43,7 +59,7 @@ ${fullContentPath}
 
 ...and did not find anything there.
 
-THERE IS NO CONTENT FOR IT. 
+THERE IS NO CONTENT FOR IT.
 
 This is not required to make the app work, so, take this for what its worth,
 you seem to not be using the headers and footers feature.
@@ -114,7 +130,7 @@ const getDataFromFilename = (stepDataAttributes, fileName) => {
 
 			console.debug(`[ config/magick-flows-util/get-flow-data.js:75 ] rawKey: `, util.inspect(rawKey, { showHidden: true, depth: null, colors: true }));
 			console.debug(`[ config/magick-flows-util/get-flow-data.js:76 ] valueWithExt: `, util.inspect(valueWithExt, { showHidden: true, depth: null, colors: true }));
-			
+
 			const value = valueWithExt.split('.')[0];
 			const key = rawKey.toLowerCase();
 
@@ -140,7 +156,7 @@ const getDataFromFilename = (stepDataAttributes, fileName) => {
 						stepDataAttributes[key] = value;
 					}
 					break;
-				case "notes": 
+				case "notes":
 					if ( value.includes('__') === true ) {
 						stepDataAttributes[key] = value.split('__').map(val => val.toTitleCase());
 					} else if ( typeof value === 'string' ) {
@@ -149,8 +165,8 @@ const getDataFromFilename = (stepDataAttributes, fileName) => {
 						stepDataAttributes[key] = value;
 					}
 				break;
-				
-				default: 
+
+				default:
 					stepDataAttributes[key] = value;
 
 			}
@@ -198,12 +214,12 @@ const getStepData = (flowData, fileName, fileIndex) => {
 
 	if ( typeof stepDataAttributes.data !== 'undefined' ) {
 
-		const stepInfo = { 
-			assetFiles: flowData.assets, 
-			stepId: stepDataAttributes.id, 
-			fileName, 
-			fileIndex, 
-			sorter: stepDataAttributes.sorter, 
+		const stepInfo = {
+			assetFiles: flowData.assets,
+			stepId: stepDataAttributes.id,
+			fileName,
+			fileIndex,
+			sorter: stepDataAttributes.sorter,
 			fullAssetsPath: flowData.fullAssetsPath,
 			magickFlowUrlSlug: flowData.urlSlug,
 			magickFlowPath: flowData.path,
@@ -214,7 +230,7 @@ const getStepData = (flowData, fileName, fileIndex) => {
 		stepDataAttributes = Object.assign(stepDataAttributes, traitsData.stepDataAttributes);
 	}
 
-	flowData.metaData.push(stepDataAttributes);
+	flowData.stepMetaData.push(stepDataAttributes);
 	return flowData;
 };
 
@@ -234,7 +250,8 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 
 	let flowData = {
 		assets: [],
-		metaData: [],
+		metaData: {},
+		stepMetaData: [],
 		name: subFileOrDirectory,
 		path: path.join(fileOrDirectoryPath, subFileOrDirectory),
 		fullContentPath: path.join(fileOrDirectoryPath, subFileOrDirectory, 'main'),
@@ -243,6 +260,12 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 		steps: [],
 		templateSizingFileDimensions
 	};
+
+	try {
+		flowData.metaData = require(path.join(fileOrDirectoryPath, subFileOrDirectory, 'meta_data.json'));
+	} catch (e) {
+		noMetaDataError(e, flowData.name, flowData.fullContentPath);
+	}
 
 	try {
 		flowData.steps = getFiles(flowData.fullContentPath).sort(sortAlphaNum);

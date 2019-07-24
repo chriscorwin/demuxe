@@ -8,6 +8,10 @@
 	}
 
 	if (!demo) {
+		demo = locals.magickFlows[targetDemoID] && locals.magickFlows[targetDemoID].metaData;
+	}
+
+	if (!demo) {
 		console.log('NOTHING FOUND!!!!!')
 		demo = locals.availableDemoConfigs[0];
 	}
@@ -84,6 +88,11 @@
 
 			demo.demoIDs.forEach((demo) => {
 				let demoConfig = locals.availableDemoConfigs.find((possibleMatch) => possibleMatch.id === demo);
+
+				if (!demoConfig) demoConfig = locals.localization.demoGroups.find((possibleMatch) => possibleMatch.id === demo);
+
+				if (!demoConfig) demoConfig = locals.magickFlows[demo].metaData;
+
 
 				if(demoConfig) {
 					detailsContentHtmlOut += include('includes/demo-thumb', demoConfig);
