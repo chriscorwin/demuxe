@@ -2,7 +2,7 @@
 	<div class="slds-box slds-theme_default slds-grid slds-grid_vertical">
 		<div class="slds-box__body slds-box__body_inner slds-grow slds-shrink-none">
 			<a href="/details?id=<%=locals.id%>">
-				<img id="demo-thumb---<%=`${locals.id.replace(/\./g, '--')}`%>" src="<%=locals.thumbnail%>" alt="">
+				<img id="demo-thumb---<%=`${locals.id.replace(/\./g, '--')}`%>" src="<%=locals.thumbnail%>" alt="" style="max-height: 100px;">
 			</a>
 			<h3><%=locals.name%></h3>
 		</div>

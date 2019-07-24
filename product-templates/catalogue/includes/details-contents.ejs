@@ -112,7 +112,8 @@
 
 
 		detailsContentHtmlOut += `<div class="demo-catalogue_thumbnails slds-m-around_x-large">`;
-		if (demo.demoIDs) {
+
+		 if (demo.demoIDs) {
 
 			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
 
@@ -130,7 +131,10 @@
 			});
 
 			detailsContentHtmlOut += `</div>`;
-		} else if (demo.demoFlow && demo.demoFlow.steps) {
+		} 
+
+
+		if (demo.demoFlow && demo.demoFlow.steps) {
 			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
 
 			demo.demoFlow.steps.forEach((step) => {
@@ -202,7 +206,16 @@
 			});
 
 			detailsContentHtmlOut += `</div>`;
+		} 
+
+		if (locals.magickFlows[targetDemoID]) {
+			let thisMagickFlowConfig = locals.magickFlows[locals.magickFlows.urlSlugsMapToFlowDirectories[targetDemoID]];
+			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
+			detailsContentHtmlOut += include('includes/details-contents-magick-flows', {"data": thisMagickFlowConfig, "targetDemoID": targetDemoID});
+			detailsContentHtmlOut += `</div>`;
+
 		}
+
 
 		detailsContentHtmlOut += `</div>`;
 

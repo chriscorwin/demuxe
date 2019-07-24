@@ -1,27 +1,14 @@
 {
-	"id": "cnx19keynote",
+	"id": "cnx19.pacers",
 	"demoIDs": [
-		"audience-360.cnx19keynote.fever",
-		"audience-360.cnx19keynote.pacers",
-		"audience-studio.cnx19keynote.fever",
-		"is.cnx19keynote.fever",
-		"is.cnx19keynote.michael-page",
-		"as-fever",
-		"audience-studio-fever",
-		"interaction-studio-fever",
-		"consumer-desktop-fever",
-		"consumer-mobile-fever",
-		"journey-builder-fever",
-		"advertising-studio-mp",
-		"cnx19.fever",
-		"cnx19.pacers"
+		"audience-360.cnx19keynote.pacers"
 	],
-	"name": "Connections 2019 Keynotes",
-	"description": "Salesforce Connections 2019 Keynotes",
+	"name": "Connections 2019 Pacers Demos",
+	"description": "Salesforce Connections 2019 Pacers Demos",
 	"longFormDescription": "<p>Salesforce Connections is the must-attend conference for everyone who wants to learn how to build better customer experiences through personalized, seamless customer engagement to care for their most important asset for growth: customer relationships. It's the event for joining talent with technology and discovering where digital marketing, commerce, and service meet — and what happens when you connect all three on one platform with Salesforce. Come learn new trends and best practices and try out solutions that make every customer interaction click to engage your customers in one unified experience. Get inspired to come together with all your teams, elevate relationships, and bring customers closer with your brand than ever before.</p>",
 	"thumbnail": "/images/connection.png",
 	"heroBanner": "/images/connection.png",
-	"date": "June 18, 2019 11am PDT",
+	"date": "June 18, 2019 1pm PDT",
 	"brands": "Indiana Pacers, Indiana Fever, Michael Page, Northern Trail Outfitters",
 	"presenters": "Eric Stahl, Katrin Rabant, Christy Poulos",
 	"location": "Chicago, IL"
