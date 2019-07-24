@@ -1,11 +1,13 @@
-<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 demo-thumb_col demo-thumb_content slds-card">
-	<div class="slds-card__body slds-card__body_inner">
-		<a href="/details?id=<%=locals.id%>">
-			<img id="demo-thumb---<%=`${locals.id.replace(/\./g, '--')}`%>" src="<%=locals.thumbnail%>" alt="">
-		</a>
-		<h3><%=locals.name%></h3>
+<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 demo-thumb_col demo-thumb_content">
+	<div class="slds-box slds-theme_default slds-grid slds-grid_vertical">
+		<div class="slds-box__body slds-box__body_inner slds-grow slds-shrink-none">
+			<a href="/details?id=<%=locals.id%>">
+				<img id="demo-thumb---<%=`${locals.id.replace(/\./g, '--')}`%>" src="<%=locals.thumbnail%>" alt="">
+			</a>
+			<h3><%=locals.name%></h3>
+		</div>
+		<footer class="slds-box__footer slds-grow-none slds-shrink">
+			<p><%=locals.description%></p>
+		</footer>
 	</div>
-	<footer class="slds-card__footer">
-		<p><%=locals.description%></p>
-	</footer>
 </article>

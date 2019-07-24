@@ -1,3 +1,16 @@
+
+/**
+ * @summary Initializes grid
+ *
+ * @selector .slds-grid_vertical
+ * @modifier
+ */
+.slds-grid_vertical,
+.slds-grid--vertical {
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+
 /* Your styles here */
 .header {
   background-image: image(src="connection.png");
@@ -100,7 +113,9 @@ h3{
      width: 1500px;
      height: 200px;
  }
- 
+
+
+// Heya @jprisio 
 button{
     float: right;
     margin-right: 80px;
@@ -124,3 +139,49 @@ button{
     // border: 2px solid black;
     // border-radius: 4px;
 }
+
+
+
+
+.slds-grid.slds-grid_vertical-stretch {
+  .slds-col > .slds-box {
+      height: 100%;
+
+     .slds-box__footer {
+      }
+
+  }
+  .slds-col + .slds-col > .slds-box {
+    background-color: red;
+  }
+}
+.slds-grid.slds-gutters.slds-wrap.slds-grid_vertical-stretch {
+  .slds-col:not(:last-child) {
+    // margin-top: initial;
+    margin-bottom: 1rem;
+  }
+}
+
+
+/**
+ * @summary Initializes box footer
+ * @selector .slds-box__footer
+ * @restrict .slds-box footer
+ */
+.slds-box__footer {
+  padding: 0.75rem 1rem;
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  border-top: 1px solid #dddbda; 
+  height: 100%;
+  vertical-align: bottom;
+}
+
+/**
+* @summary Actionable element within box footer
+* @selector .slds-box__footer-action
+* @restrict .slds-box__footer a
+*/
+.slds-box__footer-action {
+  display: block; }
