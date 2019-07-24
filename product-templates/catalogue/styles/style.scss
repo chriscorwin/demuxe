@@ -149,7 +149,7 @@ h2,h3{
 
   }
   .slds-col + .slds-col > .slds-box {
-    background-color: #FFFFFF;
+    // background-color: #FFFFFF;
   }
 }
 .slds-grid.slds-gutters.slds-wrap.slds-grid_vertical-stretch {
@@ -182,3 +182,10 @@ h2,h3{
 */
 .slds-box__footer-action {
   display: block; }
+
+
+.slds-theme_catalogue-desc {
+  background-color: #F3F1F2;
+  border:1px solid black;
+
+}

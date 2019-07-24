@@ -129,10 +129,6 @@ h2, h3 {
   height: 100%;
 }
 
-.slds-grid.slds-grid_vertical-stretch .slds-col + .slds-col > .slds-box {
-  background-color: #FFFFFF;
-}
-
 .slds-grid.slds-gutters.slds-wrap.slds-grid_vertical-stretch .slds-col:not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -159,6 +155,11 @@ h2, h3 {
 */
 .slds-box__footer-action {
   display: block;
+}
+
+.slds-theme_catalogue-desc {
+  background-color: #F3F1F2;
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */
