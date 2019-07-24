@@ -28,6 +28,7 @@
 	console.log(`demo.longFormDescription: `, demo.longFormDescription);
 	console.groupEnd();
 </script>
+
 <div class="header">
 	<%- (demo.heroBanner) ? `<img id="details-page-header-banner_image" class="thumb" src="${demo.heroBanner}" alt="">` : '<div style="height:90px" ></div>' %>
 	
@@ -129,35 +130,32 @@
 			});
 
 			detailsContentHtmlOut += `</div>`;
-		}
-
-		if (demo.demoFlow && demo.demoFlow.steps) {
+		} else if (demo.demoFlow && demo.demoFlow.steps) {
 			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
 
 			demo.demoFlow.steps.forEach((step) => {
 				let actionTaken = '';
 
 				if (typeof step.goto !== "undefined") {
-					actionTaken = `Went to ${step.goto}`;
+					actionTaken += `Went to ${step.goto}`;
 				}
-
 				if (typeof step.click !== "undefined") {
-					actionTaken = `Clicked ${step.click}`;
+					actionTaken += `Clicked ${step.click}`;
 				}
 
 				if (typeof step.hover !== "undefined") {
-					actionTaken = `Hovered ${step.hover}`;
+					actionTaken += `Hovered ${step.hover}`;
 				}
 
 				if (typeof step.evaluate !== "undefined") {
 					let evaluateProcessed = step.evaluate;
 					// evaluateProcessed = evaluateProcessed.replace('()', '--');
-					actionTaken = `Executed JS: <div class="slds-box slds-theme_info slds-scrollable"><code class="slds-text-font_monospace">${evaluateProcessed}</code></div>`;
+					actionTaken += `Executed JS: <div class="slds-box slds-theme_info slds-scrollable"><code class="slds-text-font_monospace">${evaluateProcessed}</code></div>`;
 				}
 
 
 				if (typeof step.drag !== "undefined") {
-					actionTaken = `Dragged ${step.drag}`;
+					actionTaken += `Dragged ${step.drag}`;
 				}
 
 				if (actionTaken === '') { actionTaken = 'Did nothing'}
@@ -166,10 +164,11 @@
 
 			
 
-				let tempDemoConfig = demo;
-				tempDemoConfig.thumbnail = `screenshots/${demo.id}.${step.name}.slide.png`;
-				tempDemoConfig.description = `${actionTaken} and waited for ${waitedFor}`;
-				tempDemoConfig.code = `${actionTaken} and waited for ${waitedFor}`;
+				// let tempDemoConfig = demo;
+				demo.thumbnail = `screenshots/${demo.id}.${step.name}.slide.png`;
+				demo.actionTaken = `${actionTaken} and waited for ${waitedFor}`;
+				demo.actionTaken = demo.actionTaken.replace(/\(\) => {/g, '').replace(/\}/g, '');
+
 
 				// detailsContentHtmlOut += include('includes/demo-thumb', tempDemoConfig);
 
@@ -183,7 +182,7 @@
 								<h3>${step.name}</h3>
 							</div>
 							<footer class="slds-box__footer slds-grow-none slds-shrink">
-								<p>${demo.description.replace(/\(\) => {/g, '').replace(/\}/g, '')}</p>
+								<p>${demo.actionTaken}</p>
 							</footer>
 						</div>
 					</article>
