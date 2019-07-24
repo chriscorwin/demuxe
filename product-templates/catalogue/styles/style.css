@@ -1,15 +1,3 @@
-/**
- * @summary Initializes grid
- *
- * @selector .slds-grid_vertical
- * @modifier
- */
-.slds-grid_vertical,
-.slds-grid--vertical {
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
 /* Your styles here */
 .header {
   background-image: image(src= "connection.png");
@@ -108,12 +96,33 @@ button {
   background-color: white;
 }
 
-#eventInfo {
+h2, h3 {
+  font-weight: 1000;
+}
+
+.eventDesc {
+  margin-left: 20px;
   padding: 12px;
-  background-color: aliceblue;
-  width: 300px;
-  border: 2px solid black;
+  background-color: #F3F1F2;
+  border: 1px solid black;
   border-radius: 4px;
+}
+
+.flex-container {
+  width: 1400px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 20px;
+  justify-content: center;
+}
+
+.box {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #F3F1F2;
+  width: 100%;
+  text-align: left;
 }
 
 .slds-grid.slds-grid_vertical-stretch .slds-col > .slds-box {

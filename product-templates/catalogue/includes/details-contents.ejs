@@ -57,22 +57,27 @@
 </div>
 </div>
 
+<br>
+<div class="flex-container" class="slds-m-around_x-large">
 
-<div id="overview" class="slds-m-around_x-large">
+    <div class="box">
+    <h3>Event Information</h3>
+        <h2>When</h2>
+        <p><%= demo.date %></p>
 
-    <div id="eventInfo">
-        <h3>When</h3>
-        <p>June 16th, 2019 - June 19th, 2019</p>
-        <h3>Where</h3>
-        <p>Chicago, Illinois</p>
-        <h3>Brands</h3>
-        <p>Indiana Pacers, Indiana Fever, Michael Page,
-           <br> Northern Trail Outfitters</p>
-        <h3>Presenters</h3>
-        <p>Eric Stahl, Katrin Rabant, Christy Poulos, </p>
+        <h2>Where</h2>
+        <p><%= demo.location %></p>
+
+        <h2>Brands</h2>
+        <p><%= demo.brands %></p>
+
+        <h2>Presenters</h2>
+        <p><%= demo.presenters %></p>
     </div>
-    <div id="eventDesc">
-		<%- demo.longformDescription %>
+    <br>
+    <div class="eventDesc">
+    <h3>Event Description</h3>
+		<p><%- demo.longformDescription %></p>
     </div>
 </div>
 
