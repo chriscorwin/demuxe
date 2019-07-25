@@ -93,6 +93,7 @@ module.exports = function() {
 
     configData = addMagickFlowsToConfig(configData);
     configData = addAvailableDemoAppConfigs(configData);
+    configData = addAvailableDemoBannerImages(configData);
 
 
 

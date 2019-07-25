@@ -12,8 +12,9 @@ const addAvailableDemoBannerImages = (configData) => {
 	let availableDemoBannerImages = [];
 
 	require("fs").readdirSync(demosBannersImagesPath).forEach(function(file) {
-		
-		availableDemoBannerImages.push(file);
+		if (file.match('all___')) {
+			availableDemoBannerImages.push(file);
+		}
 	});
 
 	configData.availableDemoBannerImages = availableDemoBannerImages;
