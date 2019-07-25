@@ -1,7 +1,12 @@
 {
 	"id": "cnx19.pacers",
 	"demoIDs": [
-		"audience-360.cnx19keynote.pacers"
+		"advertising-studio-mp",
+		"consumer-desktop-mp",
+		"consumer-mobile-mp",
+		"datarama-mp",
+		"interaction-studio-mp",
+		"pardot-mp"
 	],
 	"name": "Connections 2019 Pacers Demos",
 	"description": "Salesforce Connections 2019 Pacers Demos",
