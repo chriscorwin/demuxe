@@ -33,14 +33,14 @@
 
 
 	<%- (demo.heroBanner) ? `
-		
+
 
 		<div class="banner-image" style="background-image: url('${demo.heroBanner}'); background-size: cover; background-position: center; height: 300px;">
 			<img id="details-page-header-banner_image" src="${demo.heroBanner}>" height="0" width="0">
 		</div>
 		` : '<div style="height:90px" ></div>' %>
-	
-	
+
+
     <div class="slds-page-header">
   <div class="slds-page-header__row">
     <div class="slds-page-header__col-title">
@@ -129,7 +129,7 @@
 
 				if (!demoConfig) demoConfig = locals.localization.demoGroups.find((possibleMatch) => possibleMatch.id === demo);
 
-				if (!demoConfig) demoConfig = locals.magickFlows[demo].metaData;
+				if (!demoConfig) demoConfig = locals.magickFlows[demo] && locals.magickFlows[demo].metaData;
 
 
 				if(demoConfig) {
@@ -170,7 +170,7 @@
 
 				const waitedFor = (typeof step.waitFor === 'number') ? `${step.waitFor/1000} seconds` : `${step.waitFor} to load`;
 
-			
+
 
 				// let tempDemoConfig = demo;
 				demo.thumbnail = `screenshots/${demo.id}.${step.name}.slide.png`;
