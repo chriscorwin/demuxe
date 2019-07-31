@@ -1,0 +1,63 @@
+<style>
+#animate-me{
+	animation: growBar 1s ease-out forwards;
+}
+
+@-webkit-keyframes growBar {
+	from { transform: scaleX(0); }
+	to { transform: scaleX(1); }
+}
+</style>
+<div>
+	<h2>Fix Sketch to SVG Line Height Issues POC</h2>
+
+	<div id="corrected" style="float: left">
+		<h3>Corrected</h3>
+		<div><%- include('images/button-test-cases.svg') %></div>
+		<div><%- include('images/fix-line-height-poc.svg') %></div>
+		<script>
+			const correctThese = document.querySelectorAll('text[line-spacing]');
+			correctThese.forEach((correctThis) => {
+				const fontSize = correctThis.getAttribute('font-size');
+				const lineSpacing = correctThis.getAttribute('line-spacing');
+				const difference = fontSize - lineSpacing;
+				const distance = Math.ceil(Math.abs(difference));
+				const adjust = (distance > 4 && difference >= 0) ? distance : 4;
+				const finalAdjust = (difference >= 0) ? adjust : (distance <= fontSize) ? -1 : -adjust;
+				console.log(difference, finalAdjust);
+				correctThis.querySelectorAll('tspan').forEach((t) => {
+					t.setAttribute('y', t.getAttribute('y') - finalAdjust);
+				});
+			});
+		</script>
+
+
+	</div>
+
+	<div id="uncorrected" style="float: left">
+		<h3>Uncorrected</h3>
+		<div><%- include('images/button-test-cases.svg') %></div>
+		<div><%- include('images/fix-line-height-poc.svg') %></div>
+	</div>
+	<div id="png">
+		<h3>PNG</h3>
+		<img height=150 width=310 src="images/button-test-cases.png" />
+		<img height=206 width=434 src="images/fix-line-height-poc.png" />
+	</div>
+</div>
+
+<div>
+	<h2>SVG vs PNG</h2>
+	<%- include('images/line-height-test.svg') %>
+
+	<img height=215 width=500 src="images/line-height-test.png" />
+	<p>On the left, you can see that the SVG shifts the text out of its intended display area, whereas the PNG does not do this.</p>
+</div>
+
+<div>
+	<h2>SVG EJS include (embed) vs xlink:href</h2>
+	<%- include('images/line-height-test.svg') %>
+	<svg height=215 width=500><image xlink:href="images/line-height-test.svg"/></svg>
+
+	<p>On the right you can see an SVG being included by the browser using an svg tag an &lt;image xlink:href="" /&gt; tag. On the left is an ejs include of an svg file so that it is embedded directly into the html on the page (you can tell the difference when you view source). The one on the right can not be styled from within the page (the styles must be embedded directly within the SVG file itself) and even then will only execute its style-driven animations one time the first time you load the page (and then never again until you clear your cache) whereas the one on the left can be styled from anywhere (you can define the styles in the actual stylesheets) and will continue to animate each time you load the page.</p>
+</div>
