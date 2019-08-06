@@ -3,6 +3,8 @@ const fs = require('fs');
 const util = require('util');
 const sizeOf = require('image-size');
 const addMagickFlowsToConfig = require('./config-magick-flows');
+const addAvailableDemoAppConfigs = require('./available-demos');
+const addAvailableDemoBannerImages = require('./available-demos-banners');
 const sassGenerator = require('./magick-flows-util/sass-generator.js');
 
 
@@ -54,10 +56,12 @@ module.exports = function() {
     let demoOverrideConfig = {};
     try {
         demoOverrideConfig = configData.demoVenue && configData.productTemplate ? require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`) : {};
+        console.log('demoOverrideConfig');
+        console.dir(demoOverrideConfig);
     } catch (e) {
         console.warn('no demo overrides localization');
     }
-    
+
     let brandThemeConfig = {};
     try {
         brandThemeConfig = configData.brandTheme ? require(`../brand-themes/${configData.brandTheme}/localization.js`) : {};
@@ -65,13 +69,17 @@ module.exports = function() {
         console.warn('no brand theme localization');
     }
 
-    configData.localization = Object.assign({}, defaultEngineConfig, defaultProductTemplateConfig, demoOverrideConfig, brandThemeConfig);
+    const dates = require('../engine/javascripts/dates');
+    configData.localization = Object.assign({}, { dates }, defaultEngineConfig, defaultProductTemplateConfig, demoOverrideConfig, brandThemeConfig);
 
     // view engine setup
     // https://expressjs.com/en/4x/api.html#app.set
     // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
     const appViews = [];
 
+    if (configData.brandTheme) {
+        appViews.push(path.join(__dirname, '../', 'brand-themes', configData.brandTheme));
+    }
     if (configData.productTemplate) {
         if (configData.demoVenue) {
             appViews.push(path.join(__dirname, '../', 'demo-overrides', configData.productTemplate, configData.demoVenue));
@@ -84,6 +92,8 @@ module.exports = function() {
     configData.appViews = appViews;
 
     configData = addMagickFlowsToConfig(configData);
+    configData = addAvailableDemoAppConfigs(configData);
+    configData = addAvailableDemoBannerImages(configData);
 
 
 
@@ -101,7 +111,7 @@ module.exports = function() {
             const thisMagickFlowObject = configData.magickFlows[magickFlowUrlSlug];
             const thisMagickFlowSteps = configData.magickFlows[magickFlowUrlSlug].steps;
             const thisMagickFlowAssets = configData.magickFlows[magickFlowUrlSlug].assets;
-            
+
 
             // const thisMagickFlowHasTemplateSizingInfo = thisMagickFlowAssets.includes('all__viewport-size.png');
 

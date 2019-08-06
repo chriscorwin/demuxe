@@ -1,0 +1,26 @@
+<!-- DON'T USE THIS FILE AS AN EXAMPLE. USE service-cases.ejs METHOD INSTEAD -->
+	<style>
+        .growCircle {
+            animation: growCircle 2s ease-out forwards;
+            transform-origin: 102px center;
+        }
+
+        @-webkit-keyframes growCircle {
+          from { r: 0; }
+        }
+    </style>
+<div id="consent-across-channels-here"><%- include('images/slices/consent-across-channels-blank.svg') %></div>
+<script>
+	const addConsentAcrossChannelsSVG = (data) => (`<%- include('images/slices/consent-across-channels.svg') %>`);
+
+	let triggeredConsentAcrossChannelsGraphAnimation = false;
+	const animateConsentAcrossChannelsGraph = () => {
+		if (window.scrollY > 300 && !triggeredConsentAcrossChannelsGraphAnimation) {
+			triggeredConsentAcrossChannelsGraphAnimation = true;
+
+			document.querySelector('#consent-across-channels-here').innerHTML = addConsentAcrossChannelsSVG();
+		}
+	};
+
+	document.addEventListener("scroll", animateConsentAcrossChannelsGraph);
+</script>

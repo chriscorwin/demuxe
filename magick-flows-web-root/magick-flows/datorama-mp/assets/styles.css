@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/datorama/main/0000___ID=datorama-cross-channel-marketing-intelligence___DATA=unset___NOTES=Notes-go-here.png") url("/magick-flows/datorama/main/0100___ID=datorama-email-performance___DATA=unset___NOTES=Notes-go-here.png") url("/magick-flows/datorama/assets/all__viewport-size.png");
+  content: url("/magick-flows/datorama-mp/main/0000___ID=datorama-cross-channel-marketing-intelligence___DATA=unset___NOTES=Notes-go-here.png") url("/magick-flows/datorama-mp/main/0100___ID=datorama-email-performance___DATA=unset___NOTES=Notes-go-here.png") url("/magick-flows/datorama-mp/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -373,6 +373,10 @@ header.magick-flows-stickey-header_container {
   opacity: 1;
   transition: 250ms all ease-in-out;
   will-change: all;
+}
+
+.magick-flows-step iframe {
+  border: none;
 }
 
 html {

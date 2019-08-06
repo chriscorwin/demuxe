@@ -1,0 +1,84 @@
+<style>
+	#header-here{
+		background: white;
+		border-radius: 4px;
+		padding: 4px;
+	}
+
+	#header-here svg {
+		width: 100%;
+	}
+	.makeFairBckgd {
+		animation: make-fair-bkg 1s linear;
+		fill: #FFB75D;
+	}
+
+	@keyframes make-fair-bkg {
+	    from {
+	        fill: #C23934;
+	    }
+	}
+
+	.makeFair {
+		animation: make-fair 1s ease-out;
+		fill: #3E3E3C;
+	}
+
+	@keyframes make-fair {
+	    from {
+	        fill: #FFF;
+	    }
+	}
+
+	#Rectangle192 {
+		animation: needle-up 2s ease-out forwards;
+		transform-origin:  1045px 81px;
+		animation-play-state: paused;
+	}
+
+	@keyframes needle-up {
+		from {
+			transform: rotate(-90deg);
+		}
+
+		to {
+			transform: rotate(0deg);
+		}
+	}
+</style>
+<div id="header-here"><%- include('images/header.svg') %></div>
+<script>
+	let triggeredHeaderGraphAnimation = false;
+	const animateHeaderGraph = () => {
+		triggeredHeaderGraphAnimation = true;
+
+		const satisfactionScore = document.querySelector('#satisfactionScore tspan');
+
+		satisfactionScore.textContent = '0%';
+
+		let satisfactionScoreNumber = .1;
+
+		const increase = () => {
+			if (satisfactionScoreNumber < 71) {
+				satisfactionScoreNumber += .2;
+
+				window.setTimeout(increase, 2);
+			} else {
+				satisfactionScoreNumber = 71.7;
+			}
+
+			if (satisfactionScoreNumber > 20) {
+				document.querySelector('#FairBckgd').classList.add('makeFairBckgd');
+				document.querySelector('#Fair').classList.add('makeFair');
+				document.querySelector('#Fair tspan').textContent = 'Fair';
+			}
+
+			satisfactionScore.textContent = `${satisfactionScoreNumber.toFixed(1)}%`;
+		}
+
+		increase();
+
+		document.querySelectorAll('#Rectangle192').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+
+</script>

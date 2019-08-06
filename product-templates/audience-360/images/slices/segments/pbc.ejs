@@ -1,0 +1,88 @@
+<style>
+#pbc-here svg{
+	width: 100%;
+	margin-top: -10px;
+}
+</style>
+<div id="pbc-here"><%- include('images/slices/segments/pbc.svg') %></div>
+<script>
+	let triggeredPBCGraphAnimation = false;
+	const animatePBCGraph = () => {
+		triggeredPBCGraphAnimation = true;
+
+		document.querySelectorAll('.moveThisText, .growThisBar').forEach(elm => elm.style.animationPlayState = 'running');
+
+		const performanceScores = document.querySelectorAll('.moveThisText tspan');
+
+		let satisfactionScoreNumber = .1;
+
+		const increase = () => {
+			if (satisfactionScoreNumber < 97) {
+				satisfactionScoreNumber += .2;
+
+				window.setTimeout(increase, 1);
+			}
+
+			performanceScores.forEach(score => {
+				scoreNumber = score.dataset.top >= satisfactionScoreNumber ?satisfactionScoreNumber.toFixed(0) : score.dataset.top;
+					score.textContent = `${scoreNumber}%`;
+			})
+		}
+
+		increase();
+	};
+
+	window.setTimeout(animatePBCGraph, 200);
+</script>
+<style>
+    .growThisBar {
+        animation: growThisBar 2s ease-out forwards;
+        transform-origin: left center;
+        animation-play-state: paused;
+    }
+
+    @-webkit-keyframes growThisBar {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1px); }
+    }
+
+    #text65 {
+    	animation: moveThisText65 2s ease-out forwards;
+    	transform-origin: 100px center;
+    	animation-play-state: paused;
+    }
+    @-webkit-keyframes moveThisText65 {
+      from { transform: translateX(-2px); }
+      to { transform: translateX(0); }
+    }
+
+    #text7 {
+    	animation: moveThisText7 2s ease-out forwards;
+    	transform-origin: 100px center;
+    	animation-play-state: paused;
+    }
+    @-webkit-keyframes moveThisText7 {
+      from { transform: translateX(-11px); }
+      to { transform: translateX(0); }
+    }
+
+    #text34 {
+    	animation: moveThisText34 2s ease-out forwards;
+    	transform-origin: 100px center;
+    	animation-play-state: paused;
+    }
+    @-webkit-keyframes moveThisText34 {
+      from { transform: translateX(-60px); }
+      to { transform: translateX(0); }
+    }
+
+    #text97 {
+    	animation: moveThisText97 2s ease-out forwards;
+    	transform-origin: 100px center;
+    	animation-play-state: paused;
+    }
+    @-webkit-keyframes moveThisText97 {
+      from { transform: translateX(-226px); }
+      to { transform: translateX(0); }
+    }
+</style>

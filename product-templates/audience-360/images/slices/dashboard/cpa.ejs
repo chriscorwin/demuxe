@@ -1,0 +1,73 @@
+<style>
+	#Shape1, #Shape2, #Shape3 {
+	    animation: grow-line 1.5s linear backwards;
+	    animation-delay: .5s;
+	    animation-play-state: paused;
+	}
+
+	@keyframes grow-line {
+	    from {
+	        stroke-dashoffset: 600;
+	    }
+	}
+
+	#text25, #text25_2, #text25_3 {
+		animation: change-text-color 1.5s linear;
+		animation-play-state: paused;
+	}
+
+	@keyframes change-text-color {
+	    from {
+	        opacity: 0;
+	    }
+
+	    90% {
+	    	opacity: 0;
+	    }
+
+	    to {
+	    	opacity: 1;
+	    }
+	}
+
+	#Rectangle3 {
+		animation: change-color .5s linear;
+		animation-play-state: paused;
+	}
+
+	@keyframes change-color {
+		from {
+			fill: #DDDBDA;
+		}
+	}
+
+	#Rectangle7, #Rectangle8, #Rectangle9 {
+		animation: change-color-later 1.5s linear;
+		animation-play-state: paused;
+	}
+
+	@keyframes change-color-later {
+		from {
+			fill: #DDDBDA;
+		}
+
+		80% {
+			fill: #DDDBDA;
+		}
+	}
+</style>
+<div id="cpa-here"><%- include('images/cpa.svg') %></div>
+<script>
+	let triggeredCPAGraphAnimation = false;
+	const animateCPAGraph = () => {
+		if (window.scrollY > 900 && !triggeredCPAGraphAnimation) {
+			triggeredCPAGraphAnimation = true;
+
+			document.querySelectorAll('#Shape1, #Shape2, #Shape3, #text25, #text25_2, #text25_3, #Rectangle3, #Rectangle7, #Rectangle8, #Rectangle9').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+
+		document.addEventListener("scroll", animateCPAGraph);
+	};
+
+
+</script>

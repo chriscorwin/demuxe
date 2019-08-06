@@ -1,8 +1,40 @@
 <%
 	const svgHeight = locals.svgHeight || 1000;
-	const svgWidth = locals.svgWidth || 1012;
+	const svgWidth = locals.svgWidth || 1280;
 	const zoomLevel = locals.zoomLevel || 1;
+
+	const labelScaleStops = {
+		0.7: '669px, 577px',
+		0.8: '601px, 427px',
+		0.9: '557px, 427px',
+		1: '408px, 317px'
+	}
 %>
+
+<div style="display: flex; justify-content: flex-end; width: 900px;">
+	<%- include('components/combobox', {
+		isDisabled: false, // whether the combobox appears disabled
+		id: 'touchpointsSelection',
+		versionName: 'Lifecycle', // placeholder text for combobox
+		versions: [
+			{
+				name: 'Lifecycle' // displayed text for option
+			},
+			{
+				name: 'Channels',
+				onclick: "navigatePage('/touchpoints')"
+			},
+			{
+				name: 'Touchpoints', // displayed text for option
+				onclick: "navigatePage('/touchpoints')"
+			}
+		]
+	}) %>
+	<div style="margin-left: 10px;">
+		<img src="/images/lifecycles.top-left.svg" />
+	</div>
+
+</div>
 
 <svg class="graph lifecycle-graph" height="<%= svgHeight %>" width="<%= svgWidth %>" transform="scale(<%= zoomLevel %> <%= zoomLevel %>)" style="transform-origin: top left;">
 	<defs>
@@ -35,11 +67,11 @@
 			<rect x="-115" y="5" width="230" height="115"> </rect>
 		</clipPath>
 	</defs>
-	<g class="graph-data" transform="translate(0,355)">
+	<g class="graph-data" transform="translate(0,255)">
 
 		<!-- The center line -->
 		<g class="graph-marks">
-			<rect class="axis" width="1012" fill="url(#gradient-axis)" x="80" y="-1" height="2"> </rect>
+			<rect class="axis" width="920" fill="url(#gradient-axis)" x="0" y="-1" height="2"> </rect>
 			<line class="separator separator-row separator-graph" x1="0" y1="0" x2="100%" y2="0"> </line>
 		</g>
 
@@ -51,7 +83,7 @@
 			const stages = locals.stages;
 		%>
 
-		<g class="graph-elements-svg" transform="translate(166,0)">
+		<g class="graph-elements-svg" transform="translate(56,0)">
 
 			<!-- the discs (blue/purple half circles) -->
 			<g>
@@ -129,7 +161,7 @@
 	</g>
 </svg>
 <div class="lifecycle-label-container dynamic-placement" style="transform-origin: center; transform: scale(<%= zoomLevel %>, <%= zoomLevel %>)">
-	<div class="lifecycle-stage-labels" style="transform-origin: top left; transform: translate(181px, 457px) ">
+	<div class="lifecycle-stage-labels" style="transform-origin: top left; transform: translate(<%= labelScaleStops[zoomLevel] %>) ">
 		<%
 			stages.forEach((stage, i) => {
 				echo(`
@@ -144,3 +176,7 @@
 	</div>
 	<div class="node-labels"> </div>
 </div>
+<div style="position: fixed; bottom: 0px; left: 338px; width: 926px; height: 60px; background-color: #F3F2F2; border-radius: 0 0 4px 0; padding: 16px;">
+	<img src="/images/lifecycles.footer.svg" />
+</div>
+

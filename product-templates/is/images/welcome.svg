@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1256px" height="618px" viewBox="0 0 1256 618" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.11320448,0.126119527 L350.463796,0.126119527 C352.672935,0.126119527 354.463796,1.91698053 354.463796,4.12611953 L354.463796,211.65783 C354.463796,213.866969 352.672935,215.65783 350.463796,215.65783 L4.11320448,215.65783 C1.90406548,215.65783 0.113204476,213.866969 0.113204476,211.65783 L0.113204476,4.12611953 C0.113204476,1.91698053 1.90406548,0.126119527 4.11320448,0.126119527 Z" id="path-1"></path>
+        <filter x="-1.1%" y="-0.9%" width="102.3%" height="103.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M4.11320448,0.126119527 L350.463796,0.126119527 C352.672935,0.126119527 354.463796,1.91698053 354.463796,4.12611953 L354.463796,211.65783 C354.463796,213.866969 352.672935,215.65783 350.463796,215.65783 L4.11320448,215.65783 C1.90406548,215.65783 0.113204476,213.866969 0.113204476,211.65783 L0.113204476,4.12611953 C0.113204476,1.91698053 1.90406548,0.126119527 4.11320448,0.126119527 Z" id="path-3"></path>
+        <filter x="-1.1%" y="-0.9%" width="102.3%" height="103.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M4.11320448,0.126119527 L350.463796,0.126119527 C352.672935,0.126119527 354.463796,1.91698053 354.463796,4.12611953 L354.463796,211.65783 C354.463796,213.866969 352.672935,215.65783 350.463796,215.65783 L4.11320448,215.65783 C1.90406548,215.65783 0.113204476,213.866969 0.113204476,211.65783 L0.113204476,4.12611953 C0.113204476,1.91698053 1.90406548,0.126119527 4.11320448,0.126119527 Z" id="path-5"></path>
+        <filter x="-1.1%" y="-0.9%" width="102.3%" height="103.7%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M4.11320448,0.126119527 L350.463796,0.126119527 C352.672935,0.126119527 354.463796,1.91698053 354.463796,4.12611953 L354.463796,211.65783 C354.463796,213.866969 352.672935,215.65783 350.463796,215.65783 L4.11320448,215.65783 C1.90406548,215.65783 0.113204476,213.866969 0.113204476,211.65783 L0.113204476,4.12611953 C0.113204476,1.91698053 1.90406548,0.126119527 4.11320448,0.126119527 Z" id="path-7"></path>
+        <filter x="-1.1%" y="-0.9%" width="102.3%" height="103.7%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M4.11320448,0.126119527 L350.463796,0.126119527 C352.672935,0.126119527 354.463796,1.91698053 354.463796,4.12611953 L354.463796,211.65783 C354.463796,213.866969 352.672935,215.65783 350.463796,215.65783 L4.11320448,215.65783 C1.90406548,215.65783 0.113204476,213.866969 0.113204476,211.65783 L0.113204476,4.12611953 C0.113204476,1.91698053 1.90406548,0.126119527 4.11320448,0.126119527 Z" id="path-9"></path>
+        <filter x="-1.1%" y="-0.9%" width="102.3%" height="103.7%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Michael-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Michael-Page-Welcome-" transform="translate(-12.000000, -102.000000)">
+            <g id="Group-3" transform="translate(12.002320, 102.022846)">
+                <path d="M4,0 L1251.9857,0 C1254.19484,1.25169201e-13 1255.9857,1.790861 1255.9857,4 L1255.9857,744.977154 L0,744.977154 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="Rectangle-12" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <g id="Group-28" transform="translate(70.464594, 248.477154)">
+                    <g id="Group-6-Copy-3" transform="translate(0.377166, 0.391066)">
+                        <g id="Group-35">
+                            <g id="Rectangle-4">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <path stroke="#DDDBDA" stroke-width="1" d="M4.11320448,0.626119527 C2.18020785,0.626119527 0.613204476,2.1931229 0.613204476,4.12611953 L0.613204476,211.65783 C0.613204476,213.590827 2.18020785,215.15783 4.11320448,215.15783 L350.463796,215.15783 C352.396792,215.15783 353.963796,213.590827 353.963796,211.65783 L353.963796,4.12611953 C353.963796,2.1931229 352.396792,0.626119527 350.463796,0.626119527 L4.11320448,0.626119527 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                            </g>
+                            <text id="Define-the-products," font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#2B2826">
+                                <tspan x="21.1898196" y="71.8919748">Define the products, services and </tspan>
+                                <tspan x="21.1898196" y="90.8919748">activities that will form the basis of </tspan>
+                                <tspan x="21.1898196" y="109.891975">your customer lifecycle Orchestrations.</tspan>
+                            </text>
+                            <text id="Configure" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                                <tspan x="21.1898196" y="37.2056571">Configure</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <path d="M0.377166077,173.5 L353.5,173.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                    <text id="action" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#006DD5">
+                        <tspan x="148.142166" y="201.00235">Configure</tspan>
+                    </text>
+                    <g id="custom-copy" transform="translate(285.020129, 25.000000)" fill="#032E61" fill-rule="nonzero">
+                        <path d="M39.4668888,8.51913478 C39.333611,8.05324459 38.7338609,7.92013311 38.3340275,8.25291181 L31.6034985,14.9750416 C31.0703873,15.5074875 30.2707205,15.5074875 29.7376093,14.9750416 L25.0062474,10.249584 C24.4731362,9.7171381 24.4731362,8.91846922 25.0062474,8.38602329 L31.8034152,1.59733777 C32.1366097,1.26455907 32.0033319,0.665557404 31.5368596,0.465890183 C30.4039983,0.199667221 29.2044981,0 28.0049979,0 C20.9412745,0 15.2769679,6.12312812 16.0766347,13.3111481 C16.2099125,14.4425957 16.4764681,15.4409318 16.8763015,16.4392679 L1.34943773,32.0133111 C-0.449812578,33.8103161 -0.449812578,36.8053245 1.34943773,38.6023295 C2.28238234,39.5341098 3.48188255,40 4.68138276,40 C5.88088297,40 7.08038317,39.5341098 8.01332778,38.6023295 L23.5401916,23.0948419 C24.5397751,23.4941764 25.6059975,23.7603993 26.6722199,23.8935108 C33.9358601,24.6921797 40,19.0349418 40,11.9800333 C40,10.78203 39.8000833,9.58402662 39.4668888,8.51913478 Z" id="Shape"></path>
+                    </g>
+                </g>
+                <g id="Group-29" transform="translate(449.997680, 247.977154)">
+                    <g id="Group-28-Copy" transform="translate(0.000000, 0.500000)">
+                        <g id="Group-6-Copy-3" transform="translate(0.377166, 0.391066)">
+                            <g id="Group-35">
+                                <g id="Rectangle-4">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                    <path stroke="#DDDBDA" stroke-width="1" d="M4.11320448,0.626119527 C2.18020785,0.626119527 0.613204476,2.1931229 0.613204476,4.12611953 L0.613204476,211.65783 C0.613204476,213.590827 2.18020785,215.15783 4.11320448,215.15783 L350.463796,215.15783 C352.396792,215.15783 353.963796,213.590827 353.963796,211.65783 L353.963796,4.12611953 C353.963796,2.1931229 352.396792,0.626119527 350.463796,0.626119527 L4.11320448,0.626119527 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                                </g>
+                                <text id="Capture-omni-channel" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#2B2826">
+                                    <tspan x="21.1898196" y="71.8919748">Capture omni-channel customer </tspan>
+                                    <tspan x="21.1898196" y="90.8919748">behaviors and attributes, and reference </tspan>
+                                    <tspan x="21.1898196" y="109.891975">3rd-party data sources to create unique, </tspan>
+                                    <tspan x="21.1898196" y="128.891975">real-time profiles for every customer. </tspan>
+                                </text>
+                                <text id="Collect" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                                    <tspan x="21.1898196" y="37.2056571">Collect</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <path d="M0.377166077,173.5 L353.5,173.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path>
+                        <text id="action" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#006DD5">
+                            <tspan x="166.043166" y="201.00235">Collect</tspan>
+                        </text>
+                    </g>
+                    <g id="Group-10-Copy" transform="translate(283.000000, 24.320024)" fill="#005FB2" fill-rule="nonzero">
+                        <g id="all-copy" transform="translate(7.777778, 0.777778)">
+                            <path d="M23.6666667,14.6111111 L17.9444444,20.7777778 C17.6111111,21.1111111 17.6111111,21.7222222 17.9444444,22.0555556 L23.6666667,28.2222222 C24.0555556,28.6111111 24.6666667,28.6111111 25.0555556,28.2222222 L30.7777778,22.0555556 C31.1111111,21.7222222 31.1111111,21.1111111 30.7777778,20.7777778 L25.0555556,14.6111111 C24.6666667,14.2222222 24,14.2222222 23.6666667,14.6111111 L23.6666667,14.6111111 Z" id="Shape"></path>
+                            <circle id="Oval" cx="6.55555556" cy="21.2222222" r="6.44444444"></circle>
+                            <path d="M9.33528327,3.51388889 L14.2797277,0.680555556 C14.7241722,0.402777778 15.2797277,0.402777778 15.7797277,0.680555556 L20.7241722,3.51388889 C21.1686166,3.79166667 21.4463944,4.29166667 21.4463944,4.79166667 L21.4463944,10.4583333 C21.4463944,10.9583333 21.1686166,11.4583333 20.7241722,11.7361111 L15.7797277,14.5694444 C15.3352833,14.8472222 14.7797277,14.8472222 14.2797277,14.5694444 L9.33528327,11.7361111 C8.89083883,11.4583333 8.55750549,10.9583333 8.55750549,10.4583333 L8.55750549,4.79166667 C8.55750549,4.23611111 8.89083883,3.73611111 9.33528327,3.51388889 Z" id="Shape"></path>
+                        </g>
+                        <path d="M4.46579129,30.8579278 L1.43245795,30.8579278 C0.9606061,30.8579278 0.556161656,31.2623722 0.556161656,31.7342241 L0.556161656,42.5868167 C0.556161656,43.0586685 0.9606061,43.463113 1.43245795,43.463113 L2.91542091,43.463113 C4.26356906,43.463113 5.34208758,42.3845945 5.34208758,41.0364463 L5.34208758,31.8016315 C5.40949499,31.2623722 4.93764314,30.8579278 4.46579129,30.8579278 Z M40.9331987,36.7897796 C40.4613468,35.7112611 39.5850505,34.5653352 38.3043098,34.4305204 C37.6302357,34.363113 36.9561617,34.6327426 36.349495,34.8349648 C33.9228283,35.7112611 31.4961617,36.52015 29.069495,37.3964463 C27.5191246,37.9357056 25.9013468,38.4749648 24.2161617,38.6097796 C23.0702357,38.6771871 21.9243098,38.6097796 20.7783839,38.6097796 C20.1717172,38.6097796 19.632458,38.1379278 19.632458,37.4638537 C19.632458,36.7897796 20.1043098,36.3179278 20.7783839,36.3179278 L26.912458,36.3179278 C28.0583839,36.3179278 28.9346802,35.3742241 28.9346802,34.2957056 C28.9346802,33.2171871 27.9909765,32.2734834 26.912458,32.2734834 L22.1939394,32.2734834 C21.9917172,32.2734834 20.7109765,32.2060759 19.9020876,31.8690389 C19.0257913,31.4645945 17.8798654,31.3971871 17.8798654,31.4645945 L9.58875425,31.4645945 C8.57764314,31.4645945 7.76875425,32.2734834 7.76875425,33.2845945 L7.76875425,40.9016315 C7.76875425,41.7779278 8.44282832,42.5194093 9.31912462,42.6542241 L9.52134684,42.6542241 C11.0717172,42.6542241 12.6220876,42.9912611 14.172458,43.2608908 C15.7228283,43.5979278 17.2057913,43.80015 18.8235691,43.80015 C20.8457913,43.8675574 22.9354209,43.5305204 24.8902357,43.0586685 C26.8450505,42.5194093 28.732458,41.7779278 30.6198654,41.1712611 C33.8554209,40.0927426 37.1583839,38.9468167 40.3939394,37.8682982 C40.7983839,37.6660759 41.1354209,37.3290389 40.9331987,36.7897796 L40.9331987,36.7897796 Z" id="Shape"></path>
+                    </g>
+                </g>
+                <g id="Group-30" transform="translate(830.997680, 247.977154)">
+                    <g id="Group-28-Copy-4" transform="translate(0.000000, 0.500000)">
+                        <g id="Group-6-Copy-3" transform="translate(0.377166, 0.391066)">
+                            <g id="Group-35">
+                                <g id="Rectangle-4">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                    <path stroke="#DDDBDA" stroke-width="1" d="M4.11320448,0.626119527 C2.18020785,0.626119527 0.613204476,2.1931229 0.613204476,4.12611953 L0.613204476,211.65783 C0.613204476,213.590827 2.18020785,215.15783 4.11320448,215.15783 L350.463796,215.15783 C352.396792,215.15783 353.963796,213.590827 353.963796,211.65783 L353.963796,4.12611953 C353.963796,2.1931229 352.396792,0.626119527 350.463796,0.626119527 L4.11320448,0.626119527 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                                </g>
+                                <text id="Visualize-customer-j" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#2B2826">
+                                    <tspan x="21.1898196" y="71.8919748">Visualize customer journeys to discover </tspan>
+                                    <tspan x="21.1898196" y="90.8919748">common patterns of behavior, giving you </tspan>
+                                    <tspan x="21.1898196" y="109.891975">insight into your customer’s true intent. </tspan>
+                                </text>
+                                <text id="Analyze" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                                    <tspan x="21.1898196" y="37.2056571">Analyze</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <path d="M0.377166077,173.5 L353.5,173.5" id="Line" stroke="#DDDBDA" stroke-linecap="square"></path style="cursor: pointer;">
+                        <g id="Michael-Page-hover-target" style="cursor: pointer;" stroke="none" stroke-width="1" fill="#FFF" fill-rule="evenodd">
+                            <path d="M1,174 L354,174 L354,212 C354,213.656854 352.656854,215 351,215 L4,215 C2.34314575,215 1,213.656854 1,212 L1,174 Z" id="Rectangle"></path>
+                            <text id="Michael-Page-action-text" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#006DD5" style="cursor: pointer;">
+                            <tspan x="161.311166" y="201.00235" style="cursor: pointer;">Analyze</tspan>
+                        </text>
+                        </g>
+
+                        <script>
+                            document.getElementById('Michael-Page-hover-target').addEventListener('mouseover', function() {
+                                document.querySelector('#Michael-Page-hover-target').setAttribute('fill', '#006DD5');
+                                document.querySelector('#Michael-Page-action-text').setAttribute('fill', '#FFF');
+                            });
+                            document.getElementById('Michael-Page-hover-target').addEventListener('mouseout', function() {
+                                document.querySelector('#Michael-Page-hover-target').setAttribute('fill', '#FFF');
+                                document.querySelector('#Michael-Page-action-text').setAttribute('fill', '#006DD5');
+                            });
+                            document.getElementById('Michael-Page-hover-target').addEventListener('click', function() {
+                                navigatePage('/lifecycles');
+                            });
+                        </script>
+                    </g>
+                    <g id="Group-4-Copy-3" transform="translate(284.017600, 26.221784)" fill="#7F8CE2" fill-rule="nonzero">
+                        <g id="icons/utility/graph">
+                            <path d="M0,36.6666667 C0,38.5185185 1.62162162,40 3.42342342,40 L38.5585586,40 C39.4594595,40 40,39.4444444 40,38.7037037 L40,36.2962963 C40,35.5555556 39.4594595,35 38.5585586,35 L6.30630631,35 C5.58558559,35 5.04504505,34.4444444 5.04504505,33.7037037 L5.04504505,1.2962963 C5.04504505,0.555555556 4.5045045,0 3.78378378,0 L1.44144144,0 C0.540540541,0 0,0.555555556 0,1.2962963 L0,36.6666667 Z M39.6396396,9.81481481 C39.6396396,8.33333333 38.5585586,7.22222222 37.2972973,7.22222222 C36.3963964,7.22222222 35.8558559,7.59259259 35.3153153,7.96296296 L28.2882883,15.3703704 L23.2432432,10.5555556 L23.0630631,10.3703704 C23.0630631,10.3703704 23.0630631,10.1851852 22.8828829,10.1851852 C22.8828829,10.1851852 22.7027027,10.1851852 22.7027027,10 L22.5225225,10 L22.1621622,10 L21.981982,9.81481481 L21.0810811,9.81481481 C20.9009009,9.81481481 20.9009009,9.81481481 20.9009009,10 L20.3603604,10 C20.1801802,10.1851852 20.1801802,10.1851852 20,10.1851852 L20,10.3703704 C20,10.3703704 19.8198198,10.5555556 19.6396396,10.5555556 L10.2702703,20.3703704 C9.72972973,20.9259259 9.36936937,21.4814815 9.36936937,22.2222222 C9.36936937,23.7037037 10.4504505,24.8148148 11.8918919,24.8148148 C12.4324324,24.8148148 12.972973,24.6296296 13.5135135,24.2592593 L21.6216216,15.9259259 L26.3063063,20.7407407 L26.4864865,20.9259259 L26.6666667,21.1111111 C26.8468468,21.1111111 26.8468468,21.1111111 27.027027,21.2962963 L27.2072072,21.2962963 C27.2072072,21.4814815 27.3873874,21.4814815 27.5675676,21.4814815 C27.7477477,21.4814815 27.9279279,21.6666667 28.1081081,21.6666667 C28.2882883,21.6666667 28.4684685,21.6666667 28.6486486,21.4814815 L29.1891892,21.4814815 C29.1891892,21.4814815 29.1891892,21.2962963 29.3693694,21.2962963 C29.5495495,21.2962963 29.5495495,21.2962963 29.5495495,21.1111111 L29.7297297,21.1111111 L29.9099099,20.9259259 L38.9189189,11.6666667 C39.4594595,11.1111111 39.6396396,10.5555556 39.6396396,9.81481481 L39.6396396,9.81481481 Z" id="Shape-Copy-3"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-31" transform="translate(69.997680, 489.977154)">
+                    <g id="Group-28-Copy-2" transform="translate(0.466914, 0.086972)">
+                        <g id="Group-6-Copy-3" transform="translate(0.377166, 0.391066)">
+                            <g id="Group-35">
+                                <g id="Rectangle-4">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                                    <path stroke="#DDDBDA" stroke-width="1" d="M4.11320448,0.626119527 C2.18020785,0.626119527 0.613204476,2.1931229 0.613204476,4.12611953 L0.613204476,211.65783 C0.613204476,213.590827 2.18020785,215.15783 4.11320448,215.15783 L350.463796,215.15783 C352.396792,215.15783 353.963796,213.590827 353.963796,211.65783 L353.963796,4.12611953 C353.963796,2.1931229 352.396792,0.626119527 350.463796,0.626119527 L4.11320448,0.626119527 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                                </g>
+                                <text id="Use-the-insights-pro" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#2B2826">
+                                    <tspan x="21.1898196" y="71.8919748">Use the insights provided by Interaction </tspan>
+                                    <tspan x="21.1898196" y="90.8919748">Studio to engage your customers with </tspan>
+                                    <tspan x="21.1898196" y="109.891975">individualized, real time content. </tspan>
+                                </text>
+                                <text id="Orchestrate" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                                    <tspan x="21.1898196" y="37.2056571">Orchestrate</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Group-3-Copy-2" transform="translate(284.770067, 25.019613)" fill="#FF9A3C" fill-rule="nonzero">
+                        <g id="icons/utility/rules">
+                            <path d="M33.1096197,12.0850709 C32.7516779,11.734779 32.2147651,11.734779 31.8568233,12.0850709 L30.6040268,13.3110926 C30.246085,13.6613845 30.246085,14.1868224 30.6040268,14.5371143 L32.7516779,16.4637198 C32.9306488,16.8140117 32.7516779,17.5145955 32.2147651,17.5145955 L13.9597315,17.5145955 L24.8769575,6.83069224 C25.2348993,6.48040033 25.950783,6.83069224 25.950783,7.35613011 L25.950783,10.1584654 C25.950783,10.6839033 26.3087248,11.0341952 26.6666667,11.0341952 L28.4563758,11.0341952 C28.9932886,11.0341952 29.3512304,10.6839033 29.3512304,10.1584654 L29.3512304,0.875729775 C29.3512304,0.35029191 28.9932886,0 28.4563758,0 L18.9709172,0 C18.6129754,0 18.2550336,0.35029191 18.2550336,0.875729775 L18.2550336,2.45204337 C18.2550336,2.97748123 18.6129754,3.32777314 18.9709172,3.32777314 L22.0134228,3.32777314 C22.5503356,3.32777314 22.7293065,3.85321101 22.3713647,4.37864887 L9.12751678,17.3394495 L0.894854586,17.3394495 C0.357941834,17.3394495 0,17.8648874 0,18.2151793 L0,19.9666389 C0,20.4920767 0.536912752,20.8423686 0.894854586,20.8423686 L9.12751678,20.8423686 L22.5503356,33.8031693 C22.9082774,34.1534612 22.5503356,34.854045 22.0134228,34.854045 L19.1498881,34.854045 C18.6129754,34.854045 18.2550336,35.2043369 18.2550336,35.7297748 L18.2550336,37.3060884 C18.2550336,37.6563803 18.6129754,38.0066722 19.1498881,38.1818182 L28.4563758,38.1818182 C28.9932886,38.1818182 29.3512304,37.8315263 29.3512304,37.3060884 L29.3512304,28.0233528 C29.3512304,27.4979149 28.9932886,27.322769 28.4563758,27.322769 L26.8456376,27.322769 C26.3087248,27.322769 25.950783,27.4979149 25.950783,28.0233528 L25.950783,31.000834 C25.950783,31.5262719 25.4138702,31.7014178 25.0559284,31.3511259 L14.1387025,20.8423686 L32.393736,20.8423686 C32.7516779,20.8423686 33.1096197,21.5429525 32.7516779,21.8932444 L30.6040268,23.8198499 C30.246085,24.1701418 30.246085,24.6955796 30.6040268,25.0458716 L31.8568233,26.2718932 C32.2147651,26.6221852 32.7516779,26.6221852 33.1096197,26.2718932 L39.7315436,19.7914929 C40.0894855,19.441201 40.0894855,18.9157631 39.7315436,18.5654712 L33.1096197,12.0850709 Z" id="Shape-Copy-2"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-32" transform="translate(449.997680, 489.977154)">
+                    <g id="Group-28-Copy-3" transform="translate(0.000000, 0.086972)">
+                        <g id="Group-6-Copy-3" transform="translate(0.377166, 0.391066)">
+                            <g id="Group-35">
+                                <g id="Rectangle-4">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                                    <path stroke="#DDDBDA" stroke-width="1" d="M4.11320448,0.626119527 C2.18020785,0.626119527 0.613204476,2.1931229 0.613204476,4.12611953 L0.613204476,211.65783 C0.613204476,213.590827 2.18020785,215.15783 4.11320448,215.15783 L350.463796,215.15783 C352.396792,215.15783 353.963796,213.590827 353.963796,211.65783 L353.963796,4.12611953 C353.963796,2.1931229 352.396792,0.626119527 350.463796,0.626119527 L4.11320448,0.626119527 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                                </g>
+                                <text id="Test-Collection-and" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#2B2826">
+                                    <tspan x="21.1898196" y="71.8919748">Test Collection and Orchestration before </tspan>
+                                    <tspan x="21.1898196" y="90.8919748">seamlessly deploying your changes </tspan>
+                                    <tspan x="21.1898196" y="109.891975">across all Touchpoints and Channels. </tspan>
+                                </text>
+                                <text id="Test-&amp;-Publish" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                                    <tspan x="21.1898196" y="37.2056571">Test &amp; Publish</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                    <path d="M305,58.537493 L302.962963,58.537493 L292.166667,58.537493 C287.074074,58.537493 283,54.3945963 283,49.2159755 C283,44.4516442 286.666667,40.5158924 291.351852,40.1016027 L291.351852,39.0658785 C291.351852,31.8158093 297.055556,26.0157539 304.185185,26.0157539 C310.5,26.0157539 316,30.7800851 316.814815,36.9944302 C322.518519,37.201575 327,41.9659062 327,47.7659616 C327,53.566017 322.314815,58.537493 316.611111,58.537493 L305,58.537493 Z M313.49939,41.9642387 C313.92495,41.5314897 313.92495,40.8102415 313.49939,40.5217422 L312.080857,39.0792457 C311.655297,38.6464968 310.94603,38.6464968 310.662323,39.0792457 L303.28595,46.7244771 C303.002243,47.0129764 302.576683,47.0129764 302.292976,46.7244771 L299.455909,43.6952345 C299.030349,43.4067352 298.321082,43.4067352 297.895522,43.6952345 L296.476989,45.137731 C296.193282,45.5704799 296.193282,46.2917282 296.476989,46.7244771 L302.009269,52.3502134 C302.434829,52.7829624 303.002243,52.7829624 303.427803,52.3502134 L313.49939,41.9642387 Z" id="Combined-Shape-Copy-8" fill="#04844B" fill-rule="nonzero"></path>
+                </g>
+                <rect id="Rectangle-9" fill="#FFFFFF" fill-rule="nonzero" x="824.99768" y="20.9771543" width="373" height="207"></rect>
+                <g id="Group-33" transform="translate(851.997680, 44.477154)">
+                    <g id="Button-Neutral" transform="translate(1.767528, 79.261618)">
+                        <path d="M0.915360864,4.0042577 L0.915360864,27.9957423 C0.915360864,29.9336318 2.48042319,31.5 4.41369927,31.5 L305.944992,31.5 C307.871683,31.5 309.443331,29.9282576 309.443331,27.9957423 L309.443331,4.0042577 C309.443331,2.06636817 307.878269,0.5 305.944992,0.5 L4.41369927,0.5 C2.48700878,0.5 0.915360864,2.07174238 0.915360864,4.0042577 Z" id="button" stroke="#DDDBDA" fill="#FFFFFF"></path>
+                        <text id="Install-the-Chrome-E" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                            <tspan x="68.2040197" y="22">Install the Chrome Extension</tspan>
+                        </text>
+                    </g>
+                    <g id="Button-Neutral-Copy-2" transform="translate(0.767528, 36.523235)">
+                        <path d="M0.915360864,4.0042577 L0.915360864,27.9957423 C0.915360864,29.9336318 2.48042319,31.5 4.41369927,31.5 L305.944992,31.5 C307.871683,31.5 309.443331,29.9282576 309.443331,27.9957423 L309.443331,4.0042577 C309.443331,2.06636817 307.878269,0.5 305.944992,0.5 L4.41369927,0.5 C2.48700878,0.5 0.915360864,2.07174238 0.915360864,4.0042577 Z" id="button" stroke="#DDDBDA" fill="#FFFFFF"></path>
+                        <text id="Read-About-Getting-S" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                            <tspan x="72.3835197" y="22">Read About Getting Started</tspan>
+                        </text>
+                    </g>
+                    <g id="Button-Neutral-Copy" transform="translate(0.767528, 122.000000)">
+                        <path d="M1.42385291,4.0042577 L1.42385291,27.9957423 C1.42385291,29.9337226 2.98755362,31.5 4.91894432,31.5 L306.205368,31.5 C308.130179,31.5 309.70046,29.9283485 309.70046,27.9957423 L309.70046,4.0042577 C309.70046,2.06627737 308.136759,0.5 306.205368,0.5 L4.91894432,0.5 C2.9941337,0.5 1.42385291,2.07165149 1.42385291,4.0042577 Z" id="button" stroke="#DDDBDA" fill="#FFFFFF"></path>
+                        <text id="Add-the-Interaction" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal" fill="#0070D2">
+                            <tspan x="14.5" y="22">Add the Interaction Studio Tag to your website</tspan>
+                        </text>
+                    </g>
+                    <text id="Useful-Links" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="16" font-weight="normal" fill="#2B2826">
+                        <tspan x="0.295527549" y="18.5488542">Useful Links</tspan>
+                    </text>
+                </g>
+                <text id="Welcome" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="36" font-weight="normal" fill="#2B2826">
+                    <tspan x="71.5985935" y="90.4771543">Welcome</tspan>
+                </text>
+                <text id="Enable-intent-driven" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="18" font-weight="normal" fill="#2B2826">
+                    <tspan x="71.2555935" y="131.477154">Enable intent-driven customer journeys with Interaction Studio</tspan>
+                </text>
+                <text id="Welcome-to-Interacti" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" fill="#706E6B">
+                    <tspan x="72.4645935" y="162.4645">Welcome to Interaction Studio, an intelligent customer engagement hub that helps you understand each customer’s true </tspan>
+                    <tspan x="72.4645935" y="180.4645">intent and orchestrate individualized journeys for every customer across ever touchpoint in real-time. </tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

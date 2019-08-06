@@ -1,0 +1,151 @@
+<%
+	const badges = locals.titleBadges && locals.titleBadges.reduce((badges, badge) => {
+		let append = '';
+
+		if (badge.popover) {
+			badge.popover.classes = badge.popover.classes ? badge.popover.classes + ' einstein-popover' : 'einstein-popover';
+			append += include('components/popover', badge.popover);
+		}
+
+		if (badge.text) {
+			append += include('components/badge', badge);
+		} else if (badge.icon.src) {
+			append += include(badge.icon.src);
+		}
+
+		return badges + append;
+	}, '') || '';
+	const subTitleBadges = locals.subTitleBadges && locals.subTitleBadges.reduce((badges, badge) => include('components/badge', badge), '') || '';
+	const audienceFillPercentage = (locals.audienceFill >= 0) ? locals.audienceFill : 100;
+	const audienceFill = 113 - (((locals.audienceFill * 100) * 113)/10000);
+	const deviceFillPercentage = (locals.deviceFill >= 0) ? locals.deviceFill : 100;
+	const deviceFill = 113 - (((locals.deviceFill * 100) * 113)/10000);
+
+	const devicesSVG = include('images/icons/devices.svg');
+
+	const panelBoxClasses = classnames('slds-panel-box', { 'slds-m-top_medium': !locals.noTopMargin })
+
+	echo(`
+	<div class="${panelBoxClasses}">
+		<div class="slds-panel-box__header slds-p-horizontal_small slds-grid slds-wrap">
+			<div class="slds-col slds-size_3-of-5">${locals.title}</div>
+			<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-text-align_right">${badges}</div>
+			<div class="slds-col slds-size_3-of-5 slds-text-body_regular">${locals.subTitle}</div>
+			<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-text-align_right">${subTitleBadges }</div>
+			<div class="slds-panel-box__header-settings"><img src="/images/icons/settings.svg" /></div>
+			<div class="slds-panel-box__header-dropdown slds-dropdown slds-dropdown_left slds-dropdown_small slds-hide">
+				<ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" role="menuitem" tabindex="0">
+							<span class="slds-truncate" title="Menu Item One">
+								<img class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" src="/images/icons/pin.svg" />
+								Pin Segment
+							</span>
+						</a>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Menu Item Two">
+								<img class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" src="/images/icons/star.svg" />
+								Add to Favorites
+							</span>
+						</a>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Menu Item One">CDIM</span>
+						</a>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" onclick="navigatePage('/lookalike')" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title=Lookalike">Lookalike</span>
+						</a>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" onclick="navigatePage('/data-studio.audience-discovery.html')" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Data Studio">Discover Audiences</span>
+						</a>
+					</li>
+
+					<li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
+						<span class="slds-text-title_caps">Audience</span>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Menu Item Two">View Summary</span>
+						</a>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Menu Item Two">Edit Segment</span>
+						</a>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Menu Item Two">Copy Segment</span>
+						</a>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Menu Item Two">Delete Segment</span>
+						</a>
+					</li>
+
+					<li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
+						<span class="slds-text-title_caps">Activation</span>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Menu Item Two">Enable Test Mode</span>
+						</a>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" onclick="navigatePage('/segments/manage-segments/rules')" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Menu Item Two">Update Partners</span>
+						</a>
+					</li>
+					<li class="slds-dropdown__item" role="presentation">
+						<a href="javascript:void(0);" onclick="navigatePage('/data-studio/provisioning/new-asset.define-asset')" role="menuitem" tabindex="-1">
+							<span class="slds-truncate" title="Menu Item Two">Provision Segment</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="slds-panel-box__body slds-grid slds-p-horizontal_small slds-p-vertical_x-small">
+			<div class="slds-col slds-size_1-of-6 slds-text-heading_large slds-p-top_xx-small">
+				<img class='${locals.delayLoad ? 'loading': ''} slds-hide' src="/images/icons/devices-loading.svg" />
+				<span class='${locals.delayLoad ? 'loaded': ''}'><svg class="slds-icon_ring" xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<circle cx="20" cy="20" r="18" stroke="#E6ECF2" stroke-width="2" fill="none" />
+					<circle cx="20" cy="20" r="18" stroke="#5AA7EA"  stroke-dasharray="113" stroke-dashoffset="${deviceFill}" transform="rotate(-90, 20, 20)" stroke-width="2" fill="none" />
+				</svg>${devicesSVG}
+				${locals.devices}</span>
+			</div>
+			<div class="slds-col slds-size_1-of-6 slds-text-heading_large slds-p-top_xx-small">
+				<img class='${locals.delayLoad ? 'loading': ''} slds-hide' src="/images/icons/audience-loading.svg" />
+				<span class='${locals.delayLoad ? 'loaded': ''}'><svg class="slds-icon_ring slds-icon_ring-customers" xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<circle cx="20" cy="20" r="18" stroke="#E6ECF2" stroke-width="2" fill="none" />
+					<circle cx="20" cy="20" r="18" stroke="#67CCD4" stroke-dasharray="113" stroke-dashoffset="${audienceFill}" transform="rotate(-90, 20, 20)" stroke-width="2" fill="none" />
+				</svg><span class="slds-icon_container slds-icon_container_circle slds-icon-action-customers"><svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+						<use xlink:href="/icons/standard-sprite/svg/symbols.svg#customers"></use>
+					</svg></span>${locals.audience}</div></span>
+			<div class="slds-col slds-size_1-of-6">
+				<div class="slds-panel-box__body_label">Last Modified</div>
+				<div class="slds-panel-box__body_text">${locals.modified}</div>
+			</div>
+			<div class="slds-col slds-size_1-of-6">
+				<div class="slds-panel-box__body_label">Type</div>
+				<div class="slds-panel-box__body_text">${locals.type}</div>
+			</div>
+			<div class="slds-col slds-size_1-of-6">
+				<div class="slds-panel-box__body_label">Category</div>
+				<div class="slds-panel-box__body_text">${locals.category}</div>
+			</div>
+			<div class="slds-col slds-size_1-of-6">
+				<div class="slds-panel-box__body_label">Sub Category</div>
+				<div class="slds-panel-box__body_text">${locals.subCategory}</div>
+			</div>
+			<div class="slds-panel-box__body-settings"><img src="/images/icons/chevrondown.svg" /></div>
+		</div>
+	</div>`);
+%>

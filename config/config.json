@@ -1,27 +1,27 @@
 {
-	"demoName": "Fever CNX 2019 Keynote",
-	"brandTheme": "Demuxe",
-	"productTemplate": "dashboard",
-	"demoVenue": "cnx19keynote",
+	"demoName": "Demuxe Catalogue",
+	"brandTheme": "demuxe",
+	"productTemplate": "catalogue",
+	"demoVenue": "poc19",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
 		"urlSlugs": [],
 		"urlSlugsMapToFlowDirectories": {}
 	},
-	"defaultUrl": "magick-flows-dashboard",
+	"defaultUrl": "/",
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"herokupipeline": "https://dashboard.heroku.com/pipelines/97d863d0-ea96-4a69-97dc-b6909895a3b6",
 	"production": {
-		"host": "https://cnx19-mc-spotlight.herokuapp.com/"
+		"host": "https://demuxe-catalogue.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19-mc-spotlight-qa.herokuapp.com/"
+		"host": "https://demuxe-catalogue-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://cnx19-mc-spotlight-qa.herokuapp.com/"
+		"host": "https://demuxe-catalogue-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
@@ -33,5 +33,5 @@
 		"timeout": 30000
 	},
 	"gapixelid": "",
-	"presentationid": "1EzinU2nh2RXITiLawG4BGzbdVYekOlhHPg9VxsKZ7_A"
+	"presentationid": ""
 }

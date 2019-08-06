@@ -1,0 +1,45 @@
+{
+	"id": "is.cnx19keynote.fever",
+	"demoName": "IS Fever CNX 19 Keynote",
+	"description": "Interaction Studio Fever demo for Connections 2019 Keynote",
+	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"venue": "Connections 2019",
+	"date": "GET CORRECT DATE",
+	"brands": "GET CORRECT BRAND",
+	"presenters": "GET CORRECT SPEAKERS",
+	"location": "GET CORRECT LOCATION",
+	"tags": ["Connections", "Keynote", "2019"],
+	"thumbnail": "/images/df18___banner___0.png",
+	"brandTheme": "fever",
+	"productTemplate": "is",
+	"demoVenue": "cnx19keynote",
+	"demoVersion": "0.1",
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
+	"env": "production",
+	"production": {
+		"host": "https://cnx19keynote-is-fever.herokuapp.com/"
+	},
+	"qa": {
+		"host": "https://cnx19keynote-is-fever-qa.herokuapp.com/"
+	},
+	"dev": {
+		"host": "https://cnx19keynote-is-fever-dev.herokuapp.com/"
+	},
+	"local": {
+		"host": "http://localhost:3000/"
+	},
+	"tests": {
+		"headless": true,
+		"imageSnapshotPath": "./test/screenshots/",
+		"mismatchThreshold": 0.01,
+		"timeout": 30000
+	},
+	"gapixelid": "",
+	"presentationid": ""
+}

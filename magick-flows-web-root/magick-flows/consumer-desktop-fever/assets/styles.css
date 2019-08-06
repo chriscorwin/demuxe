@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/consumer-desktop/main/0.png") url("/magick-flows/consumer-desktop/main/1.png") url("/magick-flows/consumer-desktop/main/2.png") url("/magick-flows/consumer-desktop/assets/all__background.png") url("/magick-flows/consumer-desktop/assets/all__viewport-size.png");
+  content: url("/magick-flows/consumer-desktop-fever/main/0.png") url("/magick-flows/consumer-desktop-fever/main/1.png") url("/magick-flows/consumer-desktop-fever/main/2.png") url("/magick-flows/consumer-desktop-fever/assets/all__background.png") url("/magick-flows/consumer-desktop-fever/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -437,6 +437,10 @@ header.magick-flows-stickey-header_container {
   opacity: 1;
   transition: 250ms all ease-in-out;
   will-change: all;
+}
+
+.magick-flows-step iframe {
+  border: none;
 }
 
 html {

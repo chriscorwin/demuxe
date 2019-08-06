@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/journey-builder/main/010___ID=journey-canvas-for-fever___NOTES=click-push-notification-titled-welcome-and-seating.png") url("/magick-flows/journey-builder/main/020___ID=push-activity-summary-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder/main/030___ID=push-notification-summary-reset___NOTES=click-done-button.png") url("/magick-flows/journey-builder/main/040___ID=push-activity-summary-slides-away___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder/main/050___ID=journey-canvas-reset___NOTES=click-activate-button.png") url("/magick-flows/journey-builder/main/060___ID=journey-launch-modal___NOTES=click-header-activate-button=End.png") url("/magick-flows/journey-builder/assets/all__viewport-size.png") url("/magick-flows/journey-builder/assets/push-activity-summary-out___drawer-from-left.png") url("/magick-flows/journey-builder/assets/push-activity-summary-slides-away__drawer-from-left.png");
+  content: url("/magick-flows/journey-builder-fever/main/010___ID=journey-canvas-for-fever___NOTES=click-push-notification-titled-welcome-and-seating.png") url("/magick-flows/journey-builder-fever/main/020___ID=push-activity-summary-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder-fever/main/030___ID=push-notification-summary-reset___NOTES=click-done-button.png") url("/magick-flows/journey-builder-fever/main/040___ID=push-activity-summary-slides-away___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/journey-builder-fever/main/050___ID=journey-canvas-reset___NOTES=click-activate-button.png") url("/magick-flows/journey-builder-fever/main/060___ID=journey-launch-modal___NOTES=click-header-activate-button=End.png") url("/magick-flows/journey-builder-fever/assets/all__viewport-size.png") url("/magick-flows/journey-builder-fever/assets/push-activity-summary-out___drawer-from-left.png") url("/magick-flows/journey-builder-fever/assets/push-activity-summary-slides-away__drawer-from-left.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -501,6 +501,10 @@ header.magick-flows-stickey-header_container {
   opacity: 1;
   transition: 250ms all ease-in-out;
   will-change: all;
+}
+
+.magick-flows-step iframe {
+  border: none;
 }
 
 html {

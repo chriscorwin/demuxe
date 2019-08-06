@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="875px" height="51px" viewBox="0 0 875 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="30.1363458%" y1="100%" x2="99.571884%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Michael-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Channels" transform="translate(-407.000000, -164.000000)">
+            <g id="Group-12" transform="translate(407.000000, 159.000000)">
+                <g id="Group-10" transform="translate(0.000000, 24.000000)">
+                    <path d="M30.5,16.5 L860.842302,16.5" id="Line-Copy-5" stroke="#ABADB0" stroke-width="2" opacity="0.504359149" stroke-linecap="square"></path>
+                    <rect id="Rectangle-13" fill="url(#linearGradient-1)" x="0" y="0" width="109" height="32"></rect>
+                    <polygon id="Rectangle-13-Copy" transform="translate(818.671151, 16.000000) rotate(180.000000) translate(-818.671151, -16.000000) " points="776.5 0 860.842302 0 860.842302 32 776.5 32"></polygon>
+                </g>
+                <g id="Group-5" transform="translate(285.000000, 24.000000)" fill="#ABADB0">
+                    <g id="Group-2-Copy-28" transform="translate(0.526861, 0.909270)" opacity="0.75220788">
+                        <ellipse id="Oval" cx="15.1868808" cy="15.7568959" rx="15.0574784" ry="14.8528931"></ellipse>
+                    </g>
+                    <ellipse id="Oval-2-Copy-13" stroke="#FFFFFF" stroke-width="2" cx="15.7137414" cy="16.6661656" rx="9.95461596" ry="9.81936303"></ellipse>
+                </g>
+                <g id="Group-4" transform="translate(141.000000, 24.000000)" fill="#ABADB0">
+                    <g id="Group-2-Copy-27" transform="translate(0.458597, 0.853224)" fill-opacity="0.75">
+                        <g id="Group-Copy-5" transform="translate(1.430708, 0.502573)">
+                            <circle id="Oval" cx="14.9846122" cy="15.2543227" r="14.8528931"></circle>
+                        </g>
+                    </g>
+                    <circle id="Oval-2-Copy-14" stroke="#FFFFFF" stroke-width="2" cx="16.8739167" cy="16.6101194" r="9.81936303"></circle>
+                </g>
+                <g id="Group-6" transform="translate(423.000000, 24.000000)" fill="#ABADB0">
+                    <g id="Group-2-Copy-29" transform="translate(0.675740, 0.909270)" fill-opacity="0.75">
+                        <g id="Group-Copy-5" transform="translate(1.430708, 0.502573)">
+                            <circle id="Oval" cx="14.9846122" cy="15.2543227" r="14.8528931"></circle>
+                        </g>
+                    </g>
+                    <circle id="Oval-2-Copy-15" stroke="#FFFFFF" stroke-width="2" cx="17.0910596" cy="16.6661656" r="9.81936303"></circle>
+                </g>
+                <g id="Group-7" transform="translate(568.000000, 24.000000)" fill="#ABADB0">
+                    <g id="Group-2-Copy-30" transform="translate(0.972353, 0.909270)" fill-opacity="0.75">
+                        <g id="Group-Copy-5" transform="translate(1.430708, 0.502573)">
+                            <circle id="Oval" cx="14.9846122" cy="15.2543227" r="14.8528931"></circle>
+                        </g>
+                    </g>
+                    <circle id="Oval-2-Copy-16" stroke="#FFFFFF" stroke-width="2" cx="17.387673" cy="16.6661656" r="9.81936303"></circle>
+                </g>
+                <g id="Group-8" transform="translate(709.000000, 25.000000)" fill="#ABADB0">
+                    <g id="Group-2-Copy-31" transform="translate(0.097784, 0.280085)" fill-opacity="0.75">
+                        <g id="Group-Copy-5" transform="translate(1.430708, 0.502573)">
+                            <circle id="Oval" cx="14.9846122" cy="15.2543227" r="14.8528931"></circle>
+                        </g>
+                    </g>
+                    <circle id="Oval-2-Copy-17" stroke="#FFFFFF" stroke-width="2" cx="16.5131035" cy="16.0369812" r="9.81936303"></circle>
+                </g>
+                <g id="Group-8-Copy" transform="translate(846.000000, 25.000000)" fill="#ABADB0">
+                    <g id="Group-2-Copy-31" transform="translate(0.097784, 0.280085)" fill-opacity="0.75">
+                        <g id="Group-Copy-5" transform="translate(0.430708, 0.502573)">
+                            <path d="M14.9846122,0.401429544 C6.78158584,0.401429544 0.131719069,7.05129631 0.131719069,15.2543227 C0.131719069,23.4573491 6.78158584,30.1072158 14.9846122,30.1072158 L14.9846122,30.1072158" id="Path"></path>
+                        </g>
+                    </g>
+                    <path d="M15.5131035,6.21761818 C10.0900191,6.21761818 5.69374049,10.6138968 5.69374049,16.0369812 C5.69374049,21.4600657 10.0900191,25.8563442 15.5131035,25.8563442 L15.5131035,25.8563442" id="Path" stroke="#FFFFFF" stroke-width="2"></path>
+                </g>
+                <g id="Group-4-Copy-2" transform="translate(800.000000, 0.000000)" fill="#16325C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal">
+                    <text id="In-R">
+                        <tspan x="35.634" y="16">In R</tspan>
+                    </text>
+                </g>
+                <g id="Group-4-Copy-2" transform="translate(111.000000, 0.000000)" fill="#16325C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal">
+                    <text id="Awareness">
+                        <tspan x="13.521" y="16">Awareness</tspan>
+                    </text>
+                </g>
+                <g id="Group-9-Copy" transform="translate(253.000000, 0.000000)" fill="#16325C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal">
+                    <g id="Group-4-Copy-2">
+                        <text id="Search">
+                            <tspan x="26.443" y="16">Search</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group-9-Copy-2" transform="translate(392.000000, 0.000000)" fill="#16325C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal">
+                    <g id="Group-4-Copy-2">
+                        <text id="Application">
+                            <tspan x="11.302" y="16">Application</tspan>
+                        </text>
+                    </g>
+                </g>
+                <text id="Consideration" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal" fill="#16325C">
+                    <tspan x="539.038" y="16">Consideration</tspan>
+                </text>
+                <g id="Group-9-Copy-4" transform="translate(676.000000, 0.000000)" fill="#16325C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="14" font-weight="normal">
+                    <g id="Group-4-Copy-2">
+                        <text id="Decision">
+                            <tspan x="20.626" y="16">Decision</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

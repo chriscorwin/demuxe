@@ -16,11 +16,11 @@ const {
 
 const baseSegments = [
 	{
-		title: 'Family Prospect Targets',
+		title: 'High Value Families',
 		subTitle: 'Standard Segment / ID: <b>rsdqtbhe8</b> <img src="/images/icons/sort.svg" />',
 		subTitleBadges: [{ text: 'Daily Refresh', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],
-		devices: '6.3M',
-		audience: '5M',
+		devices: '250k',
+		audience: '54k',
 		audienceFill: 80,
 		modified: aboutOneMonthAgo,
 		type: 'Standard',
@@ -108,7 +108,7 @@ const einsteinPopover = {
 
 const lookalikeSegment = [
 	{
-		title: 'Family Prospect Targets - Lookalike',
+		title: 'High Value Families - Lookalike',
 		titleBadges: [{ popover: einsteinPopover, icon: { src: 'images/einstein.svg' }}, { text: 'Base', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#preview' }}],
 		subTitle: 'Standard Segment / ID: <b>rsdqtba67</b> <img src="/images/icons/sort.svg" />',
 		subTitleBadges: [{ text: 'Daily Refresh', icon: { placement: 'left', src: '/icons/action-sprite/svg/symbols.svg#refresh' }}],

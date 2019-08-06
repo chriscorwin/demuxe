@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/as/main/0000___ID=LAL___DATA=unset___NOTES=unset.png") url("/magick-flows/as/main/0001___ID=LAL-hover___DATA=unset___NOTES=unset.png") url("/magick-flows/as/main/0010___ID=segments___DATA=is-eject--state-addLookalike___NOTES=unset.png") url("/magick-flows/as/main/0011___ID=segments-ejected-content-looks-like-this___DATA=unset___NOTES=unset.png") url("/magick-flows/as/main/2010___ID=segments___DATA=is-eject--%3Fstate%3DaddLookalike___NOTES=unset.png") url("/magick-flows/as/main/2011___ID=segments-hover___DATA=unset___NOTES=unset.png") url("/magick-flows/as/main/2030___ID=segments-hover___DATA=unset___NOTES=unset.png") url("/magick-flows/as/assets/all__viewport-size.png");
+  content: url("/magick-flows/as-fever/main/0000___ID=LAL___DATA=unset___NOTES=unset.png") url("/magick-flows/as-fever/main/0001___ID=LAL-hover___DATA=unset___NOTES=unset.png") url("/magick-flows/as-fever/main/0010___ID=segments___DATA=is-eject--state-addLookalike___NOTES=unset.png") url("/magick-flows/as-fever/main/0011___ID=segments-ejected-content-looks-like-this___DATA=unset___NOTES=unset.png") url("/magick-flows/as-fever/main/2010___ID=segments___DATA=is-eject--%3Fstate%3DaddLookalike___NOTES=unset.png") url("/magick-flows/as-fever/main/2011___ID=segments-hover___DATA=unset___NOTES=unset.png") url("/magick-flows/as-fever/main/2030___ID=segments-hover___DATA=unset___NOTES=unset.png") url("/magick-flows/as-fever/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -533,6 +533,10 @@ header.magick-flows-stickey-header_container {
   opacity: 1;
   transition: 250ms all ease-in-out;
   will-change: all;
+}
+
+.magick-flows-step iframe {
+  border: none;
 }
 
 html {

@@ -20,7 +20,7 @@ You put a DVD into the DVD player with `/config/config.json`. The DVD player wil
 
 ### Google Slides Creation
 
-When the tests run they capture 1280x720 screenshots which are used to create a Markdown file named `/slides/${product}.${venue}.${theme}.md` (eg `/slides/dmp.df18keynote.bbva.md`) which can be used by [md2googleslides](https://github.com/gsuitedevs/md2googleslides) to generate a Google Slide Deck. 
+When the tests run they capture 1280x720 screenshots which are used to create a Markdown file named `/slides/${product}.${venue}.${theme}.md` (eg `/slides/dmp.df18keynote.bbva.md`) which can be used by [md2googleslides](https://github.com/gsuitedevs/md2googleslides) to generate a Google Slide Deck.
 
 If you want to skip capturing a step as a slide, add `skipSlideCapture: true` to the step you wish to capture.
 
@@ -30,6 +30,7 @@ If you would like to skip slide capturing for the entire demo, add `skipSlideCap
 
 1. Upload the slides to heroku-dev (eg, commit and then push: `git push heroku your-branch:master`)
 2.`npm run slides` is an alias for `md2gslides slides/[product].[venue].[brand].md` (eg: `md2gslides slides/dmp.df18keynote.bbva.md`)
+	- IMPORTANT: The first time you md2gslides from a machine, you must not use the npm alias. You must call md2gslides directly in order to complete the authorization and allow credentials to be saved for you.
 
 A new slide deck will be generated and you will be given the URL which you can share with whomever you would like. Once that slide deck is generated, take the ID from the URL for the slide deck (eg the url `https://docs.google.com/presentation/d/1EzinU2nh2RXITiLawG4BGzbdVYekOlhHPg9VxsKZ7_A/` has the id `1EzinU2nh2RXITiLawG4BGzbdVYekOlhHPg9VxsKZ7_A`) and put it in `config/config.json` as the value for `presentationid`. Once you do that, the slide deck you generated will be _updated_ each time you run `npm run slides` instead of a new one being generated each time.
 
@@ -57,7 +58,7 @@ The test-drive takes screenshots of each step in the flow for reference and comp
 
 ## Example Test Flow Definition
 
-```	
+```
 const env = process.env.ENV || 'local';
 const settings = require('../../config/config.js')();
 const testhost = settings[env].host;

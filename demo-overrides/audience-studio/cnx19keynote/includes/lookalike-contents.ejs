@@ -1,0 +1,117 @@
+<%
+
+	const lookalikesData = locals.localization.lookalike.lookalikesData;
+	const segment = locals.localization.lookalike.segment;
+
+	const tableData = locals.localization.lookalike.lookalikes.tableData;
+
+	const makeTableRows = (data) => data.reduce((data, tableRow) => data + makeTableRow(tableRow), '');
+
+	const makeTable = (data) => (`
+	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+		<thead>
+			<tr class="slds-text-title_caps">
+				<th scope="col">
+					<div class="slds-truncate" title="${data.labels[0]}">${data.labels[0]}</div>
+				</th>
+				<th scope="col">
+					<div class="slds-truncate " title="${data.labels[1]}">${data.labels[1]}</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			${makeTableRows(data.rows)}
+		</tbody>
+	</table>
+
+	`);
+
+
+	const makeTableRow = (data) => (`
+		<tr id="similarity${data.similarity}">
+			${makeTableCell(data.similarity + '%')}
+			${makeTableCell(data.reach)}
+		</tr>
+	`);
+
+	const makeTableCell = (data) => (`
+		<td>
+			<div class="slds-truncate " title="${data}">${data}</div>
+		</td>
+	`);
+%>
+<style>
+.slds-panel-box__header-settings {
+	display: none;
+}
+
+.slds-panel-box__header {
+	padding: 10px;
+}
+
+#lookalikes-chart {
+	margin-top: -280px;
+	margin-left: 20px;
+}
+
+#lookalikeTable {
+	width: 369px;
+	margin-top: -420px;
+	margin-left: 852px;
+	border-left: 1px solid #D8DDE6;
+	border-right: 1px solid #D8DDE6;
+	border-radius: 3px 3px 0 0 ;
+}
+
+.slds-table thead th, .slds-table td {
+	padding: 0.5rem;
+}
+
+.highlighted {
+	background: #EAF4FD;
+}
+</style>
+<%- include('components/segment-panel', { noTopMargin: true, ...segment }) %>
+
+<div class="slds-panel-box slds-m-top_small slds-p-around_small" style="height: 521px">
+	<%- include('images/lookalike.content.svg') %>
+	<%- include(
+		'components/highcharts.lookalikes.ejs',
+		{
+			lookalikesData,
+			width: '800px',
+			height: '268px',
+			selectCallback: (event) => {
+				document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+				document.querySelector('#similarity65').classList.add('highlighted');
+			}
+		}
+	)%>
+	<div id="lookalikeTable"><%- makeTable(tableData) %></div>
+	<div id="lookalikeButtons" class="slds-m-around_small" style="text-align: center">
+		<%- include(
+				'components/button',
+				{
+					variant: 'brand',
+					isDisabled: true,
+					text: 'Create a lookalike segment',
+					onClick: `navigatePage('/?state=addLookalike')`,
+					title: ''
+				}
+			)
+		%>
+		<%- include(
+				'components/button',
+				{
+					isDisabled: true,
+					text: 'Cancel'
+				}
+			)
+		%>
+	</div>
+</div>
+
+
+
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.min.js"></script>
+<script type="text/javascript" src="/javascripts/third-party-libraries/highcharts.more.min.js"></script>
