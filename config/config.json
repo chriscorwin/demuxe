@@ -13,15 +13,15 @@
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
-	"herokupipeline": "https://dashboard.heroku.com/pipelines/97d863d0-ea96-4a69-97dc-b6909895a3b6",
+	"herokupipeline": "https://dashboard.heroku.com/pipelines/acc690c6-9842-4b41-9a1b-dbd91cea7b3c",
 	"production": {
-		"host": "https://demuxe-catalogue.herokuapp.com/"
+		"host": "https://cnx19-mc-spotlight.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://demuxe-catalogue-qa.herokuapp.com/"
+		"host": "https://cnx19-mc-spotlight-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://demuxe-catalogue-dev.herokuapp.com/"
+		"host": "cnx19-mc-spotlight-qa.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
