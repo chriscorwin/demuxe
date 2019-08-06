@@ -108,12 +108,13 @@ const appUse = [
 	cookieParser()
 ];
 
+const sourceMap = (typeof config.sourceMap !== 'undefined') ? config.sourceMap : true;
 // SASS loads things in a first-found-in-array manner
 if (config.brandTheme) {
 	appUse.push(
 		sassMiddleware({
 			debug: scssDebug,
-			sourceMap: true,
+			sourceMap,
 			outputStyle: 'expanded',
 			src: path.join(__dirname, 'brand-themes', config.brandTheme)
 		}),
@@ -126,7 +127,7 @@ if (config.productTemplate) {
 		appUse.push(
 			sassMiddleware({
 				debug: scssDebug,
-				sourceMap: true,
+				sourceMap,
 				outputStyle: 'expanded',
 				src: path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue)
 			}),
@@ -137,7 +138,7 @@ if (config.productTemplate) {
 	appUse.push(
 		sassMiddleware({
 			debug: scssDebug,
-			sourceMap: true,
+			sourceMap,
 			outputStyle: 'expanded',
 			src: path.join(__dirname, 'product-templates', config.productTemplate)
 		}),
@@ -148,7 +149,7 @@ if (config.productTemplate) {
 appUse.push(
 	sassMiddleware({
 		debug: scssDebug,
-		sourceMap: true,
+		sourceMap,
 		outputStyle: 'expanded',
 		src: path.join(__dirname, 'engine')
 	}),
@@ -158,7 +159,7 @@ appUse.push(
 appUse.push(
 	sassMiddleware({
 		debug: scssDebug,
-		sourceMap: true,
+		sourceMap,
 		outputStyle: 'expanded',
 		src: path.join(__dirname, 'magick-flows-web-root')
 	}),

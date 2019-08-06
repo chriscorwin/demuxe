@@ -56,8 +56,6 @@ module.exports = function() {
     let demoOverrideConfig = {};
     try {
         demoOverrideConfig = configData.demoVenue && configData.productTemplate ? require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`) : {};
-        console.log('demoOverrideConfig');
-        console.dir(demoOverrideConfig);
     } catch (e) {
         console.warn('no demo overrides localization');
     }
