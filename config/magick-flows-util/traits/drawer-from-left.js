@@ -5,29 +5,29 @@ const drawerFromLeft = {
 	id: 'drawer-from-left',
 	isRequiredBy: (fileName) => fileName.match(drawerFromLeft.id),
 	isAssetForTrait: (assetFileName) => assetFileName.match(drawerFromLeft.id),
-	addTraitData: (traitsData, screenInfo, assetFileName, assetFileIndex) => {
-		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
+	addTraitData: (traitsData, stepInfo, assetFileName, assetFileIndex) => {
+		let pathToAssetFile = path.join(stepInfo.fullAssetsPath, assetFileName);
 		const dimensions = sizeOf(pathToAssetFile);
 		const dataToTrack = {
 			"drawerFromLeftPathToAssetFile": pathToAssetFile,
 			"drawerFromLeftHeight": dimensions.height,
 			"drawerFromLeftWidth": dimensions.width,
-			"drawerFromLeftScreensIndex": screenInfo.fileIndex,
+			"drawerFromLeftStepsIndex": stepInfo.fileIndex,
 			"drawerFromLeftAssetFileIndex": assetFileIndex,
 			"drawerFromLeftFileName": assetFileName,
 			"drawerFromLeftFileName": assetFileName,
 			"drawerFromLeftFilePath": pathToAssetFile,
 		};
 		traitsData.assetsMetaData.push(dataToTrack);
-		traitsData.screenDataAttributes['showDrawerFromLeft'] = true;
-		traitsData.screenDataAttributes['drawerFromLeftPathToAssetFile'] = pathToAssetFile;
-		traitsData.screenDataAttributes['drawerFromLeftHeight'] = dimensions.height;
-		traitsData.screenDataAttributes['drawerFromLeftWidth'] = dimensions.width;
-		traitsData.screenDataAttributes['drawerFromLeftScreensIndex'] = screenInfo.fileIndex;
-		traitsData.screenDataAttributes['drawerFromLeftAssetFileIndex'] = assetFileIndex;
-		traitsData.screenDataAttributes['drawerFromLeftFileName'] = assetFileName;
-		traitsData.screenDataAttributes['drawerFromLeftFileName'] = assetFileName;
-		traitsData.screenDataAttributes['drawerFromLeftFilePath'] = pathToAssetFile;
+		traitsData.stepDataAttributes['showDrawerFromLeft'] = true;
+		traitsData.stepDataAttributes['drawerFromLeftPathToAssetFile'] = pathToAssetFile;
+		traitsData.stepDataAttributes['drawerFromLeftHeight'] = dimensions.height;
+		traitsData.stepDataAttributes['drawerFromLeftWidth'] = dimensions.width;
+		traitsData.stepDataAttributes['drawerFromLeftStepsIndex'] = stepInfo.fileIndex;
+		traitsData.stepDataAttributes['drawerFromLeftAssetFileIndex'] = assetFileIndex;
+		traitsData.stepDataAttributes['drawerFromLeftFileName'] = assetFileName;
+		traitsData.stepDataAttributes['drawerFromLeftFileName'] = assetFileName;
+		traitsData.stepDataAttributes['drawerFromLeftFilePath'] = pathToAssetFile;
 
 		return traitsData;
 	}

@@ -3,6 +3,7 @@
 	"brandTheme": "fever",
 	"productTemplate": "is",
 	"demoVenue": "cnx19keynote",
+
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -31,5 +32,5 @@
 		"timeout": 30000
 	},
 	"gapixelid": "UA-133829434-3",
-	"presentationid": "1EzinU2nh2RXITiLawG4BGzbdVYekOlhHPg9VxsKZ7_A"
+	"presentationid": "unset"
 }
