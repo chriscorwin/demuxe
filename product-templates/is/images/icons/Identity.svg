@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Identity</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="32" height="32" rx="16"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Components-/Global-Header" transform="translate(-1232.000000, -8.000000)">
+            <g id="Global-Header">
+                <g id="right-icons-(full)" transform="translate(1163.000000, 8.000000)">
+                    <g id="Identity" transform="translate(69.000000, 0.000000)">
+                        <g id="Desktop-Components-/-Avatar-/-User-Icons-/-Circle">
+                            <g id="circle-image-medium">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="bkgd" fill="#62B7ED" xlink:href="#path-1"></use>
+                                <g id="z-nested-/-Color-Tokens-/-MALIBU" mask="url(#mask-2)" fill="#5EB4FF">
+                                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                                </g>
+                                <g id="avatar" mask="url(#mask-2)" fill="#FFFFFF">
+                                    <g transform="translate(8.888889, 8.888889)">
+                                        <path d="M14.2222222,12.1362963 L14.2222222,12.8 C14.2222222,13.5822222 13.5822222,14.2222222 12.8,14.2222222 L1.42222222,14.2222222 C0.64,14.2222222 0,13.5822222 0,12.8 L0,12.1362963 C0,10.4059259 2.01481481,9.36296296 3.91111111,8.53333333 C3.98222222,8.50962963 4.02962963,8.48592593 4.10074074,8.43851852 C4.24296296,8.36740741 4.40888889,8.36740741 4.55111111,8.46222222 C5.30962963,8.96 6.18666667,9.24444444 7.11111111,9.24444444 C8.03555556,9.24444444 8.91259259,8.96 9.67111111,8.48592593 C9.81333333,8.39111111 9.97925926,8.39111111 10.1214815,8.46222222 C10.1925926,8.48592593 10.24,8.50962963 10.3111111,8.55703704 C12.2074074,9.36296296 14.2222222,10.4059259 14.2222222,12.1362963" id="Fill-1"></path>
+                                        <path d="M7.11111111,0 C9.06168889,0 10.642963,1.75099259 10.642963,3.91111111 C10.642963,6.07122963 9.06168889,7.82222222 7.11111111,7.82222222 C5.16053333,7.82222222 3.57925926,6.07122963 3.57925926,3.91111111 C3.57925926,1.75099259 5.16053333,0 7.11111111,0" id="Fill-3"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

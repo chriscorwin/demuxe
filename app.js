@@ -21,9 +21,11 @@ const sizeOf = require('image-size');
 // console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:21 ] process.env.DEBUG: `, util.inspect(process.env.DEBUG, { showHidden: true, depth: null, colors: true }));
 
 
+let scssDebug = false;
 console.debug = function() {
 	if (process.env.DEBUG === "true") {
 		// console.debug = console.log;
+		scssDebug = true;
 		console.log.apply(this, arguments);
 	} else {
 		return;
@@ -106,11 +108,13 @@ const appUse = [
 	cookieParser()
 ];
 
+const sourceMap = (typeof config.sourceMap !== 'undefined') ? config.sourceMap : true;
 // SASS loads things in a first-found-in-array manner
 if (config.brandTheme) {
 	appUse.push(
 		sassMiddleware({
-			debug: false,
+			debug: scssDebug,
+			sourceMap,
 			outputStyle: 'expanded',
 			src: path.join(__dirname, 'brand-themes', config.brandTheme)
 		}),
@@ -122,7 +126,8 @@ if (config.productTemplate) {
 	if (config.demoVenue) {
 		appUse.push(
 			sassMiddleware({
-				debug: false,
+				debug: scssDebug,
+				sourceMap,
 				outputStyle: 'expanded',
 				src: path.join(__dirname, 'demo-overrides', config.productTemplate, config.demoVenue)
 			}),
@@ -132,7 +137,8 @@ if (config.productTemplate) {
 
 	appUse.push(
 		sassMiddleware({
-			debug: false,
+			debug: scssDebug,
+			sourceMap,
 			outputStyle: 'expanded',
 			src: path.join(__dirname, 'product-templates', config.productTemplate)
 		}),
@@ -142,7 +148,8 @@ if (config.productTemplate) {
 
 appUse.push(
 	sassMiddleware({
-		debug: false,
+		debug: scssDebug,
+		sourceMap,
 		outputStyle: 'expanded',
 		src: path.join(__dirname, 'engine')
 	}),
@@ -151,7 +158,8 @@ appUse.push(
 
 appUse.push(
 	sassMiddleware({
-		debug: false,
+		debug: scssDebug,
+		sourceMap,
 		outputStyle: 'expanded',
 		src: path.join(__dirname, 'magick-flows-web-root')
 	}),

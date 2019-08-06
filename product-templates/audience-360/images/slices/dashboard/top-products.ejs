@@ -1,0 +1,15 @@
+<div id="top-products-here"><%- include('images/slices/top-products.svg') %></div>
+<script>
+	let triggeredTopProductsGraphAnimation = false;
+	const animateTopProductsGraph = () => {
+		if (window.scrollY > 230 && !triggeredTopProductsGraphAnimation) {
+			triggeredTopProductsGraphAnimation = true;
+
+			document.querySelectorAll('#top-products-here circle').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+
+		document.addEventListener("scroll", animateTopProductsGraph);
+	};
+
+
+</script>

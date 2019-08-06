@@ -1,0 +1,35 @@
+	<style>
+        .growCircle {
+            animation: growCircle 2s ease-out forwards;
+            transform-origin: 102px center;
+            animation-play-state: paused;
+        }
+
+        @-webkit-keyframes growCircle {
+          from { r: 0; }
+        }
+
+        #einstein-circle-wrapper {
+        	transform: translate(0, -26px);
+        }
+
+        #got-grid-here svg{
+        	margin-top: -15px;
+        	overflow: visible;
+        }
+    </style>
+<div id="got-grid-here"><%- include('images/dot-grid.svg') %></div>
+<script>
+	let triggeredDotGridGraphAnimation = false;
+	const animateDotGridGraph = () => {
+		if (window.scrollY > 300 && !triggeredDotGridGraphAnimation) {
+			triggeredDotGridGraphAnimation = true;
+
+			document.querySelectorAll('#got-grid-here .growCircle').forEach(elm => elm.style.animationPlayState = 'running');
+		}
+
+        document.addEventListener("scroll", animateDotGridGraph);
+	};
+
+
+</script>

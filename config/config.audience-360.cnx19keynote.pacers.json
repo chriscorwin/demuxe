@@ -1,0 +1,35 @@
+{
+	"demoName": "Audience 360 Pacers CNX 19 Keynote",
+	"brandTheme": "pacers",
+	"productTemplate": "audience-360",
+	"demoVenue": "cnx19keynote",
+	"demoVersion": "0.1",
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
+	"env": "production",
+	"production": {
+		"host": "https://cnx19-audience-360-pacers.herokuapp.com/"
+	},
+	"qa": {
+		"host": "https://cnx19-audience-360-pacers-qa.herokuapp.com/"
+	},
+	"dev": {
+		"host": "https://cnx19-audience-360-pacers-dev.herokuapp.com/"
+	},
+	"local": {
+		"host": "http://localhost:3000/"
+	},
+	"tests": {
+		"headless": true,
+		"imageSnapshotPath": "./test/screenshots/",
+		"mismatchThreshold": 0.01,
+		"timeout": 30000
+	},
+	"gapixelid": "",
+	"presentationid": ""
+}

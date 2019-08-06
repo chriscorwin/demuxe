@@ -1,0 +1,154 @@
+<%
+	const controls = locals.localization.segments.states[locals.state].controls;
+	const segments = locals.localization.segments.states[locals.state].segments;
+	const lookalikes = locals.localization.segments.states[locals.state].lookalikes;
+%>
+
+<div class="slds-page-header__row" style="height: 184px; margin-bottom: 1rem;">
+	<div style="background-color: white; border-radius: 4px; width: 876px; padding: 30px">
+		<!-- we include it here so that it re-animates consistently on page load (otherwise it gets cached and doesn't always animate) -->
+		<%- include('images/segments.top-left.svg') %>
+	</div>
+	<div style="background-color: white; border-radius: 4px; width: 364px; margin-left: 1rem; padding: 15px">
+		<%- include('images/segments.top-right.svg') %>
+	</div>
+</div>
+
+<div style="background-color: white; padding: 1rem; max-width: 78.3rem; border-radius: 4px;" class="slds-container_large">
+	<div class="slds-page-header__row">
+		<div class="slds-page-header__col-title">
+			<img class="" src="/images/slices/segments.manage-segments.menu-a-left.svg" style="height: 33px;" />
+		</div>
+		<div class="slds-page-header__col-actions">
+			<%
+				controls.forEach((control) => {
+					switch(control.type) {
+						case 'button-group': %>
+						<div class="slds-button-group" role="group">
+						<% control.items.forEach((data) => { %>
+							<%- include('components/button', data) %>
+						<% }) %>
+						</div>
+						<% break;
+						case 'combobox': %>
+							<div class="slds-button">
+								<%- include('components/combobox', control) %>
+							</div>
+						<% break;
+						case 'button': %>
+							<% if (control.hasOverflow) {%><div class="slds-button"><% } %>
+								<%- include('components/button', control) %>
+							<% if (control.hasOverflow) {%></div><% } %>
+						<% break;
+					}
+				});
+			%>
+		</div>
+		<div>
+			<button class="slds-button slds-button_icon slds-button_icon-more slds-button_icon-border-filled slds-button_neutral" title="Check" aria-pressed="false">
+				<svg class="slds-button__icon" aria-hidden="true">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/icons/utility-sprite/svg/symbols.svg#multi_select_checkbox"></use>
+				</svg>
+				<span class="slds-assistive-text">Check&gt;</span>
+			</button>
+		</div>
+	</div>
+
+<%
+	const makeModalContentsHeaderTagline = (data) => (`
+		<p>Pick a dot from the graph to create a lookalike segment.</p>
+	`);
+
+
+	const makeModalContentsChart = (data) => include(
+		'components/highcharts.lookalikes.ejs',
+		{
+			...data,
+			width: '510px',
+			height: '268px',
+			selectCallback: (event) => {
+				document.querySelectorAll('.slds-button[disabled]').forEach((button) => button.removeAttribute('disabled'));
+			}
+		}
+	);
+
+	const makeModalContentsMain = (data) => (`
+		<div class="slds-text-heading_medium">
+			Potential Lookalikes
+			<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+				<svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+					<use xlink:href="/icons/utility-sprite/svg/symbols.svg#info"></use>
+				</svg>
+				<span class="slds-assistive-text">Description of icon when needed</span>
+			</span>
+		</div>
+		<div class="slds-grid">
+			<div class="slds-col slds-size_3-of-5">Select the desired combination of reach and similarity for your objective.</div>
+			<div class="slds-col slds-size_2-of-5" style="text-align: right; font-size: 16px;">
+				<img style="width: 16px; height: 16px; margin-top: -4px;" src="/images/icons/cpm.svg" /> CPM: <strong>${lookalikes.cpm}</strong>
+			</div>
+		</div>
+
+
+		<div class="slds-grid">
+			<div class="slds-col slds-size_3-of-5">
+				${makeModalContentsChart(data)}
+			</div>
+			<div class="slds-col slds-size_2-of-5 slds-text-body_regular slds-col_bump-left slds-p-top_small">
+				${makeTable(data)}
+			</div>
+		</div>
+	`);
+	const makeModalContentsFooter = (data) => (`
+		<button disabled class="slds-button slds-button_neutral">Cancel</button>
+		<button disabled onclick="navigatePage('/segments/manage-segments/?trigger=successToast');" class="slds-button slds-button_brand">Create a lookalike segment</button>
+	`);
+
+	const panels = segments;
+
+	const makePanels = () => panels.reduce((panels, panel) => panels + include('components/segment-panel', panel), '');
+%>
+
+<%-makePanels();%>
+
+</div>
+<%
+	const modalId = `audience-studio-manage-segments-modal`;
+	const modalBackdropId = `${modalId}-backdrop`;
+%>
+
+
+<% if (locals.localization.segments.states[locals.state].toast) {
+	const toast = locals.localization.segments.states[locals.state].toast; %>
+	<%- include('components/toast', {
+		contents: toast.contents,
+		title: toast.title,
+		theme: (toast.theme) ? toast.theme : 'success',
+		id: (toast.id) ? toast.id : 'successToast',
+		triggerImmediately: toast.triggerImmediately
+	}) %>
+<% } %>
+
+<script>
+const showPopover = (popoverId) => {
+	document.querySelector(popoverId).classList.remove('slds-hide');
+}
+
+document.querySelectorAll('.slds-panel-box__header-settings').forEach((elm) => elm.addEventListener('click', function () {
+	const img = this.querySelector('img');
+
+	if (img.src.includes("/images/icons/settings.svg")) {
+		img.src = '/images/icons/settings-blue.svg';
+	} else {
+		img.src = '/images/icons/settings.svg';
+	}
+
+	const siblingClasses = [ ...this.nextElementSibling.classList ];
+
+	if (siblingClasses.includes('slds-hide')) {
+		this.nextElementSibling.classList.remove('slds-hide');
+	} else {
+		this.nextElementSibling.classList.add('slds-hide');
+	}
+}));
+</script>

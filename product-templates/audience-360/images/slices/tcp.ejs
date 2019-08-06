@@ -1,0 +1,30 @@
+<!-- DON'T USE THIS FILE AS AN EXAMPLE. USE service-cases.ejs METHOD INSTEAD -->
+<div id="tcp-here"><%- include('images/slices/tcp-blank.svg') %></div>
+<script>
+	const addTCPSVG = (data) => (`<%- include('images/slices/tcp.svg') %>`);
+
+	let triggeredTCPGraphAnimation = false;
+	const animateTCPGraph = () => {
+		triggeredTCPGraphAnimation = true;
+
+		document.querySelector('#tcp-here').innerHTML = addTCPSVG();
+
+		const audience = document.querySelector('#numberAudience');
+
+		audience.textContent = '0K';
+
+		let audienceNumber = 9;
+
+		const increase = () => {
+			if (audienceNumber < 290) {
+				audienceNumber += 10;
+
+				audience.textContent = `${audienceNumber.toFixed(0)}K`;
+				window.setTimeout(increase, 30);
+			}
+		}
+
+		increase();
+	};
+
+</script>

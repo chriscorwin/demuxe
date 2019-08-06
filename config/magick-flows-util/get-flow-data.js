@@ -221,9 +221,9 @@ const getStepData = (flowData, fileName, fileIndex) => {
 const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 
 
-	console.debug(`[ config/magick-flows-util/get-flow-data.js:220 ] configData: `, util.inspect(configData, { showHidden: false, depth: 1, colors: true }));
-	console.debug(`[ config/magick-flows-util/get-flow-data.js:221 ] fileOrDirectoryPath: `, util.inspect(fileOrDirectoryPath, { showHidden: false, depth: null, colors: true }));
-	console.debug(`[ config/magick-flows-util/get-flow-data.js:222 ] subFileOrDirectory: `, util.inspect(subFileOrDirectory, { showHidden: false, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:224 ] configData: `, util.inspect(configData, { showHidden: false, depth: 1, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:225 ] fileOrDirectoryPath: `, util.inspect(fileOrDirectoryPath, { showHidden: false, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:226 ] subFileOrDirectory: `, util.inspect(subFileOrDirectory, { showHidden: false, depth: null, colors: true }));
 
 	if(!fs.statSync(path.join(fileOrDirectoryPath, subFileOrDirectory)).isDirectory()) {
 		return configData;
@@ -232,7 +232,7 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 	let templateSizingFileDimensions = {'height': 720, 'width': 1280, 'type': ''};
 
 
-	const flowData = {
+	let flowData = {
 		assets: [],
 		metaData: [],
 		name: subFileOrDirectory,
@@ -263,15 +263,23 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 
 
 	const thisMagickFlowHasTemplateSizingInfo = flowData.assets.includes('all__viewport-size.png');
-
-
-	console.debug(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:245 ] thisMagickFlowHasTemplateSizingInfo: `, util.inspect(thisMagickFlowHasTemplateSizingInfo, { showHidden: true, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:268 ] thisMagickFlowHasTemplateSizingInfo: `, util.inspect(thisMagickFlowHasTemplateSizingInfo, { showHidden: true, depth: null, colors: true }));
 	if ( thisMagickFlowHasTemplateSizingInfo === true ) {
 
 		const pathToTemplateSizingFile = path.join(flowData.fullAssetsPath, 'all__viewport-size.png');
 		templateSizingFileDimensions = sizeOf(pathToTemplateSizingFile);
 		flowData.templateSizingFileDimensions = templateSizingFileDimensions;
-		console.debug(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/config/magick-flows-util/get-flow-data.js:250 ] templateSizingFileDimensions: `, util.inspect(templateSizingFileDimensions, { showHidden: true, depth: null, colors: true }));
+		console.debug(`[ config/magick-flows-util/get-flow-data.js:274 ] templateSizingFileDimensions: `, util.inspect(templateSizingFileDimensions, { showHidden: true, depth: null, colors: true }));
+	}
+
+	const thisMagickFlowHasGlobalNotes = flowData.assets.includes('all__notes.txt');
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:277 ] thisMagickFlowHasGlobalNotes: `, util.inspect(thisMagickFlowHasGlobalNotes, { showHidden: true, depth: null, colors: true }));
+	if ( thisMagickFlowHasGlobalNotes === true ) {
+		const pathToGlobalNotesFile = path.join(flowData.fullAssetsPath, 'all__notes.txt');
+		// globalNotesFile = sizeOf(pathToGlobalNotesFile);
+		flowData.hasGlobalNotes = thisMagickFlowHasGlobalNotes;
+		flowData.pathToGlobalNotesFile = pathToGlobalNotesFile;
+		console.debug(`[ config/magick-flows-util/get-flow-data.js:284 ] pathToGlobalNotesFile: `, util.inspect(pathToGlobalNotesFile, { showHidden: true, depth: null, colors: true }));
 	}
 
 	const thisMagickFlowMainImagesForScssVariables = flowData.steps.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));

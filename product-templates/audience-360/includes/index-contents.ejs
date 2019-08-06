@@ -1,0 +1,132 @@
+	<%- include('images/slices/header.ejs') %>
+	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-horizontal_x-small">
+		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
+			<%- include('components/panel-box.ejs', {
+				title: 'Audience Profile',
+				contents: include('images/slices/tcp.ejs'),
+				footer_links: [{}]
+			}) %>
+		</div>
+		<div class="slds-col slds-p-horizontal_x-small slds-size_2-of-3">
+			<%- include('components/panel-box.ejs', {
+				title: 'Conversion Path Analysis',
+				contents: include('images/slices/cpa.ejs'),
+				footer_links: [{}]
+			}) %>
+		</div>
+	</div>
+
+	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-m-top_medium slds-p-horizontal_x-small">
+		<div class="slds-grid slds-wrap slds-col slds-size_2-of-3">
+			<div id="top-segments-panel" class="slds-col slds-p-horizontal_x-small slds-size_1-of-2">
+				<style>
+					#top-segments-panel button.slds-button.slds-button_neutral {
+						margin-left: 50px;
+					}
+				</style>
+				<%- include('components/panel-box.ejs', {
+					title: 'Top Segments',
+					header_buttons: [
+						{ label: 'Season Ticket Holders' },
+						{ img: include('images/icons/einstein.svg') }
+					],
+					contents: include('images/slices/top-segments.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2">
+				<%- include('components/panel-box.ejs', {
+					title: 'Consent Across Channels',
+					contents: include('images/slices/consent-across-channels.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Service Cases',
+					contents: include('images/slices/service-cases.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Channel Engagement',
+					header_buttons: [
+						{ label: 'Email' }
+					],
+					contents: include('images/slices/channel-engagement.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+		</div>
+		<div class="slds-grid slds-wrap slds-col slds-p-horizontal_x-small slds-size_1-of-3">
+			<div class="slds-col slds-size_1-of-1">
+				<%- include('components/panel-box.ejs', {
+					title: 'Top Products',
+					header_buttons: [
+						{ label: 'Revenue' }
+					],
+					contents: include('images/slices/top-products.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+			<div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+				<%- include('components/panel-box.ejs', {
+					title: 'Top Channels',
+					header_buttons: [
+						{ label: 'Conversion Rate (CVR)' }
+					],
+					contents: include('images/slices/top-channels.ejs'),
+					footer_links: [{}]
+				}) %>
+			</div>
+		</div>
+	</div>
+
+<style>
+	.slds-modal__content {
+		padding: 0;
+		margin: 0;
+	}
+
+	.slds-modal_medium .slds-modal__container {
+		width: 836px;
+	}
+
+	#Get-Started-hover-target {
+		cursor: pointer;
+	}
+</style>
+<%
+
+const data = {
+	size: 'medium',
+	contentsMain: include('images/slices/modal-contents.svg'),
+	isOpen: true,
+	handleClose: 'kickoff'
+};
+
+echo(include('components/modal', data));
+
+%>
+<script>
+	const kickoff = function kickoff() {
+		document.querySelector('.slds-modal').classList.remove('slds-fade-in-open');
+		document.querySelector('.slds-backdrop').classList.remove('slds-backdrop_open');
+		animateTCPGraph();
+		animateCPAGraph();
+		animateHeaderGraph();
+	}
+
+	document.getElementById('Get-Started-hover-target').addEventListener('mouseover', function() {
+	    document.querySelector('#Get-Started-hover-target rect').setAttribute('fill', '#005fb2');
+	});
+	document.getElementById('Get-Started-hover-target').addEventListener('mouseout', function() {
+	    document.querySelector('#Get-Started-hover-target rect').setAttribute('fill', '#0070D2');
+	});
+	document.getElementById('Get-Started-hover-target').addEventListener('click', function() {
+		kickoff();
+	});
+</script>
+
+

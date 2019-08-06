@@ -1,0 +1,16 @@
+<!-- DON'T USE THIS FILE AS AN EXAMPLE. USE service-cases.ejs METHOD INSTEAD -->
+<div id="top-channels-here"><%- include('images/slices/top-channels-blank.svg') %></div>
+<script>
+	const addChannelsSVG = (data) => (`<%- include('images/slices/top-channels.svg') %>`);
+
+	let triggeredChannelsGraphAnimation = false;
+	const animateChannelsGraph = () => {
+		if (window.scrollY > 426 && !triggeredChannelsGraphAnimation) {
+			triggeredChannelsGraphAnimation = true;
+
+			document.querySelector('#top-channels-here').innerHTML = addChannelsSVG();
+		}
+	};
+
+	document.addEventListener("scroll", animateChannelsGraph);
+</script>

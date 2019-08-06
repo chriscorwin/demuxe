@@ -57,7 +57,7 @@ module.exports = function() {
     } catch (e) {
         console.warn('no demo overrides localization');
     }
-    
+
     let brandThemeConfig = {};
     try {
         brandThemeConfig = configData.brandTheme ? require(`../brand-themes/${configData.brandTheme}/localization.js`) : {};
@@ -65,13 +65,17 @@ module.exports = function() {
         console.warn('no brand theme localization');
     }
 
-    configData.localization = Object.assign({}, defaultEngineConfig, defaultProductTemplateConfig, demoOverrideConfig, brandThemeConfig);
+    const dates = require('../engine/javascripts/dates');
+    configData.localization = Object.assign({}, { dates }, defaultEngineConfig, defaultProductTemplateConfig, demoOverrideConfig, brandThemeConfig);
 
     // view engine setup
     // https://expressjs.com/en/4x/api.html#app.set
     // views are looked up in the order they occur in the array (earlier takes precedence over later --cascade flows reverse of the way it does in CSS)
     const appViews = [];
 
+    if (configData.brandTheme) {
+        appViews.push(path.join(__dirname, '../', 'brand-themes', configData.brandTheme));
+    }
     if (configData.productTemplate) {
         if (configData.demoVenue) {
             appViews.push(path.join(__dirname, '../', 'demo-overrides', configData.productTemplate, configData.demoVenue));
@@ -101,7 +105,7 @@ module.exports = function() {
             const thisMagickFlowObject = configData.magickFlows[magickFlowUrlSlug];
             const thisMagickFlowSteps = configData.magickFlows[magickFlowUrlSlug].steps;
             const thisMagickFlowAssets = configData.magickFlows[magickFlowUrlSlug].assets;
-            
+
 
             // const thisMagickFlowHasTemplateSizingInfo = thisMagickFlowAssets.includes('all__viewport-size.png');
 

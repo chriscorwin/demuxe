@@ -1,0 +1,16 @@
+<style>
+#activity-log-here svg{
+	width: 100%;
+}
+</style>
+<div id="activity-log-here"><%- include('images/slices/segments/activity-log.svg') %></div>
+<script>
+	let triggeredActivityLogAnimation = false;
+	const animateActivityLog = () => {
+		triggeredActivityLogAnimation = true;
+
+		document.querySelectorAll('.fill-in, .draw-in').forEach(elm => elm.style.animationPlayState = 'running');
+	};
+
+	window.setTimeout(animateActivityLog, 200);
+</script>

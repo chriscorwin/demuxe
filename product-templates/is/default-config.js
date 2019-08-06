@@ -2,11 +2,20 @@ module.exports = {
 	account_name: 'NTO',
 	appName: 'Interaction Studio',
 	body_class: 'slds-brand-band slds-brand-band_medium',
+	header: {
+		favorites: false,
+		global_actions: false,
+		help: true,
+		setup: true,
+		notifications: false,
+		avatar: `/images/icons/Identity.svg`
+	},
 	navData: {
 		accountNavItems: [],
-		navItems: [ 
+		navItems: [
 			{
 				label: 'Welcome',
+				href: '/',
 				isActive: (activePage) => activePage === 'welcome',
 			},
 			{
@@ -31,9 +40,10 @@ module.exports = {
 			},
 			{
 				label: 'Test & Publish',
-				href: ``,
+				id: 'test-and-publish',
+				href: `/test-and-publish`,
 				lookLikeDropdown: true,
-				isActive: (activePage) => activePage === 'test_and_publish'
+				isActive: (activePage) => activePage === 'test-and-publish'
 			},
 			{
 				label: 'Configure',
