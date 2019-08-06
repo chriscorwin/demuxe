@@ -5,29 +5,29 @@ const stickyFooter = {
 	id: 'sticky-footer',
 	isRequiredBy: (fileName) => fileName.match(stickyFooter.id),
 	isAssetForTrait: (assetFileName) => assetFileName.match(stickyFooter.id),
-	addTraitData: (traitsData, screenInfo, assetFileName, assetFileIndex) => {
-		let pathToAssetFile = path.join(screenInfo.fullAssetsPath, assetFileName);
+	addTraitData: (traitsData, stepInfo, assetFileName, assetFileIndex) => {
+		let pathToAssetFile = path.join(stepInfo.fullAssetsPath, assetFileName);
 		const dimensions = sizeOf(pathToAssetFile);
 		const dataToTrack = {
 			"stickyFooterPathToAssetFile": pathToAssetFile,
 			"stickyFooterHeight": dimensions.height,
 			"stickyFooterWidth": dimensions.width,
-			"stickyFooterScreensIndex": screenInfo.fileIndex,
+			"stickyFooterStepsIndex": stepInfo.fileIndex,
 			"stickyFooterAssetFileIndex": assetFileIndex,
 			"stickyFooterFileName": assetFileName,
 			"stickyFooterFileName": assetFileName,
 			"stickyFooterFilePath": pathToAssetFile,
 		};
 		traitsData.assetsMetaData.push(dataToTrack);
-		traitsData.screenDataAttributes['hasStickyFooter'] = true;
-		traitsData.screenDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
-		traitsData.screenDataAttributes['stickyFooterHeight'] = dimensions.height;
-		traitsData.screenDataAttributes['stickyFooterWidth'] = dimensions.width;
-		traitsData.screenDataAttributes['stickyFooterScreensIndex'] = screenInfo.fileIndex;
-		traitsData.screenDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
-		traitsData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
-		traitsData.screenDataAttributes['stickyFooterFileName'] = assetFileName;
-		traitsData.screenDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
+		traitsData.stepDataAttributes['hasStickyFooter'] = true;
+		traitsData.stepDataAttributes['stickyFooterPathToAssetFile'] = pathToAssetFile;
+		traitsData.stepDataAttributes['stickyFooterHeight'] = dimensions.height;
+		traitsData.stepDataAttributes['stickyFooterWidth'] = dimensions.width;
+		traitsData.stepDataAttributes['stickyFooterStepsIndex'] = stepInfo.fileIndex;
+		traitsData.stepDataAttributes['stickyFooterAssetFileIndex'] = assetFileIndex;
+		traitsData.stepDataAttributes['stickyFooterFileName'] = assetFileName;
+		traitsData.stepDataAttributes['stickyFooterFileName'] = assetFileName;
+		traitsData.stepDataAttributes['stickyFooterFilePath'] = pathToAssetFile;
 
 		return traitsData;
 	}

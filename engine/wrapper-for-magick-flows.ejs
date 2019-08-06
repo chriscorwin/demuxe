@@ -16,13 +16,14 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 			<%- include(`includes/mobile/mobile-meta-attributes-for-ios-webapp`) _%>
 		<% } %>
 
+		<link rel="stylesheet" href="/styles/confetti.css">
 	</head>
 
 	<body class="magick-flow">
 
 		<% if (locals.siteSection) { %>
-		<div id="content-wrapper"  class="container magick-flow_content-wrapper slds-transition-hide  ">
-			<div id="content" class="app-switcher-one magick-flow_content fake-the-dock">
+		<div id="content-wrapper"  class="container magick-flow_content-wrapper   ">
+			<div id="content" class="app-switcher-one magick-flow_content ">
 				<%- include(`includes/${locals.siteSection}/${locals.siteSection}-contents`) _%>
 			</div>
 		</div>
@@ -37,6 +38,69 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 
 
 		<%- include('includes/global/footer-scripts') %>
+		<script>
+			if (location.pathname === '/iphone' ) {
+				// Useful for reporting your actual device's viewport size
+				// var h = window.innerHeight;
+				// var w = window.innerWidth;
+				// var txt = document.createElement('div');
+				// txt.style = "position: fixed; top: 55px; left: 5px; height: 40px; width; 200px; padding: 10px; background: #fff";
+				// txt.innerText = 'Window: ' + w + 'px X ' + h + 'px';
+				// document.body.appendChild(txt);
+			}
+
+			let currentConfetti;
+			const startConfetti = () => {
+				if (!currentConfetti) {
+					currentConfetti = new Confettiful(document.body);
+				}
+			};
+			const stopConfetti = () => {
+				currentConfetti.remove();
+				currentConfetti = null;
+			}
+
+			// A map of paths and hashes in window.location to trigger stuff in the handler below
+			const pathHashHandlerMap = {
+				'/mc2-inov8-summit-2019': {
+					'#47': {
+						in: () => { document.body.style.cursor = 'none'; }
+					},
+					'#60': {
+						in: () => { document.body.style.cursor = 'inherit'; }
+					},
+					'#65': {
+						in: startConfetti,
+						out: stopConfetti
+					}
+				},
+				'/b2b-flow': {
+					'#20': {
+						in: () => { document.body.style.cursor = 'none'; }
+					},
+					'#33': {
+						in: () => { document.body.style.cursor = 'inherit'; }
+					},
+					'#38': {
+						in: startConfetti,
+						out: stopConfetti
+					}
+				}
+			}
+			window.addEventListener('hashchange', (event) => {
+				const path = location.pathname;
+				const oldHash = '#' + event.oldURL.split('#')[1];
+				const newHash = '#' + event.newURL.split('#')[1];
+				const pathMap = pathHashHandlerMap[path];
+				const oldHashHandlers = pathMap && pathMap[oldHash];
+				const newHashHandlers = pathMap && pathMap[newHash];
+
+				if (oldHashHandlers) oldHashHandlers.out();
+				if (newHashHandlers) newHashHandlers.in();
+			}, false)
+
+		</script>
+		<script src="/javascripts/confetti.js"></script>
 	</body>
 </html>
 <%_
