@@ -1,0 +1,485 @@
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-Regular.woff2) format('woff2'),url(fonts/SalesforceSans-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-Italic.woff2) format('woff2'),url(fonts/SalesforceSans-Italic.woff) format('woff');
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-BoldItalic.woff2) format('woff2'),url(fonts/SalesforceSans-BoldItalic.woff) format('woff');
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-Light.woff2) format('woff2'),url(fonts/SalesforceSans-Light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(fonts/SalesforceSans-LightItalic.woff2) format('woff2'),url(fonts/SalesforceSans-LightItalic.woff) format('woff');
+    font-weight: 300;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Salesforce Icons";
+    src: url(fonts/sf-icons.woff) format('woff'),url(fonts/sf-icons.svg#sf-icons) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.graph {
+    width: 100%
+}
+
+.flow-container {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s
+}
+
+.separator {
+    stroke-width: 1;
+    stroke-dasharray: 1,8;
+    stroke-dashoffset: 1
+}
+
+ .separator-transitionable {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s
+}
+
+.separator-graph {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px)
+}
+
+.separator-column {
+    stroke-width: 2;
+    stroke-dasharray: 2,8
+}
+
+.separator-row {
+    stroke: #c9c7c5
+}
+
+.volume-active {
+    fill: #1589ee;
+    fill-opacity: .25
+}
+
+.volume-inactive {
+    fill: #7874a3;
+    fill-opacity: .25
+}
+
+.volume-outline {
+    fill: none;
+    stroke: #dddbda;
+    stroke-width: 1
+}
+
+circle.tick {
+    fill: #b0adab;
+    fill-opacity: 1;
+    stroke: #fff;
+    stroke-width: 1.5
+}
+
+circle.tick-outer {
+    fill: #000;
+    fill-opacity: .3;
+    pointer-events: none
+}
+
+.node-focusable .tick {
+    cursor: pointer
+}
+
+circle {
+    -webkit-transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+    transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+}
+
+circle.volume-active, circle.volume-inactive {
+  animation: grow-circle 400ms linear backwards;
+}
+
+@keyframes grow-circle {
+  from {
+    r: 0;
+  }
+}
+
+.flow line, .flow path, .flow rect {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s;
+}
+
+.flow rect {
+  animation: grow 400ms linear forwards;
+}
+
+@keyframes grow {
+  from {
+    height: 0px;
+  }
+
+  to {
+    height: 44px;
+  }
+}
+
+.flow path {
+/*  stroke-dasharray: 700;
+  stroke-dashoffset: 700;*/
+  animation: dash 1s linear forwards;
+  fill: none;
+}
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+.set0 circle, .set1 rect {
+  animation-delay: 400ms;
+}
+
+.set1 circle, .set2 rect {
+  animation-delay: 800ms;
+}
+
+.set2 circle, .set3 rect {
+  animation-delay: 1200ms;
+}
+
+.set3 circle, .set4 rect {
+  animation-delay: 1600ms;
+}
+
+.set4 circle, .set5 rect {
+  animation-delay: 2000ms;
+}
+
+.set5 circle, .set6 rect {
+  animation-delay: 2400ms;
+}
+
+.flow-dropin {
+    opacity: .7;
+}
+
+.flow-dropoff {
+    opacity: 1;
+}
+
+
+rect {
+    shape-rendering: crispEdges;
+}
+
+ circle {
+    -webkit-transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+    transition: opacity .5s,fill .5s,stroke .5s,visibility .5s
+}
+
+ rect {
+    shape-rendering: crispEdges
+}
+
+ .flow line, .flow path, .flow rect {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s
+}
+
+ .flow:hover .flow-forward, .flow:hover .flow-passive--forward {
+    stroke: #1589ee
+}
+
+ .flow:hover .flow-backward, .flow:hover .flow-passive--backward {
+    stroke: #5e429b
+}
+
+ .flow:hover .flow-dropin {
+    fill: #1589ee
+}
+
+ .flow:hover .flow-dropoff {
+    fill: #5e429b
+}
+
+ .flow-count-background {
+    fill: rgba(0,0,0,.5);
+    shape-rendering: initial
+}
+
+ .flow-dropin.flow-thin, .flow-dropoff.flow-thin {
+    stroke: transparent;
+    stroke-width: 4px
+}
+
+ .flow-dropoff {
+    cursor: pointer
+}
+
+.linear-gradient-stop-forward {
+    stop-color: #5eb4ff
+}
+
+.linear-gradient-stop-dropin {
+    stop-color: #1589ee
+}
+
+.linear-gradient-stop-backward {
+    stop-color: #7555b8
+}
+
+.linear-gradient-stop-dropoff {
+    stop-color: #7555b8
+}
+
+.linear-gradient-stop-axis {
+    stop-color: #c9c7c5
+}
+
+.linear-gradient-stop-separator {
+    stop-color: #c9c7c5
+}
+
+.graph {
+    width: 100%;
+}
+
+.node-labels {
+    -webkit-transform: translate(0,12px);
+    transform: translate(0,12px);
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.separator-graph {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.volume-active {
+    fill: #1589ee;
+    fill-opacity: .25;
+}
+
+.volume-inactive {
+    fill: #7874a3;
+    fill-opacity: .25;
+}
+
+.volume-outline {
+    fill: none;
+    stroke: #dddbda;
+    stroke-width: 1;
+}
+
+circle.tick {
+    fill: #b0adab;
+    fill-opacity: 1;
+    stroke: #fff;
+    stroke-width: 1.5;
+}
+
+circle.tick-outer {
+    fill: #000;
+    fill-opacity: .3;
+    pointer-events: none;
+}
+
+.no-volumes .volume-all {
+    visibility: hidden!important;
+    pointer-events: none!important;
+    opacity: 0!important;
+}
+
+.no-actions .volume-helped {
+    visibility: hidden!important;
+    pointer-events: none!important;
+    opacity: 0!important;
+}
+
+.state-background .flow-shape, .state-background .volume-shape, .state-connected .flow-shape, .state-connected .volume-shape {
+    opacity: .2;
+}
+
+.state-hidden .flow-count-container, .state-hidden .flow-shape, .state-hidden .volume-shape {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.volume.state-background .volume-all, .volume.state-connected .volume-all {
+    opacity: .2;
+}
+
+.flow line, .flow path, .flow rect {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s;
+}
+
+.flow:hover .flow-forward, .flow:hover .flow-passive--forward {
+    stroke: #1589ee;
+}
+
+.flow:hover .flow-backward, .flow:hover .flow-passive--backward {
+    stroke: #5e429b;
+}
+
+.flow:hover .flow-dropin {
+    fill: #1589ee;
+}
+
+.flow:hover .flow-dropoff {
+    fill: #5e429b;
+}
+
+.flow-count-background {
+    fill: rgba(0,0,0,.5);
+    shape-rendering: initial;
+}
+
+.flow-dropin.flow-thin, .flow-dropoff.flow-thin {
+    stroke: transparent;
+    stroke-width: 4px;
+}
+
+.flow-dropoff {
+    cursor: pointer;
+}
+
+.no-flow-backward .flow-backward, .no-flow-dropin .flow-dropin, .no-flow-dropoff .flow-dropoff, .no-flow-forward .flow-forward, .no-flow-passive .flow-passive {
+    visibility: hidden!important;
+    pointer-events: none!important;
+    opacity: 0!important;
+}
+
+.no-flows .flow-container {
+    visibility: hidden!important;
+    pointer-events: none!important;
+    opacity: 0!important;
+}
+
+circle {
+    -webkit-transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+    transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+}
+
+rect {
+    shape-rendering: crispEdges;
+}
+
+.flow line, .flow path, .flow rect {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s;
+}
+
+.flow:hover .flow-forward, .flow:hover .flow-passive--forward {
+    stroke: #1589ee;
+}
+
+.flow:hover .flow-backward, .flow:hover .flow-passive--backward {
+    stroke: #5e429b;
+}
+
+.flow:hover .flow-dropin {
+    fill: #1589ee;
+}
+
+.flow:hover .flow-dropoff {
+    fill: #5e429b;
+}
+
+.flow-count-background {
+    fill: rgba(0,0,0,.5);
+    shape-rendering: initial;
+}
+
+.flow-dropin.flow-thin, .flow-dropoff.flow-thin {
+    stroke: transparent;
+    stroke-width: 4px;
+}
+
+.flow-dropoff {
+    cursor: pointer;
+}
+
+.one-glyphicon, [class*=one-glyphicon-], [class^=one-glyphicon-] {
+    font-family: "Salesforce Icons"!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    top: 0;
+    display: inline-block;
+    min-width: 1em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.one-glyphicon-lg {
+    font-size: 20px;
+}
+
+.one-glyphicon:before, [class*=one-glyphicon-]:before, [class^=one-glyphicon-]:before {
+    padding: 0 1px;
+}
+
+.one-glyphicon-mobile:before {
+    content: "\e60b"
+}
+
+.one-glyphicon-laptop:before {
+    content: "\e60c"
+}
+
+.one-glyphicon-physical:before {
+    content: "\e610"
+}
+
+.one-glyphicon-social:before {
+    content: "\e611"
+}
+
+.dynamic-placement {
+    will-change: transform;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
