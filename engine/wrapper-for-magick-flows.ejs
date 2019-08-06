@@ -6,7 +6,7 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 `);
 %>
 <!DOCTYPE html>
-<html>
+<html class="magick-flow">
 	<head>
 		<%- include('includes/global/head') _%>
 		<% if (locals.siteSection) { %>
@@ -20,7 +20,7 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 
 	</head>
 
-	<body class="magick-flow">
+	<body class="magick-flow" data-current="magick-flows--step-0" data-next="magick-flows--step-1" >
 
 		<% if (locals.siteSection) { %>
 		<div id="content-wrapper"  class="container magick-flow_content-wrapper   ">

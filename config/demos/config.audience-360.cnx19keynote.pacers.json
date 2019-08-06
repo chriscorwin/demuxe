@@ -1,0 +1,45 @@
+{
+	"id": "audience-360.cnx19keynote.pacers",
+	"demoName": "Audience 360 Pacers CNX 19 Keynote",
+	"description": "Audience 360 Pacers Demo for Connections 2019 Keynote",
+	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"venue": "Connections 2019",
+	"date": "June 18, 2019 11am PDT",
+	"brands": "Indiana Pacers",
+	"presenters": "Eric Stahl, Katrin Rabant, Christy Poulos",
+	"location": "Chicago, IL",
+	"tags": ["Connections", "Keynote", "2019"],
+	"thumbnail": "/screenshots/audience-360.cnx19keynote.pacers.0211.dashboard.slide.png",
+	"brandTheme": "pacers",
+	"productTemplate": "audience-360",
+	"demoVenue": "cnx19keynote",
+	"demoVersion": "0.1",
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
+	"env": "production",
+	"production": {
+		"host": "https://cnx19-audience-360-pacers.herokuapp.com/"
+	},
+	"qa": {
+		"host": "https://cnx19-audience-360-pacers-qa.herokuapp.com/"
+	},
+	"dev": {
+		"host": "https://cnx19-audience-360-pacers-dev.herokuapp.com/"
+	},
+	"local": {
+		"host": "http://localhost:3000/"
+	},
+	"tests": {
+		"headless": true,
+		"imageSnapshotPath": "./test/screenshots/",
+		"mismatchThreshold": 0.01,
+		"timeout": 30000
+	},
+	"gapixelid": "",
+	"presentationid": ""
+}

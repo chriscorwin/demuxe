@@ -3,6 +3,8 @@ const fs = require('fs');
 const util = require('util');
 const sizeOf = require('image-size');
 const addMagickFlowsToConfig = require('./config-magick-flows');
+const addAvailableDemoAppConfigs = require('./available-demos');
+const addAvailableDemoBannerImages = require('./available-demos-banners');
 const sassGenerator = require('./magick-flows-util/sass-generator.js');
 
 
@@ -88,6 +90,8 @@ module.exports = function() {
     configData.appViews = appViews;
 
     configData = addMagickFlowsToConfig(configData);
+    configData = addAvailableDemoAppConfigs(configData);
+    configData = addAvailableDemoBannerImages(configData);
 
 
 

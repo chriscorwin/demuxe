@@ -11,7 +11,7 @@ let thisIncludeDebugInfoEnd = `
 // console.group(thisIncludeDebugInfoStart);
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
-const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
+const drawerDirectionOptions = ['left', 'right', 'top', 'bottom'];
 
 var clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
@@ -239,9 +239,9 @@ function locationHashChanged(event) {
 	let currentStepNumber = newUrlHash;
 	let nextStepNumber = nextClick;
 
-	const previousStepMetaData = magickFlowConfig.metaData[previousStepNumber].data || ['unset'];
-	const currentStepMetaData = magickFlowConfig.metaData[currentStepNumber].data || ['unset'];
-	const nextStepMetaData = magickFlowConfig.metaData[nextStepNumber].data || ['unset'];
+	const previousStepMetaData = magickFlowConfig.stepMetaData[previousStepNumber].data || ['unset'];
+	const currentStepMetaData = magickFlowConfig.stepMetaData[currentStepNumber].data || ['unset'];
+	const nextStepMetaData = magickFlowConfig.stepMetaData[nextStepNumber].data || ['unset'];
 
 	useStepTransition = currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition';
 	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch';
@@ -428,7 +428,7 @@ function locationHashChanged(event) {
 
 			// // Finally, we will hide the _next_ step's drawer, too -- this is in case we're going backwards.
 			// if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`) !== null) {
-			// 	if ( magickFlowConfig.metaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
+			// 	if ( magickFlowConfig.stepMetaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
 			// 		document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.remove('slide-in');
 			// 		setTimeout(() => {
 			// 			document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.add('slds-hide');
@@ -490,7 +490,7 @@ function locationHashChanged(event) {
 
 		// First we will hide any previous step's ios-notification.
 		if (document.querySelector(`.ios-notification--step-${previousClick}`) !== null) {
-			if ( magickFlowConfig.metaData[previousClick][`showIosNotification`] === true ) {
+			if ( magickFlowConfig.stepMetaData[previousClick][`showIosNotification`] === true ) {
 				setTimeout(() => {
 					document.querySelector(`.ios-notification--step-${previousClick}`).classList.remove('slide-in');
 					setTimeout(() => {
@@ -503,7 +503,7 @@ function locationHashChanged(event) {
 			}
 		}
 		// Now we will show this step's ios-notification, if it exists.
-		if ( magickFlowConfig.metaData[clicks][`showIosNotification`] === true ) {
+		if ( magickFlowConfig.stepMetaData[clicks][`showIosNotification`] === true ) {
 			doDrawer = true;
 			document.querySelector(`.ios-notification--step-${clicks}`).classList.remove('slds-hide');
 			window.setTimeout(() => {
@@ -513,7 +513,7 @@ function locationHashChanged(event) {
 
 		// Finally, we will hide the _next_ step's ios-notification, too -- this is in case we're going backwards.
 		if (document.querySelector(`.ios-notification--step-${nextClick}`) !== null) {
-			if ( magickFlowConfig.metaData[nextClick][`showIosNotification`] === true ) {
+			if ( magickFlowConfig.stepMetaData[nextClick][`showIosNotification`] === true ) {
 				setTimeout(() => {
 					document.querySelector(`.ios-notification--step-${nextClick}`).classList.remove('slide-in');
 					setTimeout(() => {
@@ -586,7 +586,7 @@ function locationHashChanged(event) {
 		console.group(`[ Speaker Notes ]`)
 		console.group('(verbose level info here)');
 		console.log(`-------------------------`);
-		console.debug(magickFlowConfig.metaData[stepToEvaluateForAppTransition]);
+		console.debug(magickFlowConfig.stepMetaData[stepToEvaluateForAppTransition]);
 		console.debug(`previousStepDrawersData: `, previousStepDrawersData);
 		console.debug(`currentStepDrawersData: `, currentStepDrawersData);
 		console.debug(`nextStepDrawersData: `, nextStepDrawersData);
@@ -594,14 +594,14 @@ function locationHashChanged(event) {
 		console.log(`-------------------------`);
 		console.groupEnd();
 		console.log(`Current Step: `, clicks);
-		console.log(`Sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
-		console.log(`Step ID: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
+		console.log(`Sorter: `, magickFlowConfig.stepMetaData[stepToEvaluateForAppTransition].sorter);
+		console.log(`Step ID: `, magickFlowConfig.stepMetaData[stepToEvaluateForAppTransition].id);
 	}
-	if ( typeof magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes !== 'undefined' ) {
+	if ( typeof magickFlowConfig.stepMetaData[stepToEvaluateForAppTransition].notes !== 'undefined' ) {
 		if (locals.DEBUG === 'true') {
 			console.group(`Hints`);
 		}
-		magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes.forEach((note, noteIndex) => {
+		magickFlowConfig.stepMetaData[stepToEvaluateForAppTransition].notes.forEach((note, noteIndex) => {
 			// note = note.replace(/-/g, ' ').toLowerCase();
 			note = note.replace(/-/g, ' ');
 			console.debug(`${noteIndex}: ${note}`);
@@ -610,7 +610,7 @@ function locationHashChanged(event) {
 		if (locals.DEBUG === 'true') {
 			console.groupEnd();
 		}
-		// console.debug(`Notes: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes);
+		// console.debug(`Notes: `, magickFlowConfig.stepMetaData[stepToEvaluateForAppTransition].notes);
 	}
 	if (locals.DEBUG === 'true') {
 		console.groupEnd();

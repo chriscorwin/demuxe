@@ -1,0 +1,45 @@
+{
+	"id": "demuxe",
+	"demoName": "Demuxe Catalogue",
+	"description": "The Demuxe Catalogue",
+	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"venue": "",
+	"date": "GET CORRECT DATE",
+	"brands": "GET CORRECT BRAND",
+	"presenters": "GET CORRECT SPEAKERS",
+	"location": "GET CORRECT LOCATION",
+	"tags": [],
+	"thumbnail": "",
+	"brandTheme": "demuxe",
+	"productTemplate": "catalogue",
+	"demoVenue": "poc19",
+	"demoVersion": "0.1",
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
+	"env": "production",
+	"production": {
+		"host": "https://demuxe-catalogue.herokuapp.com/"
+	},
+	"qa": {
+		"host": "https://demuxe-catalogue-qa.herokuapp.com/"
+	},
+	"dev": {
+		"host": "https://demuxe-catalogue-dev.herokuapp.com/"
+	},
+	"local": {
+		"host": "http://localhost:3000/"
+	},
+	"tests": {
+		"headless": true,
+		"imageSnapshotPath": "./test/screenshots/",
+		"mismatchThreshold": 0.01,
+		"timeout": 30000
+	},
+	"gapixelid": "",
+	"presentationid": ""
+}

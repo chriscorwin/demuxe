@@ -36,7 +36,7 @@ _%>
 </script>
 <%
 	let showMetaDataMissingError = true;
-	let thisMagickFlowMetaData = thisMagickFlowConfig.metaData;
+	let thisMagickFlowStepMetaData = thisMagickFlowConfig.stepMetaData;
 
 	const webRootPath = `/${locals.magickFlows.directoryName}/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]}`;
 	const mainContentPath = `${webRootPath}/main/`;
@@ -70,7 +70,7 @@ _%>
 	let maxHeight = thisMagickFlowConfig.templateSizingFileDimensions.height || 720;
 
 
-	thisMagickFlowMetaData.forEach(function(node, nodeIndex) {
+	thisMagickFlowStepMetaData.forEach(function(node, nodeIndex) {
 
 
 		const mainContentWebRootUrl = `${mainContentPath}${node.fileName}`;
