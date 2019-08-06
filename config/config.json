@@ -1,8 +1,9 @@
 {
-	"demoName": "Salesforce Marketing Cloud Connections 2019",
-	"brandTheme": "fever",
-	"productTemplate": "mc",
-	"demoVenue": "cnx19",
+	"demoName": "DMB BBVA DF 18 Keynote",
+	"brandTheme": "nto",
+	"productTemplate": "jb",
+	"demoVenue": "test-run",
+
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",

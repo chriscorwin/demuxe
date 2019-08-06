@@ -1,0 +1,314 @@
+
+
+<svg class="graph lifecycle-graph" height="1000" width="1000">
+<style>
+.graph {
+    width: 100%
+}
+
+.flow-container {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s
+}
+
+.separator {
+    stroke-width: 1;
+    stroke-dasharray: 1,8;
+    stroke-dashoffset: 1
+}
+
+ .separator-transitionable {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s
+}
+
+.separator-graph {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px)
+}
+
+.separator-column {
+    stroke-width: 2;
+    stroke-dasharray: 2,8
+}
+
+.separator-row {
+    stroke: #c9c7c5
+}
+
+.volume-active {
+    fill: #1589ee;
+    fill-opacity: .25
+}
+
+.volume-inactive {
+    fill: #7874a3;
+    fill-opacity: .25
+}
+
+.volume-outline {
+    fill: none;
+    stroke: #dddbda;
+    stroke-width: 1
+}
+
+circle.tick {
+    fill: #b0adab;
+    fill-opacity: 1;
+    stroke: #fff;
+    stroke-width: 1.5
+}
+
+circle.tick-outer {
+    fill: #000;
+    fill-opacity: .3;
+    pointer-events: none
+}
+
+.node-focusable .tick {
+    cursor: pointer
+}
+
+circle {
+    -webkit-transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+    transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+}
+
+.flow line, .flow path, .flow rect {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s;
+}
+
+.flow-dropin {
+    opacity: .7;
+}
+
+.flow-dropoff {
+    opacity: 1;
+}
+
+
+rect {
+    shape-rendering: crispEdges;
+}
+
+ circle {
+    -webkit-transition: opacity .5s,fill .5s,stroke .5s,visibility .5s;
+    transition: opacity .5s,fill .5s,stroke .5s,visibility .5s
+}
+
+ rect {
+    shape-rendering: crispEdges
+}
+
+ .flow line, .flow path, .flow rect {
+    -webkit-transition: opacity .5s,visibility .5s;
+    transition: opacity .5s,visibility .5s
+}
+
+ .flow:hover .flow-forward, .flow:hover .flow-passive--forward {
+    stroke: #1589ee
+}
+
+ .flow:hover .flow-backward, .flow:hover .flow-passive--backward {
+    stroke: #5e429b
+}
+
+ .flow:hover .flow-dropin {
+    fill: #1589ee
+}
+
+ .flow:hover .flow-dropoff {
+    fill: #5e429b
+}
+
+ .flow-count-background {
+    fill: rgba(0,0,0,.5);
+    shape-rendering: initial
+}
+
+ .flow-dropin.flow-thin, .flow-dropoff.flow-thin {
+    stroke: transparent;
+    stroke-width: 4px
+}
+
+ .flow-dropoff {
+    cursor: pointer
+}
+
+.linear-gradient-stop-forward {
+    stop-color: #5eb4ff
+}
+
+.linear-gradient-stop-dropin {
+    stop-color: #1589ee
+}
+
+.linear-gradient-stop-backward {
+    stop-color: #7555b8
+}
+
+.linear-gradient-stop-dropoff {
+    stop-color: #7555b8
+}
+
+.linear-gradient-stop-axis {
+    stop-color: #c9c7c5
+}
+
+.linear-gradient-stop-separator {
+    stop-color: #c9c7c5
+}
+
+
+</style>
+  <defs>
+    <linearGradient id="gradient-dropin" class="linear-gradient" x1="0%" x2="0%" y1="0%" y2="100%" spreadMethod="pad">
+      <stop offset="0%" class="linear-gradient-stop-dropin" stop-opacity="0"/>
+      <stop offset="50%" class="linear-gradient-stop-dropin" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="gradient-dropoff" class="linear-gradient" x1="0%" x2="0%" y1="100%" y2="0%" spreadMethod="pad">
+      <stop offset="0%" class="linear-gradient-stop-dropoff" stop-opacity="0"/>
+      <stop offset="50%" class="linear-gradient-stop-dropoff" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="gradient-forward" class="linear-gradient" x1="0%" x2="100%" y1="0%" y2="0%" spreadMethod="pad">
+      <stop offset="0%" class="linear-gradient-stop-forward" stop-opacity="0.2"/>
+      <stop offset="80%" class="linear-gradient-stop-forward" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="gradient-backward" class="linear-gradient" x1="100%" x2="0%" y1="0%" y2="0%" spreadMethod="pad">
+      <stop offset="0%" class="linear-gradient-stop-backward" stop-opacity="0.35"/>
+      <stop offset="80%" class="linear-gradient-stop-backward" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="gradient-axis" class="linear-gradient" x1="1%" x2="99%" y1="0%" y2="0%" spreadMethod="pad">
+      <stop offset="0%" class="linear-gradient-stop-axis" stop-opacity="0"/>
+      <stop offset="4%" class="linear-gradient-stop-axis" stop-opacity="1"/>
+      <stop offset="96%" class="linear-gradient-stop-axis" stop-opacity="1"/>
+      <stop offset="100%" class="linear-gradient-stop-axis" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-active">
+      <rect x="-115" y="-120" width="230" height="115"> </rect>
+    </clipPath>
+    <clipPath id="clip-inactive">
+      <rect x="-115" y="5" width="230" height="115"> </rect>
+    </clipPath>
+  </defs>
+  <g class="graph-data" transform="translate(0,331.5)">
+    <g class="graph-marks">
+      <rect class="axis" width="1012" fill="url(#gradient-axis)" x="80" y="-1" height="2"> </rect>
+      <line class="separator separator-row separator-graph" x1="0" y1="0" x2="100%" y2="0"> </line>
+    </g>
+    <g class="graph-elements-svg" transform="translate(166,0)">
+      <g class="volume-container" thx-volume="journeysStateGraph.lifecycleData.volumes" thx-volume-is-update="journeys.isAggregateUpdate">
+        <g class="volume state-default" transform="translate(70,0)" data-id="MzEyMTQ" data-journeys-id="Awareness">
+          <circle class="volume-shape volume-all volume-active" r="97.02840460768113" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-helped volume-active" r="26.07632567416318" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-all volume-inactive" r="62.05115586174366" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+        </g>
+        <g class="volume state-default" transform="translate(210,0)" data-id="MzEyMTU" data-journeys-id="Research">
+          <circle class="volume-shape volume-all volume-active" r="47.94781712301041" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-helped volume-active" r="28.68397462050092" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-all volume-inactive" r="36.059213215855685" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-shape volume-helped volume-inactive" r="23.7108246512718" clip-path="url(#clip-inactive)"/>
+        </g>
+        <g class="volume state-default" transform="translate(350,0)" data-id="MzAyNDg" data-journeys-id="Purchase">
+          <circle class="volume-shape volume-all volume-active" r="0" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-helped volume-active" r="0" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-all volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+        </g>
+        <g class="volume state-default" transform="translate(490,0)" data-id="MzAyNDk" data-journeys-id="Service">
+          <circle class="volume-shape volume-all volume-active" r="0" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-helped volume-active" r="0" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-all volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+        </g>
+        <g class="volume state-default" transform="translate(630,0)" data-id="MzAyNTA" data-journeys-id="Advocate">
+          <circle class="volume-shape volume-all volume-active" r="0" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-helped volume-active" r="0" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-all volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+        </g>
+        <g class="volume state-default" transform="translate(770,0)" data-id="NzY4NDI" data-journeys-id="Use">
+          <circle class="volume-shape volume-all volume-active" r="0" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-helped volume-active" r="0" clip-path="url(#clip-active)"/>
+          <circle class="volume-shape volume-all volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+          <circle class="volume-shape volume-helped volume-inactive" r="0" clip-path="url(#clip-inactive)"/>
+        </g>
+      </g>
+      <g class="flow-container" thx-flow="journeysStateGraph.lifecycleData.flows" thx-flow-is-update="journeys.isAggregateUpdate" thx-flow-type="lifecycle">
+        <g class="flow flow-lifecycle state-default" transform="translate(70,0)" data-id="to[MzEyMTQ]" data-journeys-id="to[Awareness]" data-journeys-id-to="Awareness" data-value="1342">
+          <rect width="20" height="160" x="-10" y="-160" class="flow-dropin flow-type-drop flow-normal flow-shape" fill="url(#gradient-dropin)"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(70,0)" data-id="from[MzEyMTQ]" data-journeys-id="from[Awareness]" data-journeys-id-from="Awareness" data-value="661">
+          <rect width="14.664891734700591" height="160" x="-7.3324458673502955" y="0" class="flow-dropoff flow-type-drop flow-normal flow-shape" fill="url(#gradient-dropoff)"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(70,0)" data-id="from[MzEyMTQ]:to[MzEyMTU]" data-journeys-id="from[Awareness]:to[Research]" data-journeys-id-from="Awareness" data-journeys-id-to="Research" data-value="261">
+          <path class="flow-forward flow-type-directional flow-normal flow-shape" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="9.312916295412949" stroke-dasharray=" " stroke-dashoffset="0"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(210,0)" data-id="from[MzEyMTU]:to[MzEyMTQ]" data-journeys-id="from[Research]:to[Awareness]" data-journeys-id-from="Research" data-journeys-id-to="Awareness" data-value="173">
+          <path class="flow-backward flow-type-directional flow-normal flow-shape" fill="none" d="M0,0 A70,70 0 0 1 -140,0" stroke="url(#gradient-backward)" stroke-width="7.420354178076197" stroke-dasharray=" " stroke-dashoffset="0"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(70,0)" data-id="from[MzEyMTQ]:to[MzAyNDg]" data-journeys-id="from[Awareness]:to[Purchase]" data-journeys-id-from="Awareness" data-journeys-id-to="Purchase" data-value="151">
+          <path class="flow-forward flow-type-directional flow-normal flow-shape" fill="none" d="M0,0 A140,140 0 0 1 280,0" stroke="url(#gradient-forward)" stroke-width="6.848833656406428" stroke-dasharray=" " stroke-dashoffset="0"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(350,0)" data-id="from[MzAyNDg]:to[MzEyMTQ]" data-journeys-id="from[Purchase]:to[Awareness]" data-journeys-id-from="Purchase" data-journeys-id-to="Awareness" data-value="146">
+          <path class="flow-backward flow-type-directional flow-normal flow-shape" fill="none" d="M0,0 A140,140 0 0 1 -280,0" stroke="url(#gradient-backward)" stroke-width="6.7112564915517865" stroke-dasharray=" " stroke-dashoffset="0"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(350,0)" data-id="from[MzAyNDg]" data-journeys-id="from[Purchase]" data-journeys-id-from="Purchase" data-value="120">
+          <rect width="5.939678948550235" height="160" x="-2.9698394742751173" y="0" class="flow-dropoff flow-type-drop flow-thin flow-shape" fill="url(#gradient-dropoff)"/>
+          <rect width="6" height="160" x="-3" y="0" class="flow-dropoff flow-type-drop flow-thin flow-tooltip-helper" fill="transparent"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(210,0)" data-id="from[MzEyMTU]" data-journeys-id="from[Research]" data-journeys-id-from="Research" data-value="90">
+          <rect width="4.89447530589677" height="160" x="-2.447237652948385" y="0" class="flow-dropoff flow-type-drop flow-thin flow-shape" fill="url(#gradient-dropoff)"/>
+          <rect width="6" height="160" x="-3" y="0" class="flow-dropoff flow-type-drop flow-thin flow-tooltip-helper" fill="transparent"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(210,0)" data-id="from[MzEyMTU]:to[MzAyNDg]" data-journeys-id="from[Research]:to[Purchase]" data-journeys-id-from="Research" data-journeys-id-to="Purchase" data-value="89">
+          <path class="flow-forward flow-type-directional flow-thin flow-shape" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="url(#gradient-forward)" stroke-width="4.8558482851519305" stroke-dasharray=" " stroke-dashoffset="0"/>
+          <path class="flow-forward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="M0,0 A70,70 0 0 1 140,0" stroke="transparent" stroke-width="6" stroke-dasharray=" " stroke-dashoffset="0"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(210,0)" data-id="to[MzEyMTU]" data-journeys-id="to[Research]" data-journeys-id-to="Research" data-value="75">
+          <rect width="4.281632961555916" height="160" x="-2.140816480777958" y="-160" class="flow-dropin flow-type-drop flow-thin flow-shape" fill="url(#gradient-dropin)"/>
+          <rect width="6" height="160" x="-3" y="-160" class="flow-dropin flow-type-drop flow-thin flow-tooltip-helper" fill="transparent"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(350,0)" data-id="to[MzAyNDg]" data-journeys-id="to[Purchase]" data-journeys-id-to="Purchase" data-value="31">
+          <rect width="1.7823580658587197" height="160" x="-0.8911790329293598" y="-160" class="flow-dropin flow-type-drop flow-thin flow-shape" fill="url(#gradient-dropin)"/>
+          <rect width="6" height="160" x="-3" y="-160" class="flow-dropin flow-type-drop flow-thin flow-tooltip-helper" fill="transparent"/>
+        </g>
+        <g class="flow flow-lifecycle state-default" transform="translate(350,0)" data-id="from[MzAyNDg]:to[MzEyMTU]" data-journeys-id="from[Purchase]:to[Research]" data-journeys-id-from="Purchase" data-journeys-id-to="Research" data-value="24">
+          <path class="flow-backward flow-type-directional flow-thin flow-shape" fill="none" d="M0,0 A70,70 0 0 1 -140,0" stroke="url(#gradient-backward)" stroke-width="1.1843932284798677" stroke-dasharray=" " stroke-dashoffset="0"/>
+          <path class="flow-backward flow-type-directional flow-thin flow-tooltip-helper" fill="none" d="M0,0 A70,70 0 0 1 -140,0" stroke="transparent" stroke-width="6" stroke-dasharray=" " stroke-dashoffset="0"/>
+        </g>
+      </g>
+      <g class="node-container" thx-node="journeysStateGraph.lifecycleData.volumes" thx-node-is-update="journeys.isAggregateUpdate" thx-node-type="lifecycle">
+        <g opacity="1" class="node state-default node-focusable" transform="translate(70,0)" data-id="MzEyMTQ" data-journeys-id="Awareness">
+          <circle r="15" class="tick-outer"/>
+          <circle r="10" class="tick"/>
+        </g>
+        <g opacity="1" class="node state-default node-focusable" transform="translate(210,0)" data-id="MzEyMTU" data-journeys-id="Research">
+          <circle r="15" class="tick-outer"/>
+          <circle r="10" class="tick"/>
+        </g>
+        <g opacity="1" class="node state-default node-focusable" transform="translate(350,0)" data-id="MzAyNDg" data-journeys-id="Purchase">
+          <circle r="15" class="tick-outer"/>
+          <circle r="10" class="tick"/>
+        </g>
+        <g opacity="1" class="node state-default" transform="translate(490,0)" data-id="MzAyNDk" data-journeys-id="Service">
+          <circle r="15" class="tick-outer"/>
+          <circle r="10" class="tick"/>
+        </g>
+        <g opacity="1" class="node state-default" transform="translate(630,0)" data-id="MzAyNTA" data-journeys-id="Advocate">
+          <circle r="15" class="tick-outer"/>
+          <circle r="10" class="tick"/>
+        </g>
+        <g opacity="1" class="node state-default" transform="translate(770,0)" data-id="NzY4NDI" data-journeys-id="Use">
+          <circle r="15" class="tick-outer"/>
+          <circle r="10" class="tick"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
