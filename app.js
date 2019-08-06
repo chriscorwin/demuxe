@@ -189,11 +189,16 @@ router.get('/*', (req, res) => {
 	}, {});
 	const sanitizedURL = req.sanitize(req.params[0]) || 'index';
 	let fileName = (sanitizedURL.match(/\/$/)) ? `${sanitizedURL}index.ejs` : `${sanitizedURL}.ejs`;
-
 	// Okay, so, the server's glee at finding and including stuff can bite us when it attempts to find `file.css.ejs`. Just silly. Here we tell it in static asset casses to just look for the asset, not an .esj file.
 	if ( fileName.endsWith('.css.ejs') || fileName.endsWith('.js.ejs') || fileName.endsWith('.png.ejs') || fileName.endsWith('.png.ejs') ) {
 		fileName = fileName.replace('.ejs', '');
 	}
+	let fileNameSlug = fileName;
+	if ( fileNameSlug.endsWith('.ejs') ) {
+		fileNameSlug = fileNameSlug.replace('.ejs', '');
+	}
+
+
 
 	const state = sanitizedQueryParams.state || 'initial';
 	config.state = state;
@@ -283,7 +288,7 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 						}
 					}
 				} else {
-					res.render(fileName, { ...config, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
+					res.render(fileName, { ...config, siteSection: fileNameSlug, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
 				}
 			});
 		});

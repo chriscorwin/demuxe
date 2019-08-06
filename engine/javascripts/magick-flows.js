@@ -1,47 +1,95 @@
-const pathToIncludeForLogging = `engine/javascripts/magick-flows.js`;
-const includeDebugInfoStart = `
+let thisPathToIncludeForLogging = `engine/javascripts/magick-flows.js`;
+let thisIncludeDebugInfoStart = `
 ============================================================
-Demuxe: including ${pathToIncludeForLogging} now...
+Demuxe: including ${thisPathToIncludeForLogging} now...
 ------------------------------------------------------------
 `;
-const includeDebugInfoEnd = `
-...end ${pathToIncludeForLogging}
+let thisIncludeDebugInfoEnd = `
+...end ${thisPathToIncludeForLogging}
 ------------------------------------------------------------
 `;
-console.group(includeDebugInfoStart);
+// console.group(thisIncludeDebugInfoStart);
 const magickFlowConfig = locals.magickFlows[demoMagickFlowDirectoryName];
 const drawerContentChangingClasses = 'section payment confirmation';
 const drawerDirectionOptions = ['top', 'bottom', 'right', 'left'];
 
-let clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+var clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
 
 if ( clicks >= magickFlowConfig.numberOfSteps ) {
 	clicks = 0;
 }
 
-let nextClick = clicks + 1;
+var nextClick = clicks + 1;
 if ( nextClick >= magickFlowConfig.numberOfSteps ) {
 	nextClick = 0
 }
 
-let previousClick = clicks - 1;
+var previousClick = clicks - 1;
 if ( previousClick <= 0 ) {
 	previousClick = magickFlowConfig.numberOfSteps
 }
 
-window.location.hash = `#${clicks}`;
 
 const $ss = document.querySelector(`.magick-flows--step-content.auto-replace[data-step="${clicks}"]`);
 const $contentWrapper = document.querySelector( '#content-wrapper' );
+const $inlineFrameExample = document.querySelector( '#magick-flows-iframe--1' );
 
 
+
+
+
+function testForEscapeHatch(node) {
+	return node.includes('is-escape-hatch');
+}
+
+function incrementLocationHashWithTiming ( hashChangeTiming = 0, directionOfNavigation = 'forward' ) {
+	if (directionOfNavigation === 'backwards') {
+		clicks --;
+	} else {
+		clicks++;
+	}
+	if ( clicks >= magickFlowConfig.numberOfSteps ) {
+		clicks = magickFlowConfig.numberOfSteps - 1;
+	}
+	if ( clicks < 0 ) {
+		clicks = 0;
+	}
+	// Now is the chance to run onBeforeHashChange stuff
+	// In the future, we may wish to catch that it should change and do stuff first.
+	// For now, we just do it.
+	console.log(`[ incrementLocationHashWithTiming ] A click has happened. That makes the total number of clicks: ${clicks}. Now we will wait ${hashChangeTiming} milliseconds and then update the hash.`);
+	setTimeout(() => {
+		window.location.hash = `#${clicks}`;
+	}, hashChangeTiming);
+}
+
+function setLocationHashWithTiming (newUrlHash = 0, hashChangeTiming = 0) {
+	// clicks = newUrlHash;
+	if ( newUrlHash >= magickFlowConfig.numberOfSteps ) {
+		newUrlHash = magickFlowConfig.numberOfSteps - 1;
+	}
+	if ( newUrlHash < 0 ) {
+		newUrlHash = 0;
+	}
+	// Now is the chance to run onBeforeHashChange stuff
+	// In the future, we may wish to catch that it should change and do stuff first.
+	// For now, we just do it.
+	console.log(`[ setLocationHashWithTiming ] Making the total number of clicks: ${newUrlHash}. Now we will wait ${hashChangeTiming} milliseconds and then update the hash.`);
+	setTimeout(() => {
+		window.location.hash = `#${newUrlHash}`;
+	}, hashChangeTiming);
+}
 
 $contentWrapper.onclick = ( ) => {
+	incrementLocationHashWithTiming();
+};
+
+
+function closeIFrame(){
 	clicks++;
 	if ( clicks >= magickFlowConfig.numberOfSteps ) {
 		clicks = magickFlowConfig.numberOfSteps - 1;
 	}
-
 	// Now is the chance to run onBeforeHashChange stuff
 	// In the future, we may wish to catch that it should change and do stuff first.
 	// For now, we just do it.
@@ -50,12 +98,14 @@ $contentWrapper.onclick = ( ) => {
 		window.location.hash = `#${clicks}`;
 	}, hashChangeTiming);
 
-};
+	document.querySelector( '#magick-flows-iframe--1' ).classList.toggle('slds-hide');
+}
+
 
 
 function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition = false, delayTransition = 0) {
 	if (locals.DEBUG === true) {
-		console.group(`[Magick Flows: normalTransition() ](${pathToIncludeForLogging}:50) running...`);
+		// console.group(`[Magick Flows: normalTransition() ](${thisPathToIncludeForLogging}:50) running...`);
 	}
 
 	let nextStepNumber = thisStepNumber + 1;
@@ -65,7 +115,7 @@ function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition
 		document.querySelector('.container').dataset.previous = `magick-flows--step-${previousClick}`;
 	}
 
-	console.debug(`[Magick Flows: normalTransition() ] thisStepNumber: `, thisStepNumber);
+	// console.debug(`[Magick Flows: normalTransition() ] thisStepNumber: `, thisStepNumber);
 	
 	if (document.querySelector(`.app-switcher-two`) !== null) {
 		document.querySelector(`.app-switcher-two`).classList.remove(`show`);
@@ -105,7 +155,7 @@ function normalTransition (thisStepNumber = 0, doApplicationSwitchStepTransition
 	}
 
 	if (locals.DEBUG === true) {
-		console.groupEnd();
+		// console.groupEnd();
 	}
 
 }
@@ -125,13 +175,17 @@ function getAppSwitcherClassNames () {
 
 function locationHashChanged(event) {
 
+	console.debug(`[locationHashChanged] running now...`);
+	console.debug(`clicks (before manipulation): `, clicks);
 	// get the non-string version of the hash -- that is the number of clicks so far
-	clicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+	let newClicks = parseInt( window.location.hash.replace( '#', '' ) ) || 0;
+
+	console.debug(`newClicks: `, newClicks);
+	clicks = newClicks;
 
 	// if the number of clicks is greater than our number of steps, we override that and set that thing back to zero
 	if ( clicks >= magickFlowConfig.numberOfSteps ) {
-		clicks = 0;
-		window.location.hash = `#${clicks}`;
+		setLocationHashWithTiming(0, 0);
 	}
 
 	// figure out which things come next and which things are backwards -- because it's a _loop_ we have to do some maths here
@@ -153,6 +207,8 @@ function locationHashChanged(event) {
 	let doApplicationSwitchStepTransition = false;
 	let doAutoAdvanceStepTransition = false;
 
+
+	let newDelayTransition = 0;
 	let delayTransition = 0;
 	let useStepTransition = false;
 	let autoAdvanceTransitionTiming = 1000;
@@ -178,25 +234,38 @@ function locationHashChanged(event) {
 	doAutoAdvanceStepTransition =  currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
 
 
-	console.group(`[ ${magickFlowConfig.urlSlug} ☞ #${previousStepNumber} location hash changed to: #${currentStepNumber} ]`);
+	// console.group(`[ ${magickFlowConfig.urlSlug} ☞ #${previousStepNumber} location hash changed to: #${currentStepNumber} ]`);
 
-	console.debug(`window.location.hash (before manipulation): `, window.location.hash);
-	console.debug(`event.oldURL: `, event.oldURL);
-	console.debug(`event.newURL: `, event.newURL);
-	console.debug(`clicks: `, clicks);
-	console.debug(`previousClick: `, previousClick);
-	console.debug(`nextClick: `, nextClick);
-	console.debug(`directionOfNavigation: `, directionOfNavigation);
-	console.debug(`currentStepMetaData: `, currentStepMetaData);
-	console.debug(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
+	// console.debug(`window.location.hash (before manipulation): `, window.location.hash);
+	// console.debug(`event.oldURL: `, event.oldURL);
+	// console.debug(`event.newURL: `, event.newURL);
+	// console.debug(`clicks: `, clicks);
+	// console.debug(`previousClick: `, previousClick);
+	// console.debug(`nextClick: `, nextClick);
+	// console.debug(`directionOfNavigation: `, directionOfNavigation);
+	// console.debug(`currentStepMetaData: `, currentStepMetaData);
+	// console.debug(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
 
+
+	let hasEscapeHatch = currentStepMetaData.some(testForEscapeHatch);
+	let indexOfEscapeHatch = currentStepMetaData.findIndex(testForEscapeHatch);
+
+	if ( hasEscapeHatch === true ) {
+		// console.log(`locals.productTemplate: `, locals.productTemplate);
+		// console.log(`locals.brandTheme: `, locals.brandTheme);
+		// console.log(`currentStepMetaData[indexOfEscapeHatch]: `, currentStepMetaData[indexOfEscapeHatch]);
+
+		let newUrlSlugForEscapeHatch = currentStepMetaData[indexOfEscapeHatch].split('--')[1];
+		// window.location = `/${newUrlSlugForEscapeHatch}`;
+
+	}
 
 
 	if ( useStepTransition && currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch' ) {
-		console.debug(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
-		console.debug(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
+		// console.debug(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
+		// console.debug(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
 		doApplicationSwitchStepTransition = true;
-		console.debug(`doApplicationSwitchStepTransition: `, doApplicationSwitchStepTransition);
+		// console.debug(`doApplicationSwitchStepTransition: `, doApplicationSwitchStepTransition);
 	}
 
 
@@ -221,9 +290,10 @@ function locationHashChanged(event) {
 		}
 
 		console.debug(`stepToEvaluateForAppTransition: `, stepToEvaluateForAppTransition);
-		setTimeout(() => {
-			window.location.hash = `#${autoAdvanceTransitionStepNumber}`;
-		}, autoAdvanceTransitionTiming);
+		setLocationHashWithTiming(autoAdvanceTransitionStepNumber, autoAdvanceTransitionTiming);
+		// setTimeout(() => {
+		// 	window.location.hash = `#${autoAdvanceTransitionStepNumber}`;
+		// }, autoAdvanceTransitionTiming);
 		
 	}
 
@@ -266,96 +336,129 @@ function locationHashChanged(event) {
 
 
 			// First we will hide any previous step's drawer.
-			// console.log(`magickFlowConfig.metaData[clicks]: `, magickFlowConfig.metaData[clicks]);
 			if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`) !== null) {
+				// console.log(`previousStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave': `, previousStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave');
+				// console.log('document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`)', document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`));
+
+
 				if ( previousStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
-					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slide-in');
-					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
+					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
-					}, 125);
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
+					}, 2900);
+
+					newDelayTransition = doAutoAdvanceStepTransition ? 0 : 750;
+					// console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+					delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
+				} else if ( previousStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
 					setTimeout(() => {
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
 					}, 1500);
-					console.debug(`delayTransition: `, delayTransition);
-					delayTransition = (delayTransition < 500 ? 500 : delayTransition);
-				}
-				if ( previousStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
-					// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
-					setTimeout(() => {
-						// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
-					}, 125);
-					// console.log(`delayTransition: `, delayTransition);
-					// delayTransition = (delayTransition < 250 ? 250 : delayTransition);
 				}
 			}
 
 
 			if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`) !== null) {
+
+				// console.log('document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`)', document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`));
+
 				if ( currentStepDrawersData[direction].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
-					setTimeout(() => {
-						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
-					}, 125);
-					console.debug(`delayTransition: `, delayTransition);
-					delayTransition = (delayTransition < 250 ? 250 : delayTransition);
-				}
-				if ( currentStepDrawersData[direction].find(k => k=='show-instantly') === 'show-instantly' ) {
+					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
+					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
+					newDelayTransition = 1;
+					// console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}`)
+					delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
+				} else if ( currentStepDrawersData[direction].find(k => k=='show-instantly') === 'show-instantly' ) {
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('be-in');
-					// setTimeout(() => {
-					// }, 125);
-					// console.log(`delayTransition: `, delayTransition);
-					delayTransition = 0;
+					if ( currentStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
+						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('your-mom-was-here');
+						newDelayTransition = 500;
+						// console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+						delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
+
+					} else if ( currentStepDrawersData[direction].find(k => k=='hide-never') === 'hide-never' ) {
+						newDelayTransition = 3;
+						// console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+						delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
+					}
 				}
-				// if ( currentStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
-				// 	document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slide-in');
-				// 	setTimeout(() => {
-				// 		document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slds-hide');
-				// 	}, 500);
-				// 	delayTransition = 250;
-				// }
+			}
+			if ( nextStepDrawersData[direction].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
+				document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('slds-hide');
+				// console.log('document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`)', document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`));
 			}
 
-			// // Now we will show this step's drawer, if it exists.
-			// if ( magickFlowConfig.metaData[clicks][`showDrawerFrom${Direction}`] === true ) {
-			// 	document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${clicks}`).classList.remove('slds-hide');
-			// 	window.setTimeout(() => {
-			// 		document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${clicks}`).classList.add('slide-in');
-			// 	}, 125);
-			// }
 
 
 
-			// Finally, we will hide the _next_ step's drawer, too -- this is in case we're going backwards.
-			if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`) !== null) {
-				if ( magickFlowConfig.metaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
-					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.remove('slide-in');
-					setTimeout(() => {
-						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.add('slds-hide');
-					}, 250);
+			// // Finally, we will hide the _next_ step's drawer, too -- this is in case we're going backwards.
+			// if (document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`) !== null) {
+			// 	if ( magickFlowConfig.metaData[nextClick][`showDrawerFrom${Direction}`] === true ) {
+			// 		document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.remove('slide-in');
+			// 		setTimeout(() => {
+			// 			document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextClick}`).classList.add('slds-hide');
+			// 		}, 250);
 					console.debug(`delayTransition: `, delayTransition);
-					delayTransition = (delayTransition < 250 ? 250 : delayTransition);
-				}
-			}
+			// 		// delayTransition = (delayTransition < 250 ? 250 : delayTransition);
+			// 	}
+			// }
 
 
 		});
 
-		console.debug(`previousClick: `, previousClick);
-		console.debug(`previousStepNumber: `, previousStepNumber);
-		console.debug(previousStepDrawersData);
-		console.debug(`currentStepNumber: `, currentStepNumber);
-		console.debug(currentStepDrawersData);
-		console.debug(`nextStepNumber: `, nextStepNumber);
-		console.debug(nextStepDrawersData);
-
+	
+		// console.debug(`previousStepNumber: `, previousStepNumber);
+		// console.debug(previousStepDrawersData);
+		// console.debug(`currentStepNumber: `, currentStepNumber);
+		// console.debug(currentStepDrawersData);
+		// console.debug(`nextStepNumber: `, nextStepNumber);
+		// console.debug(nextStepDrawersData);
+		// console.debug(`delayTransition: `, delayTransition);
 	
 	}
 
 
 
 
+
+
+	if (document.querySelectorAll('video').length !== 0) {
+		let theseVideoNodes = document.querySelectorAll(`video`);
+		theseVideoNodes.forEach(function(node, nodeIndex) {
+			
+			node.pause();
+			node.currentTime = 0;
+
+		});
+	}
+
+
+	if (document.querySelectorAll(`[data-step="${currentStepNumber}"] video`).length === 1) {
+		if (document.getElementById(`magick-flows--main-content-wrapper--step-${currentStepNumber}`) !== null) {
+			var video = document.getElementById(`magick-flows--main-content-wrapper--step-${currentStepNumber}`);
+			video.pause();
+			video.currentTime = 0;
+			video.load();
+		}
+	}
+
+
+	if (document.querySelectorAll(`[data-step="${currentStepNumber}"] video`).length === 1) {
+		if (document.getElementById(`magick-flows--main-content-wrapper--step-${currentStepNumber}`) !== null) {
+			var video = document.getElementById(`magick-flows--main-content-wrapper--step-${currentStepNumber}`);
+			video.pause();
+			video.currentTime = 0;
+			video.load();
+		}
+	}
 	if (document.querySelector(`.ios-notification`) !== null) {
 
 		// First we will hide any previous step's ios-notification.
@@ -367,7 +470,9 @@ function locationHashChanged(event) {
 						document.querySelector(`.ios-notification--step-${previousClick}`).classList.add('slds-hide');
 					}, 250);
 				}, 0);
-				delayTransition = 500;
+				newDelayTransition = 500;
+				// console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+				delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 			}
 		}
 		// Now we will show this step's ios-notification, if it exists.
@@ -388,7 +493,9 @@ function locationHashChanged(event) {
 						document.querySelector(`.ios-notification--step-${nextClick}`).classList.add('slds-hide');
 					}, 250);
 				}, 0);
-				delayTransition = 250;
+				newDelayTransition = 250;
+				// console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}, if it is less`)
+				delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 			}
 		}
 		
@@ -405,17 +512,17 @@ function locationHashChanged(event) {
 
 			if (parseInt(item.dataset.slide) == clicks) {
 
-				const thisMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[clicks]}`;
-				const nextMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[nextClick]}`;
-				const theOneAfterNextMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[nextClick + 1]}`;
-				const previousMagickFlowScreenshotUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[previousClick]}`;
+				const thisMagickFlowMainContentUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[clicks]}`;
+				const nextMagickFlowMainContentUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[nextClick]}`;
+				const theOneAfterNextMagickFlowMainContentUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[nextClick + 1]}`;
+				const previousMagickFlowMainContentUrl = `/magick-flows/${magickFlowConfig.urlSlug}/${magickFlowConfig.steps[previousClick]}`;
 
 				// this is where we wanna also sense .esj or even maybe .html and do _other_ stuff
-				const isPng = thisMagickFlowScreenshotUrl.endsWith('.png');
-				const isSvg = thisMagickFlowScreenshotUrl.endsWith('.svg');
-				const isMp4 = thisMagickFlowScreenshotUrl.endsWith('.mp4');
-				const isGif = thisMagickFlowScreenshotUrl.endsWith('.gif');
-				const isJpeg = thisMagickFlowScreenshotUrl.endsWith('.jpg');
+				const isPng = thisMagickFlowMainContentUrl.endsWith('.png');
+				const isSvg = thisMagickFlowMainContentUrl.endsWith('.svg');
+				const isMp4 = thisMagickFlowMainContentUrl.endsWith('.mp4');
+				const isGif = thisMagickFlowMainContentUrl.endsWith('.gif');
+				const isJpeg = thisMagickFlowMainContentUrl.endsWith('.jpg');
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-next');
 				document.querySelector(`#${itemId}`).classList.remove('slds-is-previous');
 				document.querySelector(`#${itemId}`).classList.add('slds-is-active');
@@ -448,28 +555,41 @@ function locationHashChanged(event) {
 			}
 		}
 	}
-
-	console.group(`[ Speaker Notes ]`)
-	console.group(`Current Step: `, clicks);
-	console.debug(magickFlowConfig.metaData[stepToEvaluateForAppTransition]);
-	console.groupEnd();
-	console.log(`Sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
-	console.log(`Step ID: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
+	if (locals.DEBUG === 'true') {
+		console.group(`[ Speaker Notes ]`)
+		console.group('(verbose level info here)');
+		console.log(`-------------------------`);
+		console.debug(magickFlowConfig.metaData[stepToEvaluateForAppTransition]);
+		console.debug(`previousStepDrawersData: `, previousStepDrawersData);
+		console.debug(`currentStepDrawersData: `, currentStepDrawersData);
+		console.debug(`nextStepDrawersData: `, nextStepDrawersData);
+		console.debug(`delayTransition: `, delayTransition);
+		console.log(`-------------------------`);
+		console.groupEnd();
+		console.log(`Current Step: `, clicks);
+		console.log(`Sorter: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].sorter);
+		console.log(`Step ID: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].id);
+	}
 	if ( typeof magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes !== 'undefined' ) {
-		console.group(`Hints`)
+		if (locals.DEBUG === 'true') {
+			console.group(`Hints`);
+		}
 		magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes.forEach((note, noteIndex) => {
 			// note = note.replace(/-/g, ' ').toLowerCase();
 			note = note.replace(/-/g, ' ');
-			// console.log(`${noteIndex}: ${note}`);
-			console.log(`${note}`);
+			console.debug(`${noteIndex}: ${note}`);
+			// console.log(`${note}`);
 		});
-		console.groupEnd();
-		// console.log(`Notes: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes);
+		if (locals.DEBUG === 'true') {
+			console.groupEnd();
+		}
+		// console.debug(`Notes: `, magickFlowConfig.metaData[stepToEvaluateForAppTransition].notes);
 	}
-	console.groupEnd();
+	if (locals.DEBUG === 'true') {
+		console.groupEnd();
+		console.groupEnd();
+	}
 
-
-	console.groupEnd();
 }
 
 // this gives our hash change event some history to poke at introspectively
@@ -484,89 +604,136 @@ if(!window.HashChangeEvent)(function(){
 
 window.onhashchange = locationHashChanged;
 
-
-// The very first time the URL for this Magick Flow is loaded in the browser we run a "reset" on it 
-// Why? WE DON'T KNOW!! 
-// ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
-window.setTimeout(() => {
-	window.location.hash = `#reset`;
-	window.location.hash = `#${clicks}`;
-}, (150));
-
-// Give the whole thing a chance to cache some assets before presenting the UI. This only runs once per page load, not every click.
-window.setTimeout(() => {
-	document.querySelector(`#content-wrapper`).classList.add('slds-transition-show');
-	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-hide');
-}, (500));
-window.setTimeout(() => {
-	document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
-	document.querySelector(`#content`).classList.remove('fake-the-dock');
-	document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
-	if (locals.DEBUG === true) {
-		console.debug(`Click hints automatgickally showing because you are in DEBUG mode. Hit the "T" key to toggle.`);
-		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
-		if (typeof $node != null) {
-			$node.classList.add('slide-in');
-		}
-	}
-}, (1000));
-
-
 document.addEventListener('keydown', function (evt) {
 	// This is the `i` key
 	// Shows current click hint for a short while.
 	// "i" for "information", I guess? ¯\_(ツ)_/¯
 	if (evt.keyCode === 73) {
-		console.log('The "i" key is being held down...?');
-		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
-		if (typeof $node != null) {
-			$node.classList.add('slide-in');
+		// console.log('The "I" key is being held down.');
+
+		let theseNodes = document.querySelectorAll(`#magick-flows-click-hints--step-${clicks}`);
+		if ( theseNodes.length > 0 ) {
+			theseNodes.forEach(function(node, nodeIndex) {
+				node.classList.add('slide-in');
+			});
 		}
+
+	} else if (evt.keyCode === 67) {
+		// console.log('The "C" key is being held down.');
+
+
+		let theNode = document.getElementsByTagName("body")[0];
+		theNode.style.cursor = "pointer";
 	}
 
 });
 
 
+document.onmousedown = function(e) {
+	let theNode = document.getElementsByTagName("body")[0];
+	theNode.style.cursor = "pointer";
+}
+document.onmouseup = function(e) {
+	let theNode = document.getElementsByTagName("body")[0];
+	theNode.style.cursor = "initial";
+}
+
 document.onkeyup = function(e) {
-	if (e.which == 72) {
-		console.log("H key was pressed, go to the first slide.");
-		window.location.hash = `#0`;
+
+	if (e.ctrlKey &&  e.which == 72) {
+		// these are here to remind us how to do combos, not cause we want these combos
+		let pathToDemoHome = '/magick-flows-dashboard';
+		console.log(`Ctrl + H shortcut combination was pressed, from ${thisPathToIncludeForLogging}. That means we should go to the ${pathToDemoHome}`);
+		window.location = `${pathToDemoHome}`;
+	} else if (e.which == 72) {
+		
+		// H
+		
+		console.debug("H key was pressed. Going to the first step.");
+		setLocationHashWithTiming(0, 0);
 	} else if (e.which == 73) {
-		let $node = document.querySelector(`#magick-flows-click-hints--step-${clicks}`);
-		if (typeof $node != null) {
-			$node.classList.remove('slide-in');
+		// I
+
+		let theseNodes = document.querySelectorAll(`#magick-flows-click-hints--step-${clicks}`);
+		if ( theseNodes.length > 0 ) {
+			theseNodes.forEach(function(node, nodeIndex) {
+				node.classList.remove('slide-in');
+			});
 		}
 
+	} else if (e.which == 67) {
+		// I
+
+
+		let theNode = document.getElementsByTagName("body")[0];
+		theNode.style.cursor = "initial";
+
 	} else if (e.which == 84) {
-		// This is the `t` key
+		
+		// T
+
 		// "t" for "toggle"
 		// Toggles the click hints on all slides.
-		const nodes = document.querySelectorAll(`.magick-flows-click-hints`);
-		if ( nodes.length > 0 ) {
-			nodes.forEach(function(node, nodeIndex) {
+		let theseNodes = document.querySelectorAll(`.magick-flows-click-hints`);
+		if ( theseNodes.length > 0 ) {
+			theseNodes.forEach(function(node, nodeIndex) {
 				node.classList.toggle('slide-in');
 			});
 		}
 	} else if (e.which == 39) {
-		console.log("Right arrow key was pressed, go to next...");
-		window.location.hash = `#${nextClick}`;
+		// console.log("Right arrow key was pressed, go to next...");
+		incrementLocationHashWithTiming(null, 'forward');
+		// window.location.hash = `#${nextClick}`;
 	} else if (e.which == 37) {
-		console.log("Left arrow key was pressed, go to previous...");
-		window.location.hash = `#${previousClick}`;
+		// console.log("Left arrow key was pressed, go to previous...");
+		incrementLocationHashWithTiming(null, 'backwards');
+		// window.location.hash = `#${previousClick}`;
 	} else if (e.which == 71) {
-		console.log("GIF...");
-		const theScreenshot = document.querySelector(`#magick-flows--step-${clicks} .auto-replace`);
-		console.log(`item img: `, theScreenshot.src);
-		theScreenshot.src = theScreenshot.src.replace(/\?.*$/,"")+"?x="+Math.random();
+		// console.log("GIF...");
+		const theMainContent = document.queryselector(`#magick-flows--step-${clicks} .auto-replace`);
+		// console.log(`item img: `, theMainContent.src);
+		theMainContent.src = theMainContent.src.replace(/\?.*$/,"")+"?x="+Math.random();
 	} else if (e.ctrlKey && e.altKey && e.which == 89) {
 		// these are here to remind us how to do combos, not cause we want these combos
-		// alert("Ctrl + Alt + Y shortcut combination was pressed");
+		console.log(`Ctrl + Alt + Y shortcut combination was pressed, from ${thisPathToIncludeForLogging}`);
 	} else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
 		// these are here to remind us how to do combos, not cause we want these combos
 		// alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
   }
 };
 
-console.log(includeDebugInfoEnd);
-console.groupEnd();
+
+
+
+// The very first time the URL for this Magick Flow is loaded in the browser we run a "reset" on it 
+// Why? WE DON'T KNOW!! 
+// ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
+window.location.hash = `#reset`;
+// setLocationHashWithTiming(clicks, 0);
+
+if (locals.DEBUG === 'true') {
+	console.debug(`Click hints automatgickally showing because you are in DEBUG mode. Hit the "T" key to toggle.`);
+
+	let theseNodes = document.querySelectorAll(`.magick-flows-click-hints`);
+	if ( theseNodes.length > 0 ) {
+		theseNodes.forEach(function(node, nodeIndex) {
+			node.classList.add('slide-in');
+		});
+	}
+
+}
+
+setLocationHashWithTiming(clicks, 0);
+
+document.querySelector(`#content-wrapper`).classList.remove('slds-transition-show');
+document.querySelector(`#content-wrapper`).classList.remove('slds-transition-hide');
+document.querySelector(`#content`).classList.remove('fake-the-dock');
+document.querySelector(`.preload-images`).classList.add('slds-transition-hide');
+
+// setLocationHashWithTiming(clicks + 1, 5000);
+// window.location.hash = `#${clicks}`;
+
+
+// console.log(thisIncludeDebugInfoEnd);
+// console.groupEnd();
 
