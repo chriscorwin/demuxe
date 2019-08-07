@@ -28,9 +28,11 @@ _%>
 	console.log('demo.demoFlow', demo.demoFlow);
 
 
-	const bannerImagesArray = ["/images/banner.png", "/images/banner-2.png", "/images/banner-3.png"]
+
+	// const bannerImagesArray = ["/images/all___banner___0.png", "/images/all___banner___1.png", "/images/all___banner___2.png", "/images/all___banner___3.png"];
+	const bannerImagesArray = locals.availableDemoBannerImages;
 	function imgRandom(imgArr) {
-		return imgArr[Math.floor(Math.random() * imgArr.length)];
+		return '/images/' + imgArr[Math.floor(Math.random() * imgArr.length)];
 	}
 	let demuxe_detailsPageHeaderBannerImageSrc = imgRandom(bannerImagesArray);
 
@@ -40,18 +42,18 @@ _%>
 
 %>
 
-<div class="header">
-	<div class="banner-image" style="background-image: url('<%= demuxe_detailsPageHeaderBannerImageSrc %>'); background-size: cover; background-position: center; height: 300px;">
+<div class="header slds-border_bottom">
+	<div class="demuxe-catalogue_banner-image demuxe-catalogue_banner-image--home" style="background-image: url('<%= demuxe_detailsPageHeaderBannerImageSrc %>');">
+		<div id="details-page-header-banner_name" class="title">Prototype Library
+			<div id="details-page-header-banner_description" class="slds-text-heading_large">Your newest Library to access <br> any demo you can imagine.</div>
+		</div>
 		<img id="details-page-header-banner_image" src="<%= demuxe_detailsPageHeaderBannerImageSrc %>" height="0" width="0">
-	</div>
-	<div id="details-page-header-banner_name" class="title">Prototype Library
-		<div id="details-page-header-banner_description" class="slds-text-heading_large">Your newest Library to access <br> any demo you can imagine.</div>
 	</div>
 </div>
 
 
 
-<div class="slds-m-around_x-large">
+<div class="slds-m-horizontal_medium slds-m-vertical_large">
 
 	<div class="demo-catalogue_thumbnails">
 

@@ -4,6 +4,7 @@ Demuxe: Running \`config/config-magick-flows.js\` now...
 ------------------------------------------------------------
 `);
 const path = require('path');
+const util = require('util');
 const fs = require('fs');
 const getFlowData = require('./magick-flows-util/get-flow-data.js');
 const sortAlphaNum = require('./magick-flows-util/sort-alpha-num.js');
@@ -48,6 +49,7 @@ const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), r
 			configData = getFlowData(configData, fileOrDirectoryPath, subFileOrDirectory)
 		});
 	});
+
 
 	const magickFlowURLS = configData.magickFlowDirectories
 		.sort(sortAlphaNum)

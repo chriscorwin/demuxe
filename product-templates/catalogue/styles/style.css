@@ -1,3 +1,114 @@
+body {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.61) !important;
+  border-radius: 0.25rem !important;
+  left: auto !important;
+  margin: 0px auto !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1280px !important;
+  max-width: 1280px !important;
+}
+
+.slds-brand-band:before {
+  background-image: url(/images/themes/oneSalesforce/banner-brand-default.png), linear-gradient(to top, rgba(221, 219, 218, 0) 0, #e8e8e8);
+}
+
+.slds-brand-band.slds-brand-band_medium {
+  background-image: linear-gradient(to bottom, rgba(27, 95, 158, 0), #b0c4df 200px), url(/images/banner-brand-default.png);
+  background-repeat: repeat-x;
+  background-position: 0 90px;
+  background-color: #1b5f9e;
+  background-attachment: fixed;
+}
+
+.slds-brand-band.slds-brand-band_medium:after {
+  top: auto;
+  bottom: 0;
+}
+
+#subheader-wrapper {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 110px;
+  margin-bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.slds-container_large, .slds-container--large {
+  max-width: 78.3rem;
+}
+
+#subheader-wrapper.einstein #subheader h1 {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.slds-panel-box {
+  border: 1px solid #E0E5EE;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.slds-panel-box__header {
+  border-radius: 4px 4px 0 0;
+  font-size: 16px;
+}
+
+.slds-panel-box__header span {
+  font-weight: bold;
+}
+
+.slds-panel-box__sub-header {
+  background-color: #F7F9FB;
+  border-top: 2px solid white;
+}
+
+.slds-panel-box__sub-footer {
+  border-top: 1px solid #D8DDE6;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.slds-brand-band.slds-brand-band_medium {
+  border-radius: 0 0 0.25rem;
+  overflow: hidden;
+}
+
+html {
+  font-family: "Salesforce Sans", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  background: #514f4d;
+  color: #080707;
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: 4rem;
+}
+
+.container {
+  background-image: linear-gradient(to bottom, #504f4d00, #000000);
+  background-repeat: repeat-x;
+  background-color: #504f4d;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+body, html {
+  background-image: none;
+  background-image: linear-gradient(to bottom, #504f4d00, #00000066);
+  background-repeat: repeat-x;
+  background-color: #504f4d;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  width: 100vw;
+  transition: 500ms all;
+}
+
+body {
+  background-color: #b0c4df;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
 /* Your styles here */
 .header {
   background-image: image(src= "connection.png");
@@ -5,16 +116,16 @@
 
 .title {
   text-align: left;
-  position: absolute;
   font-size: 30px;
-  top: 100px;
-  left: 50px;
   color: white;
+  margin-top: 5rem;
+  margin-left: 3.6rem;
 }
 
 #details-page-header-banner_name {
   color: #FFFFFF;
   text-shadow: 0px 1px 2px #000000bf;
+  padding-top: 2rem;
 }
 
 a {
@@ -81,6 +192,20 @@ h3 {
 .thumb {
   width: 1500px;
   height: 300px;
+}
+
+.demuxe-catalogue_banner-image {
+  background-size: cover;
+}
+
+.demuxe-catalogue_banner-image.demuxe-catalogue_banner-image--home {
+  background-position: center 0;
+  height: 25rem;
+}
+
+.demuxe-catalogue_banner-image.demuxe-catalogue_banner-image--details {
+  background-position: center 90px;
+  height: 18.8rem;
 }
 
 #banner {
@@ -164,6 +289,28 @@ h2, h3 {
 
 .slds-button {
   margin-right: 15px;
+}
+
+.slds-brand-band:before {
+  background-image: url(/images/themes/oneSalesforce/banner-brand-default.png), linear-gradient(to top, rgba(221, 219, 218, 0) 0, #e8e8e8);
+}
+
+.slds-brand-band.slds-brand-band_medium {
+  background-image: linear-gradient(to bottom, rgba(27, 95, 158, 0), #b0c4df 200px), url(/images/banner-brand-default.png);
+  background-repeat: repeat-x;
+  background-position: 0 187px;
+  background-color: #1b5f9e;
+  background-attachment: fixed;
+}
+
+.slds-brand-band.slds-brand-band_medium:after {
+  top: auto;
+  bottom: 0;
+}
+
+.demuxe-body.demuxe-body--catalogue.demuxe-catalogue_page-details .slds-brand-band.slds-brand-band_medium {
+  background-position: 0 409px;
+  background-attachment: scroll;
 }
 
 /*# sourceMappingURL=style.css.map */

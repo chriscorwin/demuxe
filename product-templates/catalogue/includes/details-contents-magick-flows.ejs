@@ -93,14 +93,35 @@ _%>
 			`;
 		}
 
-		detailsContentsMagickFlowsHtmlOut += `
+		if (renderSizeMainContent.height > renderSizeMainContent.width) {
 
-			<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 demo-thumb_col demo-thumb_content">
-				<div class="slds-box slds-theme_default slds-grid slds-grid_vertical">
-					<div class="slds-box__body slds-box__body_inner slds-grow slds-shrink-none">
-						<a href="${mainContentWebRootUrl}">
-							<div  style="height: ${renderSizeMainContent.height}px; width: ${renderSizeMainContent.width}px; background-size: cover; background-image: url(${mainContentWebRootUrl}); display: block;">
+			detailsContentsMagickFlowsHtmlOut += `
+
+				<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-6 demo-thumb_col demo-thumb_content">
+					<div class="slds-box slds-theme_default slds-grid slds-grid_vertical">
+						<div class="slds-box__body slds-box__body_inner slds-grow slds-shrink-none">
+							<a href="${mainContentWebRootUrl}">
+
+								<div class="demuxe-thumb--wraper slds-m-bottom_medium" style="background-image: url('${mainContentWebRootUrl}'); background-size: cover; background-position: top; height: 26rem; border: 1px solid #dddbda; border-radius: 0.25rem;  ">
+			`;
+
+		} else {
+
+			detailsContentsMagickFlowsHtmlOut += `
+
+				<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 demo-thumb_col demo-thumb_content">
+					<div class="slds-box slds-theme_default slds-grid slds-grid_vertical">
+						<div class="slds-box__body slds-box__body_inner slds-grow slds-shrink-none">
+							<a href="${mainContentWebRootUrl}">
+
+								<div class="demuxe-thumb--wraper slds-m-bottom_medium" style="background-image: url('${mainContentWebRootUrl}'); background-size: cover; background-position: center; height: 11rem; border: 1px solid #dddbda; border-radius: 0.25rem;  ">
+			`;
+		}
+
+		detailsContentsMagickFlowsHtmlOut += `
+								<img  id="demo-thumb---${node.id}" class="thumbnail" src="${mainContentWebRootUrl}" alt=""  style="height: 0px; width: 0px">
 							</div>
+			
 						</a>
 						<h3>${node.id}</h3>
 					</div>

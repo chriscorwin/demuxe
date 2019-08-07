@@ -29,85 +29,84 @@
 	console.groupEnd();
 </script>
 
+
+
 <div class="header">
 
+<%- (demo.heroBanner) ? `
 
-	<%- (demo.heroBanner) ? `
-
-
-		<div class="banner-image" style="background-image: url('${demo.heroBanner}'); background-size: cover; background-position: center; height: 300px;">
+		<div class="demuxe-catalogue_banner-image demuxe-catalogue_banner-image--details" style="background-image: url('${demo.heroBanner}');">
 			<img id="details-page-header-banner_image" src="${demo.heroBanner}>" height="0" width="0">
 		</div>
-		` : '<div style="height:90px" ></div>' %>
+		` : `
+		<div style="height:90px" ></div>`
+%>
 
 
-    <div class="slds-page-header">
-  <div class="slds-page-header__row">
-    <div class="slds-page-header__col-title">
-      <div class="slds-media">
-        <div class="slds-media__figure">
-          <%# <span class="slds-icon_container slds-icon-standard-opportunity" title="opportunity">
-            <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
-              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"></use>
-            </svg>
-            <span class="slds-assistive-text">opportunity</span>
-          </span> %>
-        </div>
-        <div class="slds-media__body">
-          <div class="slds-page-header__name">
-            <div class="slds-page-header__name-title">
-              <h1>
-                <span class="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">
-                	<%= demo.name %>
-					<div id="details-page-header-banner_description" class="slds-text-heading_large">
-						<%= demo.description %>
+	<div class="slds-page-header">
+		<div class="slds-page-header__row">
+			<div class="slds-page-header__col-title">
+				<div class="slds-media">
+					<div class="slds-media__figure">
 					</div>
-				</span>
-              </h1>
-            </div>
-          </div>
-          <p class="slds-page-header__name-meta">Eric Stahl • Indidana Fever • 06/16-19/19</p>
-        </div>
-        <% if (demo.production) {%>
-      <a href="<%= demo.production.host%>" class="slds-button slds-button_neutral" >View Demo</a>
-      <% } %>
-      </div>
-    </div>
-  </div>
-</div>
+					<div class="slds-media__body">
+						<div class="slds-page-header__name">
+							<div class="slds-page-header__name-title">
+								<h1>
+									<span class="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">
+										<%= demo.name %>
+										<div id="details-page-header-banner_description" class="slds-text-heading_large">
+											<%= demo.description %>
+										</div>
+									</span>
+								</h1>
+							</div>
+						</div>
+						<p class="slds-page-header__name-meta">Eric Stahl • Indidana Fever • 06/16-19/19</p>
+					</div>
+<%
+	if (demo.production) {
+		echo(`<a href="${demo.production.host}" class="slds-button slds-button_neutral" >View Demo</a>`)
+	}
+%>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-<br>
+
+
 <div class="slds-grid slds-gutters  slds-grid_vertical-stretch slds-m-around_medium">
 
 	<div class="slds-col slds-size_1-of-4">
 		<div class="slds-box slds-theme_catalogue-desc">
 			<div class="slds-box__body slds-box__body_inner">
-			    <h3>Event Information</h3>
-		        <h2>When</h2>
-		        <p><%= demo.date %></p>
+				<h3>Event Information</h3>
+				<h2>When</h2>
+				<p><%= demo.date %></p>
 
-		        <h2>Where</h2>
-		        <p><%= demo.location %></p>
+				<h2>Where</h2>
+				<p><%= demo.location %></p>
 
-		        <h2>Brands</h2>
-		        <p><%= demo.brands %></p>
+				<h2>Brands</h2>
+				<p><%= demo.brands %></p>
 
-		        <h2>Presenters</h2>
-		        <p><%= demo.presenters %></p>
-	       </div>
-       </div>
-    </div>
-    <div class="slds-col slds-size_3-of-4">
-    	<div class="slds-box slds-theme_catalogue-desc ">
+				<h2>Presenters</h2>
+				<p><%= demo.presenters %></p>
+		   </div>
+	   </div>
+	</div>
+	<div class="slds-col slds-size_3-of-4">
+		<div class="slds-box slds-theme_catalogue-desc ">
 			<div class="slds-box__body slds-box__body_inner">
-			    <h3>Event Description</h3>
-			    <section class="slds-text-longform">
+				<h3>Event Description</h3>
+				<section class="slds-text-longform">
 					<p><%- demo.longFormDescription %></p>
 				</section>
-		    </div>
-	    </div>
-    </div>
+			</div>
+		</div>
+	</div>
 </div>
 
 
@@ -180,12 +179,17 @@
 
 				// detailsContentHtmlOut += include('includes/demo-thumb', tempDemoConfig);
 
+
 				detailsContentHtmlOut += `
 					<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 demo-thumb_col demo-thumb_content">
 						<div class="slds-box slds-theme_default slds-grid slds-grid_vertical">
 							<div class="slds-box__body slds-box__body_inner slds-grow slds-shrink-none">
 								<a href="screenshots/${demo.id}.${step.name}.slide.png">
-									<img  id="demo-thumb---${demo.id.replace(/\./g, '--')}---${step.name.replace(/\./g, '--')}" class="thumbnail" src="screenshots/${demo.id}.${step.name}.slide.png" alt="">
+
+									<div class="demuxe-thumb--wraper slds-m-bottom_medium" style="background-image: url('screenshots/${demo.id}.${step.name}.slide.png'); background-size: cover; background-position: top; height: 11rem; border: 1px solid #dddbda; border-radius: 0.25rem;">
+										<img  id="demo-thumb---${demo.id.replace(/\./g, '--')}---${step.name.replace(/\./g, '--')}" class="thumbnail" src="screenshots/${demo.id}.${step.name}.slide.png" alt=""  style="height: 0px; width: 0px">
+									</div>
+
 								</a>
 								<h3>${step.name}</h3>
 							</div>

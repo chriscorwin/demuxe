@@ -92,12 +92,16 @@
 
 </head>
 
-<body class="demuxe-body demuxe-body--catalogue" data-path="<%= `${locals.pageContents}` %>">
+<body data-path="<%= `${locals.pageContents.replace('.ejs', '')}` %>" class="demuxe-body demuxe-body--catalogue demuxe-catalogue_page-<%= `${locals.pageContents.replace(/\//g, '--').replace('.ejs', '').replace('includes--', '').replace('-contents', '')}` %>">
+
 	<%- include('includes/header') %>
 
-	<div id="content-wrapper" class="slds-container_fluid">
-		<div id="content" class="">
-			<%- include(`${locals.pageContents}`) %>
+	<div class="slds-brand-band slds-brand-band_medium">
+
+		<div id="content-wrapper" class="slds-container_fluid">
+			<div id="content" class="">
+				<%- include(`${locals.pageContents}`) %>
+			</div>
 		</div>
 	</div>
 
