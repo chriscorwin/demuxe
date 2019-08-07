@@ -12,10 +12,6 @@
 
 ---
 
-![](https://cnx19-audience-360-pacers-dev.herokuapp.com/screenshots/audience-360.cnx19keynote.pacers.0003.magick-flow.slide.png){.background}
-
----
-
 ![](https://cnx19-audience-360-pacers-dev.herokuapp.com/screenshots/audience-360.cnx19keynote.pacers.0004.magick-flow.slide.png){.background}
 
 ---
@@ -29,6 +25,10 @@
 ---
 
 ![](https://cnx19-audience-360-pacers-dev.herokuapp.com/screenshots/audience-360.cnx19keynote.pacers.0007.magick-flow.slide.png){.background}
+
+---
+
+![](https://cnx19-audience-360-pacers-dev.herokuapp.com/screenshots/audience-360.cnx19keynote.pacers.0008.magick-flow.slide.png){.background}
 
 ---
 
