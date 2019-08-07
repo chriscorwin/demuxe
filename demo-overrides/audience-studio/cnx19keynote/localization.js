@@ -13,6 +13,6 @@ module.exports = {
 		help: true,
 		setup: true,
 		notifications: true,
-		avatar: `/images/sally-avatar.svg`
+		avatar: `/images/avatar.png`
 	}
 };

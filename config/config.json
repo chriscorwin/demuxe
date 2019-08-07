@@ -1,8 +1,8 @@
 {
-	"demoName": "Demuxe Catalogue",
-	"brandTheme": "demuxe",
-	"productTemplate": "catalogue",
-	"demoVenue": "poc19",
+	"demoName": "Audience Studio Fever CNX 19 Keynote",
+	"brandTheme": "fever",
+	"productTemplate": "audience-studio",
+	"demoVenue": "cnx19keynote",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -15,13 +15,13 @@
 	"env": "production",
 	"herokupipeline": "https://dashboard.heroku.com/pipelines/acc690c6-9842-4b41-9a1b-dbd91cea7b3c",
 	"production": {
-		"host": "https://cnx19-mc-spotlight.herokuapp.com/"
+		"host": "https://cnx19-as-fever.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://cnx19-mc-spotlight-qa.herokuapp.com/"
+		"host": "https://cnx19-as-fever-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "cnx19-mc-spotlight-qa.herokuapp.com/"
+		"host": "https://cnx19-as-fever-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
@@ -33,5 +33,5 @@
 		"timeout": 30000
 	},
 	"gapixelid": "",
-	"presentationid": ""
+	"presentationid": "1RIZd-KT-xBR0vPBViZgnGQhRhElISJoQCRHv9yu8e78"
 }

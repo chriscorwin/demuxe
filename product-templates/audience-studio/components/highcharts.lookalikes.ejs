@@ -180,7 +180,7 @@ const getLookalikesOptions = () => {
 			// https://api.highcharts.com/highcharts/tooltip.pointFormatter
 			pointFormatter: function formatter () {
 				let reach = Math.floor(this.x/210);
-				reach = (this.y === 65) ? '4,283,180' : reach;
+				reach = (this.y === 65) ? '4.2' : reach;
 					return `
 						<div style="width: 120px;">
 							Reach: ${reach}M<br />
