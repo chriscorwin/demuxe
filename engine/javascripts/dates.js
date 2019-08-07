@@ -1,5 +1,6 @@
 const FORTNIGHT = 12096e5;
 const ONEWEEK = 604800000;
+const ONEDAY = 86400000;
 
 const FORMATS = {
 	monthShort: { month: 'short' },
@@ -15,6 +16,7 @@ const m = date.getMonth();
 const d = date.getDay();
 const DATES = {
 	now: date,
+	yesterday: new Date(Date.now() - ONEDAY),
 	oneWeekAgo: new Date(Date.now() - ONEWEEK),
 	twoWeeksAgo: new Date(Date.now() - FORTNIGHT),
 	threeWeeksAgo: new Date(Date.now() - FORTNIGHT - ONEWEEK),
@@ -51,6 +53,7 @@ const aboutFourMonthsAgo = DATES.aboutFourMonthsAgo.toLocaleDateString("en-US", 
 
 
 const todayTerse = DATES.now.toLocaleDateString("en-US", FORMATS.terse);
+const yesterdayTerse = DATES.yesterday.toLocaleDateString("en-US", FORMATS.terse);
 const oneWeekAgoTerse = DATES.oneWeekAgo.toLocaleDateString("en-US", FORMATS.terse);
 const twoWeeksAgoTerse = DATES.twoWeeksAgo.toLocaleDateString("en-US", FORMATS.terse);
 const threeWeeksAgoTerse = DATES.threeWeeksAgo.toLocaleDateString("en-US", FORMATS.terse);
@@ -79,6 +82,7 @@ module.exports = {
 	aboutThreeMonthsAgo, // Dec 12 2019
 	aboutFourMonthsAgo, // Nov 26 2019
 	todayTerse, // 03/02
+	yesterdayTerse, // 03/01
 	oneWeekAgoTerse, // 02/23
 	twoWeeksAgoTerse, // 02/16
 	threeWeeksAgoTerse, // 02/09
