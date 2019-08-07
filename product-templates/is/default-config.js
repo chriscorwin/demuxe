@@ -8,7 +8,7 @@ module.exports = {
 		help: true,
 		setup: true,
 		notifications: false,
-		avatar: `/images/icons/Identity.svg`
+		avatar: `/images/icons/avatar.jpg`
 	},
 	navData: {
 		accountNavItems: [],
