@@ -2,7 +2,7 @@
 	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-horizontal_x-small">
 		<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-3">
 			<%- include('components/panel-box.ejs', {
-				title: 'Total Consumer Population',
+				title: 'Audience Profile',
 				contents: include('images/slices/tcp.ejs'),
 				footer_links: [{}]
 			}) %>
@@ -43,11 +43,8 @@
 			</div>
 			<div class="slds-col slds-p-horizontal_x-small slds-size_1-of-2 slds-m-top_medium">
 				<%- include('components/panel-box.ejs', {
-					title: 'Top Channels',
-					header_buttons: [
-						{ label: 'Conversion Rate (CVR)' }
-					],
-					contents: include('images/slices/top-channels.ejs'),
+					title: 'Service Cases',
+					contents: include('images/slices/service-cases.ejs'),
 					footer_links: [{}]
 				}) %>
 			</div>
@@ -75,8 +72,11 @@
 			</div>
 			<div class="slds-col slds-size_1-of-1 slds-m-top_medium">
 				<%- include('components/panel-box.ejs', {
-					title: 'Service Cases',
-					contents: include('images/slices/service-cases.ejs'),
+					title: 'Top Channels',
+					header_buttons: [
+						{ label: 'Conversion Rate (CVR)' }
+					],
+					contents: include('images/slices/top-channels.ejs'),
 					footer_links: [{}]
 				}) %>
 			</div>

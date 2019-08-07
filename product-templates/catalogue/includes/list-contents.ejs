@@ -1,0 +1,20 @@
+<p>
+	Hiya Jeff, @corwin here. I have put this code in here to force a merge, so you can see how easy this part can be.
+</p>
+<p>
+	But also to show that the content here will <em>not</em> show on your page because the <code>content-wrapper</code> classname will need more space above it, since the <code>&lt;header&gt></code> element is <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">fixed</a></strong>.
+</p>
+<p>
+	Make sense?
+</p>
+<p>
+	You can edit styles for this app in the SCSS file <strong><var>product-templates/catalogue/styles/style.scss</var></strong>, and the system will automatically create the CSS file that gets loaded in the browser for you.
+</p>
+
+<%
+
+	const hello = `list`;
+
+%>
+<%- include('include/list-header') %>
+<%= hello %>

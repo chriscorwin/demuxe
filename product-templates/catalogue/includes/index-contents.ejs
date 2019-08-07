@@ -1,0 +1,100 @@
+<%
+console.group(`
+============================================================
+Demuxe: including \`product-templates/catalogue/includes/index-contents.ejs\` now...
+------------------------------------------------------------
+`);
+
+_%>
+
+
+<%
+
+	const targetDemoID = locals.sanitizedQueryParams.id;
+	let demo = locals.availableDemoConfigs.find((demo) => demo.id === targetDemoID);
+
+	if (!demo) {
+		demo = locals.localization.demoGroups.find((demo) => {
+			console.log(demo.id, targetDemoID, demo.id === targetDemoID);
+			return demo.id === targetDemoID
+		});
+	}
+
+	if (!demo) {
+		console.log('NOTHING FOUND!!!!!')
+		demo = locals.availableDemoConfigs[0];
+	}
+
+	console.log('demo.demoFlow', demo.demoFlow);
+
+
+
+	// const bannerImagesArray = ["/images/all___banner___0.png", "/images/all___banner___1.png", "/images/all___banner___2.png", "/images/all___banner___3.png"];
+	const bannerImagesArray = locals.availableDemoBannerImages;
+	function imgRandom(imgArr) {
+		return '/images/' + imgArr[Math.floor(Math.random() * imgArr.length)];
+	}
+	let demuxe_detailsPageHeaderBannerImageSrc = imgRandom(bannerImagesArray);
+
+	if (targetDemoID === 'cnx19keynote') {
+		demuxe_detailsPageHeaderBannerImageSrc = '/images/connection.png';
+	}
+
+%>
+
+<div class="header slds-border_bottom">
+	<div class="demuxe-catalogue_banner-image demuxe-catalogue_banner-image--home" style="background-image: url('<%= demuxe_detailsPageHeaderBannerImageSrc %>');">
+		<div id="details-page-header-banner_name" class="title">Prototype Library
+			<div id="details-page-header-banner_description" class="slds-text-heading_large">Your newest Library to access <br> any demo you can imagine.</div>
+		</div>
+		<img id="details-page-header-banner_image" src="<%= demuxe_detailsPageHeaderBannerImageSrc %>" height="0" width="0">
+	</div>
+</div>
+
+
+
+<div class="slds-m-horizontal_medium slds-m-vertical_large">
+
+	<div class="demo-catalogue_thumbnails">
+
+		<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">
+
+			<%
+
+
+			// Build the rendered HTML piece by piece -- we will render it all at once later
+			let allDemoThumbsHtmlOut = ``;
+			// Cards at bottom of homepage. Look through all available demo configs and create the card to correspond with that demo.
+			locals.localization.demoGroups.forEach((demoConfig) => {
+
+				// Buld this card piece-by-piece
+				let demoThumbHtmlOut = ``;
+
+				// We may need to conditionally show demo thumbnails based on some filter, best account for that now.
+				// const showDemoThumb = node.showDemoThumb === true || false;
+				const showDemoThumb = true;
+
+				if ( showDemoThumb === true ) {
+					demoThumbHtmlOut += include('includes/demo-thumb', demoConfig);
+				}
+
+				allDemoThumbsHtmlOut += demoThumbHtmlOut;
+			});
+
+
+
+			echo(`${allDemoThumbsHtmlOut}`);
+			%>
+		</div>
+	</div>
+</div>
+
+
+
+
+<%
+console.log(`...end \`product-templates/catalogue/includes/index-contents.ejs\`
+------------------------------------------------------------
+`);
+console.groupEnd();
+%>

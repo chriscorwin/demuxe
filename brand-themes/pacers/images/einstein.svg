@@ -46,7 +46,7 @@
 </g>
 <g id="Group 33.3">
 <text id="TOTAL PEOPLE_2" fill="#706E6A" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="12" letter-spacing="0px"><tspan x="13" y="122.712">Population</tspan></text>
-<text id="82K_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="13" y="161.866">1.3M</tspan></text>
+<text id="82K_2" fill="#080707" xml:space="preserve" style="white-space: pre" font-family="Salesforce Sans" font-size="35" font-weight="300" letter-spacing="0px"><tspan x="13" y="161.866">125K</tspan></text>
 </g>
 <g id="Group 56.1">
 <g id="tag">
@@ -116,7 +116,7 @@
         document.querySelector('#Create-Segment-hover-target rect').setAttribute('fill', '#FFF');
     });
     document.getElementById('Create-Segment-hover-target').addEventListener('click', function() {
-        navigatePage('https://cnx19-mc-nto-c360-dev.herokuapp.com/pacers#9');
+        navigatePage('/pacers#13');
     });
 </script>
 </g>

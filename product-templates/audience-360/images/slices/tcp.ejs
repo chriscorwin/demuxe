@@ -11,16 +11,16 @@
 
 		const audience = document.querySelector('#numberAudience');
 
-		audience.textContent = '0M';
+		audience.textContent = '0K';
 
-		let audienceNumber = .1;
+		let audienceNumber = 9;
 
 		const increase = () => {
-			if (audienceNumber < 1.56) {
-				audienceNumber += .01;
+			if (audienceNumber < 290) {
+				audienceNumber += 10;
 
-				audience.textContent = `${audienceNumber.toFixed(2)}M`;
-				window.setTimeout(increase, 14);
+				audience.textContent = `${audienceNumber.toFixed(0)}K`;
+				window.setTimeout(increase, 30);
 			}
 		}
 

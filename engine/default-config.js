@@ -107,7 +107,7 @@ module.exports = {
 				dropdownItems: []
 			},
 			{
-				label: 'Data Studio',
+				label: 'Data Studio (yo)',
 				id: 'data-studio',
 				href: `/data-studio/audience-discovery`,
 				lookLikeDropdown: true,

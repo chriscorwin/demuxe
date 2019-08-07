@@ -3,6 +3,8 @@ const fs = require('fs');
 const util = require('util');
 const sizeOf = require('image-size');
 const addMagickFlowsToConfig = require('./config-magick-flows');
+const addAvailableDemoAppConfigs = require('./available-demos');
+const addAvailableDemoBannerImages = require('./available-demos-banners');
 const sassGenerator = require('./magick-flows-util/sass-generator.js');
 
 
@@ -54,8 +56,6 @@ module.exports = function() {
     let demoOverrideConfig = {};
     try {
         demoOverrideConfig = configData.demoVenue && configData.productTemplate ? require(`../demo-overrides/${configData.productTemplate}/${configData.demoVenue}/localization.js`) : {};
-        console.log('demoOverrideConfig');
-        console.dir(demoOverrideConfig);
     } catch (e) {
         console.warn('no demo overrides localization');
     }
@@ -67,7 +67,8 @@ module.exports = function() {
         console.warn('no brand theme localization');
     }
 
-    configData.localization = Object.assign({}, defaultEngineConfig, defaultProductTemplateConfig, demoOverrideConfig, brandThemeConfig);
+    const dates = require('../engine/javascripts/dates');
+    configData.localization = Object.assign({}, { dates }, defaultEngineConfig, defaultProductTemplateConfig, demoOverrideConfig, brandThemeConfig);
 
     // view engine setup
     // https://expressjs.com/en/4x/api.html#app.set
@@ -89,6 +90,8 @@ module.exports = function() {
     configData.appViews = appViews;
 
     configData = addMagickFlowsToConfig(configData);
+    configData = addAvailableDemoAppConfigs(configData);
+    configData = addAvailableDemoBannerImages(configData);
 
 
 

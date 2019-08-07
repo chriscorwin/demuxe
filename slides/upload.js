@@ -16,12 +16,13 @@ exec(`md2gslides slides/${config.productTemplate}.${config.demoVenue}.${config.b
 		console.warn(`stderr: ${stderr}`);
 	}
 
+	console.log(`
+stdout: ${stdout}`);
+
 	const presentationIdRegex = /d\/(.*)\)/;
-	const presentationId = stdout.match(presentationIdRegex)[1];
+	const presentationId = stdout.match(presentationIdRegex) && stdout.match(presentationIdRegex)[1];
 
 	console.log(`
-stdout: ${stdout}
-
 Your Google Slides presentation ID is: ${presentationId}
 
 If you would like the generated slide deck (at https://docs.google.com/presentation/d/${presentationId})
