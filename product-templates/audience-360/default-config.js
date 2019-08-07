@@ -14,7 +14,7 @@ module.exports = {
 	},
 	navData: {
 		accountNavItems: [],
-		accountDropdown: '<svg style="width: 24px; height: 24px;" class="slds-icon slds-icon-text-default slds-m-horizontal_medium slds-m-top_xx-small" aria-hidden="true"><use xlink:href="/icons/utility-sprite/svg/symbols.svg#edit"></use></svg>',
+		accountDropdown: '<svg style="width: 18px; height: 18px;" class="slds-icon slds-icon-text-default slds-m-horizontal_medium slds-m-top_small" aria-hidden="true"><use xlink:href="/icons/utility-sprite/svg/symbols.svg#edit"></use></svg>',
 		navItems: [ {
 				label: 'Home',
 				id: 'home-nav-link',
