@@ -1,0 +1,45 @@
+{
+	"id": "audience-studio.df18keynote.bbva",
+	"demoName": "DMP BBVA DF 18 Keynote",
+	"description": "DMP BBVA demo for Dreamforce 2018 Keynote",
+	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"venue": "Dreamforce 2018",
+	"date": "GET CORRECT DATE",
+	"brands": "GET CORRECT BRAND",
+	"presenters": "GET CORRECT SPEAKERS",
+	"location": "GET CORRECT LOCATION",
+	"tags": ["Dreamforce", "Keynote", "2018"],
+	"thumbnail": "/images/df18___banner___0.png",
+	"brandTheme": "bbva",
+	"productTemplate": "audience-studio",
+	"demoVenue": "df18keynote",
+	"demoVersion": "0.1",
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
+	"env": "production",
+	"production": {
+		"host": "https://dmp-dreamforce-2018.herokuapp.com/"
+	},
+	"qa": {
+		"host": "https://dmp-dreamforce-2018-qa.herokuapp.com/"
+	},
+	"dev": {
+		"host": "https://dmp-dreamforce-2018-dev.herokuapp.com/"
+	},
+	"local": {
+		"host": "http://localhost:3000/"
+	},
+	"tests": {
+		"headless": true,
+		"imageSnapshotPath": "./test/screenshots/",
+		"mismatchThreshold": 0.01,
+		"timeout": 30000
+	},
+	"gapixelid": "UA-133829434-2",
+	"presentationid": ""
+}

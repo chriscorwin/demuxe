@@ -1,0 +1,139 @@
+<%
+	let thisMagickFlowConfig = locals.data;
+	let targetDemoID = locals.targetDemoID;
+_%>
+<script type="text/javascript">
+	const thisMagickFlowConfig =<%- JSON.stringify(locals.data)%>;
+	console.group('[ includes/magick-flows/magick-flows-contents.ejs:14 ] thisMagickFlowConfig:');
+	console.dir(thisMagickFlowConfig);
+	console.groupEnd();
+</script>
+<%
+	let detailsContentsMagickFlowsHtmlOut = ``;
+	let thisMagickFlowStepMetaData = thisMagickFlowConfig.stepMetaData;
+
+	const webRootPath = `/${locals.magickFlows.directoryName}/${locals.magickFlows.urlSlugsMapToFlowDirectories[locals.targetDemoID]}`;
+	const mainContentPath = `${webRootPath}/main/`;
+	const assetsContentPath = `${webRootPath}/assets/`;
+
+	/**
+	 * Conserve aspect ratio of the original region. Useful when shrinking/enlarging
+	 * images to fit into a certain area.
+	 *
+	 * @param {Number} srcWidth width of source image
+	 * @param {Number} srcHeight height of source image
+	 * @param {Number} maxWidth maximum available width
+	 * @param {Number} maxHeight maximum available height
+	 * @return {Object} { width, height }
+	 */
+	function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+
+		let ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+		let toReturn = { width: Math.ceil((srcWidth * ratio) || 0), height: Math.ceil((srcHeight * ratio) || 0) };
+		return toReturn;
+	 }
+
+
+	let maxWidth = (thisMagickFlowConfig.templateSizingFileDimensions.width || 1280)  * 0.20;
+	let maxHeight = (thisMagickFlowConfig.templateSizingFileDimensions.height || 720)  * 0.20;
+	maxWidth = 200;
+	maxHeight = 200;
+
+
+	thisMagickFlowStepMetaData.forEach(function(node, nodeIndex) {
+
+		const mainContentWebRootUrl = `${mainContentPath}${node.fileName}`;
+
+		let srcWidthHeader = node.stickyHeaderWidth || 0;
+		let srcHeightHeader = node.stickyHeaderHeight || 0;
+		let srcWidthFooter = node.stickyFooterWidth || 0;
+		let srcHeightFooter = node.stickyFooterHeight || 0;
+		let renderSizeHeader = calculateAspectRatioFit(srcWidthHeader, srcHeightHeader, maxWidth, maxHeight);
+		let renderSizeFooter = calculateAspectRatioFit(srcWidthFooter, srcHeightFooter, maxWidth, maxHeight);
+		let renderSizeMainContent = calculateAspectRatioFit(node.dimensions.width, node.dimensions.height, maxWidth, maxHeight);
+		let mainContentScrollableAreaHeight = ((maxHeight - (renderSizeHeader.height + renderSizeFooter.height)) + 0);
+
+		headerPaddingforMain = renderSizeHeader['height'];
+
+
+		if (renderSizeMainContent.height < mainContentScrollableAreaHeight) {
+			mainContentScrollableAreaHeight = renderSizeMainContent.height;
+		}
+
+
+		let clickHintsHtmlOut = '';
+		let htmlCommentsHtmlOut = '';
+		let hasNotes = node.notes.length > 0 ? true : false;
+		if ( node.notes.length === 1 && node.notes[0] === 'unset' ) {
+			hasNotes = false;
+		}
+		if ( hasNotes === true ) {
+
+
+			clickHintsHtmlOut += `
+				<div
+					id="magick-flows-click-hints--step-${node.stepsIndex}"
+					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.stepsIndex} "
+				>
+			`;
+			let thisParagraphClassName = `slds-p-bottom_medium`;
+			node.notes.forEach((note, noteIndex) => {
+				if (noteIndex === node.notes.length - 1) {
+					thisParagraphClassName = `slds-p-bottom_none`
+				}
+				note = note.replace(/-/g, ' ');
+
+				clickHintsHtmlOut += `<p data="Click hint number ${noteIndex} (${node.notes.length})" class="${thisParagraphClassName}">${note}.</p>`;
+				htmlCommentsHtmlOut += `${note}`;
+			});
+
+
+			clickHintsHtmlOut += `
+				</div>
+			`;
+		}
+
+		if (renderSizeMainContent.height > renderSizeMainContent.width) {
+
+			detailsContentsMagickFlowsHtmlOut += `
+
+				<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-6 demo-thumb_col demo-thumb_content">
+					<div class="slds-box slds-theme_default slds-grid slds-grid_vertical">
+						<div class="slds-box__body slds-box__body_inner slds-grow slds-shrink-none">
+							<a href="${mainContentWebRootUrl}">
+
+								<div class="demuxe-thumb--wraper slds-m-bottom_medium" style="background-image: url('${mainContentWebRootUrl}'); background-size: cover; background-position: top; height: 26rem; border: 1px solid #dddbda; border-radius: 0.25rem;  ">
+			`;
+
+		} else {
+
+			detailsContentsMagickFlowsHtmlOut += `
+
+				<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 demo-thumb_col demo-thumb_content">
+					<div class="slds-box slds-theme_default slds-grid slds-grid_vertical">
+						<div class="slds-box__body slds-box__body_inner slds-grow slds-shrink-none">
+							<a href="${mainContentWebRootUrl}">
+
+								<div class="demuxe-thumb--wraper slds-m-bottom_medium" style="background-image: url('${mainContentWebRootUrl}'); background-size: cover; background-position: center; height: 11rem; border: 1px solid #dddbda; border-radius: 0.25rem;  ">
+			`;
+		}
+
+		detailsContentsMagickFlowsHtmlOut += `
+								<img  id="demo-thumb---${node.id}" class="thumbnail" src="${mainContentWebRootUrl}" alt=""  style="height: 0px; width: 0px">
+							</div>
+			
+						</a>
+						<h3>${node.id}</h3>
+					</div>
+					<footer class="slds-box__footer slds-grow-none slds-shrink">
+						${clickHintsHtmlOut}
+					</footer>
+				</div>
+			</article>
+		`;
+
+	});
+_%>
+
+<%- detailsContentsMagickFlowsHtmlOut %>
+

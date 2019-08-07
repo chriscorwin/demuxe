@@ -1,0 +1,295 @@
+@import "./../../../engine/styles/slds-overrides.scss";
+
+
+
+.slds-brand-band.slds-brand-band_medium {
+  border-radius: 0 0 0.25rem;
+  overflow: hidden;
+}
+
+
+html {
+  font-family: "Salesforce Sans", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  background: #514f4d;
+  color: #080707;
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: 4rem;
+}
+
+.container {
+  background-image: linear-gradient(to bottom, #504f4d00, #000000 );
+  background-repeat: repeat-x;
+  background-color: #504f4d;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+  // height: $heightOfAppSwitcher;
+  // left: 0;
+  // overflow: hidden;
+  // position: absolute;
+  // top: 0;
+  // width: $widthOfSlide;
+}
+
+body, html {
+  background-image: none;
+  background-image: linear-gradient(to bottom, #504f4d00, #00000066);
+  background-repeat: repeat-x;
+  background-color: #504f4d;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+  // overflow: hidden;
+  width: 100vw;
+  transition: 500ms all;
+}
+
+
+body {
+  background-color: rgb(176, 196, 223);
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+/* Your styles here */
+.header {
+  background-image: image(src="connection.png");
+  }
+ #content{
+     // max-width: initial;
+     // We should use SLDS margin/padding utilities here instead.
+ }
+
+
+
+.title {
+  text-align: left;
+  font-size: 30px;
+  color: white;
+  margin-top: 5rem;
+  margin-left: 3.6rem;
+}
+
+#details-page-header-banner_name{
+    color: #FFFFFF;
+    text-shadow: 0px 1px 2px #000000bf;
+    padding-top: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.head{
+    color: black;
+}
+.desc{
+    text-align: left;
+    position: absolute;
+    font-size: 30px;
+    top: 30px;
+    left: 0px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+  /* Center website */
+.home {
+    // max-width: 1000;
+    // margin-left: 50px;
+    // margin-right: 50px;
+  }
+  
+  .row {
+    // margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 5px;
+    
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+ 
+.thumb{
+    width: 1500px;
+    height: 300px;
+}
+
+.demuxe-catalogue_banner-image {
+
+    background-size: cover;
+    // margin: auto -0.95rem;
+
+  &.demuxe-catalogue_banner-image--home {
+    background-position: center 0;
+    height: 25rem;
+  }
+
+  &.demuxe-catalogue_banner-image--details {
+    background-position: center 90px;
+    height: 18.8rem;
+  }
+}
+
+#banner {
+    background-image: linear-gradient(black);
+	opacity: 1; 
+     width: 1500px;
+     height: 200px;
+ }
+ 
+button{
+    float: right;
+    margin-right: 80px;
+    background-color: white;
+}
+#overview{
+    // padding: 30px;
+    // font-size: 15px;
+}
+h2,h3{
+    font-weight: 1000;
+}
+.eventDesc{
+    margin-left: 20px;
+    padding: 12px;
+    background-color: #F3F1F2 ;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.flex-container {
+    width: 1400px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left:20px ;
+    
+    justify-content: center;
+  }
+ .box {
+    border:1px solid black;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: #F3F1F2 ;
+    width: 100%;
+    text-align: left;
+    
+  }
+
+
+
+.slds-grid.slds-grid_vertical-stretch {
+  .slds-col > .slds-box {
+      height: 100%;
+
+     .slds-box__footer {
+      }
+
+  }
+  .slds-col + .slds-col > .slds-box {
+    // background-color: #FFFFFF;
+  }
+}
+.slds-grid.slds-gutters.slds-wrap.slds-grid_vertical-stretch {
+  .slds-col:not(:last-child) {
+    // margin-top: initial;
+    margin-bottom: 1rem;
+  }
+}
+
+
+/**
+ * @summary Initializes box footer
+ * @selector .slds-box__footer
+ * @restrict .slds-box footer
+ */
+.slds-box__footer {
+  padding: 0.75rem 1rem;
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  border-top: 1px solid #dddbda; 
+  height: 100%;
+  vertical-align: bottom;
+}
+
+/**
+* @summary Actionable element within box footer
+* @selector .slds-box__footer-action
+* @restrict .slds-box__footer a
+*/
+.slds-box__footer-action {
+  display: block; }
+
+
+.slds-theme_catalogue-desc {
+  background-color: #F3F1F2;
+  border:1px solid black;
+
+}
+.slds-button{
+    margin-right: 15px;
+}
+
+
+
+.slds-brand-band {
+  &:before {
+      background-image: url(/images/themes/oneSalesforce/banner-brand-default.png), linear-gradient(to top, rgba(221, 219, 218, 0) 0, #e8e8e8);
+  }
+  &.slds-brand-band_medium {
+    background-image: linear-gradient(to bottom, rgba(27, 95, 158, 0), #b0c4df 200px), url(/images/banner-brand-default.png);
+      background-repeat: repeat-x;
+      background-position: 0 187px;
+      background-color: rgba(27, 95, 158, 1);
+      background-attachment: fixed;
+
+    &:after {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+.demuxe-body.demuxe-body--catalogue.demuxe-catalogue_page-details {
+  .slds-brand-band.slds-brand-band_medium {
+    background-position: 0 409px;
+    background-attachment: scroll;
+  }
+}

@@ -1,4 +1,8 @@
 	<%- include('images/slices/segments/header.svg') %>
+	<script type="text/javascript">
+		document.querySelector('#createdDate tspan').textContent = locals.localization.dates.oneWeekAgoTerseWithYear;
+		document.querySelector('#createdDateWithTime tspan').textContent = locals.localization.dates.oneWeekAgoTerseWithYear + ', 10:23 AM';
+	</script>
 	<div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-grid_vertical-stretch slds-p-horizontal_x-small slds-m-top_medium">
 		<div class="slds-col slds-p-horizontal_x-small slds-size_2-of-3">
 			<%- include('components/panel-box.ejs', {
@@ -27,4 +31,3 @@
 			}) %>
 		</div>
 	</div>
-

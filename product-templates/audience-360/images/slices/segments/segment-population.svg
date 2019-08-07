@@ -31,16 +31,16 @@
                 <text id="Dropped" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
                     <tspan x="612.812" y="263.911">Dropped</tspan>
                 </text>
-                <text id="05/27" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                <text id="graphThreeWeeksAgo" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
                     <tspan x="208.521" y="238.81">05/27</tspan>
                 </text>
-                <text id="06/03" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                <text id="graphTwoWeeksAgo" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
                     <tspan x="388.607" y="238.81">06/03</tspan>
                 </text>
-                <text id="06/10" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
+                <text id="graphOneWeekAgo" fill="#333333" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
                     <tspan x="571.091" y="238.81">06/10</tspan>
                 </text>
-                <text id="06/17" fill="#333333" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="11" font-weight="bold">
+                <text id="graphToday" fill="#333333" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="11" font-weight="bold">
                     <tspan x="755.851" y="238.81">06/17</tspan>
                 </text>
                 <path d="M222.84,124.68 C224.961,124.68 226.68,122.961 226.68,120.84 C226.68,118.719 224.961,117 222.84,117 C220.719,117 219,118.719 219,120.84 C219,122.961 220.719,124.68 222.84,124.68 Z" id="Oval-Copy-3" fill="#16325C"></path>
@@ -49,8 +49,8 @@
                 <path d="M769.16,94.84 C771.281,94.84 773,93.121 773,91 C773,88.879 771.281,87.16 769.16,87.16 C767.039,87.16 765.32,88.879 765.32,91 C765.32,93.121 767.039,94.84 769.16,94.84 Z" id="Oval-Copy-6" fill="#16325C"></path>
                 <path d="M172.5,39 L172.5,246.449" id="Line-4" stroke="#DFDCDC" stroke-linecap="square"></path>
                 <path d="M67.0947,146.959 C74.879,146.959 81.1895,140.649 81.1895,132.864 C81.1895,125.08 74.879,118.77 67.0947,118.77 C59.3104,118.77 53,125.08 53,132.864 C53,140.649 59.3104,146.959 67.0947,146.959 Z" id="Oval" fill="#E0F5EC"></path>
-                <text id="vs.-05/27" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
-                    <tspan x="95" y="155.212">vs. 05/27</tspan>
+                <text id="vsLastMonth" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                    <tspan x="95" y="155.212">vs. 06/16</tspan>
                 </text>
                 <g id="Icons-/-Utility-Icon" transform="translate(57.000000, 128.000000)">
                     <path d="M14.5923,10.819 C15.0635,10.836 15.3987,10.523 15.4151,10.052 L15.6322,1.303 C15.6486,0.832 15.3076,0.466 14.8365,0.45 L6.0656,0.026 C5.5945,0.009 5.2593,0.322 5.2428,0.793 L5.2157,2.414 C5.1993,2.885 5.5403,3.25 6.0114,3.267 L8.7489,3.392 C9.22,3.408 9.4655,3.977 9.0998,4.318 L0.8717,11.991 C0.567,12.275 0.518,12.834 0.8306,13.169 L1.9673,14.388 C2.2799,14.723 2.8709,14.685 3.1451,14.429 L11.3732,6.756 C11.7389,6.415 12.2892,6.7 12.2727,7.171 L12.2065,9.91 C12.1901,10.381 12.5311,10.747 13.0022,10.764 L14.5923,10.819 Z" id="Mask_5" fill="#04844B"></path>
@@ -82,8 +82,8 @@
                 <text id="Segment-Population" fill="#080707" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="16" font-weight="bold">
                     <tspan x="21.6562" y="26.616">Segment Population</tspan>
                 </text>
-                <text id="As-of-06/17/2019" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
-                    <tspan x="54.8389" y="220.31">As of 06/17/2019</tspan>
+                <text id="asOfDate" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal" text-anchor="end">
+                    <tspan x="148" y="220.31">As of 00/00/2000</tspan>
                 </text>
                 <text id="8:30-AM-UTC" fill="#706E6B" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="11" font-weight="normal">
                     <tspan x="81.0605" y="236.31">8:30 AM UTC</tspan>

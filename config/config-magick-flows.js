@@ -4,6 +4,7 @@ Demuxe: Running \`config/config-magick-flows.js\` now...
 ------------------------------------------------------------
 `);
 const path = require('path');
+const util = require('util');
 const fs = require('fs');
 const getFlowData = require('./magick-flows-util/get-flow-data.js');
 const sortAlphaNum = require('./magick-flows-util/sort-alpha-num.js');
@@ -11,15 +12,6 @@ const sortAlphaNum = require('./magick-flows-util/sort-alpha-num.js');
 // Creates config data objects for the magick flows based on provided directory.
 const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), recursionMax = 1000, retryCount = 0) => {
 	// console.debug(`looking in ${dir}`);
-
-	// NO. THIS BREAKS THINGS.
-	// No idea why this was done, but whatever the reason, there's a better way.
-	// Possibly just cloning configData and using the clone for whatever you were
-	// needing this for. Talk to cmcculloh about this.
-	// configData.productTemplate = "magick-flows";
-	// configData.brandTheme = "";
-	// configData.demoVenue = "";
-
 
 	configData.magickFlowDirectories = configData.magickFlowDirectories || []; // protects against them passing `null`
 
@@ -52,15 +44,16 @@ const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), r
 		console.debug(`target directory found! (${fileOrDirectoryPath})`);
 
 		const subDirectoryContents = fs.readdirSync(fileOrDirectoryPath);
-		
+
 		subDirectoryContents.forEach(subFileOrDirectory => {
 			configData = getFlowData(configData, fileOrDirectoryPath, subFileOrDirectory)
 		});
 	});
 
+
 	const magickFlowURLS = configData.magickFlowDirectories
 		.sort(sortAlphaNum)
-		.map(magickFlowPath => 
+		.map(magickFlowPath =>
 			`${configData[process.env.NODE_ENV].host}${magickFlowPath.split('/')[magickFlowPath.split('/').length - 1]}`
 		);
 

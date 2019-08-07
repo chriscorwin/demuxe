@@ -1,0 +1,131 @@
+<h1>Dynamic SVG Components POC (Localization for Magick Flows)</h1>
+<div style="float: left; width: 528px;"><h2>Original (as appears in Sketch)</h2>
+<img src="images/dyn-date-poc.png" /></div>
+<div style="float: left; width: 528px; margin-left: 20px;"><h2>Dynamically Converted based on IDs</h2>
+<%- include('images/dyn-date-poc.svg'); %></div>
+<div style="float: left; width: 528px;">
+<img src="images/dyn-brand-poc.png" /></div>
+<div style="float: left; width: 528px; margin-left: 20px;">
+<%- include('images/dyn-brand-poc.svg'); %></div>
+
+<script src="javascripts/third-party-libraries/moment.js"></script>
+<script src="javascripts/third-party-libraries/moment.parse-format.js"></script>
+
+<script>
+	const locals = {localization: <%- JSON.stringify(locals.localization) %>};
+	const brandTextsToReplace = document.querySelectorAll('text[id*="dyn-brand="]');
+
+	brandTextsToReplace.forEach((brandTextToReplaceWrapper) => {
+		const targetText = brandTextToReplaceWrapper.id.match(/dyn-brand=([a-zA-Z0-9\-]*)/);
+		let finalText;
+
+		switch (targetText[1]) {
+			case 'name':
+			case 'NAME':
+				finalText = locals.localization.NAME;
+				break;
+			case 'account_name':
+			case 'accountName':
+				finalText = locals.localization.account_name;
+				break;
+			case 'appName':
+				finalText = locals.localization.appName;
+				break;
+
+			default:
+
+		}
+
+		const brandTextToReplace = brandTextToReplaceWrapper.querySelector('tspan');
+
+		brandTextToReplace.textContent = finalText;
+	});
+
+	const brandImagesToReplace = document.querySelectorAll('image[id*="dyn-brand="]');
+console.log('brandImagesToReplace', brandImagesToReplace)
+	brandImagesToReplace.forEach((brandImageToReplace) => {
+		const targetImage = brandImageToReplace.id.match(/dyn-brand=([a-zA-Z0-9\-\/\.]*)/)[1];
+
+		console.log('targetImage', targetImage)
+
+		brandImageToReplace.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', targetImage);
+	});
+
+	const datesToReplace = document.querySelectorAll('[id*="dyn-date="]');
+
+	datesToReplace.forEach((dateToReplaceWrapper) => {
+		const targetDate = dateToReplaceWrapper.id.match(/dyn-date=([a-zA-Z0-9\-]*)/);
+
+		let desiredDate = moment();
+
+		switch (targetDate[1]) {
+			case 'today':
+			case 'now':
+				break;
+			case 'yesterday':
+				desiredDate.subtract(1, 'days');
+				break;
+			case 'oneWeekAgo':
+				desiredDate.subtract(1, 'weeks');
+				break;
+			case 'twoWeeksAgo':
+				desiredDate.subtract(2, 'weeks');
+				break;
+			case 'threeWeeksAgo':
+				desiredDate.subtract(3, 'weeks');
+				break;
+			case 'fourWeeksAgo':
+				desiredDate.subtract(4, 'weeks');
+				break;
+			case 'oneMonthAgo':
+				desiredDate.subtract(1, 'months');
+				break;
+			case 'twoMonthsAgo':
+				desiredDate.subtract(2, 'months');
+				break;
+			case 'threeMonthsAgo':
+				desiredDate.subtract(3, 'months');
+				break;
+			case 'fourMonthsAgo':
+				desiredDate.subtract(4, 'months');
+				break;
+			case 'oneYearAgo':
+				desiredDate.subtract(1, 'years');
+				break;
+			case 'aboutOneMonthAgo':
+				desiredDate.subtract(1, 'months').date(5);
+				break;
+			case 'aboutTwoMonthsAgo':
+				desiredDate.subtract(2, 'months').date(17);
+				break;
+			case 'aboutThreeMonthsAgo':
+				desiredDate.subtract(3, 'months').date(12);
+				break;
+			case 'aboutFourMonthsAgo':
+				desiredDate.subtract(3, 'months').date(26);
+				break;
+			case 'firstDayThisMonth':
+				desiredDate.startOf('month');
+				break;
+			case 'firstDayLastMonth':
+				desiredDate.subtract(1, 'months').date(1);
+				break;
+			case 'lastDayLastMonth':
+				desiredDate.startOf('month').subtract(1, 'days');
+				break;
+			default:
+
+		}
+
+		const dateToReplace = dateToReplaceWrapper.querySelector('tspan');
+
+		const dateFormat = parseFormat(dateToReplace.textContent);
+
+		const correctDate = desiredDate.format(dateFormat);
+
+		dateToReplace.textContent = correctDate;
+	});
+
+
+</script>
+
