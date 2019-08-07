@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="einsteinBadge" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onclick="showPopover('#familyProspects')">
+<svg style="cursor: pointer" id="einsteinBadge" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onclick="showPopover('#familyProspects')">
     <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>EinsteinSVG</title>
-    <desc>Created with Sketch.</desc>
     <style>
         #einstein-page {
-          -webkit-animation: flipHeads 1s ease-out forwards;
-          -moz-animation: flipHeads 1s ease-out forwards;
-            -o-animation: flipHeads 1s ease-out forwards;
-               animation: flipHeads 1s ease-out forwards;
+          -webkit-animation: flipHeads 2s ease-out forwards;
+          -moz-animation: flipHeads 2s ease-out forwards;
+            -o-animation: flipHeads 2s ease-out forwards;
+               animation: flipHeads 2s ease-out forwards;
                transform-origin: center;
+               animation-play-state: paused;
 
         }
 
         @-webkit-keyframes flipHeads {
           from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
-          to { -webkit-transform: rotateY(1080deg); -moz-transform: rotateY(1080deg); transform: rotateY(1080deg); }
+          to { -webkit-transform: rotateY(2160deg); -moz-transform: rotateY(2160deg); transform: rotateY(2160deg); }
         }
     </style>
     <defs>

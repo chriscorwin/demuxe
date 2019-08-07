@@ -54,7 +54,8 @@
 }
 
 .slds-icon_ring circle {
-  animation: grow-circle 400ms linear backwards;
+  animation: grow-circle 2s linear backwards;
+  animation-play-state: paused;
 }
 
 @keyframes grow-circle {

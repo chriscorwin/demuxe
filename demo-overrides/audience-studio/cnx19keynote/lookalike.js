@@ -97,7 +97,7 @@ module.exports = {
 		devices: '250k',
 		audience: '54k',
 		audienceFill: 80,
-		modified: aboutOneMonthAgo,
+		modified: today,
 		type: 'Standard',
 		category: 'Behavioral',
 		subCategory: 'Loyalty'
