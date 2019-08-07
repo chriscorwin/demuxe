@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="215px" viewBox="0 0 500 215" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>line-height-test</title>
+    <desc>Created with Sketch.</desc>
+    <g id="line-height-test" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(159.000000, 11.000000)">
+            <rect id="blue" stroke="#0091FF" x="0.5" y="0.5" width="124" height="42"></rect>
+            <text id="Line-height-set-to-1" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13.5" font-weight="bold" line-spacing="19" fill="#2B2826">
+                <tspan x="0" y="15">Line height set to </tspan>
+                <tspan x="0" y="34">19, font set to 13.5</tspan>
+            </text>
+            <rect id="red" stroke="#E02020" x="0.5" y="4.5" width="124" height="31"></rect>
+        </g>
+        <g id="Group-3" transform="translate(309.000000, 11.000000)">
+            <rect id="blue" stroke="#0091FF" x="0.5" y="0.5" width="124" height="42"></rect>
+            <text id="Line-height-set-to-1" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13.5" font-weight="bold" line-spacing="10" fill="#2B2826">
+                <tspan x="0" y="15">Line height set to </tspan>
+                <tspan x="0" y="25">10, font set to 13.5</tspan>
+            </text>
+            <rect id="red" stroke="#E02020" x="0.5" y="4.5" width="124" height="22"></rect>
+        </g>
+        <g id="Group-3" transform="translate(159.000000, 91.000000)">
+            <rect id="blue" stroke="#0091FF" x="0.5" y="0.5" width="124" height="111"></rect>
+            <text id="Line-height-set-to-2" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="20" font-weight="bold" line-spacing="29" fill="#2B2826">
+                <tspan x="0" y="25">Line height </tspan>
+                <tspan x="0" y="54">set to 29, </tspan>
+                <tspan x="0" y="83">font set to </tspan>
+                <tspan x="0" y="112">20</tspan>
+            </text>
+            <rect id="red" stroke="#E02020" x="0.5" y="7.5" width="124" height="103"></rect>
+        </g>
+        <g id="Group-3" transform="translate(19.000000, 92.000000)">
+            <rect id="blue" stroke="#0091FF" x="0.5" y="0.5" width="124" height="113"></rect>
+            <text id="Line-height-set-to-3" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="20" font-weight="bold" line-spacing="30" fill="#2B2826">
+                <tspan x="0" y="24">Line height </tspan>
+                <tspan x="0" y="54">set to 30, </tspan>
+                <tspan x="0" y="84">font set to </tspan>
+                <tspan x="0" y="114">20</tspan>
+            </text>
+            <rect id="red" stroke="#E02020" x="0.5" y="6.5" width="124" height="106"></rect>
+        </g>
+        <g id="Group-4" transform="translate(330.000000, 169.000000)">
+            <rect id="animate-me" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="159" height="36"></rect>
+            <text id="SVG-Animated-Box" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13.5" font-weight="bold" fill="#2B2826">
+                <tspan x="14" y="24">SVG Animated Box</tspan>
+            </text>
+        </g>
+        <g id="Group-3" transform="translate(19.000000, 4.000000)">
+            <rect id="blue" stroke="#0091FF" x="0.5" y="0.5" width="124" height="86"></rect>
+            <text id="Line-height-unset,-f" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="20" font-weight="bold" fill="#2B2826">
+                <tspan x="0" y="23">Line height </tspan>
+                <tspan x="0" y="52">unset, font </tspan>
+                <tspan x="0" y="81">set to 20</tspan>
+            </text>
+            <rect id="red" stroke="#E02020" x="0.5" y="7.5" width="124" height="74"></rect>
+        </g>
+        <g id="Group-3" transform="translate(308.000000, 107.000000)">
+            <rect id="blue" stroke="#0091FF" x="0.5" y="0.5" width="178" height="53"></rect>
+            <text id="Blue-box-shows-the-t" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="12" font-weight="bold" fill="#2B2826">
+                <tspan x="0" y="14">Blue box shows the text’s </tspan>
+                <tspan x="0" y="32">bounding box. Red box shows </tspan>
+                <tspan x="0" y="50">the intended text display area.</tspan>
+            </text>
+            <rect id="red" stroke="#E02020" x="0.5" y="4.5" width="175" height="49"></rect>
+        </g>
+    </g>
+</svg>
