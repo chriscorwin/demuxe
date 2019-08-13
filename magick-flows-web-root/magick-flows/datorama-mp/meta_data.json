@@ -4,7 +4,7 @@
 	"description": "Magick Flow of Datorama website.",
 	"longFormDescription": "<p>Magick Flow Demonstrating Datorama's website as Michael Page group. Shown during Salesforce for Marketing keynote in 2019.</p>",
 	"recordings": [
-		{"title": "Datorama Demo", "link": "https://youtu.be/zfW6PG1hWw4?t=2336"}
+		{"title": "Datorama Demo", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?t=2336"}
 	],
 	"venue": "Connections 2019",
 	"tags": ["Connections", "Keynote", "2019"],

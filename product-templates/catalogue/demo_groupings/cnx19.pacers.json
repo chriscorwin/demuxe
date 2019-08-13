@@ -7,7 +7,7 @@
 	"description": "Salesforce Connections 2019 Pacers Demos",
 	"longFormDescription": "<p>Salesforce Connections is the must-attend conference for everyone who wants to learn how to build better customer experiences through personalized, seamless customer engagement to care for their most important asset for growth: customer relationships. It's the event for joining talent with technology and discovering where digital marketing, commerce, and service meet — and what happens when you connect all three on one platform with Salesforce. Come learn new trends and best practices and try out solutions that make every customer interaction click to engage your customers in one unified experience. Get inspired to come together with all your teams, elevate relationships, and bring customers closer with your brand than ever before.</p>",
 	"recordings": [
-		{"title": "Salesforce Connections 2019 Keynote - Ch. 2: Innovation", "link": "https://www.youtube.com/watch?v=ZPS6GAaVmNU"}
+		{"title": "Salesforce Connections 2019 Keynote - Ch. 2: Innovation", "link": "https://www.youtube.com/embed/ZPS6GAaVmNU"}
 	],
 	"thumbnail": "/images/cnx19___banner___0.png",
 	"heroBanner": "/images/cnx19___banner___0.png",

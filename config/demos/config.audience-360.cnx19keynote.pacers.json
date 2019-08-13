@@ -4,7 +4,7 @@
 	"description": "Audience 360 Pacers Demo for Connections 2019 Keynote",
 	"longFormDescription": "<p>Engineered Demo of Audience 360 branded as Pacers. Shown on the mainstage at Connections in 2019.</p>",
 	"recordings": [
-		{"title": "Salesforce Connections 2019 Keynote - Ch. 2: Innovation", "link": "https://www.youtube.com/watch?v=ZPS6GAaVmNU"}
+		{"title": "Salesforce Connections 2019 Keynote - Ch. 2: Innovation", "link": "https://www.youtube.com/embed/ZPS6GAaVmNU"}
 	],
 	"venue": "Connections 2019",
 	"date": "June 18, 2019 11am PDT",

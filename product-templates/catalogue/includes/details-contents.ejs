@@ -93,20 +93,6 @@
 
 				<h2>Presenters</h2>
 				<p><%= demo.presenters %></p>
-
-				<% if (demo.recordings) { %>
-				<h2>Event Recordings</h2>
-				<section>
-					<%
-						let output = '';
-						output += demo.recordings.reduce((recordings, recording, i) =>
-							recordings + `<li><a href="${recording.link}">${recording.title}</a></li>`
-						, '<ul>') + '</ul>';
-
-						echo(output);
-					%>
-				</section>
-				<% } %>
 		   </div>
 	   </div>
 	</div>
@@ -117,6 +103,18 @@
 				<section class="slds-text-longform">
 					<p><%- demo.longFormDescription %></p>
 				</section>
+				<% if (demo.recordings) { %>
+				<section>
+					<%
+						let output = '';
+						output += demo.recordings.reduce((recordings, recording, i) =>
+							recordings + `<li><iframe width="560" height="315" src="${recording.link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+						, '<ul>') + '</ul>';
+
+						echo(output);
+					%>
+				</section>
+				<% } %>
 			</div>
 		</div>
 	</div>
