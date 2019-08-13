@@ -4,7 +4,8 @@
 	"description": "Magick Flow of Consumer Mobile experience for interacting with Fever",
 	"longFormDescription": "<p>Part of the Salesforce for Marketing keynote, delivered from the mainstage.</p><p>A Magick Flow that demonstrates purchasing tickets, receiving email confirmation, adding to iOS wallet, and interacting through Twitter.</p>",
 	"recordings": [
-		{"title": "Salesforce for Marketing Engagement Reimagined for Today's Connected Customer", "link": "https://youtu.be/zfW6PG1hWw4?t=1336"}
+		{"title": "Part 1 of Consumer Mobile Experience", "link": "https://youtu.be/zfW6PG1hWw4?t=1336"},
+		{"title": "Part 2 of Consumer Mobile Experience", "link": "https://youtu.be/zfW6PG1hWw4?t=1460"}
 	],
 	"venue": "Connections 2019",
 	"tags": ["Connections", "Keynote", "2019"],

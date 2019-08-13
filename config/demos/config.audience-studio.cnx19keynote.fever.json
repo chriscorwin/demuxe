@@ -2,7 +2,7 @@
 	"id": "audience-studio.cnx19keynote.fever",
 	"name": "Audience Studio Fever CNX 19 Keynote",
 	"description": "Audience Studio Fever Demo for Connections 2019 Keynote",
-	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"longFormDescription": "<p>Engineered Demo of Audience Studio branded as Fever. Shown during the Salesforce for Marketing demo at Connections in 2019.</p>",
 	"recordings": [
 		{"title": "Salesforce for Marketing Engagement Reimagined for Today's Connected Customer", "link": "https://youtu.be/zfW6PG1hWw4?t=1255"}
 	],

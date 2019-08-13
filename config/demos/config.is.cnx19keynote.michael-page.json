@@ -2,7 +2,10 @@
 	"id": "is.cnx19keynote.michael-page",
 	"name": "IS Michael Page CNX 19 Keynote",
 	"description": "Interaction Studio Michael Page demo for Connections 2019 Keynote",
-	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"longFormDescription": "<p>Engineered Demo of Interaction Studio for Michael Page demo for Connections 2019 Keynote.</p>",
+	"recordings": [
+		{"title": "Interaction Studio Demo", "link": "https://youtu.be/zfW6PG1hWw4?t=2272"}
+	],
 	"venue": "Connections 2019",
 	"date": "GET CORRECT DATE",
 	"brands": "Michael Page",
