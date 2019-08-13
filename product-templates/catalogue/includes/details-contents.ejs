@@ -108,8 +108,8 @@
 					<%
 						let output = '';
 						output += demo.recordings.reduce((recordings, recording, i) =>
-							recordings + `<li><iframe width="560" height="315" src="${recording.link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-						, '<ul>') + '</ul>';
+							recordings + `<div class="slds-m-top_medium"><iframe width="560" height="315" src="${recording.link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+						, '');
 
 						echo(output);
 					%>
