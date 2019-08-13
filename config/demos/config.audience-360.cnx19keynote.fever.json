@@ -1,8 +1,11 @@
 {
 	"id": "audience-360.cnx19keynote.fever",
-	"demoName": "Audience 360 Fever CNX 19 Keynote",
-	"description": "Audience 360 Fever Demo for Connections 2019 Keynote",
+	"name": "Customer 360 Fever CNX 19 Keynote",
+	"description": "Customer 360 Fever Demo for Connections 2019 Keynote",
 	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"recordings": [
+		{ "title": "Salesforce for Marketing Engagement Reimagined for Today's Connected Customer", "link": "https://youtu.be/zfW6PG1hWw4?t=819" }
+	],
 	"venue": "Connections 2019",
 	"date": "June 18, 2019 11am PDT",
 	"brands": "Indiana Fever",

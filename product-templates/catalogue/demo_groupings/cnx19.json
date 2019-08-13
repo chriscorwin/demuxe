@@ -8,6 +8,14 @@
 	"name": "Connections 2019",
 	"description": "Salesforce Connections 2019",
 	"longFormDescription": "<p>Salesforce Connections is the must-attend conference for everyone who wants to learn how to build better customer experiences through personalized, seamless customer engagement to care for their most important asset for growth: customer relationships. It's the event for joining talent with technology and discovering where digital marketing, commerce, and service meet — and what happens when you connect all three on one platform with Salesforce. Come learn new trends and best practices and try out solutions that make every customer interaction click to engage your customers in one unified experience. Get inspired to come together with all your teams, elevate relationships, and bring customers closer with your brand than ever before.</p>",
+	"recordings": [
+		{"title": "Salesforce Connections 2019 Keynote - Ch. 1: Corporate Narrative", "link": "https://www.youtube.com/watch?v=NBxXmD-HK6M"},
+		{"title": "Salesforce Connections 2019 Keynote - Ch. 2: Innovation", "link": "https://www.youtube.com/watch?v=ZPS6GAaVmNU"},
+		{"title": "Salesforce Connections 2019 Keynote - Ch. 3: Drive Consumer Engagement", "link": "https://www.youtube.com/watch?v=JD0XorKml6A"},
+		{"title": "Salesforce Connections 2019 Keynote - Ch. 4: Transform Business Engagement", "link": "https://www.youtube.com/watch?v=wzDPf6pIOHQ"},
+		{"title": "Salesforce Connections 2019 Keynote - Ch. 5: Closing", "link": "https://www.youtube.com/watch?v=wVbuW8mkGcQ"},
+		{ "title": "Salesforce for Marketing Engagement Reimagined for Today's Connected Customer", "link": "https://youtu.be/zfW6PG1hWw4" }
+	],
 	"thumbnail": "/images/cnx19___banner___0.png",
 	"heroBanner": "/images/cnx19___banner___0.png",
 	"date": "June 17, 2019",

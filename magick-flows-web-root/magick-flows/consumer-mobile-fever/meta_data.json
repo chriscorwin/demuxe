@@ -1,9 +1,16 @@
 {
 	"id": "consumer-mobile-fever",
 	"name": "Consumer Mobile Fever",
-	"description": "Lorem ipsum dolor sit amet",
-	"longFormDescription": "<p>Salesforce Consumer Mobile Fever Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"description": "Magick Flow of Consumer Mobile experience for interacting with Fever",
+	"longFormDescription": "<p>Part of the Salesforce for Marketing keynote, delivered from the mainstage.</p><p>A Magick Flow that demonstrates purchasing tickets, receiving email confirmation, adding to iOS wallet, and interacting through Twitter.</p>",
+	"recordings": [
+		{"title": "Salesforce for Marketing Engagement Reimagined for Today's Connected Customer", "link": "https://youtu.be/zfW6PG1hWw4?t=1336"}
+	],
 	"venue": "Connections 2019",
 	"tags": ["Connections", "Keynote", "2019"],
-	"thumbnail": "/magick-flows/consumer-mobile-fever/main/1010___ID=ticketmaster-app___DATA=unset___NOTES=Click-the-first-row__Sec-16-Row-4.png"
+	"thumbnail": "/magick-flows/consumer-mobile-fever/main/1010___ID=ticketmaster-app___DATA=unset___NOTES=Click-the-first-row__Sec-16-Row-4.png",
+	"date": "June 18, 2019 11am PDT",
+	"brands": "Indiana Fever",
+	"presenters": "Eric Stahl, Katrin Rabant, Christy Poulos",
+	"location": "Chicago, IL"
 }

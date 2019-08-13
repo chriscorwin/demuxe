@@ -1,8 +1,11 @@
 {
 	"id": "audience-360.cnx19keynote.pacers",
-	"demoName": "Audience 360 Pacers CNX 19 Keynote",
+	"name": "Audience 360 Pacers CNX 19 Keynote",
 	"description": "Audience 360 Pacers Demo for Connections 2019 Keynote",
 	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"recordings": [
+		"https://www.youtube.com/watch?v=ZPS6GAaVmNU"
+	],
 	"venue": "Connections 2019",
 	"date": "June 18, 2019 11am PDT",
 	"brands": "Indiana Pacers",

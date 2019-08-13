@@ -62,7 +62,6 @@
 								</h1>
 							</div>
 						</div>
-						<p class="slds-page-header__name-meta">Eric Stahl • Indidana Fever • 06/16-19/19</p>
 					</div>
 <%
 	if (demo.production) {
@@ -94,6 +93,20 @@
 
 				<h2>Presenters</h2>
 				<p><%= demo.presenters %></p>
+
+				<% if (demo.recordings) { %>
+				<h2>Event Recordings</h2>
+				<section>
+					<%
+						let output = '';
+						output += demo.recordings.reduce((recordings, recording, i) =>
+							recordings + `<li><a href="${recording.link}">${recording.title}</a></li>`
+						, '<ul>') + '</ul>';
+
+						echo(output);
+					%>
+				</section>
+				<% } %>
 		   </div>
 	   </div>
 	</div>
