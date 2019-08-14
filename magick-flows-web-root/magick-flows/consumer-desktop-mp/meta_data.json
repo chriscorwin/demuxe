@@ -4,7 +4,7 @@
 	"description": "Magick Flow of MP website.",
 	"longFormDescription": "<p>Magick Flow Demonstrating MP Consumer Desktop experience.</p>",
 	"recordings": [
-		{"title": "Michael Page Consumer Desktop Magick Flow", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?t=2181"}
+		{"title": "Michael Page Consumer Desktop Magick Flow", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?start=2181"}
 	],
 	"venue": "Connections 2019",
 	"tags": ["Connections", "Keynote", "2019"],

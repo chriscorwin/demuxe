@@ -4,7 +4,7 @@
 	"description": "Magick Flow of Consumer Mobile Michael Page experience.",
 	"longFormDescription": "<p>Magick Flow Demonstrating Consumer Mobile experience for Michael Page group. Shown during Salesforce for Marketing keynote in 2019.</p>",
 	"recordings": [
-		{"title": "Datorama Demo", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?t=2468"}
+		{"title": "Datorama Demo", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?start=2468"}
 	],
 	"venue": "Connections 2019",
 	"tags": ["Connections", "Keynote", "2019"],

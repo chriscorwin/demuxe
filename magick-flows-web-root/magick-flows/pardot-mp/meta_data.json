@@ -4,7 +4,7 @@
 	"description": "Magick Flow",
 	"longFormDescription": "<p>Part of the Salesforce for Marketing keynote, delivered from the mainstage.</p><p>A Magick Flow that demonstrates some portions of Pardot.</p>",
 	"recordings": [
-		{"title": "Pardot Magick Flow", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?t=2073"}
+		{"title": "Pardot Magick Flow", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?start=2073"}
 	],
 	"venue": "Connections 2019",
 	"tags": ["Connections", "Keynote", "2019"],

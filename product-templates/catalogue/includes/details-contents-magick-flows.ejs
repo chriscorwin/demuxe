@@ -121,12 +121,12 @@ _%>
 		detailsContentsMagickFlowsHtmlOut += `
 								<img  id="demo-thumb---${node.id}" class="thumbnail" src="${mainContentWebRootUrl}" alt=""  style="height: 0px; width: 0px">
 							</div>
-			
+
 						</a>
-						<h3>${node.id}</h3>
+						<h3>${node.id || `Step ${nodeIndex + 1}`}</h3>
 					</div>
 					<footer class="slds-box__footer slds-grow-none slds-shrink">
-						${clickHintsHtmlOut}
+						${hasNotes ? clickHintsHtmlOut : nodeIndex < thisMagickFlowStepMetaData.length -1 ? 'Click to advance' : 'The End'}
 					</footer>
 				</div>
 			</article>

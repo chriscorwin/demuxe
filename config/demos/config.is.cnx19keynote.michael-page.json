@@ -4,7 +4,7 @@
 	"description": "Interaction Studio Michael Page demo for Connections 2019 Keynote",
 	"longFormDescription": "<p>Engineered Demo of Interaction Studio for Michael Page demo for Connections 2019 Keynote.</p>",
 	"recordings": [
-		{"title": "Interaction Studio Demo", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?t=2272"}
+		{"title": "Interaction Studio Demo", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?start=2272"}
 	],
 	"venue": "Connections 2019",
 	"date": "GET CORRECT DATE",
