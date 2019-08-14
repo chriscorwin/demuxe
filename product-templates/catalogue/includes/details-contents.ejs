@@ -151,7 +151,7 @@
 		} else if (demo.demoFlow && demo.demoFlow.steps) {
 			detailsContentHtmlOut += `<div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch">`;
 
-			demo.demoFlow.steps.forEach((step) => {
+			demo.demoFlow.steps.forEach((step, i, steps) => {
 				let actionTaken = '';
 
 				if (typeof step.goto !== "undefined") {
@@ -187,6 +187,14 @@
 				demo.actionTaken = `${actionTaken} and waited for ${waitedFor}`;
 				demo.actionTaken = demo.actionTaken.replace(/\(\) => {/g, '').replace(/\}/g, '');
 
+				if (steps[i] && steps[i].description) {
+					demo.actionTaken = `<dt>To get here</dt><dd>${steps[i].description}</dd>`;
+				}
+
+				if (steps[i+1] && steps[i+1].description) {
+					demo.actionTaken += `<dt>To advance</dt><dd>${steps[i+1].description}</dd>`;
+				}
+
 
 				// detailsContentHtmlOut += include('includes/demo-thumb', tempDemoConfig);
 
@@ -205,23 +213,11 @@
 								<h3>${step.name}</h3>
 							</div>
 							<footer class="slds-box__footer slds-grow-none slds-shrink">
-								<p>${demo.actionTaken}</p>
+								<dl>${demo.actionTaken}</dl>
 							</footer>
 						</div>
 					</article>
 				`;
-
-				// 	<article class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 demo-thumb_col demo-thumb_content slds-card">
-				// 			<div class="slds-card__body slds-card__body_inner">
-				// 				<a href="screenshots/${demo.id}.${step.name}.slide.png">
-				// 					<img  id="demo-thumb---${demo.id.replace(/\./g, '--')}---${step.name.replace(/\./g, '--')}" class="thumbnail" src="screenshots/${demo.id}.${step.name}.slide.png" alt="">
-				// 				</a>
-				// 			</div>
-				// 			<footer class="slds-card__footer">
-				// 				${actionTaken} and waited for ${waitedFor}
-				// 			</footer>
-				// 	</article>
-				// `;
 			});
 
 			detailsContentHtmlOut += `</div>`;

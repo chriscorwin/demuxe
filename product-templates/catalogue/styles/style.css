@@ -266,11 +266,23 @@ h2, h3 {
 .slds-box__footer {
   padding: 0.75rem 1rem;
   margin-top: 0.75rem;
-  text-align: center;
   font-size: 0.8125rem;
   border-top: 1px solid #dddbda;
   height: 100%;
   vertical-align: bottom;
+}
+
+.slds-box__footer dt {
+  font-size: 0.8125rem;
+  color: #555;
+}
+
+.slds-box__footer dd {
+  margin-left: 15px;
+}
+
+.slds-box__footer dd::first-letter {
+  text-transform: uppercase;
 }
 
 /**
