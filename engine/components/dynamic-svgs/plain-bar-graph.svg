@@ -5,13 +5,14 @@
     <desc>Created with Sketch.</desc>
     <g id="plain" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="bar-graph">
-            <g id="top-channels" stroke-width="1">
+            <g id="top-channels" stroke-width="1" fill-rule="evenodd">
                 <g id="Group-3" fill="#FFFFFF">
                     <polygon id="Rectangle-18-Copy" points="0 0 0 330 400 330 400 0"></polygon>
                 </g>
                 <g id="Gridline" transform="translate(114.000000, 40.000000)">
                     <g id="stop7" transform="translate(237.000000, 0.000000)">
                         <path d="M2.266,22.781 L2.266,269" id="Path-2_7" stroke="#DDDBDA"></path>
+                        <path d="M34.266,22.781 L34.266,269" id="Path-2_7" stroke="#DDDBDA"></path>
                         <text id="dyn-text=stop-7" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
                             <tspan x="0.776" y="14.212">stop-7</tspan>
                         </text>
@@ -54,38 +55,93 @@
                         </text>
                     </g>
                 </g>
-                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 68.000000)" fill="#3296ED" fill-rule="nonzero">
-                    <polygon points="0 0 241 0 241 35 0 35"></polygon>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 274.000000)">
+                    <g id="group-of-bars">
+                        <polygon id="10%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 27 0 27 35 0 35"></polygon>
+                        <polygon id="20%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 54 0 54 35 0 35"></polygon>
+                        <polygon id="30%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 81 0 81 35 0 35"></polygon>
+                        <polygon id="40%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 108 0 108 35 0 35"></polygon>
+                        <polygon id="50%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 135 0 135 35 0 35"></polygon>
+                        <polygon id="60%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 162 0 162 35 0 35"></polygon>
+                        <polygon id="70%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 189 0 189 35 0 35"></polygon>
+                        <polygon id="80%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 216 0 216 35 0 35"></polygon>
+                        <polygon id="90%" fill="#005583" fill-rule="nonzero" points="0 0 243 0 243 35 0 35"></polygon>
+                        <polygon id="100%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 270 0 270 35 0 35"></polygon>
+                    </g>
                 </g>
-                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 119.000000)" fill="#3296ED" fill-rule="nonzero">
-                    <polygon points="0 0 201 0 201 35 0 35"></polygon>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 223.000000)">
+                    <g id="group-of-bars">
+                        <polygon id="10%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 27 0 27 35 0 35"></polygon>
+                        <polygon id="20%" fill="#BF0201" fill-rule="nonzero" points="0 0 54 0 54 35 0 35"></polygon>
+                        <polygon id="30%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 81 0 81 35 0 35"></polygon>
+                        <polygon id="40%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 108 0 108 35 0 35"></polygon>
+                        <polygon id="50%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 135 0 135 35 0 35"></polygon>
+                        <polygon id="60%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 162 0 162 35 0 35"></polygon>
+                        <polygon id="70%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 189 0 189 35 0 35"></polygon>
+                        <polygon id="80%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 216 0 216 35 0 35"></polygon>
+                        <polygon id="90%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 243 0 243 35 0 35"></polygon>
+                        <polygon id="100%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 270 0 270 35 0 35"></polygon>
+                    </g>
                 </g>
-                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 171.000000)" fill="#3296ED" fill-rule="nonzero">
-                    <polygon points="0 0 180 0 180 36 0 36"></polygon>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 171.000000)">
+                    <g id="group-of-bars">
+                        <polygon id="10%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 27 0 27 35 0 35"></polygon>
+                        <polygon id="20%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 54 0 54 35 0 35"></polygon>
+                        <polygon id="30%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 81 0 81 35 0 35"></polygon>
+                        <polygon id="40%" fill="#FF9E2C" fill-rule="nonzero" points="0 0 108 0 108 35 0 35"></polygon>
+                        <polygon id="50%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 135 0 135 35 0 35"></polygon>
+                        <polygon id="60%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 162 0 162 35 0 35"></polygon>
+                        <polygon id="70%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 189 0 189 35 0 35"></polygon>
+                        <polygon id="80%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 216 0 216 35 0 35"></polygon>
+                        <polygon id="90%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 243 0 243 35 0 35"></polygon>
+                        <polygon id="100%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 270 0 270 35 0 35"></polygon>
+                    </g>
                 </g>
-                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 223.000000)" fill="#3296ED" fill-rule="nonzero">
-                    <polygon points="0 0 136 0 136 35 0 35"></polygon>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 119.000000)">
+                    <g id="group-of-bars">
+                        <polygon id="10%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 27 0 27 35 0 35"></polygon>
+                        <polygon id="20%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 54 0 54 35 0 35"></polygon>
+                        <polygon id="30%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 81 0 81 35 0 35"></polygon>
+                        <polygon id="40%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 108 0 108 35 0 35"></polygon>
+                        <polygon id="50%" fill="#0070D2" fill-rule="nonzero" points="0 0 135 0 135 35 0 35"></polygon>
+                        <polygon id="60%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 162 0 162 35 0 35"></polygon>
+                        <polygon id="70%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 189 0 189 35 0 35"></polygon>
+                        <polygon id="80%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 216 0 216 35 0 35"></polygon>
+                        <polygon id="90%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 243 0 243 35 0 35"></polygon>
+                        <polygon id="100%" fill="#04844B" fill-rule="nonzero" points="0 0 270 0 270 35 0 35"></polygon>
+                    </g>
                 </g>
-                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 274.000000)" fill="#3296ED" fill-rule="nonzero">
-                    <polygon points="0 0 38 0 38 35 0 35"></polygon>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 68.000000)">
+                    <g id="group-of-bars">
+                        <polygon id="10%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 27 0 27 35 0 35"></polygon>
+                        <polygon id="20%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 54 0 54 35 0 35"></polygon>
+                        <polygon id="30%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 81 0 81 35 0 35"></polygon>
+                        <polygon id="40%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 108 0 108 35 0 35"></polygon>
+                        <polygon id="50%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 135 0 135 35 0 35"></polygon>
+                        <polygon id="60%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 162 0 162 35 0 35"></polygon>
+                        <polygon id="70%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 189 0 189 35 0 35"></polygon>
+                        <polygon id="80%" fill="#004A29" fill-rule="nonzero" points="0 0 216 0 216 35 0 35"></polygon>
+                        <polygon id="90%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 243 0 243 35 0 35"></polygon>
+                        <polygon id="100%" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" points="0 0 270 0 270 35 0 35"></polygon>
+                    </g>
                 </g>
             </g>
-            <text id="dyn-text=label-5" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+            <text id="dyn-text=label-5" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="18" fill="#3E3E3C">
                 <tspan x="23" y="294.212">label-5</tspan>
             </text>
-            <text id="dyn-text=label-4" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+            <text id="dyn-text=label-4" fill="#3E3E3C" fill-rule="evenodd" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
                 <tspan x="23" y="243.212">label-4</tspan>
             </text>
-            <text id="dyn-text=label-3" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+            <text id="dyn-text=label-3" fill="#3E3E3C" fill-rule="evenodd" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
                 <tspan x="23" y="189.212">label-3</tspan>
             </text>
-            <text id="dyn-text=label-2" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+            <text id="dyn-text=label-2" fill="#3E3E3C" fill-rule="evenodd" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
                 <tspan x="23" y="139.212">label-2</tspan>
             </text>
-            <text id="dyn-text=label-1" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+            <text id="dyn-text=label-1" fill="#3E3E3C" fill-rule="evenodd" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
                 <tspan x="23" y="90.212">label-1</tspan>
             </text>
-            <text id="dyn-text=title" fill="#000000" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+            <text id="dyn-text=title" fill="#000000" fill-rule="evenodd" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
                 <tspan x="24" y="22.904">title</tspan>
             </text>
         </g>
