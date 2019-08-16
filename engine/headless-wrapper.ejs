@@ -15,12 +15,8 @@
 
 
 	<body class="<%= locals.localization.body_class %> <%= siteSectionClassname %> <%= locals.sanitizedQueryParams.debug==='true' ? 'has-debug' : '' %>">
-		<div id="content-wrapper">
-			<div id="content" class="slds-container_large">
-				<script>console.log('<%= locals.root %>');</script>
-				<%- include(`${locals.pageContents}`) %>
-			</div>
-		</div>
+		<script>console.log('<%= locals.root %>');</script>
+		<%- include(`${locals.pageContents}`) %>
 
 		<%- include('includes/global/footer-scripts') %>
 		<%- include('includes/rpd/controller.ejs') %>

@@ -1,4 +1,5 @@
 module.exports = {
+	body_class: ' yer-mom-wears-body_class',
 	"stop-1": "10",
 	"stop-2": "30",
 	"stop-3": "40",
