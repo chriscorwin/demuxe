@@ -1,3 +1,9 @@
+<!--
+
+This file is intentionally as  self contained as possible to simplify development and debugging
+
+-->
+
 <h1>Dynamic SVG Components POC (Localization for Magick Flows)</h1>
 <div style="float: left; width: 528px;"><h2>Original (as appears in Sketch)</h2>
 <img src="components/dynamic-svgs/plain-bar-graph.png" />
@@ -27,33 +33,61 @@
 </style>
 
 <script>
-	const graphElementsToAnimate = document.querySelectorAll('g[id*="auto-animate="]');
+	const locals = {};
+	<%
+		Object.keys(locals).forEach(function(key, fileIndex) {
+			if (key != '_locals' && key != 'path' && key != 'util' && key != 'classnames' && key != 'sizeOf') {
+				if(typeof locals[key] === 'object') {
+					echo(`locals['${key}'] = ${JSON.stringify(locals[key])};`);
+				} else {
+					echo(`locals['${key}'] = "${locals[key]}";`);
+				}
+			}
+		});
+	%>
 
-	graphElementsToAnimate.forEach((graphElementToAnimate) => {
-		const targetAnimation = graphElementToAnimate.id.match(/auto-animate=([a-zA-Z0-9\-]*)/);
+	const graphsToAnimate = document.querySelectorAll('g[id*="animated-graph"]');
 
-		switch (targetAnimation[1]) {
-			case 'grow-from-left':
-			case 'grow-right':
-			case 'right':
-				graphElementToAnimate.querySelector('polygon:not([fill-opacity="0"])').classList.add('growFromLeft');
-				break;
-			default:
+	const getGraphMetaDataFromID = (id) => id.split('___').reduce((attributes, attribute) => {
+		const [ key, value=true ] = attribute.split('=');
+		// combine if duplicate. This allows you to add multiple classes eg: class=hide___class=animate
+		attributes[key] = attributes[key] && `${attributes[key]} ${value}` || value;
+		return attributes;
+	}, {});
 
-		}
-	});
+	graphsToAnimate.forEach((graphToAnimate) => {
+		const graphMetaData = getGraphMetaDataFromID(graphToAnimate.parentNode.id);
+		const graphLocalization = locals.localization[graphMetaData.ID] || {};
+
+		const graphElementsToAnimate = graphToAnimate.querySelectorAll('g[id*="auto-animate="]');
+
+		graphElementsToAnimate.forEach((graphElementToAnimate) => {
+			const targetAnimation = graphElementToAnimate.id.match(/auto-animate=([a-zA-Z0-9\-]*)/);
+
+			switch (targetAnimation[1]) {
+				case 'grow-from-left':
+				case 'grow-right':
+				case 'right':
+					graphElementToAnimate.querySelectorAll('polygon:not([fill-opacity="0"])').forEach(elm => elm.classList.add('growFromLeft'));
+					break;
+				default:
+
+			}
+		});
 
 
-	const dynamicTextsToReplace = document.querySelectorAll('text[id*="dyn-text="]');
 
-	dynamicTextsToReplace.forEach((dynamicTextToReplaceWrapper) => {
-		const targetText = dynamicTextToReplaceWrapper.id.match(/dyn-text=([a-zA-Z0-9\-]*)/);
+		const dynamicTextsToReplace = graphToAnimate.querySelectorAll('text[id*="dyn-text="]');
 
-		const dynamicTextToReplace = dynamicTextToReplaceWrapper.querySelector('tspan');
+		dynamicTextsToReplace.forEach((dynamicTextToReplaceWrapper) => {
+			const targetText = dynamicTextToReplaceWrapper.id.match(/dyn-text=([a-zA-Z0-9\-]*)/);
 
-		if (dynamicTextToReplace && dynamicTextToReplace.textContent && typeof locals.localization[targetText[1]] !== "undefined") {
-			dynamicTextToReplace.textContent = locals.localization[targetText[1]];
-		}
+			const dynamicTextToReplace = dynamicTextToReplaceWrapper.querySelector('tspan');
+
+			if (dynamicTextToReplace && dynamicTextToReplace.textContent && typeof graphLocalization[targetText[1]] !== "undefined") {
+				dynamicTextToReplace.textContent = graphLocalization[targetText[1]];
+			}
+		});
 	});
 </script>
 
