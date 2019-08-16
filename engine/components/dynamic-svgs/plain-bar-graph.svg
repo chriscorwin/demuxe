@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="330px" viewBox="0 0 400 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>plain-bar-graph</title>
+    <desc>Created with Sketch.</desc>
+    <g id="plain" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bar-graph">
+            <g id="top-channels" stroke-width="1">
+                <g id="Group-3" fill="#FFFFFF">
+                    <polygon id="Rectangle-18-Copy" points="0 0 0 330 400 330 400 0"></polygon>
+                </g>
+                <g id="Gridline" transform="translate(114.000000, 40.000000)">
+                    <g id="stop7" transform="translate(237.000000, 0.000000)">
+                        <path d="M2.266,22.781 L2.266,269" id="Path-2_7" stroke="#DDDBDA"></path>
+                        <text id="dyn-text=stop-7" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="0.776" y="14.212">stop-7</tspan>
+                        </text>
+                    </g>
+                    <g id="stop6" transform="translate(206.000000, 0.000000)">
+                        <path d="M1.26,22.8154 L1.26,269" id="Path-2_6" stroke="#DDDBDA"></path>
+                        <text id="dyn-text=stop-6" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="0.436" y="14.21">stop-6</tspan>
+                        </text>
+                    </g>
+                    <g id="stop5" transform="translate(171.000000, 0.000000)">
+                        <path d="M1.988,22.781 L1.988,269" id="Path-2_5" stroke="#DDDBDA"></path>
+                        <text id="dyn-text=stop-5" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="0.329" y="14.212">stop-5</tspan>
+                        </text>
+                    </g>
+                    <g id="stop4" transform="translate(134.000000, 0.000000)">
+                        <path d="M7.561,22.8154 L7.561,269" id="Path-2_3" stroke="#DDDBDA"></path>
+                        <text id="dyn-text=stop-4" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="0.033" y="14.21">stop-4</tspan>
+                        </text>
+                    </g>
+                    <g id="stop3" transform="translate(90.000000, 0.000000)">
+                        <path d="M13.8,22.781 L13.8,269" id="Path-2_2" stroke="#DDDBDA"></path>
+                        <text id="dyn-text=stop-3" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="0.335" y="14.212">stop-3</tspan>
+                        </text>
+                    </g>
+                    <g id="stop2" transform="translate(48.000000, 0.000000)">
+                        <path d="M17.984,22.8154 L17.984,269" id="Path-2_4" stroke="#DDDBDA"></path>
+                        <text id="dyn-text=stop-2" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="0.682" y="14.21">stop-2</tspan>
+                        </text>
+                    </g>
+                    <g id="stop1">
+                        <path d="M27.936,22.7812 L27.936,269" id="Path-2" stroke="#DDDBDA"></path>
+                        <path d="M0.936,22.7812 L0.936,269" id="Path-2.1" stroke="#DDDBDA"></path>
+                        <text id="dyn-text=stop-1" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                            <tspan x="1.728" y="14.212">stop-1</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 68.000000)" fill="#3296ED" fill-rule="nonzero">
+                    <polygon points="0 0 241 0 241 35 0 35"></polygon>
+                </g>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 119.000000)" fill="#3296ED" fill-rule="nonzero">
+                    <polygon points="0 0 201 0 201 35 0 35"></polygon>
+                </g>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 171.000000)" fill="#3296ED" fill-rule="nonzero">
+                    <polygon points="0 0 180 0 180 36 0 36"></polygon>
+                </g>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 223.000000)" fill="#3296ED" fill-rule="nonzero">
+                    <polygon points="0 0 136 0 136 35 0 35"></polygon>
+                </g>
+                <g id="auto-animate=grow-from-left" transform="translate(115.000000, 274.000000)" fill="#3296ED" fill-rule="nonzero">
+                    <polygon points="0 0 38 0 38 35 0 35"></polygon>
+                </g>
+            </g>
+            <text id="dyn-text=label-5" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                <tspan x="23" y="294.212">label-5</tspan>
+            </text>
+            <text id="dyn-text=label-4" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                <tspan x="23" y="243.212">label-4</tspan>
+            </text>
+            <text id="dyn-text=label-3" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                <tspan x="23" y="189.212">label-3</tspan>
+            </text>
+            <text id="dyn-text=label-2" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                <tspan x="23" y="139.212">label-2</tspan>
+            </text>
+            <text id="dyn-text=label-1" fill="#3E3E3C" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                <tspan x="23" y="90.212">label-1</tspan>
+            </text>
+            <text id="dyn-text=title" fill="#000000" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal">
+                <tspan x="24" y="22.904">title</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
