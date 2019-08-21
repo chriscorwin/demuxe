@@ -102,51 +102,51 @@ h3{
     // margin-left: 50px;
     // margin-right: 50px;
   }
-  
+
   .row {
     // margin: 8px -16px;
   }
-  
+
   /* Add padding BETWEEN each column */
   .row,
   .row > .column {
     padding: 8px;
   }
-  
+
   /* Create four equal columns that floats next to each other */
   .column {
     float: left;
     width: 25%;
   }
-  
-  /* Clear floats after rows */ 
+
+  /* Clear floats after rows */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
+
   /* Content */
   .content {
     background-color: white;
     padding: 5px;
-    
+
   }
-  
+
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 900px) {
     .column {
       width: 50%;
     }
   }
-  
+
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column {
       width: 100%;
     }
   }
- 
+
 .thumb{
     width: 1500px;
     height: 300px;
@@ -170,11 +170,11 @@ h3{
 
 #banner {
     background-image: linear-gradient(black);
-	opacity: 1; 
+	opacity: 1;
      width: 1500px;
      height: 200px;
  }
- 
+
 button{
     float: right;
     margin-right: 80px;
@@ -199,7 +199,7 @@ h2,h3{
     display: flex;
     flex-wrap: nowrap;
     margin-left:20px ;
-    
+
     justify-content: center;
   }
  .box {
@@ -209,7 +209,7 @@ h2,h3{
     background-color: #F3F1F2 ;
     width: 100%;
     text-align: left;
-    
+
   }
 
 
@@ -242,11 +242,23 @@ h2,h3{
 .slds-box__footer {
   padding: 0.75rem 1rem;
   margin-top: 0.75rem;
-  text-align: center;
   font-size: 0.8125rem;
-  border-top: 1px solid #dddbda; 
+  border-top: 1px solid #dddbda;
   height: 100%;
   vertical-align: bottom;
+
+  dt {
+    font-size: 0.8125rem;
+    color: #555;
+  }
+
+  dd {
+    margin-left: 15px;
+  }
+
+  dd::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 /**

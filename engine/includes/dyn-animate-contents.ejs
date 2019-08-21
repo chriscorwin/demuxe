@@ -1,0 +1,84 @@
+<h1>Dynamic SVG Components POC (Localization for Magick Flows)</h1>
+
+<h2>Dynamic SVG based on IDs</h2>
+
+<div class="slds-grid slds-grid_pull-padded-medium">
+	<div class="slds-col slds-p-horizontal_medium">
+		<%- include('components/dynamic-svgs/plain-bar-graph.svg'); %>
+	</div>
+	<div class="slds-col slds-p-horizontal_medium">
+		<%- include('components/dynamic-svgs/plain-bar-graph-new.svg'); %>
+	</div>
+</div>
+<div class="slds-grid slds-grid_pull-padded-medium">
+	<div class="slds-col slds-p-horizontal_medium">
+		<%- include('components/dynamic-svgs/filled-in-bar-graph.svg'); %>
+	</div>
+	<div class="slds-col slds-p-horizontal_medium">
+	<img src="components/dynamic-svgs/filled-in-bar-graph.png" /></div>
+	</div>
+</div>
+
+
+<h2>Original (as appears in Sketch)</h2>
+<div>
+	<img src="components/dynamic-svgs/plain-bar-graph.png" />
+</div>
+
+
+<style>
+	.growFromLeft {
+		animation: growFromLeft 2s ease-out forwards;
+
+	}
+
+	@-webkit-keyframes growFromLeft {
+		from { transform: scaleX(0); }
+		to { transform: scaleX(1); }
+	}
+
+	.animatable {
+		animation-play-state: paused;
+	}
+
+	.animate {
+		animation-play-state: running;
+	}
+</style>
+
+<script>
+	const graphElementsToAnimate = document.querySelectorAll('g[id*="auto-animate="]');
+
+	graphElementsToAnimate.forEach((graphElementToAnimate) => {
+		const targetAnimation = graphElementToAnimate.id.match(/auto-animate=([a-zA-Z0-9\-]*)/);
+
+		switch (targetAnimation[1]) {
+			case 'grow-from-left':
+			case 'grow-right':
+			case 'right':
+				graphElementToAnimate.querySelectorAll('polygon').forEach((polygonElement) => {
+					polygonElement.classList.add('growFromLeft');
+				});
+				break;
+			default:
+
+		}
+	});
+
+
+	const dynamicTextsToReplace = document.querySelectorAll('text[id*="dyn-text="]');
+
+	dynamicTextsToReplace.forEach((dynamicTextToReplaceWrapper) => {
+		const targetText = dynamicTextToReplaceWrapper.id.match(/dyn-text=([a-zA-Z0-9\-]*)/);
+
+		const dynamicTextToReplace = dynamicTextToReplaceWrapper.querySelector('tspan');
+
+		if (dynamicTextToReplace && dynamicTextToReplace.textContent && typeof locals.localization[targetText[1]] !== "undefined") {
+			dynamicTextToReplace.textContent = locals.localization[targetText[1]];
+		}
+	});
+
+
+</script>
+
+
