@@ -402,21 +402,6 @@ _%>
 <%- preLoadImages %>
 </div>
 
-<script>
-	const correctThese = document.querySelectorAll('text[line-spacing="30"]');
-	correctThese.forEach((correctThis) => {
-		const fontSize = correctThis.getAttribute('font-size');
-		const lineSpacing = correctThis.getAttribute('line-spacing');
-		const difference = fontSize - lineSpacing;
-		const distance = Math.ceil(Math.abs(difference));
-		const adjust = (distance > 4 && difference >= 0) ? distance : 4;
-		const finalAdjust = (difference >= 0) ? adjust : (distance <= fontSize) ? -1 : -adjust;
-		console.log(difference, finalAdjust);
-		correctThis.querySelectorAll('tspan').forEach((t) => {
-			t.setAttribute('y', t.getAttribute('y') - finalAdjust);
-		});
-	});
-</script>
 
 
 <%
