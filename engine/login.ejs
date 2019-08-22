@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/styles/salesforce-lightning-design-system.css" />
+		<style>
+			html, body {
+				background-color: #F4F6F9;
+				height: 100%;
+			}
+			@media (max-height: 1200px) {
+				#content-wrapper {
+					padding-top: 180px;
+				}
+			}
+			@media (max-height: 1000px) {
+				#content-wrapper {
+					padding-top: 140px;
+				}
+			}
+
+			@media (max-height: 900px) {
+				#content-wrapper {
+					padding-top: 100px;
+				}
+			}
+			@media (max-height: 736px) {
+				#content-wrapper {
+					padding-top: 60px;
+				}
+			}
+			@media (max-height: 670px) {
+				#content-wrapper {
+					padding-top: 40px;
+				}
+			}
+
+			#content-wrapper {
+				transition: all 0.25s ease 0s;
+			}
+
+			.standard_logo {
+				margin-left: auto;
+				margin-right: auto;
+				vertical-align: middle;
+				max-width: 180px;
+				max-height: 113px;
+			}
+
+			.slds-form-element__help svg {
+				fill: #4F6990;
+				max-width: 12px;
+				max-height: 16px;
+			}
+
+			#logo_wrapper {
+				width: 360px;
+				margin: 0px auto;
+				margin-bottom: 1.5rem;
+			}
+
+			#logo {
+				display: block;
+				margin: 0px auto;
+			}
+
+			form {
+				width: 360px;
+				background-color: #fff;
+				color: rgb(22, 50, 92);
+				margin: 0px auto;
+				padding: 1.25rem;
+				border-radius: 0.25rem;
+				border-width: 1px;
+				border-style: solid;
+				border-color: rgb(216, 221, 230);
+				border-image: initial;
+			}
+
+			.slds-form-element__label {
+				font-size: 12px;
+				color: rgb(84, 105, 141);
+				line-height: inherit;
+				margin: 0px 0px 8px;
+			}
+
+		</style>
+		<script>
+const checkCaps = (evt) => {
+	if ( evt.getModifierState && event.getModifierState( 'CapsLock' )) {
+		document.querySelector('#passwordhelp').classList.remove('slds-hide');
+	} else {
+		document.querySelector('#passwordhelp').classList.add('slds-hide');
+	}
+}
+		</script>
+	</head>
+	<body>
+		<div id="content-wrapper">
+			<div id="content">
+				<div class="slds-grid slds-grid_align-center">
+					<div class="slds-col slds-size_2-of-3">
+						<div id="logo_wrapper">
+							<img id="logo" class="standard_logo" src="/images/logo214.svg" alt="Salesforce" border="0" name="logo">
+						</div>
+						<form name="login" method="post" action="/login">
+							<div class="slds-form-element">
+								<label class="slds-form-element__label" for="username">Username</label>
+								<div class="slds-form-element__control">
+									<input type="email" id="username" name="username" placeholder="" class="slds-input slds-p-vertical_xx-small" />
+								</div>
+							</div>
+							<div class="slds-form-element slds-m-vertical_small">
+								<label class="slds-form-element__label" for="password">Password</label>
+								<div class="slds-form-element__control">
+									<input type="password" id="password" name="password" onkeypress="checkCaps(event)" placeholder="" class="slds-input slds-p-vertical_xx-small" />
+									<div id="passwordhelp" class="slds-form-element__help slds-hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="capslock"><path d="M20.1 9.7l-7.5-8.5c-.3-.4-.9-.4-1.2 0L3.9 9.7c-.3.4-.1.9.4.9h3.5v5.8c0 .4.4.7.7.7h7c.3 0 .7-.3.7-.7v-5.8h3.5c.5 0 .7-.5.4-.9zm-4.6 10.1h-7c-.3 0-.7.4-.7.7v1.9c0 .4.4.7.7.7h7c.3 0 .7-.3.7-.7v-1.9c0-.3-.4-.7-.7-.7z"></path></svg> Caps Lock is on.</div>
+								</div>
+							</div>
+							<div class="slds-form-element slds-m-top_medium">
+								<button id="login" class="slds-button slds-button_brand slds-button_stretch slds-p-around_xx-small">Log In</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

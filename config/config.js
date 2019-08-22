@@ -37,6 +37,7 @@ module.exports = function() {
     }
     // merge default with env config, overwriting defaults
     configData = { ...defaultConfigData, ...envConfigData };
+    configData.users = [ ...require('./users.json'), ...configData.users ];
 
 
     let defaultEngineConfig = {};

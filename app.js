@@ -16,70 +16,48 @@ const sassMiddleware = require('node-sass-middleware');
 const classnames = require('classnames');
 const sizeOf = require('image-size');
 
-const appSetup = require('./heroku_modules/@salesforce-mc/devbuild/dist/scripts/utilities/appSetup');
+const expressSession = require('express-session');
 const passport = require('passport');
-const PassportOAuth = require('passport-oauth2');
+const Strategy = require('passport-local').Strategy;
+const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
+const auth = require('./config/auth');
 
-const useSSO = (NODE_ENV === 'production' && !HOST.match(/-(dev|qa)\./)); // SSO only on prod server for now, turned off on QA server
+const config = require('./config/config.js')();
 
-const preServeHook = (app) => {
-	if (useSSO) {
-		const authenticate = (req, res, next) => {
-			if (req.path === '/auth') {
-				return next();
-			}
-			if (req.session && req.session.passport) {
-				return next();
-			} else {
-				res.send(ssoHTML);
-			}
-		};
+// Configure the local strategy for use by Passport.
+//
+// The local strategy require a `verify` function which receives the credentials
+// (`username` and `password`) submitted by the user.  The function must verify
+// that the password is correct and then invoke `cb` with a user object, which
+// will be set at `req.user` in route handlers after authentication.
+passport.use(new Strategy(
+  function(username, password, cb) {
+    auth.findByUsername(config.users, username, function(err, user) {
+      if (err) { return cb(err); }
+      if (!user) { return cb(null, false); }
+      if (user.password != password) { return cb(null, false); }
+      return cb(null, user);
+    });
+  }));
 
-		passport.use('sso',
-			new PassportOAuth({
-				authorizationURL: 'https://aloha.my.salesforce.com/services/oauth2/authorize',
-				tokenURL: 'https://aloha.my.salesforce.com/services/oauth2/token',
-				clientID: process.env.SSO_CLIENT_ID,
-				clientSecret: process.env.SSO_CLIENT_SECRET,
-				callbackURL: `${HOST}/auth`
-			}, (accessToken, refreshToken, profile, done) => {
-				request(
-					`https://login.salesforce.com/services/oauth2/userinfo?oauth_token=${accessToken}`,
-					(err, res, body) => {
-						if (err) return done(err, {});
-						try {
-							const bodyObj = JSON.parse(body);
-							const photos = bodyObj.photos || {};
-							const user = {
-								email: bodyObj.email,
-								id: bodyObj.user_id,
-								name: bodyObj.name,
-								thumbnail: photos.thumbnail,
-								token: accessToken,
-								username: (bodyObj.preferred_username || '').replace(/@sso\.salesforce\.com.*/, '')
-							};
-							done(null, user);
-						} catch (e) {
-							done(null, {});
-						}
-					}
-				);
-			})
-		);
-		passport.serializeUser((user, done) => {
-			done(null, user);
-		});
-		passport.deserializeUser((user, done) => {
-			done(null, user);
-		});
+// Configure Passport authenticated session persistence.
+//
+// In order to restore authentication state across HTTP requests, Passport needs
+// to serialize users into and deserialize users out of the session.  The
+// typical implementation of this is as simple as supplying the user ID when
+// serializing, and querying the user record by ID from the database when
+// deserializing.
+passport.serializeUser(function(user, cb) {
+  cb(null, user.id);
+});
 
-		app.use(cookieParser());
-		app.use(cookieSession({ name: process.env.SSO_COOKIE_NAME, keys: ['oatmeal', 'raisin'] }));
-		app.use(passport.initialize());
-		app.use(passport.session());
-		app.use(authenticate);
-	}
-}
+passport.deserializeUser(function(id, cb) {
+  auth.findById(config.users, id, function (err, user) {
+    if (err) { return cb(err); }
+    cb(null, user);
+  });
+});
+
 
 // console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:21 ] process.env.DEBUG: `, util.inspect(process.env.DEBUG, { showHidden: true, depth: null, colors: true }));
 
@@ -96,12 +74,7 @@ console.debug = function() {
 	// if( config.debug === false ) return;
 };
 
-const config = require('./config/config.js')();
-
 const app = express();
-
-if (preServeHook) preServeHook(app);
-
 
 
 console.log(`[ app.js:29 ] config.debug: `, util.inspect(config.debug, { showHidden: true, depth: null, colors: true }));
@@ -167,7 +140,10 @@ const appUse = [
 	express.json(),
 	express.urlencoded({ extended: false }),
 	expressSanitizer(),
-	cookieParser()
+	cookieParser(),
+	expressSession({ secret: 'Salsa Farse', resave: false, saveUninitialized: false }),
+	passport.initialize(),
+	passport.session()
 ];
 
 const sourceMap = (typeof config.sourceMap !== 'undefined') ? config.sourceMap : true;
@@ -237,9 +213,18 @@ app.use(appUse);
 
 const router = express.Router();
 
-if (useSSO) {
-	router.get('/auth', (req, res, next) => fn.apply(this, [].concat([passport], [req, res, next])));
-}
+app.get('/login', function(req, res) {
+  res.render('login');
+});
+
+app.post('/login', passport.authenticate('local', { successReturnToOrRedirect: '/', failureRedirect: '/login' }));
+
+app.get('/logout',
+	function(req, res){
+		req.logout();
+		res.redirect('/');
+	}
+);
 
 /**
  * Serve up the .ejs files
@@ -256,6 +241,7 @@ if (useSSO) {
  * All user input will be sanitized. If you have a URL or Query param that is getting mutated unexpectedly, this is why.
  */
 router.get('/*', (req, res) => {
+	console.log('got here');
 	// Pass any query params they put in the URL on into the EJS template for use
 	const sanitizedQueryParams = Object.keys(req.query).reduce((sanitizedQueryParams, param) => {
 		sanitizedQueryParams[req.sanitize(param)] = req.sanitize(req.query[param]);
@@ -316,7 +302,7 @@ router.get('/*', (req, res) => {
 Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 ------------------------------------------------------------
 						`);
-						res.render('wrapper-for-magick-flows', { ...config, siteSection: 'magick-flows', sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util });
+						res.render('wrapper-for-magick-flows', { ...config, user: req.user, siteSection: 'magick-flows', sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util });
 						console.groupEnd();
 
 					} else {
@@ -348,7 +334,7 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 							res.send(`data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==`);
 						} else {
 
-							res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+							res.render('404', { page: fileName, ...config, user: req.user, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
 
 								if (req.url.match(/\.js$/)) {
 									res.set('Content-Type', 'application/javascript');
@@ -362,13 +348,13 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 						}
 					}
 				} else {
-					res.render(fileName, { ...config, siteSection: fileNameSlug, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
+					res.render(fileName, { ...config, user: req.user, siteSection: fileNameSlug, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
 				}
 			});
 		});
 	});
 });
-app.use('/', router);
+app.use('/', ensureLoggedIn('/login'), router);
 
 
 // catch 404 and forward to error handler

@@ -19,16 +19,20 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "connect-ensure-login": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "ejs": "https://github.com/cmcculloh/ejs.git",
+    "ejs": "^2.6.2",
     "express": "~4.16.0",
     "express-sanitizer": "^1.0.4",
+    "express-session": "^1.16.2",
     "http-errors": "~1.6.2",
     "image-size": "^0.6.3",
     "livereload": "^0.7.0",
     "morgan": "~1.9.0",
-    "node-sass-middleware": "^0.11.0"
+    "node-sass-middleware": "^0.11.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
