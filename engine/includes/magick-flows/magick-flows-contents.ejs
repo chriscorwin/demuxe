@@ -232,6 +232,24 @@ _%>
 		}
 
 
+
+		let svgEmbedHtmlOut = '';
+		if ( isSvg === true ) {
+			const svgEmbedWebRootUrl = `../magick-flows-web-root${mainContentPath}${node.fileName}`;
+			svgEmbedHtmlOut += `
+				<div
+					class="magick-flows--main-content auto-replace is-image "
+					style="height: ${renderSizeMainContent.height}px; width: ${renderSizeMainContent.width}px; display: block;"
+					id="magick-flows--main-content--step-${nodeIndex}"
+				>
+			`;
+			svgEmbedHtmlOut += include(svgEmbedWebRootUrl);
+			svgEmbedHtmlOut += `
+				</div>
+			`;
+		}
+
+
 		let clickHintsHtmlOut = '';
 		let htmlCommentsHtmlOut = '';
 		let hasNotes = node.notes.length > 0 ? true : false;
@@ -304,7 +322,9 @@ _%>
 		if (hasEscapeHatch === true) {
 			echo(`${escapeHatchContentHtmlOut}`);
 		}
-		if (isPng || isSvg || isGif || isJpeg) {
+		if (isSvg) {
+			echo(`${svgEmbedHtmlOut}`);
+		} else if (isPng || isGif || isJpeg) {
 			echo(`
 				<div
 					class="magick-flows--main-content auto-replace is-image "
@@ -381,6 +401,23 @@ _%>
 <div class="preload-images">
 <%- preLoadImages %>
 </div>
+
+<script>
+	const correctThese = document.querySelectorAll('text[line-spacing="30"]');
+	correctThese.forEach((correctThis) => {
+		const fontSize = correctThis.getAttribute('font-size');
+		const lineSpacing = correctThis.getAttribute('line-spacing');
+		const difference = fontSize - lineSpacing;
+		const distance = Math.ceil(Math.abs(difference));
+		const adjust = (distance > 4 && difference >= 0) ? distance : 4;
+		const finalAdjust = (difference >= 0) ? adjust : (distance <= fontSize) ? -1 : -adjust;
+		console.log(difference, finalAdjust);
+		correctThis.querySelectorAll('tspan').forEach((t) => {
+			t.setAttribute('y', t.getAttribute('y') - finalAdjust);
+		});
+	});
+</script>
+
 
 <%
 console.log(`...end \`engine/includes/magick-flows/magick-flows-contents.ejs\`
