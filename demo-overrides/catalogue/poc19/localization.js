@@ -19,18 +19,18 @@ module.exports = {
 		"stop-100": "25%"
 	},
 	"graph-1": {
-		"title": "This is  Graph 1",
+		"title": "This is Graph 1. These overrides should have been done in sketch instead.",
 		"stop-0": "",
 		"stop-20": "20%",
 		"stop-40": "40%",
 		"stop-60": "60%",
 		"stop-80": "80%",
 		"stop-100": "100%",
-		"label-1": "Full Agreement",
-		"label-2": "Partial Agreement",
+		"label-1": "Agree",
+		"label-2": "Agree Some",
 		"label-3": "Neutral",
-		"label-4": "Partial Disagreement",
-		"label-5": "Full Disagreement"
+		"label-4": "Disagree Some",
+		"label-5": "Disagree"
 	}
 	,
 	"graph-2": {
