@@ -21,9 +21,94 @@ module.exports = {
 	skipSlideCapture: true,
 	steps: [
 		{
-			goto: `${testhost}pacers`,
+			goto: `${testhost}c360-rmd`,
 			waitFor: 'body',
-			name: '0001.magick-flow'
+			name: '0000.magick-flow',
+			description: 'Go to http://localhost:3000/c360-rmd'
 		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0010.magick-flow',
+			description: 'Click "Add Sources" button'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0020.magick-flow',
+			description: 'Click "Data Mapping" link in left nav'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0030.magick-flow',
+			description: 'Click pencil next to "Contact Point Address"'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0040.magick-flow',
+			description: 'Click "Close" button in drawer'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0050.magick-flow',
+			description: 'Click chevron next to "Account" (on right)'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0060.magick-flow',
+			description: 'Click "Data Stewardship" link in left nav'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0070.magick-flow',
+			description: 'Click "Profile Rules" link in left nav'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0080.magick-flow',
+			description: 'Click "Data Jobs" link in left nav'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0090.magick-flow',
+			description: 'Click "Next"'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '0100.magick-flow',
+			description: 'Click "Dashboards" link in left nav'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '1000.magick-flow',
+			description: 'Tab Switch to Service Desk (or just click anywhere)'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '1010.magick-flow',
+			description: 'TODO: Where do you click?'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '1020.magick-flow',
+			description: 'TODO: Where do you click?'
+		},
+		{
+			click: `body`,
+			waitFor: 'body',
+			name: '1030.magick-flow',
+			description: 'TODO: Where do you click?'
+		}
 	]
 };
