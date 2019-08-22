@@ -289,7 +289,7 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 									res.send(html);
 								} else {
 									res.set('X-error', err);
-									res.set('X-original-filename', fileName);
+									// res.set('X-original-filename', fileName);
 									res.send(html);
 								}
 							});

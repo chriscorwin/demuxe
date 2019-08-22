@@ -1,8 +1,9 @@
 {
-	"id": "demuxe",
-	"name": "Demuxe Catalogue",
-	"description": "The Demuxe Catalogue",
-	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"id": "c360-rmd",
+	"name": "C360 Release Marketing Demo",
+	"designer": "Lydia Lodovisi",
+	"description": "The C360 Release Marketing Demo",
+	"longFormDescription": "<p>Description goes here (HTML allowed.)</p>",
 	"venue": "",
 	"date": "GET CORRECT DATE",
 	"brands": "GET CORRECT BRAND",
@@ -11,8 +12,9 @@
 	"tags": [],
 	"thumbnail": "",
 	"brandTheme": "demuxe",
-	"productTemplate": "catalogue",
-	"demoVenue": "poc19",
+	"productTemplate": "magick-flows",
+	"defaultUrl": "/c360-rmd",
+	"demoVenue": "",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -23,13 +25,13 @@
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
 	"production": {
-		"host": "https://demuxe-catalogue.herokuapp.com/"
+		"host": "https://c360-rmd.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://demuxe-catalogue-qa.herokuapp.com/"
+		"host": "https://c360-rmd-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://demuxe-catalogue-dev.herokuapp.com/"
+		"host": "https://c360-rmd-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
