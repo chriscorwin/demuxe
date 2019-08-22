@@ -1,10 +1,98 @@
-<%- 
-	include(
-		'headless-wrapper.ejs', 
-		{ 
-			title: 'Dynamically Animated SVGs Proof of Concept', 
-			siteSection: 'dyn-animate', 
-			pageContents: 'includes/dyn-animate-contents'
-		}
-	);
-%>
+<!--
+
+This file is intentionally as  self contained as possible to simplify development and debugging
+
+-->
+
+<h1>DYNIMATE - DYNamic AnIMATEd SVG Graphs (Localization & animation for Magick Flows)</h1>
+<div style="float: left; width: 528px;"><h2>Original (as appears in Sketch)</h2>
+<img src="components/dynamic-svgs/plain-bar-graph.png" />
+<img src="components/dynamic-svgs/filled-in-bar-graph.png" /></div>
+<div style="float: left; width: 528px; margin-left: 20px;"><h2>Dynamic SVG based on IDs</h2>
+<%- include('components/dynamic-svgs/plain-bar-graph.svg'); %>
+<%- include('components/dynamic-svgs/filled-in-bar-graph.svg'); %></div>
+<div style="clear:both">
+<h3>These are all instances of the same Sketch Symbol with Sketch overrides & JS localization applied</h3>
+<%- include('components/dynamic-svgs/0000_ID=my-page.svg'); %>
+</div>
+
+
+
+<style>
+	.growFromLeft {
+		animation: growFromLeft 2s ease-out forwards;
+	}
+
+	@-webkit-keyframes growFromLeft {
+		from { transform: scaleX(0); }
+		to { transform: scaleX(1); }
+	}
+
+	.animatable {
+		animation-play-state: paused;
+	}
+
+	.animate {
+		animation-play-state: running;
+	}
+</style>
+
+<script>
+	const locals = {};
+	<%
+		Object.keys(locals).forEach(function(key, fileIndex) {
+			if (key != '_locals' && key != 'path' && key != 'util' && key != 'classnames' && key != 'sizeOf') {
+				if(typeof locals[key] === 'object') {
+					echo(`locals['${key}'] = ${JSON.stringify(locals[key])};`);
+				} else {
+					echo(`locals['${key}'] = "${locals[key]}";`);
+				}
+			}
+		});
+	%>
+
+	const graphsToAnimate = document.querySelectorAll('g[id*="animated-graph"]');
+
+	const getGraphMetaDataFromID = (id) => id.split('___').reduce((attributes, attribute) => {
+		const [ key, value=true ] = attribute.split('=');
+		// combine if duplicate. This allows you to add multiple classes eg: class=hide___class=animate
+		attributes[key] = attributes[key] && `${attributes[key]} ${value}` || value;
+		return attributes;
+	}, {});
+
+	graphsToAnimate.forEach((graphToAnimate) => {
+		const graphMetaData = getGraphMetaDataFromID(graphToAnimate.parentNode.id);
+		const graphLocalization = locals.localization[graphMetaData.ID] || {};
+
+		const graphElementsToAnimate = graphToAnimate.querySelectorAll('g[id*="auto-animate="]');
+
+		graphElementsToAnimate.forEach((graphElementToAnimate) => {
+			const targetAnimation = graphElementToAnimate.id.match(/auto-animate=([a-zA-Z0-9\-]*)/);
+
+			switch (targetAnimation[1]) {
+				case 'grow-from-left':
+				case 'grow-right':
+				case 'right':
+					graphElementToAnimate.querySelectorAll('polygon:not([fill-opacity="0"])').forEach(elm => elm.classList.add('growFromLeft'));
+					break;
+				default:
+
+			}
+		});
+
+
+
+		const dynamicTextsToReplace = graphToAnimate.querySelectorAll('text[id*="dyn-text="]');
+
+		dynamicTextsToReplace.forEach((dynamicTextToReplaceWrapper) => {
+			const targetText = dynamicTextToReplaceWrapper.id.match(/dyn-text=([a-zA-Z0-9\-]*)/);
+
+			const dynamicTextToReplace = dynamicTextToReplaceWrapper.querySelector('tspan');
+
+			if (dynamicTextToReplace && dynamicTextToReplace.textContent && typeof graphLocalization[targetText[1]] !== "undefined") {
+				dynamicTextToReplace.textContent = graphLocalization[targetText[1]];
+			}
+		});
+	});
+</script>
+
