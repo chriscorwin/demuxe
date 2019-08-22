@@ -119,27 +119,6 @@ body {
   border-radius: 4px 4px 0 0;
 }
 
-#content-wrapper {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding-top: 1rem;
-  background-color: white;
-}
-
-header.slds-global-header_container, #subheader-wrapper, #content-wrapper {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  width: 1280px !important;
-  max-width: 1280px !important;
-  left: unset !important;
-  top: unself !important;
-}
-
-#subheader-wrapper, #content-wrapper {
-  width: 1250px !important;
-  max-width: 1250px !important;
-}
-
 .slds-container_large, .slds-container--large {
   max-width: 78.3rem;
 }

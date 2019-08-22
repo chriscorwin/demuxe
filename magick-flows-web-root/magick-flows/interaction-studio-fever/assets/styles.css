@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/interaction-studio/main/0000___ID=kat-at-gmail-detail-record___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio/assets/all__viewport-size.png");
+  content: url("/magick-flows/interaction-studio-fever/main/0000___ID=kat-at-gmail-detail-record___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/interaction-studio-fever/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -341,6 +341,10 @@ header.magick-flows-stickey-header_container {
   opacity: 1;
   transition: 250ms all ease-in-out;
   will-change: all;
+}
+
+.magick-flows-step iframe {
+  border: none;
 }
 
 html {
