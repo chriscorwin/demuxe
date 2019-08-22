@@ -16,7 +16,70 @@ const sassMiddleware = require('node-sass-middleware');
 const classnames = require('classnames');
 const sizeOf = require('image-size');
 
+const appSetup = require('./heroku_modules/@salesforce-mc/devbuild/dist/scripts/utilities/appSetup');
+const passport = require('passport');
+const PassportOAuth = require('passport-oauth2');
 
+const useSSO = (NODE_ENV === 'production' && !HOST.match(/-(dev|qa)\./)); // SSO only on prod server for now, turned off on QA server
+
+const preServeHook = (app) => {
+	if (useSSO) {
+		const authenticate = (req, res, next) => {
+			if (req.path === '/auth') {
+				return next();
+			}
+			if (req.session && req.session.passport) {
+				return next();
+			} else {
+				res.send(ssoHTML);
+			}
+		};
+
+		passport.use('sso',
+			new PassportOAuth({
+				authorizationURL: 'https://aloha.my.salesforce.com/services/oauth2/authorize',
+				tokenURL: 'https://aloha.my.salesforce.com/services/oauth2/token',
+				clientID: process.env.SSO_CLIENT_ID,
+				clientSecret: process.env.SSO_CLIENT_SECRET,
+				callbackURL: `${HOST}/auth`
+			}, (accessToken, refreshToken, profile, done) => {
+				request(
+					`https://login.salesforce.com/services/oauth2/userinfo?oauth_token=${accessToken}`,
+					(err, res, body) => {
+						if (err) return done(err, {});
+						try {
+							const bodyObj = JSON.parse(body);
+							const photos = bodyObj.photos || {};
+							const user = {
+								email: bodyObj.email,
+								id: bodyObj.user_id,
+								name: bodyObj.name,
+								thumbnail: photos.thumbnail,
+								token: accessToken,
+								username: (bodyObj.preferred_username || '').replace(/@sso\.salesforce\.com.*/, '')
+							};
+							done(null, user);
+						} catch (e) {
+							done(null, {});
+						}
+					}
+				);
+			})
+		);
+		passport.serializeUser((user, done) => {
+			done(null, user);
+		});
+		passport.deserializeUser((user, done) => {
+			done(null, user);
+		});
+
+		app.use(cookieParser());
+		app.use(cookieSession({ name: process.env.SSO_COOKIE_NAME, keys: ['oatmeal', 'raisin'] }));
+		app.use(passport.initialize());
+		app.use(passport.session());
+		app.use(authenticate);
+	}
+}
 
 // console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:21 ] process.env.DEBUG: `, util.inspect(process.env.DEBUG, { showHidden: true, depth: null, colors: true }));
 
@@ -37,8 +100,7 @@ const config = require('./config/config.js')();
 
 const app = express();
 
-
-
+if (preServeHook) preServeHook(app);
 
 
 
@@ -174,6 +236,10 @@ appUse.push(
 app.use(appUse);
 
 const router = express.Router();
+
+if (useSSO) {
+	router.get('/auth', (req, res, next) => fn.apply(this, [].concat([passport], [req, res, next])));
+}
 
 /**
  * Serve up the .ejs files
