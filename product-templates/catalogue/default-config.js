@@ -2,6 +2,9 @@ const demosGroupsConfigPath = require("path").join(__dirname, "demo_groupings");
 let demoGroups = [];
 
 require("fs").readdirSync(demosGroupsConfigPath).forEach(function(file) {
+	//only  pull in .json files
+	if (!file.match(/json$/)) return;
+
 	try {
 		const config = require(`./demo_groupings/${file}`);
 

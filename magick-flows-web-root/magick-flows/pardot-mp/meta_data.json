@@ -1,8 +1,11 @@
 {
 	"id": "pardot-mp",
 	"name": "Pardot Michael Page",
-	"description": "Lorem ipsum dolor sit amet",
-	"longFormDescription": "<p>Salesforce Pardot Michael Page Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"description": "Magick Flow",
+	"longFormDescription": "<p>Part of the Salesforce for Marketing keynote, delivered from the mainstage.</p><p>A Magick Flow that demonstrates some portions of Pardot.</p>",
+	"recordings": [
+		{"title": "Pardot Magick Flow", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?start=2073"}
+	],
 	"venue": "Connections 2019",
 	"tags": ["Connections", "Keynote", "2019"],
 	"thumbnail": "/magick-flows/pardot-mp/main/0000___ID=pardot-engagement-studio___DATA=unset___NOTES=Notes-go-here.png"
