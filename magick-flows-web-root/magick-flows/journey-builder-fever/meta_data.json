@@ -1,8 +1,11 @@
 {
 	"id": "journey-builder-fever",
 	"name": "Journey Builder Fever",
-	"description": "Lorem ipsum dolor sit amet",
-	"longFormDescription": "<p>Salesforce Journey Builder Fever Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
+	"description": "Magick Flow for Connections 2019 Salesforce for Marketing Keynote",
+	"longFormDescription": "<p>Magick Flow that shows Journey Builder Canvas. Includes drawers.</p>",
+	"recordings": [
+		{"title": "Salesforce for Marketing Engagement Reimagined for Today's Connected Customer", "link": "https://www.youtube.com/embed/zfW6PG1hWw4?start=1421"}
+	],
 	"venue": "Connections 2019",
 	"tags": ["Connections", "Keynote", "2019"],
 	"thumbnail": "/magick-flows/journey-builder-fever/main/010___ID=journey-canvas-for-fever___NOTES=click-push-notification-titled-welcome-and-seating.png"
