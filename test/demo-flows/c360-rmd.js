@@ -1,3 +1,5 @@
+// npm run test test/test-runner.test.js c360_rmd
+
 const env = process.env.ENV || 'local';
 const settings = require('../../config/config.js')();
 const testhost = settings[env].host;
@@ -8,7 +10,7 @@ const LONG = 3000;
 const XLONG = 6000;
 
 module.exports = {
-	id: 'c360-rmd',
+	id: 'c360_rmd',
 	name: 'c360.rmd',
 	description: 'c360 Release Marketing Demo Flow',
 	headless: false,

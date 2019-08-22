@@ -7,7 +7,7 @@ const is_cnx19keynote_michael_page = require('./is_cnx19keynote_michael-page');
 const audience_studio_cnx19keynote_fever = require('./audience-studio_cnx19keynote_fever');
 const audience_360_cnx19keynote_fever = require('./audience-360_cnx19keynote_fever');
 const audience_360_cnx19keynote_pacers = require('./audience-360_cnx19keynote_pacers');
-
+const c360_rmd = require('./c360-rmd');
 
 module.exports = [
 	audience_studio_df18keynote_bbva,
@@ -18,5 +18,6 @@ module.exports = [
 	is_cnx19keynote_michael_page,
 	audience_studio_cnx19keynote_fever,
 	audience_360_cnx19keynote_fever,
-	audience_360_cnx19keynote_pacers
+	audience_360_cnx19keynote_pacers,
+	c360_rmd
 ];
