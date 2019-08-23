@@ -241,7 +241,6 @@ app.get('/logout',
  * All user input will be sanitized. If you have a URL or Query param that is getting mutated unexpectedly, this is why.
  */
 router.get('/*', (req, res) => {
-	console.log('got here');
 	// Pass any query params they put in the URL on into the EJS template for use
 	const sanitizedQueryParams = Object.keys(req.query).reduce((sanitizedQueryParams, param) => {
 		sanitizedQueryParams[req.sanitize(param)] = req.sanitize(req.query[param]);
