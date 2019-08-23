@@ -44,8 +44,8 @@ if (config.noAuth) {
 // that the password is correct and then invoke `cb` with a user object, which
 // will be set at `req.user` in route handlers after authentication.
 passport.use(new Strategy(
-	if (config.noAuth) { username="noauth"; password="noauth"; }
 	function(username, password, cb) {
+		if (config.noAuth) { username="noauth"; password="noauth"; }
 		auth.findByUsername(config.users, username, function(err, user) {
 			if (err) { return cb(err); }
 			if (!user) { return cb(null, false); }
