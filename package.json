@@ -22,7 +22,7 @@
     "connect-ensure-login": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "ejs": "^2.6.2",
+    "ejs": "git+https://github.com/cmcculloh/ejs.git",
     "express": "~4.16.0",
     "express-sanitizer": "^1.0.4",
     "express-session": "^1.16.2",
