@@ -29,12 +29,5 @@
 		"password": "blaze that trail!",
 		"displayName": "Trailblazers",
 		"emails": [ { "value": "cmcculloh@salesforce.com" } ]
-	},{
-		"id": 6,
-		"username": "noauth",
-		"password": "the world is your oyster",
-		"displayName": "Free Agent",
-		"emails": [ { "value": "cmcculloh@salesforce.com" } ]
 	}
-
 ]
