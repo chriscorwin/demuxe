@@ -14,6 +14,7 @@
 	"brandTheme": "demuxe",
 	"productTemplate": "../magick-flows-web-root",
 	"defaultUrl": "/",
+	"noAuth": true,
 	"showDefaultUrlOnMagickFlowsDashboard": false,
 	"demoVenue": "",
 	"demoVersion": "0.1",
