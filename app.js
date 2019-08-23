@@ -16,54 +16,52 @@ const sassMiddleware = require('node-sass-middleware');
 const classnames = require('classnames');
 const sizeOf = require('image-size');
 
-
-
-// console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:21 ] process.env.DEBUG: `, util.inspect(process.env.DEBUG, { showHidden: true, depth: null, colors: true }));
-
-
-let scssDebug = false;
-console.debug = function() {
-	if (process.env.DEBUG === "true") {
-		// console.debug = console.log;
-		scssDebug = true;
-		console.log.apply(this, arguments);
-	} else {
-		return;
-	}
-	// if( config.debug === false ) return;
-};
+const expressSession = require('express-session');
+const passport = require('passport');
+const Strategy = require('passport-local').Strategy;
+const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
+const auth = require('./config/auth');
 
 const config = require('./config/config.js')();
 
+
+
+// Configure the local strategy for use by Passport.
+//
+// The local strategy require a `verify` function which receives the credentials
+// (`username` and `password`) submitted by the user.  The function must verify
+// that the password is correct and then invoke `cb` with a user object, which
+// will be set at `req.user` in route handlers after authentication.
+passport.use(new Strategy(
+  function(username, password, cb) {
+    auth.findByUsername(config.users, username, function(err, user) {
+      if (err) { return cb(err); }
+      if (!user) { return cb(null, false); }
+      if (user.password != password) { return cb(null, false); }
+      return cb(null, user);
+    });
+  }));
+
+// Configure Passport authenticated session persistence.
+//
+// In order to restore authentication state across HTTP requests, Passport needs
+// to serialize users into and deserialize users out of the session.  The
+// typical implementation of this is as simple as supplying the user ID when
+// serializing, and querying the user record by ID from the database when
+// deserializing.
+passport.serializeUser(function(user, cb) {
+  cb(null, user.id);
+});
+
+passport.deserializeUser(function(id, cb) {
+  auth.findById(config.users, id, function (err, user) {
+    if (err) { return cb(err); }
+    cb(null, user);
+  });
+});
+
+
 const app = express();
-
-
-
-
-
-
-console.log(`[ app.js:29 ] config.debug: `, util.inspect(config.debug, { showHidden: true, depth: null, colors: true }));
-
-
-
-
-// if (config.DEBUG === "true") {
-// 	console.debug = console.log;
-// } else {
-
-// 	console.debug = function() {
-// 		console.log('debugging!')
-// 		return;
-// 		// if( config.DEBUG === false ) {
-// 		// 	return
-// 		// } else {
-// 			console.log.apply(this, arguments);
-// 		// }
-// 	};
-
-// }
-
-
 
 
 console.group(`
@@ -105,10 +103,14 @@ const appUse = [
 	express.json(),
 	express.urlencoded({ extended: false }),
 	expressSanitizer(),
-	cookieParser()
+	cookieParser(),
+	expressSession({ secret: 'Salsa Farse', resave: false, saveUninitialized: false }),
+	passport.initialize(),
+	passport.session()
 ];
 
 const sourceMap = (typeof config.sourceMap !== 'undefined') ? config.sourceMap : true;
+const scssDebug = process.env.NODE_ENV !== "production";
 // SASS loads things in a first-found-in-array manner
 if (config.brandTheme) {
 	appUse.push(
@@ -174,6 +176,19 @@ appUse.push(
 app.use(appUse);
 
 const router = express.Router();
+
+app.get('/login', function(req, res) {
+  res.render('login');
+});
+
+app.post('/login', passport.authenticate('local', { successReturnToOrRedirect: '/', failureRedirect: '/login' }));
+
+app.get('/logout',
+	function(req, res){
+		req.logout();
+		res.redirect('/');
+	}
+);
 
 /**
  * Serve up the .ejs files
@@ -250,7 +265,7 @@ router.get('/*', (req, res) => {
 Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 ------------------------------------------------------------
 						`);
-						res.render('wrapper-for-magick-flows', { ...config, siteSection: 'magick-flows', sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util });
+						res.render('wrapper-for-magick-flows', { ...config, user: req.user, siteSection: 'magick-flows', sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util });
 						console.groupEnd();
 
 					} else {
@@ -282,7 +297,7 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 							res.send(`data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==`);
 						} else {
 
-							res.render('404', { page: fileName, ...config, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
+							res.render('404', { page: fileName, ...config, user: req.user, sanitizedQueryParams: sanitizedQueryParams }, (err, html) => {
 
 								if (req.url.match(/\.js$/)) {
 									res.set('Content-Type', 'application/javascript');
@@ -296,13 +311,13 @@ Demuxe: app.js will serve up a Magick Flow for URL ${thisUrlSlug}
 						}
 					}
 				} else {
-					res.render(fileName, { ...config, siteSection: fileNameSlug, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
+					res.render(fileName, { ...config, user: req.user, siteSection: fileNameSlug, sanitizedQueryParams: sanitizedQueryParams, classnames: classnames, sizeOf: sizeOf, util: util, path: path });
 				}
 			});
 		});
 	});
 });
-app.use('/', router);
+app.use('/', ensureLoggedIn('/login'), router);
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,33 @@
+[
+	{
+		"id": 1,
+		"username": "cmcculloh",
+		"password": "o3cMymoJkq",
+		"displayName": "Christopher McCulloh",
+		"emails": [ { "value": "cmcculloh@salesforce.com" } ]
+	},{
+		"id": 2,
+		"username": "ccorwin",
+		"password": "8QneWfZRkn",
+		"displayName": "Chris Corwin",
+		"emails": [ { "value": "ccorwin@salesforce.com" } ]
+	},{
+		"id": 3,
+		"username": "iheyveld",
+		"password": "h9QReTLhco",
+		"displayName": "Isaac Heyveld",
+		"emails": [ { "value": "iheyveld@salesforce.com" } ]
+	},{
+		"id": 4,
+		"username": "b2cux",
+		"password": "design heroes",
+		"displayName": "B2C UX",
+		"emails": [ { "value": "cmcculloh@salesforce.com" } ]
+	},{
+		"id": 5,
+		"username": "presenters",
+		"password": "blaze that trail!",
+		"displayName": "Trailblazers",
+		"emails": [ { "value": "cmcculloh@salesforce.com" } ]
+	}
+]

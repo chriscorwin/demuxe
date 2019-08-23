@@ -199,7 +199,7 @@ const getStepData = (flowData, fileName, fileIndex) => {
 
 	stepDataAttributes = getDataFromFilename(stepDataAttributes, fileName);
 
-	console.debug(`[ config/magick-flows-util/get-flow-data.js:109 ] stepDataAttributes: `, util.inspect(stepDataAttributes, { showHidden: true, depth: null, colors: true }));
+	console.debug(`[ config/magick-flows-util/get-flow-data.js:202 ] stepDataAttributes: `, util.inspect(stepDataAttributes, { showHidden: true, depth: null, colors: true }));
 
 	if ( fileName.endsWith('.ejs') === true ) {
 		stepDataAttributes.dimensions = {type: 'ejs'};

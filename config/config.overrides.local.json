@@ -1,4 +1,5 @@
 {
 	"name": "C360 Release Marketing Demo (local)",
-	"env": "local"
+	"env": "local",
+	"DEBUG": false
 }

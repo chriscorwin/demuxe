@@ -24,6 +24,15 @@
 	"demoMagickFlowUrlSlugs": [],
 	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
 	"env": "production",
+	"users": [
+		{
+			"id": 0,
+			"username": "catalogue",
+			"password": "BWdFTwJd2j",
+			"displayName": "Catalogue User",
+			"emails": [ { "value": "cmcculloh@salesforce.com" } ]
+		}
+	],
 	"production": {
 		"host": "https://c360-rmd.herokuapp.com/"
 	},
