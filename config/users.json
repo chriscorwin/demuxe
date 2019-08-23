@@ -29,5 +29,11 @@
 		"password": "blaze that trail!",
 		"displayName": "Trailblazers",
 		"emails": [ { "value": "cmcculloh@salesforce.com" } ]
+	},{
+		"id": 6,
+		"username": "noauth",
+		"password": "noauth",
+		"displayName": "Justin",
+		"emails": [ { "value": "cmcculloh@salesforce.com" } ]
 	}
 ]
