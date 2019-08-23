@@ -3,9 +3,9 @@
 
 	<div class="slds-col slds-size_1-of-2">
 
-		<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
+		<div class="magick-flows-dashboard  slds-m-top_x-large">
 			<h1 class="slds-text-heading_large slds-m-bottom_small">Magick Flows in this instance of Demuxe</h1>
-			<ul class="slds-has-dividers_bottom slds-has-inline-block-links_space">
+			<ul class="slds-has-dividers_bottom slds-has-block-links_space">
 			<%_
 				let magickFlowsUrlSlugs = locals.magickFlows.urlSlugs;
 				let magickFlows = locals.magickFlows;
@@ -26,7 +26,9 @@
 
 					echo(`
 						<li class="slds-item">
-							<a href="/${node}">${node}</a>${nodesHtmlOut.length ? ( ' ☞ ' + nodesHtmlOut) : ''}
+							<a href="/${node}" class="slds-text-heading_small">${node}</a>
+
+							${nodesHtmlOut.length ? ( '<p class="slds-p-around_x-small"> ☞ ' + nodesHtmlOut + '</p>' ) : ''}
 						</li>
 					`);
 				});
@@ -35,7 +37,11 @@
 		</div>
 
 
-		<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
+		<%
+			if ( locals.showDefaultUrlOnMagickFlowsDashboard != false ) {
+		%>
+
+		<div class="magick-flows-dashboard  slds-m-top_x-large ">
 			<h1 class="slds-text-heading_large slds-m-bottom_small">Other Demos at this Instance</h1>
 			<ul class="slds-has-dividers_bottom slds-has-block-links_space">
 			<%_
@@ -44,12 +50,16 @@
 			</ul>
 		</div>
 
+		<%
+			}
+		%>
+
 	</div>
 
 
 	<div class="slds-col slds-size_1-of-2">
 
-		<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
+		<div class="magick-flows-dashboard  slds-m-top_x-large ">
 			<h1 class="slds-text-heading_large  slds-m-bottom_small">Magick Flows Quick Tips</h1>
 
 			<h2 class="slds-text-heading_medium slds-m-top_medium slds-m-bottom_small">Click Hints</h2>

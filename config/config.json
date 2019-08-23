@@ -12,8 +12,9 @@
 	"tags": [],
 	"thumbnail": "",
 	"brandTheme": "demuxe",
-	"productTemplate": "magick-flows",
-	"defaultUrl": "/c360-rmd",
+	"productTemplate": "../magick-flows-web-root",
+	"defaultUrl": "/",
+	"showDefaultUrlOnMagickFlowsDashboard": false,
 	"demoVenue": "",
 	"demoVersion": "0.1",
 	"magickFlows": {
