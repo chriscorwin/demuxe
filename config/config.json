@@ -1,5 +1,5 @@
 {
-	"noAuth": false,
+	"noAuth": true,
 	"id": "c360-rmd",
 	"name": "C360 Release Marketing Demo",
 	"designer": "Lydia Lodovisi",
