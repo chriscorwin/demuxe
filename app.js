@@ -1,4 +1,4 @@
-if (process.env.DEBUG !== true) {
+if (process.env.DEBUG !== "true") {
 	console.debug = function() {}
 }
 
@@ -118,6 +118,7 @@ const appUse = [
 ];
 
 const sourceMap = (typeof config.sourceMap !== 'undefined') ? config.sourceMap : true;
+const scssDebug = process.env.NODE_ENV !== "production";
 // SASS loads things in a first-found-in-array manner
 if (config.brandTheme) {
 	appUse.push(
