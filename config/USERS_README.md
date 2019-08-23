@@ -13,3 +13,9 @@ If you need to add a username/password for just a single demo, do that in the de
 		}
 	],
 ```
+
+To disable auth for a particular app, add the  following line to your config.json:
+
+```
+	"noAuth": true,
+```

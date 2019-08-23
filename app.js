@@ -23,10 +23,19 @@ const sizeOf = require('image-size');
 const expressSession = require('express-session');
 const passport = require('passport');
 const Strategy = require('passport-local').Strategy;
-const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
+let ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 const auth = require('./config/auth');
 
 const config = require('./config/config.js')();
+if (config.noAuth) {
+	console.debug('WARNING: AUTH IS TURNED OFF!!!');
+	ensureLoggedIn = () => {
+		return function(req, res, next) {
+			next();
+		}
+	}
+}
+
 
 // Configure the local strategy for use by Passport.
 //
@@ -35,14 +44,14 @@ const config = require('./config/config.js')();
 // that the password is correct and then invoke `cb` with a user object, which
 // will be set at `req.user` in route handlers after authentication.
 passport.use(new Strategy(
-  function(username, password, cb) {
-    auth.findByUsername(config.users, username, function(err, user) {
-      if (err) { return cb(err); }
-      if (!user) { return cb(null, false); }
-      if (user.password != password) { return cb(null, false); }
-      return cb(null, user);
-    });
-  }));
+	function(username, password, cb) {
+		auth.findByUsername(config.users, username, function(err, user) {
+			if (err) { return cb(err); }
+			if (!user) { return cb(null, false); }
+			if (user.password != password) { return cb(null, false); }
+			return cb(null, user);
+		});
+	}));
 
 // Configure Passport authenticated session persistence.
 //
@@ -52,14 +61,14 @@ passport.use(new Strategy(
 // serializing, and querying the user record by ID from the database when
 // deserializing.
 passport.serializeUser(function(user, cb) {
-  cb(null, user.id);
+	cb(null, user.id);
 });
 
 passport.deserializeUser(function(id, cb) {
-  auth.findById(config.users, id, function (err, user) {
-    if (err) { return cb(err); }
-    cb(null, user);
-  });
+	auth.findById(config.users, id, function (err, user) {
+		if (err) { return cb(err); }
+		cb(null, user);
+	});
 });
 
 
@@ -186,7 +195,7 @@ app.use(appUse);
 const router = express.Router();
 
 app.get('/login', function(req, res) {
-  res.render('login');
+	res.render('login');
 });
 
 app.post('/login', passport.authenticate('local', { successReturnToOrRedirect: '/', failureRedirect: '/login' }));
