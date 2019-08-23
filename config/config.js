@@ -30,11 +30,17 @@ module.exports = function() {
     }
 
 
-    if (process.env.DEBUG === "true") {
-        envConfigData.DEBUG = true;
+    if (envConfigData.DEBUG === true || process.env.DEBUG === 'true') {
+        console.debug = console.log;
     } else {
-        envConfigData.DEBUG = false;
+        console.debug = function() {
+            // console.log('debugging!')
+            return;
+        };
     }
+
+
+
     // merge default with env config, overwriting defaults
     configData = { ...defaultConfigData, ...envConfigData };
     configData.users = [ ...require('./users.json'), ...configData.users ];
