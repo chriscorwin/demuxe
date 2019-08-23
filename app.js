@@ -1,3 +1,7 @@
+if (process.env.DEBUG !== true) {
+	console.debug = function() {}
+}
+
 console.group(`
 ============================================================
 Demuxe: Running \`app.js\` now...
@@ -62,43 +66,10 @@ passport.deserializeUser(function(id, cb) {
 // console.log(`[ /Users/ccorwin/Documents/Workspaces/demuxe---magick-flows-for-df-2018-gathered/app.js:21 ] process.env.DEBUG: `, util.inspect(process.env.DEBUG, { showHidden: true, depth: null, colors: true }));
 
 
-let scssDebug = false;
-console.debug = function() {
-	if (process.env.DEBUG === "true") {
-		// console.debug = console.log;
-		scssDebug = true;
-		console.log.apply(this, arguments);
-	} else {
-		return;
-	}
-	// if( config.debug === false ) return;
-};
-
 const app = express();
 
 
 console.log(`[ app.js:29 ] config.debug: `, util.inspect(config.debug, { showHidden: true, depth: null, colors: true }));
-
-
-
-
-// if (config.DEBUG === "true") {
-// 	console.debug = console.log;
-// } else {
-
-// 	console.debug = function() {
-// 		console.log('debugging!')
-// 		return;
-// 		// if( config.DEBUG === false ) {
-// 		// 	return
-// 		// } else {
-// 			console.log.apply(this, arguments);
-// 		// }
-// 	};
-
-// }
-
-
 
 
 console.group(`
