@@ -246,7 +246,7 @@ function locationHashChanged(event) {
 	useStepTransition = currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition';
 	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch';
 	doAutoAdvanceStepTransition = currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
-	doAutoAdvanceStepTransition_altSyntax = currentStepMetaData.find(k => k=='@AAFAST') === '@AAFAST';
+	doAutoAdvanceStepTransition_altSyntax = currentStepMetaData.find(k => k=='@AAXFAST') === '@AAXFAST';
 
 	console.log(`currentStepMetaData: `, currentStepMetaData);
 
@@ -320,7 +320,7 @@ function locationHashChanged(event) {
 		if ( currentStepMetaData.find(k => k=='step-transition-timing--fast') === 'step-transition-timing--fast') {
 			autoAdvanceTransitionTiming = 100;
 		}
-		if ( currentStepMetaData.find(k => k=='@AAFAST') === '@AAFAST') {
+		if ( currentStepMetaData.find(k => k=='@AAXFAST') === '@AAXFAST') {
 			autoAdvanceTransitionTiming = 5;
 		}
 
