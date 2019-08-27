@@ -245,7 +245,16 @@ function locationHashChanged(event) {
 
 	useStepTransition = currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition';
 	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch';
-	doAutoAdvanceStepTransition =  currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
+	doAutoAdvanceStepTransition = currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
+	doAutoAdvanceStepTransition_altSyntax = currentStepMetaData.find(k => k=='@AAFAST') === '@AAFAST';
+
+	console.log(`currentStepMetaData: `, currentStepMetaData);
+
+
+	console.debug(`doAutoAdvanceStepTransition_altSyntax: `, doAutoAdvanceStepTransition_altSyntax);
+	if (doAutoAdvanceStepTransition_altSyntax === true) {
+		doAutoAdvanceStepTransition = true;
+	}
 
 
 	// console.group(`[ ${magickFlowConfig.urlSlug} ☞ #${previousStepNumber} location hash changed to: #${currentStepNumber} ]`);
@@ -299,15 +308,23 @@ function locationHashChanged(event) {
 
 
 
-	if ( doAutoAdvanceStepTransition === true ) {
 		console.debug(`doAutoAdvanceStepTransition: `, doAutoAdvanceStepTransition);
+	if ( doAutoAdvanceStepTransition === true ) {
 
 		if ( currentStepMetaData.find(k => k=='step-transition-timing--slow') === 'step-transition-timing--slow') {
+			autoAdvanceTransitionTiming = 5000;
+		}
+		if ( currentStepMetaData.find(k => k=='@AASLOW') === '@AASLOW') {
 			autoAdvanceTransitionTiming = 5000;
 		}
 		if ( currentStepMetaData.find(k => k=='step-transition-timing--fast') === 'step-transition-timing--fast') {
 			autoAdvanceTransitionTiming = 100;
 		}
+		if ( currentStepMetaData.find(k => k=='@AAFAST') === '@AAFAST') {
+			autoAdvanceTransitionTiming = 5;
+		}
+
+
 
 		let autoAdvanceTransitionStepNumber = stepToEvaluateForAppTransition;
 		if ( directionOfNavigation === 'forward' ) {
