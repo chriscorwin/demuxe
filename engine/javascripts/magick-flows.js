@@ -246,13 +246,15 @@ function locationHashChanged(event) {
 	useStepTransition = currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition';
 	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch';
 	doAutoAdvanceStepTransition = currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
-	doAutoAdvanceStepTransition_altSyntax = currentStepMetaData.find(k => k=='@AAXFAST') === '@AAXFAST';
+	doAutoAdvanceStepTransition_altSyntax1 = currentStepMetaData.find(k => k=='@AAXFAST') === '@AAXFAST';
+	doAutoAdvanceStepTransition_altSyntax2 = currentStepMetaData.find(k => k=='@AAFAST') === '@AAFAST';
+	doAutoAdvanceStepTransition_altSyntax3 = currentStepMetaData.find(k => k=='@AA') === '@AA';
+	doAutoAdvanceStepTransition_altSyntax4 = currentStepMetaData.find(k => k=='@AASLOW') === '@AASLOW';
 
 	console.log(`currentStepMetaData: `, currentStepMetaData);
 
 
-	console.debug(`doAutoAdvanceStepTransition_altSyntax: `, doAutoAdvanceStepTransition_altSyntax);
-	if (doAutoAdvanceStepTransition_altSyntax === true) {
+	if (doAutoAdvanceStepTransition_altSyntax1 === true || doAutoAdvanceStepTransition_altSyntax2 === true || doAutoAdvanceStepTransition_altSyntax3 === true || doAutoAdvanceStepTransition_altSyntax4 === true) {
 		doAutoAdvanceStepTransition = true;
 	}
 
@@ -318,6 +320,9 @@ function locationHashChanged(event) {
 			autoAdvanceTransitionTiming = 5000;
 		}
 		if ( currentStepMetaData.find(k => k=='step-transition-timing--fast') === 'step-transition-timing--fast') {
+			autoAdvanceTransitionTiming = 100;
+		}
+		if ( currentStepMetaData.find(k => k=='@AAFAST') === '@AAFAST') {
 			autoAdvanceTransitionTiming = 100;
 		}
 		if ( currentStepMetaData.find(k => k=='@AAXFAST') === '@AAXFAST') {
