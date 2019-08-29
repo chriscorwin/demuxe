@@ -1,9 +1,81 @@
 <%
+
 console.group(`
 ============================================================
 Demuxe: including \`engine/includes/magick-flows/magick-flows-contents.ejs\` now...
 ------------------------------------------------------------
 `);
+
+const createIosNotification = (index, path, fileName) => `
+	<div
+		id="ios-notification--step-${index}"
+		class="ios-notification ios-notification--step-${index}  magick-flows-step-asset"
+	><img src="${path}${fileName}" /></div>
+`;
+
+const createDrawer = (index, fromDirection, path, fileName) => `
+	<div
+			id="drawer-from-${fromDirection}--step-${index}"
+			class="drawer magick-flows-drawer magick-flows-drawer--from-${fromDirection} magick-flows-step-asset magick-flows-step-asset--step-${index} "
+		><img src="${path}${fileName}" /></div>
+`;
+
+const createSVGStep = (index, height, width, path, fileName) => `
+	<div
+		class="magick-flows--main-content auto-replace is-image "
+		style="height: ${height}px; width: ${width}px; display: block;"
+		id="magick-flows--main-content--step-${index}"
+	>
+		${include(`../magick-flows-web-root${path}${fileName}`)}
+	</div>
+`;
+
+const createIMGStep = (index, height, width, assetPath) => `
+	<div
+		class="magick-flows--main-content auto-replace is-image "
+		style="height: ${height}px; width: ${width}px; background-size: cover; background-image: url(${assetPath}); display: block;"
+		id="magick-flows--main-content--step-${index}"
+	>
+	</div>
+`;
+
+const createMp4Step = (index, assetPath) => `
+	<video
+		playsinline autoplay
+		class="auto-replace is-video "
+		id="magick-flows--main-content-wrapper--step-${index}"
+	>
+		<source
+			class="magick-flows--main-content auto-replace "
+			id="magick-flows--main-content--step-${index}"
+			src="${assetPath}"
+			type="video/mp4"
+		>
+		Your browser does not support the video tag.
+	</video>
+`;
+
+const cleanNote = note => note.replace(/-/g, ' ');
+const createHTMLClickHints = (index, notes) => `
+	<div
+		id="magick-flows-click-hints--step-${index}"
+		class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${index} "
+	>
+		${notes.reduce((notes, note, i) => `
+			<p data="Click hint number ${i} (${notes.length})" class="${(i === notes.length - 1) ? 'slds-p-bottom_none' : 'slds-p-bottom_medium'})}">${cleanNote(note)}.</p>
+		`, '')}
+	</div>
+`;
+
+const createEscapeHatch = (index, width, height, slug) => `
+	<iframe id="magick-flows-iframe--${index}"
+			title="Inline Frame Example"
+			width="${width}"
+			height="${height}"
+			src="/${slug}">
+	</iframe>
+`
+
 
 	let thisMagickFlowConfig = locals.magickFlows[locals.magickFlows.urlSlugsMapToFlowDirectories[locals.urlSlug]];
 	let preLoadImages = '';
@@ -71,8 +143,6 @@ _%>
 
 
 	thisMagickFlowStepMetaData.forEach(function(node, nodeIndex) {
-
-
 		const mainContentWebRootUrl = `${mainContentPath}${node.fileName}`;
 		const clickHintsAssetWebRootUrl = `${assetsContentPath}${node.id}___click-hint.png`;
 		let showHeader = node.hasStickyHeader === true || false;
@@ -119,18 +189,7 @@ _%>
 		let hasEscapeHatch = nodeData.some(testForEscapeHatch);
 		let indexOfEscapeHatch = nodeData.findIndex(testForEscapeHatch);
 		let newUrlSlugForEscapeHatch = '';
-		let escapeHatchContentHtmlOut = '';
-		if ( hasEscapeHatch === true ) {
-			newUrlSlugForEscapeHatch = decodeURIComponent(nodeData[indexOfEscapeHatch].split('--')[1]);
-			escapeHatchContentHtmlOut += `
-<iframe id="magick-flows-iframe--${node.stepsIndex}"
-    title="Inline Frame Example"
-    width="${renderSizeMainContent.width}"
-    height="${mainContentScrollableAreaHeight}"
-    src="/${newUrlSlugForEscapeHatch}">
-</iframe>
-`
-		}
+
 
 
 
@@ -162,126 +221,6 @@ _%>
 			>
 		`;
 
-
-
-		let iosNotificationHtmlOut = '';
-		const showIosNotification = node.showIosNotification === true || false;
-		if ( showIosNotification === true ) {
-			const iosNotificationWebRootUrl = `${assetsContentPath}${node.iosNotificationFileName}`;
-			iosNotificationHtmlOut = `
-				<div
-					id="ios-notification--step-${node.stepsIndex}"
-					class="ios-notification ios-notification--step-${node.stepsIndex}  magick-flows-step-asset"
-				><img src="${iosNotificationWebRootUrl}" /></div>
-			`
-		}
-
-
-
-
-		let drawerFromTopHtmlOut = '';
-		const showDrawerFromTop = node.showDrawerFromTop === true || false;
-		if ( showDrawerFromTop === true ) {
-			const drawerFromTopWebRootUrl = `${assetsContentPath}${node.drawerFromTopFileName}`;
-			drawerFromTopHtmlOut = `
-				<div
-					id="drawer-from-top--step-${node.stepsIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-top magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
-				><img src="${drawerFromTopWebRootUrl}" /></div>
-			`
-		}
-
-
-
-		let drawerFromLeftHtmlOut = '';
-		const showDrawerFromLeft = node.showDrawerFromLeft === true || false;
-		if ( showDrawerFromLeft === true ) {
-			const drawerFromLeftWebRootUrl = `${assetsContentPath}${node.drawerFromLeftFileName}`;
-			drawerFromLeftHtmlOut = `
-				<div
-					id="drawer-from-left--step-${node.stepsIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-left magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
-				><img src="${drawerFromLeftWebRootUrl}" /></div>
-			`
-		}
-
-
-		let drawerFromBottomHtmlOut = '';
-		const showDrawerFromBottom = node.showDrawerFromBottom === true || false;
-		if ( showDrawerFromBottom === true ) {
-			const drawerFromBottomWebRootUrl = `${assetsContentPath}${node.drawerFromBottomFileName}`;
-			drawerFromBottomHtmlOut = `
-				<div
-					id="drawer-from-bottom--step-${node.stepsIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-bottom magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
-				><img src="${drawerFromBottomWebRootUrl}" /></div>
-			`
-		}
-
-
-		let drawerFromRightHtmlOut = '';
-		const showDrawerFromRight = node.showDrawerFromRight === true || false;
-		if ( showDrawerFromRight === true ) {
-			const drawerFromRightWebRootUrl = `${assetsContentPath}${node.drawerFromRightFileName}`;
-			drawerFromRightHtmlOut = `
-				<div
-					id="drawer-from-right--step-${node.stepsIndex}"
-					class="drawer magick-flows-drawer magick-flows-drawer--from-right magick-flows-step-asset magick-flows-step-asset--step-${node.stepsIndex} "
-				><img src="${drawerFromRightWebRootUrl}" /></div>
-			`
-		}
-
-
-
-		let svgEmbedHtmlOut = '';
-		if ( isSvg === true ) {
-			const svgEmbedWebRootUrl = `../magick-flows-web-root${mainContentPath}${node.fileName}`;
-			svgEmbedHtmlOut += `
-				<div
-					class="magick-flows--main-content auto-replace is-image "
-					style="height: ${renderSizeMainContent.height}px; width: ${renderSizeMainContent.width}px; display: block;"
-					id="magick-flows--main-content--step-${nodeIndex}"
-				>
-			`;
-			svgEmbedHtmlOut += include(svgEmbedWebRootUrl);
-			svgEmbedHtmlOut += `
-				</div>
-			`;
-		}
-
-
-		let clickHintsHtmlOut = '';
-		let htmlCommentsHtmlOut = '';
-		let hasNotes = node.notes.length > 0 ? true : false;
-		if ( node.notes.length === 1 && node.notes[0] === 'unset' ) {
-			hasNotes = false;
-		}
-		if ( hasNotes === true ) {
-
-
-			clickHintsHtmlOut += `
-				<div
-					id="magick-flows-click-hints--step-${node.stepsIndex}"
-					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.stepsIndex} "
-				>
-			`
-			let thisParagraphClassName = `slds-p-bottom_medium`;
-			node.notes.forEach((note, noteIndex) => {
-				if (noteIndex === node.notes.length - 1) {
-					thisParagraphClassName = `slds-p-bottom_none`
-				}
-				note = note.replace(/-/g, ' ');
-
-				clickHintsHtmlOut += `<p data="Click hint number ${noteIndex} (${node.notes.length})" class="${thisParagraphClassName}">${note}.</p>`
-				htmlCommentsHtmlOut += `${note}
-`;
-			});
-
-
-			clickHintsHtmlOut += `
-				</div>
-			`
-		}
 %>
 
 
@@ -299,7 +238,7 @@ _%>
 
 <%= node.id %>
 --------------------------------------
-<%= htmlCommentsHtmlOut %>
+<%= node.notes.reduce((comments, comment) => `${comments} ${cleanNote(comment)}`, '') %>
 -->
 <div
 	class="slds-grid slds-grid_vertical magick-flows--step-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
@@ -311,65 +250,30 @@ _%>
 <%_ } _%>
 
 <%
-
 		echo(`
 			<div
 				class="slds-col slds-scrollable"
 				style="height: ${mainContentScrollableAreaHeight}px; margin-bottom: ${renderSizeFooter.height}px; margin-top: ${headerPaddingforMain}px;"
 			>
+				${hasEscapeHatch === true ? createEscapeHatch(node.stepsIndex, renderSizeMainContent.width, mainContentScrollableAreaHeight, decodeURIComponent(nodeData[indexOfEscapeHatch].split('--')[1])) : ''}
 		`);
 
-		if (hasEscapeHatch === true) {
-			echo(`${escapeHatchContentHtmlOut}`);
-		}
-		if (isSvg) {
-			echo(`${svgEmbedHtmlOut}`);
-		} else if (isPng || isGif || isJpeg) {
-			echo(`
-				<div
-					class="magick-flows--main-content auto-replace is-image "
-					style="height: ${renderSizeMainContent.height}px; width: ${renderSizeMainContent.width}px; background-size: cover; background-image: url(${mainContentWebRootUrl}); display: block;"
-					id="magick-flows--main-content--step-${nodeIndex}"
-				>
-				</div>
-			`);
-		} else if (isEjs) {
-			echo(`
-				<div
-					class="slds-scrollable"
-				>
-			`);
-				echo(include(mainContentWebRootUrl))
-			echo(`
-				</div>
-			`);
-		} else if (isMp4) {
-			echo(`
-				<video
-					playsinline autoplay
-					class="auto-replace is-video "
-					id="magick-flows--main-content-wrapper--step-${nodeIndex}"
-				>
-					<source
-						class="magick-flows--main-content auto-replace "
-						id="magick-flows--main-content--step-${nodeIndex}"
-						src="${mainContentWebRootUrl}"
-						type="video/mp4"
-					>
-					Your browser does not support the video tag.
-				</video>
-			`);
-		}
-
-
+			if (isSvg) {
+				echo(createSVGStep(nodeIndex, renderSizeMainContent.height, renderSizeMainContent.width, mainContentPath, node.fileName));
+			} else if (isPng || isGif || isJpeg) {
+				echo(createIMGStep(nodeIndex, renderSizeMainContent.height, renderSizeMainContent.width, mainContentWebRootUrl));
+			} else if (isEjs) {
+				echo(`
+					<div class="slds-scrollable">
+						${include(mainContentWebRootUrl)}
+					</div>
+				`);
+			} else if (isMp4) {
+				echo(createMp4Step(nodeIndex, mainContentWebRootUrl));
+			}
 
 		echo(`</div>`)
-
-
-
 %>
-
-
 
 
 <%_ if (showFooter) { _%>
@@ -381,13 +285,19 @@ _%>
 		/>
 	</footer>
 <%_ } _%>
-	<%- drawerFromTopHtmlOut %>
-	<%- drawerFromRightHtmlOut %>
-	<%- drawerFromBottomHtmlOut %>
-	<%- drawerFromLeftHtmlOut %>
-	<%- iosNotificationHtmlOut %>
 
-	<%- clickHintsHtmlOut %>
+
+
+	<%
+		node.showDrawerFromTop === true && echo(createDrawer(node.stepsIndex, 'top', assetsContentPath, node.drawerFromTopFileName));
+		node.showDrawerFromRight === true && echo(createDrawer(node.stepsIndex, 'right', assetsContentPath, node.drawerFromRightFileName));
+		node.showDrawerFromBottom === true && echo(createDrawer(node.stepsIndex, 'bottom', assetsContentPath, node.drawerFromBottomFileName));
+		node.showDrawerFromLeft === true && echo(createDrawer(node.stepsIndex, 'left', assetsContentPath, node.drawerFromLeftFileName));
+		node.showIosNotification === true && echo(createIosNotification(node.stepsIndex, assetsContentPath, node.iosNotificationFileName));
+
+		const hasClickHints = node.notes.length > 0 && !(node.notes.length === 1 && node.notes[0] === 'unset');
+		hasClickHints && echo(createHTMLClickHints(node.stepsIndex, node.notes));
+	%>
 
 </div>
 
