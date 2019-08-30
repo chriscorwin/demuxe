@@ -22,7 +22,7 @@ const createDrawer = (index, fromDirection, path, fileName) => `
 
 const createSVGStep = (index, height, width, path, fileName) => `
 	<div
-		class="magick-flows--main-content auto-replace is-image "
+		class="magick-flows--main-content auto-replace is-image"
 		style="height: ${height}px; width: ${width}px; display: block;"
 		id="magick-flows--main-content--step-${index}"
 	>
@@ -62,7 +62,7 @@ const createHTMLClickHints = (index, notes) => `
 		class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${index} "
 	>
 		${notes.reduce((notes, note, i) => `
-			<p data="Click hint number ${i} (${notes.length})" class="${(i === notes.length - 1) ? 'slds-p-bottom_none' : 'slds-p-bottom_medium'})}">${cleanNote(note)}.</p>
+			<p data="Click hint number ${i} (${notes.length})" class="${(i === notes.length - 1) ? 'slds-p-bottom_none' : 'slds-p-bottom_medium'}">${cleanNote(note)}.</p>
 		`, '')}
 	</div>
 `;
@@ -213,14 +213,6 @@ _%>
 			headerWebRootUrl = mainContentWebRootUrl;
 		}
 
-		preLoadImages += `<img
-			class=""
-			src="${mainContentWebRootUrl}"
-			height="0"
-			width="0"
-			>
-		`;
-
 %>
 
 
@@ -262,6 +254,15 @@ _%>
 				echo(createSVGStep(nodeIndex, renderSizeMainContent.height, renderSizeMainContent.width, mainContentPath, node.fileName));
 			} else if (isPng || isGif || isJpeg) {
 				echo(createIMGStep(nodeIndex, renderSizeMainContent.height, renderSizeMainContent.width, mainContentWebRootUrl));
+
+
+				preLoadImages += `<img
+					class=""
+					src="${mainContentWebRootUrl}"
+					height="0"
+					width="0"
+					>
+				`;
 			} else if (isEjs) {
 				echo(`
 					<div class="slds-scrollable">
