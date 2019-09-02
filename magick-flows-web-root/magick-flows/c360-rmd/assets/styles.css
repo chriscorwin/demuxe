@@ -1,8 +1,7 @@
-@charset "UTF-8";
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/c360-rmd/main/0000___ID=home___DATA=unset___NOTES=Click-“Add-Data-Sources”-button.png") url("/magick-flows/c360-rmd/main/0010___ID=data-sources___DATA=unset___NOTES=Click-“Data-Mapping”-in-left-nav.png") url("/magick-flows/c360-rmd/main/0020___ID=dm___DATA=unset___NOTES=Click-the-“pencil”-icon-next-to-“Contact-Point-Address”__The-object-editor-drawer-will-appear.png") url("/magick-flows/c360-rmd/main/2000___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2050___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2100___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2150___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2200___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2250___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2300___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2350___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2400___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2450___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2500___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2550___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2600___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2650___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2700___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2715___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening.png") url("/magick-flows/c360-rmd/main/2999___ID=object-editor-drawer--before-close___DATA=unset___NOTES=Click-the-“Close”-button.png") url("/magick-flows/c360-rmd/main/3800___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3801___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3802___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3803___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3804___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3805___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3806___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3807___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3808___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3809___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3810___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3811___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3812___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3813___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3814___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/3815___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-closing.png") url("/magick-flows/c360-rmd/main/4010___ID=dm___DATA=unset___NOTES=Click-the-“Account”-disclose-chevron.png") url("/magick-flows/c360-rmd/main/4020___ID=dm___DATA=unset___NOTES=Click-the-“Data-Stewardship”-in-the-left-nav.png") url("/magick-flows/c360-rmd/main/4030___ID=dm___DATA=iunset___NOTES=Click-the-“Profile-Rules”-in-the-left-nav.png") url("/magick-flows/c360-rmd/main/4040___ID=profile-rules___DATA=unset___NOTES=Click-the-“Data-Jobs”-in-the-left-nav.png") url("/magick-flows/c360-rmd/main/5010___ID=new-data-job___DATA=unset___NOTES=Click-the-“Next”-button.png") url("/magick-flows/c360-rmd/main/5020___ID=data-job-running___DATA=unset___NOTES=Click-“Dashboards”-in-the-left-nav.png") url("/magick-flows/c360-rmd/main/6010___ID=dashboards___DATA=unset___NOTES=Click-“Somewhere”-to-go-on.png") url("/magick-flows/c360-rmd/main/6020___ID=find-customers___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-“Somewhere”-to-go-on.png") url("/magick-flows/c360-rmd/main/6030___ID=customer-profile___DATA=unset___NOTES=Click-“Somewhere”-to-go-on.png") url("/magick-flows/c360-rmd/main/7010___ID=order-summary___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-“Somewhere”-to-go-on.png") url("/magick-flows/c360-rmd/main/9999___ID=End___DATA=unset___NOTES=End.png") url("/magick-flows/c360-rmd/assets/all__viewport-size.png");
+  content: url("/magick-flows/c360-rmd/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -166,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 119040px;
+  width: 149760px;
 }
 
 .app-switcher-one.shrink {
@@ -1732,6 +1731,390 @@ body.debug div#drawer-from-top--step-47::before {
   top: 0;
   width: 1280px;
   left: 120320px;
+}
+
+.app-switcher-one.be-left-48 {
+  left: -122880px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-48 {
+  left: -122880px;
+}
+
+body.debug div#drawer-from-top--step-48::before {
+  content: "Drawer #48";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-48 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 122880px;
+}
+
+.app-switcher-one.be-left-49 {
+  left: -125440px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-49 {
+  left: -125440px;
+}
+
+body.debug div#drawer-from-top--step-49::before {
+  content: "Drawer #49";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-49 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 125440px;
+}
+
+.app-switcher-one.be-left-50 {
+  left: -128000px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-50 {
+  left: -128000px;
+}
+
+body.debug div#drawer-from-top--step-50::before {
+  content: "Drawer #50";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-50 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 128000px;
+}
+
+.app-switcher-one.be-left-51 {
+  left: -130560px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-51 {
+  left: -130560px;
+}
+
+body.debug div#drawer-from-top--step-51::before {
+  content: "Drawer #51";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-51 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 130560px;
+}
+
+.app-switcher-one.be-left-52 {
+  left: -133120px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-52 {
+  left: -133120px;
+}
+
+body.debug div#drawer-from-top--step-52::before {
+  content: "Drawer #52";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-52 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 133120px;
+}
+
+.app-switcher-one.be-left-53 {
+  left: -135680px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-53 {
+  left: -135680px;
+}
+
+body.debug div#drawer-from-top--step-53::before {
+  content: "Drawer #53";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-53 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 135680px;
+}
+
+.app-switcher-one.be-left-54 {
+  left: -138240px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-54 {
+  left: -138240px;
+}
+
+body.debug div#drawer-from-top--step-54::before {
+  content: "Drawer #54";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-54 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 138240px;
+}
+
+.app-switcher-one.be-left-55 {
+  left: -140800px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-55 {
+  left: -140800px;
+}
+
+body.debug div#drawer-from-top--step-55::before {
+  content: "Drawer #55";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-55 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 140800px;
+}
+
+.app-switcher-one.be-left-56 {
+  left: -143360px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-56 {
+  left: -143360px;
+}
+
+body.debug div#drawer-from-top--step-56::before {
+  content: "Drawer #56";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-56 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 143360px;
+}
+
+.app-switcher-one.be-left-57 {
+  left: -145920px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-57 {
+  left: -145920px;
+}
+
+body.debug div#drawer-from-top--step-57::before {
+  content: "Drawer #57";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-57 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 145920px;
+}
+
+.app-switcher-one.be-left-58 {
+  left: -148480px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-58 {
+  left: -148480px;
+}
+
+body.debug div#drawer-from-top--step-58::before {
+  content: "Drawer #58";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-58 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 148480px;
+}
+
+.app-switcher-one.be-left-59 {
+  left: -151040px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-59 {
+  left: -151040px;
+}
+
+body.debug div#drawer-from-top--step-59::before {
+  content: "Drawer #59";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-59 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 151040px;
 }
 
 footer.magick-flows-stickey-footer_container {
