@@ -16,7 +16,7 @@
         },{
           "removeUselessDefs": false,
         },{
-          "removeEditorsNSData": false,
+          "removeEditorsNSData": true,
         },{
           "removeEmptyAttrs": false,
         },{
