@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1280px" height="720px" viewBox="0 0 1280 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
-    <title>0000___ID=ios-notification-example___DATA=show-ios-notification___NOTES=Click-the-notification-to-dismiss-and-go-to-next-step</title>
-    <desc>Created with Sketch.</desc>
-    <g id="0000___ID=ios-notification-example___DATA=show-ios-notification___NOTES=Click-the-notification-to-dismiss-and-go-to-next-step" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="18">
-        <text id="Replace-me." fill="#3E3E3C">
+<svg width="1280" height="720" viewBox="0 0 1280 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="12" font-weight="normal" line-spacing="18">
+        <text fill="#3E3E3C">
             <tspan x="605.048" y="365">Replace me.</tspan>
         </text>
     </g>
