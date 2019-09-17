@@ -191,6 +191,7 @@ const getDataFromFilename = (stepDataAttributes, fileName) => {
 }
 
 const getStepData = (flowData, fileName, fileIndex) => {
+	if (fileName === '.DS_Store') return flowData;
 
 	let stepDataAttributes = {
 		stepsIndex: fileIndex,
