@@ -58,7 +58,7 @@ const cleanSVGs = (configData) => {
 				});
 			});
 
-			fs.writeFileSync(path.join(fileOrDirectoryPath, 'main-svgo-processed', subFileOrDirectory), dom.serialize(), 'utf8');
+			fs.writeFileSync(path.join(fileOrDirectoryPath, 'main-svgo-processed', subFileOrDirectory), dom.window.document.body.innerHTML, 'utf8');
 		});
 
 		console.log(`mkdir -p ${fileOrDirectoryPath}/main && mv ${fileOrDirectoryPath}/main-svgo-processed/* ${fileOrDirectoryPath}/main/`);

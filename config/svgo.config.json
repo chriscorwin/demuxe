@@ -46,7 +46,7 @@
         },{
           "removeUnusedNS": false,
         },{
-          "cleanupIDs": true,
+          "cleanupIDs": false,
         },{
           "prefixIds": true,
         },{
