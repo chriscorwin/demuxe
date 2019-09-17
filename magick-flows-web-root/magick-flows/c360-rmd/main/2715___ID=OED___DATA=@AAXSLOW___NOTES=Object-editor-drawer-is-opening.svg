@@ -1,4 +1,18 @@
 <svg width="1280" height="720" viewBox="0 0 1280 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        @keyframes kaboom {
+          0% {
+            transform: translate(-438px, 160px);
+          }
+          100% {
+            transform: translate(251px, 160px);
+          }
+        }
+
+        #object-editor-drawer {
+            animation: kaboom 5s ease alternate infinite;
+        }
+    </style>
     <defs>
         <filter x="-.1%" y="-1.4%" width="100.1%" height="105.6%" filterUnits="objectBoundingBox" id="2715___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening_svg__2715___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening_svg__filter-173">
             <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
@@ -3786,7 +3800,7 @@
                 </g>
             </g>
         </g>
-        <g id="2715___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening_svg__2715___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening_svg__object-editor-drawer" transform="translate(262.000000, 160.000000)">
+        <g id="object-editor-drawer" transform="translate(262.000000, 160.000000)">
             <mask id="2715___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening_svg__2715___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening_svg__mask-130" fill="white">
                 <use xlink:href="#2715___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening_svg__2715___ID=OED___DATA=@AAXFAST___NOTES=Object-editor-drawer-is-opening_svg__path-129"></use>
             </mask>

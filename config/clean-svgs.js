@@ -24,6 +24,8 @@ const cleanSVGs = (configData) => {
 		// Make sure main-src directory exists and is not empty
 		if (!fs.existsSync(path.join(fileOrDirectoryPath, '/main-src/')) || fs.readdirSync(path.join(fileOrDirectoryPath, '/main-src/')).length <= 0) return;
 
+		// Make sure the only file isn't the freaking DS_Store file
+		if (fs.readdirSync(path.join(fileOrDirectoryPath, '/main-src/')).length === 1 && fs.existsSync(path.join(fileOrDirectoryPath, '/main-src/', '.DS_Store'))) return;
 
 		console.log(`svgo --folder=${fileOrDirectoryPath}/main-src/ --output=${fileOrDirectoryPath}/main-svgo-processed/ --config=./config/svgo.config.json --pretty`);
 		console.log('this could take a few minutes...')
