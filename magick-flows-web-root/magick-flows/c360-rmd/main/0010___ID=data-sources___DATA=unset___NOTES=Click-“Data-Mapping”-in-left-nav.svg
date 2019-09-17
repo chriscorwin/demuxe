@@ -4,6 +4,10 @@
             <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feColorMatrix values="0 0 0 0 0.866666667   0 0 0 0 0.858823529   0 0 0 0 0.854901961  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
         </filter>
+        <filter x="-.2%" y="0%" width="100.8%" height="100.1%" filterUnits="objectBoundingBox" id="0010___ID=data-sources___DATA=unset___NOTES=Click-“Data-Mapping”-in-left-nav_svg__f">
+            <feOffset dx="1" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.866666667   0 0 0 0 0.858823529   0 0 0 0 0.854901961  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
         <filter x="0%" y="-1.9%" width="100.1%" height="107.7%" filterUnits="objectBoundingBox" id="0010___ID=data-sources___DATA=unset___NOTES=Click-“Data-Mapping”-in-left-nav_svg__r">
             <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feColorMatrix values="0 0 0 0 0.866666667   0 0 0 0 0.858823529   0 0 0 0 0.854901961  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
@@ -20,10 +24,6 @@
         </filter>
         <filter x="0%" y="-1.8%" width="100.1%" height="107.4%" filterUnits="objectBoundingBox" id="0010___ID=data-sources___DATA=unset___NOTES=Click-“Data-Mapping”-in-left-nav_svg__l">
             <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feColorMatrix values="0 0 0 0 0.866666667   0 0 0 0 0.858823529   0 0 0 0 0.854901961  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
-        </filter>
-        <filter x="-.2%" y="0%" width="100.8%" height="100.1%" filterUnits="objectBoundingBox" id="0010___ID=data-sources___DATA=unset___NOTES=Click-“Data-Mapping”-in-left-nav_svg__f">
-            <feOffset dx="1" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feColorMatrix values="0 0 0 0 0.866666667   0 0 0 0 0.858823529   0 0 0 0 0.854901961  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
         </filter>
         <rect id="0010___ID=data-sources___DATA=unset___NOTES=Click-“Data-Mapping”-in-left-nav_svg__c" x="0" y="0" width="1280" height="50"></rect>
