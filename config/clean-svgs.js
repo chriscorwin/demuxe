@@ -29,6 +29,14 @@ const cleanSVGs = (configData) => {
 
 		console.log(`svgo --folder=${fileOrDirectoryPath}/main-src/ --output=${fileOrDirectoryPath}/main-svgo-processed/ --config=./config/svgo.config.json --pretty`);
 		console.log('this could take a few minutes...')
+		// SVGO needs customized to make sure all IDs begin with a letter. IDs may not begin with a number.
+		// Therefore, if you npm update SVGO you have to add back in this modification:
+		/*
+			// Escapes a string for being used as ID
+			var escapeIdentifierName = function(str) {
+			    return 'a' + str.replace(/[\. ]/g, '_').replace(/\=/g, '').replace(/\@/g, '').replace(/\“/g, '').replace(/\”/g, '');
+			};
+		*/
 		execSync(`svgo --folder=${fileOrDirectoryPath}/main-src/ --output=${fileOrDirectoryPath}/main-svgo-processed/ --config=./config/svgo.config.json --pretty`);
 
 		console.log(`mkdir -p ${fileOrDirectoryPath}/main-src-originals && mv ${fileOrDirectoryPath}/main-src/* ${fileOrDirectoryPath}/main-src-originals/`);

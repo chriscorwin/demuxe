@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 42240px;
+  width: 39680px;
 }
 
 .app-switcher-one.shrink {
@@ -739,38 +739,6 @@ body.debug div#drawer-from-top--step-16::before {
   top: 0;
   width: 1280px;
   left: 40960px;
-}
-
-.app-switcher-one.be-left-17 {
-  left: -43520px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-17 {
-  left: -43520px;
-}
-
-body.debug div#drawer-from-top--step-17::before {
-  content: "Drawer #17";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-17 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 43520px;
 }
 
 footer.magick-flows-stickey-footer_container {
