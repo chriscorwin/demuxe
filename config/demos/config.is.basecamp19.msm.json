@@ -1,0 +1,54 @@
+{
+	"id": "is.basecamp19.msm",
+	"name": "IS Basecamp 19 MSM",
+	"description": "Money Supermarket Demos for 2019 Basecamps",
+	"longFormDescription": "<p>Money Supermarket Demos for 2019 Basecamps. Spans Journey Builder, Email Studio, Interaction Studio, Datorama, and Money Supermarket properties.</p>",
+	"venue": "basecamp19",
+	"date": "Throughout September & October 2019, and beyond",
+	"brands": "Money Supermarket",
+	"presenters": "Prina Mandavia",
+	"location": "Basecamps",
+	"tags": ["basecamp"],
+	"thumbnail": "",
+	"brandTheme": "msm",
+	"productTemplate": "is",
+	"demoVenue": "basecamp19",
+	"demoVersion": "0.1",
+	"magickFlows": {
+		"directoryName": "magick-flows",
+		"urlSlugs": [],
+		"urlSlugsMapToFlowDirectories": {}
+	},
+	"demoMagickFlowUrlSlugs": [],
+	"demoMagickFlowUrlSlugsMapToFlowDirectories": {},
+	"env": "production",
+	"users": [
+		{
+			"id": 0,
+			"username": "msm",
+			"password": "MWk3UHUdbv",
+			"displayName": "MSM User",
+			"emails": [ { "value": "cmcculloh@salesforce.com" } ]
+		}
+	],
+	"production": {
+		"host": "https://is.basecamp19.msm.herokuapp.com/"
+	},
+	"qa": {
+		"host": "https://is.basecamp19.msm-qa.herokuapp.com/"
+	},
+	"dev": {
+		"host": "https://is.basecamp19.msm-dev.herokuapp.com/"
+	},
+	"local": {
+		"host": "http://localhost:3000/"
+	},
+	"tests": {
+		"headless": true,
+		"imageSnapshotPath": "./test/screenshots/",
+		"mismatchThreshold": 0.01,
+		"timeout": 30000
+	},
+	"gapixelid": "",
+	"presentationid": ""
+}
