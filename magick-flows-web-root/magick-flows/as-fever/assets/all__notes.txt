@@ -1,1 +1,0 @@
-The main Audience Studio demo currently links to this, it is not intended to be viewed on its own.
