@@ -133,29 +133,29 @@ module.exports = {
 			waitFor: 'body',
 			name: '0300.email-studio',
 			description: 'Click e-mail to go to email studio (click anywhere)'
-		},
-		{
-			waitFor: 2700,
-			name: '0011.lifecycles.loaded'
-		},
-		{
-			click: '#touchpointsSelection',
-			waitFor: 500,
-			name: '0012.lifecycles.click-combobox'
-		},
-		{
-			click: '#touchpointsSelection-dropdown li:nth-of-type(2)',
-			waitFor: 'body',
-			name: '0020.channels'
-		},
-		{
-			waitFor: 2000,
-			name: '0021.channels.loaded'
-		},
-		{
-			click: '#test-and-publish',
-			waitFor: 'body',
-			name: '0030.test-and-publish'
-		}
+		}//,
+		// {
+		// 	waitFor: 2700,
+		// 	name: '0011.lifecycles.loaded'
+		// },
+		// {
+		// 	click: '#touchpointsSelection',
+		// 	waitFor: 500,
+		// 	name: '0012.lifecycles.click-combobox'
+		// },
+		// {
+		// 	click: '#touchpointsSelection-dropdown li:nth-of-type(2)',
+		// 	waitFor: 'body',
+		// 	name: '0020.channels'
+		// },
+		// {
+		// 	waitFor: 2000,
+		// 	name: '0021.channels.loaded'
+		// },
+		// {
+		// 	click: '#test-and-publish',
+		// 	waitFor: 'body',
+		// 	name: '0030.test-and-publish'
+		// }
 	]
 };
