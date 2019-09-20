@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/msm/main/0000___ID=msm-home___DATA=is-own-header__own-header-height--53___NOTES=Click-to-go-to-next-step.png") url("/magick-flows/msm/main/0100___ID=msm-next___DATA=is-own-header__own-header-height--53___NOTES=Click-to-go-to-next-step.png") url("/magick-flows/msm/main/0600___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/0700___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/0800___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/0900___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1000___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1100___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1101___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1102___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1103___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1104___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1120___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1300___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1500___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1600___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1700___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2200___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2300___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2400___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2500___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2600___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2700___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2800___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2900___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3100___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3200___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3300___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3500___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3600___ID=msm-push-credit-card___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3700___ID=msm-credit-card___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3700___ID=msm-iphone-home-screen___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4000___ID=msm-cc-app-msg___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4200___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4300___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4500___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4600___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4800___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4900___ID=datorama-mix-and-connect___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--never__is-own-header__own-header-height--60___NOTES=Notes-go-here.png") url("/magick-flows/msm/main/5000___ID=msm-ccredit-monitor-home___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/5100___ID=msm-ccredit-monitor-msg___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/assets/3600___ID=msm-push-credit-card___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/assets/all__viewport-size.png") url("/magick-flows/msm/assets/datorama-mix-and-connect___drawer-from-left.png") url("/magick-flows/msm/assets/email-activity-summary-out___drawer-from-left.png") url("/magick-flows/msm/assets/email-activity-summary-slides-away__drawer-from-left.png") url("/magick-flows/msm/assets/email-editor-slides-away___drawer-from-left.png") url("/magick-flows/msm/assets/email-editor-slides-out___drawer-from-left.png") url("/magick-flows/msm/assets/image-editor-slides-out___drawer-from-left.png") url("/magick-flows/msm/assets/msm-cc-app-msg___ios-notification.png") url("/magick-flows/msm/assets/msm-ccredit-monitor-msg___ios-notification.png");
+  content: url("/magick-flows/msm/main/0000___ID=msm-home___DATA=is-own-header__own-header-height--53___NOTES=Click-to-go-to-next-step.png") url("/magick-flows/msm/main/0100___ID=msm-next___DATA=is-own-header__own-header-height--53___NOTES=Click-to-go-to-next-step.png") url("/magick-flows/msm/main/0600___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/0700___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/0800___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/0900___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1000___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1100___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1101___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1102___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1103___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1104___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--fast___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1120___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1300___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1500___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1600___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1700___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2200___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2300___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2400___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2500___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2600___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2700___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2800___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2900___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3100___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3200___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3300___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3500___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3600___ID=msm-push-credit-card___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3700___ID=msm-credit-card___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3700___ID=msm-iphone-home-screen___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4000___ID=msm-cc-app-msg___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4200___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4300___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4500___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4600___ID=msm___DATA=use-step-transition__step-transition_auto-advance__step-transition-timing--normal___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4800___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4900___ID=datorama-mix-and-connect___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--never__is-own-header__own-header-height--60___NOTES=Notes-go-here.png") url("/magick-flows/msm/main/5000___ID=msm-ccredit-monitor-home___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/5100___ID=msm-ccredit-monitor-msg___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/9999___ID=msm-final-step___DATA=use-step-transition__step-transition_app-switch___NOTES=End.png") url("/magick-flows/msm/assets/3600___ID=msm-push-credit-card___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/assets/all__viewport-size.png") url("/magick-flows/msm/assets/datorama-mix-and-connect___drawer-from-left.png") url("/magick-flows/msm/assets/email-activity-summary-out___drawer-from-left.png") url("/magick-flows/msm/assets/email-activity-summary-slides-away__drawer-from-left.png") url("/magick-flows/msm/assets/email-editor-slides-away___drawer-from-left.png") url("/magick-flows/msm/assets/email-editor-slides-out___drawer-from-left.png") url("/magick-flows/msm/assets/image-editor-slides-out___drawer-from-left.png") url("/magick-flows/msm/assets/msm-cc-app-msg___ios-notification.png") url("/magick-flows/msm/assets/msm-ccredit-monitor-msg___ios-notification.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 103680px;
+  width: 106240px;
 }
 
 .app-switcher-one.shrink {
@@ -1541,6 +1541,38 @@ body.debug div#drawer-from-top--step-41::before {
   left: 104960px;
 }
 
+.app-switcher-one.be-left-42 {
+  left: -107520px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-42 {
+  left: -107520px;
+}
+
+body.debug div#drawer-from-top--step-42::before {
+  content: "Drawer #42";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-42 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 107520px;
+}
+
 footer.magick-flows-stickey-footer_container {
   position: absolute;
   bottom: 0;
@@ -1659,6 +1691,29 @@ div#content-wrapper {
   position: relative;
   left: auto;
   margin: 0px auto;
+}
+
+.app-switcher-one {
+  transition: 500ms transform, 500ms left;
+}
+
+.app-switcher-one.shrink {
+  transform: none;
+  will-change: left;
+}
+
+.app-switcher-one.shrink .magick-flows-step {
+  transition: 5000ms transform;
+  transform: scale(0.95);
+  will-change: all;
+  background-color: transparent;
+}
+
+.app-switcher-one.rounded-corners .magick-flows-step {
+  border-radius: 1rem;
+  background-clip: border-box;
+  overflow: hidden;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
