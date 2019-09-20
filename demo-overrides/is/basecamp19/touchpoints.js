@@ -146,19 +146,19 @@ module.exports = {
 					label: 'Awareness',
 				},
 				{
-					label: 'Search',
+					label: 'Research',
 				},
 				{
-					label: 'Application',
+					label: 'Quoting',
 				},
 				{
-					label: 'Consideration',
+					label: 'Buying',
 				},
 				{
-					label: 'Decision',
+					label: 'Renew',
 				},
 				{
-					label: 'In Role',
+					label: 'Winback',
 				}
 			]
 		}
