@@ -1,6 +1,11 @@
 const env = process.env.ENV || 'local';
 const settings = require('../../config/config.js')();
 const testhost = settings[env].host;
+const XSHORT = 10;
+const SHORT = 100;
+const MEDIUM = 2000;
+const LONG = 3000;
+const XLONG = 6000;
 
 module.exports = {
 	id: 'is_basecamp19_msm',
@@ -16,9 +21,37 @@ module.exports = {
 	skipSlideCapture: false,
 	steps: [
 		{
-			goto: testhost + '/msm',
+			goto: testhost + 'msm',
 			waitFor: 'body',
-			name: '0001.msm-home'
+			name: '0000.login',
+			description: 'Login',
+			skipSlideCapture: true,
+			skipTestCapture: true
+		},
+		{
+			evaluate: () => {
+				document.querySelector('input#username').value = 'noauth';
+				document.querySelector('input#password').value = 'noauth';
+			},
+			waitFor: 'body',
+			name: '0000.login',
+			description: 'Login',
+			skipSlideCapture: true,
+			skipTestCapture: true
+		},
+		{
+			click: '#login',
+			waitFor: 'body',
+			name: '0000.login',
+			description: 'Login',
+			skipSlideCapture: true,
+			skipTestCapture: true
+		},
+		{
+			goto: testhost + 'msm',
+			waitFor: 'body',
+			name: '0001.msm-home',
+			description: 'go to Money Supermarket Magick-Flow'
 		},
 		{
 			evaluate: () => {
@@ -133,29 +166,142 @@ module.exports = {
 			waitFor: 'body',
 			name: '0300.email-studio',
 			description: 'Click e-mail to go to email studio (click anywhere)'
-		}//,
-		// {
-		// 	waitFor: 2700,
-		// 	name: '0011.lifecycles.loaded'
-		// },
-		// {
-		// 	click: '#touchpointsSelection',
-		// 	waitFor: 500,
-		// 	name: '0012.lifecycles.click-combobox'
-		// },
-		// {
-		// 	click: '#touchpointsSelection-dropdown li:nth-of-type(2)',
-		// 	waitFor: 'body',
-		// 	name: '0020.channels'
-		// },
-		// {
-		// 	waitFor: 2000,
-		// 	name: '0021.channels.loaded'
-		// },
-		// {
-		// 	click: '#test-and-publish',
-		// 	waitFor: 'body',
-		// 	name: '0030.test-and-publish'
-		// }
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0310.email-studio.content',
+			description: 'Click content tab (click anywhere)'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0311.email-studio.content.dnd',
+			description: 'Drag and drop "2 - Monitor and improve your credit score" into template'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0312.email-studio.content.save',
+			description: 'Click save button (click anywhere)'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0320.email-studio',
+			description: 'Click activate button (click anywhere)'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0400.email',
+			description: 'Device switch to user\'s e-mail on iPhone'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0410.email',
+			description: 'Click through e-mail to view article in app'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0500.interaction-studio',
+			description: 'Device Switch to Interaction Studio'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0500.app',
+			description: 'Device switch back to article in app on phone'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0510.app.notification',
+			description: 'push notification appears'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0520.app.credit-card',
+			description: 'click through to apply for credit card'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0530.phone.sms',
+			description: 'receives text message'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0600.interaction-studio.lifecycles',
+			description: 'Device Switch back to Interaction Studio, lifecycles view'
+		},
+		{
+			waitFor: 2700,
+			name: '0601.interaction-studio.lifecycles.loaded'
+		},
+		{
+			click: '#touchpointsSelection',
+			waitFor: 500,
+			name: '0602.interaction-studio.lifecycles.click-combobox'
+		},
+		{
+			click: '#touchpointsSelection-dropdown li:nth-of-type(2)',
+			waitFor: 'body',
+			name: '0620.interaction-studio.channels'
+		},
+		{
+			waitFor: 2000,
+			name: '0621.interaction-studio.channels.loaded'
+		},
+		{
+			click: '#datorama-shortcut',
+			waitFor: 'body',
+			name: '0700.datorama'
+		},
+		{
+			evaluate: () => {
+				window.scrollBy(0, window.innerHeight/2);
+			},
+			waitFor: 200,
+			name: '0701.datorama.scroll-down'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0710.datorama.datasources',
+			description: 'click through to data sources'
+		},
+		{
+			evaluate: () => {
+				window.scrollBy(0, window.innerHeight);
+			},
+			waitFor: 200,
+			name: '0711.datorama.datasources.scroll1',
+			description: 'scroll down'
+		},
+		{
+			evaluate: () => {
+				window.scrollBy(0, window.innerHeight * 2);
+			},
+			waitFor: 200,
+			name: '0712.datorama.datasources.scroll2',
+			description: 'scroll down'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0800.phone',
+			description: 'Device switch back to lock screen on phone'
+		},
+		{
+			click: 'body',
+			waitFor: 'body',
+			name: '0810.app.notification',
+			description: 'push notification appears'
+		}
 	]
 };
