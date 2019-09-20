@@ -1,3 +1,7 @@
+body.slds-brand-band.slds-brand-band_medium.vsc-initialized {
+  background: white;
+}
+
 .slds-context-bar__item.slds-is-active:before {
   background: #F48B00;
 }
