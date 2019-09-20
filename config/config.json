@@ -1,18 +1,21 @@
 {
-	"id": "demuxe",
-	"name": "Demuxe Catalogue",
-	"description": "The Demuxe Catalogue",
-	"longFormDescription": "<p>Salesforce Connections 2019 Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p><p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>",
-	"venue": "",
-	"date": "GET CORRECT DATE",
-	"brands": "GET CORRECT BRAND",
-	"presenters": "GET CORRECT SPEAKERS",
-	"location": "GET CORRECT LOCATION",
-	"tags": [],
+	"id": "is.basecamp19.msm",
+	"name": "IS Basecamp 19 MSM",
+	"description": "Money Supermarket Demos for 2019 Basecamps",
+	"longFormDescription": "<p>Money Supermarket Demos for 2019 Basecamps. Spans Journey Builder, Email Studio, Interaction Studio, Datorama, and Money Supermarket properties.</p>",
+	"venue": "basecamp19",
+	"date": "Throughout September & October 2019, and beyond",
+	"brands": "Money Supermarket",
+	"presenters": "Prina Mandavia",
+	"recordings": [
+		{"title": "MoneySuperMarket Delivers Intelligent Marketing for the Empowered Consumer", "link": "https://youtu.be/in4Lht3iNSU?t=1513"}
+	],
+	"location": "Basecamps",
+	"tags": ["basecamp"],
 	"thumbnail": "",
-	"brandTheme": "demuxe",
-	"productTemplate": "catalogue",
-	"demoVenue": "poc19",
+	"brandTheme": "msm",
+	"productTemplate": "is",
+	"demoVenue": "basecamp19",
 	"demoVersion": "0.1",
 	"magickFlows": {
 		"directoryName": "magick-flows",
@@ -25,20 +28,20 @@
 	"users": [
 		{
 			"id": 0,
-			"username": "catalogue",
-			"password": "BWdFTwJd2j",
-			"displayName": "Catalogue User",
+			"username": "msm",
+			"password": "MWk3UHUdbv",
+			"displayName": "MSM User",
 			"emails": [ { "value": "cmcculloh@salesforce.com" } ]
 		}
 	],
 	"production": {
-		"host": "https://demuxe-catalogue.herokuapp.com/"
+		"host": "https://is.basecamp19.msm.herokuapp.com/"
 	},
 	"qa": {
-		"host": "https://demuxe-catalogue-qa.herokuapp.com/"
+		"host": "https://is.basecamp19.msm-qa.herokuapp.com/"
 	},
 	"dev": {
-		"host": "https://demuxe-catalogue-dev.herokuapp.com/"
+		"host": "https://is.basecamp19.msm-dev.herokuapp.com/"
 	},
 	"local": {
 		"host": "http://localhost:3000/"
