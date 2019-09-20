@@ -1,6 +1,11 @@
 const env = process.env.ENV || 'local';
 const settings = require('../../config/config.js')();
 const testhost = settings[env].host;
+const XSHORT = 10;
+const SHORT = 100;
+const MEDIUM = 2000;
+const LONG = 3000;
+const XLONG = 6000;
 
 module.exports = {
 	id: 'is_basecamp19_msm',
@@ -16,7 +21,34 @@ module.exports = {
 	skipSlideCapture: false,
 	steps: [
 		{
-			goto: testhost + '/msm',
+			goto: testhost + 'msm',
+			waitFor: 'body',
+			name: '0000.login',
+			description: 'Login',
+			skipSlideCapture: true,
+			skipTestCapture: true
+		},
+		{
+			evaluate: () => {
+				document.querySelector('input#username').value = 'noauth';
+				document.querySelector('input#password').value = 'noauth';
+			},
+			waitFor: 'body',
+			name: '0000.login',
+			description: 'Login',
+			skipSlideCapture: true,
+			skipTestCapture: true
+		},
+		{
+			click: '#login',
+			waitFor: 'body',
+			name: '0000.login',
+			description: 'Login',
+			skipSlideCapture: true,
+			skipTestCapture: true
+		},
+		{
+			goto: testhost + 'msm',
 			waitFor: 'body',
 			name: '0001.msm-home',
 			description: 'go to Money Supermarket Magick-Flow'
@@ -268,7 +300,7 @@ module.exports = {
 		{
 			click: 'body',
 			waitFor: 'body',
-			name: '0510.app.notification',
+			name: '0810.app.notification',
 			description: 'push notification appears'
 		}
 	]
