@@ -191,6 +191,7 @@ const getDataFromFilename = (stepDataAttributes, fileName) => {
 }
 
 const getStepData = (flowData, fileName, fileIndex) => {
+	if (fileName === '.DS_Store') return flowData;
 
 	let stepDataAttributes = {
 		stepsIndex: fileIndex,
@@ -262,7 +263,8 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 	};
 
 	try {
-		flowData.metaData = require(path.join(fileOrDirectoryPath, subFileOrDirectory, 'meta_data.json'));
+		const meta_data_path = path.join(fileOrDirectoryPath, subFileOrDirectory, 'meta_data.json')
+		flowData.metaData = fs.existsSync(meta_data_path) && require(meta_data_path);
 	} catch (e) {
 		noMetaDataError(e, flowData.name, flowData.fullContentPath);
 	}
