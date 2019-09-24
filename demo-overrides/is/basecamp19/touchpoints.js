@@ -35,14 +35,8 @@ const web = {
 		flows: [
 			{ type: 'in', width: 8 },
 			{ type: 'off', width: 6 },
-			{ type: 'forward', path: [[E, 3.2]], width: 2},
-		]
-	},
-	inRole: {
-		discs: [
-			{ audience: 'all', state: 'active', r: 21 }
-		],
-		flows: [
+			{ type: 'forward', path: [[E, .5], [S, 5], [W, .5]], width: 2},
+			{ type: 'backward', path: [[E, .5], [S, .5], [W, 3], [N, .5], [E, .5]], width: 2}
 		]
 	}
 }
@@ -131,7 +125,7 @@ const store = {
 };
 
 const points = [
-	[web.awareness, web.search, web.application, {}, {}, web.inRole],
+	[web.awareness, web.search, web.application, {}, {}, {}],
 	[mobile.awareness, mobile.search, mobile.application],
 	[{}, social.search, {}],
 	[{}, {}, store.application, store.consideration, store.decision]
