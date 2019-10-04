@@ -1,4 +1,4 @@
-// npm run test test/test-runner.test.js c360_rmd
+// npm run test test/test-runner.test.js svg-vs-png
 
 const env = process.env.ENV || 'local';
 const settings = require('../../config/config.js')();
@@ -72,31 +72,6 @@ module.exports = {
 			click: `body`,
 			waitFor: 'body',
 			name: '0090.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0100.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '1000.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '1010.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '1020.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '1030.magick-flow'
 		}
 	]
 };
