@@ -1,7 +1,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/c360-rmd/assets/all__viewport-size.png");
+  content: url("/magick-flows/svg-vs-png/main/0000___ID=journey-canvas-for-fever___NOTES=click-email-welcome-appointment-schedule.png") url("/magick-flows/svg-vs-png/main/0100___ID=email-editor-reset___NOTES=click-on-skyline-image-block-in-email.png") url("/magick-flows/svg-vs-png/main/1000____ID=mp-advertising-studio___DATA=unset___NOTES=Hi.png") url("/magick-flows/svg-vs-png/main/2000___ID=Michael-Page-Welcome___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/svg-vs-png/main/2100___ID=Lifecycle-Stages___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/svg-vs-png/main/2200___ID=Michael-Page-Monitor-with-Audience___DATA=is-own-header__own-header-height--90.png") url("/magick-flows/svg-vs-png/main/3000___ID=c360-dashboard___DATA=unset___NOTES=This-came-from-Figma-but-has-stuff-to-test.png") url("/magick-flows/svg-vs-png/main/3100___ID=c360-user-details___DATA=unset___NOTES=This-came-from-Figma-but-has-stuff-to-test.png") url("/magick-flows/svg-vs-png/main/3200___ID=c360-segment-details___DATA=unset___NOTES=This-came-from-Figma-but-has-stuff-to-test.png") url("/magick-flows/svg-vs-png/main/3200___ID=c360-segmentation___DATA=unset___NOTES=This-came-from-Figma-but-has-stuff-to-test.png") url("/magick-flows/svg-vs-png/assets/all__viewport-size.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 37120px;
+  width: 24320px;
 }
 
 .app-switcher-one.shrink {
@@ -547,166 +547,6 @@ body.debug div#drawer-from-top--step-10::before {
   top: 0;
   width: 1280px;
   left: 25600px;
-}
-
-.app-switcher-one.be-left-11 {
-  left: -28160px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-11 {
-  left: -28160px;
-}
-
-body.debug div#drawer-from-top--step-11::before {
-  content: "Drawer #11";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-11 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 28160px;
-}
-
-.app-switcher-one.be-left-12 {
-  left: -30720px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-12 {
-  left: -30720px;
-}
-
-body.debug div#drawer-from-top--step-12::before {
-  content: "Drawer #12";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-12 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 30720px;
-}
-
-.app-switcher-one.be-left-13 {
-  left: -33280px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-13 {
-  left: -33280px;
-}
-
-body.debug div#drawer-from-top--step-13::before {
-  content: "Drawer #13";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-13 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 33280px;
-}
-
-.app-switcher-one.be-left-14 {
-  left: -35840px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-14 {
-  left: -35840px;
-}
-
-body.debug div#drawer-from-top--step-14::before {
-  content: "Drawer #14";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-14 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 35840px;
-}
-
-.app-switcher-one.be-left-15 {
-  left: -38400px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-15 {
-  left: -38400px;
-}
-
-body.debug div#drawer-from-top--step-15::before {
-  content: "Drawer #15";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-15 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 38400px;
 }
 
 footer.magick-flows-stickey-footer_container {
