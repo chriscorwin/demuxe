@@ -29,17 +29,17 @@ function dynamicSassHandleError(data){
 
 
 const noMetaDataError = (error, name, fullContentPath) => {
-	if ( error.message.includes('ENOENT: no such file or directory')) {
+	if ( error.message.includes('Cannot find module')) {
 		console.error(`
-[ ERROR IN: \`config/magick-flows-util/get-flow-data.js:10\`]
+[ WARNING FOR: \`config/magick-flows-util/get-flow-data.js:269\`]
 
 Magick Flow URL Slug: \`${name}\`.
 
-The app is attempting to render a Magick Flow at:
+The app is attempting to collect meta data for the website for the magick-flow at path:
 
 ${fullContentPath}
 
-...and did not find meta data there.
+...and did not find a meta_data.json there.
 		`);
 	} else {
 		console.warn(error);
