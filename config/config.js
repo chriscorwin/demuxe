@@ -32,7 +32,7 @@ module.exports = function() {
 
     if (envConfigData.DEBUG === true || process.env.DEBUG === 'true') {
         console.debug = console.log;
-    } else {
+      } else {
         console.debug = function() {
             // console.log('debugging!')
             return;
@@ -45,6 +45,15 @@ module.exports = function() {
     configData = { ...defaultConfigData, ...envConfigData };
     configData.users = configData.users || [];
     configData.users = [ ...require('./users.json'), ...configData.users ];
+
+    configData.WHAT_IS_envConfigData = envConfigData.DEBUG;
+    configData.WHAT_IS_PROCESS_ENV_DEBUG = process.env.DEBUG;
+
+
+    if (configData.WHAT_IS_PROCESS_ENV_DEBUG === 'true') {
+        console.debug = console.log;
+        configData.DEBUG === true;
+    }
 
 
     let defaultEngineConfig = {};
