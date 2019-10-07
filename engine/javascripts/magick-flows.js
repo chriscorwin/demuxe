@@ -245,13 +245,15 @@ function locationHashChanged(event) {
 
 	useStepTransition = currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition';
 	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch';
+	
+	console.log(`currentStepMetaData: `, currentStepMetaData);
 	doAutoAdvanceStepTransition = currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
 	doAutoAdvanceStepTransition_altSyntax1 = currentStepMetaData.find(k => k=='@AAXFAST') === '@AAXFAST';
 	doAutoAdvanceStepTransition_altSyntax2 = currentStepMetaData.find(k => k=='@AAFAST') === '@AAFAST';
 	doAutoAdvanceStepTransition_altSyntax3 = currentStepMetaData.find(k => k=='@AANORMAL') === '@AANORMAL';
+	doAutoAdvanceStepTransition_altSyntax3 = currentStepMetaData.find(k => k=='@aanormal') === '@aanormal';
 	doAutoAdvanceStepTransition_altSyntax4 = currentStepMetaData.find(k => k=='@AASLOW') === '@AASLOW';
 
-	console.log(`currentStepMetaData: `, currentStepMetaData);
 
 
 	if (doAutoAdvanceStepTransition_altSyntax1 === true || doAutoAdvanceStepTransition_altSyntax2 === true || doAutoAdvanceStepTransition_altSyntax3 === true || doAutoAdvanceStepTransition_altSyntax4 === true) {
