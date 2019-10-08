@@ -124,17 +124,9 @@ const store = {
 	}
 };
 
-const points = [
-	[web.awareness, web.search, web.application, {}, {}, {}],
-	[mobile.awareness, mobile.search, mobile.application],
-	[{}, social.search, {}],
-	[{}, {}, store.application, store.consideration, store.decision]
-];
-
 module.exports = {
 	states: {
 		initial: {
-			points,
 			stages: [
 				{
 					label: 'Awareness',
@@ -153,6 +145,28 @@ module.exports = {
 				},
 				{
 					label: 'Winback',
+				}
+			],
+			channels: [
+				{
+					icon: '<span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-laptop"></span>',
+					label: '',
+					points: [web.awareness, web.search, web.application, {}, {}, {}],
+				},
+				{
+					icon: '<label class="journeys-label row-label row-label-centered"><span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-mobile"></span>',
+					label: '',
+					points: [mobile.awareness, mobile.search, mobile.application],
+				},
+				{
+					icon: '<span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-social"></span>',
+					label: '',
+					points: [{}, social.search, {}],
+				},
+				{
+					icon: '<span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-physical"></span>',
+					label: '',
+					points: [{}, {}, store.application, store.consideration, store.decision]
 				}
 			]
 		}
