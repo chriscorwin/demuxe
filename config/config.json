@@ -17,6 +17,7 @@
 	"productTemplate": "is",
 	"demoVenue": "basecamp19",
 	"demoVersion": "0.1",
+	"defaultUrl": "msm",
 	"magickFlows": {
 		"directoryName": "magick-flows",
 		"urlSlugs": [],
