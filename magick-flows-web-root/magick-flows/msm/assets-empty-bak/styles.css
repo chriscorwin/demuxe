@@ -2,7 +2,7 @@
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/msm/main/0000___ID=msm-home___DATA=is-own-header__own-header-height--60___NOTES=Scroll-down__Click-the-“Mortgages”-card.png") url("/magick-flows/msm/main/0050___ID=msm-mortgages___DATA=is-own-header__own-header-height--60___NOTES=Scroll-down__Click-the-pink-“eligibility”-button__Near-the-house.png") url("/magick-flows/msm/main/0100___ID=msm-next___DATA=is-own-header__own-header-height--60___NOTES=Click-to-go-to-next-step.png") url("/magick-flows/msm/main/0600___ID=msm___DATA=unset___NOTES=Begin-to-search-for-a-property.png") url("/magick-flows/msm/main/0700___ID=msm___DATA=unset___NOTES=Click-the-first-result__“Cambridge”.png") url("/magick-flows/msm/main/0800___ID=msm___DATA=unset___NOTES=Submit-by-clicking-the-“For-sale”-button.png") url("/magick-flows/msm/main/0900___ID=msm___DATA=unset___NOTES=Click-the-Money-Super-Market-ad.png") url("/magick-flows/msm/main/1000___ID=msm___DATA=use-step-transition__step-transition_app-switch__use-mobile-backdrop___NOTES=Click-the-“Get”-button-to-download-app.png") url("/magick-flows/msm/main/1100___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1101___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1102___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1103___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1104___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1120___ID=msm___DATA=unset___NOTES=Click-to-open-the-credit-monitor-app.png") url("/magick-flows/msm/main/1300___ID=msm___DATA=unset___NOTES=Click-to-fill-out-email-form.png") url("/magick-flows/msm/main/1310___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1320___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1330___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1340___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1350___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1360___ID=msm-hello-there-email-entered___NOTES=Click-button-to-submit.png") url("/magick-flows/msm/main/1500___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1510___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1520___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1530___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1540___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1550___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1560___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1570___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1580___ID=msm___DATA=usnset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1600___ID=msm___DATA=@AANORMAL__use-step-transition__step-transition_app-switch.png") url("/magick-flows/msm/main/1700___ID=msm___DATA=unset___NOTES=Click-the-“Welcome”-email-on-the-canvas.png") url("/magick-flows/msm/main/2200___ID=msm-edit-email-begins___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__@AANORMAL.png") url("/magick-flows/msm/main/2210___ID=msm-edit-email-begins-result___DATA=unset___NOTES=Click-the-“Preview-and-Test”-button-to-edit-the-Credit-Monitor-Welcome-Email.png") url("/magick-flows/msm/main/2220___ID=edit-dropdown-appears___DATA=unset___NOTES=Click-“Edit-Message”-in-the-dropdown-menu.png") url("/magick-flows/msm/main/2300___ID=email-editor-content-blocks___DATA=@AANORMAL__show-drawer-from-left--on-arrival__hide-drawer-from-left--never.png") url("/magick-flows/msm/main/2300___ID=email-editor-content-blocks___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/2400___ID=email-editor-content-content___DATA=unset___NOTES=Click-to-“scroll”-the-email-to-find-the-content-block-to-edit.png") url("/magick-flows/msm/main/2500___ID=email-editor-drop-target-showing___DATA=unset___NOTES=Click-the-third-image__“Take-control-of-your-credit-score”.png") url("/magick-flows/msm/main/2600___ID=email-editor-drop-target-lit-up___DATA=@AAFAST.png") url("/magick-flows/msm/main/2650___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2651___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2652___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2653___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2654___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2655___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2656___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2657___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2658___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2659___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2660___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2661___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2662___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2663___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2664___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2665___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2670___ID=email-editor-image-content-dropped___DATA=unset___NOTES=UM.png") url("/magick-flows/msm/main/2700___ID=msm-edit-email-ends___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave__@AANORMAL.png") url("/magick-flows/msm/main/2800___ID=msm___DATA=unset___NOTES=Click-the-“Activate”-button.png") url("/magick-flows/msm/main/2900___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3100___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3200___ID=msm___DATA=use-step-transition__step-transition_app-switch__@AANORMAL.png") url("/magick-flows/msm/main/3300___ID=msm___DATA=unset___NOTES=Click-to-go-back-to-Tom’s-view.png") url("/magick-flows/msm/main/3500___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3650___ID=msm-push-credit-card___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3700___ID=msm-credit-card___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3750___ID=msm-iphone-home-screen___DATA=@AANORMAL.png") url("/magick-flows/msm/main/3800___ID=msm-cc-app-msg___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4200___ID=msm___DATA=use-step-transition__step-transition_app-switch__@AANORMAL.png") url("/magick-flows/msm/main/4300___ID=msm___DATA=is-eject--lifecycles___NOTES=Click-to-proceed-to-second-half-of-this-demo.png") url("/magick-flows/msm/main/5000___ID=msm___DATA=is-eject--msm-2___NOTES=Click-to-proceed-to-second-half-of-this-demo.png") url("/magick-flows/msm/assets/all__mobile-backdrop.png") url("/magick-flows/msm/assets/all__viewport-size.png") url("/magick-flows/msm/assets/datorama-mix-and-connect___drawer-from-left.png") url("/magick-flows/msm/assets/email-editor-content-blocks___drawer-from-left.png") url("/magick-flows/msm/assets/msm-cc-app-msg___ios-notification.png") url("/magick-flows/msm/assets/msm-ccredit-monitor-msg___ios-notification.png") url("/magick-flows/msm/assets/msm-edit-email-begins___drawer-from-left.png") url("/magick-flows/msm/assets/msm-edit-email-ends___drawer-from-left.png") url("/magick-flows/msm/assets/msm-push-credit-card___ios-notification.png");
+  content: url("/magick-flows/msm/main/0000___ID=msm-home___DATA=is-own-header__own-header-height--60___NOTES=Scroll-down__Click-the-“Mortgages”-card.png") url("/magick-flows/msm/main/0050___ID=msm-mortgages___DATA=is-own-header__own-header-height--60___NOTES=Scroll-down__Click-the-pink-“eligibility”-button__Near-the-house.png") url("/magick-flows/msm/main/0100___ID=msm-next___DATA=is-own-header__own-header-height--60___NOTES=Click-to-go-to-next-step.png") url("/magick-flows/msm/main/0600___ID=consumer-desktop-search___DATA=is-own-header__own-header-height--50___NOTES=Begin-to-search-for-a-property.png") url("/magick-flows/msm/main/0700___ID=consumer-desktop-search___DATA=@AAFAST.png") url("/magick-flows/msm/main/0710___ID=consumer-desktop-search___DATA=@AAFAST.png") url("/magick-flows/msm/main/0720___ID=consumer-desktop-search-result___DATA=is-own-header__own-header-height--50___NOTES=Click-the-first-result__“Cambridge”.png") url("/magick-flows/msm/main/0800___ID=msm___DATA=unset___NOTES=Submit-by-clicking-the-“For-sale”-button.png") url("/magick-flows/msm/main/0900___ID=msm___DATA=is-own-header__own-header-height--50___NOTES=Click-the-Money-Super-Market-ad.png") url("/magick-flows/msm/main/1000___ID=msm___DATA=@APPSWITCH__use-mobile-backdrop___NOTES=Click-the-“Get”-button-to-download-app.png") url("/magick-flows/msm/main/1100___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1101___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1102___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1103___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1104___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1120___ID=msm___DATA=unset___NOTES=Click-to-open-the-credit-monitor-app.png") url("/magick-flows/msm/main/1300___ID=msm___DATA=unset___NOTES=Click-to-fill-out-email-form.png") url("/magick-flows/msm/main/1310___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1320___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1330___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1340___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1350___ID=msm-hello-there-email-entered___DATA=@AAFAST.png") url("/magick-flows/msm/main/1360___ID=msm-hello-there-email-entered___NOTES=Click-button-to-submit.png") url("/magick-flows/msm/main/1500___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1510___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1520___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1530___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1540___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1550___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1560___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1570___ID=msm___DATA=@AAFAST.png") url("/magick-flows/msm/main/1580___ID=msm___DATA=usnset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/1600___ID=msm___DATA=@AANORMAL__use-step-transition__step-transition_app-switch.png") url("/magick-flows/msm/main/1700___ID=msm___DATA=unset___NOTES=Click-the-“Welcome”-email-on-the-canvas.png") url("/magick-flows/msm/main/2200___ID=msm-edit-email-begins___DATA=@AANORMAL__show-drawer-from-left--on-arrival__hide-drawer-from-left--never.png") url("/magick-flows/msm/main/2210___ID=msm-edit-email-begins-result___DATA=unset___NOTES=Click-the-“Preview-and-Test”-button-to-edit-the-Credit-Monitor-Welcome-Email.png") url("/magick-flows/msm/main/2220___ID=edit-dropdown-appears___DATA=unset___NOTES=Click-“Edit-Message”-in-the-dropdown-menu.png") url("/magick-flows/msm/main/2300___ID=email-editor-content-blocks___DATA=@AANORMAL__show-drawer-from-left--on-arrival__hide-drawer-from-left--never.png") url("/magick-flows/msm/main/2400___ID=email-editor-content-content___DATA=unset___NOTES=Click-to-“scroll”-the-email-to-find-the-content-block-to-edit.png") url("/magick-flows/msm/main/2500___ID=email-editor-drop-target-showing___DATA=unset___NOTES=Click-the-third-image__“Take-control-of-your-credit-score”.png") url("/magick-flows/msm/main/2600___ID=email-editor-drop-target-lit-up___DATA=@AAFAST.png") url("/magick-flows/msm/main/2650___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2651___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2652___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2653___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2654___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2655___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2656___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2657___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2658___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2659___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2660___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2661___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2662___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2663___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2664___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2665___ID=email-editor-image-content-dragging___DATA=@AAFAST.png") url("/magick-flows/msm/main/2670___ID=email-editor-image-content-dropped___DATA=unset___NOTES=Click-the-“Save”-button-to-close-the-editor.png") url("/magick-flows/msm/main/2700___ID=msm-edit-email-ends___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave___NOTES=Click-the-“Done”-button-to-close-the-Activity-Summary-panel.png") url("/magick-flows/msm/main/2720___ID=activity-summary-out___DATA=@AANORMAL__show-drawer-from-left--instantly__hide-drawer-from-left--on-leave.png") url("/magick-flows/msm/main/2730___ID=canvas-slides-back___DATA=@AAFAST.png") url("/magick-flows/msm/main/2800___ID=activity-summary-out-result___DATA=unset___NOTES=Click-the-“Activate”-button.png") url("/magick-flows/msm/main/2900___ID=msm___DATA=@APPSWITCH___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3100___ID=msm___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3200___ID=msm___DATA=@APPSWITCH__@AANORMAL.png") url("/magick-flows/msm/main/3300___ID=msm___DATA=unset___NOTES=Click-to-go-back-to-Tom’s-view.png") url("/magick-flows/msm/main/3500___ID=msm___DATA=use-step-transition__step-transition_app-switch___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3650___ID=msm-push-credit-card___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3700___ID=msm-credit-card___DATA=unset___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/3750___ID=msm-iphone-home-screen___DATA=@AANORMAL.png") url("/magick-flows/msm/main/3800___ID=msm-cc-app-msg___DATA=show-ios-notification___NOTES=Click-to-move-on.png") url("/magick-flows/msm/main/4200___ID=msm___DATA=use-step-transition__step-transition_app-switch__@AANORMAL.png") url("/magick-flows/msm/main/4300___ID=msm___DATA=is-eject--lifecycles___NOTES=Click-to-proceed-to-second-half-of-this-demo.png") url("/magick-flows/msm/main/5000___ID=msm___DATA=is-eject--msm-2___NOTES=Click-to-proceed-to-second-half-of-this-demo.png") url("/magick-flows/msm/assets/activity-summary-out___drawer-from-left.png") url("/magick-flows/msm/assets/all__mobile-backdrop.png") url("/magick-flows/msm/assets/all__viewport-size.png") url("/magick-flows/msm/assets/datorama-mix-and-connect___drawer-from-left.png") url("/magick-flows/msm/assets/email-editor-content-blocks___drawer-from-left.png") url("/magick-flows/msm/assets/msm-cc-app-msg___ios-notification.png") url("/magick-flows/msm/assets/msm-ccredit-monitor-msg___ios-notification.png") url("/magick-flows/msm/assets/msm-edit-email-begins___drawer-from-left.png") url("/magick-flows/msm/assets/msm-edit-email-ends___drawer-from-left.png") url("/magick-flows/msm/assets/msm-push-credit-card___ios-notification.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -166,7 +166,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 180480px;
+  width: 188160px;
 }
 
 .app-switcher-one.shrink {
@@ -2716,6 +2716,111 @@ body.magick-flows-debug div#drawer-from-left--step-71::before {
   top: 0;
   width: 1280px;
   left: 181760px;
+}
+
+.app-switcher-one.be-left-72 {
+  left: -184320px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-72 {
+  left: -184320px;
+}
+
+body.magick-flows-debug div#drawer-from-top--step-72::before,
+body.magick-flows-debug div#drawer-from-right--step-72::before,
+body.magick-flows-debug div#drawer-from-bottom--step-72::before,
+body.magick-flows-debug div#drawer-from-left--step-72::before {
+  content: "Drawer #72";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-72 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 184320px;
+}
+
+.app-switcher-one.be-left-73 {
+  left: -186880px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-73 {
+  left: -186880px;
+}
+
+body.magick-flows-debug div#drawer-from-top--step-73::before,
+body.magick-flows-debug div#drawer-from-right--step-73::before,
+body.magick-flows-debug div#drawer-from-bottom--step-73::before,
+body.magick-flows-debug div#drawer-from-left--step-73::before {
+  content: "Drawer #73";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-73 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 186880px;
+}
+
+.app-switcher-one.be-left-74 {
+  left: -189440px;
+  transition: none !important;
+  will-change: transform, left;
+}
+
+.app-switcher-one.slide-left-74 {
+  left: -189440px;
+}
+
+body.magick-flows-debug div#drawer-from-top--step-74::before,
+body.magick-flows-debug div#drawer-from-right--step-74::before,
+body.magick-flows-debug div#drawer-from-bottom--step-74::before,
+body.magick-flows-debug div#drawer-from-left--step-74::before {
+  content: "Drawer #74";
+  display: block;
+  width: 100vw;
+  height: 3rem;
+  position: absolute;
+  bottom: 0rem;
+  background: rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.magick-flows--step-74 {
+  height: 720px;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  left: 189440px;
 }
 
 footer.magick-flows-stickey-footer_container {

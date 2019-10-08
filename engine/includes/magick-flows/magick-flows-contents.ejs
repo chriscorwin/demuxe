@@ -234,7 +234,6 @@ _%>
 
 		let clickHintsHtmlOut = '';
 		let htmlCommentsHtmlOut = '';
-		let debugHeadsUpDisplayHtmlOut = '';
 		let hasNotes = node.notes.length > 0 ? true : false;
 		if ( node.notes.length === 1 && node.notes[0] === 'unset' ) {
 			hasNotes = false;
@@ -262,7 +261,11 @@ _%>
 				</div>
 			`;
 
+		}
 
+		let debugHeadsUpDisplayHtmlOut = '';
+		if (locals.WHAT_IS_PROCESS_ENV_DEBUG === 'true') {
+			let thisParagraphClassName = `slds-p-bottom_medium`;
 			debugHeadsUpDisplayHtmlOut += `
 				<div
 					id="magick-flows-debug-hints--step-${node.stepsIndex}"
@@ -273,20 +276,6 @@ _%>
 			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Sorter: ${node.sorter}</p>`;
 			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">ID: ${node.id}</p>`;
 			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Data: <code>${node.data}</code></p>`;
-
-
-			// node.data.forEach((datam, datamIndex) => {
-			// 	if (datamIndex === node.data.length - 1) {
-			// 		thisParagraphClassName = `slds-p-bottom_none`
-			// 	}
-			// 	datam = datam.replace(/-/g, ' ');
-
-			// 	clickHintsHtmlOut += `<p data="Click hint number ${datamIndex} (${node.data.length})" class="${thisParagraphClassName}">${datam}.</p>`;
-			// 	htmlCommentsHtmlOut += `${datam}`;
-
-			// });
-
-
 
 			debugHeadsUpDisplayHtmlOut += `
 				</div>

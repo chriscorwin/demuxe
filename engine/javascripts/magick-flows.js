@@ -245,20 +245,24 @@ function locationHashChanged(event) {
 
 	useStepTransition = currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition';
 	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch';
-	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='@APP_SWITCH') === '@APP_SWITCH';
+	doApplicationSwitchStepTransition_altSyntax1 = currentStepMetaData.find(k => k=='@APPSWITCH') === '@APPSWITCH';
+	doApplicationSwitchStepTransition_altSyntax2 = currentStepMetaData.find(k => k=='@appswitch') === '@appswitch';
 	
 	console.log(`currentStepMetaData: `, currentStepMetaData);
 	doAutoAdvanceStepTransition = currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
 	doAutoAdvanceStepTransition_altSyntax1 = currentStepMetaData.find(k => k=='@AAXFAST') === '@AAXFAST';
 	doAutoAdvanceStepTransition_altSyntax2 = currentStepMetaData.find(k => k=='@AAFAST') === '@AAFAST';
 	doAutoAdvanceStepTransition_altSyntax3 = currentStepMetaData.find(k => k=='@AANORMAL') === '@AANORMAL';
-	doAutoAdvanceStepTransition_altSyntax3 = currentStepMetaData.find(k => k=='@aanormal') === '@aanormal';
-	doAutoAdvanceStepTransition_altSyntax4 = currentStepMetaData.find(k => k=='@AASLOW') === '@AASLOW';
+	doAutoAdvanceStepTransition_altSyntax4 = currentStepMetaData.find(k => k=='@aanormal') === '@aanormal';
+	doAutoAdvanceStepTransition_altSyntax5 = currentStepMetaData.find(k => k=='@AASLOW') === '@AASLOW';
 
 
 
-	if (doAutoAdvanceStepTransition_altSyntax1 === true || doAutoAdvanceStepTransition_altSyntax2 === true || doAutoAdvanceStepTransition_altSyntax3 === true || doAutoAdvanceStepTransition_altSyntax4 === true) {
+	if (doAutoAdvanceStepTransition_altSyntax1 === true || doAutoAdvanceStepTransition_altSyntax2 === true || doAutoAdvanceStepTransition_altSyntax3 === true || doAutoAdvanceStepTransition_altSyntax4 === true || doAutoAdvanceStepTransition_altSyntax5 === true) {
 		doAutoAdvanceStepTransition = true;
+	}
+	if (doApplicationSwitchStepTransition_altSyntax1 === true || doApplicationSwitchStepTransition_altSyntax1 === true) {
+		doApplicationSwitchStepTransition = true;
 	}
 
 
@@ -308,7 +312,13 @@ function locationHashChanged(event) {
 		doApplicationSwitchStepTransition = true;
 		// console.debug(`doApplicationSwitchStepTransition: `, doApplicationSwitchStepTransition);
 	}
-	if ( useStepTransition && currentStepMetaData.find(k => k=='@APP_SWITCH') === '@APP_SWITCH' ) {
+	if ( currentStepMetaData.find(k => k=='@APPSWITCH') === '@APPSWITCH' ) {
+		// console.debug(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
+		// console.debug(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
+		doApplicationSwitchStepTransition = true;
+		// console.debug(`doApplicationSwitchStepTransition: `, doApplicationSwitchStepTransition);
+	}
+	if ( currentStepMetaData.find(k => k=='@appswitch') === '@appswitch' ) {
 		// console.debug(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
 		// console.debug(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
 		doApplicationSwitchStepTransition = true;
@@ -410,7 +420,7 @@ function locationHashChanged(event) {
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
-						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
+						// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
 					}, 2900);
 
 					newDelayTransition = doAutoAdvanceStepTransition ? 0 : 750;
@@ -420,7 +430,7 @@ function locationHashChanged(event) {
 					setTimeout(() => {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('be-in');
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.remove('slide-in');
-						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
+						// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${previousStepNumber}`).classList.add('slds-hide');
 					}, 1500);
 				}
 			}
@@ -431,14 +441,22 @@ function locationHashChanged(event) {
 				// console.log('document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`)', document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`));
 
 				if ( currentStepDrawersData[direction].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
-					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
+					// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
 					newDelayTransition = 1;
 					// console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}`)
 					delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
+
+				} else if ( currentStepDrawersData[direction].find(k => k=='hide-on-arrival') === 'hide-on-arrival' ) {
+					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slide-in');
+					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('be-in');
+					// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
+					newDelayTransition = 1;
+					// console.log(`delayTransition was ${delayTransition}, will now set it to ${newDelayTransition}`)
+					delayTransition = (delayTransition < (newDelayTransition + 1) ? newDelayTransition : delayTransition);
 				} else if ( currentStepDrawersData[direction].find(k => k=='show-instantly') === 'show-instantly' ) {
-					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
+					// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.remove('slds-hide');
 					document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('be-in');
 					if ( currentStepDrawersData[direction].find(k => k=='hide-on-leave') === 'hide-on-leave' ) {
 						document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${currentStepNumber}`).classList.add('slide-in');
@@ -456,7 +474,7 @@ function locationHashChanged(event) {
 				}
 			}
 			if ( nextStepDrawersData[direction].find(k => k=='show-on-arrival') === 'show-on-arrival' ) {
-				document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('slds-hide');
+				// document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`).classList.remove('slds-hide');
 				// console.log('document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`)', document.querySelector(`.magick-flows-drawer--from-${direction}.magick-flows-step-asset--step-${nextStepNumber}`));
 			}
 
@@ -531,7 +549,7 @@ function locationHashChanged(event) {
 				setTimeout(() => {
 					document.querySelector(`.ios-notification--step-${previousClick}`).classList.remove('slide-in');
 					setTimeout(() => {
-						document.querySelector(`.ios-notification--step-${previousClick}`).classList.add('slds-hide');
+						// document.querySelector(`.ios-notification--step-${previousClick}`).classList.add('slds-hide');
 					}, 250);
 				}, 0);
 				newDelayTransition = 500;
@@ -542,7 +560,7 @@ function locationHashChanged(event) {
 		// Now we will show this step's ios-notification, if it exists.
 		if ( magickFlowConfig.stepMetaData[clicks][`showIosNotification`] === true ) {
 			doDrawer = true;
-			document.querySelector(`.ios-notification--step-${clicks}`).classList.remove('slds-hide');
+			// document.querySelector(`.ios-notification--step-${clicks}`).classList.remove('slds-hide');
 			window.setTimeout(() => {
 				document.querySelector(`.ios-notification--step-${clicks}`).classList.add('slide-in');
 			}, 250);
@@ -554,7 +572,7 @@ function locationHashChanged(event) {
 				setTimeout(() => {
 					document.querySelector(`.ios-notification--step-${nextClick}`).classList.remove('slide-in');
 					setTimeout(() => {
-						document.querySelector(`.ios-notification--step-${nextClick}`).classList.add('slds-hide');
+						// document.querySelector(`.ios-notification--step-${nextClick}`).classList.add('slds-hide');
 					}, 250);
 				}, 0);
 				newDelayTransition = 250;
@@ -714,7 +732,11 @@ document.onkeyup = function(e) {
 		// H
 
 		console.debug("H key was pressed. Going to the first step.");
+
 		setLocationHashWithTiming(0, 0);
+		setTimeout(() => {
+			location.reload(true);
+		}, 250)
 	} else if (e.which == 73) {
 		// I
 
