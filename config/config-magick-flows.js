@@ -41,7 +41,7 @@ const addMagickFlowsToConfig = (configData, dir = path.join(__dirname, '../'), r
 			return;
 		}
 
-		console.debug(`target directory found! (${fileOrDirectoryPath})`);
+		// console.debug(`target directory found! (${fileOrDirectoryPath})`);
 
 		const subDirectoryContents = fs.readdirSync(fileOrDirectoryPath);
 

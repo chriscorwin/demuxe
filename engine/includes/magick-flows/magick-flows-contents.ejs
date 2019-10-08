@@ -234,19 +234,18 @@ _%>
 
 		let clickHintsHtmlOut = '';
 		let htmlCommentsHtmlOut = '';
+		let debugHeadsUpDisplayHtmlOut = '';
 		let hasNotes = node.notes.length > 0 ? true : false;
 		if ( node.notes.length === 1 && node.notes[0] === 'unset' ) {
 			hasNotes = false;
 		}
 		if ( hasNotes === true ) {
-
-
 			clickHintsHtmlOut += `
 				<div
 					id="magick-flows-click-hints--step-${node.stepsIndex}"
 					class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${node.stepsIndex} "
 				>
-			`
+			`;
 			let thisParagraphClassName = `slds-p-bottom_medium`;
 			node.notes.forEach((note, noteIndex) => {
 				if (noteIndex === node.notes.length - 1) {
@@ -254,15 +253,44 @@ _%>
 				}
 				note = note.replace(/-/g, ' ');
 
-				clickHintsHtmlOut += `<p data="Click hint number ${noteIndex} (${node.notes.length})" class="${thisParagraphClassName}">${note}.</p>`
-				htmlCommentsHtmlOut += `${note}
-`;
-			});
+				clickHintsHtmlOut += `<p data="Click hint number ${noteIndex} (${node.notes.length})" class="${thisParagraphClassName}">${note}.</p>`;
+				htmlCommentsHtmlOut += `${note}`;
 
+			});
 
 			clickHintsHtmlOut += `
 				</div>
-			`
+			`;
+
+
+			debugHeadsUpDisplayHtmlOut += `
+				<div
+					id="magick-flows-debug-hints--step-${node.stepsIndex}"
+					class="debug-hints magick-flows-debug-hints magick-flows-debug-hints--step-${node.stepsIndex} "
+				>
+			`;
+			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Step: #${node.stepsIndex}</p>`;
+			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Sorter: ${node.sorter}</p>`;
+			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">ID: ${node.id}</p>`;
+			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Data: <code>${node.data}</code></p>`;
+
+
+			// node.data.forEach((datam, datamIndex) => {
+			// 	if (datamIndex === node.data.length - 1) {
+			// 		thisParagraphClassName = `slds-p-bottom_none`
+			// 	}
+			// 	datam = datam.replace(/-/g, ' ');
+
+			// 	clickHintsHtmlOut += `<p data="Click hint number ${datamIndex} (${node.data.length})" class="${thisParagraphClassName}">${datam}.</p>`;
+			// 	htmlCommentsHtmlOut += `${datam}`;
+
+			// });
+
+
+
+			debugHeadsUpDisplayHtmlOut += `
+				</div>
+			`;
 		}
 %>
 
@@ -370,6 +398,7 @@ _%>
 	<%- iosNotificationHtmlOut %>
 
 	<%- clickHintsHtmlOut %>
+	<%- debugHeadsUpDisplayHtmlOut %>
 
 </div>
 

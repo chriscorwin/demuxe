@@ -245,6 +245,7 @@ function locationHashChanged(event) {
 
 	useStepTransition = currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition';
 	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch';
+	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='@APP_SWITCH') === '@APP_SWITCH';
 	
 	console.log(`currentStepMetaData: `, currentStepMetaData);
 	doAutoAdvanceStepTransition = currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
@@ -302,6 +303,12 @@ function locationHashChanged(event) {
 
 
 	if ( useStepTransition && currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch' ) {
+		// console.debug(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
+		// console.debug(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
+		doApplicationSwitchStepTransition = true;
+		// console.debug(`doApplicationSwitchStepTransition: `, doApplicationSwitchStepTransition);
+	}
+	if ( useStepTransition && currentStepMetaData.find(k => k=='@APP_SWITCH') === '@APP_SWITCH' ) {
 		// console.debug(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
 		// console.debug(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
 		doApplicationSwitchStepTransition = true;
@@ -737,6 +744,18 @@ document.onkeyup = function(e) {
 				node.classList.toggle('slide-in');
 			});
 		}
+	} else if (e.which == 68) {
+
+		// T
+
+		// "t" for "toggle"
+		// Toggles the click hints on all slides.
+		let theseNodes = document.querySelectorAll(`body`);
+		if ( theseNodes.length > 0 ) {
+			theseNodes.forEach(function(node, nodeIndex) {
+				node.classList.toggle('magick-flows-debug');
+			});
+		}
 	} else if (e.which == 39) {
 		// console.log("Right arrow key was pressed, go to next...");
 		incrementLocationHashWithTiming(null, 'forward');
@@ -767,9 +786,10 @@ document.onkeyup = function(e) {
 // ¯\_(ツ)_/¯ at some point this seemed very important, to overcome some bug, but I  reglected to write down what the goal was, and now, here we are.
 // window.location.hash = `#reset`;
 // setLocationHashWithTiming(clicks, 0);
-
-if (locals.DEBUG === 'true') {
+console.log(`locals.WHAT_IS_PROCESS_ENV_DEBUG: `, locals.WHAT_IS_PROCESS_ENV_DEBUG);
+if (locals.WHAT_IS_PROCESS_ENV_DEBUG === 'true') {
 	console.debug(`Click hints automatgickally showing because you are in DEBUG mode. Hit the "T" key to toggle.`);
+	console.debug(`More step data is also automatgickally showing because you are in DEBUG mode. Hit the "D" key to toggle.`);
 
 	let theseNodes = document.querySelectorAll(`.magick-flows-click-hints`);
 	if ( theseNodes.length > 0 ) {
