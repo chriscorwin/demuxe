@@ -303,7 +303,7 @@ _%>
 <%= htmlCommentsHtmlOut %>
 -->
 <div
-	class="slds-grid slds-grid_vertical magick-flows--step-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%>"
+	class="slds-grid slds-grid_vertical magick-flows--step-<%=nodeIndex%>  <%= classnames(thisMagickFlowsSlideClassnames);%> <%= classnames(node.data);%>"
 	data-step="<%=nodeIndex%>"
 	id="magick-flows--step-<%=nodeIndex%>"
 >
@@ -326,7 +326,7 @@ _%>
 		if (isPng || isSvg || isGif || isJpeg) {
 			echo(`
 				<div
-					class="magick-flows--main-content auto-replace is-image "
+					class="magick-flows--main-content auto-replace is-image"
 					style="height: ${renderSizeMainContent.height}px; width: ${renderSizeMainContent.width}px; background-size: cover; background-image: url(${mainContentWebRootUrl}); display: block;"
 					id="magick-flows--main-content--step-${nodeIndex}"
 				>
