@@ -264,23 +264,21 @@ _%>
 		}
 
 		let debugHeadsUpDisplayHtmlOut = '';
-		if (locals.WHAT_IS_PROCESS_ENV_DEBUG === 'true') {
-			let thisParagraphClassName = `slds-p-bottom_medium`;
-			debugHeadsUpDisplayHtmlOut += `
-				<div
-					id="magick-flows-debug-hints--step-${node.stepsIndex}"
-					class="debug-hints magick-flows-debug-hints magick-flows-debug-hints--step-${node.stepsIndex} "
-				>
-			`;
-			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Step: #${node.stepsIndex}</p>`;
-			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Sorter: ${node.sorter}</p>`;
-			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">ID: ${node.id}</p>`;
-			debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Data: <code>${node.data}</code></p>`;
+		let thisParagraphClassName = `slds-p-bottom_medium`;
+		debugHeadsUpDisplayHtmlOut += `
+			<div
+				id="magick-flows-debug-hints--step-${node.stepsIndex}"
+				class="debug-hints magick-flows-debug-hints magick-flows-debug-hints--step-${node.stepsIndex} "
+			>
+		`;
+		debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Step: #${node.stepsIndex}</p>`;
+		debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Sorter: ${node.sorter}</p>`;
+		debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">ID: ${node.id}</p>`;
+		debugHeadsUpDisplayHtmlOut += `<p  class="${thisParagraphClassName}">Data: <code>${node.data}</code></p>`;
 
-			debugHeadsUpDisplayHtmlOut += `
-				</div>
-			`;
-		}
+		debugHeadsUpDisplayHtmlOut += `
+			</div>
+		`;
 %>
 
 
