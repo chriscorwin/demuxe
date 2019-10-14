@@ -22,8 +22,9 @@ const showDiff = (path) => {
 
 fs.readdirSync(path.join(__dirname, 'screenshots')).forEach((object) => {
 	try{
-		if(object !== '.DS_Store' && fs.statSync(path.join(__dirname, 'screenshots', object, '__different_snapshot__')).isDirectory()) {
-			fs.readdirSync(path.join(__dirname, 'screenshots', object, '__different_snapshot__')).forEach((file) => {
+		const differentSnapshotPath = path.join(__dirname, 'screenshots', object, '__different_snapshot__');
+		if(object !== '.DS_Store' && fs.existsSync(differentSnapshotPath) && fs.statSync(differentSnapshotPath).isDirectory()) {
+			fs.readdirSync(differentSnapshotPath).forEach((file) => {
 				if (file === '.DS_Store') return;
 
 				const diffPath = `${path.join(__dirname, 'screenshots', object, file).replace('.new', '')} ${path.join(__dirname, 'screenshots', object, '__different_snapshot__', file)}`;

@@ -28,50 +28,50 @@ module.exports = {
 			name: '0000.magick-flow',
 			description: 'Go to http://localhost:3000/svg-vs-png'
 		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0010.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0020.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0030.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0040.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0050.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0060.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0070.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0080.magick-flow'
-		},
-		{
-			click: `body`,
-			waitFor: 'body',
-			name: '0090.magick-flow'
-		}
+		// {
+		// 	click: `body`,
+		// 	waitFor: 'body',
+		// 	name: '0010.magick-flow'
+		// },
+		// {
+		// 	click: `body`,
+		// 	waitFor: 'body',
+		// 	name: '0020.magick-flow'
+		// },
+		// {
+		// 	click: `body`,
+		// 	waitFor: 'body',
+		// 	name: '0030.magick-flow'
+		// },
+		// {
+		// 	click: `body`,
+		// 	waitFor: 'body',
+		// 	name: '0040.magick-flow'
+		// },
+		// {
+		// 	click: `body`,
+		// 	waitFor: 'body',
+		// 	name: '0050.magick-flow'
+		// },
+		// {
+		// 	click: `body`,
+		// 	waitFor: 'body',
+		// 	name: '0060.magick-flow'
+		// },
+		// {
+		// 	click: `body`,
+		// 	waitFor: 'body',
+		// 	name: '0070.magick-flow'
+		// },
+		// {
+		// 	click: `body`,
+		// 	waitFor: 'body',
+		// 	name: '0080.magick-flow'
+		// },
+		// {
+		// 	click: `body`,
+		// 	waitFor: 'body',
+		// 	name: '0090.magick-flow'
+		// }
 	]
 };

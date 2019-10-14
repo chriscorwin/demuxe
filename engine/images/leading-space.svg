@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="230px" height="78px" viewBox="0 0 230 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>leading-space</title>
+    <desc>Created with Sketch.</desc>
+    <g id="leading-space" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(53.000000, 9.000000)">
+            <rect id="blue" stroke="#0091FF" x="0.5" y="0.5" width="118" height="19"></rect>
+            <text id="has-leading-space" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13.5" font-weight="bold" line-spacing="20" fill="#2B2826">
+                <tspan x="0" y="15"> has leading space</tspan>
+            </text>
+            <rect id="red" stroke="#E02020" x="4.5" y="3.5" width="114" height="14"></rect>
+        </g>
+        <text id="Area-the-text-elemen" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="10" font-weight="bold" fill="#0091FF">
+            <tspan x="15" y="50">Area the text element takes up in sketch</tspan>
+        </text>
+        <text id="Area-visible-text-oc" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="10" font-weight="bold" fill="#E02020">
+            <tspan x="15" y="66">Area visible text occupies in sketch</tspan>
+        </text>
+    </g>
+</svg>

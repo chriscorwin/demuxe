@@ -7,7 +7,12 @@
 	from { transform: scaleX(0); }
 	to { transform: scaleX(1); }
 }
+
+tspan {
+	white-space: pre;
+}
 </style>
+
 <div>
 	<h2>Fix Sketch to SVG Line Height Issues POC</h2>
 
@@ -16,22 +21,26 @@
 		<div><%- include('images/button-test-cases.svg') %></div>
 		<div><%- include('images/fix-line-height-poc.svg') %></div>
 		<script>
-			const correctThese = document.querySelectorAll('text[line-spacing]');
-			correctThese.forEach((correctThis) => {
+			const correctLineSpacing = dom.window.document.querySelectorAll('text[line-spacing]');
+			correctLineSpacing.forEach((correctThis) => {
 				const fontSize = correctThis.getAttribute('font-size');
 				const lineSpacing = correctThis.getAttribute('line-spacing');
 				const difference = fontSize - lineSpacing;
 				const distance = Math.ceil(Math.abs(difference));
 				const adjust = (distance > 4 && difference >= 0) ? distance : 4;
+				// I'm dealing with Line Height 20, Font Size 18, and it needs pulled up 4 pixels.
+				// Thus -1 isn't cutting it. No idea why I had this -1 here originally.
+				// ALSO: Making this adjust a negative ends up moving it down instead of up
+				// (because the final step is to do t.getAttribute('y') - adjust, and if adjust is negative
+				// it then becomes the equivalent of t.getAttribute('y') + adjust)
+				// Go go gadget time machine to tell myself to document this!
+				// TODO: invent time machine.
 				const finalAdjust = (difference >= 0) ? adjust : (distance <= fontSize) ? -1 : -adjust;
-				console.log(difference, finalAdjust);
 				correctThis.querySelectorAll('tspan').forEach((t) => {
-					t.setAttribute('y', t.getAttribute('y') - finalAdjust);
+					t.setAttribute('y', t.getAttribute('y') - adjust);
 				});
 			});
 		</script>
-
-
 	</div>
 
 	<div id="uncorrected" style="float: left">
@@ -47,6 +56,18 @@
 </div>
 
 <div>
+	<h2>Leading Space Issue</h2>
+	<div id="svg-leading-space" style="float: left; clear: left;">
+		<h3>SVG</h3>
+		<div><%- include('images/leading-space.svg') %></div>
+	</div>
+	<div id="png-leading-space" style="float: left">
+		<h3>PNG</h3>
+		<div><img width=230 src="images/leading-space.png" /></div>
+	</div>
+</div>
+
+<div style="clear:both;">
 	<h2>SVG vs PNG</h2>
 	<%- include('images/line-height-test.svg') %>
 
