@@ -247,6 +247,7 @@ function locationHashChanged(event) {
 	doApplicationSwitchStepTransition = currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch';
 	doApplicationSwitchStepTransition_altSyntax1 = currentStepMetaData.find(k => k=='@APPSWITCH') === '@APPSWITCH';
 	doApplicationSwitchStepTransition_altSyntax2 = currentStepMetaData.find(k => k=='@appswitch') === '@appswitch';
+	doApplicationSwitchStepTransition_altSyntax3 = currentStepMetaData.find(k => k=='step-transition_application-switch') === 'step-transition_application-switch';
 	
 	console.log(`currentStepMetaData: `, currentStepMetaData);
 	doAutoAdvanceStepTransition = currentStepMetaData.find(k => k=='step-transition_auto-advance') === 'step-transition_auto-advance';
@@ -272,7 +273,7 @@ function locationHashChanged(event) {
 	) {
 		doAutoAdvanceStepTransition = true;
 	}
-	if (doApplicationSwitchStepTransition_altSyntax1 === true || doApplicationSwitchStepTransition_altSyntax2 === true) {
+	if (doApplicationSwitchStepTransition_altSyntax1 === true || doApplicationSwitchStepTransition_altSyntax2 === true || doApplicationSwitchStepTransition_altSyntax3 === true) {
 		doApplicationSwitchStepTransition = true;
 	}
 
@@ -318,6 +319,12 @@ function locationHashChanged(event) {
 
 
 	if ( useStepTransition && currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch' ) {
+		// console.debug(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
+		// console.debug(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
+		doApplicationSwitchStepTransition = true;
+		// console.debug(`doApplicationSwitchStepTransition: `, doApplicationSwitchStepTransition);
+	}
+	if ( useStepTransition && currentStepMetaData.find(k => k=='step-transition_application-switch') === 'step-transition_application-switch' ) {
 		// console.debug(`currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition': `, currentStepMetaData.find(k => k=='use-step-transition') === 'use-step-transition');
 		// console.debug(`currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch': `, currentStepMetaData.find(k => k=='step-transition_app-switch') === 'step-transition_app-switch');
 		doApplicationSwitchStepTransition = true;
@@ -375,7 +382,7 @@ function locationHashChanged(event) {
 
 
 		if ( currentStepMetaData.find(k => k=='step-transition-timing--x-fast') === 'step-transition-timing--x-fast') {
-			autoAdvanceTransitionTiming = 100;
+			autoAdvanceTransitionTiming = 5;
 		}
 		if ( currentStepMetaData.find(k => k=='@AAXFAST') === '@AAXFAST') {
 			autoAdvanceTransitionTiming = 5;
