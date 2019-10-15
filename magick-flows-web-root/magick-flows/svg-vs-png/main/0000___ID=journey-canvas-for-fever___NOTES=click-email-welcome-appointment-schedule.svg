@@ -2549,7 +2549,7 @@
                             </g>
                         </g>
                         <text id="a0000___IDjourney-canvas-for-fever___NOTESclick-email-welcome-appointment-schedule_svg__Breadcrumb" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="13" font-weight="normal">
-                            <tspan x="44" y="15" fill="#0070D2">Journeys Dashboard</tspan> <tspan x="167.305" y="15" fill="#2B2826"> &gt; Journey Canvas</tspan>
+                            <tspan x="44" y="15" fill="#0070D2">Journeys Dashboard</tspan> <tspan x="167.305" y="15" fill="#006FD9"> </tspan> <tspan x="170.659" y="15" fill="#2B2826">&gt; Journey Canvas</tspan>
                         </text>
                         <g id="a0000___IDjourney-canvas-for-fever___NOTESclick-email-welcome-appointment-schedule_svg__JB-Icon" transform="translate(0.000000, 2.000000)">
                             <path d="M4,0 L28,0 C30.209139,-4.05812251e-16 32,1.790861 32,4 L32,28 C32,30.209139 30.209139,32 28,32 L4,32 C1.790861,32 2.705415e-16,30.209139 0,28 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="a0000___IDjourney-canvas-for-fever___NOTESclick-email-welcome-appointment-schedule_svg__Rectangle-10" fill="#FFB75D"></path>
