@@ -1,0 +1,42 @@
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+  -webkit-text-size-adjust: none;       /* prevent webkit from resizing text to fit */
+  -webkit-touch-callout: none;        /* prevent callout to copy image, etc when tap to hold */
+}
+
+body {
+  background: white;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+html.magick-flows-dashboard {
+  font-family: "Salesforce Sans", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  background: #514f4d;
+  color: #080707;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+body.magick-flows-dashboard {
+  height: 720px;
+  width: 1280px;
+  background-image: none;
+  background-image: linear-gradient(to bottom, #FFFFFF00, #FFFFFF66);
+  background-repeat: repeat-x;
+  background-color: white;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+  overflow: hidden;
+  width: 100vw;
+  transition: 500ms all;
+}
+

@@ -29,60 +29,66 @@ function dynamicSassHandleError(data){
 
 
 const noMetaDataError = (error, name, fullContentPath) => {
-	if ( error.message.includes('ENOENT: no such file or directory')) {
-		console.error(`
-[ ERROR IN: \`config/magick-flows-util/get-flow-data.js:10\`]
+	if (process.env.DEBUG_VERBOSE === "true") {
+		if ( error.message.includes('ENOENT: no such file or directory')) {
+			console.error(`
+	[ ERROR IN: \`config/magick-flows-util/get-flow-data.js:10\`]
 
-Magick Flow URL Slug: \`${name}\`.
+	Magick Flow URL Slug: \`${name}\`.
 
-The app is attempting to render a Magick Flow at:
+	The app is attempting to render a Magick Flow at:
 
-${fullContentPath}
+	${fullContentPath}
 
-...and did not find meta data there.
-		`);
-	} else {
-		console.warn(error);
+	...and did not find meta data there.
+			`);
+		} else {
+			console.warn(error);
+		}
 	}
 }
 
 const noFileError = (error, name, fullContentPath) => {
-	if ( error.message.includes('ENOENT: no such file or directory')) {
-		console.error(`
-[ ERROR IN: \`config/magick-flows-util/get-flow-data.js:10\`]
+	if (process.env.DEBUG_VERBOSE === "true") {
+		if ( error.message.includes('ENOENT: no such file or directory')) {
+			console.error(`
+	[ ERROR IN: \`config/magick-flows-util/get-flow-data.js:10\`]
 
-Magick Flow URL Slug: \`${name}\`.
+	Magick Flow URL Slug: \`${name}\`.
 
-The app is attempting to render a Magick Flow at:
+	The app is attempting to render a Magick Flow at:
 
-${fullContentPath}
+	${fullContentPath}
 
-...and did not find anything there.
+	...and did not find anything there.
 
-THERE IS NO CONTENT FOR IT.
+	THERE IS NO CONTENT FOR IT.
 
-This is not required to make the app work, so, take this for what its worth,
-you seem to not be using the headers and footers feature.
-		`);
-	} else {
-		console.warn(error);
+	This is not required to make the app work, so, take this for what its worth,
+	you seem to not be using the headers and footers feature.
+			`);
+		} else {
+			console.warn(error);
+		}
 	}
 }
 
 const noAssetsError = (error, name, fullAssetsPath) => {
-	if ( error.message.includes('ENOENT: no such file or directory')) {
-		console.warn(`
-[ THERE ARE NO ASSETS FOR \`${name}\`]
-The app is attempting to render a Magick Flow at:
+	if (process.env.DEBUG_VERBOSE === "true") {
+		if ( error.message.includes('ENOENT: no such file or directory')) {
+			console.warn(`
+	[ THERE ARE NO ASSETS FOR \`${name}\`]
+	The app is attempting to render a Magick Flow at:
 
-${fullAssetsPath}
+	${fullAssetsPath}
 
-...and did not find anything there. This is not required to make the app
-work, so, take this for what its worth, you seem to not be using the headers
-and footers feature.
-			`);
-	} else {
-		console.warn(error);
+	...and did not find anything there. This is not required to make the app
+	work, so, take this for what its worth, you seem to not be using the headers
+	and footers feature.
+				`);
+		} else {
+			console.warn(error);
+		}
 	}
 }
 
@@ -128,8 +134,10 @@ const getDataFromFilename = (stepDataAttributes, fileName) => {
 			// we have some data, split on the equals sign to get keys and values
 			const [ rawKey, valueWithExt ] = node.split('=');
 
-			console.debug(`[ config/magick-flows-util/get-flow-data.js:75 ] rawKey: `, util.inspect(rawKey, { showHidden: true, depth: null, colors: true }));
-			console.debug(`[ config/magick-flows-util/get-flow-data.js:76 ] valueWithExt: `, util.inspect(valueWithExt, { showHidden: true, depth: null, colors: true }));
+			if (process.env.DEBUG_VERBOSE === "true") {
+				console.debug(`[ config/magick-flows-util/get-flow-data.js:75 ] rawKey: `, util.inspect(rawKey, { showHidden: true, depth: null, colors: true }));
+				console.debug(`[ config/magick-flows-util/get-flow-data.js:76 ] valueWithExt: `, util.inspect(valueWithExt, { showHidden: true, depth: null, colors: true }));
+			}
 
 			const value = valueWithExt.split('.')[0];
 			const key = rawKey.toLowerCase();
@@ -178,8 +186,10 @@ const getDataFromFilename = (stepDataAttributes, fileName) => {
 			} else if ( index === 1 ) {
 				stepDataAttributes['id'] = node;
 			} else {
-				console.debug(`[ config/magick-flows-util/get-flow-data.js:96 ] index: `, util.inspect(index, { showHidden: true, depth: null, colors: true }));
-				console.debug(`[ config/magick-flows-util/get-flow-data.js:97 ] node: `, util.inspect(node, { showHidden: true, depth: null, colors: true }));
+				if (process.env.DEBUG_VERBOSE === "true") {
+					console.debug(`[ config/magick-flows-util/get-flow-data.js:190 ] index: `, util.inspect(index, { showHidden: true, depth: null, colors: true }));
+					console.debug(`[ config/magick-flows-util/get-flow-data.js:191 ] node: `, util.inspect(node, { showHidden: true, depth: null, colors: true }));
+				}
 			}
 
 		}
@@ -191,6 +201,7 @@ const getDataFromFilename = (stepDataAttributes, fileName) => {
 }
 
 const getStepData = (flowData, fileName, fileIndex) => {
+	if (fileName === '.DS_Store') return flowData;
 
 	let stepDataAttributes = {
 		stepsIndex: fileIndex,
@@ -199,7 +210,9 @@ const getStepData = (flowData, fileName, fileIndex) => {
 
 	stepDataAttributes = getDataFromFilename(stepDataAttributes, fileName);
 
-	console.debug(`[ config/magick-flows-util/get-flow-data.js:202 ] stepDataAttributes: `, util.inspect(stepDataAttributes, { showHidden: true, depth: null, colors: true }));
+	if (process.env.DEBUG_VERBOSE === "true") {
+		console.debug(`[ config/magick-flows-util/get-flow-data.js:214 ] stepDataAttributes: `, util.inspect(stepDataAttributes, { showHidden: true, depth: null, colors: true }));
+	}
 
 	if ( fileName.endsWith('.ejs') === true ) {
 		stepDataAttributes.dimensions = {type: 'ejs'};
@@ -236,11 +249,11 @@ const getStepData = (flowData, fileName, fileIndex) => {
 
 const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 
-
-	console.debug(`[ config/magick-flows-util/get-flow-data.js:224 ] configData: `, util.inspect(configData, { showHidden: false, depth: 1, colors: true }));
-	console.debug(`[ config/magick-flows-util/get-flow-data.js:225 ] fileOrDirectoryPath: `, util.inspect(fileOrDirectoryPath, { showHidden: false, depth: null, colors: true }));
-	console.debug(`[ config/magick-flows-util/get-flow-data.js:226 ] subFileOrDirectory: `, util.inspect(subFileOrDirectory, { showHidden: false, depth: null, colors: true }));
-
+	if (process.env.DEBUG_VERBOSE === "true") {
+		console.debug(`[ config/magick-flows-util/get-flow-data.js:253 ] configData: `, util.inspect(configData, { showHidden: false, depth: 1, colors: true }));
+		console.debug(`[ config/magick-flows-util/get-flow-data.js:254 ] fileOrDirectoryPath: `, util.inspect(fileOrDirectoryPath, { showHidden: false, depth: null, colors: true }));
+		console.debug(`[ config/magick-flows-util/get-flow-data.js:255 ] subFileOrDirectory: `, util.inspect(subFileOrDirectory, { showHidden: false, depth: null, colors: true }));
+	}
 	if(!fs.statSync(path.join(fileOrDirectoryPath, subFileOrDirectory)).isDirectory()) {
 		return configData;
 	}
@@ -262,7 +275,8 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 	};
 
 	try {
-		flowData.metaData = require(path.join(fileOrDirectoryPath, subFileOrDirectory, 'meta_data.json'));
+		const meta_data_path = path.join(fileOrDirectoryPath, subFileOrDirectory, 'meta_data.json')
+		flowData.metaData = fs.existsSync(meta_data_path) && require(meta_data_path);
 	} catch (e) {
 		noMetaDataError(e, flowData.name, flowData.fullContentPath);
 	}

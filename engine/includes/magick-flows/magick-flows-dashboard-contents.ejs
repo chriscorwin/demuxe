@@ -35,14 +35,7 @@
 		</div>
 
 
-		<div class="magick-flows-dashboard  slds-m-top_x-large slds-p-around_medium">
-			<h1 class="slds-text-heading_large slds-m-bottom_small">Other Demos at this Instance</h1>
-			<ul class="slds-has-dividers_bottom slds-has-block-links_space">
-			<%_
-				echo(`<li class="slds-item"><a href="${locals.defaultUrl}">${locals.name}</a></li>`);
-			_%>
-			</ul>
-		</div>
+
 
 	</div>
 
@@ -122,6 +115,19 @@
 							<td data-label="Action" class="slds-cell-wrap">
 								<p class="slds-truncate slds-cell-wrap" title="Goes to step #0 of the active Magick Flow.">
 									<span style="text-decoration: underline;">T</span>oggles the Click Hints heads-up display for all steps throughout the current Magick Flow.
+								</p>
+							</td>
+						</tr>
+
+						<tr class="slds-hint-parent">
+							<th data-label="Keyboard Shortcut" scope="row">
+							<div class="slds-truncate" title="T">
+								<strong>D</strong>
+							</div>
+							</th>
+							<td data-label="Action" class="slds-cell-wrap">
+								<p class="slds-truncate slds-cell-wrap" title="Goes to step #0 of the active Magick Flow.">
+									Toggles the <span style="text-decoration: underline;">D</span>EBUG heads-up display for all steps throughout the current Magick Flow.
 								</p>
 							</td>
 						</tr>

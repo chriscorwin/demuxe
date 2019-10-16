@@ -29,10 +29,13 @@ module.exports = function() {
         envConfigData = require(`./config.overrides.${process.env.NODE_ENV}.json`) || {};
     }
 
+    console.log(`[ config.js:32 ] envConfigData.DEBUG: `, util.inspect(envConfigData.DEBUG, { showHidden: true, depth: null, colors: true }));
+    console.log(`[ config.js:33 ] process.env.DEBUG: `, util.inspect(process.env.DEBUG, { showHidden: true, depth: null, colors: true }));
+    console.log(`[ config.js:34 ] process.env.DEBUG === 'true': `, util.inspect(process.env.DEBUG === 'true', { showHidden: true, depth: null, colors: true }));
 
     if (envConfigData.DEBUG === true || process.env.DEBUG === 'true') {
         console.debug = console.log;
-    } else {
+      } else {
         console.debug = function() {
             // console.log('debugging!')
             return;
@@ -45,6 +48,9 @@ module.exports = function() {
     configData = { ...defaultConfigData, ...envConfigData };
     configData.users = configData.users || [];
     configData.users = [ ...require('./users.json'), ...configData.users ];
+
+    configData.WHAT_IS_envConfigData = envConfigData.DEBUG;
+    configData.WHAT_IS_PROCESS_ENV_DEBUG = process.env.DEBUG;
 
 
     let defaultEngineConfig = {};
@@ -100,6 +106,15 @@ module.exports = function() {
     configData = addMagickFlowsToConfig(configData);
     configData = addAvailableDemoAppConfigs(configData);
     configData = addAvailableDemoBannerImages(configData);
+
+
+    console.log(`[ config/config.js:111 ] configData.WHAT_IS_PROCESS_ENV_DEBUG: `, util.inspect(configData.WHAT_IS_PROCESS_ENV_DEBUG, { showHidden: true, depth: null, colors: true }));
+    console.log(`[ config/config.js:112 ] configData.WHAT_IS_PROCESS_ENV_DEBUG === 'true': `, util.inspect(configData.WHAT_IS_PROCESS_ENV_DEBUG === 'true', { showHidden: true, depth: null, colors: true }));
+
+    if (configData.WHAT_IS_PROCESS_ENV_DEBUG === 'true') {
+        console.debug = console.log;
+        configData.DEBUG === true;
+    }
 
 
 

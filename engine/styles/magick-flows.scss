@@ -161,6 +161,7 @@ body, .container {
 .magick-flows {
 	&--step {
 		background-color: transparent;
+
 	}
 }
 
@@ -229,7 +230,11 @@ body, .container {
 
 
 
-	body.debug div#drawer-from-top--step-#{$i}::before {
+	body.magick-flows-debug div#drawer-from-top--step-#{$i}::before,
+	body.magick-flows-debug div#drawer-from-right--step-#{$i}::before,
+	body.magick-flows-debug div#drawer-from-bottom--step-#{$i}::before,
+	body.magick-flows-debug div#drawer-from-left--step-#{$i}::before
+	{
 	  content: 'Drawer ##{$i}';
 	  display: block;
 	  width: 100vw;
@@ -351,6 +356,39 @@ header.magick-flows-stickey-header_container {
 	opacity: 1;
 	transition: 250ms all ease-in-out;
 	will-change: all;
+}
+
+
+.magick-flows-debug-hints {
+  position: absolute;
+  display: block;
+  border-radius: 0.25rem;
+  color: white;
+  text-align: right;
+  padding: 0.25rem 0.5rem;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  text-shadow: 0px 2px 2px black;
+  transition: 250ms all ease-in-out;
+  background-color: rgba(0, 0, 0, 0.57);
+  bottom: 6rem;
+  will-change: all;
+  margin: 0.25rem;
+  opacity: 0;
+  z-index: 2;
+  font-weight: 300;
+  width: auto;
+  right: 0rem;
+  
+}
+
+body.magick-flows-debug .magick-flows-debug-hints {
+	bottom: 0rem;
+	opacity: 1;
+	transition: 250ms all ease-in-out;
+	will-change: all;
+	// top: initial;
+	right: 0rem;
 }
 
 

@@ -19,7 +19,7 @@
 		]
 	}) %>
 	<div style="margin-left: 10px;">
-		<img src="/images/lifecycles.top-left.svg" />
+		<a href="/msm-2" style="cursor: default;"><img src="/images/lifecycles.top-left.svg" /></a>
 	</div>
 </div>
 <div style="height: 80px;">
@@ -28,7 +28,7 @@
 	const svgWidth = locals.svgWidth || 1280;
 	const zoomLevel = locals.zoomLevel || 1;
 	const labelScaleStops = {
-		1: '470px, 167px'
+		1: '453px, 167px'
 	}
 
 	const STOP_SPACING = locals.STOP_SPACING || 140;
@@ -183,14 +183,16 @@
 					return { path, length: totalLength };
 				}
 
-				const points = locals.points;
+				const channels = locals.channels;
+				console.log('channels');
+				console.log(channels);
 			%>
 			<!-- the discs -->
 			<g class="volume-container">
 				<%
-					points.forEach((row, vi) => {
-						row.forEach((point, hi) => {
-							if (Object.keys(points[vi][hi]).length <= 0) return;
+					channels.forEach((row, vi) => {
+						row.points.forEach((point, hi) => {
+							if (Object.keys(channels[vi].points[hi]).length <= 0) return;
 
 							const circles = point.discs && point.discs.reduce((discs, disc) => `${discs}<circle class="volume-shape volume-${disc.audience} volume-${disc.state}" r="${disc.r}" clip-path="url(#clip-${disc.state})" style="animation-delay: ${DELAY * (vi + hi)}ms;"></circle>`, '');
 
@@ -209,8 +211,8 @@
 			<!-- the lines -->
 			<g class="flow-container">
 				<%
-					points.forEach((row, vi) => {
-						row.forEach((point, hi) => {
+					channels.forEach((row, vi) => {
+						row.points.forEach((point, hi) => {
 							const stop = stopLocation(vi, hi);
 							const flows = point.flows && point.flows.reduce((flows, flow) => {
 								if (flow.type.match('in|off')) {
@@ -244,10 +246,13 @@
 			<!-- the circles on the lines -->
 			<g class="node-container">
 				<%
-					points.forEach((row, vi) => {
-						row.forEach((point, hi) => {
+					channels.forEach((row, vi) => {
+						row.points.forEach((point, hi) => {
 							const stop = stopLocation(vi, hi);
-							if (Object.keys(points[vi][hi]).length <= 0) return;
+
+							// Dear past Christopher: WTF is this checking for? I can't be bothered to find out, but I wanted to tell you you suck. Dear future Christopher: feel free to hate both of us.
+							if (Object.keys(channels[vi].points[hi]).length <= 0) return;
+
 							echo(`
 								<g opacity="1" class="node state-default node-focusable row${vi}col${hi}" transform="translate(${stop.h},${stop.v})">
 									<circle r="${point.rOuter || 15}" class="tick-outer" style="animation-delay: ${DELAY * (vi + hi)}ms;"></circle>
@@ -267,16 +272,16 @@
 <div class="grid-label-container graph-elements-html dynamic-placement left-hand-labels" style="transform: translate(456px, 220px);">
 	<div class="row-labels">
 		<div class="row-group-label-container">
-			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="WEB" style="opacity: 1; left: -90px; top: 64.5px;"><label class="journeys-label row-label row-label-centered"><span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-laptop"></span> Web</label></div>
+			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="WEB" style="opacity: 1; left: -90px; top: 64.5px;"><label class="journeys-label row-label row-label-centered"><%- channels[0].icon %> <%- channels[0].label %></label></div>
 		</div>
 		<div class="row-group-label-container">
-			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="MOBILE" style="opacity: 1; left: -90px; top: 172.5px;"><label class="journeys-label row-label row-label-centered"><span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-mobile"></span> Mobile</label></div>
+			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="MOBILE" style="opacity: 1; left: -90px; top: 172.5px;"><%- channels[1].icon %> <%- channels[1].label %></label></div>
 		</div>
 		<div class="row-group-label-container">
-			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="SOCIAL" style="opacity: 1; left: -90px; top: 280.5px;"><label class="journeys-label row-label row-label-centered"><span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-social"></span> Social</label></div>
+			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="SOCIAL" style="opacity: 1; left: -90px; top: 280.5px;"><label class="journeys-label row-label row-label-centered"><%- channels[2].icon %> <%- channels[2].label %></label></div>
 		</div>
 		<div class="row-group-label-container">
-			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="PHYSICAL" style="opacity: 1; left: -90px; top: 388.5px;"><label class="journeys-label row-label row-label-centered"><span class="row-label-part row-icon one-glyphicon-lg one-glyphicon-physical"></span> Physical</label></div>
+			<div class="journeys-label-container row-label-container dynamic-placement journeys-label-clickable" data-channel="PHYSICAL" style="opacity: 1; left: -90px; top: 388.5px;"><label class="journeys-label row-label row-label-centered"><%- channels[3].icon %> <%- channels[3].label %></label></div>
 		</div>
 	</div>
 	<div class="node-labels"> </div>
