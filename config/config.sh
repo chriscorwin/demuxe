@@ -1,7 +1,12 @@
 # To use:
 # 
-# Create a config file like: <demuxe root directory>/config/demos/config.dashboard.magick-flows-starter-kit.demuxe.json
+# Create a config file like: <demuxe root directory>/config/demos/config.${productTemplate}.${demoVenue}.${brandTheme}.json
 # 
+# eg:
+# <demuxe root directory>/config/demos/config.
+
+
+
 # You set the config for THIS INSTANCE OF DEMUXE by running a terminal command like:
 # 
 # `npm run set-config dashboard magick-flows-starter-kit demuxe`
