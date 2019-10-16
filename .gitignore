@@ -21,3 +21,4 @@ package-lock.json
 credentials.json
 
 *.css.map
+config.json.bak
