@@ -7,14 +7,23 @@
 
 
 
-# You set the config for THIS INSTANCE OF DEMUXE by running a terminal command like:
+# ARE YOU 100% POSITIVE YOU HAVE A CONFIG.PRODUCT-TEMPLATE-BLAH-BLAH-DOT.JSON FILE ???
 # 
-# `npm run set-config dashboard magick-flows-starter-kit demuxe`
+# Then you are ready to...
 # 
-# Profit!
+# ...set the config for THIS INSTANCE OF DEMUXE by running a terminal command like:
+# 
+# npm run set-config ${productTemplate} ${demoVenue} ${brandTheme}
+# 
+# eg:
+# 
+# npm run set-config dashboard magick-flows-starter-kit demuxe
 
 
 
+
+
+# The actual script that runs starts here:
 
 # Backs the previous config up.
 cp config/config.json config/config.json.bak
