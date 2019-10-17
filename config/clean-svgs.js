@@ -50,7 +50,7 @@ const cleanSVGs = (configData) => {
 
 		subDirectoryContents.forEach(subFileOrDirectory => {
 			if (subFileOrDirectory === '.DS_Store') {
-				console.log('is DS_Store. Skip');
+				console.log('is .DS_Store, Skip');
 				return;
 			}
 			console.log(`considering file: ${subFileOrDirectory}`);
@@ -80,19 +80,22 @@ const cleanSVGs = (configData) => {
 			fs.writeFileSync(path.join(fileOrDirectoryPath, 'main', subFileOrDirectory), dom.window.document.body.innerHTML, 'utf8');
 
 
-			// Move the PNG out of /main into /png-compare
-			console.log(`mkdir -p ${fileOrDirectoryPath}/png-compare && mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-compare/`);
-			// TODO: make this mv instead of cp. It is copy now for debug purposes
-			execSync(`mkdir -p ${fileOrDirectoryPath}/png-compare && cp ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-compare/`);
+			// Move the PNG out of /main into /png (for backup purposes)
+			console.log(`mkdir -p ${fileOrDirectoryPath}/png && mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png`);
+			execSync(`mkdir -p ${fileOrDirectoryPath}/png && mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png`);
 
-			// Resize PNG to make it 1280x720 so it matches SVG
+			// Copy the PNG out of /png into /png-compare so we can resize and compare
+			console.log(`mkdir -p ${fileOrDirectoryPath}/png-compare && cp ${fileOrDirectoryPath}/png/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-compare`);
+			execSync(`mkdir -p ${fileOrDirectoryPath}/png-compare && cp ${fileOrDirectoryPath}/png/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-compare`);
+
+			// Resize PNG to make it 1280x720 so it matches SVG TODO: This won't work for mobile
 			im.resize({
 					srcPath: path.join(fileOrDirectoryPath, 'png-compare', subFileOrDirectory.replace('.svg', '.png')),
 					dstPath: path.join(fileOrDirectoryPath, 'png-compare', subFileOrDirectory.replace('.svg', '.png')),
 					width: 1280
 				},
 				function(err, stdout){
-					console.log('error', err);
+					if (err) { console.log('error', err); }
 
 					console.log('resized PNG', stdout);
 
@@ -107,7 +110,7 @@ const cleanSVGs = (configData) => {
 						const exportedPNG = path.join(fileOrDirectoryPath, 'png-compare', subFileOrDirectory.replace('.svg', '.png'));
 
 						looksSame(svgPNG, exportedPNG, function(error, {equal}) {
-							console.log('error', error, 'equal', equal);
+							if (err) { console.log('error', error, 'equal', equal); }
 
 							const passFail = equal ? 'passed-svg' : 'failed-svg';
 
@@ -124,12 +127,12 @@ const cleanSVGs = (configData) => {
 								ignoreAntialiasing: true, // ignore antialising by default
 								ignoreCaret: false // ignore caret by default
 							}, function(error) {
-								console.error('error', error);
+								if (err) { console.error('error', error); }
 
 								// Create animated gif
 								im.convert([path.join(fileOrDirectoryPath, 'png-compare', '*' + subFileOrDirectory.replace('.svg', '*')), '-resize', '1280x720', '-delay', '500', path.join(fileOrDirectoryPath, passFail, subFileOrDirectory.replace('.svg', '.gif'))],
 									function(err, stdout){
-										console.log('error', err);
+										if (err) { console.log('error', err); }
 
 										console.log('created gif', stdout);
 										// output path to animated gif to terminal
@@ -141,15 +144,6 @@ const cleanSVGs = (configData) => {
 					})(fileOrDirectoryPath, subFileOrDirectory);
 				}
 			);
-
-
-
-
-
-
-
-
-
 
 		});
 	});
