@@ -21,4 +21,13 @@ package-lock.json
 credentials.json
 
 *.css.map
+
+magick-flows-web-root/magick-flows/*/main-src-bak
+magick-flows-web-root/magick-flows/*/main-svgo-processed
+magick-flows-web-root/magick-flows/*/png-compare
+magick-flows-web-root/magick-flows/*/main-src-originals
+
+test/screenshots/*/__*__/*
+
 config.json.bak
+

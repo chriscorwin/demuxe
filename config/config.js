@@ -7,7 +7,7 @@ const addAvailableDemoAppConfigs = require('./available-demos');
 const addAvailableDemoBannerImages = require('./available-demos-banners');
 const sassGenerator = require('./magick-flows-util/sass-generator.js');
 
-
+const prestart = require('./prestart');
 
 
 // Satic data here, so that we do not have to generate the config data all for every environment unless we wanna
@@ -103,6 +103,8 @@ module.exports = function() {
     appViews.push(path.join(__dirname, '../', 'magick-flows-web-root'));
     configData.appViews = appViews;
 
+    prestart(configData);
+
     configData = addMagickFlowsToConfig(configData);
     configData = addAvailableDemoAppConfigs(configData);
     configData = addAvailableDemoBannerImages(configData);
@@ -192,7 +194,6 @@ module.exports = function() {
     // LOAD FROM ENV VARIABLES -- you can set an env variable and this will just catch it. NICE.
     configData.SOME_STATIC_VAR = process.env.SOME_STATIC_VAR;
     configData.port = process.env.port || configData.port;
-
 
 
     return configData;

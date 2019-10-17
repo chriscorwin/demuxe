@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="434px" height="206px" viewBox="0 0 434 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
     <title>fix-line-height-poc</title>
     <desc>Created with Sketch.</desc>
     <g id="fix-line-height-poc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -74,6 +74,14 @@
             <text id="Line-height-set-to-2" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13.5" font-weight="bold" line-spacing="23" fill="#2B2826">
                 <tspan x="0" y="15">Line height set to </tspan>
                 <tspan x="0" y="38">23, font set to 13.5</tspan>
+            </text>
+            <rect id="red" stroke="#E02020" x="0.5" y="5.5" width="124" height="36"></rect>
+        </g>
+        <g id="Group-3" transform="translate(270.000000, 66.000000)">
+            <rect id="blue" stroke="#0091FF" x="0.5" y="0.5" width="124" height="59"></rect>
+            <text id="Line-height-set-to-2" font-family="SalesforceSans-Bold, Salesforce Sans" font-size="13.5" font-weight="bold" line-spacing="20" fill="#2B2826">
+                <tspan x="0" y="17">Line height set to </tspan>
+                <tspan x="0" y="37">20, font set to 18</tspan>
             </text>
             <rect id="red" stroke="#E02020" x="0.5" y="5.5" width="124" height="36"></rect>
         </g>
