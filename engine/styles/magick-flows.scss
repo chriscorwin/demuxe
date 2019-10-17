@@ -397,7 +397,9 @@ body.magick-flows-debug .magick-flows-debug-hints {
 	border: none;
 }
 
-
+// If a designer includes a " " (empty space) at the beginning of text, when it is exported as SVG, Sketch keeps
+// the whitespace there, but the browser _ignores_ it, so the text gets shifted over to the left. This tells the
+// browser _not to ignore_ the whitespace.
 .magick-flows--main-content svg {
 	tspan {
 		white-space: pre;
