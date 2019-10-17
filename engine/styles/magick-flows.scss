@@ -283,13 +283,13 @@ header.magick-flows-stickey-header_container {
   transition: opacity 300ms ease-in-out;
   will-change: opacity;
   // transition-delay: 0s;
-  opacity: 0; 
+  opacity: 0;
 }
 
 // .slds-hide {
 // 	transition: opacity 0.25s ease-in-out;
 // 	will-change: opacity;
-// 	opacity: 0; 
+// 	opacity: 0;
 //   display: initial !important;
 // }
 	/**
@@ -302,7 +302,7 @@ header.magick-flows-stickey-header_container {
 .slds-transition-show {
 	transition: opacity 300ms ease-in-out;
 	will-change: opacity;
-	opacity: 1; 
+	opacity: 1;
 }
 
 
@@ -379,7 +379,7 @@ header.magick-flows-stickey-header_container {
   font-weight: 300;
   width: auto;
   right: 0rem;
-  
+
 }
 
 body.magick-flows-debug .magick-flows-debug-hints {
@@ -397,3 +397,9 @@ body.magick-flows-debug .magick-flows-debug-hints {
 	border: none;
 }
 
+
+.magick-flows--main-content svg {
+	tspan {
+		white-space: pre;
+	}
+}
