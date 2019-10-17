@@ -21,7 +21,7 @@ tspan {
 		<div><%- include('images/button-test-cases.svg') %></div>
 		<div><%- include('images/fix-line-height-poc.svg') %></div>
 		<script>
-			const correctLineSpacing = dom.window.document.querySelectorAll('text[line-spacing]');
+			const correctLineSpacing = document.querySelectorAll('text[line-spacing]');
 			correctLineSpacing.forEach((correctThis) => {
 				const fontSize = correctThis.getAttribute('font-size');
 				const lineSpacing = correctThis.getAttribute('line-spacing');
@@ -37,7 +37,7 @@ tspan {
 				// TODO: invent time machine.
 				const finalAdjust = (difference >= 0) ? adjust : (distance <= fontSize) ? -1 : -adjust;
 				correctThis.querySelectorAll('tspan').forEach((t) => {
-					t.setAttribute('y', t.getAttribute('y') - adjust);
+					t.setAttribute('y', t.getAttribute('y') - finalAdjust);
 				});
 			});
 		</script>
