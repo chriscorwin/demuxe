@@ -26,7 +26,6 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 		<% } %>
 
 		<link rel="stylesheet" href="/styles/confetti.css">
-		<link rel="stylesheet" href="/styles/magick-animations.css">
 
 	</head>
 
@@ -108,8 +107,6 @@ Demuxe: including \`engine/wrapper-for-magick-flows.ejs\` now...
 
 				if (oldHashHandlers) oldHashHandlers.out();
 				if (newHashHandlers) newHashHandlers.in();
-
-				document.querySelectorAll(`#magick-flows--step-${event.newURL.split('#')[1]} .play-on-enter`).forEach(elm => elm.style.animationPlayState = 'running');
 			}, false)
 
 		</script>
