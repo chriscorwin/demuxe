@@ -83,31 +83,40 @@ const cleanSVGs = (configData) => {
 				// Go go gadget time machine to tell myself to document this!
 				// TODO: invent time machine.
 				let finalAdjust = (difference >= 0) ? adjust : (distance <= fontSize) ? -1 : -adjust;
-				if (difference === -17) {
-					finalAdjust = -7;
-				} else if (difference === -8) {
+
+				switch (difference) {
+					case -17:
+						finalAdjust = -7;
+						break;
+					case -8:
+						finalAdjust = -2;
+						break;
+					case -7:
 					finalAdjust = -2;
-				} else if (difference === -7) {
-					finalAdjust = -2;
-				} else if (difference === -2) {
-					finalAdjust = 2;
-					console.log(`fontSize: `, fontSize);
-					console.log(`lineSpacing: `, lineSpacing);
-					console.log(`difference: `, difference);
-					console.log(`distance: `, distance);
-					console.log(`adjust: `, adjust);
-					console.log(`finalAdjust: `, finalAdjust);
-					console.log(`------------------------`);
+						break;
+					case -2:
+						finalAdjust = 2;
+						break;
+					default:
+						console.log(`fontSize: `, fontSize);
+						console.log(`lineSpacing: `, lineSpacing);
+						console.log(`difference: `, difference);
+						console.log(`distance: `, distance);
+						console.log(`adjust: `, adjust);
+						console.log(`finalAdjust: `, finalAdjust);
+						console.log(`------------------------`);
 				}
 
 
 				// SalesforceSans-Bold, Salesforce Sans ==> SalesforceSans-Regular, Salesforce Sans
 				// font-weight="bold" ==> font-weight="500"
 
-				// For fontsize 12 only, add HTML attribute:
-				// letter-spacing="0.2"
-				// font-size: 12 ==> font-size: 11.875
-				
+
+				// @corwing, explain why we are doing this please :)
+				if (fontSize === 12) {
+					correctThis.setAttribute('letter-spacing', 0.2)
+					correctThis.setAttribute('font-size', 11.875)
+				}
 
 				correctThis.querySelectorAll('tspan').forEach((t) => {
 					t.setAttribute('y', t.getAttribute('y') - finalAdjust);
