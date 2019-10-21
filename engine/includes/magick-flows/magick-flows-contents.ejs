@@ -61,7 +61,7 @@ const createHTMLClickHints = (index, notes) => `
 		id="magick-flows-click-hints--step-${index}"
 		class="click-hints magick-flows-click-hints magick-flows-click-hints--from-bottom magick-flows-click-hints--step-${index} "
 	>
-		${notes.reduce((notes, note, i) => `
+		${notes.reduce((output, note, i) => `${output}
 			<p data="Click hint number ${i} (${notes.length})" class="${(i === notes.length - 1) ? 'slds-p-bottom_none' : 'slds-p-bottom_medium'}">${cleanNote(note)}.</p>
 		`, '')}
 	</div>
