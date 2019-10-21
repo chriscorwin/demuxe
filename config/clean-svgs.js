@@ -64,7 +64,7 @@ const cleanSVGs = (configData) => {
 				console.log('is .DS_Store, Skip');
 				return;
 			}
-			console.log(`considering file: ${subFileOrDirectory}`);
+			console.group(`[clean SVGs line height adjust] considering file: ${subFileOrDirectory}`);
 			const fileContents = fs.readFileSync(path.join(fileOrDirectoryPath, 'main-svgo-processed', subFileOrDirectory), 'utf8');
 			const dom = new JSDOM(fileContents);
 
@@ -82,11 +82,39 @@ const cleanSVGs = (configData) => {
 				// it then becomes the equivalent of t.getAttribute('y') + adjust)
 				// Go go gadget time machine to tell myself to document this!
 				// TODO: invent time machine.
-				const finalAdjust = (difference >= 0) ? adjust : (distance <= fontSize) ? -1 : -adjust;
+				let finalAdjust = (difference >= 0) ? adjust : (distance <= fontSize) ? -1 : -adjust;
+				if (difference === -17) {
+					finalAdjust = -7;
+				} else if (difference === -8) {
+					finalAdjust = -2;
+				} else if (difference === -7) {
+					finalAdjust = -2;
+				} else if (difference === -2) {
+					finalAdjust = 2;
+					console.log(`fontSize: `, fontSize);
+					console.log(`lineSpacing: `, lineSpacing);
+					console.log(`difference: `, difference);
+					console.log(`distance: `, distance);
+					console.log(`adjust: `, adjust);
+					console.log(`finalAdjust: `, finalAdjust);
+					console.log(`------------------------`);
+				}
+
+
+				// SalesforceSans-Bold, Salesforce Sans ==> SalesforceSans-Regular, Salesforce Sans
+				// font-weight="bold" ==> font-weight="500"
+
+				// For fontsize 12 only, add HTML attribute:
+				// letter-spacing="0.2"
+				// font-size: 12 ==> font-size: 11.875
+				
+
 				correctThis.querySelectorAll('tspan').forEach((t) => {
 					t.setAttribute('y', t.getAttribute('y') - finalAdjust);
 				});
 			});
+
+			console.groupEnd();
 
 			fs.writeFileSync(path.join(fileOrDirectoryPath, 'main', subFileOrDirectory), dom.window.document.body.innerHTML, 'utf8');
 
@@ -95,7 +123,8 @@ const cleanSVGs = (configData) => {
 
 			// Move the PNG out of /main into /png-svg-compare so we can resize and compare
 			console.log(`mkdir -p ${fileOrDirectoryPath}/png-svg-compare && mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-svg-compare`);
-			execSync(`mkdir -p ${fileOrDirectoryPath}/png-svg-compare && mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-svg-compare`);
+			execSync(`mkdir -p ${fileOrDirectoryPath}/png-svg-compare`);
+			execSync(`mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-svg-compare`);
 
 			// Resize PNG to make it 1280x720 so it matches SVG TODO: This won't work for mobile
 			im.resize({
@@ -109,10 +138,15 @@ const cleanSVGs = (configData) => {
 					console.log('resized PNG', stdout);
 
 					(async (fileOrDirectoryPath, subFileOrDirectory) => {
+						console.log(`subFileOrDirectory: `, subFileOrDirectory);
+						console.log(`'svg' + subFileOrDirectory.replace('.svg', ''): `, 'svg' + subFileOrDirectory.replace('.svg', ''));
+						console.log(`path.join(fileOrDirectoryPath, 'main', subFileOrDirectory): `, path.join(fileOrDirectoryPath, 'main', subFileOrDirectory));
+						console.log(`path.join(fileOrDirectoryPath, 'png-svg-compare'): `, path.join(fileOrDirectoryPath, 'png-svg-compare'));
 						await new Pageres({delay: 2, filename: 'svg' + subFileOrDirectory.replace('.svg', '')})
 							.src(path.join(fileOrDirectoryPath, 'main', subFileOrDirectory), ['1280x720'], {crop: false})
 							.dest(path.join(fileOrDirectoryPath, 'png-svg-compare'))
 							.run();
+						console.log(`[FINISHED] subFileOrDirectory: `, subFileOrDirectory);
 
 						// Compare the png of the SVG with the exported PNG
 						const svgPNG = path.join(fileOrDirectoryPath, 'png-svg-compare', 'svg' + subFileOrDirectory.replace('.svg', '.png'));
