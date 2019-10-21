@@ -165,7 +165,7 @@ body, .container {
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 26880px;
+  width: 24320px;
 }
 
 .app-switcher-one.shrink {
@@ -207,7 +207,10 @@ body, .container {
   left: 0px;
 }
 
-body.debug div#drawer-from-top--step-0::before {
+body.magick-flows-debug div#drawer-from-top--step-0::before,
+body.magick-flows-debug div#drawer-from-right--step-0::before,
+body.magick-flows-debug div#drawer-from-bottom--step-0::before,
+body.magick-flows-debug div#drawer-from-left--step-0::before {
   content: "Drawer #0";
   display: block;
   width: 100vw;
@@ -239,7 +242,10 @@ body.debug div#drawer-from-top--step-0::before {
   left: -2560px;
 }
 
-body.debug div#drawer-from-top--step-1::before {
+body.magick-flows-debug div#drawer-from-top--step-1::before,
+body.magick-flows-debug div#drawer-from-right--step-1::before,
+body.magick-flows-debug div#drawer-from-bottom--step-1::before,
+body.magick-flows-debug div#drawer-from-left--step-1::before {
   content: "Drawer #1";
   display: block;
   width: 100vw;
@@ -271,7 +277,10 @@ body.debug div#drawer-from-top--step-1::before {
   left: -5120px;
 }
 
-body.debug div#drawer-from-top--step-2::before {
+body.magick-flows-debug div#drawer-from-top--step-2::before,
+body.magick-flows-debug div#drawer-from-right--step-2::before,
+body.magick-flows-debug div#drawer-from-bottom--step-2::before,
+body.magick-flows-debug div#drawer-from-left--step-2::before {
   content: "Drawer #2";
   display: block;
   width: 100vw;
@@ -303,7 +312,10 @@ body.debug div#drawer-from-top--step-2::before {
   left: -7680px;
 }
 
-body.debug div#drawer-from-top--step-3::before {
+body.magick-flows-debug div#drawer-from-top--step-3::before,
+body.magick-flows-debug div#drawer-from-right--step-3::before,
+body.magick-flows-debug div#drawer-from-bottom--step-3::before,
+body.magick-flows-debug div#drawer-from-left--step-3::before {
   content: "Drawer #3";
   display: block;
   width: 100vw;
@@ -335,7 +347,10 @@ body.debug div#drawer-from-top--step-3::before {
   left: -10240px;
 }
 
-body.debug div#drawer-from-top--step-4::before {
+body.magick-flows-debug div#drawer-from-top--step-4::before,
+body.magick-flows-debug div#drawer-from-right--step-4::before,
+body.magick-flows-debug div#drawer-from-bottom--step-4::before,
+body.magick-flows-debug div#drawer-from-left--step-4::before {
   content: "Drawer #4";
   display: block;
   width: 100vw;
@@ -367,7 +382,10 @@ body.debug div#drawer-from-top--step-4::before {
   left: -12800px;
 }
 
-body.debug div#drawer-from-top--step-5::before {
+body.magick-flows-debug div#drawer-from-top--step-5::before,
+body.magick-flows-debug div#drawer-from-right--step-5::before,
+body.magick-flows-debug div#drawer-from-bottom--step-5::before,
+body.magick-flows-debug div#drawer-from-left--step-5::before {
   content: "Drawer #5";
   display: block;
   width: 100vw;
@@ -399,7 +417,10 @@ body.debug div#drawer-from-top--step-5::before {
   left: -15360px;
 }
 
-body.debug div#drawer-from-top--step-6::before {
+body.magick-flows-debug div#drawer-from-top--step-6::before,
+body.magick-flows-debug div#drawer-from-right--step-6::before,
+body.magick-flows-debug div#drawer-from-bottom--step-6::before,
+body.magick-flows-debug div#drawer-from-left--step-6::before {
   content: "Drawer #6";
   display: block;
   width: 100vw;
@@ -431,7 +452,10 @@ body.debug div#drawer-from-top--step-6::before {
   left: -17920px;
 }
 
-body.debug div#drawer-from-top--step-7::before {
+body.magick-flows-debug div#drawer-from-top--step-7::before,
+body.magick-flows-debug div#drawer-from-right--step-7::before,
+body.magick-flows-debug div#drawer-from-bottom--step-7::before,
+body.magick-flows-debug div#drawer-from-left--step-7::before {
   content: "Drawer #7";
   display: block;
   width: 100vw;
@@ -463,7 +487,10 @@ body.debug div#drawer-from-top--step-7::before {
   left: -20480px;
 }
 
-body.debug div#drawer-from-top--step-8::before {
+body.magick-flows-debug div#drawer-from-top--step-8::before,
+body.magick-flows-debug div#drawer-from-right--step-8::before,
+body.magick-flows-debug div#drawer-from-bottom--step-8::before,
+body.magick-flows-debug div#drawer-from-left--step-8::before {
   content: "Drawer #8";
   display: block;
   width: 100vw;
@@ -495,7 +522,10 @@ body.debug div#drawer-from-top--step-8::before {
   left: -23040px;
 }
 
-body.debug div#drawer-from-top--step-9::before {
+body.magick-flows-debug div#drawer-from-top--step-9::before,
+body.magick-flows-debug div#drawer-from-right--step-9::before,
+body.magick-flows-debug div#drawer-from-bottom--step-9::before,
+body.magick-flows-debug div#drawer-from-left--step-9::before {
   content: "Drawer #9";
   display: block;
   width: 100vw;
@@ -527,7 +557,10 @@ body.debug div#drawer-from-top--step-9::before {
   left: -25600px;
 }
 
-body.debug div#drawer-from-top--step-10::before {
+body.magick-flows-debug div#drawer-from-top--step-10::before,
+body.magick-flows-debug div#drawer-from-right--step-10::before,
+body.magick-flows-debug div#drawer-from-bottom--step-10::before,
+body.magick-flows-debug div#drawer-from-left--step-10::before {
   content: "Drawer #10";
   display: block;
   width: 100vw;
@@ -547,38 +580,6 @@ body.debug div#drawer-from-top--step-10::before {
   top: 0;
   width: 1280px;
   left: 25600px;
-}
-
-.app-switcher-one.be-left-11 {
-  left: -28160px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-11 {
-  left: -28160px;
-}
-
-body.debug div#drawer-from-top--step-11::before {
-  content: "Drawer #11";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-11 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 28160px;
 }
 
 footer.magick-flows-stickey-footer_container {
@@ -663,8 +664,42 @@ header.magick-flows-stickey-header_container {
   will-change: all;
 }
 
+.magick-flows-debug-hints {
+  position: absolute;
+  display: block;
+  border-radius: 0.25rem;
+  color: white;
+  text-align: right;
+  padding: 0.25rem 0.5rem;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  text-shadow: 0px 2px 2px black;
+  transition: 250ms all ease-in-out;
+  background-color: rgba(0, 0, 0, 0.57);
+  bottom: 6rem;
+  will-change: all;
+  margin: 0.25rem;
+  opacity: 0;
+  z-index: 2;
+  font-weight: 300;
+  width: auto;
+  right: 0rem;
+}
+
+body.magick-flows-debug .magick-flows-debug-hints {
+  bottom: 0rem;
+  opacity: 1;
+  transition: 250ms all ease-in-out;
+  will-change: all;
+  right: 0rem;
+}
+
 .magick-flows-step iframe {
   border: none;
+}
+
+.magick-flows--main-content svg tspan {
+  white-space: pre;
 }
 
 html {
@@ -699,6 +734,33 @@ div#content-wrapper {
   position: relative;
   left: auto;
   margin: 0px auto;
+}
+
+.app-switcher-one {
+  transition: 500ms transform, 500ms left;
+}
+
+.app-switcher-one.shrink {
+  transform: none;
+  will-change: left;
+}
+
+.app-switcher-one.shrink .magick-flows-step {
+  transition: 5000ms transform;
+  transform: scale(0.95);
+  will-change: all;
+  background-color: transparent;
+}
+
+.app-switcher-one.rounded-corners .magick-flows-step {
+  border-radius: 1rem;
+  background-clip: border-box;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.use-mobile-backdrop {
+  background-image: url("/magick-flows/msm/assets/all__mobile-backdrop.png");
 }
 
 /*# sourceMappingURL=styles.css.map */
