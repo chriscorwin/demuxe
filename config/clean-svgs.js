@@ -14,6 +14,17 @@ var looksSame = require('looks-same');
 
 const { execSync } = require('child_process');
 
+const cleanup = (fileOrDirectoryPath, subFileOrDirectory) => {
+	// We only care about directories.
+	if (!fs.statSync(fileOrDirectoryPath).isDirectory()) return;
+
+	// Make sure main-src directory exists and is empty
+	if (!fs.existsSync(path.join(fileOrDirectoryPath, '/main-svgo-processed/')) || fs.readdirSync(path.join(fileOrDirectoryPath, '/main-svgo-processed/')).length > 0) return;
+
+	console.log(`deleting no longer needed directory: rm -r ${path.join(fileOrDirectoryPath, 'main-svgo-processed')}`);
+	execSync(`rm -r ${path.join(fileOrDirectoryPath, 'main-svgo-processed')}`);
+}
+
 const cleanSVGs = (configData) => {
 	const dirPath = './magick-flows-web-root/magick-flows/';
 	const dir = fs.readdirSync(dirPath);
@@ -79,19 +90,17 @@ const cleanSVGs = (configData) => {
 
 			fs.writeFileSync(path.join(fileOrDirectoryPath, 'main', subFileOrDirectory), dom.window.document.body.innerHTML, 'utf8');
 
+			console.log(`deleting processed file: rm ${path.join(fileOrDirectoryPath, 'main-svgo-processed', subFileOrDirectory)}`);
+			execSync(`rm ${path.join(fileOrDirectoryPath, 'main-svgo-processed', subFileOrDirectory)}`);
 
-			// Move the PNG out of /main into /png (for backup purposes)
-			console.log(`mkdir -p ${fileOrDirectoryPath}/png && mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png`);
-			execSync(`mkdir -p ${fileOrDirectoryPath}/png && mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png`);
-
-			// Copy the PNG out of /png into /png-compare so we can resize and compare
-			console.log(`mkdir -p ${fileOrDirectoryPath}/png-compare && cp ${fileOrDirectoryPath}/png/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-compare`);
-			execSync(`mkdir -p ${fileOrDirectoryPath}/png-compare && cp ${fileOrDirectoryPath}/png/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-compare`);
+			// Move the PNG out of /main into /png-svg-compare so we can resize and compare
+			console.log(`mkdir -p ${fileOrDirectoryPath}/png-svg-compare && mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-svg-compare`);
+			execSync(`mkdir -p ${fileOrDirectoryPath}/png-svg-compare && mv ${fileOrDirectoryPath}/main/${subFileOrDirectory.replace('.svg', '.png')} ${fileOrDirectoryPath}/png-svg-compare`);
 
 			// Resize PNG to make it 1280x720 so it matches SVG TODO: This won't work for mobile
 			im.resize({
-					srcPath: path.join(fileOrDirectoryPath, 'png-compare', subFileOrDirectory.replace('.svg', '.png')),
-					dstPath: path.join(fileOrDirectoryPath, 'png-compare', subFileOrDirectory.replace('.svg', '.png')),
+					srcPath: path.join(fileOrDirectoryPath, 'png-svg-compare', subFileOrDirectory.replace('.svg', '.png')),
+					dstPath: path.join(fileOrDirectoryPath, 'png-svg-compare', subFileOrDirectory.replace('.svg', '.png')),
 					width: 1280
 				},
 				function(err, stdout){
@@ -102,12 +111,12 @@ const cleanSVGs = (configData) => {
 					(async (fileOrDirectoryPath, subFileOrDirectory) => {
 						await new Pageres({delay: 2, filename: 'svg' + subFileOrDirectory.replace('.svg', '')})
 							.src(path.join(fileOrDirectoryPath, 'main', subFileOrDirectory), ['1280x720'], {crop: false})
-							.dest(path.join(fileOrDirectoryPath, 'png-compare'))
+							.dest(path.join(fileOrDirectoryPath, 'png-svg-compare'))
 							.run();
 
 						// Compare the png of the SVG with the exported PNG
-						const svgPNG = path.join(fileOrDirectoryPath, 'png-compare', 'svg' + subFileOrDirectory.replace('.svg', '.png'));
-						const exportedPNG = path.join(fileOrDirectoryPath, 'png-compare', subFileOrDirectory.replace('.svg', '.png'));
+						const svgPNG = path.join(fileOrDirectoryPath, 'png-svg-compare', 'svg' + subFileOrDirectory.replace('.svg', '.png'));
+						const exportedPNG = path.join(fileOrDirectoryPath, 'png-svg-compare', subFileOrDirectory.replace('.svg', '.png'));
 
 						looksSame(svgPNG, exportedPNG, function(error, {equal}) {
 							if (err) { console.log('error', error, 'equal', equal); }
@@ -130,13 +139,15 @@ const cleanSVGs = (configData) => {
 								if (err) { console.error('error', error); }
 
 								// Create animated gif
-								im.convert([path.join(fileOrDirectoryPath, 'png-compare', '*' + subFileOrDirectory.replace('.svg', '*')), '-resize', '1280x720', '-delay', '500', path.join(fileOrDirectoryPath, passFail, subFileOrDirectory.replace('.svg', '.gif'))],
+								im.convert([path.join(fileOrDirectoryPath, 'png-svg-compare', '*' + subFileOrDirectory.replace('.svg', '*')), '-resize', '1280x720', '-delay', '500', path.join(fileOrDirectoryPath, passFail, subFileOrDirectory.replace('.svg', '.gif'))],
 									function(err, stdout){
 										if (err) { console.log('error', err); }
 
+										cleanup(fileOrDirectoryPath, subFileOrDirectory);
+
 										console.log('created gif', stdout);
 										// output path to animated gif to terminal
-										console.log('Animated gif of difference:', path.join(fileOrDirectoryPath, 'png-compare', subFileOrDirectory.replace('.svg', '.gif')));
+										console.log('Animated gif of difference:', path.join(fileOrDirectoryPath, 'png-svg-compare', subFileOrDirectory.replace('.svg', '.gif')));
 									}
 								);
 							});
