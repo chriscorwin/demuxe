@@ -1,8 +1,7 @@
-@charset "UTF-8";
 /* This is done to preload images and reduce load flicker */
 body::after {
   backface-visibility: visible;
-  content: url("/magick-flows/url-slug/main/0000___ID=set--journey-builder-canvas___NOTES=Click-the-“Welcome-Appointment-Schedule”-email-on-the-canvas.png") url("/magick-flows/url-slug/main/0022___ID=email-activity-summary-out-reset___NOTES=Click-the-“Edit-Message”-button-in-the-drawer.png") url("/magick-flows/url-slug/main/0030___ID=email-editor-slides-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/url-slug/main/0032___ID=email-editor-reset___NOTES=Click-on-the-“skyline-image-block”-in-the-email-editor.png") url("/magick-flows/url-slug/main/0034___ID=image-editor-slides-out___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/url-slug/main/0040___ID=image-editor-reset___NOTES=Click-the-“Replace”-link-in-the-drawer__↺.png") url("/magick-flows/url-slug/main/0050___ID=content-selector___NOTES=Click-the-“Filter”-icon__It-is-just-below-the-blue-“Create”-button.png") url("/magick-flows/url-slug/main/0060___ID=content-selector___NOTES=Click-checkbox-next-to-“Locations”-in-the-“TAGS”-filters.png") url("/magick-flows/url-slug/main/0070___ID=content-selector___NOTES=Select-the-content-image__Top-row__In-the-middle__“C–GherkinBuild”-is-its-name.png") url("/magick-flows/url-slug/main/0080___ID=content-selector___NOTES=Click-the-“Select”-button__It-is-at-the-bottom–right-of-the-modal.png") url("/magick-flows/url-slug/main/0090___ID=email-editor___NOTES=Click-the-“Done-Editing”-button.png") url("/magick-flows/url-slug/main/0100___ID=email-editor-slides-away___DATA=show-drawer-from-left--instantly__hide-drawer-from-left--on-leave__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/url-slug/main/0110___ID=journey-canvas-configured-reset___NOTES=Click-the-“Activate”-button.png") url("/magick-flows/url-slug/main/1000___ID=panel-1-enters___DATA=show-drawer-from-left--on-arrival__hide-drawer-from-left--never__use-step-transition__step-transition_auto-advance__step-transition-timing--normal.png") url("/magick-flows/url-slug/main/9999___ID=journey-launch-modal___NOTES=End__Type-“H”-to-re–start-demo__Alternatively-you-may-type-“Control-–-H”-to-view-the-Magick-Flows-Dashboard.png") url("/magick-flows/url-slug/assets/all__mobile-backdrop.png") url("/magick-flows/url-slug/assets/all__viewport-size.png") url("/magick-flows/url-slug/assets/email-activity-summary-slides-away__drawer-from-left.png") url("/magick-flows/url-slug/assets/email-editor-slides-away___drawer-from-left.png") url("/magick-flows/url-slug/assets/image-editor-slides-out___drawer-from-left.png") url("/magick-flows/url-slug/assets/panel-1-enters___drawer-from-left.png") url("/magick-flows/url-slug/assets/the-other-email-editor-slides-out___drawer-from-left.png");
+  content: url("/magick-flows/clientelling-browse-email/main/0000___ID=berluti-cx-clientelling-browse-email___NOTES=clientelling-app-here.png") url("/magick-flows/clientelling-browse-email/main/0005___ID=berluti-cx-clientelling-browse-email___NOTES=clientelling-app-filled-in.png") url("/magick-flows/clientelling-browse-email/main/0030___ID=berluti-cx-clientelling-browse-email___DATA=@APPSWITCH__is-own-header__own-header-height--120___NOTES=Click-Discover-on-loafer-ad.png") url("/magick-flows/clientelling-browse-email/main/0040___ID=berluti-cx-clientelling-browse-email___NOTES=Do-not-scroll__Click-to-show-notification.png") url("/magick-flows/clientelling-browse-email/main/0045___ID=berluti-cx-clientelling-browse-email___DATA=show-ios-notification___NOTES=Click-email-notification-to-dismiss-notification__Willl-show-email.png") url("/magick-flows/clientelling-browse-email/main/0046___ID=berluti-cx-clientelling-browse-email___DATA=@AANORMAL.png") url("/magick-flows/clientelling-browse-email/main/0050___ID=berluti-cx-clientelling-browse-email___DATA=@APPSWITCH___NOTES=End.png") url("/magick-flows/clientelling-browse-email/assets/all__mobile-backdrop.png") url("/magick-flows/clientelling-browse-email/assets/all__viewport-size.png") url("/magick-flows/clientelling-browse-email/assets/berluti-cx-clientelling-browse-email___ios-notification.png");
   outline: 1px solid red;
   height: 0;
   overflow: hidden;
@@ -31,22 +30,22 @@ body {
 body, .container {
   background: url("/images/home-background.jpg") no-repeat top left;
   background-size: 100% 100%;
-  height: 720px;
+  height: 1366px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 1280px;
+  width: 1024px;
 }
 
 .ios-notification {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 1280px;
+  width: 1024px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 1366px;
+  top: -1366px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -65,10 +64,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms top ease-in-out;
-  width: 1280px;
+  width: 1024px;
   background-color: transparent;
-  height: 720px;
-  top: -720px;
+  height: 1366px;
+  top: -1366px;
   transition: 500ms top ease-in-out;
   will-change: top;
 }
@@ -89,11 +88,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms left ease-in-out;
-  width: 1280px;
+  width: 1024px;
   background-color: transparent;
-  height: 720px;
+  height: 1366px;
   top: 0;
-  left: -1280px;
+  left: -1024px;
   will-change: left;
 }
 
@@ -113,11 +112,11 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms right ease-in-out;
-  width: 1280px;
+  width: 1024px;
   background-color: transparent;
-  height: 720px;
+  height: 1366px;
   top: 0;
-  right: -1280px;
+  right: -1024px;
   will-change: right;
 }
 
@@ -137,10 +136,10 @@ body, .container {
   margin: 0 auto;
   position: absolute;
   transition: 500ms bottom ease-in-out;
-  width: 1280px;
+  width: 1024px;
   background-color: transparent;
-  height: 720px;
-  bottom: -720px;
+  height: 1366px;
+  bottom: -1366px;
   will-change: bottom;
 }
 
@@ -161,12 +160,12 @@ body, .container {
 }
 
 .app-switcher-one {
-  height: 720px;
+  height: 1366px;
   left: 0;
   position: absolute;
   top: 0;
   transition: 2000ms transform, 800ms left;
-  width: 37120px;
+  width: 13312px;
 }
 
 .app-switcher-one.shrink {
@@ -186,8 +185,8 @@ body, .container {
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step .slds-scrollable {
-  max-height: 720px;
-  height: 720px;
+  max-height: 1366px;
+  height: 1366px;
 }
 
 .app-switcher-one.rounded-corners .magick-flows-step.notification {
@@ -195,7 +194,7 @@ body, .container {
 }
 
 .app-switcher-one.slide-left-0 {
-  left: 640px;
+  left: 512px;
 }
 
 .app-switcher-one.be-left-0 {
@@ -226,21 +225,21 @@ body.magick-flows-debug div#drawer-from-left--step-0::before {
 }
 
 .magick-flows--step-0 {
-  height: 720px;
+  height: 1366px;
   position: absolute;
   top: 0;
-  width: 1280px;
+  width: 1024px;
   left: 0px;
 }
 
 .app-switcher-one.be-left-1 {
-  left: -2560px;
+  left: -2048px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-1 {
-  left: -2560px;
+  left: -2048px;
 }
 
 body.magick-flows-debug div#drawer-from-top--step-1::before,
@@ -261,21 +260,21 @@ body.magick-flows-debug div#drawer-from-left--step-1::before {
 }
 
 .magick-flows--step-1 {
-  height: 720px;
+  height: 1366px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 2560px;
+  width: 1024px;
+  left: 2048px;
 }
 
 .app-switcher-one.be-left-2 {
-  left: -5120px;
+  left: -4096px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-2 {
-  left: -5120px;
+  left: -4096px;
 }
 
 body.magick-flows-debug div#drawer-from-top--step-2::before,
@@ -296,21 +295,21 @@ body.magick-flows-debug div#drawer-from-left--step-2::before {
 }
 
 .magick-flows--step-2 {
-  height: 720px;
+  height: 1366px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 5120px;
+  width: 1024px;
+  left: 4096px;
 }
 
 .app-switcher-one.be-left-3 {
-  left: -7680px;
+  left: -6144px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-3 {
-  left: -7680px;
+  left: -6144px;
 }
 
 body.magick-flows-debug div#drawer-from-top--step-3::before,
@@ -331,21 +330,21 @@ body.magick-flows-debug div#drawer-from-left--step-3::before {
 }
 
 .magick-flows--step-3 {
-  height: 720px;
+  height: 1366px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 7680px;
+  width: 1024px;
+  left: 6144px;
 }
 
 .app-switcher-one.be-left-4 {
-  left: -10240px;
+  left: -8192px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-4 {
-  left: -10240px;
+  left: -8192px;
 }
 
 body.magick-flows-debug div#drawer-from-top--step-4::before,
@@ -366,21 +365,21 @@ body.magick-flows-debug div#drawer-from-left--step-4::before {
 }
 
 .magick-flows--step-4 {
-  height: 720px;
+  height: 1366px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 10240px;
+  width: 1024px;
+  left: 8192px;
 }
 
 .app-switcher-one.be-left-5 {
-  left: -12800px;
+  left: -10240px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-5 {
-  left: -12800px;
+  left: -10240px;
 }
 
 body.magick-flows-debug div#drawer-from-top--step-5::before,
@@ -401,21 +400,21 @@ body.magick-flows-debug div#drawer-from-left--step-5::before {
 }
 
 .magick-flows--step-5 {
-  height: 720px;
+  height: 1366px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 12800px;
+  width: 1024px;
+  left: 10240px;
 }
 
 .app-switcher-one.be-left-6 {
-  left: -15360px;
+  left: -12288px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-6 {
-  left: -15360px;
+  left: -12288px;
 }
 
 body.magick-flows-debug div#drawer-from-top--step-6::before,
@@ -436,21 +435,21 @@ body.magick-flows-debug div#drawer-from-left--step-6::before {
 }
 
 .magick-flows--step-6 {
-  height: 720px;
+  height: 1366px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 15360px;
+  width: 1024px;
+  left: 12288px;
 }
 
 .app-switcher-one.be-left-7 {
-  left: -17920px;
+  left: -14336px;
   transition: none !important;
   will-change: transform, left;
 }
 
 .app-switcher-one.slide-left-7 {
-  left: -17920px;
+  left: -14336px;
 }
 
 body.magick-flows-debug div#drawer-from-top--step-7::before,
@@ -471,291 +470,11 @@ body.magick-flows-debug div#drawer-from-left--step-7::before {
 }
 
 .magick-flows--step-7 {
-  height: 720px;
+  height: 1366px;
   position: absolute;
   top: 0;
-  width: 1280px;
-  left: 17920px;
-}
-
-.app-switcher-one.be-left-8 {
-  left: -20480px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-8 {
-  left: -20480px;
-}
-
-body.magick-flows-debug div#drawer-from-top--step-8::before,
-body.magick-flows-debug div#drawer-from-right--step-8::before,
-body.magick-flows-debug div#drawer-from-bottom--step-8::before,
-body.magick-flows-debug div#drawer-from-left--step-8::before {
-  content: "Drawer #8";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-8 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 20480px;
-}
-
-.app-switcher-one.be-left-9 {
-  left: -23040px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-9 {
-  left: -23040px;
-}
-
-body.magick-flows-debug div#drawer-from-top--step-9::before,
-body.magick-flows-debug div#drawer-from-right--step-9::before,
-body.magick-flows-debug div#drawer-from-bottom--step-9::before,
-body.magick-flows-debug div#drawer-from-left--step-9::before {
-  content: "Drawer #9";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-9 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 23040px;
-}
-
-.app-switcher-one.be-left-10 {
-  left: -25600px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-10 {
-  left: -25600px;
-}
-
-body.magick-flows-debug div#drawer-from-top--step-10::before,
-body.magick-flows-debug div#drawer-from-right--step-10::before,
-body.magick-flows-debug div#drawer-from-bottom--step-10::before,
-body.magick-flows-debug div#drawer-from-left--step-10::before {
-  content: "Drawer #10";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-10 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 25600px;
-}
-
-.app-switcher-one.be-left-11 {
-  left: -28160px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-11 {
-  left: -28160px;
-}
-
-body.magick-flows-debug div#drawer-from-top--step-11::before,
-body.magick-flows-debug div#drawer-from-right--step-11::before,
-body.magick-flows-debug div#drawer-from-bottom--step-11::before,
-body.magick-flows-debug div#drawer-from-left--step-11::before {
-  content: "Drawer #11";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-11 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 28160px;
-}
-
-.app-switcher-one.be-left-12 {
-  left: -30720px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-12 {
-  left: -30720px;
-}
-
-body.magick-flows-debug div#drawer-from-top--step-12::before,
-body.magick-flows-debug div#drawer-from-right--step-12::before,
-body.magick-flows-debug div#drawer-from-bottom--step-12::before,
-body.magick-flows-debug div#drawer-from-left--step-12::before {
-  content: "Drawer #12";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-12 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 30720px;
-}
-
-.app-switcher-one.be-left-13 {
-  left: -33280px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-13 {
-  left: -33280px;
-}
-
-body.magick-flows-debug div#drawer-from-top--step-13::before,
-body.magick-flows-debug div#drawer-from-right--step-13::before,
-body.magick-flows-debug div#drawer-from-bottom--step-13::before,
-body.magick-flows-debug div#drawer-from-left--step-13::before {
-  content: "Drawer #13";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-13 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 33280px;
-}
-
-.app-switcher-one.be-left-14 {
-  left: -35840px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-14 {
-  left: -35840px;
-}
-
-body.magick-flows-debug div#drawer-from-top--step-14::before,
-body.magick-flows-debug div#drawer-from-right--step-14::before,
-body.magick-flows-debug div#drawer-from-bottom--step-14::before,
-body.magick-flows-debug div#drawer-from-left--step-14::before {
-  content: "Drawer #14";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-14 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 35840px;
-}
-
-.app-switcher-one.be-left-15 {
-  left: -38400px;
-  transition: none !important;
-  will-change: transform, left;
-}
-
-.app-switcher-one.slide-left-15 {
-  left: -38400px;
-}
-
-body.magick-flows-debug div#drawer-from-top--step-15::before,
-body.magick-flows-debug div#drawer-from-right--step-15::before,
-body.magick-flows-debug div#drawer-from-bottom--step-15::before,
-body.magick-flows-debug div#drawer-from-left--step-15::before {
-  content: "Drawer #15";
-  display: block;
-  width: 100vw;
-  height: 3rem;
-  position: absolute;
-  bottom: 0rem;
-  background: rgba(0, 0, 0, 0.16);
-  text-align: center;
-  color: black;
-  margin: auto;
-  font-size: 2rem;
-}
-
-.magick-flows--step-15 {
-  height: 720px;
-  position: absolute;
-  top: 0;
-  width: 1280px;
-  left: 38400px;
+  width: 1024px;
+  left: 14336px;
 }
 
 footer.magick-flows-stickey-footer_container {
@@ -886,12 +605,12 @@ html {
 .container {
   background: url(/images/home-background.jpg) no-repeat top left;
   background-size: 100% 100%;
-  height: 720px;
+  height: 1366px;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 1280;
+  width: 1024;
 }
 
 body.magick-flow {
