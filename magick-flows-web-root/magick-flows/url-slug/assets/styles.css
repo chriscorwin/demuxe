@@ -874,6 +874,10 @@ body.magick-flows-debug .magick-flows-debug-hints {
   border: none;
 }
 
+.magick-flows--main-content svg tspan {
+  white-space: pre;
+}
+
 html {
   font-family: "Salesforce Sans", Arial, sans-serif;
   font-size: 100%;

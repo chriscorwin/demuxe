@@ -19,16 +19,16 @@ Now go get yourself a cup of coffee, you absolute warlock of demonstrations, you
 
 Quick start
 
-* Duplicate the /magick-flows-web-root/magick-flows/jb-test-run-nto directory, rename it to what you want. In this example we shall name it doot.
-* In your new /magick-flows-web-root/magick-flows/doot directory, you will find a directory named main: this is where your main content goes.
+* Duplicate the /magick-flows-web-root/magick-flows/jb-test-run-nto directory, rename it to what you want. In this example we shall name it foo.
+* In your new /magick-flows-web-root/magick-flows/foo directory, you will find a directory named main: this is where your main content goes.
 * Name them whatever you want, they will be displayed one at a time, in alphanumeric order.
-* Assets accompnaying your new doot Magick Flow live in a sibling of main, called assets.
+* Assets accompanying your new foo Magick Flow live in a sibling of main, called assets.
 * Restart the server and go look at your new Magick Flow in the browser. You can find a handy link right to it in the terminal output of the server.
 
 
 
 
-Outline of what I wanna write about 
+Outline of what I wanna write about
 
 * Naming conventions
     * Overview
@@ -40,7 +40,7 @@ Filenames are paresed this way
             * Underscores
                 * Number of underscores matter
                     * Three underscores
-                        * Three underscores ___ is the main divider. 
+                        * Three underscores ___ is the main divider.
                         * The “chunks”  of data derived after dividing it up this way are
                             * sorter
                             * step id
@@ -49,13 +49,13 @@ Filenames are paresed this way
                     * Two underscores
                         * Two underscores __ is a sub-divider
                             * The *data* and *notes* nodes can be further divided into sub-nodes.
-                            
+
             * Equals signs
-                * A *sub-node* can inform the system that it holds a key-value-pair by containing an equals sign ( = ) 
+                * A *sub-node* can inform the system that it holds a key-value-pair by containing an equals sign ( = )
                 * This is how *data** *and* notes* work
             * Dashes
-                * Dashes are simply placeholders for spaces. 
-                * 
+                * Dashes are simply placeholders for spaces.
+                *
     * Parts of the filename
         * Sorter
         * Step ID
@@ -64,9 +64,9 @@ Filenames are paresed this way
                 * Besides, the tuple of sorter and step identifier makes a unique ID for a step, in a way humans identify with.
             * Use to group headers, footers, drawers for reuse.
                 * If you need different (even subtly different) sticky headers for two different steps, use a unique step identifier for each one.
-                * 
+                *
         * DATA
-            * 
+            *
         * NOTES
             * Use dashes between words — spaces are ambiguious and ambiguity is slower and less simple.
                 * Remmeber: Demuxe has a radical bias towards simplicity.
@@ -78,9 +78,9 @@ Filenames are paresed this way
                     * Actualyl, let's test this and leave it out if it is rare or nonexistant.
         * Performance considerations
             * SVGs are a verbose file format and can be slow to load. Complex stuff may actually perform better with JPEGs or PNGs.
-            * 
+            *
 * Other considerdations
-    * 
+    *
 
 Naming conventions
 

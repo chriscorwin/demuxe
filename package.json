@@ -13,10 +13,12 @@
     "start:dev": "DEBUG=true NODE_ENV=dev node ./bin/www",
     "start:qa": "NODE_ENV=qa node ./bin/www",
     "test": "NODE_ENV=local mocha",
+    "view-diffs": "node ./test/view-diffs.js",
     "livereload": "livereload . -w 200 --extraExts 'scss,ejs,png,svg,js' -d",
     "test:update": "rm -rf test/screenshots/__different_snapshot__/ && NODE_ENV=local update=true mocha",
     "slides": "node ./slides/upload.js",
-    "set-config": "./config/config.sh"
+    "set-config": "./config/config.sh",
+    "clean-svgs": "./config/clean-svgs.sh"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -29,18 +31,23 @@
     "express-session": "^1.16.2",
     "http-errors": "~1.6.2",
     "image-size": "^0.6.3",
+    "jsdom": "^15.1.1",
     "livereload": "^0.8.0",
+    "looks-same": "^7.2.1",
     "morgan": "~1.9.0",
     "node-sass-middleware": "^0.11.0",
+    "pageres-cli": "^5.0.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "imagemagick": "^0.1.3",
     "md2gslides": "^0.5.0",
     "minimist": "^1.2.0",
     "mocha": "^5.2.0",
     "path": "^0.12.7",
-    "sf-differencify": "git+https://github.com/cormacmccarthy/sf-differencify.git"
+    "sf-differencify": "git+https://github.com/cormacmccarthy/sf-differencify.git",
+    "svgo": "^1.3.0"
   }
 }

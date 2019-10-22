@@ -83,7 +83,6 @@
       <p><a href="?foo=bar">Click here to set the value of <code>?foo</code> to be <var>bar</var></a>.</p>
       <% } %>
     </section>
-
     <section class="slds-m-bottom_large">
       <heading class="slds-text-heading_medium">Debug</heading>
       <p>Value of <code>?debug=</code>
@@ -97,25 +96,17 @@
       <p><a href="?debug=true">Click here to set the value of <code>?debug</code> to be <var>true</var></a>.</p>
       <% } %>
     </section>
-
     <section class="slds-m-bottom_large">
       <heading class="slds-text-heading_medium">Testing server-side includes</heading>
-
       <p>You can include chunks of HTML in your <code>.ejs</code> files like:</p>
-
       <div class="slds-m-vertical_medium">
 		<code><%%- include('includes/without-extra-dots') %></span></code>
 		<br><code><%%- include('includes/with.extra.dots.ejs') %></span></code>
       </div>
-
       <p>If you use any kind of HTML prettifyer in your code, it is reccomended to wrap your server-side include statement in a seemingly useless <code>&lt;span/&gt;</code> tag, so that it will not throw off the indentation. Annoying, but... whatever. If you put the class name <var>is-ssi-block</var> on it, it gets a special feature. :D</p>
-
 	  <span class="is-ssi-block"><%- include('includes/test-include') %></span>
 	  <span class="is-ssi-block"><%- include('includes/test.include.ejs') %></span>
     </section>
-
-
-
   </section>
     <script src="/javascripts/queryParams.js"></script>
     <script src="/javascripts/brand.js"></script>
@@ -124,12 +115,10 @@
     queryParams.add('bob', 'villa');
     queryParams.add('bob', 'hope');
     queryParams.remove('bob');
-
     if (location.host === 'localhost:3000') {
         document.write('<script src="http://' + (location.host || 'localhost')
             .split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
     }
     </script>
 </body>
-
 </html>

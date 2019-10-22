@@ -30,17 +30,17 @@ function dynamicSassHandleError(data){
 
 const noMetaDataError = (error, name, fullContentPath) => {
 	if (process.env.DEBUG_VERBOSE === "true") {
-		if ( error.message.includes('ENOENT: no such file or directory')) {
+		if ( error.message.includes('Cannot find module')) {
 			console.error(`
-	[ ERROR IN: \`config/magick-flows-util/get-flow-data.js:10\`]
+[ WARNING FOR: \`config/magick-flows-util/get-flow-data.js:35\`]
 
 	Magick Flow URL Slug: \`${name}\`.
 
-	The app is attempting to render a Magick Flow at:
+The app is attempting to collect meta data for the website for the magick-flow at path:
 
 	${fullContentPath}
 
-	...and did not find meta data there.
+...and did not find a meta_data.json there.
 			`);
 		} else {
 			console.warn(error);
@@ -319,8 +319,13 @@ const getFlowData = (configData, fileOrDirectoryPath, subFileOrDirectory) => {
 		console.debug(`[ config/magick-flows-util/get-flow-data.js:284 ] pathToGlobalNotesFile: `, util.inspect(pathToGlobalNotesFile, { showHidden: true, depth: null, colors: true }));
 	}
 
-	const thisMagickFlowMainImagesForScssVariables = flowData.steps.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
-	const thisMagickFlowAssetsImagesForScssVariables = flowData.assets.filter(fileName => (fileName.endsWith('.png') === true || fileName.endsWith('.svg') === true || fileName.endsWith('.gif') === true || fileName.endsWith('.jpg') === true || fileName.endsWith('.jpeg') === true));
+	const isTargetFileType = filename => {
+		const targetFileTypes = ['.png', '.gif', '.jpg', '.jpeg'];// do not preload SVGs
+
+		return targetFileTypes.find(filetype => filename.endsWith(filetype))
+	}
+	const thisMagickFlowMainImagesForScssVariables = flowData.steps.filter(isTargetFileType);
+	const thisMagickFlowAssetsImagesForScssVariables = flowData.assets.filter(isTargetFileType);
 	const thisMagickFlowBackgroundImageVariable = [];
 
 	// iterate through the main images, add url and path to it
