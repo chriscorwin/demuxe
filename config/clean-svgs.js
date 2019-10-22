@@ -88,6 +88,9 @@ const cleanSVGs = (configData) => {
 					case -17:
 						finalAdjust = -7;
 						break;
+					case -9:
+						finalAdjust = -7;
+						break;
 					case -8:
 						finalAdjust = -2;
 						break;
@@ -113,6 +116,12 @@ const cleanSVGs = (configData) => {
 
 
 				// @corwing, explain why we are doing this please :)
+				// Here we hand-adjust the font-size down _ever so slightly_ because
+				// the x-height of the typeface when rendered in an SVG is just a 
+				// touch too big.
+				// 
+				// Resizing down this tiny little amount reduces the difference between
+				// the PNG and SVG versions a _heap_
 				if (fontSize === 12) {
 					correctThis.setAttribute('letter-spacing', 0.2)
 					correctThis.setAttribute('font-size', 11.875)

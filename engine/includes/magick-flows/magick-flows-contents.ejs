@@ -73,6 +73,7 @@ const createHeadsUpDisplay = (node, thisParagraphClassName = 'slds-p-bottom_medi
 		class="debug-hints magick-flows-debug-hints magick-flows-debug-hints--step-${node.stepsIndex} "
 	>
 		<p class="${thisParagraphClassName}">Step: #${node.stepsIndex}</p>
+		<p class="${thisParagraphClassName}">Type: ${node.fileExtension.toUpperCase()}</p>
 		<p  class="${thisParagraphClassName}">Sorter: ${node.sorter}</p>
 		<p  class="${thisParagraphClassName}">ID: ${node.id}</p>
 		<p  class="${thisParagraphClassName}">Data: <code>${node.data}</code></p>
